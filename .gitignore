@@ -107,3 +107,4 @@ dist
 # Gatsby stuff
 .cache/
 public
+src/images/.DS_Store
