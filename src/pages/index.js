@@ -4,7 +4,7 @@ const IndexPage = () => {
   return (
     <main>
       <title>Home Page</title>
-      <h1>Hello World Test pull request</h1>
+      <h1>Hello World Test pull request. Looks like ti works now</h1>
     </main>
   )
 }
