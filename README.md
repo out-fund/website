@@ -1,7 +1,9 @@
 # Outfund website
+
 Hello world out.fund website - testing the setup
 
 ## Install tools
+
 - Check out [Gatsby start guide](https://www.gatsbyjs.com/docs/tutorial/part-0/)
 - Install [Yarn](https://yarnpkg.com/getting-started/install)
   - You can use homebrew on MacOS
@@ -10,6 +12,7 @@ Hello world out.fund website - testing the setup
     ```
 
 ## Start developing
+
 Navigate into the site’s directory and start it up.
 
 ```shell

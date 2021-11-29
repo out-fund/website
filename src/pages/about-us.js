@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 
 const AboutUs = () => {
   return (
@@ -6,7 +6,7 @@ const AboutUs = () => {
       <title>About US</title>
       <h1>About us</h1>
     </main>
-  );
-};
+  )
+}
 
-export default AboutUs;
+export default AboutUs
