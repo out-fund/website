@@ -33,5 +33,13 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: "gatsby-plugin-i18n",
+      options: {
+        langKeyDefault: "en",
+        useLangKeyLayout: true,
+        prefixDefault: false,
+      },
+    },
   ],
 }
