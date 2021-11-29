@@ -1,12 +1,12 @@
 import * as React from "react"
+import Lang from "../layouts/es"
 
-const IndexPage = () => {
+const IndexPage = (props) => {
   return (
-    <main>
-      <title>Spanish</title>
-      <h1>Spanish</h1>
+    <Lang location={props.location}>
+      <h1>Hello Spain</h1>
       <p>Testing git</p>
-    </main>
+    </Lang>
   )
 }
 

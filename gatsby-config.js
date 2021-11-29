@@ -39,6 +39,7 @@ module.exports = {
         langKeyDefault: "en",
         useLangKeyLayout: true,
         prefixDefault: false,
+        langKeyForNull: "en",
       },
     },
   ],
