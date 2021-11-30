@@ -8,6 +8,8 @@ const Buton = styled.button`
   line-height: 1.5;
   padding: 8px 24px;
   border-radius: 36px;
+  font-family: inherit;
+  font-weight: 500;
 `
 const Primary = styled(Buton)`
   background-color: #1a65ba;

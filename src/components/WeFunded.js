@@ -4,15 +4,15 @@ import { PrimaryButton, SecondaryButton } from "./shared/Button"
 import { StaticImage } from "gatsby-plugin-image"
 
 const StyledHero = styled.nav`
-  background-color: #fff;
-  padding: 0 32px;
-  h1 {
+  h3 {
     color: #051734;
     font-weight: 700;
     font-size: 40px;
     line-height: 1;
     margin-top: 80px;
     margin-bottom: 16px;
+    letter-spacing: -0.02em;
+    font-feature-settings: "ss02" on, "ss03" on, "ss04" on;
   }
   p {
     line-height: 1.5;
@@ -28,7 +28,8 @@ const StyledHero = styled.nav`
     }
   }
   .heroImage {
-    margin: 16px -32px 0;
+    margin-top: 16px;
+    margin: 0 -32px;
     width: 100;
   }
 `
