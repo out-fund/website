@@ -1,11 +1,11 @@
 import * as React from "react"
 import Lang from "../layouts/en"
+import Hero from "../components/Hero"
 
 const IndexPage = (props) => {
   return (
     <Lang location={props.location}>
-      <h1>Hello World</h1>
-      <p>Testing git</p>
+      <Hero /> {/* TODO Add language props */}
     </Lang>
   )
 }

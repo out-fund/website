@@ -42,5 +42,13 @@ module.exports = {
         langKeyForNull: "en",
       },
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /images\/.*\.svg/,
+        },
+      },
+    },
   ],
 }

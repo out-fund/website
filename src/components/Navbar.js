@@ -1,14 +1,26 @@
 import * as React from "react"
+import Logo from "../images/svg/OutfundLogo.svg"
+import styled from "styled-components"
+import { SecondaryButton } from "./shared/Button"
+
+const StyledNavbar = styled.nav`
+  background-color: #f2f6fa;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px 0 32px;
+  .logo {
+    background-color: #fff;
+  }
+`
 
 const Navbar = (props) => {
   return (
-    <nav>
-      <h1>Navigation</h1>
-      <p>
-        Ovdije ce navbar primit neku variablu pa ce naci isparvne prijevode u
-        DATA i samo ih zamijeniti ovdije
-      </p>
-    </nav>
+    <StyledNavbar>
+      <Logo className="logo" />
+      <SecondaryButton>Start live chat</SecondaryButton>
+    </StyledNavbar>
   )
 }
 
