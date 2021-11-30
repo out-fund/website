@@ -1,11 +1,11 @@
 import * as React from "react"
 
-const Footer = (props) => {
+const Footer = () => {
   return (
-    <nav>
+    <footer>
       <h1>Footer</h1>
       <p>Links</p>
-    </nav>
+    </footer>
   )
 }
 

@@ -7,7 +7,7 @@ const EN = ({ children, ...props }) => {
   return (
     <Layout {...props}>
       <Navbar />
-      <main>{children}</main>
+      {children}
       <Footer />
     </Layout>
   )

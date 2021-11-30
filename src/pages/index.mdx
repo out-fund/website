@@ -1,0 +1,57 @@
+---
+title: Hello, world!
+heroImage: ../images/heroUK.png
+heroImageAlt: Hero image
+
+hero:
+  {
+    title: "Growth capital for founders like You",
+    subtitle: "Supercharged funding from £10K to £2M for your marketing & inventory purchases.",
+    primaryBtn: "Get funded",
+    secondaryBtn: "Learn how it works",
+    imgName: "../images/heroUK.png",
+    imgAlt: "Test",
+  }
+
+weFunded:
+  {
+    title: "We funded brands like yours",
+    subtitle: "We build you a unique deal based on your track record and success. Repayments are automatically made from a pre-agreed.",
+    card:
+      {
+        title: "I invested in repeatable growth and grew subscriptions by 4x.",
+        cite: "Boris Hodakel, Founder of Feel",
+        btnText: "Success stories",
+      },
+  }
+---
+
+import LangLayout from "../layouts/en"
+import Hero from "../components/Hero"
+import SectionContainer from "../components/SectionContainer"
+import WeFunded from "../components/WeFunded"
+
+<LangLayout location={props.location}>
+  <Hero
+    title={props.pageContext.frontmatter.hero.title}
+    subtitle={props.pageContext.frontmatter.hero.subtitile}
+    primaryBtn={props.pageContext.frontmatter.hero.primaryBtn}
+    secondaryBtn={props.pageContext.frontmatter.hero.secondaryBtn}
+    imgName={props.pageContext.frontmatter.hero.imageName}
+    imgAlt={props.pageContext.frontmatter.hero.imageAlt}
+  />
+
+  <main>
+    <SectionContainer
+      title={props.pageContext.frontmatter.weFunded.title}
+      subtitile={props.pageContext.frontmatter.weFunded.subtitile}
+    >
+      <WeFunded
+        feel
+        title={props.pageContext.frontmatter.weFunded.card.title}
+        cite={props.pageContext.frontmatter.weFunded.card.cite}
+        btn={props.pageContext.frontmatter.weFunded.card.btnText}
+      />
+    </SectionContainer>
+  </main>
+</LangLayout>

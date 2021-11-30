@@ -2,9 +2,11 @@ import * as React from "react"
 import styled from "styled-components"
 import { PrimaryButton, SecondaryButton } from "./shared/Button"
 import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { graphql } from "gatsby"
 
-const StyledHero = styled.nav`
-  background-color: #fff;
+const StyledHero = styled.header`
+  /* background-color: #fff;
   padding: 0 32px;
   h1 {
     color: #051734;
@@ -30,26 +32,28 @@ const StyledHero = styled.nav`
   .heroImage {
     margin: 16px -32px 0;
     width: 100;
-  }
+  } */
 `
 
-const Hero = () => {
+const Hero = ({
+  title,
+  subtitle,
+  primaryBtn,
+  secondaryBtn,
+  imgName,
+  imgAlt,
+  data,
+}) => {
   return (
     <StyledHero>
-      <h1>Growth capital for founders like You</h1>
-      <p>
-        Supercharged funding from £10K to £2M for your marketing & inventory
-        purchases.
-      </p>
+      <h1>{title}</h1>
+      <p>{subtitle}</p>
       <div className="actons">
-        <PrimaryButton>Get funded</PrimaryButton>
-        <SecondaryButton>Learn how it works</SecondaryButton>
+        <PrimaryButton>{primaryBtn}</PrimaryButton>
+        <SecondaryButton>{secondaryBtn}</SecondaryButton>
       </div>
       <div className="heroImage">
-        <StaticImage
-          src="../images/hero.png"
-          alt="Hero image showing company directors"
-        />
+        <StaticImage src="../images/heroUK.png" alt={imgAlt} />
       </div>
     </StyledHero>
   )
