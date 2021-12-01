@@ -20,8 +20,7 @@ const IndexPage = (props) => {
       <main>
         <SectionContainer
           title={props.data.homepageYaml.weFunded.title}
-          subtitle={props.data.homepageYaml.weFunded.subtitle}
-        >
+          subtitle={props.data.homepageYaml.weFunded.subtitle}>
           <WeFunded
             feel
             title={props.data.homepageYaml.weFunded.card.title}

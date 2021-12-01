@@ -36,25 +36,6 @@ const StyledHero = styled.header`
 
 const Hero = (props) => {
   const heroImage = getImage(props.image)
-  console.log("test", props)
-
-  // const data = useStaticQuery(graphql`
-  //   query ($id: String) {
-  //     mdx(id: { eq: $id }) {
-  //       id
-  //       frontmatter {
-  //         hero {
-  //           title
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-  // console.log("data", data)
-
-  // const heroImage = getImage(data.mdx.frontmatter.hero.image)
-  // console.log("image", image)
-
   return (
     <StyledHero>
       <h1>{props.title}</h1>
