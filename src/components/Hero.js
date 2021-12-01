@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+// import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import { PrimaryButton, SecondaryButton } from "./shared/Button"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
@@ -35,8 +35,8 @@ const StyledHero = styled.header`
 `
 
 const Hero = (props) => {
-  // const image = getImage(data.blogPost.avatar)
-  // console.log("test", props)
+  const heroImage = getImage(props.image)
+  console.log("test", props)
 
   // const data = useStaticQuery(graphql`
   //   query ($id: String) {
@@ -64,8 +64,7 @@ const Hero = (props) => {
         <SecondaryButton>{props.secondaryBtn}</SecondaryButton>
       </div>
       <div className="heroImage">
-        {/* <GatsbyImage image={heroImage} alt={data.blogPost.author} /> */}
-        {/* <StaticImage src="../images/heroUK.png" alt={imgAlt} /> */}
+        <GatsbyImage image={heroImage} alt={props.imageAlt} />
       </div>
     </StyledHero>
   )

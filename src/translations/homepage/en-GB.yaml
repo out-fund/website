@@ -1,12 +1,12 @@
----
-title: Hello, world Spanish
+language: en-GB
+seoTitle: Growth capital
 hero:
   {
     title: "Growth capital for founders like You",
     subtitle: "Supercharged funding from £10K to £2M for your marketing & inventory purchases.",
     primaryBtn: "Get funded",
     secondaryBtn: "Learn how it works",
-    image: "../images/heroUK.png",
+    image: "../../images/heroUK.png",
     imageAlt: "Test",
   }
 
@@ -21,4 +21,3 @@ weFunded:
         btnText: "Success stories",
       },
   }
----

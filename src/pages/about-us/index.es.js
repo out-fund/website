@@ -10,3 +10,13 @@ const AboutUs = () => {
 }
 
 export default AboutUs
+
+// aboutYaml(language: {eq: "es-ES"}) {
+//   language
+//   title
+//   hero {
+//     image
+//     imageAlt
+//   }
+
+// }

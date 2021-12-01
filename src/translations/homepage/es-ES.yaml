@@ -1,4 +1,4 @@
----
+language: es-ES
 title: Hello, world Spanish
 hero:
   {
@@ -21,4 +21,3 @@ weFunded:
         btnText: "Success stories",
       },
   }
----

@@ -1,5 +1,5 @@
----
-title: Hello, world!
+language: en-GB
+title: Hello, world! About
 hero:
   {
     title: "Growth capital for founders like You",
@@ -21,4 +21,3 @@ weFunded:
         btnText: "Success stories",
       },
   }
----

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://www.out.fund",
     title: "Outfund website",
   },
   plugins: [
@@ -32,6 +32,14 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    "gatsby-transformer-yaml",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: "./src/translations/",
+        typeName: `Yaml`,
+      },
     },
     {
       resolve: "gatsby-plugin-i18n",
