@@ -13,6 +13,15 @@ const GlobalStyle = createGlobalStyle`
     letter-spacing: -0.02em;
     /* font-feature-settings: "ss02" on, "ss03" on, "ss04" on; */
   }
+  .visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
 `
 
 export default GlobalStyle

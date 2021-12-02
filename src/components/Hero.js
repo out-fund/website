@@ -41,8 +41,8 @@ const Hero = (props) => {
       <h1>{props.title}</h1>
       <p>{props.subtitle}</p>
       <div className="actons">
-        <PrimaryButton>{props.primaryBtn}</PrimaryButton>
-        <SecondaryButton>{props.secondaryBtn}</SecondaryButton>
+        <PrimaryButton>{props.primaryCta}</PrimaryButton>
+        <SecondaryButton>{props.secondaryCta}</SecondaryButton>
       </div>
       <div className="heroImage">
         <GatsbyImage image={heroImage} alt={props.imageAlt} />

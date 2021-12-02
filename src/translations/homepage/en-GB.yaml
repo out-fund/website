@@ -1,11 +1,16 @@
+# English homepage
+# NOTE: For url values, leve out the country suffix
+
 language: en-GB
 seoTitle: Growth capital
 hero:
   {
     title: "Growth capital for founders like You",
     subtitle: "Supercharged funding from £10K to £2M for your marketing & inventory purchases.",
-    primaryBtn: "Get funded",
-    secondaryBtn: "Learn how it works",
+    primaryCta: "Get funded",
+    primaryCtaUrl: "/",
+    secondaryCta: "Learn how it works",
+    secondaryCtaUrl: "/",
     image: "../../images/heroUK.png",
     imageAlt: "Test",
   }
@@ -14,10 +19,60 @@ weFunded:
   {
     title: "We funded brands like yours",
     subtitle: "We build you a unique deal based on your track record and success. Repayments are automatically made from a pre-agreed.",
-    card:
+
+    cards:
       {
-        title: "I invested in repeatable growth and grew subscriptions by 4x.",
-        cite: "Boris Hodakel, Founder of Feel",
-        btnText: "Success stories",
+        feel:
+          {
+            tag: "We funded",
+            company: "Feel",
+            logo: "feel.svg",
+            title: "I invested in repeatable growth and grew subscriptions by 4x.",
+            image: "export image",
+            imageAlt: "Boris Hodakel and Cheryl holidin Feel package",
+            cite: "Boris Hodakel, Founder of Feel",
+            cta: "Success stories",
+            ctaUrl: "/success-stories/",
+            bgColor: "#EDE3D9",
+          },
+        lemonadeDolls:
+          {
+            tag: "We funded",
+            company: "Lemonade Dolls",
+            logo: "feel.svg",
+            title: "I invested in repeatable growth and grew subscriptions by 4x.",
+            image: "export image",
+            imageAlt: "Lemonade dolls models wearing underwear",
+            cta: "Read More",
+            ctaUrl: "link",
+          },
       },
+  }
+
+weInvesting:
+  {
+    title: "We’re Investing into Online Businesses",
+    subtitle: "As founders ourselves, we know running a business is hard work and often unfair. Outfund doesn’t charge interest, take personal guarantees, and our facility is simply repaid from a revenue share of new sales. ",
+    image: "image",
+    imageAlt: "ImageAlt",
+    cta: "Learn more how funding works",
+    ctaUrl: "/how-funding-works/",
+  }
+aboutUs:
+  {
+    title: "About us",
+    subtitle: "Outfund is a team of success-driven, highly motivated people who are passionate about growing businesses in the UK. Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission possible. ",
+    image: "image",
+    imageAlt: "imageAlt",
+    stats:
+      [
+        { stat: "£100M", text: "Invested in 2020 globaly" },
+        { stat: "4", text: "Operating countries" },
+        { stat: "52+", text: "Team and growing" },
+        { stat: "£37M", text: "We raised so far" },
+      ],
+    primaryCta: "pc",
+    primaryCtaUrl: "url",
+    secondaryCta: "Sec",
+    secondaryCtaUrl: "url",
   }

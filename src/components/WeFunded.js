@@ -2,7 +2,7 @@ import * as React from "react"
 import styled from "styled-components"
 // import { PrimaryButton, SecondaryButton } from "./shared/Button"
 
-const StyledWeFunded = styled.nav``
+const StyledWeFunded = styled.div``
 
 const WeFunded = ({ title, cite, company, companyUrl, btn, ...props }) => {
   let citationName = cite.split(",")[0]
