@@ -167,18 +167,6 @@ export const query = graphql`
         imageAlt
         ctaUrl
         cta
-        image {
-          childImageSharp {
-            gatsbyImageData(
-              blurredOptions: { width: 100 }
-              layout: CONSTRAINED
-              placeholder: BLURRED
-              backgroundColor: "#fff"
-              quality: 90
-              outputPixelDensities: [0.25, 0.5, 1, 2]
-            )
-          }
-        }
       }
       aboutUs {
         title
