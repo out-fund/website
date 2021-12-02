@@ -122,6 +122,11 @@ export const query = graphql`
         secondaryCta
         secondaryCtaUrl
         imageAlt
+        image {
+          childImageSharp {
+            gatsbyImageData(quality: 90)
+          }
+        }
       }
       weFunded {
         title
@@ -133,20 +138,28 @@ export const query = graphql`
             logo
             title
             imageAlt
-
             ctaUrl
             cta
             cite
             bgColor
+            image {
+              childImageSharp {
+                gatsbyImageData(quality: 90)
+              }
+            }
           }
           lemonadeDolls {
             company
             cta
             ctaUrl
             imageAlt
-
             logo
             tag
+            image {
+              childImageSharp {
+                gatsbyImageData(quality: 90)
+              }
+            }
           }
         }
       }
@@ -156,15 +169,24 @@ export const query = graphql`
         ctaUrl
         cta
         imageAlt
+        image {
+          childImageSharp {
+            gatsbyImageData(quality: 90)
+          }
+        }
       }
       aboutUs {
         title
         subtitle
         imageAlt
-
         stats {
           stat
           text
+        }
+        image {
+          childImageSharp {
+            gatsbyImageData(quality: 90)
+          }
         }
       }
       startSupercharging {
@@ -177,6 +199,12 @@ export const query = graphql`
           tag
           cite
           bgColor
+          imageAlt
+          image {
+            childImageSharp {
+              gatsbyImageData(quality: 90)
+            }
+          }
         }
       }
     }
