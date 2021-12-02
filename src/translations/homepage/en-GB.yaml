@@ -53,7 +53,7 @@ weInvesting:
   {
     title: "We’re Investing into Online Businesses",
     subtitle: "As founders ourselves, we know running a business is hard work and often unfair. Outfund doesn’t charge interest, take personal guarantees, and our facility is simply repaid from a revenue share of new sales. ",
-    image: "image",
+    image: "../../images/PaymentCounterPhone.jpg",
     imageAlt: "ImageAlt",
     cta: "Learn more how funding works",
     ctaUrl: "/how-funding-works/",
@@ -75,4 +75,71 @@ aboutUs:
     primaryCtaUrl: "url",
     secondaryCta: "Sec",
     secondaryCtaUrl: "url",
+  }
+
+startSupercharging:
+  {
+    title: "Start Supercharging Your Growth!",
+    cta: "Get started",
+    ctaUrl: "url",
+    card:
+      {
+        title: "We have doubled in size in the last quarter and are due to double in size again this quarter!",
+        company: "Onto",
+        tag: "We funded",
+        cite: "Rob Jolly, Founder of ONTO",
+        bgColor: "#0E3674",
+      },
+  }
+findOut:
+  {
+    title: "Find out how much you can get",
+    subtitle: "Invest your funds into the repeatable scalable aspects of your business like ad spend and inventory.",
+    list:
+      [
+        "Sell products or services online",
+        "Have been trading for 6 months +",
+        "Earn £10K+ monthly revenue",
+      ],
+    calculator:
+      {
+        title: "Your monthly revenue",
+        min: "10K",
+        max: "2M",
+        select:
+          {
+            tile: "You need funding for",
+            dropdown:
+              [
+                "Select",
+                "Inventory purchuses",
+                "Marketing spend",
+                "Something else",
+              ],
+          },
+        cta: "CTA",
+        ctaUrl: "cta url",
+      },
+
+    faq:
+      {
+        title: "Freequesntly asked questiond",
+        [
+          { questions: "How much fuanding do you offer?", answer: "Lorem" },
+          {
+            question: "Does the repayment percentage ever change?",
+            answer: "Lorem",
+          },
+          {
+            question: "Can I apply for funding if I have a business partner?",
+            answer: "Lorme",
+          },
+          {
+            question: "Why do you need my bank account information?",
+            answer: "lorem",
+          },
+        ],
+        cta: "cta",
+        ctaUrl: "ctaUrl",
+      },
   }

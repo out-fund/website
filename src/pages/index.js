@@ -6,6 +6,8 @@ import Hero from "../components/Hero"
 import SectionContainer from "../components/SectionContainer"
 import SectionReinforcement from "../components/SectionReinforcement"
 import Card from "../components/Card"
+// import Button from "../components/shared/Button"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const IndexPage = (props) => {
   console.log(props.data)
@@ -13,7 +15,12 @@ const IndexPage = (props) => {
   const weFunded = props.data.homepageYaml.weFunded
   const feel = props.data.homepageYaml.weFunded.cards.feel
   const lemonadeDolls = props.data.homepageYaml.weFunded.cards.lemonadeDolls
+  const weInvesting = props.data.homepageYaml.weInvesting
+  const weInvestingImage = getImage(weInvesting.image)
+
   const aboutUs = props.data.homepageYaml.aboutUs
+  const startSupercharging = props.data.homepageYaml.startSupercharging
+  const onto = props.data.homepageYaml.startSupercharging.card
 
   return (
     <LangLayout location={props.location}>
@@ -31,7 +38,7 @@ const IndexPage = (props) => {
           title={weFunded.title}
           subtitle={weFunded.subtitle}>
           <Card
-            className="feel"
+            className={feel.company}
             variant="wide"
             tag={feel.tag}
             company={feel.company}
@@ -40,11 +47,12 @@ const IndexPage = (props) => {
             cite={feel.cite}
             image={feel.image}
             imageAlt={feel.imageAlt}
-            btn={feel.cta}
+            cta={feel.cta}
+            ctaUrl={feel.ctaUrl}
             bgColor={feel.bgColor}
           />
           <Card
-            className="lemonadeDolls"
+            className={lemonadeDolls.company.split(" ").join("")}
             variant="squereLogoOnly"
             tag={lemonadeDolls.tag}
             company={lemonadeDolls.company}
@@ -52,9 +60,16 @@ const IndexPage = (props) => {
             title={lemonadeDolls.title}
             image={lemonadeDolls.image}
             imageAlt={lemonadeDolls.imageAlt}
-            btn={lemonadeDolls.cta}
-            bgColor={lemonadeDolls.bgColor}
+            cta={lemonadeDolls.cta}
+            ctaUrl={lemonadeDolls.ctaUrl}
           />
+        </SectionContainer>
+        <SectionContainer
+          className="weInvesting"
+          title={weInvesting.title}
+          subtitle={weInvesting.subtitle}>
+          {/* <Button>Test</Button> */}
+          <GatsbyImage image={weInvestingImage} alt={weInvesting.imageAlt} />
         </SectionContainer>
         <SectionContainer
           className="aboutUs"
@@ -70,21 +85,21 @@ const IndexPage = (props) => {
           </ul>
         </SectionContainer>
         <SectionReinforcement
-          title="Title"
-          cta="cta"
-          ctaUrl="ctaUrl"
+          title={startSupercharging.title}
+          cta={startSupercharging.cta}
+          ctaUrl={startSupercharging.ctaUrl}
           titleRight>
           <Card
-            className="lemonadeDolls"
-            variant="squereLogoOnly"
-            tag={lemonadeDolls.tag}
-            company={lemonadeDolls.company}
-            logo={lemonadeDolls.logo}
-            title={lemonadeDolls.title}
-            image={lemonadeDolls.image}
-            imageAlt={lemonadeDolls.imageAlt}
-            btn={lemonadeDolls.cta}
-            bgColor={lemonadeDolls.bgColor}
+            variant="squereNoCta"
+            className={onto.company}
+            tag={onto.tag}
+            company={onto.company}
+            logo={onto.logo}
+            title={onto.title}
+            image={onto.image}
+            imageAlt={onto.imageAlt}
+            cite={onto.cite}
+            bgColor={onto.bgColor}
           />
         </SectionReinforcement>
       </main>
@@ -147,6 +162,25 @@ export const query = graphql`
           }
         }
       }
+      weInvesting {
+        title
+        subtitle
+        imageAlt
+        ctaUrl
+        cta
+        image {
+          childImageSharp {
+            gatsbyImageData(
+              blurredOptions: { width: 100 }
+              layout: CONSTRAINED
+              placeholder: BLURRED
+              backgroundColor: "#fff"
+              quality: 90
+              outputPixelDensities: [0.25, 0.5, 1, 2]
+            )
+          }
+        }
+      }
       aboutUs {
         title
         subtitle
@@ -155,6 +189,18 @@ export const query = graphql`
         stats {
           stat
           text
+        }
+      }
+      startSupercharging {
+        title
+        cta
+        ctaUrl
+        card {
+          title
+          company
+          tag
+          cite
+          bgColor
         }
       }
     }

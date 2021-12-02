@@ -2,7 +2,8 @@ import * as React from "react"
 import styled from "styled-components"
 
 const StyledSection = styled.section`
-  /* .top {
+  margin-top: 64px;
+  .top {
     text-align: center;
   }
   h2 {
@@ -16,7 +17,7 @@ const StyledSection = styled.section`
   p {
     margin: 0 16px;
     color: #1c3654;
-  } */
+  }
 `
 
 const SectionContainer = ({ children, title, subtitle }) => {
