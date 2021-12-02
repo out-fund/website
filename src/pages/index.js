@@ -36,7 +36,8 @@ const IndexPage = (props) => {
         <SectionContainer
           className="weFunded"
           title={weFunded.title}
-          subtitle={weFunded.subtitle}>
+          subtitle={weFunded.subtitle}
+        >
           <Card
             className={feel.company}
             variant="wide"
@@ -67,14 +68,15 @@ const IndexPage = (props) => {
         <SectionContainer
           className="weInvesting"
           title={weInvesting.title}
-          subtitle={weInvesting.subtitle}>
-          {/* <Button>Test</Button> */}
+          subtitle={weInvesting.subtitle}
+        >
           <GatsbyImage image={weInvestingImage} alt={weInvesting.imageAlt} />
         </SectionContainer>
         <SectionContainer
           className="aboutUs"
           title={aboutUs.title}
-          subtitle={aboutUs.subtitle}>
+          subtitle={aboutUs.subtitle}
+        >
           <GatsbyImage image={aboutUsImage} alt={aboutUs.imageAlt} />
           <ul className="statStrip">
             {aboutUs.stats.map((item) => (
@@ -89,7 +91,8 @@ const IndexPage = (props) => {
           title={startSupercharging.title}
           cta={startSupercharging.cta}
           ctaUrl={startSupercharging.ctaUrl}
-          titleRight>
+          titleRight
+        >
           <Card
             variant="squereNoCta"
             className={onto.company}
