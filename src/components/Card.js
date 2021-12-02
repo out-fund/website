@@ -59,7 +59,6 @@ const Card = ({
           </div>
           <div className="logo">{logo}</div>
           <GatsbyImage image={cardImage} alt={imageAlt} />
-          <h4 className="title">{title}</h4>
 
           <div className="cta">
             {cta}
