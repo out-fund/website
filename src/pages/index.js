@@ -113,7 +113,7 @@ const IndexPage = (props) => {
 export default IndexPage
 
 export const query = graphql`
-  query {
+  query Homepage {
     homepageYaml(language: { eq: "en-GB" }) {
       language
       seoTitle
@@ -127,7 +127,13 @@ export const query = graphql`
         imageAlt
         image {
           childImageSharp {
-            gatsbyImageData(quality: 90)
+            gatsbyImageData(
+              blurredOptions: { width: 100 }
+              layout: CONSTRAINED
+              placeholder: BLURRED
+              quality: 90
+              outputPixelDensities: [0.25, 0.5, 1, 2]
+            )
           }
         }
       }
@@ -147,7 +153,13 @@ export const query = graphql`
             bgColor
             image {
               childImageSharp {
-                gatsbyImageData(quality: 90)
+                gatsbyImageData(
+                  blurredOptions: { width: 100 }
+                  layout: CONSTRAINED
+                  placeholder: BLURRED
+                  quality: 90
+                  outputPixelDensities: [0.25, 0.5, 1, 2]
+                )
               }
             }
           }
@@ -160,7 +172,13 @@ export const query = graphql`
             tag
             image {
               childImageSharp {
-                gatsbyImageData(quality: 90)
+                gatsbyImageData(
+                  blurredOptions: { width: 100 }
+                  layout: CONSTRAINED
+                  placeholder: BLURRED
+                  quality: 90
+                  outputPixelDensities: [0.25, 0.5, 1, 2]
+                )
               }
             }
           }
@@ -174,7 +192,13 @@ export const query = graphql`
         imageAlt
         image {
           childImageSharp {
-            gatsbyImageData(quality: 90)
+            gatsbyImageData(
+              blurredOptions: { width: 100 }
+              layout: CONSTRAINED
+              placeholder: BLURRED
+              quality: 90
+              outputPixelDensities: [0.25, 0.5, 1, 2]
+            )
           }
         }
       }
@@ -188,7 +212,13 @@ export const query = graphql`
         }
         image {
           childImageSharp {
-            gatsbyImageData(quality: 90)
+            gatsbyImageData(
+              blurredOptions: { width: 100 }
+              layout: CONSTRAINED
+              placeholder: BLURRED
+              quality: 90
+              outputPixelDensities: [0.25, 0.5, 1, 2]
+            )
           }
         }
       }
@@ -205,7 +235,13 @@ export const query = graphql`
           imageAlt
           image {
             childImageSharp {
-              gatsbyImageData(quality: 90)
+              gatsbyImageData(
+                blurredOptions: { width: 100 }
+                layout: CONSTRAINED
+                placeholder: BLURRED
+                quality: 90
+                outputPixelDensities: [0.25, 0.5, 1, 2]
+              )
             }
           }
         }
