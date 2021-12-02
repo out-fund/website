@@ -18,6 +18,7 @@ const IndexPage = (props) => {
   const weInvesting = props.data.homepageYaml.weInvesting
   const weInvestingImage = getImage(props.data.homepageYaml.weInvesting.image)
   const aboutUs = props.data.homepageYaml.aboutUs
+  const aboutUsImage = getImage(props.data.homepageYaml.aboutUs.image)
   const startSupercharging = props.data.homepageYaml.startSupercharging
   const onto = props.data.homepageYaml.startSupercharging.card
 
@@ -74,6 +75,7 @@ const IndexPage = (props) => {
           className="aboutUs"
           title={aboutUs.title}
           subtitle={aboutUs.subtitle}>
+          <GatsbyImage image={aboutUsImage} alt={aboutUs.imageAlt} />
           <ul className="statStrip">
             {aboutUs.stats.map((item) => (
               <li key={item.stat}>
@@ -179,7 +181,6 @@ export const query = graphql`
             }
             logo
             tag
-            title
           }
         }
       }
@@ -234,6 +235,17 @@ export const query = graphql`
           tag
           cite
           bgColor
+          image {
+            childImageSharp {
+              gatsbyImageData(
+                blurredOptions: { width: 100 }
+                layout: CONSTRAINED
+                placeholder: BLURRED
+                quality: 90
+                outputPixelDensities: [0.25, 0.5, 1, 2]
+              )
+            }
+          }
         }
       }
     }

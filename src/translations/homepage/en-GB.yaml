@@ -28,7 +28,7 @@ weFunded:
             company: "Feel",
             logo: "feel.svg",
             title: "I invested in repeatable growth and grew subscriptions by 4x.",
-            image: "../../images/heroUK.png",
+            image: "../../images/Boris-Cheryl.png",
             imageAlt: "Boris Hodakel and Cheryl holidin Feel package",
             cite: "Boris Hodakel, Founder of Feel",
             cta: "Success stories",
@@ -39,9 +39,9 @@ weFunded:
           {
             tag: "We funded",
             company: "Lemonade Dolls",
-            logo: "feel.svg",
+            logo: "LemonadeDolls.svg",
             title: "I invested in repeatable growth and grew subscriptions by 4x.",
-            image: "../../images/heroUK.png",
+            image: "../../images/LemonadeDolls.jpg",
             imageAlt: "Lemonade dolls models wearing underwear",
             cta: "Read More",
             ctaUrl: "link",
@@ -62,7 +62,7 @@ aboutUs:
   {
     title: "About us",
     subtitle: "Outfund is a team of success-driven, highly motivated people who are passionate about growing businesses in the UK. Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission possible. ",
-    image: "../../images/heroUK.png",
+    image: "../../images/teamProfiles.jpg",
     imageAlt: "imageAlt",
     stats:
       [
@@ -89,7 +89,7 @@ startSupercharging:
         tag: "We funded",
         cite: "Rob Jolly, Founder of ONTO",
         bgColor: "#0E3674",
-        image: "../../images/heroUK.png",
+        image: "../../images/Onto.jpg",
         imageAlt: "Lemonade dolls models wearing underwear",
       },
   }

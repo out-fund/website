@@ -1,5 +1,6 @@
 import * as React from "react"
 import styled from "styled-components"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 // import { PrimaryButton, SecondaryButton } from "./shared/Button"
 
 const StyledCard = styled.div``
@@ -23,6 +24,7 @@ const Card = ({
     citationName = cite.split(",")[0]
     citationFounderOf = cite.split(",")[1]
   }
+  const cardImage = getImage(image)
   return (
     <>
       {variant === "wide" && (
@@ -34,6 +36,7 @@ const Card = ({
             <span className="company">{company}</span>
           </div>
           <div className="logo">{logo}</div>
+          <GatsbyImage image={cardImage} alt={imageAlt} />
           <h4 className="title">{title}</h4>
           {cite && (
             <p className="cite">
@@ -55,6 +58,7 @@ const Card = ({
             <span className="company">{company}</span>
           </div>
           <div className="logo">{logo}</div>
+          <GatsbyImage image={cardImage} alt={imageAlt} />
           <h4 className="title">{title}</h4>
 
           <div className="cta">
@@ -72,6 +76,7 @@ const Card = ({
             <span className="company">{company}</span>
           </div>
           <div className="logo">{logo}</div>
+          <GatsbyImage image={cardImage} alt={imageAlt} />
           <h4 className="title">{title}</h4>
           <p className="cite">
             <b>{citationName}</b>, {citationFounderOf}
