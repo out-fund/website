@@ -5,9 +5,9 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-netlify",
-    "gatsby-plugin-styled-components",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
@@ -38,8 +38,10 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
+        name: "translations",
         path: "./src/translations/",
       },
+      __key: "translations",
     },
     {
       resolve: "gatsby-plugin-i18n",
