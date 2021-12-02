@@ -122,7 +122,6 @@ findOut:
         cta: "CTA",
         ctaUrl: "cta url",
       },
-
     faq:
       {
         title: "Freequesntly asked questiond",
