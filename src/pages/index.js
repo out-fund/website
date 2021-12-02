@@ -16,8 +16,7 @@ const IndexPage = (props) => {
   const feel = props.data.homepageYaml.weFunded.cards.feel
   const lemonadeDolls = props.data.homepageYaml.weFunded.cards.lemonadeDolls
   const weInvesting = props.data.homepageYaml.weInvesting
-  const weInvestingImage = getImage(weInvesting.image)
-
+  const weInvestingImage = getImage(props.data.homepageYaml.weInvesting.image)
   const aboutUs = props.data.homepageYaml.aboutUs
   const startSupercharging = props.data.homepageYaml.startSupercharging
   const onto = props.data.homepageYaml.startSupercharging.card
