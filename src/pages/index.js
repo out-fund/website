@@ -119,6 +119,7 @@ export const query = graphql`
         primaryCtaUrl
         secondaryCta
         secondaryCtaUrl
+        imageAlt
         image {
           childImageSharp {
             gatsbyImageData(
@@ -131,7 +132,6 @@ export const query = graphql`
             )
           }
         }
-        imageAlt
       }
       weFunded {
         title
@@ -143,7 +143,18 @@ export const query = graphql`
             logo
             title
             imageAlt
-            image
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  blurredOptions: { width: 100 }
+                  layout: CONSTRAINED
+                  placeholder: BLURRED
+                  backgroundColor: "#fff"
+                  quality: 90
+                  outputPixelDensities: [0.25, 0.5, 1, 2]
+                )
+              }
+            }
             ctaUrl
             cta
             cite
@@ -153,8 +164,19 @@ export const query = graphql`
             company
             cta
             ctaUrl
-            image
             imageAlt
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  blurredOptions: { width: 100 }
+                  layout: CONSTRAINED
+                  placeholder: BLURRED
+                  backgroundColor: "#fff"
+                  quality: 90
+                  outputPixelDensities: [0.25, 0.5, 1, 2]
+                )
+              }
+            }
             logo
             tag
             title
@@ -164,15 +186,39 @@ export const query = graphql`
       weInvesting {
         title
         subtitle
-        imageAlt
         ctaUrl
         cta
+        imageAlt
+        image {
+          childImageSharp {
+            gatsbyImageData(
+              blurredOptions: { width: 100 }
+              layout: CONSTRAINED
+              placeholder: BLURRED
+              backgroundColor: "#fff"
+              quality: 90
+              outputPixelDensities: [0.25, 0.5, 1, 2]
+            )
+          }
+        }
       }
       aboutUs {
         title
         subtitle
-        image
         imageAlt
+        image {
+          childImageSharp {
+            gatsbyImageData(
+              blurredOptions: { width: 100 }
+              layout: CONSTRAINED
+              placeholder: BLURRED
+              backgroundColor: "#fff"
+              quality: 90
+              outputPixelDensities: [0.25, 0.5, 1, 2]
+            )
+          }
+        }
+
         stats {
           stat
           text
