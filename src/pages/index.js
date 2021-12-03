@@ -22,12 +22,14 @@ const IndexPage = (props) => {
   const startSupercharging = props.data.homepageYaml.startSupercharging
   const onto = props.data.homepageYaml.startSupercharging.card
   const findOut = props.data.homepageYaml.findOut
+  const regulated = props.data.homepageYaml.regulated
+  const blog = props.data.homepageYaml.blog
 
   return (
     <LangLayout location={props.location}>
       <Hero
         title={hero.title}
-        subtitle={hero.subtitle}
+        subTitle={hero.subTitle}
         primaryCta={hero.primaryCta}
         secondaryCta={hero.secondaryCta}
         image={hero.image}
@@ -37,7 +39,7 @@ const IndexPage = (props) => {
         <SectionContainer
           className="weFunded"
           title={weFunded.title}
-          subtitle={weFunded.subtitle}
+          subTitle={weFunded.subTitle}
         >
           <Card
             className={feel.company}
@@ -69,14 +71,14 @@ const IndexPage = (props) => {
         <SectionContainer
           className="weInvesting"
           title={weInvesting.title}
-          subtitle={weInvesting.subtitle}
+          subTitle={weInvesting.subTitle}
         >
           <GatsbyImage image={weInvestingImage} alt={weInvesting.imageAlt} />
         </SectionContainer>
         <SectionContainer
           className="aboutUs"
           title={aboutUs.title}
-          subtitle={aboutUs.subtitle}
+          subTitle={aboutUs.subTitle}
         >
           <GatsbyImage image={aboutUsImage} alt={aboutUs.imageAlt} />
           <ul className="statStrip">
@@ -108,9 +110,9 @@ const IndexPage = (props) => {
             bgColor={onto.bgColor}
           />
         </SectionReinforcement>
-        <section>
+        <section className="findOut">
           <h4>{findOut.title}</h4>
-          <div>{findOut.subtitle}</div>
+          <div>{findOut.subTitle}</div>
           <ul className="list">
             {findOut.list.map((item) => (
               <li key={item}>
@@ -147,6 +149,23 @@ const IndexPage = (props) => {
           </div>
           <a href={findOut.faq.ctaUrl}>{findOut.faq.cta}</a>
         </section>
+        <section className="regulated">
+          <h3>{regulated.title}</h3>
+          <p>{regulated.subTitle}</p>
+          <ul className="gird">
+            {regulated.blocks.map((item) => (
+              <li key={item.text}>
+                <div className="icon">{item.icon}</div>
+                <p>{item.text}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+        <section className="latestFromBlog">
+          <h3>{blog.title}</h3>
+          <a href={blog.ctaUrl}>{startSupercharging.cta}</a>
+          <div className="blogArticles">articles</div>
+        </section>
       </main>
     </LangLayout>
   )
@@ -160,7 +179,7 @@ export const query = graphql`
       aboutUs {
         image {
           childImageSharp {
-            gatsbyImageData(quality: 10)
+            gatsbyImageData
           }
         }
         imageAlt
@@ -172,7 +191,7 @@ export const query = graphql`
           stat
           text
         }
-        subtitle
+        subTitle
         title
       }
       blog {
@@ -202,13 +221,13 @@ export const query = graphql`
           title
         }
         list
-        subtitle
+        subTitle
         title
       }
       hero {
         image {
           childImageSharp {
-            gatsbyImageData(quality: 10)
+            gatsbyImageData
           }
         }
         imageAlt
@@ -216,7 +235,7 @@ export const query = graphql`
         primaryCtaUrl
         secondaryCta
         secondaryCtaUrl
-        subtitle
+        subTitle
         title
       }
       language
@@ -226,7 +245,7 @@ export const query = graphql`
           text
         }
         statement
-        subtitle
+        subTitle
         title
       }
       seoTitle
@@ -240,7 +259,7 @@ export const query = graphql`
           imageAlt
           image {
             childImageSharp {
-              gatsbyImageData(quality: 10)
+              gatsbyImageData
             }
           }
         }
@@ -249,7 +268,7 @@ export const query = graphql`
         title
       }
       weFunded {
-        subtitle
+        subTitle
         title
         cards {
           feel {
@@ -264,7 +283,7 @@ export const query = graphql`
             title
             image {
               childImageSharp {
-                gatsbyImageData(quality: 10)
+                gatsbyImageData
               }
             }
           }
@@ -277,7 +296,7 @@ export const query = graphql`
             tag
             image {
               childImageSharp {
-                gatsbyImageData(quality: 10)
+                gatsbyImageData
               }
             }
           }
@@ -288,151 +307,13 @@ export const query = graphql`
         ctaUrl
         image {
           childImageSharp {
-            gatsbyImageData(quality: 10)
+            gatsbyImageData
           }
         }
         imageAlt
-        subtitle
+        subTitle
         title
       }
     }
   }
 `
-
-// export const query = graphql`
-//   query Homepage {
-//     homepageYaml(language: { eq: "en-GB" }) {
-//       language
-//       seoTitle
-//       hero {
-//         title
-//         subtitle
-//         primaryCta
-//         primaryCtaUrl
-//         secondaryCta
-//         secondaryCtaUrl
-//         imageAlt
-//         image {
-//           childImageSharp {
-//             gatsbyImageData(
-//               blurredOptions: { width: 100 }
-//               layout: CONSTRAINED
-//               placeholder: BLURRED
-//               quality: 90
-//               outputPixelDensities: [0.25, 0.5, 1, 2]
-//             )
-//           }
-//         }
-//       }
-//       weFunded {
-//         title
-//         subtitle
-//         cards {
-//           feel {
-//             tag
-//             company
-//             logo
-//             title
-//             imageAlt
-//             ctaUrl
-//             cta
-//             cite
-//             bgColor
-//             image {
-//               childImageSharp {
-//                 gatsbyImageData(
-//                   blurredOptions: { width: 100 }
-//                   layout: CONSTRAINED
-//                   placeholder: BLURRED
-//                   quality: 90
-//                   outputPixelDensities: [0.25, 0.5, 1, 2]
-//                 )
-//               }
-//             }
-//           }
-//           lemonadeDolls {
-//             company
-//             cta
-//             ctaUrl
-//             imageAlt
-//             logo
-//             tag
-//             image {
-//               childImageSharp {
-//                 gatsbyImageData(
-//                   blurredOptions: { width: 100 }
-//                   layout: CONSTRAINED
-//                   placeholder: BLURRED
-//                   quality: 90
-//                   outputPixelDensities: [0.25, 0.5, 1, 2]
-//                 )
-//               }
-//             }
-//           }
-//         }
-//       }
-//       weInvesting {
-//         title
-//         subtitle
-//         ctaUrl
-//         cta
-//         imageAlt
-//         image {
-//           childImageSharp {
-//             gatsbyImageData(
-//               blurredOptions: { width: 100 }
-//               layout: CONSTRAINED
-//               placeholder: BLURRED
-//               quality: 90
-//               outputPixelDensities: [0.25, 0.5, 1, 2]
-//             )
-//           }
-//         }
-//       }
-//       aboutUs {
-//         title
-//         subtitle
-//         imageAlt
-//         stats {
-//           stat
-//           text
-//         }
-//         image {
-//           childImageSharp {
-//             gatsbyImageData(
-//               blurredOptions: { width: 100 }
-//               layout: CONSTRAINED
-//               placeholder: BLURRED
-//               quality: 90
-//               outputPixelDensities: [0.25, 0.5, 1, 2]
-//             )
-//           }
-//         }
-//       }
-//       startSupercharging {
-//         title
-//         cta
-//         ctaUrl
-//         card {
-//           title
-//           company
-//           tag
-//           cite
-//           bgColor
-//           imageAlt
-//           image {
-//             childImageSharp {
-//               gatsbyImageData(
-//                 blurredOptions: { width: 100 }
-//                 layout: CONSTRAINED
-//                 placeholder: BLURRED
-//                 quality: 90
-//                 outputPixelDensities: [0.25, 0.5, 1, 2]
-//               )
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
