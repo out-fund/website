@@ -40,7 +40,6 @@ weFunded:
             tag: "We funded",
             company: "Lemonade Dolls",
             logo: "LemonadeDolls.svg",
-            title: "I invested in repeatable growth and grew subscriptions by 4x.",
             image: "./../../images/LemonadeDolls.jpg",
             imageAlt: "Lemonade dolls models wearing underwear",
             cta: "Read More",
@@ -125,22 +124,46 @@ findOut:
     faq:
       {
         title: "Freequesntly asked questiond",
-        [
-          { questions: "How much fuanding do you offer?", answer: "Lorem" },
-          {
-            question: "Does the repayment percentage ever change?",
-            answer: "Lorem",
-          },
-          {
-            question: "Can I apply for funding if I have a business partner?",
-            answer: "Lorme",
-          },
-          {
-            question: "Why do you need my bank account information?",
-            answer: "lorem",
-          },
-        ],
+        questions:
+          [
+            { question: "How much fuanding do you offer?", answer: "Lorem" },
+            {
+              question: "Does the repayment percentage ever change?",
+              answer: "Lorem",
+            },
+            {
+              question: "Can I apply for funding if I have a business partner?",
+              answer: "Lorme",
+            },
+            {
+              question: "Why do you need my bank account information?",
+              answer: "lorem",
+            },
+          ],
         cta: "cta",
         ctaUrl: "ctaUrl",
       },
   }
+regulated:
+  {
+    title: "We are fully regulated",
+    subtitle: "Outfund is a team of success-driven, highly motivated people who are passionate about growing businesses in the UK. Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission possible.",
+    blocks:
+      [
+        {
+          icon: "icon",
+          text: "Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission possible. ",
+        },
+        {
+          icon: "icon",
+          text: "Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission possible.",
+        },
+        {
+          icon: "icon",
+          text: "Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission possible. ",
+        },
+      ],
+    statement: "Outfund is the trading name of MTL Financial LTD, which is a Lender. MTL Financial LTD is authorised and regulated by the Financial Conduct Authority (FCA) as a credit broker (FRN 803345)",
+  }
+
+blog: { title: "Latest from our blog", cta: "Check all", ctaUrl: "ctaUrl" }

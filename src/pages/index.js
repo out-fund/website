@@ -21,6 +21,7 @@ const IndexPage = (props) => {
   const aboutUsImage = getImage(props.data.homepageYaml.aboutUs.image)
   const startSupercharging = props.data.homepageYaml.startSupercharging
   const onto = props.data.homepageYaml.startSupercharging.card
+  const findOut = props.data.homepageYaml.findOut
 
   return (
     <LangLayout location={props.location}>
@@ -88,6 +89,7 @@ const IndexPage = (props) => {
           </ul>
         </SectionContainer>
         <SectionReinforcement
+          className="startSupercharging "
           title={startSupercharging.title}
           cta={startSupercharging.cta}
           ctaUrl={startSupercharging.ctaUrl}
@@ -106,6 +108,45 @@ const IndexPage = (props) => {
             bgColor={onto.bgColor}
           />
         </SectionReinforcement>
+        <section>
+          <h4>{findOut.title}</h4>
+          <div>{findOut.subtitle}</div>
+          <ul className="list">
+            {findOut.list.map((item) => (
+              <li key={item}>
+                <p>{item}</p>
+              </li>
+            ))}
+          </ul>
+          <div className="calculator">
+            <div>{findOut.calculator.title}</div>
+            <div>{findOut.calculator.min}</div>
+            <div>{findOut.calculator.max}</div>
+            <div className="select">
+              <label htmlFor="reasons">{findOut.calculator.select.title}</label>
+
+              <select name="reasons" id="reasons">
+                {findOut.calculator.select.dropdown.map((item) => (
+                  <option key={item} value={item}>
+                    {item}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+          <div className="faq">
+            {findOut.faq.title}
+            <dl>
+              {findOut.faq.questions.map((item) => (
+                <React.Fragment key={item.question}>
+                  <dt>{item.question}</dt>
+                  <dd>{item.answer}</dd>
+                </React.Fragment>
+              ))}
+            </dl>
+          </div>
+          <a href={findOut.faq.ctaUrl}>{findOut.faq.cta}</a>
+        </section>
       </main>
     </LangLayout>
   )
@@ -113,53 +154,117 @@ const IndexPage = (props) => {
 export default IndexPage
 
 export const query = graphql`
-  query Homepage {
-    homepageYaml(language: { eq: "en-GB" }) {
-      language
-      seoTitle
-      hero {
-        title
-        subtitle
+  query {
+    homepageYaml(language: { regex: "/en-GB/" }) {
+      id
+      aboutUs {
+        image {
+          childImageSharp {
+            gatsbyImageData(quality: 10)
+          }
+        }
+        imageAlt
         primaryCta
         primaryCtaUrl
         secondaryCta
         secondaryCtaUrl
-        imageAlt
+        stats {
+          stat
+          text
+        }
+        subtitle
+        title
+      }
+      blog {
+        cta
+        ctaUrl
+        title
+      }
+      findOut {
+        calculator {
+          cta
+          ctaUrl
+          max
+          min
+          select {
+            dropdown
+            tile
+          }
+          title
+        }
+        faq {
+          cta
+          ctaUrl
+          questions {
+            answer
+            question
+          }
+          title
+        }
+        list
+        subtitle
+        title
+      }
+      hero {
         image {
           childImageSharp {
-            gatsbyImageData(
-              blurredOptions: { width: 100 }
-              layout: CONSTRAINED
-              placeholder: BLURRED
-              quality: 90
-              outputPixelDensities: [0.25, 0.5, 1, 2]
-            )
+            gatsbyImageData(quality: 10)
           }
         }
+        imageAlt
+        primaryCta
+        primaryCtaUrl
+        secondaryCta
+        secondaryCtaUrl
+        subtitle
+        title
+      }
+      language
+      regulated {
+        blocks {
+          icon
+          text
+        }
+        statement
+        subtitle
+        title
+      }
+      seoTitle
+      startSupercharging {
+        card {
+          bgColor
+          cite
+          company
+          title
+          tag
+          imageAlt
+          image {
+            childImageSharp {
+              gatsbyImageData(quality: 10)
+            }
+          }
+        }
+        cta
+        ctaUrl
+        title
       }
       weFunded {
-        title
         subtitle
+        title
         cards {
           feel {
-            tag
-            company
-            logo
-            title
-            imageAlt
-            ctaUrl
-            cta
-            cite
             bgColor
+            cite
+            company
+            cta
+            ctaUrl
+            imageAlt
+            logo
+            tag
+            title
             image {
               childImageSharp {
-                gatsbyImageData(
-                  blurredOptions: { width: 100 }
-                  layout: CONSTRAINED
-                  placeholder: BLURRED
-                  quality: 90
-                  outputPixelDensities: [0.25, 0.5, 1, 2]
-                )
+                gatsbyImageData(quality: 10)
               }
             }
           }
@@ -172,80 +277,162 @@ export const query = graphql`
             tag
             image {
               childImageSharp {
-                gatsbyImageData(
-                  blurredOptions: { width: 100 }
-                  layout: CONSTRAINED
-                  placeholder: BLURRED
-                  quality: 90
-                  outputPixelDensities: [0.25, 0.5, 1, 2]
-                )
+                gatsbyImageData(quality: 10)
               }
             }
           }
         }
       }
       weInvesting {
-        title
-        subtitle
-        ctaUrl
-        cta
-        imageAlt
-        image {
-          childImageSharp {
-            gatsbyImageData(
-              blurredOptions: { width: 100 }
-              layout: CONSTRAINED
-              placeholder: BLURRED
-              quality: 90
-              outputPixelDensities: [0.25, 0.5, 1, 2]
-            )
-          }
-        }
-      }
-      aboutUs {
-        title
-        subtitle
-        imageAlt
-        stats {
-          stat
-          text
-        }
-        image {
-          childImageSharp {
-            gatsbyImageData(
-              blurredOptions: { width: 100 }
-              layout: CONSTRAINED
-              placeholder: BLURRED
-              quality: 90
-              outputPixelDensities: [0.25, 0.5, 1, 2]
-            )
-          }
-        }
-      }
-      startSupercharging {
-        title
         cta
         ctaUrl
-        card {
-          title
-          company
-          tag
-          cite
-          bgColor
-          imageAlt
-          image {
-            childImageSharp {
-              gatsbyImageData(
-                blurredOptions: { width: 100 }
-                layout: CONSTRAINED
-                placeholder: BLURRED
-                quality: 90
-                outputPixelDensities: [0.25, 0.5, 1, 2]
-              )
-            }
+        image {
+          childImageSharp {
+            gatsbyImageData(quality: 10)
           }
         }
+        imageAlt
+        subtitle
+        title
       }
     }
   }
 `
+
+// export const query = graphql`
+//   query Homepage {
+//     homepageYaml(language: { eq: "en-GB" }) {
+//       language
+//       seoTitle
+//       hero {
+//         title
+//         subtitle
+//         primaryCta
+//         primaryCtaUrl
+//         secondaryCta
+//         secondaryCtaUrl
+//         imageAlt
+//         image {
+//           childImageSharp {
+//             gatsbyImageData(
+//               blurredOptions: { width: 100 }
+//               layout: CONSTRAINED
+//               placeholder: BLURRED
+//               quality: 90
+//               outputPixelDensities: [0.25, 0.5, 1, 2]
+//             )
+//           }
+//         }
+//       }
+//       weFunded {
+//         title
+//         subtitle
+//         cards {
+//           feel {
+//             tag
+//             company
+//             logo
+//             title
+//             imageAlt
+//             ctaUrl
+//             cta
+//             cite
+//             bgColor
+//             image {
+//               childImageSharp {
+//                 gatsbyImageData(
+//                   blurredOptions: { width: 100 }
+//                   layout: CONSTRAINED
+//                   placeholder: BLURRED
+//                   quality: 90
+//                   outputPixelDensities: [0.25, 0.5, 1, 2]
+//                 )
+//               }
+//             }
+//           }
+//           lemonadeDolls {
+//             company
+//             cta
+//             ctaUrl
+//             imageAlt
+//             logo
+//             tag
+//             image {
+//               childImageSharp {
+//                 gatsbyImageData(
+//                   blurredOptions: { width: 100 }
+//                   layout: CONSTRAINED
+//                   placeholder: BLURRED
+//                   quality: 90
+//                   outputPixelDensities: [0.25, 0.5, 1, 2]
+//                 )
+//               }
+//             }
+//           }
+//         }
+//       }
+//       weInvesting {
+//         title
+//         subtitle
+//         ctaUrl
+//         cta
+//         imageAlt
+//         image {
+//           childImageSharp {
+//             gatsbyImageData(
+//               blurredOptions: { width: 100 }
+//               layout: CONSTRAINED
+//               placeholder: BLURRED
+//               quality: 90
+//               outputPixelDensities: [0.25, 0.5, 1, 2]
+//             )
+//           }
+//         }
+//       }
+//       aboutUs {
+//         title
+//         subtitle
+//         imageAlt
+//         stats {
+//           stat
+//           text
+//         }
+//         image {
+//           childImageSharp {
+//             gatsbyImageData(
+//               blurredOptions: { width: 100 }
+//               layout: CONSTRAINED
+//               placeholder: BLURRED
+//               quality: 90
+//               outputPixelDensities: [0.25, 0.5, 1, 2]
+//             )
+//           }
+//         }
+//       }
+//       startSupercharging {
+//         title
+//         cta
+//         ctaUrl
+//         card {
+//           title
+//           company
+//           tag
+//           cite
+//           bgColor
+//           imageAlt
+//           image {
+//             childImageSharp {
+//               gatsbyImageData(
+//                 blurredOptions: { width: 100 }
+//                 layout: CONSTRAINED
+//                 placeholder: BLURRED
+//                 quality: 90
+//                 outputPixelDensities: [0.25, 0.5, 1, 2]
+//               )
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
