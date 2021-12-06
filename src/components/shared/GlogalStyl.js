@@ -9,9 +9,8 @@ const GlobalStyle = createGlobalStyle`
     font-feature-settings: "ss06" on, "ss01" on;
   }
 
-  h1, h2, h3, h4{
+  /* h1, h2, h3, h4{
     letter-spacing: -0.02em;
-    /* font-feature-settings: "ss02" on, "ss03" on, "ss04" on; */
   }
   .visually-hidden {
     clip: rect(0 0 0 0);
@@ -21,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
     position: absolute;
     white-space: nowrap;
     width: 1px;
-  }
+  } */
 `
 
 export default GlobalStyle

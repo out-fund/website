@@ -11,7 +11,7 @@ module.exports = {
         defaults: {
           formats: [`auto`, `webp`],
           placeholder: `blurred`,
-          quality: "100",
+          quality: "90",
           breakpoints: [750, 1080, 1366, 1920],
           backgroundColor: `transparent`,
           outputPixelDensities: [0.125, 0.25, 0.5, 1],
