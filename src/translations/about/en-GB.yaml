@@ -29,48 +29,40 @@ weInvesting:
     ctaUrl: "/how-funding-works/",
   }
 
-weFunded:
+companies:
   {
-    title: "We funded brands like yours",
+    title: "Companies we funded",
 
     cards:
-      {
-        feel:
-          {
-            company: "Feel",
-            logo: "feel.svg",
-            image: "./../../images/Boris-Cheryl.png",
-            imageAlt: "Boris Hodakel and Cheryl holidin Feel package",
-            cite: "Boris Hodakel, Founder of Feel",
-            bgColor: "#EDE3D9",
-          },
-        lemonadeDolls:
-          {
-            company: "Lemonade Dolls",
-            logo: "LemonadeDolls.svg",
-            image: "./../../images/LemonadeDolls.jpg",
-            imageAlt: "Lemonade dolls models wearing underwear",
-            bgColor: "#EDE3D9",
-          },
-        paolita:
-          {
-            company: "Paolita",
-            logo: "feel.svg",
-            image: "./../../images/Boris-Cheryl.png",
-            imageAlt: "Boris Hodakel and Cheryl holidin Feel package",
-            cite: "Boris Hodakel, Founder of Feel",
-            bgColor: "#EDE3D9",
-          },
-        onto:
-          {
-            company: "onto",
-            logo: "feel.svg",
-            image: "./../../images/Boris-Cheryl.png",
-            imageAlt: "Boris Hodakel and Cheryl holidin Feel package",
-            cite: "Boris Hodakel, Founder of Feel",
-            bgColor: "#EDE3D9",
-          },
-      },
+      [
+        {
+          company: "Feel",
+          logo: "feel.svg",
+          image: "./../../images/Boris-Cheryl-Feel.jpg",
+          imageAlt: "Boris Hodakel and Cheryl holidin Feel package",
+        },
+
+        {
+          company: "Lemonade Dolls",
+          logo: "LemonadeDolls.svg",
+          image: "./../../images/Lemon-Fuller-Lemonade-Dolls.jpg",
+          imageAlt: "Lemon Fuller - Founder of Lemonade-Dolls",
+        },
+
+        {
+          company: "Paolita",
+          logo: "feel.svg",
+          image: "./../../images/Anna-Paola-Paolita.jpg",
+          imageAlt: "Anna Paola - Founder of Paolita",
+        },
+
+        {
+          company: "Onto",
+          logo: "feel.svg",
+          image: "./../../images/Rob-Jolly-Onto.jpg",
+          imageAlt: "Rob Jolly - Founder of Onto",
+        },
+      ],
   }
 
 latestNews:

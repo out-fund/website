@@ -25,7 +25,7 @@ const SectionContainer = ({ children, title, description }) => {
     <StyledSection>
       <div className="top">
         <h2>{title}</h2>
-        <p>{description}</p>
+        {description && <p>{description}</p>}
       </div>
 
       {children}

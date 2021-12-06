@@ -6,13 +6,14 @@ import Hero from "components/Hero"
 import Stats from "components/Stats"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import SectionContainer from "components/SectionContainer"
-// import Card from "../components/Card"
+import Card from "components/Card"
 
 const AboutUs = (props) => {
   console.log(props.data)
   const hero = props.data.aboutYaml.hero
   const weInvesting = props.data.aboutYaml.weInvesting
   const weInvestingImage = getImage(props.data.aboutYaml.weInvesting.image)
+  const companies = props.data.aboutYaml.companies
   return (
     <LangLayout location={props.location}>
       <header>
@@ -34,6 +35,19 @@ const AboutUs = (props) => {
         >
           <GatsbyImage image={weInvestingImage} alt={weInvesting.imageAlt} />
         </SectionContainer>
+        <SectionContainer className="companies" title={companies.title}>
+          {companies.cards.map((item) => (
+            <Card
+              key={item.company}
+              variant="simpleCompany"
+              className={item.company}
+              company={item.company}
+              logo={item.logo}
+              image={item.image}
+              imageAlt={item.imageAlt}
+            />
+          ))}
+        </SectionContainer>
       </main>
     </LangLayout>
   )
@@ -47,15 +61,15 @@ export const query = graphql`
       hero {
         title
         description
-        image {
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
         imageAlt
         stats {
           stat
           text
+        }
+        image {
+          childImageSharp {
+            gatsbyImageData
+          }
         }
       }
       weInvesting {
@@ -69,6 +83,19 @@ export const query = graphql`
         imageAlt
         description
         title
+      }
+      companies {
+        title
+        cards {
+          company
+          imageAlt
+          logo
+          image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+        }
       }
     }
   }

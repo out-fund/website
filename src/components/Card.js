@@ -30,7 +30,8 @@ const Card = ({
       {variant === "wide" && (
         <StyledCard
           className="squereCardLogoOnly"
-          style={{ backgroundColor: `${bgColor}` }}>
+          style={{ backgroundColor: `${bgColor}` }}
+        >
           <div>
             <span className="tag">{tag}</span>
             <span className="company">{company}</span>
@@ -52,7 +53,8 @@ const Card = ({
       {variant === "squereLogoOnly" && (
         <StyledCard
           className=".squereCardLogoOnly"
-          style={{ backgroundColor: `${bgColor}` }}>
+          style={{ backgroundColor: `${bgColor}` }}
+        >
           <div>
             <span className="tag">{tag}</span>
             <span className="company">{company}</span>
@@ -66,20 +68,11 @@ const Card = ({
           </div>
         </StyledCard>
       )}
-      {variant === "squereNoCta" && (
-        <StyledCard
-          className="squereNoCta"
-          style={{ backgroundColor: `${bgColor}` }}>
-          <div>
-            <span className="tag">{tag}</span>
-            <span className="company">{company}</span>
-          </div>
+      {variant === "simpleCompany" && (
+        <StyledCard className="simpleCompany">
+          <div className="company">{company}</div>
           <div className="logo">{logo}</div>
           <GatsbyImage image={cardImage} alt={imageAlt} />
-          <h4 className="title">{title}</h4>
-          <p className="cite">
-            <b>{citationName}</b>, {citationFounderOf}
-          </p>
         </StyledCard>
       )}
     </>
