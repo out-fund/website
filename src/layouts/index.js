@@ -1,5 +1,5 @@
 import * as React from "react"
-import GlobalStyle from "../components/shared/GlogalStyl"
+import GlobalStyle from "components/shared/GlogalStyl"
 
 const Layout = ({ children, location }) => {
   // console.log("test", location)

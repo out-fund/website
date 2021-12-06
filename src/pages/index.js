@@ -1,13 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import LangLayout from "../layouts/en"
-import Hero from "../components/Hero"
-import SectionContainer from "../components/SectionContainer"
-import SectionReinforcement from "../components/SectionReinforcement"
-import Card from "../components/Card"
-import Stats from "../components/Stats"
-// import Button from "../components/shared/Button"
+import LangLayout from "layouts/en"
+import Hero from "components/Hero"
+import SectionContainer from "components/SectionContainer"
+import SectionReinforcement from "components/SectionReinforcement"
+import Card from "components/Card"
+import Stats from "components/Stats"
+// import Button from "components/shared/Button"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const IndexPage = (props) => {

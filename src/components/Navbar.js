@@ -1,6 +1,6 @@
 import * as React from "react"
-import Logo from "../images/svg/Outfund-logo.svg"
-import MenueIcon from "../images/svg/MenueIcon.svg"
+import Logo from "images/svg/Outfund-logo.svg"
+import MenueIcon from "images/svg/MenueIcon.svg"
 import styled from "styled-components"
 import { SecondaryButton } from "./shared/Button"
 
