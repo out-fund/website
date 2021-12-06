@@ -37,17 +37,30 @@ const StyledHero = styled.header`
 const Hero = (props) => {
   const heroImage = getImage(props.image)
   return (
-    <StyledHero>
-      <h1>{props.title}</h1>
-      <p>{props.subtitle}</p>
-      <div className="actons">
-        <PrimaryButton>{props.primaryCta}</PrimaryButton>
-        <SecondaryButton>{props.secondaryCta}</SecondaryButton>
-      </div>
-      <div className="heroImage">
-        <GatsbyImage image={heroImage} alt={props.imageAlt} />
-      </div>
-    </StyledHero>
+    <>
+      {props.variant === "about" && (
+        <StyledHero>
+          <h1>{props.title}</h1>
+          <p>{props.description}</p>
+          <div className="heroImage">
+            <GatsbyImage image={heroImage} alt={props.imageAlt} />
+          </div>
+        </StyledHero>
+      )}
+      {props.variant === "homepage" && (
+        <StyledHero>
+          <h1>{props.title}</h1>
+          <p>{props.subtitle}</p>
+          <div className="actons">
+            <PrimaryButton>{props.primaryCta}</PrimaryButton>
+            <SecondaryButton>{props.secondaryCta}</SecondaryButton>
+          </div>
+          <div className="heroImage">
+            <GatsbyImage image={heroImage} alt={props.imageAlt} />
+          </div>
+        </StyledHero>
+      )}
+    </>
   )
 }
 

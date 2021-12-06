@@ -6,7 +6,7 @@ seoTitle: Growth capital
 hero:
   {
     title: "Growth capital for founders like You",
-    subTitle: "Supercharged funding from £10K to £2M for your marketing & inventory purchases.",
+    description: "Supercharged funding from £10K to £2M for your marketing & inventory purchases.",
     primaryCta: "Get funded",
     primaryCtaUrl: "/",
     secondaryCta: "Learn how it works",
@@ -18,7 +18,7 @@ hero:
 weFunded:
   {
     title: "We funded brands like yours",
-    subTitle: "We build you a unique deal based on your track record and success. Repayments are automatically made from a pre-agreed.",
+    description: "We build you a unique deal based on your track record and success. Repayments are automatically made from a pre-agreed.",
 
     cards:
       {
@@ -51,7 +51,7 @@ weFunded:
 weInvesting:
   {
     title: "We’re Investing into Online Businesses",
-    subTitle: "As founders ourselves, we know running a business is hard work and often unfair. Outfund doesn’t charge interest, take personal guarantees, and our facility is simply repaid from a revenue share of new sales. ",
+    description: "As founders ourselves, we know running a business is hard work and often unfair. Outfund doesn’t charge interest, take personal guarantees, and our facility is simply repaid from a revenue share of new sales. ",
     image: "./../../images/PaymentCounterPhone.jpg",
     imageAlt: "ImageAlt",
     cta: "Learn more how funding works",
@@ -60,7 +60,7 @@ weInvesting:
 aboutUs:
   {
     title: "About us",
-    subTitle: "Outfund is a team of success-driven, highly motivated people who are passionate about growing businesses in the UK. Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission possible. ",
+    description: "Outfund is a team of success-driven, highly motivated people who are passionate about growing businesses in the UK. Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission possible. ",
     image: "./../../images/teamProfiles.jpg",
     imageAlt: "imageAlt",
     stats:
@@ -95,7 +95,7 @@ startSupercharging:
 findOut:
   {
     title: "Find out how much you can get",
-    subTitle: "Invest your funds into the repeatable scalable aspects of your business like ad spend and inventory.",
+    description: "Invest your funds into the repeatable scalable aspects of your business like ad spend and inventory.",
     list:
       [
         "Sell products or services online",
@@ -147,7 +147,7 @@ findOut:
 regulated:
   {
     title: "We are fully regulated",
-    subTitle: "Outfund is a team of success-driven, highly motivated people who are passionate about growing businesses in the UK. Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission possible.",
+    description: "Outfund is a team of success-driven, highly motivated people who are passionate about growing businesses in the UK. Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission possible.",
     blocks:
       [
         {

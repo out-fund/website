@@ -6,6 +6,7 @@ import Hero from "../components/Hero"
 import SectionContainer from "../components/SectionContainer"
 import SectionReinforcement from "../components/SectionReinforcement"
 import Card from "../components/Card"
+import Stats from "../components/Stats"
 // import Button from "../components/shared/Button"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
@@ -27,19 +28,23 @@ const IndexPage = (props) => {
 
   return (
     <LangLayout location={props.location}>
-      <Hero
-        title={hero.title}
-        subTitle={hero.subTitle}
-        primaryCta={hero.primaryCta}
-        secondaryCta={hero.secondaryCta}
-        image={hero.image}
-        imageAlt={hero.imageAlt}
-      />
+      <header>
+        <Hero
+          variant="homepage"
+          title={hero.title}
+          description={hero.description}
+          primaryCta={hero.primaryCta}
+          secondaryCta={hero.secondaryCta}
+          image={hero.image}
+          imageAlt={hero.imageAlt}
+        />
+      </header>
+
       <main>
         <SectionContainer
           className="weFunded"
           title={weFunded.title}
-          subTitle={weFunded.subTitle}
+          description={weFunded.description}
         >
           <Card
             className={feel.company}
@@ -71,24 +76,25 @@ const IndexPage = (props) => {
         <SectionContainer
           className="weInvesting"
           title={weInvesting.title}
-          subTitle={weInvesting.subTitle}
+          description={weInvesting.description}
         >
           <GatsbyImage image={weInvestingImage} alt={weInvesting.imageAlt} />
         </SectionContainer>
         <SectionContainer
           className="aboutUs"
           title={aboutUs.title}
-          subTitle={aboutUs.subTitle}
+          description={aboutUs.description}
         >
           <GatsbyImage image={aboutUsImage} alt={aboutUs.imageAlt} />
-          <ul className="statStrip">
+          <Stats stats={aboutUs.stats} />
+          {/* <ul className="statStrip">
             {aboutUs.stats.map((item) => (
               <li key={item.stat}>
                 <h4>{item.stat}</h4>
                 <p>{item.text}</p>
               </li>
             ))}
-          </ul>
+          </ul> */}
         </SectionContainer>
         <SectionReinforcement
           className="startSupercharging "
@@ -112,7 +118,7 @@ const IndexPage = (props) => {
         </SectionReinforcement>
         <section className="findOut">
           <h4>{findOut.title}</h4>
-          <div>{findOut.subTitle}</div>
+          <div>{findOut.description}</div>
           <ul className="list">
             {findOut.list.map((item) => (
               <li key={item}>
@@ -151,7 +157,7 @@ const IndexPage = (props) => {
         </section>
         <section className="regulated">
           <h3>{regulated.title}</h3>
-          <p>{regulated.subTitle}</p>
+          <p>{regulated.description}</p>
           <ul className="gird">
             {regulated.blocks.map((item) => (
               <li key={item.text}>
@@ -191,7 +197,7 @@ export const query = graphql`
           stat
           text
         }
-        subTitle
+        description
         title
       }
       blog {
@@ -221,7 +227,7 @@ export const query = graphql`
           title
         }
         list
-        subTitle
+        description
         title
       }
       hero {
@@ -235,7 +241,7 @@ export const query = graphql`
         primaryCtaUrl
         secondaryCta
         secondaryCtaUrl
-        subTitle
+        description
         title
       }
       language
@@ -245,7 +251,7 @@ export const query = graphql`
           text
         }
         statement
-        subTitle
+        description
         title
       }
       seoTitle
@@ -268,7 +274,7 @@ export const query = graphql`
         title
       }
       weFunded {
-        subTitle
+        description
         title
         cards {
           feel {
@@ -311,7 +317,7 @@ export const query = graphql`
           }
         }
         imageAlt
-        subTitle
+        description
         title
       }
     }

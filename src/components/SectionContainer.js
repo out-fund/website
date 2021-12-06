@@ -20,12 +20,12 @@ const StyledSection = styled.section`
   } */
 `
 
-const SectionContainer = ({ children, title, subtitle }) => {
+const SectionContainer = ({ children, title, description }) => {
   return (
     <StyledSection>
       <div className="top">
         <h2>{title}</h2>
-        <p>{subtitle}</p>
+        <p>{description}</p>
       </div>
 
       {children}
