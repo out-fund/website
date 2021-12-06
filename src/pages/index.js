@@ -87,14 +87,6 @@ const IndexPage = (props) => {
         >
           <GatsbyImage image={aboutUsImage} alt={aboutUs.imageAlt} />
           <Stats stats={aboutUs.stats} />
-          {/* <ul className="statStrip">
-            {aboutUs.stats.map((item) => (
-              <li key={item.stat}>
-                <h4>{item.stat}</h4>
-                <p>{item.text}</p>
-              </li>
-            ))}
-          </ul> */}
         </SectionContainer>
         <SectionReinforcement
           className="startSupercharging "

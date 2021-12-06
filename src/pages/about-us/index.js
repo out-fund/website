@@ -4,12 +4,15 @@ import { graphql } from "gatsby"
 import LangLayout from "../../layouts/en"
 import Hero from "../../components/Hero"
 import Stats from "../../components/Stats"
-// import SectionContainer from "../components/SectionContainer"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import SectionContainer from "../../components/SectionContainer"
 // import Card from "../components/Card"
 
 const AboutUs = (props) => {
   console.log(props.data)
   const hero = props.data.aboutYaml.hero
+  const weInvesting = props.data.aboutYaml.weInvesting
+  const weInvestingImage = getImage(props.data.aboutYaml.weInvesting.image)
   return (
     <LangLayout location={props.location}>
       <header>
@@ -23,7 +26,15 @@ const AboutUs = (props) => {
         <Stats stats={hero.stats} />
       </header>
 
-      <main></main>
+      <main>
+        <SectionContainer
+          className="weInvesting"
+          title={weInvesting.title}
+          description={weInvesting.description}
+        >
+          <GatsbyImage image={weInvestingImage} alt={weInvesting.imageAlt} />
+        </SectionContainer>
+      </main>
     </LangLayout>
   )
 }
