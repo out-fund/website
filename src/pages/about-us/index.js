@@ -1,11 +1,11 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 
-import LangLayout from "../../layouts/en"
-import Hero from "../../components/Hero"
-import Stats from "../../components/Stats"
+import LangLayout from "layouts/en"
+import Hero from "components/Hero"
+import Stats from "components/Stats"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import SectionContainer from "../../components/SectionContainer"
+import SectionContainer from "components/SectionContainer"
 // import Card from "../components/Card"
 
 const AboutUs = (props) => {

@@ -4,6 +4,7 @@ module.exports = {
     title: "Outfund website",
   },
   plugins: [
+    "gatsby-plugin-root-import",
     "gatsby-plugin-netlify",
     {
       resolve: `gatsby-plugin-sharp`,
