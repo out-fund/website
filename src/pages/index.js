@@ -7,6 +7,7 @@ import SectionContainer from "components/SectionContainer"
 import SectionReinforcement from "components/SectionReinforcement"
 import Card from "components/Card"
 import Stats from "components/Stats"
+import Trust from "components/Trust"
 // import Button from "components/shared/Button"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
@@ -23,7 +24,7 @@ const IndexPage = (props) => {
   const startSupercharging = props.data.homepageJson.startSupercharging
   const onto = props.data.homepageJson.startSupercharging.card
   const findOut = props.data.homepageJson.findOut
-  const regulated = props.data.homepageJson.regulated
+  const regulated = props.data.trustJson
   const blog = props.data.homepageJson.blog
 
   return (
@@ -147,18 +148,7 @@ const IndexPage = (props) => {
           </div>
           <a href={findOut.faq.ctaUrl}>{findOut.faq.cta}</a>
         </section>
-        <section className="regulated">
-          <h3>{regulated.title}</h3>
-          <p>{regulated.description}</p>
-          <ul className="gird">
-            {regulated.blocks.map((item) => (
-              <li key={item.text}>
-                <div className="icon">{item.icon}</div>
-                <p>{item.text}</p>
-              </li>
-            ))}
-          </ul>
-        </section>
+        <Trust data={regulated} />
         <section className="latestFromBlog">
           <h3>{blog.title}</h3>
           <a href={blog.ctaUrl}>{startSupercharging.cta}</a>
@@ -173,7 +163,6 @@ export default IndexPage
 export const query = graphql`
   query {
     homepageJson(language: { regex: "/en-GB/" }) {
-      id
       aboutUs {
         image {
           childImageSharp {
@@ -237,15 +226,6 @@ export const query = graphql`
         title
       }
       language
-      regulated {
-        blocks {
-          icon
-          text
-        }
-        statement
-        description
-        title
-      }
       seoTitle
       startSupercharging {
         card {
@@ -312,6 +292,15 @@ export const query = graphql`
         imageAlt
         description
         title
+      }
+    }
+    trustJson(language: { regex: "/en-GB/" }) {
+      title
+      statement
+      description
+      blocks {
+        icon
+        text
       }
     }
   }

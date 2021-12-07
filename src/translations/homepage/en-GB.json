@@ -125,25 +125,6 @@
       "ctaUrl": "ctaUrl"
     }
   },
-  "regulated": {
-    "title": "We are fully regulated",
-    "description": "Outfund is a team of success-driven, highly motivated people who are passionate about growing businesses in the UK. Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission possible.",
-    "blocks": [
-      {
-        "icon": "icon",
-        "text": "Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission . "
-      },
-      {
-        "icon": "icon",
-        "text": "Our fast-paced environment makes us a highly adaptive team who rely on one another to make this  possible."
-      },
-      {
-        "icon": "icon",
-        "text": "Our fast-paced environment makes us a highly adaptive team who rely on one  to make this mission possible. "
-      }
-    ],
-    "statement": "Outfund is the trading name of MTL Financial LTD, which is a Lender. MTL Financial LTD is authorised and regulated by the Financial Conduct Authority (FCA) as a credit broker (FRN 803345)"
-  },
   "blog": {
     "title": "Latest from our blog",
     "cta": "Check all",

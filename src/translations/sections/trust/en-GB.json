@@ -1,0 +1,20 @@
+{
+  "language": "en-GB",
+  "title": "We are fully regulated",
+  "description": "Outfund is a team of success-driven, highly motivated people who are passionate about growing businesses in the UK. Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission possible.",
+  "blocks": [
+    {
+      "icon": "<svg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path opacity='.3' d='M24 28c-3.3 0-6-2.7-6-6V10h12v12c0 3.3-2.7 6-6 6Z' fill='#00A3D7'/><path d='M38 10h-4V6H14v4h-4c-2.2 0-4 1.8-4 4v2c0 5.1 3.84 9.26 8.78 9.88 1.26 3 3.96 5.26 7.22 5.92V38h-8v4h20v-4h-8v-6.2c3.26-.66 5.96-2.92 7.22-5.92C38.16 25.26 42 21.1 42 16v-2c0-2.2-1.8-4-4-4Zm-28 6v-2h4v7.64c-2.32-.84-4-3.04-4-5.64Zm14 12c-3.3 0-6-2.7-6-6V10h12v12c0 3.3-2.7 6-6 6Zm14-12c0 2.6-1.68 4.8-4 5.64V14h4v2Z' fill='#00A3D7'/></svg>",
+      "text": "Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission . "
+    },
+    {
+      "icon": "<svg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path opacity='.3' d='M24 28c-3.3 0-6-2.7-6-6V10h12v12c0 3.3-2.7 6-6 6Z' fill='#00A3D7'/><path d='M38 10h-4V6H14v4h-4c-2.2 0-4 1.8-4 4v2c0 5.1 3.84 9.26 8.78 9.88 1.26 3 3.96 5.26 7.22 5.92V38h-8v4h20v-4h-8v-6.2c3.26-.66 5.96-2.92 7.22-5.92C38.16 25.26 42 21.1 42 16v-2c0-2.2-1.8-4-4-4Zm-28 6v-2h4v7.64c-2.32-.84-4-3.04-4-5.64Zm14 12c-3.3 0-6-2.7-6-6V10h12v12c0 3.3-2.7 6-6 6Zm14-12c0 2.6-1.68 4.8-4 5.64V14h4v2Z' fill='#00A3D7'/></svg>",
+      "text": "Our fast-paced environment makes us a highly adaptive team who rely on one another to make this  possible."
+    },
+    {
+      "icon": "<svg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path opacity='.3' d='M24 28c-3.3 0-6-2.7-6-6V10h12v12c0 3.3-2.7 6-6 6Z' fill='#00A3D7'/><path d='M38 10h-4V6H14v4h-4c-2.2 0-4 1.8-4 4v2c0 5.1 3.84 9.26 8.78 9.88 1.26 3 3.96 5.26 7.22 5.92V38h-8v4h20v-4h-8v-6.2c3.26-.66 5.96-2.92 7.22-5.92C38.16 25.26 42 21.1 42 16v-2c0-2.2-1.8-4-4-4Zm-28 6v-2h4v7.64c-2.32-.84-4-3.04-4-5.64Zm14 12c-3.3 0-6-2.7-6-6V10h12v12c0 3.3-2.7 6-6 6Zm14-12c0 2.6-1.68 4.8-4 5.64V14h4v2Z' fill='#00A3D7'/></svg>",
+      "text": "Our fast-paced environment makes us a highly adaptive team who rely on one  to make this mission possible. "
+    }
+  ],
+  "statement": "Outfund is the trading name of MTL Financial LTD, which is a Lender. MTL Financial LTD is authorised and regulated by the Financial Conduct Authority (FCA) as a credit broker (FRN 803345)"
+}
