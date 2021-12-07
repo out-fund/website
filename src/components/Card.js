@@ -33,7 +33,7 @@ const Card = ({
           style={{ backgroundColor: `${bgColor}` }}
         >
           <div>
-            <span className="tag">{tag}</span>
+            <div className="tag">{tag}</div>
             <span className="company">{company}</span>
           </div>
           <div className="logo">{logo}</div>
@@ -56,7 +56,7 @@ const Card = ({
           style={{ backgroundColor: `${bgColor}` }}
         >
           <div>
-            <span className="tag">{tag}</span>
+            <div className="tag">{tag}</div>
             <span className="company">{company}</span>
           </div>
           <div className="logo">{logo}</div>
@@ -71,8 +71,16 @@ const Card = ({
       {variant === "simpleCompany" && (
         <StyledCard className="simpleCompany">
           <div className="company">{company}</div>
-          <div className="logo">{logo}</div>
+          <img src={logo} alt={`${company} logo`} />
           <GatsbyImage image={cardImage} alt={imageAlt} />
+        </StyledCard>
+      )}
+      {variant === "news" && (
+        <StyledCard className="simpleCompany">
+          <div className="tag">{tag}</div>
+          <h4 className="title">{title}</h4>
+          <div className="company">{company}</div>
+          <img src={logo} alt={`${company} logo`} />
         </StyledCard>
       )}
     </>

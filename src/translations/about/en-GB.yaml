@@ -32,62 +32,76 @@ weInvesting:
 companies:
   {
     title: "Companies we funded",
+    cta: "Read more sucess stories",
+    ctaUrl: "url",
 
     cards:
       [
         {
           company: "Feel",
-          logo: "feel.svg",
+          logo: "./../../images/svg/Feel.svg",
           image: "./../../images/Boris-Cheryl-Feel.jpg",
           imageAlt: "Boris Hodakel and Cheryl holidin Feel package",
         },
 
         {
           company: "Lemonade Dolls",
-          logo: "LemonadeDolls.svg",
+          logo: "./../../images/svg/LemonadeDolls.svg",
           image: "./../../images/Lemon-Fuller-Lemonade-Dolls.jpg",
           imageAlt: "Lemon Fuller - Founder of Lemonade-Dolls",
         },
 
         {
           company: "Paolita",
-          logo: "feel.svg",
+          logo: "./../../images/svg/Paolita.svg",
           image: "./../../images/Anna-Paola-Paolita.jpg",
           imageAlt: "Anna Paola - Founder of Paolita",
         },
 
         {
           company: "Onto",
-          logo: "feel.svg",
+          logo: "./../../images/svg/Onto.svg",
           image: "./../../images/Rob-Jolly-Onto.jpg",
           imageAlt: "Rob Jolly - Founder of Onto",
         },
+      ],
+    logos:
+      [
+        "./../../images/svg/LemonadeDolls.svg",
+        "./../../images/svg/Feel.svg",
+        "./../../images/svg/Paolita.svg",
+        "./../../images/svg/Onto.svg",
+        "./../../images/svg/LemonadeDolls.svg",
+        "./../../images/svg/Feel.svg",
+        "./../../images/svg/Paolita.svg",
+        "./../../images/svg/Onto.svg",
       ],
   }
 
 latestNews:
   {
+    title: "Latest upadates",
     cards:
-      {
-        techChrunch:
-          {
-            tag: "In the news",
-            logo: "feel.svg",
-            title: "I invested in repeatable growth and grew subscriptions by 4x.",
-          },
-        optily:
-          {
-            tag: "In the news",
-            logo: "feel.svg",
-            title: "I invested in repeatable growth and grew subscriptions by 4x.",
-          },
-        ukTn:
-          {
-            tag: "In the news",
-            logo: "feel.svg",
-            title: "I invested in repeatable growth and grew subscriptions by 4x.",
-          },
-      },
+      [
+        {
+          tag: "In the news",
+          company: "Tech Chrunch",
+          logo: "./../../images/svg/Onto.svg",
+          title: "I invested in repeatable growth and grew subscriptions by 4x.",
+        },
+        {
+          tag: "Partnership",
+          company: "Optily",
+          logo: "./../../images/svg/Onto.svg",
+          title: "I invested in repeatable growth and grew subscriptions by 4x.",
+        },
+        {
+          tag: "In the news",
+          company: "ukTn",
+          logo: "./../../images/svg/Onto.svg",
+          title: "I invested in repeatable growth and grew subscriptions by 4x.",
+        },
+      ],
   }
 
 joinUs:
@@ -96,7 +110,7 @@ joinUs:
     description: "Invest your funds into the repeatable scalable aspects of your business like ad spend and inventory.",
     cta: "Learn more how funding works",
     ctaUrl: "/how-funding-works/",
-    image: "./../../images/Boris-Cheryl.png",
+    image: "./../../images/Outfund-Join-us.png",
     imageAlt: "Boris Hodakel and Cheryl holidin Feel package",
   }
 

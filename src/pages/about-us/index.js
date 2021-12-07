@@ -14,6 +14,10 @@ const AboutUs = (props) => {
   const weInvesting = props.data.aboutYaml.weInvesting
   const weInvestingImage = getImage(props.data.aboutYaml.weInvesting.image)
   const companies = props.data.aboutYaml.companies
+  const latestNews = props.data.aboutYaml.latestNews
+  const regulated = props.data.aboutYaml.regulated
+  const joinUs = props.data.aboutYaml.joinUs
+  const joinUsImage = getImage(props.data.aboutYaml.joinUs.image)
   return (
     <LangLayout location={props.location}>
       <header>
@@ -42,12 +46,52 @@ const AboutUs = (props) => {
               variant="simpleCompany"
               className={item.company}
               company={item.company}
-              logo={item.logo}
+              logo={item.logo.publicURL}
               image={item.image}
               imageAlt={item.imageAlt}
             />
           ))}
+          <div className="logos">
+            {companies.logos.map((item) => (
+              <img src={item.publicURL} alt="Company logo" />
+            ))}
+          </div>
+          <a href={companies.ctaUrl}>{companies.cta}</a>
         </SectionContainer>
+        <SectionContainer
+          className="latestUpadates"
+          title={latestNews.latestNews}
+        >
+          {latestNews.cards.map((item) => (
+            <Card
+              key={item.company.toLowerCase().replace(/\s/g, "")}
+              variant="news"
+              className={item.tag.toLowerCase().replace(/\s/g, "")}
+              company={item.company}
+              title={item.title}
+              logo={item.logo.publicURL}
+              tag={item.tag}
+            />
+          ))}
+        </SectionContainer>
+        <section className="joinUs">
+          <h3>{joinUs.title}</h3>
+          <p>{joinUs.description}</p>
+          <a href={joinUs.ctaUrl}>{joinUs.cta}</a>
+          <GatsbyImage image={joinUsImage} alt={joinUs.imageAlt} />
+        </section>
+        <section className="regulated">
+          <h3>{regulated.title}</h3>
+          <p>{regulated.description}</p>
+          <ul className="gird">
+            {regulated.blocks.map((item) => (
+              <li key={item.text}>
+                <div className="icon">{item.icon}</div>
+                <p>{item.text}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
       </main>
     </LangLayout>
   )
@@ -86,15 +130,53 @@ export const query = graphql`
       }
       companies {
         title
+        cta
+        ctaUrl
         cards {
           company
           imageAlt
-          logo
+          logo {
+            publicURL
+          }
           image {
             childImageSharp {
               gatsbyImageData
             }
           }
+        }
+        logos {
+          publicURL
+        }
+      }
+      joinUs {
+        imageAlt
+        description
+        title
+        cta
+        ctaUrl
+        image {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+      }
+      regulated {
+        blocks {
+          icon
+          text
+        }
+        statement
+        description
+        title
+      }
+      latestNews {
+        cards {
+          logo {
+            publicURL
+          }
+          company
+          tag
+          title
         }
       }
     }

@@ -26,7 +26,7 @@ weFunded:
           {
             tag: "We funded",
             company: "Feel",
-            logo: "feel.svg",
+            logo: "./../../images/svg/Feel.svg",
             title: "I invested in repeatable growth and grew subscriptions by 4x.",
             image: "./../../images/Boris-Cheryl.png",
             imageAlt: "Boris Hodakel and Cheryl holidin Feel package",
@@ -39,7 +39,7 @@ weFunded:
           {
             tag: "We funded",
             company: "Lemonade Dolls",
-            logo: "LemonadeDolls.svg",
+            logo: "./../../images/svg/LemonadeDolls.svg",
             image: "./../../images/LemonadeDolls.jpg",
             imageAlt: "Lemonade dolls models wearing underwear",
             cta: "Read More",
