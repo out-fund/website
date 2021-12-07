@@ -10,14 +10,14 @@ import Card from "components/Card"
 
 const AboutUs = (props) => {
   console.log(props.data)
-  const hero = props.data.aboutUsYaml.hero
-  const weInvesting = props.data.aboutUsYaml.weInvesting
-  const weInvestingImage = getImage(props.data.aboutUsYaml.weInvesting.image)
-  const companies = props.data.aboutUsYaml.companies
-  const latestNews = props.data.aboutUsYaml.latestNews
-  const regulated = props.data.aboutUsYaml.regulated
-  const joinUs = props.data.aboutUsYaml.joinUs
-  const joinUsImage = getImage(props.data.aboutUsYaml.joinUs.image)
+  const hero = props.data.aboutUsJson.hero
+  const weInvesting = props.data.aboutUsJson.weInvesting
+  const weInvestingImage = getImage(props.data.aboutUsJson.weInvesting.image)
+  const companies = props.data.aboutUsJson.companies
+  const latestNews = props.data.aboutUsJson.latestNews
+  const regulated = props.data.aboutUsJson.regulated
+  const joinUs = props.data.aboutUsJson.joinUs
+  const joinUsImage = getImage(props.data.aboutUsJson.joinUs.image)
   return (
     <LangLayout location={props.location}>
       <header>
@@ -101,7 +101,7 @@ export default AboutUs
 
 export const query = graphql`
   query {
-    aboutUsYaml(language: { regex: "/en-GB/" }) {
+    aboutUsJson(language: { regex: "/en-GB/" }) {
       hero {
         title
         description
@@ -137,9 +137,6 @@ export const query = graphql`
           imageAlt
           logo {
             publicURL
-            relativePath
-            sourceInstanceName
-            extension
           }
           image {
             childImageSharp {
@@ -176,9 +173,6 @@ export const query = graphql`
         cards {
           logo {
             publicURL
-            relativePath
-            sourceInstanceName
-            extension
           }
           company
           tag

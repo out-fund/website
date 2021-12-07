@@ -1,0 +1,116 @@
+{
+  "language": "en-GB",
+  "seoTitle": "About",
+  "seoKeywords": ["test", "keywors"],
+  "hero": {
+    "title": "We’re the UK’s Largest eCommerce Investor",
+    "description": "We have been there, done it and got the t-shirt. Our founders have grown multiple businesses in the past and been through the struggles of raising Bank Loans, Venture",
+    "image": "../../images/aboutHero.jpg",
+    "imageAlt": "Test",
+    "stats": [
+      { "stat": "£100M", "text": "Invested in 2020 globaly" },
+      { "stat": "4", "text": "Operating countries" },
+      { "stat": "52+", "text": "Team and growing" },
+      { "stat": "£37M", "text": "We raised so far" }
+    ]
+  },
+  "weInvesting": {
+    "title": "We’re Investing into Online Businesses",
+    "description": "As founders ourselves, we know running a business is hard work and often unfair. Outfund doesn’t charge interest, take personal guarantees, and our facility is simply repaid from a revenue share of new sales. ",
+    "image": "../../images/PaymentCounterPhone.jpg",
+    "imageAlt": "ImageAlt",
+    "cta": "Learn more how funding works",
+    "ctaUrl": "/how-funding-works/"
+  },
+  "companies": {
+    "title": "Companies we funded",
+    "cta": "Read more sucess stories",
+    "ctaUrl": "url",
+    "cards": [
+      {
+        "company": "Feel",
+        "logo": "../../images/svg/Feel.svg",
+        "image": "../../images/Boris-Cheryl-Feel.jpg",
+        "imageAlt": "Boris Hodakel and Cheryl holidin Feel package"
+      },
+      {
+        "company": "Lemonade Dolls",
+        "logo": "../../images/svg/LemonadeDolls.svg",
+        "image": "../../images/Lemon-Fuller-Lemonade-Dolls.jpg",
+        "imageAlt": "Lemon Fuller - Founder of Lemonade-Dolls"
+      },
+      {
+        "company": "Paolita",
+        "logo": "../../images/svg/Paolita.svg",
+        "image": "../../images/Anna-Paola-Paolita.jpg",
+        "imageAlt": "Anna Paola - Founder of Paolita"
+      },
+      {
+        "company": "Onto",
+        "logo": "../../images/svg/Onto.svg",
+        "image": "../../images/Rob-Jolly-Onto.jpg",
+        "imageAlt": "Rob Jolly - Founder of Onto"
+      }
+    ],
+    "logos": [
+      "../../images/svg/LemonadeDolls.svg",
+      "../../images/svg/Feel.svg",
+      "../../images/svg/Paolita.svg",
+      "../../images/svg/Onto.svg",
+      "../../images/svg/LemonadeDolls.svg",
+      "../../images/svg/Feel.svg",
+      "../../images/svg/Paolita.svg",
+      "../../images/svg/Onto.svg"
+    ]
+  },
+  "latestNews": {
+    "title": "Latest upadates",
+    "cards": [
+      {
+        "tag": "In the news",
+        "company": "Tech Chrunch",
+        "logo": "../../images/svg/Onto.svg",
+        "title": "I invested in repeatable growth and grew subscriptions by 4x."
+      },
+      {
+        "tag": "Partnership",
+        "company": "Optily",
+        "logo": "../../images/svg/Onto.svg",
+        "title": "I invested in repeatable growth and grew subscriptions by 4x."
+      },
+      {
+        "tag": "In the news",
+        "company": "ukTn",
+        "logo": "../../images/svg/Onto.svg",
+        "title": "I invested in repeatable growth and grew subscriptions by 4x."
+      }
+    ]
+  },
+  "joinUs": {
+    "title": "Join us",
+    "description": "Invest your funds into the repeatable scalable aspects of your business like ad spend and inventory.",
+    "cta": "Learn more how funding works",
+    "ctaUrl": "/how-funding-works/",
+    "image": "../../images/Outfund-Join-us.png",
+    "imageAlt": "Boris Hodakel and Cheryl holidin Feel package"
+  },
+  "regulated": {
+    "title": "We are fully regulated",
+    "description": "Outfund is a team of success-driven, highly motivated people who are passionate about growing businesses in the UK. Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission possible.",
+    "blocks": [
+      {
+        "icon": "icon",
+        "text": "Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission . "
+      },
+      {
+        "icon": "icon",
+        "text": "Our fast-paced environment makes us a highly adaptive team who rely on one another to make this  possible."
+      },
+      {
+        "icon": "icon",
+        "text": "Our fast-paced environment makes us a highly adaptive team who rely on one  to make this mission possible. "
+      }
+    ],
+    "statement": "Outfund is the trading name of MTL Financial LTD, which is a Lender. MTL Financial LTD is authorised and regulated by the Financial Conduct Authority (FCA) as a credit broker (FRN 803345)"
+  }
+}

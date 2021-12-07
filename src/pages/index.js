@@ -12,19 +12,19 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const IndexPage = (props) => {
   console.log(props.data)
-  const hero = props.data.homepageYaml.hero
-  const weFunded = props.data.homepageYaml.weFunded
-  const feel = props.data.homepageYaml.weFunded.cards.feel
-  const lemonadeDolls = props.data.homepageYaml.weFunded.cards.lemonadeDolls
-  const weInvesting = props.data.homepageYaml.weInvesting
-  const weInvestingImage = getImage(props.data.homepageYaml.weInvesting.image)
-  const aboutUs = props.data.homepageYaml.aboutUs
-  const aboutUsImage = getImage(props.data.homepageYaml.aboutUs.image)
-  const startSupercharging = props.data.homepageYaml.startSupercharging
-  const onto = props.data.homepageYaml.startSupercharging.card
-  const findOut = props.data.homepageYaml.findOut
-  const regulated = props.data.homepageYaml.regulated
-  const blog = props.data.homepageYaml.blog
+  const hero = props.data.homepageJson.hero
+  const weFunded = props.data.homepageJson.weFunded
+  const feel = props.data.homepageJson.weFunded.cards.feel
+  const lemonadeDolls = props.data.homepageJson.weFunded.cards.lemonadeDolls
+  const weInvesting = props.data.homepageJson.weInvesting
+  const weInvestingImage = getImage(props.data.homepageJson.weInvesting.image)
+  const aboutUs = props.data.homepageJson.aboutUs
+  const aboutUsImage = getImage(props.data.homepageJson.aboutUs.image)
+  const startSupercharging = props.data.homepageJson.startSupercharging
+  const onto = props.data.homepageJson.startSupercharging.card
+  const findOut = props.data.homepageJson.findOut
+  const regulated = props.data.homepageJson.regulated
+  const blog = props.data.homepageJson.blog
 
   return (
     <LangLayout location={props.location}>
@@ -96,7 +96,7 @@ const IndexPage = (props) => {
           titleRight
         >
           <Card
-            variant="squereNoCta"
+            variant="squereLogoOnly"
             className={onto.company}
             tag={onto.tag}
             company={onto.company}
@@ -172,7 +172,7 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    homepageYaml(language: { regex: "/en-GB/" }) {
+    homepageJson(language: { regex: "/en-GB/" }) {
       id
       aboutUs {
         image {
@@ -249,6 +249,9 @@ export const query = graphql`
       seoTitle
       startSupercharging {
         card {
+          logo {
+            publicURL
+          }
           bgColor
           cite
           company
@@ -278,9 +281,6 @@ export const query = graphql`
             imageAlt
             logo {
               publicURL
-              relativePath
-              sourceInstanceName
-              extension
             }
             tag
             title
@@ -297,9 +297,6 @@ export const query = graphql`
             imageAlt
             logo {
               publicURL
-              relativePath
-              sourceInstanceName
-              extension
             }
             tag
             image {

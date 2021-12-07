@@ -28,15 +28,12 @@ const Card = ({
   return (
     <>
       {variant === "wide" && (
-        <StyledCard
-          className="squereCardLogoOnly"
-          style={{ backgroundColor: `${bgColor}` }}
-        >
+        <StyledCard className="wide" style={{ backgroundColor: `${bgColor}` }}>
           <div>
             <div className="tag">{tag}</div>
             <span className="company">{company}</span>
           </div>
-          <div className="logo">{logo}</div>
+          <img src={logo} alt={`${company} logo`} />
           <GatsbyImage image={cardImage} alt={imageAlt} />
           <h4 className="title">{title}</h4>
           {cite && (
@@ -52,14 +49,14 @@ const Card = ({
       )}
       {variant === "squereLogoOnly" && (
         <StyledCard
-          className=".squereCardLogoOnly"
+          className=".squereLogoOnly"
           style={{ backgroundColor: `${bgColor}` }}
         >
           <div>
             <div className="tag">{tag}</div>
             <span className="company">{company}</span>
           </div>
-          <div className="logo">{logo}</div>
+          <img src={logo} alt={`${company} logo`} />
           <GatsbyImage image={cardImage} alt={imageAlt} />
 
           <div className="cta">
@@ -76,7 +73,7 @@ const Card = ({
         </StyledCard>
       )}
       {variant === "news" && (
-        <StyledCard className="simpleCompany">
+        <StyledCard className="news">
           <div className="tag">{tag}</div>
           <h4 className="title">{title}</h4>
           <div className="company">{company}</div>

@@ -25,6 +25,7 @@ module.exports = {
     "gatsby-plugin-sitemap",
     "gatsby-plugin-mdx",
     "gatsby-transformer-yaml",
+    "gatsby-transformer-json",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
