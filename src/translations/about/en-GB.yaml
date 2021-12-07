@@ -39,28 +39,28 @@ companies:
       [
         {
           company: "Feel",
-          logo: "./../../images/svg/Feel.svg",
+          logo: ./../../images/svg/Feel.svg,
           image: "./../../images/Boris-Cheryl-Feel.jpg",
           imageAlt: "Boris Hodakel and Cheryl holidin Feel package",
         },
 
         {
           company: "Lemonade Dolls",
-          logo: "./../../images/svg/LemonadeDolls.svg",
+          logo: ./../../images/svg/LemonadeDolls.svg,
           image: "./../../images/Lemon-Fuller-Lemonade-Dolls.jpg",
           imageAlt: "Lemon Fuller - Founder of Lemonade-Dolls",
         },
 
         {
           company: "Paolita",
-          logo: "./../../images/svg/Paolita.svg",
+          logo: ./../../images/svg/Paolita.svg,
           image: "./../../images/Anna-Paola-Paolita.jpg",
           imageAlt: "Anna Paola - Founder of Paolita",
         },
 
         {
           company: "Onto",
-          logo: "./../../images/svg/Onto.svg",
+          logo: ./../../images/svg/Onto.svg,
           image: "./../../images/Rob-Jolly-Onto.jpg",
           imageAlt: "Rob Jolly - Founder of Onto",
         },
@@ -86,19 +86,19 @@ latestNews:
         {
           tag: "In the news",
           company: "Tech Chrunch",
-          logo: "./../../images/svg/Onto.svg",
+          logo: ./../../images/svg/Onto.svg,
           title: "I invested in repeatable growth and grew subscriptions by 4x.",
         },
         {
           tag: "Partnership",
           company: "Optily",
-          logo: "./../../images/svg/Onto.svg",
+          logo: ./../../images/svg/Onto.svg,
           title: "I invested in repeatable growth and grew subscriptions by 4x.",
         },
         {
           tag: "In the news",
           company: "ukTn",
-          logo: "./../../images/svg/Onto.svg",
+          logo: ./../../images/svg/Onto.svg,
           title: "I invested in repeatable growth and grew subscriptions by 4x.",
         },
       ],

@@ -135,7 +135,9 @@ export const query = graphql`
         cards {
           company
           imageAlt
-
+          logo {
+            publicURL
+          }
           image {
             childImageSharp {
               gatsbyImageData
@@ -169,6 +171,9 @@ export const query = graphql`
       }
       latestNews {
         cards {
+          logo {
+            publicURL
+          }
           company
           tag
           title
