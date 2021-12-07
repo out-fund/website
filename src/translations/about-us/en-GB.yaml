@@ -8,7 +8,7 @@ hero:
   {
     title: "We’re the UK’s Largest eCommerce Investor",
     description: "We have been there, done it and got the t-shirt. Our founders have grown multiple businesses in the past and been through the struggles of raising Bank Loans, Venture",
-    image: "./../../images/aboutHero.jpg",
+    image: ../../images/aboutHero.jpg,
     imageAlt: "Test",
     stats:
       [
@@ -23,7 +23,7 @@ weInvesting:
   {
     title: "We’re Investing into Online Businesses",
     description: "As founders ourselves, we know running a business is hard work and often unfair. Outfund doesn’t charge interest, take personal guarantees, and our facility is simply repaid from a revenue share of new sales. ",
-    image: "./../../images/PaymentCounterPhone.jpg",
+    image: ../../images/PaymentCounterPhone.jpg,
     imageAlt: "ImageAlt",
     cta: "Learn more how funding works",
     ctaUrl: "/how-funding-works/",
@@ -39,42 +39,42 @@ companies:
       [
         {
           company: "Feel",
-          logo: ./../../images/svg/Feel.svg,
-          image: "./../../images/Boris-Cheryl-Feel.jpg",
+          logo: ../../images/svg/Feel.svg,
+          image: ../../images/Boris-Cheryl-Feel.jpg,
           imageAlt: "Boris Hodakel and Cheryl holidin Feel package",
         },
 
         {
           company: "Lemonade Dolls",
-          logo: ./../../images/svg/LemonadeDolls.svg,
-          image: "./../../images/Lemon-Fuller-Lemonade-Dolls.jpg",
+          logo: ../../images/svg/LemonadeDolls.svg,
+          image: ../../images/Lemon-Fuller-Lemonade-Dolls.jpg,
           imageAlt: "Lemon Fuller - Founder of Lemonade-Dolls",
         },
 
         {
           company: "Paolita",
-          logo: ./../../images/svg/Paolita.svg,
-          image: "./../../images/Anna-Paola-Paolita.jpg",
+          logo: ../../images/svg/Paolita.svg,
+          image: ../../images/Anna-Paola-Paolita.jpg,
           imageAlt: "Anna Paola - Founder of Paolita",
         },
 
         {
           company: "Onto",
-          logo: ./../../images/svg/Onto.svg,
-          image: "./../../images/Rob-Jolly-Onto.jpg",
+          logo: ../../images/svg/Onto.svg,
+          image: ../../images/Rob-Jolly-Onto.jpg,
           imageAlt: "Rob Jolly - Founder of Onto",
         },
       ],
     logos:
       [
-        "./../../images/svg/LemonadeDolls.svg",
-        "./../../images/svg/Feel.svg",
-        "./../../images/svg/Paolita.svg",
-        "./../../images/svg/Onto.svg",
-        "./../../images/svg/LemonadeDolls.svg",
-        "./../../images/svg/Feel.svg",
-        "./../../images/svg/Paolita.svg",
-        "./../../images/svg/Onto.svg",
+        "../../images/svg/LemonadeDolls.svg",
+        "../../images/svg/Feel.svg",
+        "../../images/svg/Paolita.svg",
+        "../../images/svg/Onto.svg",
+        "../../images/svg/LemonadeDolls.svg",
+        "../../images/svg/Feel.svg",
+        "../../images/svg/Paolita.svg",
+        "../../images/svg/Onto.svg",
       ],
   }
 
@@ -86,19 +86,19 @@ latestNews:
         {
           tag: "In the news",
           company: "Tech Chrunch",
-          logo: ./../../images/svg/Onto.svg,
+          logo: ../../images/svg/Onto.svg,
           title: "I invested in repeatable growth and grew subscriptions by 4x.",
         },
         {
           tag: "Partnership",
           company: "Optily",
-          logo: ./../../images/svg/Onto.svg,
+          logo: ../../images/svg/Onto.svg,
           title: "I invested in repeatable growth and grew subscriptions by 4x.",
         },
         {
           tag: "In the news",
           company: "ukTn",
-          logo: ./../../images/svg/Onto.svg,
+          logo: ../../images/svg/Onto.svg,
           title: "I invested in repeatable growth and grew subscriptions by 4x.",
         },
       ],
@@ -110,7 +110,7 @@ joinUs:
     description: "Invest your funds into the repeatable scalable aspects of your business like ad spend and inventory.",
     cta: "Learn more how funding works",
     ctaUrl: "/how-funding-works/",
-    image: "./../../images/Outfund-Join-us.png",
+    image: ../../images/Outfund-Join-us.png,
     imageAlt: "Boris Hodakel and Cheryl holidin Feel package",
   }
 

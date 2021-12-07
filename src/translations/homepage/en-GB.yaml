@@ -11,7 +11,7 @@ hero:
     primaryCtaUrl: "/",
     secondaryCta: "Learn how it works",
     secondaryCtaUrl: "/",
-    image: "./../../images/heroUK.png",
+    image: ../../images/heroUK.png,
     imageAlt: "Test",
   }
 
@@ -26,9 +26,9 @@ weFunded:
           {
             tag: "We funded",
             company: "Feel",
-            logo: ./../../images/svg/Feel.svg,
+            logo: ../../images/svg/Feel.svg,
             title: "I invested in repeatable growth and grew subscriptions by 4x.",
-            image: "./../../images/Boris-Cheryl.png",
+            image: ../../images/Boris-Cheryl.png,
             imageAlt: "Boris Hodakel and Cheryl holidin Feel package",
             cite: "Boris Hodakel, Founder of Feel",
             cta: "Success stories",
@@ -39,8 +39,8 @@ weFunded:
           {
             tag: "We funded",
             company: "Lemonade Dolls",
-            logo: ./../../images/svg/LemonadeDolls.svg,
-            image: "./../../images/LemonadeDolls.jpg",
+            logo: ../../images/svg/LemonadeDolls.svg,
+            image: ../../images/LemonadeDolls.jpg,
             imageAlt: "Lemonade dolls models wearing underwear",
             cta: "Read More",
             ctaUrl: "link",
@@ -52,7 +52,7 @@ weInvesting:
   {
     title: "We’re Investing into Online Businesses",
     description: "As founders ourselves, we know running a business is hard work and often unfair. Outfund doesn’t charge interest, take personal guarantees, and our facility is simply repaid from a revenue share of new sales. ",
-    image: "./../../images/PaymentCounterPhone.jpg",
+    image: ../../images/PaymentCounterPhone.jpg,
     imageAlt: "ImageAlt",
     cta: "Learn more how funding works",
     ctaUrl: "/how-funding-works/",
@@ -61,7 +61,7 @@ aboutUs:
   {
     title: "About us",
     description: "Outfund is a team of success-driven, highly motivated people who are passionate about growing businesses in the UK. Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission possible. ",
-    image: "./../../images/teamProfiles.jpg",
+    image: ../../images/teamProfiles.jpg,
     imageAlt: "imageAlt",
     stats:
       [
@@ -88,7 +88,7 @@ startSupercharging:
         tag: "We funded",
         cite: "Rob Jolly, Founder of ONTO",
         bgColor: "#0E3674",
-        image: "./../../images/Onto.jpg",
+        image: ../../images/Onto.jpg,
         imageAlt: "Lemonade dolls models wearing underwear",
       },
   }

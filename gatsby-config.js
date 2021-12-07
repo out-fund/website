@@ -5,6 +5,14 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-root-import",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: `${__dirname}/src/images`,
+      },
+      __key: "images",
+    },
     "gatsby-plugin-netlify",
     {
       resolve: `gatsby-plugin-sharp`,
@@ -30,22 +38,15 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: `${__dirname}/src/images/icon.png`,
       },
     },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: "./src/images/",
-      },
-      __key: "images",
-    },
+
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "pages",
-        path: "./src/pages/",
+        path: `${__dirname}/src/pages`,
       },
       __key: "pages",
     },
@@ -53,7 +54,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "translations",
-        path: "./src/translations/",
+        path: `${__dirname}/src/translations`,
       },
       __key: "translations",
     },

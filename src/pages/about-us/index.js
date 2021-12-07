@@ -10,14 +10,14 @@ import Card from "components/Card"
 
 const AboutUs = (props) => {
   console.log(props.data)
-  const hero = props.data.aboutYaml.hero
-  const weInvesting = props.data.aboutYaml.weInvesting
-  const weInvestingImage = getImage(props.data.aboutYaml.weInvesting.image)
-  const companies = props.data.aboutYaml.companies
-  const latestNews = props.data.aboutYaml.latestNews
-  const regulated = props.data.aboutYaml.regulated
-  const joinUs = props.data.aboutYaml.joinUs
-  const joinUsImage = getImage(props.data.aboutYaml.joinUs.image)
+  const hero = props.data.aboutUsYaml.hero
+  const weInvesting = props.data.aboutUsYaml.weInvesting
+  const weInvestingImage = getImage(props.data.aboutUsYaml.weInvesting.image)
+  const companies = props.data.aboutUsYaml.companies
+  const latestNews = props.data.aboutUsYaml.latestNews
+  const regulated = props.data.aboutUsYaml.regulated
+  const joinUs = props.data.aboutUsYaml.joinUs
+  const joinUsImage = getImage(props.data.aboutUsYaml.joinUs.image)
   return (
     <LangLayout location={props.location}>
       <header>
@@ -101,7 +101,7 @@ export default AboutUs
 
 export const query = graphql`
   query {
-    aboutYaml(language: { regex: "/en-GB/" }) {
+    aboutUsYaml(language: { regex: "/en-GB/" }) {
       hero {
         title
         description
