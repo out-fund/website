@@ -137,6 +137,9 @@ export const query = graphql`
           imageAlt
           logo {
             publicURL
+            relativePath
+            sourceInstanceName
+            extension
           }
           image {
             childImageSharp {
@@ -173,6 +176,9 @@ export const query = graphql`
         cards {
           logo {
             publicURL
+            relativePath
+            sourceInstanceName
+            extension
           }
           company
           tag

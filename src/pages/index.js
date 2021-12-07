@@ -278,6 +278,9 @@ export const query = graphql`
             imageAlt
             logo {
               publicURL
+              relativePath
+              sourceInstanceName
+              extension
             }
             tag
             title
@@ -294,6 +297,9 @@ export const query = graphql`
             imageAlt
             logo {
               publicURL
+              relativePath
+              sourceInstanceName
+              extension
             }
             tag
             image {
