@@ -50,7 +50,7 @@ const Hero = (props) => {
       {props.variant === "homepage" && (
         <StyledHero>
           <h1>{props.title}</h1>
-          <p>{props.subtitle}</p>
+          <p>{props.description}</p>
           <div className="actons">
             <PrimaryButton>{props.primaryCta}</PrimaryButton>
             <SecondaryButton>{props.secondaryCta}</SecondaryButton>
@@ -58,6 +58,16 @@ const Hero = (props) => {
           <div className="heroImage">
             <GatsbyImage image={heroImage} alt={props.imageAlt} />
           </div>
+        </StyledHero>
+      )}
+      {props.variant === "careers" && (
+        <StyledHero>
+          <h1>{props.title}</h1>
+          <p>{props.description}</p>
+          <div className="heroImage">
+            <GatsbyImage image={heroImage} alt={props.imageAlt} />
+          </div>
+          <a href={props.ctaUrl}>{props.cta}</a>
         </StyledHero>
       )}
     </>

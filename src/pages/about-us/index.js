@@ -1,10 +1,10 @@
 import * as React from "react"
 import { graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import LangLayout from "layouts/en"
 import Hero from "components/Hero"
 import Stats from "components/Stats"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import SectionContainer from "components/SectionContainer"
 import Card from "components/Card"
 
@@ -42,7 +42,7 @@ const AboutUs = (props) => {
         <SectionContainer className="companies" title={companies.title}>
           {companies.cards.map((item) => (
             <Card
-              key={item.company}
+              key={item.company.toLowerCase().replace(/\s/g, "")}
               variant="simpleCompany"
               className={item.company}
               company={item.company}
@@ -53,7 +53,7 @@ const AboutUs = (props) => {
           ))}
           <div className="logos">
             {companies.logos.map((item) => (
-              <img src={item.publicURL} alt="Company logo" />
+              <img src={item.publicURL} alt="Company logo" /> // TODO Add key
             ))}
           </div>
           <a href={companies.ctaUrl}>{companies.cta}</a>
