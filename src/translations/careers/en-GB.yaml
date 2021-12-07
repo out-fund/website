@@ -28,10 +28,7 @@ weGrow:
     image: "./../../images/PaymentCounterPhone.jpg",
     imageAlt: "ImageAlt",
     teamWorked:
-      {
-        title: "Our team has worked at",
-        logos: "./../../images/svg/Logos.svg",
-      },
+      { title: "Our team has worked at", logos: ./../../images/svg/Logos.svg },
   }
 
 coolPeople:
