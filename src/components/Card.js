@@ -33,7 +33,11 @@ const Card = ({
             <div className="tag">{tag}</div>
             <span className="company">{company}</span>
           </div>
-          <img src={logo} alt={`${company} logo`} />
+          <div
+            className="logo"
+            role="img"
+            dangerouslySetInnerHTML={{ __html: `${logo}` }}
+          />
           <GatsbyImage image={cardImage} alt={imageAlt} />
           <h4 className="title">{title}</h4>
           {cite && (
@@ -56,7 +60,11 @@ const Card = ({
             <div className="tag">{tag}</div>
             <span className="company">{company}</span>
           </div>
-          <img src={logo} alt={`${company} logo`} />
+          <div
+            className="logo"
+            role="img"
+            dangerouslySetInnerHTML={{ __html: `${logo}` }}
+          />
           <GatsbyImage image={cardImage} alt={imageAlt} />
 
           <div className="cta">
@@ -68,7 +76,11 @@ const Card = ({
       {variant === "simpleCompany" && (
         <StyledCard className="simpleCompany">
           <div className="company">{company}</div>
-          <img src={logo} alt={`${company} logo`} />
+          <div
+            className="logo"
+            role="img"
+            dangerouslySetInnerHTML={{ __html: `${logo}` }}
+          />
           <GatsbyImage image={cardImage} alt={imageAlt} />
         </StyledCard>
       )}
@@ -77,7 +89,11 @@ const Card = ({
           <div className="tag">{tag}</div>
           <h4 className="title">{title}</h4>
           <div className="company">{company}</div>
-          <img src={logo} alt={`${company} logo`} />
+          <div
+            className="logo"
+            role="img"
+            dangerouslySetInnerHTML={{ __html: `${logo}` }}
+          />
         </StyledCard>
       )}
     </>

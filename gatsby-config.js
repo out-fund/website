@@ -43,14 +43,6 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "svgs",
-        path: `${__dirname}/src/images/svg`,
-      },
-      __key: "svgs",
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
         name: "pages",
         path: `${__dirname}/src/pages`,
       },

@@ -46,7 +46,7 @@ const AboutUs = (props) => {
               variant="simpleCompany"
               className={item.company}
               company={item.company}
-              logo={item.logo.publicURL}
+              logo={item.logo}
               image={item.image}
               imageAlt={item.imageAlt}
             />
@@ -69,7 +69,7 @@ const AboutUs = (props) => {
               className={item.tag.toLowerCase().replace(/\s/g, "")}
               company={item.company}
               title={item.title}
-              logo={item.logo.publicURL}
+              logo={item.logo}
               tag={item.tag}
             />
           ))}
@@ -135,18 +135,14 @@ export const query = graphql`
         cards {
           company
           imageAlt
-          logo {
-            publicURL
-          }
+          logo
           image {
             childImageSharp {
               gatsbyImageData
             }
           }
         }
-        logos {
-          publicURL
-        }
+        logos
       }
       joinUs {
         imageAlt
@@ -171,9 +167,7 @@ export const query = graphql`
       }
       latestNews {
         cards {
-          logo {
-            publicURL
-          }
+          logo
           company
           tag
           title

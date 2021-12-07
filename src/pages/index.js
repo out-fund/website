@@ -51,7 +51,7 @@ const IndexPage = (props) => {
             variant="wide"
             tag={feel.tag}
             company={feel.company}
-            logo={feel.logo.publicURL}
+            logo={feel.logo}
             title={feel.title}
             cite={feel.cite}
             image={feel.image}
@@ -65,7 +65,7 @@ const IndexPage = (props) => {
             variant="squereLogoOnly"
             tag={lemonadeDolls.tag}
             company={lemonadeDolls.company}
-            logo={lemonadeDolls.logo.publicURL}
+            logo={lemonadeDolls.logo}
             title={lemonadeDolls.title}
             image={lemonadeDolls.image}
             imageAlt={lemonadeDolls.imageAlt}
@@ -100,7 +100,7 @@ const IndexPage = (props) => {
             className={onto.company}
             tag={onto.tag}
             company={onto.company}
-            logo={onto.logo.publicURL}
+            logo={onto.logo}
             title={onto.title}
             image={onto.image}
             imageAlt={onto.imageAlt}
@@ -249,9 +249,7 @@ export const query = graphql`
       seoTitle
       startSupercharging {
         card {
-          logo {
-            publicURL
-          }
+          logo
           bgColor
           cite
           company
@@ -279,9 +277,7 @@ export const query = graphql`
             cta
             ctaUrl
             imageAlt
-            logo {
-              publicURL
-            }
+            logo
             tag
             title
             image {
@@ -295,9 +291,7 @@ export const query = graphql`
             cta
             ctaUrl
             imageAlt
-            logo {
-              publicURL
-            }
+            logo
             tag
             image {
               childImageSharp {
