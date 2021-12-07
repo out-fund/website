@@ -6,15 +6,6 @@ module.exports = {
   plugins: [
     "gatsby-plugin-root-import",
     {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: `${__dirname}/src/images`,
-      },
-      __key: "images",
-    },
-    "gatsby-plugin-netlify",
-    {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {
@@ -41,7 +32,22 @@ module.exports = {
         icon: `${__dirname}/src/images/icon.png`,
       },
     },
-
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: `${__dirname}/src/images`,
+      },
+      __key: "images",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "svgs",
+        path: `${__dirname}/src/images/svg`,
+      },
+      __key: "svgs",
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
