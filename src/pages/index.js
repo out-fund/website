@@ -24,7 +24,7 @@ const IndexPage = (props) => {
   const startSupercharging = props.data.homepageJson.startSupercharging
   const onto = props.data.homepageJson.startSupercharging.card
   const findOut = props.data.homepageJson.findOut
-  const regulated = props.data.trustJson
+  const trust = props.data.trustJson
   const blog = props.data.homepageJson.blog
 
   return (
@@ -148,7 +148,7 @@ const IndexPage = (props) => {
           </div>
           <a href={findOut.faq.ctaUrl}>{findOut.faq.cta}</a>
         </section>
-        <Trust data={regulated} />
+        <Trust data={trust} />
         <section className="latestFromBlog">
           <h3>{blog.title}</h3>
           <a href={blog.ctaUrl}>{startSupercharging.cta}</a>

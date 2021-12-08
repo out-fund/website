@@ -6,6 +6,7 @@ import LangLayout from "layouts/en"
 import Hero from "components/Hero"
 import Stats from "components/Stats"
 import SectionContainer from "components/SectionContainer"
+import Trust from "components/Trust"
 // import Card from "components/Card"
 
 const Careers = (props) => {
@@ -14,6 +15,10 @@ const Careers = (props) => {
   const weGrow = props.data.careersJson.weGrow
   const weGrowImage = getImage(props.data.careersJson.weGrow.image)
   const coolPeople = props.data.careersJson.coolPeople
+  const inOffice = props.data.careersJson.inOffice
+  const weValue = props.data.careersJson.weValue
+  const currentOpenings = props.data.careersJson.currentOpenings
+  const trust = props.data.trustJson
   return (
     <LangLayout location={props.location}>
       <header>
@@ -49,6 +54,98 @@ const Careers = (props) => {
             ))}
           </div>
         </SectionContainer>
+        <SectionContainer
+          className="inOffice"
+          title={inOffice.title}
+          description={inOffice.description}
+        >
+          <ul className="gird">
+            {inOffice.blocks.map((block) => (
+              <li key={block.text}>
+                <div
+                  className="icon"
+                  role="img"
+                  dangerouslySetInnerHTML={{ __html: `${block.icon}` }}
+                />
+                <p>{block.text}</p>
+              </li>
+            ))}
+          </ul>
+          <GatsbyImage
+            image={getImage(inOffice.image)}
+            alt={inOffice.imageAlt}
+          />
+          <div className="offices">
+            <div className="main">
+              <h4>{inOffice.offices.main.title}</h4>
+              <div className="address">
+                <h5>{inOffice.offices.main.country}</h5>
+                <div>
+                  {inOffice.offices.main.firstLine} <br />
+                  {inOffice.offices.main.secondLine}
+                </div>
+              </div>
+            </div>
+            <div className="world">
+              <h4>{inOffice.offices.world.title}</h4>
+              <ul className="gird">
+                {inOffice.offices.world.list.map((block) => (
+                  <li key={block.country}>
+                    <div className="address">
+                      <h5>{block.country}</h5>
+                      <div>
+                        {block.firstLine} <br />
+                        {block.secondLine}
+                      </div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <a href={inOffice.ctaUrl}>{inOffice.cta}</a>
+          </div>
+        </SectionContainer>
+        <SectionContainer className="weValue" title={weValue.title}>
+          <ul className="gird">
+            {weValue.blocks.map((block) => (
+              <li key={block.country} className="block">
+                <h5>{block.title}</h5>
+                <p>{block.text}</p>
+              </li>
+            ))}
+          </ul>
+        </SectionContainer>
+        <SectionContainer
+          className="currentOpenings"
+          title={currentOpenings.title}
+          description={currentOpenings.description}
+        >
+          <div className="openings">
+            <ul className="gird">
+              {currentOpenings.openings.map((block) => (
+                <li key={block.country} className="block">
+                  <h5>{block.title}</h5>
+                  <span>
+                    {block.location} | {block.time}
+                  </span>
+                </li>
+              ))}
+              <li>
+                <h5>{currentOpenings.openApplication.title}</h5>
+                <p>
+                  {currentOpenings.openApplication.description}{" "}
+                  <a
+                    href={`mailto:${currentOpenings.openApplication.email}?subject=Outfund - Open application`}
+                  >
+                    {currentOpenings.openApplication.email}
+                  </a>
+                </p>
+              </li>
+            </ul>
+            <a href={currentOpenings.ctaUrl}>{currentOpenings.cta}</a>
+          </div>
+        </SectionContainer>
+        <Trust data={trust} />
       </main>
     </LangLayout>
   )
@@ -162,6 +259,15 @@ export const query = graphql`
           text
           title
         }
+      }
+    }
+    trustJson(language: { regex: "/en-GB/" }) {
+      title
+      statement
+      description
+      blocks {
+        icon
+        text
       }
     }
   }
