@@ -5,7 +5,7 @@ import { PrimaryButton, SecondaryButton } from "components/Button"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const StyledHero = styled.header`
-  /* background-color: #fff;
+  background-color: #fff;
   padding: 0 32px;
   h1 {
     color: #051734;
@@ -29,9 +29,9 @@ const StyledHero = styled.header`
     }
   }
   .heroImage {
-    margin: 16px -32px 0;
+    margin: 32px 0;
     width: 100;
-  } */
+  }
 `
 
 const Hero = (props) => {

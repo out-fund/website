@@ -5,17 +5,19 @@ import styled from "styled-components"
 import { SecondaryButton } from "components/Button"
 
 const StyledNavbar = styled.nav`
-  /* background-color: #f2f6fa;
+  background-color: #f2f6fa;
   height: 72px;
   display: flex;
   align-items: center;
   padding: 0 16px 0 32px;
   .logo {
     margin-right: auto;
+    height: 24px;
   }
   .menueIcon {
     margin-left: 1rem;
-  } */
+    height: 40px;
+  }
 `
 
 const Navbar = (props) => {

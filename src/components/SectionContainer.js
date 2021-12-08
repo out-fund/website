@@ -2,22 +2,22 @@ import * as React from "react"
 import styled from "styled-components"
 
 const StyledSection = styled.section`
-  /* margin-top: 64px;
+  margin-top: 64px;
+  /* padding-left: 32px;
+  padding-right: 32px; */
   .top {
     text-align: center;
   }
   h2 {
-    color: #051734;
     font-weight: 700;
     line-height: 1;
     font-size: 28px;
-    margin-bottom: 8px;
-    margin: 0 16px;
+    margin: 0px 32px 8px;
   }
   p {
-    margin: 0 16px;
+    margin: 0px 32px 24px;
     color: #1c3654;
-  } */
+  }
 `
 
 const SectionContainer = ({ children, title, description }) => {

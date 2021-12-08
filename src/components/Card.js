@@ -3,7 +3,18 @@ import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 // import { PrimaryButton, SecondaryButton } from "./shared/Button"
 
-const StyledCard = styled.div``
+const StyledCard = styled.div`
+  margin: 0 16px 0;
+  border-radius: 10px;
+  background-color: ${(props) => props.bgColor || "#0E3674"};
+`
+const StyledWide = styled(StyledCard)`
+  padding: 24px;
+`
+
+const StyledTag = styled.div`
+  background-color: #faf;
+`
 
 const Card = ({
   tag,
@@ -24,13 +35,12 @@ const Card = ({
     citationName = cite.split(",")[0]
     citationFounderOf = cite.split(",")[1]
   }
-  const cardImage = getImage(image)
   return (
     <>
       {variant === "wide" && (
-        <StyledCard className="wide" style={{ backgroundColor: `${bgColor}` }}>
+        <StyledWide bgColor={bgColor}>
           <div>
-            <div className="tag">{tag}</div>
+            <StyledTag>{tag}</StyledTag>
             <span className="company">{company}</span>
           </div>
           <div
@@ -38,7 +48,7 @@ const Card = ({
             role="img"
             dangerouslySetInnerHTML={{ __html: `${logo}` }}
           />
-          <GatsbyImage image={cardImage} alt={imageAlt} />
+          <GatsbyImage image={getImage(image)} alt={imageAlt} />
           <h4 className="title">{title}</h4>
           {cite && (
             <p className="cite">
@@ -49,7 +59,7 @@ const Card = ({
             {cta}
             {ctaUrl}
           </div>
-        </StyledCard>
+        </StyledWide>
       )}
       {variant === "squereLogoOnly" && (
         <StyledCard
@@ -65,7 +75,7 @@ const Card = ({
             role="img"
             dangerouslySetInnerHTML={{ __html: `${logo}` }}
           />
-          <GatsbyImage image={cardImage} alt={imageAlt} />
+          <GatsbyImage image={getImage(image)} alt={imageAlt} />
 
           <div className="cta">
             {cta}
@@ -81,7 +91,7 @@ const Card = ({
             role="img"
             dangerouslySetInnerHTML={{ __html: `${logo}` }}
           />
-          <GatsbyImage image={cardImage} alt={imageAlt} />
+          <GatsbyImage image={getImage(image)} alt={imageAlt} />
         </StyledCard>
       )}
       {variant === "news" && (
