@@ -1,7 +1,7 @@
 import React from "react"
 // import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
-import { PrimaryButton, SecondaryButton } from "./shared/Button"
+import { PrimaryButton, SecondaryButton } from "components/Button"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const StyledHero = styled.header`
