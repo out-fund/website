@@ -11,12 +11,12 @@ const StyledNavbar = styled.nav`
   align-items: center;
   padding: 0 16px 0 32px;
   .logo {
-    margin-right: auto;
     height: 24px;
+    margin-right: auto;
   }
   .menueIcon {
-    margin-left: 1rem;
     height: 40px;
+    margin-left: 1rem;
   }
 `
 

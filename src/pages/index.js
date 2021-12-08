@@ -48,21 +48,8 @@ const IndexPage = (props) => {
           description={weFunded.description}
         >
           <Card
-            className={feel.company}
-            variant="wide"
-            tag={feel.tag}
-            company={feel.company}
-            logo={feel.logo}
-            title={feel.title}
-            cite={feel.cite}
-            image={feel.image}
-            imageAlt={feel.imageAlt}
-            cta={feel.cta}
-            ctaUrl={feel.ctaUrl}
-            bgColor={feel.bgColor}
-          />
-          <Card
             className={lemonadeDolls.company.split(" ").join("")}
+            tagColor="#F6C34E"
             variant="squereLogoOnly"
             tag={lemonadeDolls.tag}
             company={lemonadeDolls.company}
@@ -72,6 +59,22 @@ const IndexPage = (props) => {
             imageAlt={lemonadeDolls.imageAlt}
             cta={lemonadeDolls.cta}
             ctaUrl={lemonadeDolls.ctaUrl}
+          />
+          <Card
+            className={feel.company}
+            variant="wide"
+            tag={feel.tag}
+            tagColor="#F9F1EA"
+            company={feel.company}
+            logo={feel.logo}
+            title={feel.title}
+            by={feel.by}
+            image={feel.image}
+            imageAlt={feel.imageAlt}
+            cta={feel.cta}
+            ctaUrl={feel.ctaUrl}
+            bgColor={feel.bgColor}
+            titleColor="#A7825E"
           />
         </SectionContainer>
         <SectionContainer
@@ -105,7 +108,7 @@ const IndexPage = (props) => {
             title={onto.title}
             image={onto.image}
             imageAlt={onto.imageAlt}
-            cite={onto.cite}
+            by={onto.by}
             bgColor={onto.bgColor}
           />
         </SectionReinforcement>
@@ -231,7 +234,7 @@ export const query = graphql`
         card {
           logo
           bgColor
-          cite
+          by
           company
           title
           tag
@@ -252,7 +255,7 @@ export const query = graphql`
         cards {
           feel {
             bgColor
-            cite
+            by
             company
             cta
             ctaUrl

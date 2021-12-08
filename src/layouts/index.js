@@ -1,5 +1,7 @@
 import * as React from "react"
+
 import GlobalStyle from "components/GlobalStyle"
+import "normalize.css"
 
 const Layout = ({ children, location }) => {
   // console.log("test", location)

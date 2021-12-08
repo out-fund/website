@@ -8,13 +8,13 @@ const StyledSection = styled.section`
   .top {
     text-align: center;
   }
-  h2 {
-    font-weight: 700;
-    line-height: 1;
-    font-size: 28px;
+  .title {
     margin: 0px 32px 8px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1;
   }
-  p {
+  .description {
     margin: 0px 32px 24px;
     color: #1c3654;
   }
@@ -24,8 +24,8 @@ const SectionContainer = ({ children, title, description }) => {
   return (
     <StyledSection>
       <div className="top">
-        <h2>{title}</h2>
-        {description && <p>{description}</p>}
+        <h2 className="title">{title}</h2>
+        {description && <p className="description">{description}</p>}
       </div>
 
       {children}

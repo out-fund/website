@@ -6,19 +6,19 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const StyledHero = styled.header`
   background-color: #fff;
-  padding: 0 32px;
+  padding: 80px 32px 0;
   h1 {
+    /* margin-top: 80px; */
+    margin-bottom: 16px;
     color: #051734;
     font-weight: 700;
     font-size: 40px;
     line-height: 1;
-    margin-top: 80px;
-    margin-bottom: 16px;
   }
   p {
-    line-height: 1.5;
     margin-bottom: 64px;
     color: #405e80;
+    line-height: 1.5;
   }
   .actons {
     button {
@@ -29,7 +29,8 @@ const StyledHero = styled.header`
     }
   }
   .heroImage {
-    margin: 32px 0;
+    position: relative;
+    top: 32px;
     width: 100;
   }
 `
