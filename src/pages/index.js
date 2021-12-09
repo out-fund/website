@@ -15,22 +15,22 @@ import Calculator from "components/Calculator"
 
 const IndexPage = (props) => {
   console.log(props.data)
-  const hero = props.data.homepageJson.hero
-  const weFunded = props.data.homepageJson.weFunded
-  const feel = props.data.homepageJson.weFunded.cards.feel
-  const lemonadeDolls = props.data.homepageJson.weFunded.cards.lemonadeDolls
-  const weInvesting = props.data.homepageJson.weInvesting
-  const weInvestingImage = getImage(props.data.homepageJson.weInvesting.image)
-  const aboutUs = props.data.homepageJson.aboutUs
-  const startSupercharging = props.data.homepageJson.startSupercharging
-  const onto = props.data.homepageJson.startSupercharging.card
-  const findOut = props.data.homepageJson.findOut
-  const trust = props.data.trustJson
-  const blog = props.data.homepageJson.blog
+  // const hero = props.data.homepageJson.hero
+  // const weFunded = props.data.homepageJson.weFunded
+  // const feel = props.data.homepageJson.weFunded.cards.feel
+  // const lemonadeDolls = props.data.homepageJson.weFunded.cards.lemonadeDolls
+  // const weInvesting = props.data.homepageJson.weInvesting
+  // const weInvestingImage = getImage(props.data.homepageJson.weInvesting.image)
+  // const aboutUs = props.data.homepageJson.aboutUs
+  // const startSupercharging = props.data.homepageJson.startSupercharging
+  // const onto = props.data.homepageJson.startSupercharging.card
+  // const findOut = props.data.homepageJson.findOut
+  // const trust = props.data.trustJson
+  // const blog = props.data.homepageJson.blog
 
   return (
     <LangLayout location={props.location}>
-      <header>
+      {/* <header>
         <Hero
           variant="homepage"
           title={hero.title}
@@ -88,9 +88,6 @@ const IndexPage = (props) => {
           ctaUrl={weInvesting.ctaUrl}
           simple
         >
-          {/* <Link to={weInvesting.ctaUrl} variant="secondary">
-            {weInvesting.cta}
-          </Link> */}
           <div className="image">
             <GatsbyImage image={weInvestingImage} alt={weInvesting.imageAlt} />
           </div>
@@ -178,7 +175,7 @@ const IndexPage = (props) => {
                       />
                     </svg>
                   </dt>
-                  {/* <dd>{item.answer}</dd> */}
+                  <dd>{item.answer}</dd>
                 </React.Fragment>
               ))}
             </dl>
@@ -194,8 +191,8 @@ const IndexPage = (props) => {
           <h3>{blog.title}</h3>
           <a href={blog.ctaUrl}>{startSupercharging.cta}</a>
           <div className="blogArticles">articles</div>
-        </section>
-      </main>
+        </section> */}
+      {/* </main> */}
     </LangLayout>
   )
 }
