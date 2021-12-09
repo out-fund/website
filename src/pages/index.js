@@ -147,8 +147,6 @@ const IndexPage = (props) => {
           className="findOut"
           align="left"
         >
-          {/* <h4>{findOut.title}</h4>
-          <div>{findOut.description}</div> */}
           <ul className="list">
             {findOut.list.map((item) => (
               <li key={item}>
@@ -160,17 +158,32 @@ const IndexPage = (props) => {
           <Calculator data={findOut.calculator} />
 
           <div className="faq">
-            {findOut.faq.title}
+            <h3>{findOut.faq.title}</h3>
             <dl>
               {findOut.faq.questions.map((item) => (
                 <React.Fragment key={item.question}>
-                  <dt>{item.question}</dt>
-                  <dd>{item.answer}</dd>
+                  <dt>
+                    <span>{item.question}</span>
+                    <svg
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41Z"
+                        fill="#00A3D7"
+                      />
+                    </svg>
+                  </dt>
+                  {/* <dd>{item.answer}</dd> */}
                 </React.Fragment>
               ))}
             </dl>
+            <Link to={findOut.faq.ctaUrl} variant="secondary">
+              {findOut.faq.cta}
+            </Link>
           </div>
-          <a href={findOut.faq.ctaUrl}>{findOut.faq.cta}</a>
+          {/* <a href={findOut.faq.ctaUrl}>{findOut.faq.cta}</a> */}
         </SectionContainer>
         <Trust data={trust} />
         <section className="latestFromBlog">

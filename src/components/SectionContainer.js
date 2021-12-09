@@ -19,7 +19,7 @@ const StyledSection = styled.section`
   .description {
     margin: 0px 0px 24px;
     color: #1c3654;
-    line-height: 1.71428571;
+    line-height: 1.5;
   }
   .image {
     margin: 0 -16px;
@@ -51,6 +51,35 @@ const StyledSection = styled.section`
   }
   &.findOut {
     margin-top: 120px;
+    .faq {
+      margin-top: 64px;
+      /* text-align: center; */
+      h3 {
+        margin: 0;
+        margin-bottom: 24px;
+        text-align: left;
+      }
+      dl {
+        border-bottom: 1px solid #bbc7d6;
+        dt {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding-top: 16px;
+          padding-bottom: 16px;
+          border-top: 1px solid #bbc7d6;
+          span {
+            font-weight: 500;
+            font-size: 18px;
+          }
+          svg {
+            display: block;
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
   }
 `
 
