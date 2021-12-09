@@ -11,15 +11,22 @@ const StyledNavbar = styled.nav`
   display: flex;
   align-items: center;
   padding: 0 16px 0 32px;
+  .wrap {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1770px;
+    margin: 0 auto;
+  }
   @media (min-width: 1200px) {
     margin-top: 32px;
-    .wrap {
+    /* .wrap {
       display: flex;
       align-items: center;
       width: 100%;
       max-width: 1770px;
       margin: 0 auto;
-    }
+    } */
   }
   .logo {
     flex-shrink: 0;
