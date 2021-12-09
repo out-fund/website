@@ -180,6 +180,15 @@ const StyledOnto = styled(StyledCard)`
       border-radius: 0 0 10px 10px;
     }
   }
+  @media (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: 5fr 6fr;
+    column-gap: 24px;
+    .content {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 `
 
 const Card = ({
