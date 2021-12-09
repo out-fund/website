@@ -84,10 +84,13 @@ const IndexPage = (props) => {
           title={weInvesting.title}
           description={weInvesting.description}
           align="left"
+          cta={weInvesting.cta}
+          ctaUrl={weInvesting.ctaUrl}
+          simple
         >
-          <Link to={weInvesting.ctaUrl} variant="secondary">
+          {/* <Link to={weInvesting.ctaUrl} variant="secondary">
             {weInvesting.cta}
-          </Link>
+          </Link> */}
           <div className="image">
             <GatsbyImage image={weInvestingImage} alt={weInvesting.imageAlt} />
           </div>

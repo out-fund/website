@@ -82,6 +82,9 @@ const StyledCoverImage = styled.div`
     height: 100%;
     object-fit: cover;
   }
+  @media (min-width: 1200px) {
+    height: 100%;
+  }
 `
 
 const StyledWide = styled(StyledCard)`
@@ -91,6 +94,34 @@ const StyledWide = styled(StyledCard)`
       height: 32px;
     }
     margin-bottom: 24px;
+  }
+  @media (min-width: 1200px) {
+    display: grid;
+
+    grid-template-columns: 5fr 6fr;
+    column-gap: 24px;
+    .cardContent {
+      display: flex;
+      flex-direction: column;
+
+      order: 1;
+      padding-right: 40px;
+      figure {
+        margin-bottom: auto;
+        blockquote h4 {
+          font-size: 40px;
+          line-height: 1.4;
+        }
+        figcaption {
+          font-size: 20px;
+          line-height: 1.6;
+        }
+      }
+    }
+    ${StyledImage} {
+      margin: 0;
+      margin-bottom: -32px;
+    }
   }
 `
 
@@ -176,28 +207,30 @@ const Card = ({
     <>
       {variant === "wide" && (
         <StyledWide bgColor={bgColor}>
-          <StyledTag tagColor={tagColor}>
-            <span className="tag">{tag}</span>
-            <span className="visually-hidden">{company}</span>
-          </StyledTag>
-          <StyledLogo
-            role="img"
-            dangerouslySetInnerHTML={{ __html: `${logo}` }}
-          />
-          <StyledFigure titleColor={titleColor}>
-            <blockquote>
-              <h4>“{title}”</h4>
-            </blockquote>
-            {by && (
-              <figcaption>
-                <b>{byName}</b>, {byFounderOf}
-              </figcaption>
-            )}
-          </StyledFigure>
+          <div className="cardContent">
+            <StyledTag tagColor={tagColor}>
+              <span className="tag">{tag}</span>
+              <span className="visually-hidden">{company}</span>
+            </StyledTag>
+            <StyledLogo
+              role="img"
+              dangerouslySetInnerHTML={{ __html: `${logo}` }}
+            />
+            <StyledFigure titleColor={titleColor}>
+              <blockquote>
+                <h4>“{title}”</h4>
+              </blockquote>
+              {by && (
+                <figcaption>
+                  <b>{byName}</b>, {byFounderOf}
+                </figcaption>
+              )}
+            </StyledFigure>
 
-          <Link to={ctaUrl} variant="secondary">
-            {cta}
-          </Link>
+            <Link to={ctaUrl} variant="secondary">
+              {cta}
+            </Link>
+          </div>
 
           <StyledImage>
             <GatsbyImage image={getImage(image)} alt={imageAlt} />

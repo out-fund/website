@@ -85,6 +85,80 @@ const StyledSection = styled.section`
       }
     }
   }
+  &.weFunded {
+    @media (min-width: 1200px) {
+      margin-right: 32px;
+      margin-left: 32px;
+      .sectionContent {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        max-width: 1770px;
+        margin: 0 auto;
+        column-gap: 24px;
+        [class^="Card__StyledCard"] {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    margin-top: 120px;
+    .title {
+      max-width: 660px;
+      margin-right: auto;
+      margin-left: auto;
+      font-size: 48px;
+      line-height: 1.16666667;
+    }
+    .description {
+      max-width: 770px;
+
+      margin-right: auto;
+      margin-bottom: 40px;
+      margin-left: auto;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+  }
+  &.weInvesting {
+    flex-direction: column;
+    @media (min-width: 1200px) {
+      display: grid;
+      flex-direction: row;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1570px;
+      margin-right: auto;
+      margin-left: auto;
+      column-gap: 24px;
+      /* background-color: #ffa; */
+      .top {
+        align-self: center;
+        margin: 0;
+        text-align: left;
+        h2,
+        p {
+          max-width: 670px;
+          margin-right: 0;
+          margin-left: 0;
+        }
+        h2 {
+          font-size: 48px;
+          line-height: 1.16666667;
+        }
+      }
+      .image {
+        margin: 0;
+      }
+    }
+  }
+  &.aboutUs {
+    .aboutUsImage {
+      max-width: 1570px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
 `
 
 const StyledSectionReinforcement = styled(StyledSection)`
@@ -123,8 +197,24 @@ const SectionContainer = ({
   description,
   align,
   reinforcement,
+  simple,
   ...props
 }) => {
+  if (simple) {
+    return (
+      <StyledSectionReinforcement align={align} {...props}>
+        <div className="top">
+          <h2 className="title">{title}</h2>
+          {description && <p className="description">{description}</p>}
+          <Link to={props.ctaUrl} variant="secondary">
+            {props.cta}
+          </Link>
+        </div>
+
+        <div className="sectionContent">{children}</div>
+      </StyledSectionReinforcement>
+    )
+  }
   if (reinforcement) {
     return (
       <StyledSectionReinforcement align={align} {...props}>
@@ -148,7 +238,7 @@ const SectionContainer = ({
         {description && <p className="description">{description}</p>}
       </div>
 
-      {children}
+      <div className="sectionContent">{children}</div>
     </StyledSection>
   )
 }

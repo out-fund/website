@@ -44,8 +44,9 @@ const StyledHero = styled.div`
     width: 100%;
   }
   @media (min-width: 1200px) {
-    margin-right: 32px;
-    margin-left: 32px;
+    max-width: 1770px;
+    margin-right: auto;
+    margin-left: auto;
     padding-top: 40px;
     padding-left: 40px;
     border-radius: 10px;

@@ -3,6 +3,13 @@ import styled from "styled-components"
 
 const StyledStats = styled.div`
   /* background-color: #aaf; */
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+    margin-top: 80px;
+    margin-right: auto;
+    margin-bottom: 64px;
+    margin-left: auto;
+  }
   ul {
     display: grid;
     grid-template-columns: auto auto;
@@ -14,6 +21,9 @@ const StyledStats = styled.div`
     li {
       text-align: center;
     }
+    @media (min-width: 1200px) {
+      grid-template-columns: auto auto auto auto;
+    }
   }
   h4 {
     margin: 0;
@@ -23,6 +33,15 @@ const StyledStats = styled.div`
   p {
     margin: 0;
     line-height: 1.5;
+  }
+  @media (min-width: 1200px) {
+    h4 {
+      margin-bottom: 16px;
+      font-size: 48px;
+    }
+    p {
+      font-size: 20px;
+    }
   }
 `
 
