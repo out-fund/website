@@ -1,15 +1,17 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import LangLayout from "layouts/en"
 import Hero from "components/Hero"
 import SectionContainer from "components/SectionContainer"
-import SectionReinforcement from "components/SectionReinforcement"
+// import SectionReinforcement from "components/SectionReinforcement"
 import Card from "components/Card"
 import Stats from "components/Stats"
 import Trust from "components/Trust"
-// import Button from "components/shared/Button"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Link from "components/Link"
+import ArtImage from "components/ArtImage"
+import Calculator from "components/Calculator"
 
 const IndexPage = (props) => {
   console.log(props.data)
@@ -20,7 +22,6 @@ const IndexPage = (props) => {
   const weInvesting = props.data.homepageJson.weInvesting
   const weInvestingImage = getImage(props.data.homepageJson.weInvesting.image)
   const aboutUs = props.data.homepageJson.aboutUs
-  const aboutUsImage = getImage(props.data.homepageJson.aboutUs.image)
   const startSupercharging = props.data.homepageJson.startSupercharging
   const onto = props.data.homepageJson.startSupercharging.card
   const findOut = props.data.homepageJson.findOut
@@ -46,6 +47,7 @@ const IndexPage = (props) => {
           className="weFunded"
           title={weFunded.title}
           description={weFunded.description}
+          fullWidth
         >
           <Card
             className={lemonadeDolls.company.split(" ").join("")}
@@ -81,28 +83,53 @@ const IndexPage = (props) => {
           className="weInvesting"
           title={weInvesting.title}
           description={weInvesting.description}
+          align="left"
         >
-          <GatsbyImage image={weInvestingImage} alt={weInvesting.imageAlt} />
+          <Link to={weInvesting.ctaUrl} variant="secondary">
+            {weInvesting.cta}
+          </Link>
+          <div className="image">
+            <GatsbyImage image={weInvestingImage} alt={weInvesting.imageAlt} />
+          </div>
         </SectionContainer>
         <SectionContainer
           className="aboutUs"
           title={aboutUs.title}
           description={aboutUs.description}
         >
-          <GatsbyImage image={aboutUsImage} alt={aboutUs.imageAlt} />
-          <Stats stats={aboutUs.stats} />
+          <div className="aboutUsImage">
+            <ArtImage
+              largeImage={aboutUs.image}
+              smallImage={aboutUs.smallImage}
+              alt={aboutUs.imageAlt}
+            />
+          </div>
+
+          <Stats stats={aboutUs.stats} className="" />
+
+          <div className="actions">
+            <Link to={aboutUs.primaryCtaUrl} variant="secondary">
+              {aboutUs.primaryCta}
+            </Link>
+            <Link to={aboutUs.secondaryCta} variant="secondary">
+              {aboutUs.secondaryCta}
+            </Link>
+          </div>
         </SectionContainer>
-        <SectionReinforcement
+        <SectionContainer
           className="startSupercharging "
           title={startSupercharging.title}
           cta={startSupercharging.cta}
           ctaUrl={startSupercharging.ctaUrl}
-          titleRight
+          // titleRight
+          reinforcement
+          fullWidth
         >
           <Card
-            variant="squereLogoOnly"
+            variant="onto"
             className={onto.company}
             tag={onto.tag}
+            tagColor="#A3C7FF"
             company={onto.company}
             logo={onto.logo}
             title={onto.title}
@@ -110,11 +137,18 @@ const IndexPage = (props) => {
             imageAlt={onto.imageAlt}
             by={onto.by}
             bgColor={onto.bgColor}
+            titleColor="#deeeff"
           />
-        </SectionReinforcement>
-        <section className="findOut">
-          <h4>{findOut.title}</h4>
-          <div>{findOut.description}</div>
+        </SectionContainer>
+
+        <SectionContainer
+          title={findOut.title}
+          description={findOut.description}
+          className="findOut"
+          align="left"
+        >
+          {/* <h4>{findOut.title}</h4>
+          <div>{findOut.description}</div> */}
           <ul className="list">
             {findOut.list.map((item) => (
               <li key={item}>
@@ -122,22 +156,9 @@ const IndexPage = (props) => {
               </li>
             ))}
           </ul>
-          <div className="calculator">
-            <div>{findOut.calculator.title}</div>
-            <div>{findOut.calculator.min}</div>
-            <div>{findOut.calculator.max}</div>
-            <div className="select">
-              <label htmlFor="reasons">{findOut.calculator.select.title}</label>
 
-              <select name="reasons" id="reasons">
-                {findOut.calculator.select.dropdown.map((item) => (
-                  <option key={item} value={item}>
-                    {item}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
+          <Calculator data={findOut.calculator} />
+
           <div className="faq">
             {findOut.faq.title}
             <dl>
@@ -150,7 +171,7 @@ const IndexPage = (props) => {
             </dl>
           </div>
           <a href={findOut.faq.ctaUrl}>{findOut.faq.cta}</a>
-        </section>
+        </SectionContainer>
         <Trust data={trust} />
         <section className="latestFromBlog">
           <h3>{blog.title}</h3>
@@ -168,6 +189,11 @@ export const query = graphql`
     homepageJson(language: { regex: "/en-GB/" }) {
       aboutUs {
         image {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+        smallImage {
           childImageSharp {
             gatsbyImageData
           }
@@ -197,7 +223,7 @@ export const query = graphql`
           min
           select {
             dropdown
-            tile
+            title
           }
           title
         }

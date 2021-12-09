@@ -34,7 +34,7 @@ const StyledLink = styled(GatsbyLink)`
 const Link = ({ variant, children, to, ...props }) => {
   return (
     <>
-      <StyledLink variant={variant} to={to} {...props}>
+      <StyledLink to={to} variant={variant} {...props}>
         {children}
       </StyledLink>
     </>

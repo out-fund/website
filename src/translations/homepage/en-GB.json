@@ -9,7 +9,7 @@
     "secondaryCta": "Learn how it works",
     "secondaryCtaUrl": "/",
     "image": "../../images/Outfund-hero-UK.png",
-    "imageAlt": "Test"
+    "imageAlt": "Photo of two founders"
   },
   "weFunded": {
     "title": "We funded brands like yours",
@@ -34,7 +34,7 @@
         "image": "../../images/LemonadeDolls.jpg",
         "imageAlt": "Lemonade dolls models wearing underwear",
         "cta": "Read More",
-        "ctaUrl": "link"
+        "ctaUrl": "/"
       }
     }
   },
@@ -42,30 +42,31 @@
     "title": "We’re Investing into Online Businesses",
     "description": "As founders ourselves, we know running a business is hard work and often unfair. Outfund doesn’t charge interest, take personal guarantees, and our facility is simply repaid from a revenue share of new sales. ",
     "image": "../../images/PaymentCounterPhone.jpg",
-    "imageAlt": "ImageAlt",
+    "imageAlt": "Payment made ont the phone",
     "cta": "Learn more how funding works",
     "ctaUrl": "/how-funding-works/"
   },
   "aboutUs": {
     "title": "About us",
     "description": "Outfund is a team of success-driven, highly motivated people who are passionate about growing businesses in the UK. Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission possible. ",
-    "image": "../../images/teamProfiles.jpg",
-    "imageAlt": "imageAlt",
+    "image": "../../images/Outfund-teamProfiles-default.png",
+    "smallImage": "../../images/Outfund-teamProfiles-small.png",
+    "imageAlt": "Profile photos of the team",
     "stats": [
       { "stat": "£100M", "text": "Invested in 2020 globaly" },
       { "stat": "4", "text": "Operating countries" },
       { "stat": "52+", "text": "Team and growing" },
       { "stat": "£37M", "text": "We raised so far" }
     ],
-    "primaryCta": "pc",
-    "primaryCtaUrl": "url",
-    "secondaryCta": "Sec",
-    "secondaryCtaUrl": "url"
+    "primaryCta": "Read more About us",
+    "primaryCtaUrl": "/about/",
+    "secondaryCta": "Careers",
+    "secondaryCtaUrl": "/careers/"
   },
   "startSupercharging": {
     "title": "Start Supercharging Your Growth!",
     "cta": "Get started",
-    "ctaUrl": "url",
+    "ctaUrl": "/",
     "card": {
       "title": "We have doubled in size in the last quarter and are due to double in size again this quarter!",
       "company": "Onto",
@@ -74,7 +75,7 @@
       "bgColor": "#0E3674",
       "image": "../../images/Onto.jpg",
       "imageAlt": "Lemonade dolls models wearing underwear",
-      "logo": "<svg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 98 24'><path d='M26.352.646v22.396h6.755v-9.805l14.478 10.756V1.597h-6.757v9.608L26.352.646Z' fill='#111'/><path fill-rule='evenodd' clip-rule='evenodd' d='M72.77 12.32c0-6.27 5.278-11.08 12.264-11.08 6.985 0 12.263 4.81 12.263 11.08 0 6.27-5.278 11.08-12.263 11.08-6.986 0-12.265-4.81-12.265-11.08Zm6.952-.001a5.311 5.311 0 1 0 10.623 0 5.31 5.31 0 0 0-5.311-5.312 5.31 5.31 0 0 0-5.312 5.312Z' fill='#111'/><path d='M49.754 1.598h22.75V7.76h-7.898v15.281h-6.954V7.761h-7.898V1.598Z' fill='#111'/><path fill-rule='evenodd' clip-rule='evenodd' d='M0 12.32C0 6.05 5.28 1.24 12.264 1.24c6.985 0 12.265 4.81 12.265 11.08 0 6.27-5.28 11.08-12.265 11.08S0 18.59 0 12.32Zm6.953-.001a5.311 5.311 0 1 0 10.623 0 5.31 5.31 0 0 0-5.312-5.312 5.31 5.31 0 0 0-5.311 5.312Z' fill='#111'/></svg>"
+      "logo": "<svg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 98 24'><path d='M26.352.646v22.396h6.755v-9.805l14.478 10.756V1.597h-6.757v9.608L26.352.646Z' fill='#fff'/><path fill-rule='evenodd' clip-rule='evenodd' d='M72.77 12.32c0-6.27 5.278-11.08 12.264-11.08 6.985 0 12.263 4.81 12.263 11.08 0 6.27-5.278 11.08-12.263 11.08-6.986 0-12.265-4.81-12.265-11.08Zm6.952-.001a5.311 5.311 0 1 0 10.623 0 5.31 5.31 0 0 0-5.311-5.312 5.31 5.31 0 0 0-5.312 5.312Z' fill='#fff'/><path d='M49.754 1.598h22.75V7.76h-7.898v15.281h-6.954V7.761h-7.898V1.598Z' fill='#fff'/><path fill-rule='evenodd' clip-rule='evenodd' d='M0 12.32C0 6.05 5.28 1.24 12.264 1.24c6.985 0 12.265 4.81 12.265 11.08 0 6.27-5.28 11.08-12.265 11.08S0 18.59 0 12.32Zm6.953-.001a5.311 5.311 0 1 0 10.623 0 5.31 5.31 0 0 0-5.312-5.312 5.31 5.31 0 0 0-5.311 5.312Z' fill='#fff'/></svg>"
     }
   },
   "findOut": {
@@ -87,10 +88,10 @@
     ],
     "calculator": {
       "title": "Your monthly revenue",
-      "min": "10K",
-      "max": "2M",
+      "min": "Under £10K",
+      "max": "Over £2M",
       "select": {
-        "tile": "You need funding for",
+        "title": "You need funding for",
         "dropdown": [
           "Select",
           "Inventory purchuses",

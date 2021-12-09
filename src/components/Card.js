@@ -63,7 +63,7 @@ const StyledFigure = styled.figure`
   }
 `
 const StyledImage = styled.div`
-  margin-bottom: -24px;
+  margin-bottom: -32px;
   margin-left: -8px;
   margin-right: -8px;
   margin-top: -40px;
@@ -112,6 +112,42 @@ const StyledSquereLogoOnly = styled(StyledCard)`
   ${StyledLogo} {
     margin-top: auto;
     margin-bottom: 24px;
+  }
+`
+
+const StyledOnto = styled(StyledCard)`
+  /* overflow: hidden; */
+  .content {
+    padding: 32px;
+  }
+  .tag {
+    color: unset;
+  }
+
+  ${StyledLogo} {
+    svg {
+      height: 32px;
+    }
+    margin-bottom: 24px;
+  }
+  ${StyledFigure} {
+    figcaption {
+      margin-bottom: 0;
+      color: #deeeff;
+    }
+  }
+  ${StyledCoverImage} {
+    position: unset;
+    overflow: hidden;
+    border-radius: 0;
+    > div {
+      width: unset;
+      height: unset;
+      object-fit: unset;
+    }
+    img {
+      border-radius: 0 0 10px 10px;
+    }
   }
 `
 
@@ -187,6 +223,33 @@ const Card = ({
             <GatsbyImage image={getImage(image)} alt={imageAlt} />
           </StyledCoverImage>
         </StyledSquereLogoOnly>
+      )}
+      {variant === "onto" && (
+        <StyledOnto bgColor={bgColor}>
+          <div className="content">
+            <StyledTag tagColor={tagColor}>
+              <span className="tag">{tag}</span>
+              <span className="visually-hidden">{company}</span>
+            </StyledTag>
+            <StyledLogo
+              role="img"
+              dangerouslySetInnerHTML={{ __html: `${logo}` }}
+            />
+            <StyledFigure titleColor={titleColor}>
+              <blockquote>
+                <h4>“{title}”</h4>
+              </blockquote>
+              {by && (
+                <figcaption>
+                  <b>{byName}</b>, {byFounderOf}
+                </figcaption>
+              )}
+            </StyledFigure>
+          </div>
+          <StyledCoverImage>
+            <GatsbyImage image={getImage(image)} alt={imageAlt} />
+          </StyledCoverImage>
+        </StyledOnto>
       )}
       {variant === "simpleCompany" && (
         <StyledCard className="simpleCompany">

@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: "Work Sans", Arial, Helvetica, sans-serif;
     background-color: #f1f5fa;
+    color: #1C3654;
   }
 
   h1,
