@@ -23,10 +23,10 @@ const Secondary = styled(Buton)`
   box-shadow: inset 0px 0px 0px 1px #1a65ba;
 `
 
-export const PrimaryButton = ({ children }) => {
-  return <Primary>{children}</Primary>
+export const PrimaryButton = ({ children, ...props }) => {
+  return <Primary {...props}>{children}</Primary>
 }
 
-export const SecondaryButton = ({ children }) => {
-  return <Secondary>{children}</Secondary>
+export const SecondaryButton = ({ children, ...props }) => {
+  return <Secondary {...props}>{children}</Secondary>
 }

@@ -16,6 +16,8 @@ const StyledLink = styled(GatsbyLink)`
   text-decoration: none;
   display: inline-block;
   letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   box-shadow: ${(props) =>
     props.variant === "secondary" ? "inset 0px 0px 0px 1px #1a65ba" : "none"};
@@ -26,6 +28,15 @@ const StyledLink = styled(GatsbyLink)`
       return `
           box-shadow: inset 0px 0px 0px 1px #fff;
           color: #fff;
+        `
+  }}
+  ${(props) => {
+    if (props.variant === "navLink")
+      return `
+          color: #1C3654;
+          &:hover {
+            background-color: #DEEEFF;
+          }
         `
   }}
 `

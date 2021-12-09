@@ -179,11 +179,12 @@ const IndexPage = (props) => {
                 </React.Fragment>
               ))}
             </dl>
-            <Link to={findOut.faq.ctaUrl} variant="secondary">
-              {findOut.faq.cta}
-            </Link>
+            <div className="action">
+              <Link to={findOut.faq.ctaUrl} variant="secondary">
+                {findOut.faq.cta}
+              </Link>
+            </div>
           </div>
-          {/* <a href={findOut.faq.ctaUrl}>{findOut.faq.cta}</a> */}
         </SectionContainer>
         <Trust data={trust} />
         <section className="latestFromBlog">

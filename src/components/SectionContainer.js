@@ -60,6 +60,7 @@ const StyledSection = styled.section`
         text-align: left;
       }
       dl {
+        margin: 24px 0 40px;
         border-bottom: 1px solid #bbc7d6;
         dt {
           display: flex;
@@ -78,6 +79,9 @@ const StyledSection = styled.section`
             height: 24px;
           }
         }
+      }
+      .action {
+        text-align: center;
       }
     }
   }
