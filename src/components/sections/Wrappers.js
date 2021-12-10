@@ -1,30 +1,30 @@
 import styled from "styled-components"
 import { breakpoints } from "../styles/breakpoints"
 
-export const Wrapper = styled.div`
+export const BasicWrapper = styled.div`
   background-color: #faf;
 
-  @media (min-width: ${breakpoints.tablet}) {
+  @media (min-width: ${breakpoints.tablet}px) {
   }
 `
 
-export const ContentWrapper = styled.div`
+export const BasicContentWrapper = styled.div`
   background-color: #ffa;
 
-  @media (min-width: ${breakpoints.tablet}) {
+  @media (min-width: ${breakpoints.tablet}px) {
   }
 `
 
-export const TextWrapper = styled.div`
+export const BasicTextWrapper = styled.div`
   background-color: #aff;
 
-  @media (min-width: ${breakpoints.tablet}) {
+  @media (min-width: ${breakpoints.tablet}px) {
   }
 `
-export const ImageWrapper = styled.div`
+export const BasicImageWrapper = styled.div`
   background-color: #faa;
 
-  @media (min-width: ${breakpoints.tablet}) {
+  @media (min-width: ${breakpoints.tablet}px) {
   }
 `
 
