@@ -1,9 +1,22 @@
-import * as React from "react"
+import React from "react"
 import { Link as GatsbyLink } from "gatsby"
-import styled from "styled-components"
+// import styled from "styled-components"
 
-const StyledLink = styled(GatsbyLink)`
-  background-color: ${(props) =>
+// TODO Add language context later
+export default function Link({ variant, children, to, ...props }) {
+  console.log("Link", props)
+  return (
+    <>
+      {/* <StyledLink to={to} variant={variant} {...props}>
+        {children}
+      </StyledLink> */}
+      <GatsbyLink to="#">Test</GatsbyLink>
+    </>
+  )
+}
+
+// const StyledLink = styled(GatsbyLink)`
+/* background-color: ${(props) =>
     props.variant === "primary" ? "#1A65BA" : "transparent"};
   border: none;
   font-size: 16px;
@@ -38,18 +51,5 @@ const StyledLink = styled(GatsbyLink)`
             background-color: #DEEEFF;
           }
         `
-  }}
-`
-
-// TODO Add language context later
-const Link = ({ variant, children, to, ...props }) => {
-  return (
-    <>
-      <StyledLink to={to} variant={variant} {...props}>
-        {children}
-      </StyledLink>
-    </>
-  )
-}
-
-export default Link
+  }} */
+// `

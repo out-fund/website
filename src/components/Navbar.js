@@ -1,13 +1,48 @@
-import * as React from "react"
-import Logo from "images/svg/Outfund-logo.svg"
-import MenueIcon from "images/svg/MenueIcon.svg"
+import React from "react"
+// import Logo from "images/svg/Outfund-logo.svg"
+// import MenueIcon from "images/svg/MenueIcon.svg"
 import styled from "styled-components"
-import { SecondaryButton } from "components/Button"
-import Link from "components/Link"
+// import { SecondaryButton } from "components/Button"
+// import Link from "components/Link"
+
+const Navbar = (props) => {
+  return (
+    <StyledNavbar>
+      Navbar
+      {/* <div className="wrap">
+        <Logo className="logo" />
+        <div className="links">
+          <ul className="leftLinks">
+            {leftLinks.map((link) => (
+              <li key={link.cta}>
+                <Link to={link.ctaUrl} variant="navLink">
+                  {link.cta}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <ul className="rightLinks">
+            {rightLinks.map((link) => (
+              <li key={link.cta}>
+                <Link to={link.ctaUrl} variant="navLink">
+                  {link.cta}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <SecondaryButton className="chat">Start live chat</SecondaryButton>
+        <MenueIcon className="menueIcon" />
+      </div> */}
+    </StyledNavbar>
+  )
+}
+
+export default Navbar
 
 const StyledNavbar = styled.nav`
-  background-color: #f2f6fa;
-  height: 72px;
+  /* background-color: #f2f6fa; */
+  /* height: 72px;
   display: flex;
   align-items: center;
   padding: 0 16px 0 32px;
@@ -20,13 +55,6 @@ const StyledNavbar = styled.nav`
   }
   @media (min-width: 1200px) {
     margin-top: 32px;
-    /* .wrap {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      max-width: 1770px;
-      margin: 0 auto;
-    } */
   }
   .logo {
     flex-shrink: 0;
@@ -67,76 +95,42 @@ const StyledNavbar = styled.nav`
         margin-right: auto;
       }
     }
-  }
+  } */
 `
-const leftLinks = [
-  {
-    cta: "Comapny",
-    ctaUrl: "/",
-  },
-  {
-    cta: "How it works",
-    ctaUrl: "/",
-  },
-  {
-    cta: "Partners",
-    ctaUrl: "/",
-  },
-  {
-    cta: "We are hiring!",
-    ctaUrl: "/",
-  },
-]
+// const leftLinks = [
+//   {
+//     cta: "Comapny",
+//     ctaUrl: "/",
+//   },
+//   {
+//     cta: "How it works",
+//     ctaUrl: "/",
+//   },
+//   {
+//     cta: "Partners",
+//     ctaUrl: "/",
+//   },
+//   {
+//     cta: "We are hiring!",
+//     ctaUrl: "/",
+//   },
+// ]
 
-const rightLinks = [
-  {
-    cta: "Contact",
-    ctaUrl: "/",
-  },
-  {
-    cta: "Support",
-    ctaUrl: "/",
-  },
-  {
-    cta: "Login",
-    ctaUrl: "/",
-  },
-  {
-    cta: "🇬🇧",
-    ctaUrl: "/",
-  },
-]
-
-const Navbar = (props) => {
-  return (
-    <StyledNavbar>
-      <div className="wrap">
-        <Logo className="logo" />
-        <div className="links">
-          <ul className="leftLinks">
-            {leftLinks.map((link) => (
-              <li key={link.cta}>
-                <Link to={link.ctaUrl} variant="navLink">
-                  {link.cta}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <ul className="rightLinks">
-            {rightLinks.map((link) => (
-              <li key={link.cta}>
-                <Link to={link.ctaUrl} variant="navLink">
-                  {link.cta}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <SecondaryButton className="chat">Start live chat</SecondaryButton>
-        <MenueIcon className="menueIcon" />
-      </div>
-    </StyledNavbar>
-  )
-}
-
-export default Navbar
+// const rightLinks = [
+//   {
+//     cta: "Contact",
+//     ctaUrl: "/",
+//   },
+//   {
+//     cta: "Support",
+//     ctaUrl: "/",
+//   },
+//   {
+//     cta: "Login",
+//     ctaUrl: "/",
+//   },
+//   {
+//     cta: "🇬🇧",
+//     ctaUrl: "/",
+//   },
+// ]

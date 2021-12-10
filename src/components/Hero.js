@@ -1,14 +1,62 @@
 import React from "react"
 // import { useStaticQuery, graphql } from "gatsby"
-import styled from "styled-components"
-import { PrimaryButton, SecondaryButton } from "components/Button"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+// import styled from "styled-components"
+// import { PrimaryButton, SecondaryButton } from "components/Button"
+// import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-const StyledHero = styled.div`
-  background-color: #fff;
+const Hero = (props) => {
+  // const heroImage = getImage(props.image)
+  return (
+    <>
+      Header
+      {/* {props.variant === "about" && (
+        <StyledHero>
+          <h1>{props.title}</h1>
+          <p>{props.description}</p>
+          <div className="heroImage">
+            <GatsbyImage image={heroImage} alt={props.imageAlt} />
+          </div>
+        </StyledHero>
+      )}
+      {props.variant === "homepage" && (
+        <StyledHero>
+          <div className="wrap">
+            <div className="content">
+              <h1>{props.title}</h1>
+              <p>{props.description}</p>
+              <div className="actons">
+                <PrimaryButton>{props.primaryCta}</PrimaryButton>
+                <SecondaryButton>{props.secondaryCta}</SecondaryButton>
+              </div>
+            </div>
+            <div className="heroImage">
+              <GatsbyImage image={heroImage} alt={props.imageAlt} />
+            </div>
+          </div>
+        </StyledHero>
+      )}
+      {props.variant === "careers" && (
+        <StyledHero>
+          <h1>{props.title}</h1>
+          <p>{props.description}</p>
+          <div className="heroImage">
+            <GatsbyImage image={heroImage} alt={props.imageAlt} />
+          </div>
+          <a href={props.ctaUrl}>{props.cta}</a>
+        </StyledHero>
+      )} */}
+    </>
+  )
+}
+
+export default Hero
+
+// const StyledHero = styled.div`
+// background-color: #ffa;
+/* background-color: #fff;
   padding: 80px 32px 0;
   h1 {
-    /* margin-top: 80px; */
+    margin-top: 80px;
     margin-bottom: 16px;
     color: #051734;
     font-weight: 700;
@@ -53,8 +101,6 @@ const StyledHero = styled.div`
     .wrap {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      /* justify-content: center; */
-      /* justify-items: center; */
       width: 100%;
       max-width: 1370px;
       margin: 0 auto;
@@ -76,51 +122,5 @@ const StyledHero = styled.div`
         }
       }
     }
-  }
-`
-
-const Hero = (props) => {
-  const heroImage = getImage(props.image)
-  return (
-    <>
-      {props.variant === "about" && (
-        <StyledHero>
-          <h1>{props.title}</h1>
-          <p>{props.description}</p>
-          <div className="heroImage">
-            <GatsbyImage image={heroImage} alt={props.imageAlt} />
-          </div>
-        </StyledHero>
-      )}
-      {props.variant === "homepage" && (
-        <StyledHero>
-          <div className="wrap">
-            <div className="content">
-              <h1>{props.title}</h1>
-              <p>{props.description}</p>
-              <div className="actons">
-                <PrimaryButton>{props.primaryCta}</PrimaryButton>
-                <SecondaryButton>{props.secondaryCta}</SecondaryButton>
-              </div>
-            </div>
-            <div className="heroImage">
-              <GatsbyImage image={heroImage} alt={props.imageAlt} />
-            </div>
-          </div>
-        </StyledHero>
-      )}
-      {props.variant === "careers" && (
-        <StyledHero>
-          <h1>{props.title}</h1>
-          <p>{props.description}</p>
-          <div className="heroImage">
-            <GatsbyImage image={heroImage} alt={props.imageAlt} />
-          </div>
-          <a href={props.ctaUrl}>{props.cta}</a>
-        </StyledHero>
-      )}
-    </>
-  )
-}
-
-export default Hero
+  } */
+// `

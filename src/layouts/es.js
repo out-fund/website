@@ -1,15 +1,15 @@
 import * as React from "react"
-import Layout from "./index"
+import GlobalLayout from "./index"
 import Navbar from "components/Navbar"
 import Footer from "components/Footer"
 
 const ES = ({ children, ...props }) => {
   return (
-    <Layout {...props}>
+    <GlobalLayout {...props}>
       <Navbar />
       <main>{children}</main>
       <Footer />
-    </Layout>
+    </GlobalLayout>
   )
 }
 

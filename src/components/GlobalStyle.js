@@ -1,7 +1,10 @@
 import { createGlobalStyle } from "styled-components"
+import { reset, normalize } from "./styles"
 
 const GlobalStyle = createGlobalStyle`
-  html {
+  ${reset}
+  ${normalize}
+  /* html {
     box-sizing: border-box;
     line-height: 1;
   }
@@ -37,7 +40,6 @@ const GlobalStyle = createGlobalStyle`
     white-space: nowrap;
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
-  }
+  } */
 `
-
 export default GlobalStyle

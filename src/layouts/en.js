@@ -1,15 +1,16 @@
 import * as React from "react"
-import Layout from "./index"
+import GlobalLayout from "./GlobalLayout"
 import Navbar from "components/Navbar"
 import Footer from "components/Footer"
 
 const EN = ({ children, ...props }) => {
   return (
-    <Layout {...props}>
+    // <Layout {...props}>
+    <GlobalLayout>
       <Navbar />
       {children}
       <Footer />
-    </Layout>
+    </GlobalLayout>
   )
 }
 

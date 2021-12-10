@@ -1,9 +1,8 @@
 import * as React from "react"
-
 import GlobalStyle from "components/GlobalStyle"
-import "normalize.css"
 
-const Layout = ({ children, location }) => {
+// const GlobalLayout = ({ children, location }) => {
+const GlobalLayout = ({ children }) => {
   // console.log("test", location)
   return (
     <>
@@ -14,4 +13,4 @@ const Layout = ({ children, location }) => {
   )
 }
 
-export default Layout
+export default GlobalLayout

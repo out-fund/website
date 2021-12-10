@@ -1,7 +1,7 @@
 export const breakpoints = {
-  mobile: 0, // this is min-width based, so mobile will work by default
+  mobile: 280, // this is min-width based, so when using mobile it means all resolutions above 350
   tablet: 640,
   laptop: 1024,
-  desktop: 1200,
-  largeDesktop: 1600,
+  desktop: 1440,
+  largeDesktop: 1800,
 }

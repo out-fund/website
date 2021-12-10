@@ -1,20 +1,22 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+// import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-import LangLayout from "layouts/en"
-import Hero from "components/Hero"
-import SectionContainer from "components/SectionContainer"
-// import SectionReinforcement from "components/SectionReinforcement"
-import Card from "components/Card"
-import Stats from "components/Stats"
-import Trust from "components/Trust"
-import Link from "components/Link"
-import ArtImage from "components/ArtImage"
-import Calculator from "components/Calculator"
+import EnLayout from "layouts/en"
+// import Hero from "components/Hero"
+// import SectionContainer from "components/SectionContainer"
+// // import SectionReinforcement from "components/SectionReinforcement"
+// import Card from "components/Card"
+// import Stats from "components/Stats"
+// import Trust from "components/Trust"
+// import Link from "components/Link"
+// import ArtImage from "components/ArtImage"
+// import Calculator from "components/Calculator"
 
 const IndexPage = (props) => {
-  console.log(props.data)
+  // console.log("indexpage:", props)
+  // console.log(props.data)
+  // console.log(props.location)
   // const hero = props.data.homepageJson.hero
   // const weFunded = props.data.homepageJson.weFunded
   // const feel = props.data.homepageJson.weFunded.cards.feel
@@ -29,7 +31,17 @@ const IndexPage = (props) => {
   // const blog = props.data.homepageJson.blog
 
   return (
-    <LangLayout location={props.location}>
+    // <LangLayout location={props.location}>
+    <EnLayout>
+      {/* <Hero
+        variant="homepage"
+        title={hero.title}
+        description={hero.description}
+        primaryCta={hero.primaryCta}
+        secondaryCta={hero.secondaryCta}
+        image={hero.image}
+        imageAlt={hero.imageAlt}
+      /> */}
       {/* <header>
         <Hero
           variant="homepage"
@@ -193,7 +205,7 @@ const IndexPage = (props) => {
           <div className="blogArticles">articles</div>
         </section> */}
       {/* </main> */}
-    </LangLayout>
+    </EnLayout>
   )
 }
 export default IndexPage
