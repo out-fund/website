@@ -1,9 +1,14 @@
 import { createGlobalStyle } from "styled-components"
-import { reset, normalize } from "./styles"
+import { reset, normalize } from "styles"
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
   ${normalize}
+  body {
+    font-family: "Work Sans";
+    /* background-color: #f1f5fa;
+    color: #1C3654; */
+  }
   /* html {
     box-sizing: border-box;
     line-height: 1;

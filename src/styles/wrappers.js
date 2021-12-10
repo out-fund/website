@@ -1,9 +1,9 @@
 import styled from "styled-components"
-import { breakpoints } from "../styles/breakpoints"
+import { breakpoints } from "./breakpoints"
 
 export const BasicWrapper = styled.div`
   background-color: #faf;
-
+  width: 100%;
   @media (min-width: ${breakpoints.tablet}px) {
   }
 `

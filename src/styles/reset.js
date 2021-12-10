@@ -86,12 +86,17 @@ export const reset = css`
   mark,
   audio,
   video {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font: inherit;
     font-size: 100%;
     vertical-align: baseline;
     border: 0;
+    :before,
+    :after {
+      box-sizing: inherit;
+    }
   }
   /* HTML5 display-role reset for older browsers */
   article,

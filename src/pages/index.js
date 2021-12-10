@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 // import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import EnLayout from "layouts/en"
+import { HeroHomepage } from "components"
 // import Hero from "components/Hero"
 // import SectionContainer from "components/SectionContainer"
 // // import SectionReinforcement from "components/SectionReinforcement"
@@ -17,7 +18,7 @@ const IndexPage = (props) => {
   // console.log("indexpage:", props)
   // console.log(props.data)
   // console.log(props.location)
-  // const hero = props.data.homepageJson.hero
+  const hero = props.data.homepageJson.hero
   // const weFunded = props.data.homepageJson.weFunded
   // const feel = props.data.homepageJson.weFunded.cards.feel
   // const lemonadeDolls = props.data.homepageJson.weFunded.cards.lemonadeDolls
@@ -33,6 +34,14 @@ const IndexPage = (props) => {
   return (
     // <LangLayout location={props.location}>
     <EnLayout>
+      <HeroHomepage
+        title={hero.title}
+        description={hero.description}
+        primaryCta={hero.primaryCta}
+        secondaryCta={hero.secondaryCta}
+        image={hero.image}
+        imageAlt={hero.imageAlt}
+      />
       {/* <Hero
         variant="homepage"
         title={hero.title}
