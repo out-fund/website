@@ -4,27 +4,27 @@ import { breakpoints } from "./breakpoints"
 export const Wrapper = styled.div`
   background-color: #faf;
   width: 100%;
-  @media (min-width: ${breakpoints.tablet}px) {
+  @media (min-width: ${breakpoints.tablet}) {
   }
 `
 
 export const ContentWrapper = styled.div`
   background-color: #ffa;
 
-  @media (min-width: ${breakpoints.tablet}px) {
+  @media (min-width: ${breakpoints.tablet}) {
   }
 `
 
 export const TextWrapper = styled.div`
   background-color: #aff;
 
-  @media (min-width: ${breakpoints.tablet}px) {
+  @media (min-width: ${breakpoints.tablet}) {
   }
 `
 export const ImageWrapper = styled.div`
   background-color: #faa;
 
-  @media (min-width: ${breakpoints.tablet}px) {
+  @media (min-width: ${breakpoints.tablet}) {
   }
 `
 

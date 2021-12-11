@@ -2,7 +2,7 @@ import { css } from "styled-components"
 
 export const normalize = css`
   /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-  /*! removed all the commens as they were confusing prettier */
+  /*  Removed all the commens as they were confusing prettier */
 
   html {
     line-height: 1.15;

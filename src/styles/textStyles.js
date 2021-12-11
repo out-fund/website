@@ -8,16 +8,16 @@ export const H1 = styled.h1`
   font-weight: 700;
   font-size: 24px;
 
-  @media (min-width: ${breakpoints.tablet}px) {
+  @media (min-width: ${breakpoints.tablet}) {
     font-size: 32px;
   }
-  @media (min-width: ${breakpoints.laptop}px) {
+  @media (min-width: ${breakpoints.laptop}) {
     font-size: 40px;
   }
-  @media (min-width: ${breakpoints.desktop}px) {
+  @media (min-width: ${breakpoints.desktop}) {
     font-size: 48px;
   }
-  @media (min-width: ${breakpoints.largeDesktop}px) {
+  @media (min-width: ${breakpoints.largeDesktop}) {
     font-size: 64px;
   }
 `
@@ -28,16 +28,16 @@ export const H2 = styled.h2`
   font-weight: 700;
   font-size: 24px;
 
-  @media (min-width: ${breakpoints.tablet}px) {
+  @media (min-width: ${breakpoints.tablet}) {
     font-size: 32px;
   }
-  @media (min-width: ${breakpoints.laptop}px) {
+  @media (min-width: ${breakpoints.laptop}) {
     font-size: 40px;
   }
-  @media (min-width: ${breakpoints.desktop}px) {
+  @media (min-width: ${breakpoints.desktop}) {
     font-size: 48px;
   }
-  @media (min-width: ${breakpoints.largeDesktop}px) {
+  @media (min-width: ${breakpoints.largeDesktop}) {
     font-size: 64px;
   }
 `
@@ -48,16 +48,16 @@ export const H3 = styled.h3`
   font-weight: 700;
   font-size: 24px;
 
-  @media (min-width: ${breakpoints.tablet}px) {
+  @media (min-width: ${breakpoints.tablet}) {
     font-size: 32px;
   }
-  @media (min-width: ${breakpoints.laptop}px) {
+  @media (min-width: ${breakpoints.laptop}) {
     font-size: 40px;
   }
-  @media (min-width: ${breakpoints.desktop}px) {
+  @media (min-width: ${breakpoints.desktop}) {
     font-size: 48px;
   }
-  @media (min-width: ${breakpoints.largeDesktop}px) {
+  @media (min-width: ${breakpoints.largeDesktop}) {
     font-size: 64px;
   }
 `
@@ -66,16 +66,16 @@ export const SubHeading = styled.p`
   letter-spacing: -0.01em;
   font-size: 14px;
 
-  @media (min-width: ${breakpoints.tablet}px) {
+  @media (min-width: ${breakpoints.tablet}) {
     font-size: 16px;
   }
-  @media (min-width: ${breakpoints.laptop}px) {
+  @media (min-width: ${breakpoints.laptop}) {
     font-size: 18px;
   }
-  @media (min-width: ${breakpoints.desktop}px) {
+  @media (min-width: ${breakpoints.desktop}) {
     font-size: 20px;
   }
-  @media (min-width: ${breakpoints.largeDesktop}px) {
+  @media (min-width: ${breakpoints.largeDesktop}) {
   }
 `
 
