@@ -1,19 +1,20 @@
 import React from "react"
 import { Link as GatsbyLink } from "gatsby"
-// import styled from "styled-components"
+import styled from "styled-components"
 
 // TODO Add language context later
 export default function Link({ variant, children, to, ...props }) {
   console.log("Link", props)
   return (
     <>
-      {/* <StyledLink to={to} variant={variant} {...props}>
+      <Primary to={to} variant={variant} {...props}>
         {children}
-      </StyledLink> */}
-      <GatsbyLink to="#">Test</GatsbyLink>
+      </Primary>
     </>
   )
 }
+
+const Primary = styled(GatsbyLink)``
 
 // const StyledLink = styled(GatsbyLink)`
 /* background-color: ${(props) =>

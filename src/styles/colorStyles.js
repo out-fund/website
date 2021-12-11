@@ -1,13 +1,10 @@
 import { css } from "styled-components"
 
-export const colors = {
-  backgroundColor: "var(--backgroundColor)",
-}
-
 export const cssVariables = css`
   /* Light/default variables */
   :root {
     --backgroundColor: #f2f6fa;
+    --headingsColor: #051734;
   }
 
   /* Dark mode variagles */
@@ -17,3 +14,8 @@ export const cssVariables = css`
     }
   }
 `
+
+export const colors = {
+  backgroundColor: "var(--backgroundColor)",
+  headingsColor: "var(--headingsColor)",
+}

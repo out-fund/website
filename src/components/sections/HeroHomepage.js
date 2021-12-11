@@ -1,19 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-import {
-  BasicWrapper,
-  BasicContentWrapper,
-  BasicTextWrapper,
-} from "styles/wrappers"
-import { H1, SubHeading } from "styles/textStyles"
-
-import { theme } from "../../styles/theme"
+import { W, S } from "styles"
+import { Button } from "components"
 
 export default function HeroHomepage(props) {
-  const { title, description, primaryCta, secondaryCta, image, imageAlt } =
-    props
+  const { title, description } = props
 
-  console.log("theme", theme)
   return (
     <HeroWrapper>
       <Wrapper>
@@ -21,7 +13,9 @@ export default function HeroHomepage(props) {
           <TextWrapper>
             <Title>{title}</Title>
             <Description>{description}</Description>
-            <CtaWrapper>Link</CtaWrapper>
+            <CtaWrapper>
+              <Button>test</Button>
+            </CtaWrapper>
           </TextWrapper>
         </ContentWrapper>
       </Wrapper>
@@ -30,10 +24,10 @@ export default function HeroHomepage(props) {
 }
 
 const HeroWrapper = styled.header``
-const Wrapper = styled(BasicWrapper)``
-const ContentWrapper = styled(BasicContentWrapper)``
-const TextWrapper = styled(BasicTextWrapper)``
+const Wrapper = styled(W.Wrapper)``
+const ContentWrapper = styled(W.ContentWrapper)``
+const TextWrapper = styled(W.TextWrapper)``
 const CtaWrapper = styled.div``
 
-const Title = styled(H1)``
-const Description = styled(SubHeading)``
+const Title = styled(S.H1)``
+const Description = styled(S.SubHeading)``

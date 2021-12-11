@@ -93,10 +93,6 @@ export const reset = css`
     font-size: 100%;
     vertical-align: baseline;
     border: 0;
-    :before,
-    :after {
-      box-sizing: inherit;
-    }
   }
   /* HTML5 display-role reset for older browsers */
   article,

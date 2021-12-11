@@ -1,8 +1,9 @@
 import styled from "styled-components"
-import { breakpoints } from "../styles/breakpoints"
+import { breakpoints } from "styles"
+import { theme } from "styles"
 
 export const H1 = styled.h1`
-  /* color: #051734; TODO take value from theme */
+  color: ${theme.headingsColor};
   letter-spacing: -0.02em;
   font-weight: 700;
   font-size: 24px;
@@ -22,7 +23,7 @@ export const H1 = styled.h1`
 `
 
 export const H2 = styled.h2`
-  /* color: #051734; TODO take value from theme */
+  color: ${theme.headingsColor};
   letter-spacing: -0.02em;
   font-weight: 700;
   font-size: 24px;
@@ -42,7 +43,7 @@ export const H2 = styled.h2`
 `
 
 export const H3 = styled.h3`
-  /* color: #051734; TODO take value from theme */
+  color: ${theme.headingsColor};
   letter-spacing: -0.02em;
   font-weight: 700;
   font-size: 24px;
@@ -61,7 +62,7 @@ export const H3 = styled.h3`
   }
 `
 export const SubHeading = styled.p`
-  /* color: #051734; TODO take value from theme */
+  color: ${theme.headingsColor};
   letter-spacing: -0.01em;
   font-size: 14px;
 

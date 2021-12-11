@@ -2,20 +2,8 @@ import { reset } from "./reset"
 import { normalize } from "./normalize"
 import { cssVariables } from "./colorStyles"
 import { theme } from "./theme"
-import {
-  BasicContentWrapper,
-  BasicWrapper,
-  BasicImageWrapper,
-  BasicTextWrapper,
-} from "./wrappers"
+import { breakpoints } from "./breakpoints"
+import * as W from "./wrapper"
+import * as S from "./textStyles"
 
-export {
-  reset,
-  normalize,
-  theme,
-  cssVariables,
-  BasicContentWrapper,
-  BasicWrapper,
-  BasicImageWrapper,
-  BasicTextWrapper,
-}
+export { reset, normalize, theme, cssVariables, breakpoints, W, S }

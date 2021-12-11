@@ -2,6 +2,10 @@ import { createGlobalStyle, css } from "styled-components"
 import { reset, normalize, theme, cssVariables } from "styles"
 
 const globalCss = css`
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
   body {
     font-family: "Work Sans";
     background-color: ${theme.backgroundColor};

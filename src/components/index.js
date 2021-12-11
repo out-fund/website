@@ -1,16 +1,4 @@
-// import {
-//   BasicWrapper,
-//   BasicContentWrapper,
-//   BasicTextWrapper,
-//   BasicImageWrapper,
-// } from "./sections/Wrappers"
-
 import HeroHomepage from "./sections/HeroHomepage"
+import Button from "./Button"
 
-export {
-  HeroHomepage,
-  // BasicWrapper,
-  // BasicContentWrapper,
-  // BasicTextWrapper,
-  // BasicImageWrapper,
-}
+export { HeroHomepage, Button }
