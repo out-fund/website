@@ -1,40 +1,10 @@
-import { createGlobalStyle } from "styled-components"
-import { reset, normalize } from "styles"
+import { createGlobalStyle, css } from "styled-components"
+import { reset, normalize, theme, cssVariables } from "styles"
 
-const GlobalStyle = createGlobalStyle`
-  ${reset}
-  ${normalize}
+const globalCss = css`
   body {
     font-family: "Work Sans";
-    /* background-color: #f1f5fa;
-    color: #1C3654; */
-  }
-  /* html {
-    box-sizing: border-box;
-    line-height: 1;
-  }
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
-
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: "Work Sans", Arial, Helvetica, sans-serif;
-    background-color: #f1f5fa;
-    color: #1C3654;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: #051734;
-    letter-spacing: -0.02em;
+    background-color: ${theme.backgroundColor};
   }
 
   .visually-hidden {
@@ -45,6 +15,13 @@ const GlobalStyle = createGlobalStyle`
     white-space: nowrap;
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
-  } */
+  }
+`
+// Component that gets imported in the index layout
+const GlobalStyle = createGlobalStyle`
+  ${cssVariables}
+  ${reset}
+  ${normalize}
+  ${globalCss}
 `
 export default GlobalStyle

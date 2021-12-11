@@ -13,7 +13,7 @@ export default function HeroHomepage(props) {
   const { title, description, primaryCta, secondaryCta, image, imageAlt } =
     props
 
-  // console.log("theme", theme)
+  console.log("theme", theme)
   return (
     <HeroWrapper>
       <Wrapper>
