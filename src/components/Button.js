@@ -1,24 +1,57 @@
 import React from "react"
-// import styled from "styled-components"
+import styled from "styled-components"
+import { Link as GatsbyLink } from "gatsby"
+import PropTypes from "prop-types"
+import { theme } from "styles"
 
 export default function Button(props) {
-  return <>{props.children}</>
+  const { btnUrl, variant, children } = props
+  return (
+    <>
+      {btnUrl ? (
+        <StyledLink to={btnUrl} as={GatsbyLink} {...props}>
+          {children}
+        </StyledLink>
+      ) : (
+        <StyledButton {...props}>{children}</StyledButton>
+      )}
+    </>
+  )
 }
 
-// const Buton = styled.button`
-//   background-color: #faf;
-//   border: none;
-//   font-size: 16px;
-//   line-height: 1.5;
-//   padding: 8px 24px;
-//   border-radius: 36px;
-//   font-family: inherit;
-//   font-weight: 500;
-// `
-// const Primary = styled(Buton)`
-//   background-color: #1a65ba;
-//   color: #fff;
-// `
+const Base = styled.button`
+  display: inline-block;
+
+  /* border: none;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 8px 24px;
+  border-radius: 36px;
+  font-family: inherit;
+  font-weight: 500;
+  display: inline-block; */
+
+  ${(props) => {
+    if (props.variant === "primary")
+      return `
+          background-color: ${theme.primaryAction};
+          color: ${theme.white};
+        `
+    if (props.variant === "secondary")
+      return `
+          box-shadow: inset 0px 0px 0px 1px ${theme.primaryAction};
+          background-color: transparent;
+        `
+  }};
+`
+const StyledButton = styled(Base)``
+const StyledLink = styled(Base)`
+  text-decoration: none;
+`
+
+Button.propTypes = {
+  variant: PropTypes.oneOf(["primary", "secondary"]).isRequired,
+}
 
 // const Secondary = styled(Buton)`
 //   /* background-color: #ffa; */

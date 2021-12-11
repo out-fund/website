@@ -4,7 +4,16 @@ import { W, S } from "styles"
 import { Button } from "components"
 
 export default function HeroHomepage(props) {
-  const { title, description } = props
+  const {
+    title,
+    description,
+    primaryBtn,
+    secondaryBtn,
+    secondaryBtnUrl,
+    primaryBtnUrl,
+    image,
+    imageAlt,
+  } = props
 
   return (
     <HeroWrapper>
@@ -14,7 +23,12 @@ export default function HeroHomepage(props) {
             <Title>{title}</Title>
             <Description>{description}</Description>
             <CtaWrapper>
-              <Button>test</Button>
+              <Button btnUrl={primaryBtnUrl} variant="primary">
+                {primaryBtn}
+              </Button>
+              <Button btnUrl={secondaryBtnUrl} variant="secondary">
+                {secondaryBtn}
+              </Button>
             </CtaWrapper>
           </TextWrapper>
         </ContentWrapper>

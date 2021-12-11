@@ -37,8 +37,10 @@ const IndexPage = (props) => {
       <HeroHomepage
         title={hero.title}
         description={hero.description}
-        primaryCta={hero.primaryCta}
-        secondaryCta={hero.secondaryCta}
+        primaryBtn={hero.primaryBtn}
+        primaryBtnUrl={hero.primaryBtnUrl}
+        secondaryBtn={hero.secondaryBtn}
+        secondaryBtnUrl={hero.secondaryBtnUrl}
         image={hero.image}
         imageAlt={hero.imageAlt}
       />
@@ -46,8 +48,8 @@ const IndexPage = (props) => {
         variant="homepage"
         title={hero.title}
         description={hero.description}
-        primaryCta={hero.primaryCta}
-        secondaryCta={hero.secondaryCta}
+        primaryBtn={hero.primaryBtn}
+        secondaryBtn={hero.secondaryBtn}
         image={hero.image}
         imageAlt={hero.imageAlt}
       /> */}
@@ -56,8 +58,8 @@ const IndexPage = (props) => {
           variant="homepage"
           title={hero.title}
           description={hero.description}
-          primaryCta={hero.primaryCta}
-          secondaryCta={hero.secondaryCta}
+          primaryBtn={hero.primaryBtn}
+          secondaryBtn={hero.secondaryBtn}
           image={hero.image}
           imageAlt={hero.imageAlt}
         />
@@ -80,8 +82,8 @@ const IndexPage = (props) => {
             title={lemonadeDolls.title}
             image={lemonadeDolls.image}
             imageAlt={lemonadeDolls.imageAlt}
-            cta={lemonadeDolls.cta}
-            ctaUrl={lemonadeDolls.ctaUrl}
+            btn={lemonadeDolls.btn}
+            btnUrl={lemonadeDolls.btnUrl}
           />
           <Card
             className={feel.company}
@@ -94,8 +96,8 @@ const IndexPage = (props) => {
             by={feel.by}
             image={feel.image}
             imageAlt={feel.imageAlt}
-            cta={feel.cta}
-            ctaUrl={feel.ctaUrl}
+            btn={feel.btn}
+            btnUrl={feel.btnUrl}
             bgColor={feel.bgColor}
             titleColor="#A7825E"
           />
@@ -105,8 +107,8 @@ const IndexPage = (props) => {
           title={weInvesting.title}
           description={weInvesting.description}
           align="left"
-          cta={weInvesting.cta}
-          ctaUrl={weInvesting.ctaUrl}
+          btn={weInvesting.btn}
+          btnUrl={weInvesting.btnUrl}
           simple
         >
           <div className="image">
@@ -129,19 +131,19 @@ const IndexPage = (props) => {
           <Stats stats={aboutUs.stats} className="" />
 
           <div className="actions">
-            <Link to={aboutUs.primaryCtaUrl} variant="secondary">
-              {aboutUs.primaryCta}
+            <Link to={aboutUs.primaryBtnUrl} variant="secondary">
+              {aboutUs.primaryBtn}
             </Link>
-            <Link to={aboutUs.secondaryCta} variant="secondary">
-              {aboutUs.secondaryCta}
+            <Link to={aboutUs.secondaryBtn} variant="secondary">
+              {aboutUs.secondaryBtn}
             </Link>
           </div>
         </SectionContainer>
         <SectionContainer
           className="startSupercharging "
           title={startSupercharging.title}
-          cta={startSupercharging.cta}
-          ctaUrl={startSupercharging.ctaUrl}
+          btn={startSupercharging.btn}
+          btnUrl={startSupercharging.btnUrl}
           // titleRight
           reinforcement
           fullWidth
@@ -201,8 +203,8 @@ const IndexPage = (props) => {
               ))}
             </dl>
             <div className="action">
-              <Link to={findOut.faq.ctaUrl} variant="secondary">
-                {findOut.faq.cta}
+              <Link to={findOut.faq.btnUrl} variant="secondary">
+                {findOut.faq.btn}
               </Link>
             </div>
           </div>
@@ -210,7 +212,7 @@ const IndexPage = (props) => {
         <Trust data={trust} />
         <section className="latestFromBlog">
           <h3>{blog.title}</h3>
-          <a href={blog.ctaUrl}>{startSupercharging.cta}</a>
+          <a href={blog.btnUrl}>{startSupercharging.btn}</a>
           <div className="blogArticles">articles</div>
         </section> */}
       {/* </main> */}
@@ -234,10 +236,10 @@ export const query = graphql`
           }
         }
         imageAlt
-        primaryCta
-        primaryCtaUrl
-        secondaryCta
-        secondaryCtaUrl
+        primaryBtn
+        primaryBtnUrl
+        secondaryBtn
+        secondaryBtnUrl
         stats {
           stat
           text
@@ -246,14 +248,14 @@ export const query = graphql`
         title
       }
       blog {
-        cta
-        ctaUrl
+        btn
+        btnUrl
         title
       }
       findOut {
         calculator {
-          cta
-          ctaUrl
+          btn
+          btnUrl
           max
           min
           select {
@@ -263,8 +265,8 @@ export const query = graphql`
           title
         }
         faq {
-          cta
-          ctaUrl
+          btn
+          btnUrl
           questions {
             answer
             question
@@ -282,10 +284,10 @@ export const query = graphql`
           }
         }
         imageAlt
-        primaryCta
-        primaryCtaUrl
-        secondaryCta
-        secondaryCtaUrl
+        primaryBtn
+        primaryBtnUrl
+        secondaryBtn
+        secondaryBtnUrl
         description
         title
       }
@@ -306,8 +308,8 @@ export const query = graphql`
             }
           }
         }
-        cta
-        ctaUrl
+        btn
+        btnUrl
         title
       }
       weFunded {
@@ -318,8 +320,8 @@ export const query = graphql`
             bgColor
             by
             company
-            cta
-            ctaUrl
+            btn
+            btnUrl
             imageAlt
             logo
             tag
@@ -332,8 +334,8 @@ export const query = graphql`
           }
           lemonadeDolls {
             company
-            cta
-            ctaUrl
+            btn
+            btnUrl
             imageAlt
             logo
             tag
@@ -346,8 +348,8 @@ export const query = graphql`
         }
       }
       weInvesting {
-        cta
-        ctaUrl
+        btn
+        btnUrl
         image {
           childImageSharp {
             gatsbyImageData

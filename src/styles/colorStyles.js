@@ -3,19 +3,23 @@ import { css } from "styled-components"
 export const cssVariables = css`
   /* Light/default variables */
   :root {
-    --backgroundColor: #f2f6fa;
-    --headingsColor: #051734;
+    --background: #f2f6fa;
+    --darkblue: #051734;
+    --blue: #1a65ba;
+    --white: #fff;
   }
 
   /* Dark mode variagles */
-  @media (prefers-color-scheme: dark) {
+  /* @media (prefers-color-scheme: dark) {
     :root {
       --backgroundColor: #faf;
     }
-  }
+  } */
 `
 
 export const colors = {
-  backgroundColor: "var(--backgroundColor)",
-  headingsColor: "var(--headingsColor)",
+  backgroundColor: "var(--background)",
+  headingsColor: "var(--darkblue)",
+  primaryAction: "var(--blue)",
+  white: "var(--white)",
 }
