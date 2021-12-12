@@ -1,5 +1,8 @@
 import { createGlobalStyle, css } from "styled-components"
-import { reset, normalize, theme, cssVariables } from "styles"
+import { reset, resetDevelopment, normalize, theme, cssVariables } from "styles"
+import isDevEnv from "./../utils/isDevEnv"
+
+const rightReset = isDevEnv() ? resetDevelopment : reset
 
 const globalCss = css`
   *:before,
@@ -24,7 +27,7 @@ const globalCss = css`
 // Component that gets imported in the index layout
 const GlobalStyle = createGlobalStyle`
   ${cssVariables}
-  ${reset}
+  ${rightReset}
   ${normalize}
   ${globalCss}
 `

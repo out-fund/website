@@ -2,7 +2,7 @@ import React from "react"
 import styled, { css } from "styled-components"
 import { Link as GatsbyLink } from "gatsby"
 import PropTypes from "prop-types"
-import { theme, breakpoints } from "styles"
+import { theme } from "styles"
 
 const Button = ({ btnUrl, variant, children, size, ...props }) => {
   // console.log("btn", props)

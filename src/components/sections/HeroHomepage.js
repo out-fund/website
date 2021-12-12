@@ -3,18 +3,16 @@ import styled from "styled-components"
 import { W, S } from "styles"
 import { Button } from "components"
 
-export default function HeroHomepage(props) {
-  const {
-    title,
-    description,
-    primaryBtn,
-    secondaryBtn,
-    secondaryBtnUrl,
-    primaryBtnUrl,
-    image,
-    imageAlt,
-  } = props
-
+const HeroHomepage = ({
+  title,
+  description,
+  primaryBtn,
+  secondaryBtn,
+  secondaryBtnUrl,
+  primaryBtnUrl,
+  image,
+  imageAlt,
+}) => {
   return (
     <HeroWrapper>
       <Wrapper>
@@ -46,3 +44,5 @@ const CtaWrapper = styled.div``
 
 const Title = styled(S.H1)``
 const Description = styled(S.SubHeading)``
+
+export default HeroHomepage
