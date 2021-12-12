@@ -23,10 +23,13 @@ export default function HeroHomepage(props) {
             <Title>{title}</Title>
             <Description>{description}</Description>
             <CtaWrapper>
-              <Button btnUrl={primaryBtnUrl} variant="primary">
+              <Button btnUrl={primaryBtnUrl} variant="primary" size="large">
                 {primaryBtn}
               </Button>
               <Button variant="secondary">{secondaryBtn}</Button>
+              <Button variant="secondary" size="small">
+                {secondaryBtn}
+              </Button>
             </CtaWrapper>
           </TextWrapper>
         </ContentWrapper>

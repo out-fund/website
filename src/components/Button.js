@@ -37,34 +37,34 @@ const ButtonWrap = styled.div`
     border-radius: 20px;
     cursor: pointer;
 
-    ${(props) => {
-      if (props.variant === "primary")
-        return `
+    ${({ variant }) =>
+      variant === "primary"
+        ? `
           background-color: ${theme.primaryAction};
-          color: ${theme.white};
-        `
-      if (props.variant === "secondary")
-        return `
+          color: ${theme.white};4px;
+          `
+        : variant === "secondary"
+        ? `
           box-shadow: inset 0px 0px 0px 1px ${theme.primaryAction};
           background-color: transparent;
           color: ${theme.primaryAction};
-        `
-    }}
+          `
+        : ""};
 
-    ${(props) => {
-      if (props.size === "large")
-        return `
+    ${({ size }) =>
+      size === "large"
+        ? `
             font-size: 18px;
             padding: 12px 32px;
             border-radius: 24px;
           `
-      if (props.size === "small")
-        return `
+        : size === "small"
+        ? `
             font-size: 14px;
             padding: 8px 16px;
-            border-radius: 16px;
+            border-radius: 18px;
           `
-    }};
+        : ""};
   }
 `
 
