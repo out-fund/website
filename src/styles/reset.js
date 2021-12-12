@@ -110,8 +110,9 @@ export const reset = css`
   }
   body {
     font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont,
+      "Helvetica Neue", "Helvetica", "Segoe UI", "Arial", Roboto, Oxygen, Ubuntu,
+      Cantarell, "Open Sans", sans-serif;
     line-height: 1;
   }
   ol,

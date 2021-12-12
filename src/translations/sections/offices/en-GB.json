@@ -1,0 +1,33 @@
+{
+  "language": "en-GB",
+  "image": "../../images/Outfun-office-building.png",
+  "imageAlt": "ImageAlt",
+  "offices": {
+    "main": {
+      "title": "Main office",
+      "country": "UK",
+      "firstLine": "1 Mark Square",
+      "secondLine": "London EC2A 4EG"
+    },
+    "world": {
+      "title": "Around the world",
+      "list": [
+        {
+          "country": "Spain",
+          "firstLine": "1 Mark Square",
+          "secondLine": "London EC2A 4EG"
+        },
+        {
+          "country": "Canada",
+          "firstLine": "1 Mark Square",
+          "secondLine": "London EC2A 4EG"
+        },
+        {
+          "country": "Australia",
+          "firstLine": "1 Mark Square",
+          "secondLine": "London EC2A 4EG"
+        }
+      ]
+    }
+  }
+}

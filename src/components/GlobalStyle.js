@@ -10,7 +10,6 @@ const globalCss = css`
     box-sizing: inherit;
   }
   body {
-    font-family: "Work Sans";
     background-color: ${theme.backgroundColor};
   }
 

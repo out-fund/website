@@ -90,36 +90,6 @@
         "text": "We’re a cool bunch with a vision and passion for winning, and we’ll always have time to share a joke in our very, very serious meetings. Oh, and we workout together twice a week!"
       }
     ],
-    "image": "./../../images/Outfund-in-office-and-remote.png",
-    "imageAlt": "Outfund in office and remote",
-    "offices": {
-      "main": {
-        "title": "Main office",
-        "country": "UK",
-        "firstLine": "1 Mark Square",
-        "secondLine": "London EC2A 4EG"
-      },
-      "world": {
-        "title": "Around the world",
-        "list": [
-          {
-            "country": "Spain",
-            "firstLine": "1 Mark Square",
-            "secondLine": "London EC2A 4EG"
-          },
-          {
-            "country": "Canada",
-            "firstLine": "1 Mark Square",
-            "secondLine": "London EC2A 4EG"
-          },
-          {
-            "country": "Australia",
-            "firstLine": "1 Mark Square",
-            "secondLine": "London EC2A 4EG"
-          }
-        ]
-      }
-    },
     "cta": "Contact us",
     "ctaUrl": "url"
   },

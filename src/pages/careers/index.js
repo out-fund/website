@@ -16,6 +16,7 @@ const Careers = (props) => {
   const weGrowImage = getImage(props.data.careersJson.weGrow.image)
   const coolPeople = props.data.careersJson.coolPeople
   const inOffice = props.data.careersJson.inOffice
+  const offices = props.data.officesJson
   const weValue = props.data.careersJson.weValue
   const currentOpenings = props.data.careersJson.currentOpenings
   const trust = props.data.trustJson
@@ -77,19 +78,19 @@ const Careers = (props) => {
           />
           <div className="offices">
             <div className="main">
-              <h4>{inOffice.offices.main.title}</h4>
+              <h4>{offices.offices.main.title}</h4>
               <div className="address">
-                <h5>{inOffice.offices.main.country}</h5>
+                <h5>{offices.offices.main.country}</h5>
                 <div>
-                  {inOffice.offices.main.firstLine} <br />
-                  {inOffice.offices.main.secondLine}
+                  {offices.offices.main.firstLine} <br />
+                  {offices.offices.main.secondLine}
                 </div>
               </div>
             </div>
             <div className="world">
-              <h4>{inOffice.offices.world.title}</h4>
+              <h4>{offices.offices.world.title}</h4>
               <ul className="gird">
-                {inOffice.offices.world.list.map((block) => (
+                {offices.offices.world.list.map((block) => (
                   <li key={block.country}>
                     <div className="address">
                       <h5>{block.country}</h5>
@@ -208,32 +209,11 @@ export const query = graphql`
         cta
         ctaUrl
         description
-        imageAlt
+
         title
         blocks {
           icon
           text
-        }
-        offices {
-          main {
-            country
-            firstLine
-            secondLine
-            title
-          }
-          world {
-            title
-            list {
-              country
-              firstLine
-              secondLine
-            }
-          }
-        }
-        image {
-          childImageSharp {
-            gatsbyImageData
-          }
         }
       }
       language
@@ -269,6 +249,26 @@ export const query = graphql`
         icon
         text
       }
+    }
+    officesJson(language: { regex: "/en-GB/" }) {
+      offices {
+        main {
+          country
+          firstLine
+          secondLine
+          title
+        }
+        world {
+          list {
+            country
+            firstLine
+            secondLine
+          }
+          title
+        }
+      }
+      imageAlt
+      image
     }
   }
 `
