@@ -39,27 +39,27 @@ const ButtonWrap = styled.div`
 
     ${({ variant }) =>
       variant === "primary"
-        ? `
+        ? css`
           background-color: ${theme.primaryAction};
           color: ${theme.white};4px;
           `
         : variant === "secondary"
-        ? `
-          box-shadow: inset 0px 0px 0px 1px ${theme.primaryAction};
-          background-color: transparent;
-          color: ${theme.primaryAction};
+        ? css`
+            box-shadow: inset 0px 0px 0px 1px ${theme.primaryAction};
+            background-color: transparent;
+            color: ${theme.primaryAction};
           `
         : ""};
 
     ${({ size }) =>
       size === "large"
-        ? `
+        ? css`
             font-size: 18px;
             padding: 12px 32px;
             border-radius: 24px;
           `
         : size === "small"
-        ? `
+        ? css`
             font-size: 14px;
             padding: 8px 16px;
             border-radius: 18px;
