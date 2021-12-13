@@ -27,11 +27,11 @@ const Navbar = (props) => {
                 )} */}
                 {link.btnUrl === "/company/" ? (
                   <Button btnUrl={link.btnUrl} variant="navLink">
-                    {link.btn} C
+                    {link.btn}
                   </Button>
                 ) : link.btnUrl === "/funding/" ? (
                   <Button btnUrl={link.btnUrl} variant="navLink">
-                    {link.btn} F
+                    {link.btn}
                   </Button>
                 ) : (
                   <Button btnUrl={link.btnUrl} variant="navLink">

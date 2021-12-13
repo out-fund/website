@@ -3859,11 +3859,6 @@ css-select@~1.2.0:
     domutils "1.5.1"
     nth-check "~1.0.1"
 
-css-selector-parser@^1.1.0:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/css-selector-parser/-/css-selector-parser-1.4.1.tgz#03f9cb8a81c3e5ab2c51684557d5aaf6d2569759"
-  integrity sha512-HYPSb7y/Z7BNDCOrakL4raGO2zltZkbeXyAd6Tg9obzix6QhzxCotdBl6VT0Dv4vZfJGVz3WL/xaEI9Ly3ul0g==
-
 css-to-react-native@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/css-to-react-native/-/css-to-react-native-3.0.0.tgz#62dbe678072a824a689bcfee011fc96e02a7d756"
@@ -4302,19 +4297,19 @@ domelementtype@^2.0.1, domelementtype@^2.2.0:
   resolved "https://registry.yarnpkg.com/domelementtype/-/domelementtype-2.2.0.tgz#9a0b6c2782ed6a1c7323d42267183df9bd8b1d57"
   integrity sha512-DtBMo82pv1dFtUmHyr48beiuq792Sxohr+8Hm9zoxklYPfa6n0Z3Byjj2IV7bmr2IyqClnqEQhfgHJJ5QF0R5A==
 
+domhandler@4.3.0, domhandler@^4.0.0, domhandler@^4.2.0, domhandler@^4.2.2:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/domhandler/-/domhandler-4.3.0.tgz#16c658c626cf966967e306f966b431f77d4a5626"
+  integrity sha512-fC0aXNQXqKSFTr2wDNZDhsEYjCiYsDWl3D01kwt25hm1YIPyDGHvvi3rw+PLqHAl/m71MaiF7d5zvBr0p5UB2g==
+  dependencies:
+    domelementtype "^2.2.0"
+
 domhandler@^2.3.0:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/domhandler/-/domhandler-2.4.2.tgz#8805097e933d65e85546f726d60f5eb88b44f803"
   integrity sha512-JiK04h0Ht5u/80fdLMCEmV4zkNh2BcoMFBmZ/91WtYZ8qVXSKjiw7fXMgFPnHcSZgOo3XdinHvmnDUeMf5R4wA==
   dependencies:
     domelementtype "1"
-
-domhandler@^4.0.0, domhandler@^4.2.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/domhandler/-/domhandler-4.3.0.tgz#16c658c626cf966967e306f966b431f77d4a5626"
-  integrity sha512-fC0aXNQXqKSFTr2wDNZDhsEYjCiYsDWl3D01kwt25hm1YIPyDGHvvi3rw+PLqHAl/m71MaiF7d5zvBr0p5UB2g==
-  dependencies:
-    domelementtype "^2.2.0"
 
 domutils@1.5.1:
   version "1.5.1"
@@ -4332,7 +4327,7 @@ domutils@^1.5.1, domutils@^1.7.0:
     dom-serializer "0"
     domelementtype "1"
 
-domutils@^2.5.2, domutils@^2.6.0:
+domutils@^2.5.2, domutils@^2.6.0, domutils@^2.8.0:
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/domutils/-/domutils-2.8.0.tgz#4437def5db6e2d1f5d6ee859bd95ca7d02048135"
   integrity sha512-w96Cjofp72M5IIhpjgobBimYEfoPjx1Vx0BSX9P30WBdZW2WIKU0T1Bd0kz2eNZ9ikjKgHbEyKx8BB6H1L3h3A==
@@ -4472,6 +4467,11 @@ entities@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/entities/-/entities-2.2.0.tgz#098dc90ebb83d8dffa089d55256b351d34c4da55"
   integrity sha512-p92if5Nz619I0w+akJrLZH0MX0Pb5DX39XOwQTtXSdQQOaYH03S1uIQp4mhOZtAXrxq4ViO67YTiLBo2638o9A==
+
+entities@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/entities/-/entities-3.0.1.tgz#2b887ca62585e96db3903482d336c1006c3001d4"
+  integrity sha512-WiyBqoomrwMdFG1e0kqvASYfnlb0lp8M5o5Fw2OFq1hNZxxcNk8Ik0Xm7LxzBhuidnZB/UtBqVCgUz3kBOP51Q==
 
 envinfo@^7.8.1:
   version "7.8.1"
@@ -5755,16 +5755,6 @@ gatsby-transformer-sharp@^4.1.0:
     semver "^7.3.5"
     sharp "^0.29.2"
 
-gatsby-transformer-yaml@^4.2.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-yaml/-/gatsby-transformer-yaml-4.3.0.tgz#117381ecd169bd4a675e8cdd3e7c38251f27a0ce"
-  integrity sha512-9NSreKsPkzIx0ZPnG+/YyK0l2a1COwoCRHKFRGDwJ6Ak5z4yr90FF0H7i4/KVpy3GdUkgcD4ro1kEt8BXH5/gw==
-  dependencies:
-    "@babel/runtime" "^7.15.4"
-    js-yaml "^3.14.1"
-    lodash "^4.17.21"
-    unist-util-select "^1.5.0"
-
 gatsby-worker@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/gatsby-worker/-/gatsby-worker-1.3.0.tgz#02591fb309dc7a68a06f8840634822af2349bdc3"
@@ -6462,6 +6452,14 @@ hosted-git-info@^3.0.8:
   dependencies:
     lru-cache "^6.0.0"
 
+html-dom-parser@1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/html-dom-parser/-/html-dom-parser-1.0.4.tgz#84878b54e1d434f25e611e44254b49d39340a81b"
+  integrity sha512-ThM/vK/18R5/cVB9UsqhNqbJU7LE2BmSA7C/FjYV88wIDW75GSUpvSE/JxE4mJ8bOuU6Kp15/I1giM2JbD+ieA==
+  dependencies:
+    domhandler "4.3.0"
+    htmlparser2 "7.2.0"
+
 html-entities@^1.2.1:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/html-entities/-/html-entities-1.4.0.tgz#cfbd1b01d2afaf9adca1b10ae7dffab98c71d2dc"
@@ -6472,10 +6470,30 @@ html-entities@^2.1.0:
   resolved "https://registry.yarnpkg.com/html-entities/-/html-entities-2.3.2.tgz#760b404685cb1d794e4f4b744332e3b00dcfe488"
   integrity sha512-c3Ab/url5ksaT0WyleslpBEthOzWhrjQbg75y7XUsfSzi3Dgzt0l8w5e7DylRn15MTlMMD58dTfzddNS2kcAjQ==
 
+html-react-parser@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/html-react-parser/-/html-react-parser-1.4.2.tgz#3f310ec9e6022bc8a56282929582ccff3bf7080a"
+  integrity sha512-Q0aTOabDBm0jDf/rvge38Vh+dZhJ+8T5+Q6Z+gafQQDXt/7skbxCGr7ieol3xYU3ZYB/8F/LO5Pzcw1e85PKkw==
+  dependencies:
+    domhandler "4.3.0"
+    html-dom-parser "1.0.4"
+    react-property "2.0.0"
+    style-to-js "1.1.0"
+
 html-void-elements@^1.0.0:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/html-void-elements/-/html-void-elements-1.0.5.tgz#ce9159494e86d95e45795b166c2021c2cfca4483"
   integrity sha512-uE/TxKuyNIcx44cIWnjr/rfIATDH7ZaOMmstu0CwhFG1Dunhlp4OC6/NMbhiwoq5BpW0ubi303qnEk/PZj614w==
+
+htmlparser2@7.2.0:
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/htmlparser2/-/htmlparser2-7.2.0.tgz#8817cdea38bbc324392a90b1990908e81a65f5a5"
+  integrity sha512-H7MImA4MS6cw7nbyURtLPO1Tms7C5H602LRETv95z1MxO/7CP7rDVROehUYeYBUYEON94NXXDEPmZuq+hX4sog==
+  dependencies:
+    domelementtype "^2.0.1"
+    domhandler "^4.2.2"
+    domutils "^2.8.0"
+    entities "^3.0.1"
 
 htmlparser2@^3.9.1:
   version "3.10.1"
@@ -7255,7 +7273,7 @@ jpeg-js@^0.4.0:
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
 
-js-yaml@^3.13.1, js-yaml@^3.14.1:
+js-yaml@^3.13.1:
   version "3.14.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.14.1.tgz#dae812fdb3825fa306609a8717383c50c36a0537"
   integrity sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==
@@ -8356,7 +8374,7 @@ npmlog@^4.0.1:
     gauge "~2.7.3"
     set-blocking "~2.0.0"
 
-nth-check@^1.0.1, nth-check@^1.0.2, nth-check@~1.0.1:
+nth-check@^1.0.2, nth-check@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/nth-check/-/nth-check-1.0.2.tgz#b2bd295c37e3dd58a3bf0700376663ba4d9cf05c"
   integrity sha512-WeBOdju8SnzPN5vTUJYxYUxLeXpCaVP5i5e0LF8fg7WORF2Wd7wFX/pk0tYZk7s8T+J7VLy0Da6J1+wCT0AtHg==
@@ -9602,6 +9620,11 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-property@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-property/-/react-property-2.0.0.tgz#2156ba9d85fa4741faf1918b38efc1eae3c6a136"
+  integrity sha512-kzmNjIgU32mO4mmH5+iUyrqlpFQhF8K2k7eZ4fdLSOPFrD1XgEuSBv9LDEgxRXTMBqMd8ppT0x6TIzqE5pdGdw==
+
 react-refresh@^0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.9.0.tgz#71863337adc3e5c2f8a6bfddd12ae3bfe32aafbf"
@@ -10840,6 +10863,13 @@ style-loader@^2.0.0:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
 
+style-to-js@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/style-to-js/-/style-to-js-1.1.0.tgz#631cbb20fce204019b3aa1fcb5b69d951ceac4ac"
+  integrity sha512-1OqefPDxGrlMwcbfpsTVRyzwdhr4W0uxYQzeA2F1CBc8WG04udg2+ybRnvh3XYL4TdHQrCahLtax2jc8xaE6rA==
+  dependencies:
+    style-to-object "0.3.0"
+
 style-to-object@0.3.0, style-to-object@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/style-to-object/-/style-to-object-0.3.0.tgz#b1b790d205991cc783801967214979ee19a76e46"
@@ -11494,15 +11524,6 @@ unist-util-remove@^2.0.0:
   integrity sha512-J8NYPyBm4baYLdCbjmf1bhPu45Cr1MWTm77qd9istEkzWpnN6O9tMsEbB2JhNnBCqGENRqEWomQ+He6au0B27Q==
   dependencies:
     unist-util-is "^4.0.0"
-
-unist-util-select@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/unist-util-select/-/unist-util-select-1.5.0.tgz#a93c2be8c0f653827803b81331adec2aa24cd933"
-  integrity sha1-qTwr6MD2U4J4A7gTMa3sKqJM2TM=
-  dependencies:
-    css-selector-parser "^1.1.0"
-    debug "^2.2.0"
-    nth-check "^1.0.1"
 
 unist-util-stringify-position@^1.0.0, unist-util-stringify-position@^1.1.1:
   version "1.1.2"

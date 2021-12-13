@@ -5,7 +5,9 @@ import { theme, breakpoints } from "./"
 export const Wrapper = styled.section`
   /* background-color: #faf; */
   width: 100%;
-  padding: 0 16px;
+  /* padding: 0 16px; */
+  margin: 0 auto;
+  max-width: ${theme.width.max};
   /*margin: 0 auto;*/
   ${breakpoints.tablet} {
   }
@@ -13,7 +15,7 @@ export const Wrapper = styled.section`
 
 export const ContentWrapper = styled.div`
   /* background-color: #ffa; */
-  max-width: ${theme.width.max};
+  /*max-width: ${theme.width.max};*/
   margin: 0 auto;
   ${breakpoints.tablet} {
   }

@@ -8,7 +8,7 @@ const Button = ({ btnUrl, variant, children, size, ...props }) => {
   // console.log("btn", props)
   // const { btnUrl, variant, children, size } = props
   return (
-    <ButtonWrap variant={variant} size={size}>
+    <ButtonWrap variant={variant} size={size} className="ButtonWrap">
       {btnUrl ? (
         <GatsbyLink to={btnUrl} activeClassName="currentPage" {...props}>
           {children}
@@ -37,6 +37,7 @@ const ButtonWrap = styled.div`
     border: none;
     border-radius: 20px;
     cursor: pointer;
+    text-align: center;
     :disabled {
       opacity: 0.5;
     }
