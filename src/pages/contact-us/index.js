@@ -1,15 +1,65 @@
-import * as React from "react"
+import React from "react"
+import { graphql } from "gatsby"
 
-const Contact = () => {
+import HeroSimple from "components"
+import EnLayout from "layouts/en"
+
+const Contact = (props) => {
+  const hero = props.data.contactUsJson.hero
+  console.log(props)
   return (
-    <main>
-      <title>Contact</title>
-      <h1>Contact</h1>
-    </main>
+    <EnLayout location={props.location}>
+      <header>
+        <HeroSimple title={hero.title} />
+      </header>
+      <main></main>
+    </EnLayout>
   )
 }
 
 export default Contact
+
+export const query = graphql`
+  query {
+    contactUsJson {
+      language
+      seoTitle
+      liveChat {
+        btn
+        btnUrl
+        description
+        title
+      }
+      hero {
+        title
+      }
+      globalCoverage {
+        title
+      }
+      feedback {
+        btn
+        btnUrl
+        description
+        title
+      }
+      emailForm {
+        title
+        form {
+          btn
+          email
+          message
+          name
+        }
+      }
+      demoCall {
+        btn
+        btnUrl
+        description
+        title
+      }
+    }
+  }
+`
 
 // offices {
 //   main {
