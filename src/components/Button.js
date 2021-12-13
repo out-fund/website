@@ -37,18 +37,29 @@ const ButtonWrap = styled.div`
     border: none;
     border-radius: 20px;
     cursor: pointer;
+    :disabled {
+      opacity: 0.5;
+    }
 
     ${({ variant }) =>
       variant === "primary"
         ? css`
           background-color: ${theme.primaryAction};
           color: ${theme.white};4px;
+          transition: background-color 0.1s ease-in-out;
+          :hover {
+              background-color: #0956AC;
+            }
           `
         : variant === "secondary"
         ? css`
             box-shadow: inset 0px 0px 0px 1px ${theme.primaryAction};
             background-color: transparent;
             color: ${theme.primaryAction};
+            transition: background-color 0.1s ease-in-out;
+            :hover {
+              background-color: #deeeff;
+            }
           `
         : variant === "navLink"
         ? css`

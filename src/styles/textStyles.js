@@ -6,6 +6,7 @@ const sharedHeading = css`
   color: ${theme.headingsColor};
   letter-spacing: -0.02em;
   font-weight: 700;
+  line-height: 1.1;
 `
 
 export const H1 = styled.h1`

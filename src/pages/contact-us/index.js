@@ -23,7 +23,9 @@ const ContactUs = (props) => {
         <Wrapper>
           <ContentWrapper>
             <Box style={{ gridArea: "liveChat" }}>
-              <S.H6 as="h2">{liveChat.title}</S.H6>
+              <S.H6 as="h2" style={{ maxWidth: 300 }}>
+                {liveChat.title}
+              </S.H6>
               <S.BodyText>{liveChat.description}</S.BodyText>
               <LiveChat>
                 <GatsbyImage
@@ -50,7 +52,9 @@ const ContactUs = (props) => {
               </Button>
             </Box>
             <Form style={{ gridArea: "emailForm" }}>
-              <S.H6 as="h2">{emailForm.title}</S.H6>
+              <S.H6 as="h2" style={{ maxWidth: 400 }}>
+                {emailForm.title}
+              </S.H6>
               {/* TODO Add html parser to the title props everywhere https://www.npmjs.com/package/html-react-parser */}
               <F.Form action="">
                 <F.InputText
@@ -64,7 +68,7 @@ const ContactUs = (props) => {
                   placeholder="Business Email"
                 />
                 <F.TextArea name="message" rows="4" placeholder="Message" />
-                <Button variant="secondary">{demoCall.btn}</Button>
+                <Button variant="primary" >{demoCall.btn}</Button>
               </F.Form>
             </Form>
             <Box style={{ gridArea: "demoCall" }}>
@@ -108,7 +112,7 @@ const ContentWrapper = styled(W.ContentWrapper)`
   grid-template-columns: 1fr;
   row-gap: 40px;
 
-  ${breakpoints.desktop} {
+  ${breakpoints.tablet} {
     display: grid;
     grid-template-areas:
       "liveChat emailForm"
@@ -145,11 +149,30 @@ const Form = styled.div`
   ${F.Form} {
     display: grid;
     grid-template-rows: auto;
-    margin-top: 32px;
+    margin-top: 16px;
     padding: 32px 24px;
     background-color: #fff;
     border-radius: 10px;
+    box-shadow: 0px 0.6px 1.3px rgba(1, 53, 113, 0.011),
+      0px 1.3px 3.2px rgba(1, 53, 113, 0.015),
+      0px 2.5px 6px rgba(1, 53, 113, 0.017),
+      0px 4.5px 10.7px rgba(1, 53, 113, 0.019),
+      0px 8.4px 20.1px rgba(1, 53, 113, 0.022),
+      0px 20px 48px rgba(1, 53, 113, 0.03),
+      inset 0px 0px 0px 0.5px rgba(1, 53, 113, 0.1);
     row-gap: 24px;
+    ${breakpoints.tablet} {
+      padding: 40px 32px;
+    }
+    ${breakpoints.laptop} {
+      padding: 48px 40px;
+    }
+    ${breakpoints.desktop} {
+      padding: 56px 48px;
+    }
+    ${breakpoints.largeDesktop} {
+      padding: 64px 56px;
+    }
   }
 `
 

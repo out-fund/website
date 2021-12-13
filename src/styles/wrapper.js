@@ -3,30 +3,32 @@ import styled from "styled-components"
 import { theme, breakpoints } from "./"
 
 export const Wrapper = styled.section`
-  background-color: #faf;
+  /* background-color: #faf; */
   width: 100%;
   padding: 0 16px;
-
+  /*margin: 0 auto;*/
   ${breakpoints.tablet} {
   }
 `
 
 export const ContentWrapper = styled.div`
-  background-color: #ffa;
+  /* background-color: #ffa; */
   max-width: ${theme.width.max};
+  margin: 0 auto;
   ${breakpoints.tablet} {
   }
 `
 
 export const TextWrapper = styled.div`
-  background-color: #aff;
+  /* background-color: #aff; */
+  /*margin: 0 auto;*/
 
   ${breakpoints.tablet} {
   }
 `
 export const ImageWrapper = styled.div`
-  background-color: #faa;
-
+  /* background-color: #faa; */
+  /*margin: 0 auto;*/
   ${breakpoints.tablet} {
   }
 `
