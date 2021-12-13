@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-import { W, S, theme, breakpoints } from "styles"
+import { W, S, theme, breakpoints, F } from "styles"
 import { HeroSimple, Button, Offices } from "components"
 import EnLayout from "layouts/en"
 
@@ -51,17 +51,25 @@ const ContactUs = (props) => {
             </Box>
             <Form style={{ gridArea: "emailForm" }}>
               <S.H6 as="h2">{emailForm.title}</S.H6>
-              <form action="">
-                <input type="text" name="fullName" placeholder="Full Name" />
+              {/* TODO Add html parser to the title props everywhere https://www.npmjs.com/package/html-react-parser */}
+              <F.Form action="">
+                <F.InputText
+                  type="text"
+                  name="fullName"
+                  placeholder="Full Name"
+                />
                 <br />
-                <input
+                <F.InputEmail
                   type="email"
                   name="businessEmail"
                   placeholder="Business Email"
                 />
                 <br />
-                <textarea name="message" rows="4" placeholder="Message" />
-              </form>
+                <F.TextArea name="message" rows="4" placeholder="Message" />
+                <Button btnUrl={demoCall.btnUrl} variant="secondary">
+                  {demoCall.btn}
+                </Button>
+              </F.Form>
             </Form>
             <Box style={{ gridArea: "demoCall" }}>
               <S.H6 as="h2">{demoCall.title}</S.H6>
@@ -94,7 +102,17 @@ const ContentWrapper = styled(W.ContentWrapper)`
   max-width: ${theme.width.text};
   margin: 0 auto;
   display: grid;
-  ${breakpoints.tablet} {
+  grid-template-areas:
+    "liveChat"
+    "emailForm"
+    "demoCall"
+    "support"
+    "feedback";
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  row-gap: 40px;
+
+  ${breakpoints.desktop} {
     display: grid;
     grid-template-areas:
       "liveChat emailForm"
@@ -114,26 +132,24 @@ const Box = styled.div`
 `
 const LiveChat = styled.div`
   display: grid;
-  grid-template-columns: 284px auto;
-  align-items: center;
-  column-gap: 16px;
+  grid-template-rows: auto auto;
+  row-gap: 24px;
+  .gatsby-image-wrapper {
+    max-width: 284px;
+  }
+  ${breakpoints.desktop} {
+    display: grid;
+    grid-template-columns: 284px auto;
+    align-items: center;
+    column-gap: 16px;
+  }
 `
-// const SectionTitle = styled(S.H2)`
-//   max-width: ${theme.width.text};
-//   margin: 0 auto;
-//   text-align: center;
-// `
+
 const Form = styled.div`
   form {
     width: 100%;
-    /*height: calc(100% - 32px);*/
     margin-top: 32px;
-    padding: 64px;
-    background-color: #fff;
     border-radius: 10px;
-    > * {
-      width: 100%;
-    }
   }
 `
 

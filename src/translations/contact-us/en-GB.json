@@ -32,7 +32,7 @@
     "btnUrl": "/"
   },
   "emailForm": {
-    "title": "Prefer async communication? <br /> Send us an email",
+    "title": "Prefer async communication? Send us an email",
     "form": {
       "name": "Name",
       "email": "Email",

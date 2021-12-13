@@ -10,7 +10,7 @@ const Button = ({ btnUrl, variant, children, size, ...props }) => {
   return (
     <ButtonWrap variant={variant} size={size}>
       {btnUrl ? (
-        <GatsbyLink to={btnUrl} activeClassName="current-page" {...props}>
+        <GatsbyLink to={btnUrl} activeClassName="currentPage" {...props}>
           {children}
         </GatsbyLink>
       ) : (
@@ -54,10 +54,14 @@ const ButtonWrap = styled.div`
         ? css`
             box-shadow: inset 0px 0px 0px 1px transparent;
             background-color: transparent;
-            color: ${theme.primaryAction};
-            transition: box-shadow 0.1s ease-in-out;
+            color: #1c3654;
+            transition: all 0.1s ease-in-out;
             :hover {
+              color: ${theme.primaryAction};
               box-shadow: inset 0px 0px 0px 1px ${theme.primaryAction};
+            }
+            &.currentPage {
+              background-color: #deeeff;
             }
           `
         : ""};

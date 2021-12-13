@@ -2,7 +2,7 @@ import React from "react"
 import LogoSvg from "images/svg/Outfund-logo.svg"
 import MenueIconSvg from "images/svg/MenueIcon.svg"
 import { Button, Link } from "."
-import {  breakpoints } from "styles"
+import { breakpoints } from "styles"
 import styled from "styled-components"
 // import { SecondaryButton } from "components/Button"
 // import Link from "components/Link"
@@ -20,9 +20,24 @@ const Navbar = (props) => {
           <LeftLinks>
             {leftLinks.map((link) => (
               <li key={link.btn}>
-                <Button btnUrl={link.btnUrl} variant="navLink">
-                  {link.btn}
-                </Button>
+                {/* {link.btnUrl === "/company/" && (
+                  <Button btnUrl={link.btnUrl} variant="navLink">
+                    {link.btn}
+                  </Button>
+                )} */}
+                {link.btnUrl === "/company/" ? (
+                  <Button btnUrl={link.btnUrl} variant="navLink">
+                    {link.btn} C
+                  </Button>
+                ) : link.btnUrl === "/funding/" ? (
+                  <Button btnUrl={link.btnUrl} variant="navLink">
+                    {link.btn} F
+                  </Button>
+                ) : (
+                  <Button btnUrl={link.btnUrl} variant="navLink">
+                    {link.btn}
+                  </Button>
+                )}
               </li>
             ))}
           </LeftLinks>
@@ -84,7 +99,7 @@ const NavWrapper = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(227, 235, 245, 0.5);
+  background: rgba(242, 246, 250, 0.9);
   backdrop-filter: blur(20px);
 `
 const Logo = styled.div`
@@ -151,7 +166,7 @@ const Menue = styled.div`
 `
 
 /*const HamburgerWrapper = styled.div`*/
-  /* display: none;
+/* display: none;
 
   @media (max-width: 768px) {
     display: block;
@@ -160,31 +175,31 @@ const Menue = styled.div`
 
 const leftLinks = [
   {
-    btn: "Comapny >",
-    btnUrl: "/",
+    btn: "Comapny",
+    btnUrl: "/company/",
   },
   {
-    btn: "How it works",
-    btnUrl: "/",
+    btn: "Funding",
+    btnUrl: "/funding/",
   },
   {
     btn: "FAQ",
-    btnUrl: "/",
+    btnUrl: "/support/faq/",
   },
   {
     btn: "Partners",
-    btnUrl: "/",
+    btnUrl: "/partners/",
   },
   {
     btn: "Contact us",
-    btnUrl: "/",
+    btnUrl: "/contact-us/",
   },
 ]
 
 const rightLinks = [
   {
     btn: "Login",
-    btnUrl: "/",
+    btnUrl: "/login",
   },
   {
     btn: "🇬🇧",

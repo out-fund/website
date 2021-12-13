@@ -134,4 +134,9 @@ export const reset = css`
     border-collapse: collapse;
     border-spacing: 0;
   }
+  /* Additions */
+  input {
+    box-sizing: border-box;
+    background: red;
+  }
 `

@@ -875,4 +875,9 @@ export const resetDevelopment = css`
     border-collapse: collapse;
     border-spacing: 0;
   }
+  form,
+  textarea,
+  input {
+    box-sizing: border-box;
+  }
 `
