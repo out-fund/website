@@ -58,17 +58,13 @@ const ContactUs = (props) => {
                   name="fullName"
                   placeholder="Full Name"
                 />
-                <br />
                 <F.InputEmail
                   type="email"
                   name="businessEmail"
                   placeholder="Business Email"
                 />
-                <br />
                 <F.TextArea name="message" rows="4" placeholder="Message" />
-                <Button btnUrl={demoCall.btnUrl} variant="secondary">
-                  {demoCall.btn}
-                </Button>
+                <Button variant="secondary">{demoCall.btn}</Button>
               </F.Form>
             </Form>
             <Box style={{ gridArea: "demoCall" }}>
@@ -126,8 +122,8 @@ const ContentWrapper = styled(W.ContentWrapper)`
 `
 const Box = styled.div`
   ${S.BodyText} {
-    margin-top: 24px;
-    margin-bottom: 24px;
+    margin-top: 16px;
+    margin-bottom: 16px;
   }
 `
 const LiveChat = styled.div`
@@ -146,10 +142,14 @@ const LiveChat = styled.div`
 `
 
 const Form = styled.div`
-  form {
-    width: 100%;
+  ${F.Form} {
+    display: grid;
+    grid-template-rows: auto;
     margin-top: 32px;
+    padding: 32px 24px;
+    background-color: #fff;
     border-radius: 10px;
+    row-gap: 24px;
   }
 `
 
