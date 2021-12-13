@@ -3,54 +3,22 @@ import { Link as GatsbyLink } from "gatsby"
 import styled from "styled-components"
 
 // TODO Add language context later
-export default function Link({ variant, children, to, ...props }) {
-  console.log("Link", props)
+const Link = ({ children, to, ...props }) => {
+  // console.log("Link", props)
   return (
-    <>
-      <Primary to={to} variant={variant} {...props}>
+    <StyledLink>
+      <GatsbyLink to={to} {...props}>
         {children}
-      </Primary>
-    </>
+      </GatsbyLink>
+    </StyledLink>
   )
 }
 
-const Primary = styled(GatsbyLink)``
+export default Link
 
-// const StyledLink = styled(GatsbyLink)`
-/* background-color: ${(props) =>
-    props.variant === "primary" ? "#1A65BA" : "transparent"};
-  border: none;
-  font-size: 16px;
-  line-height: 1.5;
-  padding: 8px 24px;
-  border-radius: 36px;
-  font-family: inherit;
-  font-weight: 500;
-  color: ${(props) => (props.variant === "primary" ? "#fff" : "#1A65BA")};
-  text-decoration: none;
+const StyledLink = styled.div`
   display: inline-block;
-  letter-spacing: -0.01em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  box-shadow: ${(props) =>
-    props.variant === "secondary" ? "inset 0px 0px 0px 1px #1a65ba" : "none"};
-  position: relative;
-  align-self: flex-start;
-  ${(props) => {
-    if (props.variant === "secondaryWhite")
-      return `
-          box-shadow: inset 0px 0px 0px 1px #fff;
-          color: #fff;
-        `
-  }}
-  ${(props) => {
-    if (props.variant === "navLink")
-      return `
-          color: #1C3654;
-          &:hover {
-            background-color: #DEEEFF;
-          }
-        `
-  }} */
-// `
+  a {
+    white-space: nowrap;
+  }
+`

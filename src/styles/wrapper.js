@@ -1,5 +1,6 @@
 import styled from "styled-components"
-import { breakpoints } from "./breakpoints"
+// import { breakpoints } from "./breakpoints"
+import { theme, breakpoints } from "./"
 
 export const Wrapper = styled.section`
   background-color: #faf;
@@ -12,7 +13,7 @@ export const Wrapper = styled.section`
 
 export const ContentWrapper = styled.div`
   background-color: #ffa;
-
+  max-width: ${theme.width.max};
   ${breakpoints.tablet} {
   }
 `

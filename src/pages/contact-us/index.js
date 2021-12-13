@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-import { W, S, theme} from "styles"
+import { W, S, theme, breakpoints } from "styles"
 import { HeroSimple, Button, Offices } from "components"
 import EnLayout from "layouts/en"
 
@@ -13,6 +13,7 @@ const ContactUs = (props) => {
   const support = props.data.contactUsJson.support
   const feedback = props.data.contactUsJson.feedback
   const emailForm = props.data.contactUsJson.emailForm
+  const demoCall = props.data.contactUsJson.demoCall
   const offices = props.data.officesJson
 
   return (
@@ -21,30 +22,35 @@ const ContactUs = (props) => {
       <main>
         <Wrapper>
           <ContentWrapper>
-            <div className="box">
-              <h2>{liveChat.title}</h2>
-              <p>{liveChat.description}</p>
-              <GatsbyImage
-                image={getImage(liveChat.image)}
-                alt={liveChat.imageAlt}
-              />
-            </div>
-            <div className="box">
-              <h2>{support.title}</h2>
-              <p>{support.description}</p>
+            <Box style={{ gridArea: "liveChat" }}>
+              <S.H6 as="h2">{liveChat.title}</S.H6>
+              <S.BodyText>{liveChat.description}</S.BodyText>
+              <LiveChat>
+                <GatsbyImage
+                  image={getImage(liveChat.image)}
+                  alt={liveChat.imageAlt}
+                />
+                <Button btnUrl={liveChat.btnUrl} variant="secondary">
+                  {liveChat.btn}
+                </Button>
+              </LiveChat>
+            </Box>
+            <Box style={{ gridArea: "support" }}>
+              <S.H6 as="h2">{support.title}</S.H6>
+              <S.BodyText>{support.description}</S.BodyText>
               <Button btnUrl={support.btnUrl} variant="secondary">
                 {support.btn}
               </Button>
-            </div>
-            <div className="box">
-              <h2>{feedback.title}</h2>
-              <p>{feedback.description}</p>
+            </Box>
+            <Box style={{ gridArea: "feedback" }}>
+              <S.H6 as="h2">{feedback.title}</S.H6>
+              <S.BodyText>{feedback.description}</S.BodyText>
               <Button btnUrl={feedback.btnUrl} variant="secondary">
                 {feedback.btn}
               </Button>
-            </div>
-            <Form>
-              <h2>{emailForm.title}</h2>
+            </Box>
+            <Form style={{ gridArea: "emailForm" }}>
+              <S.H6 as="h2">{emailForm.title}</S.H6>
               <form action="">
                 <input type="text" name="fullName" placeholder="Full Name" />
                 <br />
@@ -57,17 +63,24 @@ const ContactUs = (props) => {
                 <textarea name="message" rows="4" placeholder="Message" />
               </form>
             </Form>
+            <Box style={{ gridArea: "demoCall" }}>
+              <S.H6 as="h2">{demoCall.title}</S.H6>
+              <S.BodyText>{demoCall.description}</S.BodyText>
+              <Button btnUrl={demoCall.btnUrl} variant="secondary">
+                {demoCall.btn}
+              </Button>
+            </Box>
           </ContentWrapper>
         </Wrapper>
         <Wrapper>
-            <S.CenterSectionTitle>
-              {props.data.contactUsJson.globalCoverage.title}
-            </S.CenterSectionTitle>
-            <Offices
-              offices={offices.offices}
-              image={offices.image}
-              imageAlt={offices.imageAlt}
-            />
+          <S.CenterSectionTitle>
+            {props.data.contactUsJson.globalCoverage.title}
+          </S.CenterSectionTitle>
+          <Offices
+            offices={offices.offices}
+            image={offices.image}
+            imageAlt={offices.imageAlt}
+          />
         </Wrapper>
       </main>
     </EnLayout>
@@ -80,16 +93,44 @@ const Wrapper = styled(W.Wrapper)``
 const ContentWrapper = styled(W.ContentWrapper)`
   max-width: ${theme.width.text};
   margin: 0 auto;
+  display: grid;
+  ${breakpoints.tablet} {
+    display: grid;
+    grid-template-areas:
+      "liveChat emailForm"
+      "support emailForm"
+      "feedback demoCall";
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+    row-gap: 80px;
+  }
 `
-const SectionTitle = styled(S.H2)`
-  max-width: ${theme.width.text};
-  margin: 0 auto;
-  text-align: center;
+const Box = styled.div`
+  ${S.BodyText} {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
 `
+const LiveChat = styled.div`
+  display: grid;
+  grid-template-columns: 284px auto;
+  align-items: center;
+  column-gap: 16px;
+`
+// const SectionTitle = styled(S.H2)`
+//   max-width: ${theme.width.text};
+//   margin: 0 auto;
+//   text-align: center;
+// `
 const Form = styled.div`
   form {
     width: 100%;
+    /*height: calc(100% - 32px);*/
+    margin-top: 32px;
     padding: 64px;
+    background-color: #fff;
+    border-radius: 10px;
     > * {
       width: 100%;
     }
@@ -132,6 +173,7 @@ export const query = graphql`
           email
           message
           name
+          btnUrl
         }
       }
       demoCall {

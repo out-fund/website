@@ -1,8 +1,8 @@
 import React from "react"
 import LogoSvg from "images/svg/Outfund-logo.svg"
 import MenueIconSvg from "images/svg/MenueIcon.svg"
-import { Button } from "."
-import { W, S } from "styles"
+import { Button, Link } from "."
+import {  breakpoints } from "styles"
 import styled from "styled-components"
 // import { SecondaryButton } from "components/Button"
 // import Link from "components/Link"
@@ -12,29 +12,30 @@ const Navbar = (props) => {
     <NavWrapper>
       <Wrapper>
         <Logo>
-          <LogoSvg />
+          <Link to="/">
+            <LogoSvg />
+          </Link>
         </Logo>
         <ContentWrapper>
           <LeftLinks>
-            <ul>
-              {leftLinks.map((link) => (
-                <li key={link.btn}>
-                  <Button btnUrl={link.btnUrl} variant="secondary">
-                    {link.btn}
-                  </Button>
-                </li>
-              ))}
-            </ul>
-            <ul className="rightLinks">
-              {rightLinks.map((link) => (
-                <li key={link.btn}>
-                  <Button btnUrl={link.btnUrl} variant="secondary">
-                    {link.btn}
-                  </Button>
-                </li>
-              ))}
-            </ul>
+            {leftLinks.map((link) => (
+              <li key={link.btn}>
+                <Button btnUrl={link.btnUrl} variant="navLink">
+                  {link.btn}
+                </Button>
+              </li>
+            ))}
           </LeftLinks>
+
+          <RightLinks>
+            {rightLinks.map((link) => (
+              <li key={link.btn}>
+                <Button btnUrl={link.btnUrl} variant="navLink">
+                  {link.btn}
+                </Button>
+              </li>
+            ))}
+          </RightLinks>
         </ContentWrapper>
         <Menue>
           <MenueIconSvg />
@@ -74,7 +75,6 @@ const Navbar = (props) => {
 export default Navbar
 
 const NavWrapper = styled.nav`
-  /*background-color: #aaf;*/
   position: fixed;
   width: 100%;
   top: 0;
@@ -100,32 +100,101 @@ const Wrapper = styled.div`
   position: relative;
   width: 100%;
   padding: 0 16px;
-`
-const Menue = styled.div`
-  svg {
-    height: 40px;
+  ${breakpoints.laptop} {
+    grid-template-columns: 127px auto;
+    justify-content: unset;
+    column-gap: 40px;
   }
 `
 const ContentWrapper = styled.div`
   position: absolute;
   top: 0;
-  background-color: #fff;
+  /* background-color: #fff; */
   width: 100%;
-  display: none;
+  /*display: none;*/
+  ${breakpoints.laptop} {
+    position: static;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    column-gap: 16px;
+  }
 `
-const LeftLinks = styled.div``
+const LeftLinks = styled.ul`
+  /* background-color: #faf; */
+  ${breakpoints.laptop} {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    align-items: center;
+    justify-content: space-between;
+  }
+`
+const RightLinks = styled.ul`
+  /* background-color: #ffa; */
+  ${breakpoints.laptop} {
+    position: static;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-between;
+  }
+`
 
-const HamburgerWrapper = styled.div`
+const Menue = styled.div`
+  svg {
+    height: 40px;
+  }
+  ${breakpoints.laptop} {
+    display: none;
+  }
+`
+
+/*const HamburgerWrapper = styled.div`*/
   /* display: none;
 
   @media (max-width: 768px) {
     display: block;
   } */
-`
+// `
 
-const StyledNavbar = styled.nav`
-  /* background-color: #f2f6fa; */
-  /* height: 72px;
+const leftLinks = [
+  {
+    btn: "Comapny >",
+    btnUrl: "/",
+  },
+  {
+    btn: "How it works",
+    btnUrl: "/",
+  },
+  {
+    btn: "FAQ",
+    btnUrl: "/",
+  },
+  {
+    btn: "Partners",
+    btnUrl: "/",
+  },
+  {
+    btn: "Contact us",
+    btnUrl: "/",
+  },
+]
+
+const rightLinks = [
+  {
+    btn: "Login",
+    btnUrl: "/",
+  },
+  {
+    btn: "🇬🇧",
+    btnUrl: "/",
+  },
+]
+
+// const StyledNavbar = styled.nav`
+/* background-color: #f2f6fa; */
+/* height: 72px;
   display: flex;
   align-items: center;
   padding: 0 16px 0 32px;
@@ -179,7 +248,7 @@ const StyledNavbar = styled.nav`
       }
     }
   } */
-`
+// `
 
 // const mobileLeftLinks = [
 //   {
@@ -207,40 +276,3 @@ const StyledNavbar = styled.nav`
 //     btnUrl: "/",
 //   },
 // ]
-const leftLinks = [
-  {
-    btn: "Comapny >",
-    btnUrl: "/",
-  },
-  {
-    btn: "How it works",
-    btnUrl: "/",
-  },
-  {
-    btn: "FAQ",
-    btnUrl: "/",
-  },
-  {
-    btn: "Partners",
-    btnUrl: "/",
-  },
-  {
-    btn: "Contact us",
-    btnUrl: "/",
-  },
-  {
-    btn: "We are hiring!",
-    btnUrl: "/",
-  },
-]
-
-const rightLinks = [
-  {
-    btn: "Login",
-    btnUrl: "/",
-  },
-  {
-    btn: "🇬🇧",
-    btnUrl: "/",
-  },
-]

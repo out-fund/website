@@ -1,35 +1,36 @@
 import React from "react"
 import { graphql } from "gatsby"
-// import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import EnLayout from "layouts/en"
 import { HeroHomepage } from "components"
-// import Hero from "components/Hero"
-// import SectionContainer from "components/SectionContainer"
-// // import SectionReinforcement from "components/SectionReinforcement"
-// import Card from "components/Card"
-// import Stats from "components/Stats"
-// import Trust from "components/Trust"
-// import Link from "components/Link"
-// import ArtImage from "components/ArtImage"
-// import Calculator from "components/Calculator"
+
+import SectionContainer from "components/SectionContainer"
+// import SectionReinforcement from "components/SectionReinforcement"
+import Card from "components/Card"
+import Stats from "components/Stats"
+import Trust from "components/Trust"
+import Link from "components/Link"
+import ArtImage from "components/ArtImage"
+import Calculator from "components/Calculator"
 
 const IndexPage = (props) => {
   // console.log("indexpage:", props)
   // console.log(props.data)
   // console.log(props.location)
   const hero = props.data.homepageJson.hero
-  // const weFunded = props.data.homepageJson.weFunded
-  // const feel = props.data.homepageJson.weFunded.cards.feel
-  // const lemonadeDolls = props.data.homepageJson.weFunded.cards.lemonadeDolls
-  // const weInvesting = props.data.homepageJson.weInvesting
-  // const weInvestingImage = getImage(props.data.homepageJson.weInvesting.image)
-  // const aboutUs = props.data.homepageJson.aboutUs
-  // const startSupercharging = props.data.homepageJson.startSupercharging
-  // const onto = props.data.homepageJson.startSupercharging.card
-  // const findOut = props.data.homepageJson.findOut
-  // const trust = props.data.trustJson
-  // const blog = props.data.homepageJson.blog
+
+  const weFunded = props.data.homepageJson.weFunded
+  const feel = props.data.homepageJson.weFunded.cards.feel
+  const lemonadeDolls = props.data.homepageJson.weFunded.cards.lemonadeDolls
+  const weInvesting = props.data.homepageJson.weInvesting
+  const weInvestingImage = getImage(props.data.homepageJson.weInvesting.image)
+  const aboutUs = props.data.homepageJson.aboutUs
+  const startSupercharging = props.data.homepageJson.startSupercharging
+  const onto = props.data.homepageJson.startSupercharging.card
+  const findOut = props.data.homepageJson.findOut
+  const trust = props.data.trustJson
+  const blog = props.data.homepageJson.blog
 
   return (
     <EnLayout>
@@ -43,27 +44,6 @@ const IndexPage = (props) => {
         image={hero.image}
         imageAlt={hero.imageAlt}
       />
-      {/* <Hero
-        variant="homepage"
-        title={hero.title}
-        description={hero.description}
-        primaryBtn={hero.primaryBtn}
-        secondaryBtn={hero.secondaryBtn}
-        image={hero.image}
-        imageAlt={hero.imageAlt}
-      /> */}
-      {/* <header>
-        <Hero
-          variant="homepage"
-          title={hero.title}
-          description={hero.description}
-          primaryBtn={hero.primaryBtn}
-          secondaryBtn={hero.secondaryBtn}
-          image={hero.image}
-          imageAlt={hero.imageAlt}
-        />
-      </header>
-
       <main>
         <SectionContainer
           className="weFunded"
@@ -213,8 +193,8 @@ const IndexPage = (props) => {
           <h3>{blog.title}</h3>
           <a href={blog.btnUrl}>{startSupercharging.btn}</a>
           <div className="blogArticles">articles</div>
-        </section> */}
-      {/* </main> */}
+        </section>
+      </main>
     </EnLayout>
   )
 }

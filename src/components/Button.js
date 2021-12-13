@@ -10,7 +10,7 @@ const Button = ({ btnUrl, variant, children, size, ...props }) => {
   return (
     <ButtonWrap variant={variant} size={size}>
       {btnUrl ? (
-        <GatsbyLink to={btnUrl} {...props}>
+        <GatsbyLink to={btnUrl} activeClassName="current-page" {...props}>
           {children}
         </GatsbyLink>
       ) : (
@@ -33,6 +33,7 @@ const ButtonWrap = styled.div`
     padding: 8px 24px;
     font-size: 16px;
     line-height: 1.5;
+    white-space: nowrap;
     border: none;
     border-radius: 20px;
     cursor: pointer;
@@ -48,6 +49,16 @@ const ButtonWrap = styled.div`
             box-shadow: inset 0px 0px 0px 1px ${theme.primaryAction};
             background-color: transparent;
             color: ${theme.primaryAction};
+          `
+        : variant === "navLink"
+        ? css`
+            box-shadow: inset 0px 0px 0px 1px transparent;
+            background-color: transparent;
+            color: ${theme.primaryAction};
+            transition: box-shadow 0.1s ease-in-out;
+            :hover {
+              box-shadow: inset 0px 0px 0px 1px ${theme.primaryAction};
+            }
           `
         : ""};
 
@@ -69,7 +80,7 @@ const ButtonWrap = styled.div`
 `
 
 Button.propTypes = {
-  variant: PropTypes.oneOf(["primary", "secondary"]).isRequired,
+  variant: PropTypes.oneOf(["primary", "secondary", "navLink"]).isRequired,
   size: PropTypes.oneOf(["large", "medium", "small"]).isRequired,
   children: PropTypes.string.isRequired,
 }

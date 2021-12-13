@@ -16,11 +16,11 @@ const Offices = ({ offices, image, imageAlt }) => {
               <S.H5 as="h3">{offices.main.title}</S.H5>
               <Office>
                 <S.H6 as="h4">{offices.main.country}</S.H6>
-                <p>
+                <S.BodyText>
                   {offices.main.firstLine}
                   <br />
                   {offices.main.secondLine}
-                </p>
+                </S.BodyText>
               </Office>
             </Region>
 
@@ -65,6 +65,7 @@ const OfficeList = styled.div`
 
   ${breakpoints.tablet} {
     grid-template-columns: 1fr 3fr;
+    column-gap: 16px;
   }
 `
 
@@ -78,9 +79,9 @@ const Office = styled.div`
   h4 {
     margin-bottom: 8px;
   }
-  p {
-    line-height: 1.2;
-  }
+/*  p {
+    line-height: 1.4;
+  }*/
 `
 const Region = styled.div`
   display: grid;
