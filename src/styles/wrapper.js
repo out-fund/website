@@ -1,30 +1,32 @@
 import styled from "styled-components"
 import { breakpoints } from "./breakpoints"
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
   background-color: #faf;
   width: 100%;
-  @media (min-width: ${breakpoints.tablet}) {
+  padding: 0 16px;
+
+  ${breakpoints.tablet} {
   }
 `
 
 export const ContentWrapper = styled.div`
   background-color: #ffa;
 
-  @media (min-width: ${breakpoints.tablet}) {
+  ${breakpoints.tablet} {
   }
 `
 
 export const TextWrapper = styled.div`
   background-color: #aff;
 
-  @media (min-width: ${breakpoints.tablet}) {
+  ${breakpoints.tablet} {
   }
 `
 export const ImageWrapper = styled.div`
   background-color: #faa;
 
-  @media (min-width: ${breakpoints.tablet}) {
+  ${breakpoints.tablet} {
   }
 `
 

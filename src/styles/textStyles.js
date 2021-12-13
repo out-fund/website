@@ -1,81 +1,144 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { breakpoints } from "styles"
 import { theme } from "styles"
 
-export const H1 = styled.h1`
+const sharedHeading = css`
   color: ${theme.headingsColor};
   letter-spacing: -0.02em;
   font-weight: 700;
-  font-size: 24px;
+`
 
-  @media (min-width: ${breakpoints.tablet}) {
-    font-size: 32px;
-  }
-  @media (min-width: ${breakpoints.laptop}) {
+export const H1 = styled.h1`
+  ${sharedHeading}
+  font-size: 40px;
+
+  ${breakpoints.tablet} {
     font-size: 40px;
   }
-  @media (min-width: ${breakpoints.desktop}) {
+  ${breakpoints.laptop} {
     font-size: 48px;
   }
-  @media (min-width: ${breakpoints.largeDesktop}) {
+  ${breakpoints.desktop} {
+    font-size: 56px;
+  }
+  ${breakpoints.largeDesktop} {
     font-size: 64px;
   }
 `
 
 export const H2 = styled.h2`
-  color: ${theme.headingsColor};
-  letter-spacing: -0.02em;
-  font-weight: 700;
-  font-size: 24px;
+  ${sharedHeading};
+  font-size: 32px;
 
-  @media (min-width: ${breakpoints.tablet}) {
+  ${breakpoints.tablet} {
     font-size: 32px;
   }
-  @media (min-width: ${breakpoints.laptop}) {
+  ${breakpoints.laptop} {
     font-size: 40px;
   }
-  @media (min-width: ${breakpoints.desktop}) {
+  ${breakpoints.desktop} {
     font-size: 48px;
   }
-  @media (min-width: ${breakpoints.largeDesktop}) {
-    font-size: 64px;
+  ${breakpoints.largeDesktop} {
+    font-size: 56px;
   }
 `
 
 export const H3 = styled.h3`
-  color: ${theme.headingsColor};
-  letter-spacing: -0.02em;
-  font-weight: 700;
-  font-size: 24px;
+  ${sharedHeading}
+  font-size: 28px;
 
-  @media (min-width: ${breakpoints.tablet}) {
+  ${breakpoints.tablet} {
+    font-size: 28px;
+  }
+  ${breakpoints.laptop} {
     font-size: 32px;
   }
-  @media (min-width: ${breakpoints.laptop}) {
+  ${breakpoints.desktop} {
     font-size: 40px;
   }
-  @media (min-width: ${breakpoints.desktop}) {
+  ${breakpoints.largeDesktop} {
     font-size: 48px;
   }
-  @media (min-width: ${breakpoints.largeDesktop}) {
-    font-size: 64px;
+`
+
+export const H4 = styled.h4`
+  ${sharedHeading}
+  font-weight: 600;
+  font-size: 24px;
+
+  ${breakpoints.tablet} {
+    font-size: 24px;
+  }
+  ${breakpoints.laptop} {
+    font-size: 28px;
+  }
+  ${breakpoints.desktop} {
+    font-size: 32px;
+  }
+  ${breakpoints.largeDesktop} {
+    font-size: 40px;
   }
 `
+export const H5 = styled.h4`
+  ${sharedHeading}
+  font-size: 20px;
+
+  ${breakpoints.tablet} {
+    font-size: 20px;
+  }
+  ${breakpoints.laptop} {
+    font-size: 24px;
+  }
+  ${breakpoints.desktop} {
+    font-size: 28px;
+  }
+  ${breakpoints.largeDesktop} {
+    font-size: 32px;
+  }
+`
+export const H6 = styled.h4`
+  ${sharedHeading}
+  font-weight: 600;
+  font-size: 18px;
+
+  ${breakpoints.tablet} {
+    font-size: 18px;
+  }
+  ${breakpoints.laptop} {
+    font-size: 20px;
+  }
+  ${breakpoints.desktop} {
+    font-size: 24px;
+  }
+  ${breakpoints.largeDesktop} {
+    font-size: 28px;
+  }
+`
+
+export const SectionTitle = styled(H2)`
+  margin-top: 120px;
+  margin-bottom: 48px;
+`
+export const CenterSectionTitle = styled(SectionTitle)`
+  text-align: center;
+`
+
 export const SubHeading = styled.p`
   color: ${theme.headingsColor};
   letter-spacing: -0.01em;
   font-size: 14px;
 
-  @media (min-width: ${breakpoints.tablet}) {
+  ${breakpoints.tablet} {
     font-size: 16px;
   }
-  @media (min-width: ${breakpoints.laptop}) {
+  ${breakpoints.laptop} {
     font-size: 18px;
   }
-  @media (min-width: ${breakpoints.desktop}) {
+  ${breakpoints.desktop} {
     font-size: 20px;
   }
-  @media (min-width: ${breakpoints.largeDesktop}) {
+  ${breakpoints.largeDesktop} {
   }
 `
 
@@ -85,8 +148,21 @@ export const SubHeading = styled.p`
 //   line-height: 140%;
 // `
 
-// export const BodyMain = styled.p`
-//   font-weight: normal;
-//   font-size: 20px;
-//   line-height: 140%;
-// `
+export const BodyText = styled.p`
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 140%;
+
+  ${breakpoints.tablet} {
+    font-size: 17px;
+  }
+  ${breakpoints.laptop} {
+    font-size: 18px;
+  }
+  ${breakpoints.desktop} {
+    font-size: 19px;
+  }
+  ${breakpoints.largeDesktop} {
+    font-size: 20px;
+  }
+`

@@ -268,7 +268,11 @@ export const query = graphql`
         }
       }
       imageAlt
-      image
+      image {
+        childImageSharp {
+          gatsbyImageData
+        }
+      }
     }
   }
 `

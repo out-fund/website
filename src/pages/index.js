@@ -32,7 +32,6 @@ const IndexPage = (props) => {
   // const blog = props.data.homepageJson.blog
 
   return (
-    // <LangLayout location={props.location}>
     <EnLayout>
       <HeroHomepage
         title={hero.title}

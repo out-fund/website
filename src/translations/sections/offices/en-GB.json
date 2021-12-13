@@ -1,7 +1,7 @@
 {
   "language": "en-GB",
-  "image": "../../images/Outfun-office-building.png",
-  "imageAlt": "ImageAlt",
+  "image": "../../../images/Outfund-office-building.png",
+  "imageAlt": "Outfund office pictures",
   "offices": {
     "main": {
       "title": "Main office",

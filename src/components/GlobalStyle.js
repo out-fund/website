@@ -11,6 +11,7 @@ const globalCss = css`
   }
   body {
     background-color: ${theme.backgroundColor};
+    padding-top: 64px;
   }
 
   .visually-hidden {
