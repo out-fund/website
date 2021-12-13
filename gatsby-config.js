@@ -33,12 +33,25 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-mdx",
-    "gatsby-transformer-yaml",
     "gatsby-transformer-json",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: `${__dirname}/src/images/icon.png`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "posts",
+        path: `${__dirname}/src/blog`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "successStories",
+        path: `${__dirname}/src/success-stories`,
       },
     },
     {
