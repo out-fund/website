@@ -11,6 +11,7 @@ import {
   Stats,
   SectionContainer,
   Button,
+  CardNews,
 } from "components"
 import { W, theme } from "styles"
 
@@ -76,13 +77,11 @@ const AboutUs = (props) => {
           className="latestUpadates"
           title={latestNews.latestNews}
         >
-          {latestNews.cards.map((item) => (
-            <Card
-              key={item.company.toLowerCase().replace(/\s/g, "")}
-              variant="news"
-              className={item.tag.toLowerCase().replace(/\s/g, "")}
+          {latestNews.cards.map((item, index) => (
+            <CardNews
+              key={index}
               company={item.company}
-              title={item.title}
+              quote={item.title}
               logo={item.logo}
               tag={item.tag}
             />
@@ -115,16 +114,24 @@ export default AboutUs
 
 const GridFounders = styled(W.ContentWrapper)`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   column-gap: 30px;
   margin-bottom: 64px;
+  row-gap: 30px;
+
+  ${theme.above.tablet} {
+  }
+  ${theme.above.laptop} {
+    grid-template-columns: repeat(4, 1fr);
+  }
 `
 const GridLogos = styled(W.ContentWrapper)`
   display: grid;
-  grid-template-columns: repeat(${(props) => props.count}, auto);
+  /* grid-template-columns: repeat(${(props) => props.count}, auto); */
+  grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
   align-items: center;
-  /* justify-content: center; */
   column-gap: 40px;
+  row-gap: 24px;
   margin-bottom: 64px;
 `
 const LogoWrapper = styled.div`

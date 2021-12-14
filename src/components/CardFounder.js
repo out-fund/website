@@ -31,17 +31,20 @@ const Wrapper = styled.div`
 const ImageWrapper = styled.div``
 const CompanyWrapper = styled.div`
   /* padding: 24px; */
-  height: 80px;
+  height: 64px;
   display: grid;
   align-items: center;
-  padding-left: 24px;
+  padding: 0 24px;
+  ${theme.above.tablet} {
+    height: 80px;
+  }
   /* display: flex; */
   /* flex-direction: column;
   align-items: center; */
 `
 const LogoWrapper = styled.div`
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
   /* justify-content: center; */
   svg {
     max-width: 190px;

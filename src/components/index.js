@@ -9,6 +9,7 @@ import CardFounder from "./CardFounder"
 import Stats from "./Stats"
 import SectionContainer from "./sections/SectionContainer"
 import SectionWrapper from "./sections/SectionWrapper"
+import CardNews from "./CardNews"
 
 export {
   HeroHomepage,
@@ -22,4 +23,5 @@ export {
   Stats,
   SectionContainer,
   SectionWrapper,
+  CardNews,
 }

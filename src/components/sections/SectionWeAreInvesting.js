@@ -19,9 +19,11 @@ const SectionWeAreInvesting = ({
           <TextWrapper>
             <Title>{title}</Title>
             <Description>{description}</Description>
-            <Button btnUrl={btnUrl} variant="secondary">
-              {btn}
-            </Button>
+            <BtnWrapper>
+              <Button btnUrl={btnUrl} variant="secondary">
+                {btn}
+              </Button>
+            </BtnWrapper>
           </TextWrapper>
           <ImageWrapper>
             <GatsbyImage image={getImage(image)} alt={imageAlt} />
@@ -69,6 +71,9 @@ const TextWrapper = styled(W.TextWrapper)`
   ${theme.below.tablet} {
     text-align: center;
   }
+`
+const BtnWrapper = styled.div`
+  margin-bottom: 32px;
 `
 const ImageWrapper = styled(W.ImageWrapper)`
   border-radius: 10px;
