@@ -1,21 +1,30 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import parse from "html-react-parser"
 
 import LangLayout from "layouts/en"
-import { HeroAbout } from "components"
-import { W, S, theme, breakpoints } from "styles"
+import {
+  HeroAbout,
+  SectionWeAreInvesting,
+  CardFounder,
+  Stats,
+  SectionContainer,
+  Button,
+} from "components"
+import { W, theme } from "styles"
 
-import Stats from "components/Stats"
-import SectionContainer from "components/SectionContainer"
+// import Stats from "components/Stats"
+// import SectionContainer from "components/SectionContainer"
 import Card from "components/Card"
+import styled from "styled-components"
 
 const AboutUs = (props) => {
   console.log(props.data)
   const hero = props.data.aboutUsJson.hero
 
   const weInvesting = props.data.aboutUsJson.weInvesting
-  const weInvestingImage = getImage(props.data.aboutUsJson.weInvesting.image)
+  // const weInvestingImage = getImage(props.data.aboutUsJson.weInvesting.image)
   const companies = props.data.aboutUsJson.companies
   const latestNews = props.data.aboutUsJson.latestNews
   const regulated = props.data.aboutUsJson.regulated
@@ -31,32 +40,38 @@ const AboutUs = (props) => {
       />
       <W.Main>
         <Stats stats={hero.stats} />
-        <SectionContainer
-          className="weInvesting"
+        <SectionWeAreInvesting
           title={weInvesting.title}
           description={weInvesting.description}
-        >
-          <GatsbyImage image={weInvestingImage} alt={weInvesting.imageAlt} />
-        </SectionContainer>
-        <SectionContainer className="companies" title={companies.title}>
-          {companies.cards.map((item) => (
-            <Card
-              key={item.company.toLowerCase().replace(/\s/g, "")}
-              variant="simpleCompany"
-              className={item.company}
-              company={item.company}
-              logo={item.logo}
-              image={item.image}
-              imageAlt={item.imageAlt}
-            />
-          ))}
-          <div className="logos">
-            {companies.logos.map((item) => (
-              <img src={item.publicURL} alt="Company logo" /> // TODO Add key
+          btn={weInvesting.btn}
+          btnUrl={weInvesting.btnUrl}
+          image={weInvesting.image}
+          imageAlt={weInvesting.imageAlt}
+        />
+        <SectionContainer title={companies.title}>
+          <GridFounders>
+            {companies.cards.map((item, index) => (
+              <CardFounder
+                key={index}
+                company={item.company}
+                logo={item.logo}
+                image={item.image}
+                imageAlt={item.imageAlt}
+              />
             ))}
-          </div>
-          <a href={companies.btnUrl}>{companies.btn}</a>
+          </GridFounders>
+          <GridLogos count={companies.logos.length}>
+            {companies.logos.map((item, index) => (
+              <LogoWrapper key={index}>{parse(item)} </LogoWrapper>
+            ))}
+          </GridLogos>
+          <BtnWrapper>
+            <Button btnUrl={companies.btnUrl} variant="secondary">
+              {companies.btn}
+            </Button>
+          </BtnWrapper>
         </SectionContainer>
+
         <SectionContainer
           className="latestUpadates"
           title={latestNews.latestNews}
@@ -97,6 +112,38 @@ const AboutUs = (props) => {
 }
 
 export default AboutUs
+
+const GridFounders = styled(W.ContentWrapper)`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 30px;
+  margin-bottom: 64px;
+`
+const GridLogos = styled(W.ContentWrapper)`
+  display: grid;
+  grid-template-columns: repeat(${(props) => props.count}, auto);
+  align-items: center;
+  /* justify-content: center; */
+  column-gap: 40px;
+  margin-bottom: 64px;
+`
+const LogoWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    max-width: 200px;
+    height: 24px;
+    opacity: 0.5;
+    path {
+      fill: #405e80;
+    }
+  }
+`
+const BtnWrapper = styled.div`
+  text-align: center;
+`
 
 export const query = graphql`
   query {

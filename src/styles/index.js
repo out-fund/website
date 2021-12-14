@@ -7,6 +7,7 @@ import { breakpoints } from "./breakpoints"
 import * as F from "./formElements"
 import * as W from "./wrapper"
 import * as S from "./textStyles"
+import * as U from "./utils"
 
 export {
   reset,
@@ -18,4 +19,5 @@ export {
   W,
   S,
   F,
+  U,
 }

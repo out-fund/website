@@ -1,14 +1,14 @@
 import React from "react"
 import styled from "styled-components"
 
-import { W, S, theme, breakpoints } from "styles"
+import { S, theme, breakpoints } from "styles"
 
 const Stats = ({ stats }) => {
   return (
     <StyledStats>
       <ul className="statStrip">
-        {stats.map((item) => (
-          <li key={item.stat}>
+        {stats.map((item, index) => (
+          <li key={index}>
             <Title as="h3">{item.stat}</Title>
             <Description>{item.text}</Description>
           </li>

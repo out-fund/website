@@ -8,7 +8,7 @@ export const Main = styled.main`
   }
 `
 
-export const Wrapper = styled.section`
+export const Wrapper = styled.div`
   /* background-color: #faf; */
   width: 100%;
   margin: 0 auto;
@@ -20,10 +20,27 @@ export const Wrapper = styled.section`
 
 export const ContentWrapper = styled.div`
   /* background-color: #ffa; */
-  /*max-width: ${theme.width.max};*/
+  /* max-width: ${theme.width.content2.laptop}; */
   margin: 0 auto;
-  ${breakpoints.tablet} {
+
+  ${theme.above.tablet} {
+    max-width: ${theme.tablet};
   }
+  /* ${theme.above.laptop} {
+    max-width: ${theme.laptop};
+  }
+  ${theme.above.mediumLaptop} {
+    max-width: ${theme.mediumLaptop};
+  }
+  ${theme.above.desktop} {
+    max-width: ${theme.desktop};
+  }
+  ${theme.above.mediumDesktop} {
+    max-width: ${theme.mediumDesktop};
+  }
+  ${theme.above.largeDesktop} {
+    max-width: ${theme.largeDesktop};
+  } */
 `
 
 export const TextWrapper = styled.div`

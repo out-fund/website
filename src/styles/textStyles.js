@@ -11,7 +11,7 @@ const sharedHeading = css`
 
 export const H1 = styled.h1`
   ${sharedHeading}
-  font-size: 40px;
+  font-size: 32px;
 
   ${breakpoints.tablet} {
     font-size: 40px;
@@ -29,7 +29,7 @@ export const H1 = styled.h1`
 
 export const H2 = styled.h2`
   ${sharedHeading};
-  font-size: 32px;
+  font-size: 28px;
 
   ${breakpoints.tablet} {
     font-size: 32px;
@@ -47,7 +47,7 @@ export const H2 = styled.h2`
 
 export const H3 = styled.h3`
   ${sharedHeading}
-  font-size: 28px;
+  font-size: 26px;
 
   ${breakpoints.tablet} {
     font-size: 28px;

@@ -31,13 +31,16 @@ const ButtonWrap = styled.div`
     display: inline-block;
     margin: 0;
     padding: 8px 24px;
+    font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     white-space: nowrap;
+    text-align: center;
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    text-align: center;
+    user-select: none;
+
     :disabled {
       opacity: 0.5;
     }
