@@ -4,18 +4,25 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { S } from "styles"
 
+import EnLayout from "layouts/en"
+import { HeroSimple } from "components"
+
 const SuccessStoryLayout = ({ data: { mdx } }) => {
   return (
-    <MDXProvider
-      components={{
-        h1: S.H1,
-        h2: S.H2,
-        h3: S.H3,
-      }}
-    >
-      <h1>title</h1>
-      <MDXRenderer frontmatter={mdx.frontmatter}>{mdx.body}</MDXRenderer>
-    </MDXProvider>
+    <EnLayout>
+      <MDXProvider
+        components={{
+          h1: S.H1,
+          h2: S.H2,
+          h3: S.H3,
+        }}
+      >
+        <HeroSimple title={mdx.frontmatter.title} />
+        <main>
+          <MDXRenderer frontmatter={mdx.frontmatter}>{mdx.body}</MDXRenderer>
+        </main>
+      </MDXProvider>
+    </EnLayout>
   )
 }
 
