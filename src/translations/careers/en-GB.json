@@ -5,8 +5,8 @@
   "hero": {
     "title": "Join the fastest growing eCommerce investor in the UK",
     "description": "Outfund is a team of success-driven, highly motivated people who are passionate about growing businesses in the UK. Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission possible.",
-    "cta": "See open positions",
-    "ctaUrl": "url",
+    "btn": "See open positions",
+    "btnUrl": "url",
     "image": "./../../images/LondonTeam.jpg",
     "imageAlt": "Test",
     "stats": [
@@ -40,8 +40,8 @@
   },
   "coolPeople": {
     "title": "Some Cool People On Our Team",
-    "cta": "Find more about the team",
-    "ctaUrl": "url",
+    "btn": "Find more about the team",
+    "btnUrl": "url",
     "people": [
       {
         "name": "Alan",
@@ -90,8 +90,8 @@
         "text": "We’re a cool bunch with a vision and passion for winning, and we’ll always have time to share a joke in our very, very serious meetings. Oh, and we workout together twice a week!"
       }
     ],
-    "cta": "Contact us",
-    "ctaUrl": "url"
+    "btn": "Contact us",
+    "btnUrl": "url"
   },
   "weValue": {
     "title": "What We Value",
@@ -152,7 +152,7 @@
       "description": "Don’t stress. We’d love to still hear from talented people who would like to be part of the Outfund team. Please fire off your CV along with a short bio on who you are and why you’d love to help accelerate growth for 100s of online businesses to",
       "email": "careers@out.fund"
     },
-    "cta": "See open positions",
-    "ctaUrl": "url"
+    "btn": "See open positions",
+    "btnUrl": "url"
   }
 }

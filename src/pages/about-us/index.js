@@ -3,7 +3,8 @@ import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import LangLayout from "layouts/en"
-import Hero from "components/Hero"
+import { HeroAbout } from "components"
+
 import Stats from "components/Stats"
 import SectionContainer from "components/SectionContainer"
 import Card from "components/Card"
@@ -11,6 +12,7 @@ import Card from "components/Card"
 const AboutUs = (props) => {
   console.log(props.data)
   const hero = props.data.aboutUsJson.hero
+
   const weInvesting = props.data.aboutUsJson.weInvesting
   const weInvestingImage = getImage(props.data.aboutUsJson.weInvesting.image)
   const companies = props.data.aboutUsJson.companies
@@ -19,18 +21,13 @@ const AboutUs = (props) => {
   const joinUs = props.data.aboutUsJson.joinUs
   const joinUsImage = getImage(props.data.aboutUsJson.joinUs.image)
   return (
-    <LangLayout location={props.location}>
-      <header>
-        <Hero
-          variant="about"
-          title={hero.title}
-          description={hero.description}
-          image={hero.image}
-          imageAlt={hero.imageAlt}
-        />
-        <Stats stats={hero.stats} />
-      </header>
-
+    <LangLayout>
+      <HeroAbout
+        title={hero.title}
+        description={hero.description}
+        image={hero.image}
+        imageAlt={hero.imageAlt}
+      />
       <main>
         <SectionContainer
           className="weInvesting"
@@ -56,7 +53,7 @@ const AboutUs = (props) => {
               <img src={item.publicURL} alt="Company logo" /> // TODO Add key
             ))}
           </div>
-          <a href={companies.ctaUrl}>{companies.cta}</a>
+          <a href={companies.btnUrl}>{companies.btn}</a>
         </SectionContainer>
         <SectionContainer
           className="latestUpadates"
@@ -77,7 +74,7 @@ const AboutUs = (props) => {
         <section className="joinUs">
           <h3>{joinUs.title}</h3>
           <p>{joinUs.description}</p>
-          <a href={joinUs.ctaUrl}>{joinUs.cta}</a>
+          <a href={joinUs.btnUrl}>{joinUs.btn}</a>
           <GatsbyImage image={joinUsImage} alt={joinUs.imageAlt} />
         </section>
         <section className="regulated">
@@ -117,8 +114,8 @@ export const query = graphql`
         }
       }
       weInvesting {
-        cta
-        ctaUrl
+        btn
+        btnUrl
         image {
           childImageSharp {
             gatsbyImageData
@@ -130,8 +127,8 @@ export const query = graphql`
       }
       companies {
         title
-        cta
-        ctaUrl
+        btn
+        btnUrl
         cards {
           company
           imageAlt
@@ -148,8 +145,8 @@ export const query = graphql`
         imageAlt
         description
         title
-        cta
-        ctaUrl
+        btn
+        btnUrl
         image {
           childImageSharp {
             gatsbyImageData
@@ -176,3 +173,17 @@ export const query = graphql`
     }
   }
 `
+
+// <LangLayout>
+//   <header>
+//     <Hero
+//       variant="about"
+//       title={hero.title}
+//       description={hero.description}
+//       image={hero.image}
+//       imageAlt={hero.imageAlt}
+//     />
+//     <Stats stats={hero.stats} />
+//   </header>
+
+// </LangLayout>

@@ -1,11 +1,14 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
+import EnLayout from "layouts/en"
+import { HeroSimple } from "components"
+
 const Blog = ({ data }) => {
   const { edges: posts } = data.allMdx
   return (
-    <div>
-      <h1>Awesome MDX Blog</h1>
+    <EnLayout>
+      <HeroSimple title={"Awesome Blog"}></HeroSimple>
       <ul>
         {posts.map(({ node: post }) => (
           <li key={post.id}>
@@ -16,7 +19,7 @@ const Blog = ({ data }) => {
           </li>
         ))}
       </ul>
-    </div>
+    </EnLayout>
   )
 }
 

@@ -2,7 +2,7 @@ import React from "react"
 import LogoSvg from "images/svg/Outfund-logo.svg"
 import MenueIconSvg from "images/svg/MenueIcon.svg"
 import { Button, Link } from "."
-import { breakpoints } from "styles"
+import { breakpoints, theme } from "styles"
 import styled from "styled-components"
 // import { SecondaryButton } from "components/Button"
 // import Link from "components/Link"
@@ -101,6 +101,7 @@ const NavWrapper = styled.nav`
   align-items: center;
   background: rgba(242, 246, 250, 0.9);
   backdrop-filter: blur(20px);
+  /* margin: 0 16px; */
 `
 const Logo = styled.div`
   svg {
@@ -114,7 +115,10 @@ const Wrapper = styled.div`
   align-items: center;
   position: relative;
   width: 100%;
-  padding: 0 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+  /* padding: 0 16px; */
+  max-width: ${theme.width.max};
   ${breakpoints.laptop} {
     grid-template-columns: 127px auto;
     justify-content: unset;
@@ -175,20 +179,29 @@ const Menue = styled.div`
 
 const leftLinks = [
   {
-    btn: "Comapny",
-    btnUrl: "/company/",
+    btn: "About us",
+    // btnUrl: "/company/",
+    btnUrl: "/about-us/",
   },
   {
-    btn: "Funding",
-    btnUrl: "/funding/",
+    btn: "Careers",
+    btnUrl: "/careers/",
   },
   {
     btn: "FAQ",
     btnUrl: "/support/faq/",
   },
+  // {
+  //   btn: "Partners",
+  //   btnUrl: "/partners/",
+  // },
   {
-    btn: "Partners",
-    btnUrl: "/partners/",
+    btn: "Success Stories",
+    btnUrl: "/success-stories/",
+  },
+  {
+    btn: "Blog",
+    btnUrl: "/blog/",
   },
   {
     btn: "Contact us",

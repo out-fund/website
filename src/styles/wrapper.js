@@ -2,13 +2,18 @@ import styled from "styled-components"
 // import { breakpoints } from "./breakpoints"
 import { theme, breakpoints } from "./"
 
+export const Main = styled.main`
+  ${breakpoints.belowDesktop} {
+    padding: 0px 16px;
+  }
+`
+
 export const Wrapper = styled.section`
   /* background-color: #faf; */
   width: 100%;
-  /* padding: 0 16px; */
   margin: 0 auto;
   max-width: ${theme.width.max};
-  /*margin: 0 auto;*/
+
   ${breakpoints.tablet} {
   }
 `

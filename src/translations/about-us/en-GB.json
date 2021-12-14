@@ -3,7 +3,7 @@
   "seoTitle": "About",
   "seoKeywords": ["test", "keywors"],
   "hero": {
-    "title": "We’re the WORLD’s Largest eCommerce Investor",
+    "title": "We’re the UK’s Largest eCommerce Investor",
     "description": "We have been there, done it and got the t-shirt. Our founders have grown multiple businesses in the past and been through the struggles of raising Bank Loans, Venture",
     "image": "../../images/aboutHero.jpg",
     "imageAlt": "Test",
@@ -19,13 +19,13 @@
     "description": "As founders ourselves, we know running a business is hard work and often unfair. Outfund doesn’t charge interest, take personal guarantees, and our facility is simply repaid from a revenue share of new sales. ",
     "image": "../../images/PaymentCounterPhone.jpg",
     "imageAlt": "ImageAlt",
-    "cta": "Learn more how funding works",
-    "ctaUrl": "/how-funding-works/"
+    "btn": "Learn more how funding works",
+    "btnUrl": "/how-funding-works/"
   },
   "companies": {
     "title": "Companies we funded",
-    "cta": "Read more sucess stories",
-    "ctaUrl": "url",
+    "btn": "Read more sucess stories",
+    "btnUrl": "url",
     "cards": [
       {
         "company": "Feel",
@@ -89,8 +89,8 @@
   "joinUs": {
     "title": "Join us",
     "description": "Invest your funds into the repeatable scalable aspects of your business like ad spend and inventory.",
-    "cta": "Learn more how funding works",
-    "ctaUrl": "/how-funding-works/",
+    "btn": "Learn more how funding works",
+    "btnUrl": "/how-funding-works/",
     "image": "../../images/Outfund-we-grow.png",
     "imageAlt": "Boris Hodakel and Cheryl holidin Feel package"
   },

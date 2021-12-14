@@ -3,7 +3,8 @@ import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import LangLayout from "layouts/en"
-import Hero from "components/Hero"
+// import Hero from "components/Hero"
+import { HeroSimple } from "components"
 import Stats from "components/Stats"
 import SectionContainer from "components/SectionContainer"
 import Trust from "components/Trust"
@@ -21,19 +22,25 @@ const Careers = (props) => {
   const currentOpenings = props.data.careersJson.currentOpenings
   const trust = props.data.trustJson
   return (
-    <LangLayout location={props.location}>
-      <header>
+    <LangLayout>
+      <HeroSimple
+        title={hero.title}
+        description={hero.description}
+        btn={hero.btn}
+        btnUrl={hero.btnUrl}
+      ></HeroSimple>
+      {/* <header>
         <Hero
           variant="careers"
           title={hero.title}
           description={hero.description}
           image={hero.image}
           imageAlt={hero.imageAlt}
-          cta={hero.cta}
-          ctaUrl={hero.ctaUrl}
+          btn={hero.btn}
+          btnUrl={hero.btnUrl}
         />
         <Stats stats={hero.stats} />
-      </header>
+      </header> */}
       <main>
         <section className="weGrow">
           <h2>{weGrow.title}</h2>
@@ -103,7 +110,7 @@ const Careers = (props) => {
                 ))}
               </ul>
             </div>
-            <a href={inOffice.ctaUrl}>{inOffice.cta}</a>
+            <a href={inOffice.btnUrl}>{inOffice.btn}</a>
           </div>
         </SectionContainer>
         <SectionContainer className="weValue" title={weValue.title}>
@@ -143,7 +150,7 @@ const Careers = (props) => {
                 </p>
               </li>
             </ul>
-            <a href={currentOpenings.ctaUrl}>{currentOpenings.cta}</a>
+            <a href={currentOpenings.btnUrl}>{currentOpenings.btn}</a>
           </div>
         </SectionContainer>
         <Trust data={trust} />
@@ -158,8 +165,8 @@ export const query = graphql`
   query {
     careersJson(language: { regex: "/en-GB/" }) {
       hero {
-        ctaUrl
-        cta
+        btnUrl
+        btn
         description
         imageAlt
         title
@@ -174,8 +181,8 @@ export const query = graphql`
         }
       }
       coolPeople {
-        cta
-        ctaUrl
+        btn
+        btnUrl
         title
         people {
           description
@@ -190,8 +197,8 @@ export const query = graphql`
         }
       }
       currentOpenings {
-        cta
-        ctaUrl
+        btn
+        btnUrl
         description
         title
         openings {
@@ -206,8 +213,8 @@ export const query = graphql`
         }
       }
       inOffice {
-        cta
-        ctaUrl
+        btn
+        btnUrl
         description
 
         title

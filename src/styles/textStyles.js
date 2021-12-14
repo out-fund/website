@@ -129,8 +129,7 @@ export const SubHeading = styled.p`
   color: ${theme.headingsColor};
   letter-spacing: -0.01em;
   font-size: 14px;
-  line-height: 1.1;
-
+  line-height: 1.6;
 
   ${breakpoints.tablet} {
     font-size: 16px;

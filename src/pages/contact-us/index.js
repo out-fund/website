@@ -19,7 +19,7 @@ const ContactUs = (props) => {
   return (
     <EnLayout>
       <HeroSimple title={hero.title}></HeroSimple>
-      <main>
+      <W.Main>
         <Wrapper>
           <ContentWrapper>
             <Box style={{ gridArea: "liveChat" }}>
@@ -68,7 +68,7 @@ const ContactUs = (props) => {
                   placeholder="Business Email"
                 />
                 <F.TextArea name="message" rows="4" placeholder="Message" />
-                <Button variant="primary" >{demoCall.btn}</Button>
+                <Button variant="primary">{demoCall.btn}</Button>
               </F.Form>
             </Form>
             <Box style={{ gridArea: "demoCall" }}>
@@ -90,7 +90,7 @@ const ContactUs = (props) => {
             imageAlt={offices.imageAlt}
           />
         </Wrapper>
-      </main>
+      </W.Main>
     </EnLayout>
   )
 }
