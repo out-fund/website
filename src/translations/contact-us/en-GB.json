@@ -34,8 +34,8 @@
   "emailForm": {
     "title": "Prefer async communication? Send us an email",
     "form": {
-      "name": "Name",
-      "email": "Email",
+      "fullName": "Full Name",
+      "email": "Business Email",
       "message": "Message",
       "btn": "Send",
       "btnUrl": "/"

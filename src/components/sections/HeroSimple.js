@@ -39,6 +39,7 @@ const ContentWrapper = styled(W.ContentWrapper)`
 `
 const TextWrapper = styled(W.TextWrapper)`
   max-width: 970px;
+  margin: 0 auto;
 `
 
 const Title = styled(S.H1)`

@@ -154,6 +154,7 @@ export const BodyText = styled.p`
   font-weight: normal;
   font-size: 16px;
   line-height: 140%;
+  color: ${theme.bodyText};
 
   ${breakpoints.tablet} {
     font-size: 17px;

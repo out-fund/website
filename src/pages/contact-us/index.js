@@ -60,15 +60,19 @@ const ContactUs = (props) => {
                 <F.InputText
                   type="text"
                   name="fullName"
-                  placeholder="Full Name"
+                  placeholder={emailForm.form.fullName}
                 />
                 <F.InputEmail
                   type="email"
                   name="businessEmail"
-                  placeholder="Business Email"
+                  placeholder={emailForm.form.email}
                 />
-                <F.TextArea name="message" rows="4" placeholder="Message" />
-                <Button variant="primary">{demoCall.btn}</Button>
+                <F.TextArea
+                  name="message"
+                  rows="4"
+                  placeholder={emailForm.form.message}
+                />
+                <Button variant="primary">{emailForm.form.btn}</Button>
               </F.Form>
             </Form>
             <Box style={{ gridArea: "demoCall" }}>
@@ -153,13 +157,7 @@ const Form = styled.div`
     padding: 32px 24px;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0px 0.6px 1.3px rgba(1, 53, 113, 0.011),
-      0px 1.3px 3.2px rgba(1, 53, 113, 0.015),
-      0px 2.5px 6px rgba(1, 53, 113, 0.017),
-      0px 4.5px 10.7px rgba(1, 53, 113, 0.019),
-      0px 8.4px 20.1px rgba(1, 53, 113, 0.022),
-      0px 20px 48px rgba(1, 53, 113, 0.03),
-      inset 0px 0px 0px 0.5px rgba(1, 53, 113, 0.1);
+    box-shadow: ${theme.shadows.boxShadow};
     row-gap: 24px;
     ${breakpoints.tablet} {
       padding: 40px 32px;
@@ -211,7 +209,7 @@ export const query = graphql`
           btn
           email
           message
-          name
+          fullName
           btnUrl
         }
       }

@@ -44,6 +44,7 @@ const HeroWrapper = styled.header`
 `
 const Wrapper = styled(W.Wrapper)`
   background-color: #fff;
+  box-shadow: ${theme.shadows.boxShadow};
   border-radius: 10px;
   ${breakpoints.belowTablet} {
     /* padding: 100px 16px; */
@@ -74,6 +75,14 @@ const ContentWrapper = styled(W.ContentWrapper)`
     column-gap: 40px;
   }
   ${breakpoints.desktop} {
+    grid-template-columns: 1fr 600px;
+    max-width: ${theme.width.text};
+    /* grid-template-columns: 1fr 636px;
+    align-items: center;
+    max-width: ${theme.width.content};
+    column-gap: 40px; */
+  }
+  ${breakpoints.largeDesktop} {
     grid-template-columns: 1fr 640px;
     max-width: ${theme.width.content};
     /* grid-template-columns: 1fr 636px;

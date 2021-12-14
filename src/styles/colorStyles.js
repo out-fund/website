@@ -7,6 +7,7 @@ export const cssVariables = css`
     --darkblue: #051734;
     --blue: #1a65ba;
     --white: #fff;
+    --bodyText: #1c3654;
   }
 
   /* Dark mode variagles */
@@ -22,4 +23,5 @@ export const colors = {
   headingsColor: "var(--darkblue)",
   primaryAction: "var(--blue)",
   white: "var(--white)",
+  bodyText: "var(--bodyText)",
 }

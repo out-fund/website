@@ -1,9 +1,10 @@
-import * as React from "react"
+import React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import LangLayout from "layouts/en"
 import { HeroAbout } from "components"
+import { W, S, theme, breakpoints } from "styles"
 
 import Stats from "components/Stats"
 import SectionContainer from "components/SectionContainer"
@@ -28,7 +29,8 @@ const AboutUs = (props) => {
         image={hero.image}
         imageAlt={hero.imageAlt}
       />
-      <main>
+      <W.Main>
+        <Stats stats={hero.stats} />
         <SectionContainer
           className="weInvesting"
           title={weInvesting.title}
@@ -89,7 +91,7 @@ const AboutUs = (props) => {
             ))}
           </ul>
         </section>
-      </main>
+      </W.Main>
     </LangLayout>
   )
 }
