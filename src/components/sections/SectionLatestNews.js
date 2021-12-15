@@ -7,27 +7,34 @@ import { SectionContainer, CardNews } from "components"
 const SectionLatestNews = ({ data }) => {
   return (
     <SectionContainer title={data.title}>
-      <Wrapper>
-        <ContentWrapper>
-          <GridNews>
-            {data.cards.map((item, index) => (
-              <CardNews
-                key={index}
-                company={item.company}
-                quote={item.title}
-                logo={item.logo}
-                tag={item.tag}
-                url={item.url}
-              />
-            ))}
-          </GridNews>
-        </ContentWrapper>
-      </Wrapper>
+      <FullWidth>
+        <Wrapper>
+          <ContentWrapper>
+            <GridNews>
+              {data.cards.map((item, index) => (
+                <CardNews
+                  key={index}
+                  company={item.company}
+                  quote={item.title}
+                  logo={item.logo}
+                  tag={item.tag}
+                  url={item.url}
+                />
+              ))}
+            </GridNews>
+          </ContentWrapper>
+        </Wrapper>
+      </FullWidth>
     </SectionContainer>
   )
 }
 export default SectionLatestNews
 
+const FullWidth = styled.div`
+  ${theme.above.desktop} {
+    margin: 0 16px;
+  }
+`
 const Wrapper = styled(W.Wrapper)``
 const ContentWrapper = styled(W.FullWidth)``
 const GridNews = styled.div`

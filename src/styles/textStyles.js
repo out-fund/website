@@ -130,6 +130,7 @@ export const SubHeading = styled.p`
   letter-spacing: -0.01em;
   font-size: 14px;
   line-height: 1.6;
+  font-weight: 500;
 
   ${breakpoints.tablet} {
     font-size: 16px;

@@ -37,26 +37,30 @@ const Wrapper = styled(W.ContentWrapper)`
   background-color: #fff;
   border-radius: 10px;
 `
-const ContentWrapper = styled(W.Small)`
+const ContentWrapper = styled(W.MediumWrapper)`
   padding: 32px 24px 24px;
 
   ${theme.above.tablet} {
-    padding: 32px;
+    padding: 32px 0px;
   }
   ${theme.above.laptop} {
-    padding: 64px;
+    padding: 48px 0px;
   }
   ${theme.above.desktop} {
-    padding: 80px;
+    padding: 64px 0px;
+  }
+  ${theme.above.largeDesktop} {
+    padding: 80px 0px;
   }
 `
 const TextWrapper = styled.div`
   margin-top: 24px;
+
   ${theme.above.tablet} {
-    padding: 32px;
+    margin-top: 32px;
   }
   ${theme.above.laptop} {
-    padding: 48px;
+    margin-top: 48px;
   }
 `
 
@@ -68,25 +72,28 @@ const Grid = styled.ul`
   margin-bottom: 40px;
 
   ${theme.above.tablet} {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 32px;
+  }
+  ${theme.above.laptop} {
     grid-template-columns: repeat(3, 1fr);
-    margin-bottom: 64px;
-    column-gap: 30px;
-    row-gap: 40px;
+    column-gap: 48px;
   }
 `
 const Block = styled.li``
 const BlockTitle = styled(S.H6)`
   text-align: center;
+  margin-bottom: 8px;
   ${theme.above.tablet} {
-    text-align: left;
+    /* text-align: left; */
   }
 `
 
 const IconWrapper = styled.div`
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   text-align: center;
   ${theme.above.tablet} {
-    text-align: left;
+    /* text-align: left; */
   }
   svg {
     width: 48px;
@@ -103,7 +110,9 @@ const Description = styled(S.SubHeading)`
   text-align: center;
   margin-top: 16px;
 `
-const BlockDescription = styled(S.BodyMedium)``
+const BlockDescription = styled(S.BodyMedium)`
+  text-align: center;
+`
 
 const StatementWrapper = styled.div`
   padding: 12px 24px;
@@ -112,4 +121,5 @@ const StatementWrapper = styled.div`
 `
 const Statement = styled(S.BodyMedium)`
   font-weight: 400;
+  text-align: center;
 `
