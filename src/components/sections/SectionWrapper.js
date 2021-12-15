@@ -4,10 +4,10 @@ import styled from "styled-components"
 import { theme } from "styles/theme"
 
 const SectionWrapper = ({ children }) => {
-  return <Wrapper>{children}</Wrapper>
+  return <StyledSectionWrapper>{children}</StyledSectionWrapper>
 }
 
-const Wrapper = styled.section`
+const StyledSectionWrapper = styled.section`
   margin-bottom: 48px;
 
   ${theme.above.tablet} {

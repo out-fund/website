@@ -2,6 +2,9 @@ import HeroHomepage from "./sections/HeroHomepage"
 import HeroSimple from "./sections/HeroSimple"
 import HeroAbout from "./sections/HeroAbout"
 import SectionWeAreInvesting from "./sections/SectionWeAreInvesting"
+import SectionFoundersCompanies from "./sections/SectionFoundersCompanies"
+import SectionLatestNews from "./sections/SectionLatestNews"
+import SectionJoinUs from "./sections/SectionJoinUs"
 import Offices from "./sections/Offices"
 import Button from "./Button"
 import Link from "./Link"
@@ -24,4 +27,7 @@ export {
   SectionContainer,
   SectionWrapper,
   CardNews,
+  SectionFoundersCompanies,
+  SectionLatestNews,
+  SectionJoinUs,
 }

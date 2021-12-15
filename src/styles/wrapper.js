@@ -43,6 +43,21 @@ export const ContentWrapper = styled.div`
   } */
 `
 
+export const MediumWrapper = styled.div`
+  margin: 0 auto;
+
+  ${theme.above.tablet} {
+    max-width: 70vw;
+  }
+`
+export const FullWrapper = styled.div`
+  margin: 0 auto;
+
+  ${theme.above.tablet} {
+    max-width: 100%;
+  }
+`
+
 export const TextWrapper = styled.div`
   /* background-color: #aff; */
   /*margin: 0 auto;*/

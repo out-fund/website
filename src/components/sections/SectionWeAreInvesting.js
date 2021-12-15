@@ -4,14 +4,8 @@ import { W, S, theme, breakpoints } from "styles"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Button, SectionWrapper } from "components"
 
-const SectionWeAreInvesting = ({
-  title,
-  description,
-  btn,
-  btnUrl,
-  image,
-  imageAlt,
-}) => {
+const SectionWeAreInvesting = ({ data }) => {
+  const { title, description, btn, btnUrl, image, imageAlt } = data
   return (
     <SectionWrapper>
       <Wrapper>
@@ -33,6 +27,7 @@ const SectionWeAreInvesting = ({
     </SectionWrapper>
   )
 }
+export default SectionWeAreInvesting
 
 const Wrapper = styled(W.Wrapper)``
 const ContentWrapper = styled(W.ContentWrapper)`
@@ -95,5 +90,3 @@ const Description = styled(S.BodyText)`
   margin-bottom: 32px;
   text-align: left;
 `
-
-export default SectionWeAreInvesting

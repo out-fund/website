@@ -5,7 +5,7 @@ import parse from "html-react-parser"
 
 import { U, theme, S } from "styles"
 
-const CardNews = ({ company, logo, quote, tag }) => {
+const CardNews = ({ company, logo, quote, tag, url }) => {
   return (
     <Wrapper>
       <TextWrapper>
@@ -15,8 +15,10 @@ const CardNews = ({ company, logo, quote, tag }) => {
             <S.H5 as="h3" dangerouslySetInnerHTML={{ __html: `“${quote}` }} />
           </blockquote>
           <figcaption>
-            <U.VisuallyHidden>{company}</U.VisuallyHidden>
-            {parse(logo)}
+            <a href={url}>
+              <U.VisuallyHidden>{company}</U.VisuallyHidden>
+              {parse(logo)}
+            </a>
           </figcaption>
         </Figure>
       </TextWrapper>
@@ -30,8 +32,10 @@ const Wrapper = styled.div`
   background-color: #fff;
   border-radius: 20px;
   box-shadow: ${theme.shadows.boxShadow};
-  max-width: 570px;
   padding: 40px;
+  ${theme.above.desktop} {
+    padding: 40px 56px;
+  }
 `
 const Tag = styled.div`
   padding: 8px 16px;
@@ -43,11 +47,32 @@ const Tag = styled.div`
   color: ${({ tag }) => (tag === "Partnership" ? "#0A5959" : "#876419;")};
   background-color: ${({ tag }) =>
     tag === "Partnership" ? "#80EDED" : "#edca80"};
+  margin-bottom: 24px;
+  align-self: flex-start;
 `
-const TextWrapper = styled.div``
+const TextWrapper = styled.div`
+  height: 100%;
+  /* max-height: 480px; */
+  display: flex;
+  flex-direction: column;
+  b {
+    display: inline;
+  }
+`
 const Figure = styled.figure`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   blockquote h3 {
+    margin-bottom: 48px;
     font-weight: 400;
+    line-height: 1.5;
+  }
+  figcaption {
+    svg {
+      max-width: 100%;
+    }
+    margin-top: auto;
   }
 `
 const LogoWrapper = styled.div``

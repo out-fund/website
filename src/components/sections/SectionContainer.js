@@ -8,14 +8,17 @@ import { W, S, theme, breakpoints } from "styles"
 const SectionContainer = ({ title, description, children }) => {
   return (
     <SectionWrapper>
-      <Wrapper>
-        <ContentWrapper>
-          <TextWrapper>
-            <Title>{title}</Title>
-            {description && <Description>{description}</Description>}
-          </TextWrapper>
-        </ContentWrapper>
-      </Wrapper>
+      {title && (
+        <Wrapper>
+          <ContentWrapper>
+            <TextWrapper>
+              <Title>{title}</Title>
+              {description && <Description>{description}</Description>}
+            </TextWrapper>
+          </ContentWrapper>
+        </Wrapper>
+      )}
+
       {children}
     </SectionWrapper>
   )
