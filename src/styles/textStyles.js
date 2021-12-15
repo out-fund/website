@@ -150,10 +150,11 @@ export const SubHeading = styled.p`
 //   line-height: 140%;
 // `
 
+// Rename to BodyLare
 export const BodyText = styled.p`
   font-weight: normal;
   font-size: 16px;
-  line-height: 140%;
+  line-height: 1.4;
   color: ${theme.bodyText};
 
   ${breakpoints.tablet} {
@@ -167,5 +168,24 @@ export const BodyText = styled.p`
   }
   ${breakpoints.largeDesktop} {
     font-size: 20px;
+  }
+`
+export const BodyMedium = styled.p`
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.5;
+  color: ${theme.bodyText};
+
+  ${breakpoints.tablet} {
+    font-size: 15px;
+  }
+  ${breakpoints.laptop} {
+    font-size: 16px;
+  }
+  ${breakpoints.desktop} {
+    font-size: 17px;
+  }
+  ${breakpoints.largeDesktop} {
+    font-size: 18px;
   }
 `

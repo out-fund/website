@@ -14,7 +14,6 @@ import {
 import { W } from "styles"
 
 const AboutUs = (props) => {
-  // console.log(props.data)
   return (
     <EnLayout>
       <HeroAbout data={props.data.aboutUsJson.hero} />
@@ -105,6 +104,7 @@ export const query = graphql`
       statement
       description
       blocks {
+        title
         icon
         text
       }
