@@ -79,9 +79,6 @@ const Office = styled.div`
   h4 {
     margin-bottom: 8px;
   }
-/*  p {
-    line-height: 1.4;
-  }*/
 `
 const Region = styled.div`
   display: grid;

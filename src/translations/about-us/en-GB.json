@@ -6,14 +6,14 @@
     "title": "We’re the UK’s Largest eCommerce Investor",
     "description": "We have been there, done it and got the t-shirt. Our founders have grown multiple businesses in the past and been through the struggles of raising Bank Loans, Venture",
     "image": "../../images/Outfund-hero-about.jpg",
-    "imageAlt": "Test",
-    "stats": [
-      { "stat": "£100M", "text": "Invested in 2020 globaly" },
-      { "stat": "4", "text": "Operating countries" },
-      { "stat": "52+", "text": "Team and growing" },
-      { "stat": "£37M", "text": "We raised so far" }
-    ]
+    "imageAlt": "Test"
   },
+  "stats": [
+    { "stat": "£100M", "text": "Invested in 2020 globaly" },
+    { "stat": "4", "text": "Operating countries" },
+    { "stat": "52+", "text": "Team and growing" },
+    { "stat": "£37M", "text": "We raised so far" }
+  ],
   "weInvesting": {
     "title": "We’re Investing into Online Businesses",
     "description": "As founders ourselves, we know running a business is hard work and often unfair. Outfund doesn’t charge interest, take personal guarantees, and our facility is simply repaid from a revenue share of new sales. ",
@@ -92,28 +92,9 @@
   "joinUs": {
     "title": "Join us",
     "description": "Invest your funds into the repeatable scalable aspects of your business like ad spend and inventory.",
-    "btn": "Learn more how funding works",
+    "btn": "See open positions",
     "btnUrl": "/how-funding-works/",
     "image": "../../images/Outfund-we-grow.png",
     "imageAlt": "Boris Hodakel and Cheryl holidin Feel package"
-  },
-  "regulated": {
-    "title": "We are fully regulated",
-    "description": "Outfund is a team of success-driven, highly motivated people who are passionate about growing businesses in the UK. Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission possible.",
-    "blocks": [
-      {
-        "icon": "icon",
-        "text": "Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission . "
-      },
-      {
-        "icon": "icon",
-        "text": "Our fast-paced environment makes us a highly adaptive team who rely on one another to make this  possible."
-      },
-      {
-        "icon": "icon",
-        "text": "Our fast-paced environment makes us a highly adaptive team who rely on one  to make this mission possible. "
-      }
-    ],
-    "statement": "Outfund is the trading name of MTL Financial LTD, which is a Lender. MTL Financial LTD is authorised and regulated by the Financial Conduct Authority (FCA) as a credit broker (FRN 803345)"
   }
 }

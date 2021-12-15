@@ -3,16 +3,11 @@ import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import LangLayout from "layouts/en"
-// import Hero from "components/Hero"
-import { HeroSimple } from "components"
-import Stats from "components/Stats"
+import { HeroSimple, SectionRegulated } from "components"
 import SectionContainer from "components/SectionContainer"
-import Trust from "components/Trust"
-// import Card from "components/Card"
 
 const Careers = (props) => {
   console.log(props.data)
-  const hero = props.data.careersJson.hero
   const weGrow = props.data.careersJson.weGrow
   const weGrowImage = getImage(props.data.careersJson.weGrow.image)
   const coolPeople = props.data.careersJson.coolPeople
@@ -20,27 +15,11 @@ const Careers = (props) => {
   const offices = props.data.officesJson
   const weValue = props.data.careersJson.weValue
   const currentOpenings = props.data.careersJson.currentOpenings
-  const trust = props.data.trustJson
+
   return (
     <LangLayout>
-      <HeroSimple
-        title={hero.title}
-        description={hero.description}
-        btn={hero.btn}
-        btnUrl={hero.btnUrl}
-      ></HeroSimple>
-      {/* <header>
-        <Hero
-          variant="careers"
-          title={hero.title}
-          description={hero.description}
-          image={hero.image}
-          imageAlt={hero.imageAlt}
-          btn={hero.btn}
-          btnUrl={hero.btnUrl}
-        />
-        <Stats stats={hero.stats} />
-      </header> */}
+      <HeroSimple data={props.data.careersJson.hero} />
+
       <main>
         <section className="weGrow">
           <h2>{weGrow.title}</h2>
@@ -153,7 +132,7 @@ const Careers = (props) => {
             <a href={currentOpenings.btnUrl}>{currentOpenings.btn}</a>
           </div>
         </SectionContainer>
-        <Trust data={trust} />
+        <SectionRegulated data={props.data.trustJson} />
       </main>
     </LangLayout>
   )

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { W, S, theme, breakpoints } from "styles"
+import { W, S, theme } from "styles"
 import { SectionContainer, Button } from "components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
@@ -37,7 +37,7 @@ const ContentWrapper = styled(W.MediumWrapper)`
   row-gap: 40px;
 
   ${theme.above.laptop} {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1.2fr;
   }
 `
 
@@ -45,6 +45,7 @@ const Title = styled(S.H2)``
 const Description = styled(S.BodyText)`
   margin-top: 16px;
   margin-bottom: 32px;
+  max-width: 540px;
 `
 
 const TextWrapper = styled.div``

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { W, S, theme, breakpoints } from "styles"
+import { W, S, theme } from "styles"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Button, SectionWrapper } from "components"
 

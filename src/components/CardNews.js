@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 
 import { U, theme, S } from "styles"
@@ -17,7 +16,7 @@ const CardNews = ({ company, logo, quote, tag, url }) => {
           <figcaption>
             <a href={url}>
               <U.VisuallyHidden>{company}</U.VisuallyHidden>
-              {parse(logo)}
+              <LogoWrapper>{parse(logo)}</LogoWrapper>
             </a>
           </figcaption>
         </Figure>

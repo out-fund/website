@@ -3,7 +3,8 @@ import styled from "styled-components"
 import { W, S, theme, breakpoints } from "styles"
 import { Button } from "components"
 
-const HeroSimple = ({ title, description, btn, btnUrl }) => {
+const HeroSimple = ({ data }) => {
+  const { title, description, btn, btnUrl } = data
   return (
     <HeroWrapper>
       <Wrapper>

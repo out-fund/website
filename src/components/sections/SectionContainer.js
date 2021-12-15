@@ -2,8 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import { SectionWrapper } from ".."
-import { W, S, theme, breakpoints } from "styles"
-// import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { W, S } from "styles"
 
 const SectionContainer = ({ title, description, children }) => {
   return (
@@ -34,6 +33,11 @@ const Title = styled(S.H2)`
   text-align: center;
 `
 
-const Description = styled(S.SubHeading)``
+const Description = styled(S.SubHeading)`
+  max-width: 770px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 16px;
+`
 
 export default SectionContainer

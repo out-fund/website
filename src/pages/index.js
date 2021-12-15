@@ -3,13 +3,11 @@ import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import EnLayout from "layouts/en"
-import { HeroHomepage } from "components"
+import { HeroHomepage, SectionRegulated } from "components"
 
 import SectionContainer from "components/SectionContainer"
-// import SectionReinforcement from "components/SectionReinforcement"
 import Card from "components/Card"
 import Stats from "components/Stats"
-import Trust from "components/Trust"
 import Link from "components/Link"
 import ArtImage from "components/ArtImage"
 import Calculator from "components/Calculator"
@@ -29,7 +27,7 @@ const IndexPage = (props) => {
   const startSupercharging = props.data.homepageJson.startSupercharging
   const onto = props.data.homepageJson.startSupercharging.card
   const findOut = props.data.homepageJson.findOut
-  const trust = props.data.trustJson
+
   const blog = props.data.homepageJson.blog
 
   return (
@@ -188,7 +186,7 @@ const IndexPage = (props) => {
             </div>
           </div>
         </SectionContainer>
-        <Trust data={trust} />
+        <SectionRegulated data={props.data.trustJson} />
         <section className="latestFromBlog">
           <h3>{blog.title}</h3>
           <a href={blog.btnUrl}>{startSupercharging.btn}</a>

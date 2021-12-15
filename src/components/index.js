@@ -13,6 +13,7 @@ import Stats from "./Stats"
 import SectionContainer from "./sections/SectionContainer"
 import SectionWrapper from "./sections/SectionWrapper"
 import CardNews from "./CardNews"
+import SectionRegulated from "./sections/SectionRegulated"
 
 export {
   HeroHomepage,
@@ -30,4 +31,5 @@ export {
   SectionFoundersCompanies,
   SectionLatestNews,
   SectionJoinUs,
+  SectionRegulated,
 }

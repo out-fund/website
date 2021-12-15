@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { W, S, theme, breakpoints } from "styles"
+import { W, theme } from "styles"
 import { SectionContainer, CardNews } from "components"
 // import parse from "html-react-parser"
 
@@ -29,7 +29,7 @@ const SectionLatestNews = ({ data }) => {
 export default SectionLatestNews
 
 const Wrapper = styled(W.Wrapper)``
-const ContentWrapper = styled(W.FullWrapper)``
+const ContentWrapper = styled(W.FullWidth)``
 const GridNews = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);

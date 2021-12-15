@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { W, S, theme, breakpoints } from "styles"
+import { W, theme } from "styles"
 
 import { Button, SectionContainer, CardFounder } from "components"
 import parse from "html-react-parser"
@@ -40,34 +40,6 @@ export default SectionFoundersCompanies
 
 const Wrapper = styled(W.Wrapper)``
 const ContentWrapper = styled(W.ContentWrapper)``
-// const TextWrapper = styled(W.TextWrapper)`
-//   ${theme.below.tablet} {
-//     text-align: center;
-//   }
-// `
-// const BtnWrapper = styled.div`
-//   margin-bottom: 32px;
-// `
-// const ImageWrapper = styled(W.ImageWrapper)`
-//   border-radius: 10px;
-//   overflow: hidden;
-//   height: 100%;
-//   position: relative;
-//   z-index: 1;
-
-//   .gatsby-image-wrapper {
-//     height: 100%;
-//     img {
-//       object-position: left top;
-//     }
-//   }
-// `
-// const Title = styled(S.H2)``
-// const Description = styled(S.BodyText)`
-//   margin-top: 16px;
-//   margin-bottom: 32px;
-//   text-align: left;
-// `
 
 const GridFounders = styled(W.ContentWrapper)`
   display: grid;

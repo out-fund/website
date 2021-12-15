@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import { HeroSimple, Button } from "components"
+import { HeroSimple } from "components"
 import EnLayout from "layouts/en"
 
 const SuccessStories = ({ data }) => {

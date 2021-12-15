@@ -3,7 +3,8 @@ import styled from "styled-components"
 import { W, S, theme, breakpoints } from "styles"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-const HeroAbout = ({ title, image, description, imageAlt }) => {
+const HeroAbout = ({ data }) => {
+  const { title, image, description, imageAlt } = data
   return (
     <HeroWrapper>
       <Wrapper>
@@ -58,8 +59,8 @@ const ImageWrapper = styled.div`
       height: 100%;
       object-fit: cover;
       img {
-        border-radius: 10px;
         overflow: hidden;
+        border-radius: 10px;
       }
     }
   }

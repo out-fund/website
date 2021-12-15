@@ -1,5 +1,4 @@
 import styled from "styled-components"
-// import { breakpoints } from "./breakpoints"
 import { theme, breakpoints } from "./"
 
 export const Main = styled.main`
@@ -47,14 +46,25 @@ export const MediumWrapper = styled.div`
   margin: 0 auto;
 
   ${theme.above.tablet} {
-    max-width: 70vw;
+    width: 72vw;
+    max-width: 1370px;
   }
 `
-export const FullWrapper = styled.div`
+
+export const FullWidth = styled.div`
   margin: 0 auto;
 
   ${theme.above.tablet} {
     max-width: 100%;
+  }
+`
+
+export const Small = styled.div`
+  margin: 0 auto;
+
+  ${theme.above.tablet} {
+    width: 61vw;
+    max-width: 1170px;
   }
 `
 
