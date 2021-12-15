@@ -7,8 +7,10 @@
     "description": "Outfund is a team of success-driven, highly motivated people who are passionate about growing businesses in the UK. Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission possible.",
     "btn": "See open positions",
     "btnUrl": "url",
-    "image": "./../../images/LondonTeam.jpg",
-    "imageAlt": "Test",
+    "image": {
+      "src": "./../../images/Outfund-London-Team.jpg",
+      "alt": "Outfund London Team"
+    },
     "stats": [
       {
         "stat": "£100M",

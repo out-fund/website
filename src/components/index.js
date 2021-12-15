@@ -1,6 +1,7 @@
 import HeroHomepage from "./sections/HeroHomepage"
 import HeroSimple from "./sections/HeroSimple"
 import HeroAbout from "./sections/HeroAbout"
+import HeroImage from "./sections/HeroImage"
 import SectionWeAreInvesting from "./sections/SectionWeAreInvesting"
 import SectionFoundersCompanies from "./sections/SectionFoundersCompanies"
 import SectionLatestNews from "./sections/SectionLatestNews"
@@ -32,4 +33,5 @@ export {
   SectionLatestNews,
   SectionJoinUs,
   SectionRegulated,
+  HeroImage,
 }

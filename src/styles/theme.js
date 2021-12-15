@@ -1,16 +1,6 @@
 import { colors } from "./colorStyles"
-
-// mobile: "@media (min-width: 280px)", // this is min-width based, so when using mobile it means all resolutions above 350
-// tablet: "@media (min-width: 640px)",
-// laptop: "@media (min-width: 1024px)",
-// desktop: "@media (min-width: 1440px)",
-// largeDesktop: "@media (min-width: 1800px)",
-
-// belowMobile: "@media (max-width: 280px)", // this is min-width based, so when using mobile it means all resolutions above 350
-// belowTablet: "@media (max-width: 640px)",
-// belowLaptop: "@media (max-width: 1024px)",
-// belowDesktop: "@media (max-width: 1440px)",
-// belowLargeDesktop: "@media (max-width: 1800px)",
+import { css } from "styled-components"
+// import * as margins from "./margins"
 
 const above = {
   mobile: "@media (min-width: 280px)",
@@ -37,6 +27,7 @@ const width = {
   image: "1570px",
   max: "1770px",
 }
+
 const contentWidths = {
   tablet: "80vw",
   laptop: "970px",
@@ -44,11 +35,64 @@ const contentWidths = {
   desktop: "1270px",
   mediumDesktop: "1470px",
   largeDesktop: "1670px",
+  maxWidth: "1770px",
+}
+// const breakpoints = {
+//   mobile: "280",
+//   tablet: "640",
+//   laptop: "1024",
+//   mediumLaptop: "1224",
+//   desktop: "1470",
+//   mediumDesktop: "1640",
+//   largeDesktop: "1870",
+// }
+
+const width2 = {
+  xs: "770px",
+  s: "970px",
+  m: "1170px",
+  l: "1270px",
+  xl: "1470px",
+  xxl: "1670px",
+  max: "1770px",
+  full: "100%",
+}
+
+const maxWidth = {
+  xs: "41vw",
+  s: "51vw",
+  m: "61vw",
+  l: "67vw",
+  xl: "77vw",
+  xxl: "87vw",
+  max: "93vw",
+  full: "100%",
 }
 
 const shadows = {
   boxShadow:
     "0px 0.6px 1.3px rgba(1, 53, 113, 0.011), 0px 1.3px 3.2px rgba(1, 53, 113, 0.015), 0px 2.5px 6px rgba(1, 53, 113, 0.017), 0px 4.5px 10.7px rgba(1, 53, 113, 0.019), 0px 8.4px 20.1px rgba(1, 53, 113, 0.022), 0px 20px 48px rgba(1, 53, 113, 0.03), inset 0px 0px 0px 0.5px rgba(1, 53, 113, 0.1)",
+}
+
+const margin = {
+  button: css`
+    margin-top: 16px;
+    ${above.tablet} {
+      margin-top: 24px;
+    }
+    ${above.laptop} {
+      margin-top: 32px;
+    }
+  `,
+  heroImage: css`
+    margin: 16px 0;
+    ${above.tablet} {
+      margin: 24px 0;
+    }
+    ${above.laptop} {
+      margin: 32px 0;
+    }
+  `,
 }
 
 export const theme = {
@@ -58,4 +102,7 @@ export const theme = {
   above,
   below,
   ...contentWidths,
+  maxWidth,
+  width2,
+  margin,
 }

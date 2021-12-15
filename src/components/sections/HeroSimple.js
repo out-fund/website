@@ -26,21 +26,15 @@ const HeroSimple = ({ data }) => {
   )
 }
 
-const HeroWrapper = styled.header`
-  ${breakpoints.belowDesktop} {
-    padding: 0px 16px;
-  }
-`
-const Wrapper = styled(W.Wrapper)``
-const ContentWrapper = styled(W.ContentWrapper)`
-  max-width: ${theme.width.text};
-  margin: 0 auto;
+const HeroWrapper = styled.header``
+const Wrapper = styled(W.ContainerFull)``
+const ContentWrapper = styled(W.ContainerS)`
   padding-top: 12vh;
-  padding-bottom: 80px;
 `
-const TextWrapper = styled(W.TextWrapper)`
-  max-width: 970px;
-  margin: 0 auto;
+const TextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 const Title = styled(S.H1)`
@@ -50,11 +44,14 @@ const Title = styled(S.H1)`
 const Description = styled(S.SubHeading)`
   margin-top: 16px;
   text-align: center;
+  max-width: 830px;
+  /* margin: 0 auto; */
 `
 
 const CtaWrapper = styled.div`
-  margin-top: 16px;
+  /* margin-top: 16px; */
   text-align: center;
+  ${theme.margin.button}
 `
 
 export default HeroSimple

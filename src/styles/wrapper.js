@@ -1,6 +1,106 @@
 import styled from "styled-components"
 import { theme, breakpoints } from "./"
 
+export const ContainerFull = styled.div`
+  width: ${theme.width2.full};
+  max-width: ${theme.maxWidth.full};
+`
+// -----------------------------------------
+export const ContainerMax = styled.div`
+  width: ${theme.width2.max};
+  max-width: ${theme.maxWidth.max};
+  margin: 0 auto;
+`
+// -----------------------------------------
+export const ContainerXxl = styled.div`
+  width: ${theme.width2.xxl};
+  max-width: ${theme.maxWidth.xxl};
+  margin: 0 auto;
+`
+// -----------------------------------------
+export const ContainerXl = styled.div`
+  width: ${theme.width2.xl};
+  max-width: ${theme.maxWidth.xl};
+  margin: 0 auto;
+`
+// -----------------------------------------
+export const ContainerL = styled.div`
+  width: ${theme.width2.l};
+  max-width: ${theme.maxWidth.l};
+  margin: 0 auto;
+`
+// -----------------------------------------
+export const ContainerM = styled.div`
+  width: ${theme.width2.m};
+  max-width: ${theme.maxWidth.m};
+  margin: 0 auto;
+`
+// -----------------------------------------
+export const ContainerS = styled.div`
+  padding: 0 16px;
+  margin: 0 auto;
+  width: ${theme.width2.full};
+  max-width: ${theme.maxWidth.full};
+
+  ${theme.above.tablet} {
+    width: ${theme.width2.max};
+    max-width: ${theme.maxWidth.max};
+    padding: 0;
+  }
+  ${theme.above.laptop} {
+    width: ${theme.width2.xxl};
+    max-width: ${theme.maxWidth.xxl};
+  }
+  ${theme.above.mediumLaptop} {
+    width: ${theme.width2.xl};
+    max-width: ${theme.maxWidth.xl};
+  }
+  ${theme.above.desktop} {
+    width: ${theme.width2.l};
+    max-width: ${theme.maxWidth.l};
+  }
+  ${theme.above.mediumDesktop} {
+    width: ${theme.width2.m};
+    max-width: ${theme.maxWidth.m};
+  }
+  ${theme.above.largeDesktop} {
+    width: ${theme.width2.s};
+    max-width: ${theme.maxWidth.s};
+  }
+`
+// -----------------------------------------
+export const ContainerXs = styled.div`
+  margin: 0 auto;
+  width: ${theme.width2.max};
+  max-width: ${theme.maxWidth.max};
+
+  ${theme.above.tablet} {
+    width: ${theme.width2.xxl};
+    max-width: ${theme.maxWidth.xxl};
+  }
+  ${theme.above.laptop} {
+    width: ${theme.width2.xl};
+    max-width: ${theme.maxWidth.xl};
+  }
+  ${theme.above.mediumLaptop} {
+    width: ${theme.width2.l};
+    max-width: ${theme.maxWidth.l};
+  }
+  ${theme.above.desktop} {
+    width: ${theme.width2.m};
+    max-width: ${theme.maxWidth.m};
+  }
+  ${theme.above.mediumDesktop} {
+    width: ${theme.width2.s};
+    max-width: ${theme.maxWidth.s};
+  }
+  ${theme.above.largeDesktop} {
+    width: ${theme.width2.xs};
+    max-width: ${theme.maxWidth.xs};
+  }
+`
+// ---------------------------------------------
+
 export const Main = styled.main`
   ${breakpoints.belowDesktop} {
     padding: 0px 16px;

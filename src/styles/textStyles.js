@@ -12,17 +12,27 @@ const sharedHeading = css`
 export const H1 = styled.h1`
   ${sharedHeading}
   font-size: 32px;
+  max-width: 570px;
+  margin: 0 auto;
 
   ${breakpoints.tablet} {
+    max-width: 670px;
+    margin: 0 auto;
     font-size: 40px;
   }
   ${breakpoints.laptop} {
+    max-width: 770px;
+    margin: 0 auto;
     font-size: 48px;
   }
   ${breakpoints.desktop} {
+    max-width: 870px;
+    margin: 0 auto;
     font-size: 56px;
   }
   ${breakpoints.largeDesktop} {
+    max-width: 970px;
+    margin: 0 auto;
     font-size: 64px;
   }
 `
@@ -131,6 +141,9 @@ export const SubHeading = styled.p`
   font-size: 14px;
   line-height: 1.6;
   font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  opacity: 0.9;
 
   ${breakpoints.tablet} {
     font-size: 16px;
