@@ -12,7 +12,7 @@ const SectionWeGrow = ({ data }) => {
         <ContentWrapper>
           <TextWrapper>
             <Title as="h2">{data.title}</Title>
-            <Description>{parse(data.description)}</Description>
+            <Description as="div">{parse(data.description)}</Description>
             <TeamWorkedWrapper>
               <BlockTitle as="h4">{data.teamWorked.title}</BlockTitle>
               <LogosWrap>{parse(data.teamWorked.logos)}</LogosWrap>

@@ -4,7 +4,7 @@ import { Link as GatsbyLink } from "gatsby"
 import PropTypes from "prop-types"
 import { theme } from "styles"
 
-const Button = ({ btnUrl, variant, children, size, ...props }) => {
+const Button = ({ btnUrl, variant, children, size, href, ...props }) => {
   // console.log("btn", props)
   // const { btnUrl, variant, children, size } = props
   return (
@@ -13,6 +13,10 @@ const Button = ({ btnUrl, variant, children, size, ...props }) => {
         <GatsbyLink to={btnUrl} activeClassName="currentPage" {...props}>
           {children}
         </GatsbyLink>
+      ) : href ? (
+        <a href={href} {...props}>
+          {children}
+        </a>
       ) : (
         <button {...props}>{children}</button>
       )}

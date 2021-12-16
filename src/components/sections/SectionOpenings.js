@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import { SectionWrapper, Button } from "components"
-import { W, S, theme } from "styles"
+import { W, S } from "styles"
 import ExpandIcon from "images/svg/expand-right.svg"
 
 const SectionOpenings = ({ data }) => {
@@ -18,12 +18,12 @@ const SectionOpenings = ({ data }) => {
             <Grid>
               {data.openings.map((opening, index) => (
                 <Opening key={index}>
-                  <Link href={opening.link} target="_blank">
+                  <WorkableLink href={opening.link} target="_blank">
                     <PositionTitle as="h3">{opening.title}</PositionTitle>
                     <Details>
                       {opening.location} | {opening.time}
                     </Details>
-                  </Link>
+                  </WorkableLink>
                   <IconWrap>
                     <ExpandIcon />
                   </IconWrap>
@@ -44,7 +44,7 @@ const SectionOpenings = ({ data }) => {
               </Opening>
             </Grid>
             <BtnWrapper>
-              <Button btnUrl={data.btnUrl} variant="secondary">
+              <Button href={data.btnUrl} variant="secondary">
                 {data.btn}
               </Button>
             </BtnWrapper>
@@ -91,22 +91,8 @@ const Description = styled(S.SubHeading)`
 const OpeningsWrapper = styled(W.ContainerM)``
 const Grid = styled.ul`
   display: grid;
-  grid-template-columns: repeat (1, auto);
+  grid-template-columns: repeat(1, auto);
   border-top: 1px solid #bbc7d6;
-  /* display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  column-gap: 24px;
-  row-gap: 24px;
-  margin-bottom: 40px;
-
-  ${theme.above.tablet} {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 32px;
-  }
-  ${theme.above.laptop} {
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 48px;
-  } */
 `
 const Opening = styled.li`
   &:not(:last-child) {
@@ -114,7 +100,6 @@ const Opening = styled.li`
     grid-template-columns: auto 24px;
     align-items: center;
     padding-right: 24px;
-    column-gap: auto;
     border-bottom: 1px solid #bbc7d6;
     :hover {
       background-color: #f2f6fa;
@@ -125,10 +110,9 @@ const Opening = styled.li`
     padding: 24px;
   }
 `
-const Link = styled.a`
+const WorkableLink = styled.a`
   text-decoration: none;
   display: flex;
-  font-display: row;
   align-items: baseline;
   padding: 24px;
   color: inherit;

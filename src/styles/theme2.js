@@ -22,7 +22,7 @@ const br = {
 // Above needs to be about less than most common
 // Max content for that sceen needs to bee 100px lower than sceen
 
-export const above = {
+const above = {
   p: {
     s: `@media (min-width: ${br.p.s}px)`, // 0 - 320 default CSS withou media quarry
     m: `@media (min-width: ${br.p.m}px)`, // 320 - 380
@@ -41,6 +41,11 @@ export const above = {
     m: `@media (min-width: ${br.d.m}px)`, // 1600-1870
     l: `@media (min-width: ${br.d.l}px)`, // 1870-
   },
+}
+
+export const theme2 = {
+  br,
+  above,
 }
 
 // const mW = {

@@ -1,9 +1,10 @@
 import { css } from "styled-components"
 
-export const normalize = css`
-  /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-  /*  Removed all the commens as they were confusing prettier */
+// ! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css
+// Removed h1
+// Removed all the commens as they were confusing prettier
 
+export const normalize = css`
   html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
@@ -16,12 +17,6 @@ export const normalize = css`
   main {
     display: block;
   }
-
-  /* Don't need this */
-  /* h1 {
-    margin: 0.67em 0;
-    font-size: 2em;
-  } */
 
   hr {
     box-sizing: content-box;
