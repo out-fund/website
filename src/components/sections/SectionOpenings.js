@@ -8,7 +8,7 @@ import ExpandIcon from "images/svg/expand-right.svg"
 const SectionOpenings = ({ data }) => {
   return (
     <SectionWrapper>
-      <Wrapper id="openPositions">
+      <Wrapper id="open-positions">
         <ContentWrapper>
           <TopWrapper>
             <Title>{data.title}</Title>

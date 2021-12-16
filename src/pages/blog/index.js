@@ -8,7 +8,7 @@ const Blog = ({ data }) => {
   const { edges: posts } = data.allMdx
   return (
     <EnLayout>
-      <HeroSimple data={"Awesome Blog"}></HeroSimple>
+      <HeroSimple data={"Awesome Blog"} />
       <ul>
         {posts.map(({ node: post }) => (
           <li key={post.id}>
