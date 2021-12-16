@@ -1,31 +1,25 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
-import { HeroSimple } from "components"
+import {
+  HeroSimple,
+  SectionFeaturedCards,
+  SectionOtherBrands,
+  SectionContainer,
+} from "components"
 import EnLayout from "layouts/en"
 
 const SuccessStories = ({ data }) => {
-  const { edges: successStories } = data.allMdx
+  // const { edges: successStories } = data.allMdx
+  // console.log(data)
   return (
     <EnLayout>
       <main>
-        <HeroSimple
-          data={{
-            title: "Founders and how Outfund helped them succeed",
-            description:
-              "Outfund is a team of success-driven, highly motivated people who are passionate about growing businesses in the UK. Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission possible.",
-          }}
-        />
-        <ul>
-          {successStories.map(({ node: story }) => (
-            <li key={story.id}>
-              <Link to={story.slug}>
-                <h2>{story.frontmatter.title}</h2>
-              </Link>
-              <p>{story.excerpt}</p>
-            </li>
-          ))}
-        </ul>
+        <HeroSimple data={data.successStoriesJson.hero} />
+        <SectionFeaturedCards data={data.allMdx.edges} />
+        <SectionContainer title="We’ve funded 100s <br/> of brands like yours">
+          <SectionOtherBrands data={data.allMdx.edges} />
+        </SectionContainer>
       </main>
     </EnLayout>
   )
@@ -35,16 +29,35 @@ export default SuccessStories
 
 export const query = graphql`
   query successStories {
-    allMdx(filter: { fileAbsolutePath: { regex: "/success-stories/" } }) {
+    allMdx(
+      filter: {
+        fileAbsolutePath: { regex: "/success-stories/" }
+        frontmatter: { language: { regex: "/en-GB/" } }
+      }
+    ) {
       edges {
         node {
-          id
-          excerpt
           frontmatter {
-            title
+            company
+            logo
+            featured
+            card {
+              alt
+              src {
+                childImageSharp {
+                  gatsbyImageData
+                }
+              }
+            }
           }
           slug
         }
+      }
+    }
+    successStoriesJson(language: { regex: "/en-GB/" }) {
+      hero {
+        description
+        title
       }
     }
   }

@@ -15,6 +15,10 @@ import SectionRegulated from "./sections/SectionRegulated"
 import SectionWeGrow from "./sections/SectionWeGrow"
 import SectionWeValue from "./sections/SectionWeValue"
 import SectionOpenings from "./sections/SectionOpenings"
+import SectionFeaturedCards from "./sections/SectionFeaturedCards"
+import CardLogoReadMore from "./cards/CardLogoReadMore"
+import SectionOtherBrands from "./sections/SectionOtherBrands"
+import CardCta from "./cards/CardCta"
 
 import Offices from "./sections/Offices"
 import Button from "./Button"
@@ -46,4 +50,8 @@ export {
   SectionInOfficeRemote,
   SectionWeValue,
   SectionOpenings,
+  CardLogoReadMore,
+  SectionFeaturedCards,
+  SectionOtherBrands,
+  CardCta,
 }

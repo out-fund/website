@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import parse from "html-react-parser"
 
 import { SectionWrapper } from ".."
 import { W, S } from "styles"
@@ -11,7 +12,7 @@ const SectionContainer = ({ title, description, children }) => {
         <Wrapper>
           <ContentWrapper>
             <TextWrapper>
-              <Title>{title}</Title>
+              <Title>{parse(title)}</Title>
               {description && <Description>{description}</Description>}
             </TextWrapper>
           </ContentWrapper>

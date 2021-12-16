@@ -4,11 +4,16 @@ import { Link as GatsbyLink } from "gatsby"
 import PropTypes from "prop-types"
 import { theme } from "styles"
 
-const Button = ({ btnUrl, variant, children, size, href, ...props }) => {
+const Button = ({ btnUrl, variant, children, size, href, color, ...props }) => {
   // console.log("btn", props)
   // const { btnUrl, variant, children, size } = props
   return (
-    <ButtonWrap variant={variant} size={size} className="ButtonWrap">
+    <ButtonWrap
+      variant={variant}
+      size={size}
+      color={color}
+      className="ButtonWrap"
+    >
       {btnUrl ? (
         <GatsbyLink to={btnUrl} activeClassName="currentPage" {...props}>
           {children}
@@ -52,21 +57,27 @@ const ButtonWrap = styled.div`
     ${({ variant }) =>
       variant === "primary"
         ? css`
-          background-color: ${theme.primaryAction};
-          color: ${theme.white};4px;
-          transition: background-color 0.1s ease-in-out;
-          :hover {
-              background-color: #0956AC;
+            background-color: ${theme.primaryAction};
+            color: ${theme.white};
+            transition: background-color 0.1s ease-in-out;
+            :hover {
+              background-color: #0956ac;
             }
           `
         : variant === "secondary"
         ? css`
-            box-shadow: inset 0px 0px 0px 1px ${theme.primaryAction};
+            box-shadow: ${(props) =>
+              props.color === "white"
+                ? `inset 0px 0px 0px 1px #fff`
+                : `inset 0px 0px 0px 1px ${theme.primaryAction}`};
+
             background-color: transparent;
-            color: ${theme.primaryAction};
+            color: ${(props) =>
+              props.color === "white" ? "#fff" : theme.primaryAction};
             transition: background-color 0.1s ease-in-out;
             :hover {
-              background-color: #deeeff;
+              background-color: ${(props) =>
+                props.color === "white" ? "rgba(255,255,255, 0.3)" : "#deeeff"};
             }
           `
         : variant === "navLink"
