@@ -189,8 +189,7 @@ export const BodyMedium = styled.p`
   font-weight: normal;
   font-size: 14px;
   line-height: 1.4;
-  color: ${theme.bodyText};
-  opacity: 0.8;
+  color: rgba(28, 54, 84, 0.8);
 
   ${breakpoints.tablet} {
     font-size: 15px;

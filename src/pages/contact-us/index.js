@@ -8,7 +8,6 @@ import { HeroSimple, Button, Offices } from "components"
 import EnLayout from "layouts/en"
 
 const ContactUs = (props) => {
-  const hero = props.data.contactUsJson.hero
   const liveChat = props.data.contactUsJson.liveChat
   const support = props.data.contactUsJson.support
   const feedback = props.data.contactUsJson.feedback
@@ -18,7 +17,7 @@ const ContactUs = (props) => {
 
   return (
     <EnLayout>
-      <HeroSimple data={props.data.contactUsJson.hero}></HeroSimple>
+      <HeroSimple data={props.data.contactUsJson.hero} />
       <W.Main>
         <Wrapper>
           <ContentWrapper>

@@ -9,6 +9,9 @@ import {
   Stats,
   SectionWeGrow,
   SectionCoolPeople,
+  SectionInOfficeRemote,
+  SectionWeValue,
+  SectionOpenings,
 } from "components"
 import { W } from "styles"
 
@@ -21,8 +24,14 @@ const Careers = (props) => {
         <Stats data={props.data.careersJson.stats} />
         <SectionWeGrow data={props.data.careersJson.weGrow} />
         <SectionCoolPeople data={props.data.careersJson.coolPeople} />
+        <SectionInOfficeRemote
+          data={props.data.careersJson.inOffice}
+          officeData={props.data.officesJson}
+        />
+        <SectionWeValue data={props.data.careersJson.weValue} />
+        <SectionOpenings data={props.data.careersJson.currentOpenings} />
 
-        <SectionRegulated data={props.data.trustJson} />
+        <SectionRegulated data={props.data.trustJson} bg={"transparent"} />
       </W.Main>
     </EnLayout>
   )
@@ -78,6 +87,7 @@ export const query = graphql`
           location
           time
           title
+          link
         }
         openApplication {
           description
@@ -94,6 +104,7 @@ export const query = graphql`
         blocks {
           icon
           text
+          title
         }
       }
       language

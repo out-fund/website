@@ -23,6 +23,14 @@ const globalCss = css`
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
   }
+  p {
+    a,span, b {
+      display: inline;
+    }
+    a {
+      color: var(--blue);
+    }
+  }
 `
 // Component that gets imported in the index layout
 const GlobalStyle = createGlobalStyle`

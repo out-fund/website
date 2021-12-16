@@ -69,7 +69,6 @@ const ImageWrapper = styled.div`
   .gatsby-image-wrapper {
     position: relative;
     z-index: 1;
-    overflow: hidden;
     border-radius: 20px;
   }
 `

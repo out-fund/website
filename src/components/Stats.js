@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import { SectionWrapper } from "components"
-import { W, S, theme, breakpoints } from "styles"
+import { W, S, theme } from "styles"
 
 const Stats = ({ data }) => {
   return (

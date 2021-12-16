@@ -5,11 +5,11 @@ import parse from "html-react-parser"
 import { SectionWrapper } from "components"
 import { W, S, theme } from "styles"
 
-const SectionRegulated = ({ data }) => {
+const SectionRegulated = ({ data, bg }) => {
   return (
     <SectionWrapper>
-      <Wrapper>
-        <ContentWrapper>
+      <Wrapper bg={bg}>
+        <ContentWrapper bg={bg}>
           <Title>{data.title}</Title>
           <Description>{data.description}</Description>
           <TextWrapper>
@@ -34,11 +34,13 @@ const SectionRegulated = ({ data }) => {
 export default SectionRegulated
 
 const Wrapper = styled(W.ContentWrapper)`
-  background-color: #fff;
+  background-color: ${(props) =>
+    props.bg === "transparent" ? "transparent" : "#fff"};
   border-radius: 10px;
 `
 const ContentWrapper = styled(W.MediumWrapper)`
   padding: 32px 24px 24px;
+  padding: ${(props) => (props.bg === "transparent" ? "0" : "")} !important;
 
   ${theme.above.tablet} {
     padding: 32px 0px;

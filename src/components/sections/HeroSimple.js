@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { W, S, theme, breakpoints } from "styles"
+import { W, S, theme } from "styles"
 import { Button } from "components"
 
 const HeroSimple = ({ data }) => {
@@ -13,11 +13,11 @@ const HeroSimple = ({ data }) => {
             <Title>{title}</Title>
             {description && <Description>{description}</Description>}
             {btn && (
-              <CtaWrapper>
+              <BtnWrapper>
                 <Button btnUrl={btnUrl} variant="secondary">
                   {btn}
                 </Button>
-              </CtaWrapper>
+              </BtnWrapper>
             )}
           </TextWrapper>
         </ContentWrapper>
@@ -48,7 +48,7 @@ const Description = styled(S.SubHeading)`
   /* margin: 0 auto; */
 `
 
-const CtaWrapper = styled.div`
+const BtnWrapper = styled.div`
   /* margin-top: 16px; */
   text-align: center;
   ${theme.margin.button}
