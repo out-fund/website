@@ -10,8 +10,11 @@ const globalCss = css`
     box-sizing: inherit;
   }
   body {
+    padding-top: 80px;
     background-color: ${theme.backgroundColor};
-    padding-top: 64px;
+    /*    ${theme.above.laptop} {
+      padding-top: 104px;
+    }*/
   }
 
   .visually-hidden {
@@ -24,7 +27,9 @@ const globalCss = css`
     clip-path: inset(50%);
   }
   p {
-    a,span, b {
+    a,
+    span,
+    b {
       display: inline;
     }
     a {

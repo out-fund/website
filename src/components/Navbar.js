@@ -95,7 +95,7 @@ const NavWrapper = styled.nav`
   top: 0;
   right: 0;
   z-index: 100;
-  height: 64px;
+  /*height: 64px;*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,6 +109,12 @@ const Logo = styled.div`
   }
 `
 const Wrapper = styled.div`
+  padding-top: 16px;
+  padding-bottom: 16px;
+  /*  ${theme.above.laptop} {
+    padding-top: 40px;
+    padding-bottom: 24px;
+  }*/
   display: grid;
   grid-template-columns: 120px 40px;
   justify-content: space-between;

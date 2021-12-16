@@ -23,23 +23,6 @@ const Section = (props) => {
   )
 }
 
-// const AccordionWrapper = (props) => {
-//   return (
-//     <Accordion allowZeroExpanded>
-//       {items.map((item) => (
-//         <Fragment>
-//           <AccordionItem key={item.uuid}>
-//             <AccordionItemHeading>
-//               <AccordionItemButton>{item.heading}</AccordionItemButton>
-//             </AccordionItemHeading>
-//             <AccordionItemPanel>{item.content}</AccordionItemPanel>
-//           </AccordionItem>
-//         </Fragment>
-//       ))}
-//     </Accordion>
-//   )
-// }
-
 const howItWorks = [
   {
     heading: "How much fuanding do you offer?",

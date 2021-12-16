@@ -19,6 +19,7 @@ import SectionFeaturedCards from "./sections/SectionFeaturedCards"
 import CardLogoReadMore from "./cards/CardLogoReadMore"
 import SectionOtherBrands from "./sections/SectionOtherBrands"
 import CardCta from "./cards/CardCta"
+import SectionFindOut from "./sections/SectionFindOut"
 
 import Offices from "./sections/Offices"
 import Button from "./Button"
@@ -54,4 +55,5 @@ export {
   SectionFeaturedCards,
   SectionOtherBrands,
   CardCta,
+  SectionFindOut,
 }

@@ -1,6 +1,61 @@
 import React from "react"
 import styled from "styled-components"
 import Link from "components/Link"
+import { Button } from "components"
+
+const SectionContainer = ({
+  children,
+  title,
+  description,
+  align,
+  reinforcement,
+  simple,
+  ...props
+}) => {
+  if (simple) {
+    return (
+      <StyledSectionReinforcement align={align} {...props}>
+        <div className="top">
+          <h2 className="title">{title}</h2>
+          {description && <p className="description">{description}</p>}
+          <Button btnUrl={props.btnUrl} variant="secondary">
+            {props.btn}
+          </Button>
+        </div>
+
+        <div className="sectionContent">{children}</div>
+      </StyledSectionReinforcement>
+    )
+  }
+  if (reinforcement) {
+    return (
+      <StyledSectionReinforcement align={align} {...props}>
+        <div className="top">
+          <h2 className="title">{title}</h2>
+          {description && <p className="description">{description}</p>}
+
+          <Button btnUrl={props.btnUrl} variant="primary">
+            {props.btn}
+          </Button>
+        </div>
+
+        {children}
+      </StyledSectionReinforcement>
+    )
+  }
+  return (
+    <StyledSection align={align} {...props}>
+      <div className="top">
+        <h2 className="title">{title}</h2>
+        {description && <p className="description">{description}</p>}
+      </div>
+
+      <div className="sectionContent">{children}</div>
+    </StyledSection>
+  )
+}
+
+export default SectionContainer
 
 const StyledSection = styled.section`
   margin-top: 80px;
@@ -220,57 +275,3 @@ const StyledSectionReinforcement = styled(StyledSection)`
     }
   }
 `
-
-const SectionContainer = ({
-  children,
-  title,
-  description,
-  align,
-  reinforcement,
-  simple,
-  ...props
-}) => {
-  if (simple) {
-    return (
-      <StyledSectionReinforcement align={align} {...props}>
-        <div className="top">
-          <h2 className="title">{title}</h2>
-          {description && <p className="description">{description}</p>}
-          <Link to={props.ctaUrl} variant="secondary">
-            {props.cta}
-          </Link>
-        </div>
-
-        <div className="sectionContent">{children}</div>
-      </StyledSectionReinforcement>
-    )
-  }
-  if (reinforcement) {
-    return (
-      <StyledSectionReinforcement align={align} {...props}>
-        <div className="top">
-          <h2 className="title">{title}</h2>
-          {description && <p className="description">{description}</p>}
-
-          <Link to={props.ctaUrl} variant="primary">
-            {props.cta}
-          </Link>
-        </div>
-
-        {children}
-      </StyledSectionReinforcement>
-    )
-  }
-  return (
-    <StyledSection align={align} {...props}>
-      <div className="top">
-        <h2 className="title">{title}</h2>
-        {description && <p className="description">{description}</p>}
-      </div>
-
-      <div className="sectionContent">{children}</div>
-    </StyledSection>
-  )
-}
-
-export default SectionContainer

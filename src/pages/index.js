@@ -3,14 +3,18 @@ import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import EnLayout from "layouts/en"
-import { HeroHomepage, SectionRegulated } from "components"
+import {
+  HeroHomepage,
+  SectionRegulated,
+  Button,
+  SectionFindOut,
+} from "components"
 
 import SectionContainer from "components/SectionContainer"
 import Card from "components/Card"
 import Stats from "components/Stats"
-import Link from "components/Link"
+
 import ArtImage from "components/ArtImage"
-import Calculator from "components/Calculator"
 
 const IndexPage = (props) => {
   // console.log("indexpage:", props)
@@ -26,7 +30,7 @@ const IndexPage = (props) => {
   const aboutUs = props.data.homepageJson.aboutUs
   const startSupercharging = props.data.homepageJson.startSupercharging
   const onto = props.data.homepageJson.startSupercharging.card
-  const findOut = props.data.homepageJson.findOut
+  // const findOut = props.data.homepageJson.findOut
 
   const blog = props.data.homepageJson.blog
 
@@ -108,12 +112,12 @@ const IndexPage = (props) => {
           <Stats data={aboutUs.stats} />
 
           <div className="actions">
-            <Link to={aboutUs.primaryBtnUrl} variant="secondary">
+            <Button btnUrl={aboutUs.primaryBtnUrl} variant="secondary">
               {aboutUs.primaryBtn}
-            </Link>
-            <Link to={aboutUs.secondaryBtn} variant="secondary">
+            </Button>
+            <Button btnUrl={aboutUs.secondaryBtn} variant="secondary">
               {aboutUs.secondaryBtn}
-            </Link>
+            </Button>
           </div>
         </SectionContainer>
         <SectionContainer
@@ -141,57 +145,14 @@ const IndexPage = (props) => {
           />
         </SectionContainer>
 
-        <SectionContainer
-          title={findOut.title}
-          description={findOut.description}
-          className="findOut"
-          align="left"
-        >
-          <ul className="list">
-            {findOut.list.map((item) => (
-              <li key={item}>
-                <p>{item}</p>
-              </li>
-            ))}
-          </ul>
+        <SectionFindOut data={props.data.homepageJson.findOut} />
 
-          <Calculator data={findOut.calculator} />
-
-          <div className="faq">
-            <h3>{findOut.faq.title}</h3>
-            <dl>
-              {findOut.faq.questions.map((item) => (
-                <React.Fragment key={item.question}>
-                  <dt>
-                    <span>{item.question}</span>
-                    <svg
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41Z"
-                        fill="#00A3D7"
-                      />
-                    </svg>
-                  </dt>
-                  <dd>{item.answer}</dd>
-                </React.Fragment>
-              ))}
-            </dl>
-            <div className="action">
-              <Link to={findOut.faq.btnUrl} variant="secondary">
-                {findOut.faq.btn}
-              </Link>
-            </div>
-          </div>
-        </SectionContainer>
         <SectionRegulated data={props.data.trustJson} />
-        <section className="latestFromBlog">
+        {/* <section className="latestFromBlog">
           <h3>{blog.title}</h3>
           <a href={blog.btnUrl}>{startSupercharging.btn}</a>
           <div className="blogArticles">articles</div>
-        </section>
+        </section> */}
       </main>
     </EnLayout>
   )

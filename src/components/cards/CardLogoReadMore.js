@@ -14,10 +14,13 @@ const CardLogoReadMore = (props) => {
   return (
     <Wrapper>
       <TextWrapper>
-        <Tag>
-          <span>{props.tag}</span>
-          <U.VisuallyHidden>{data.frontmatter.company}</U.VisuallyHidden>
-        </Tag>
+        {props.tag && (
+          <Tag>
+            <span>{props.tag}</span>
+            <U.VisuallyHidden>{data.frontmatter.company}</U.VisuallyHidden>
+          </Tag>
+        )}
+
         <LogoWrapper>{parse(data.frontmatter.logo)}</LogoWrapper>
         {data.frontmatter.featured && (
           <BtnWrapper>

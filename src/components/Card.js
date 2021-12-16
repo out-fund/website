@@ -147,9 +147,11 @@ const StyledSquereLogoOnly = styled(StyledCard)`
 `
 
 const StyledOnto = styled(StyledCard)`
-  /* overflow: hidden; */
+
+  max-height: 560px;
   .content {
     padding: 32px;
+
   }
   .tag {
     color: unset;

@@ -54,6 +54,8 @@ const Wrapper = styled(W.Wrapper)`
   }
   ${breakpoints.tablet} {
     border-radius: 10px;
+    padding-top: 64px;
+    padding-bottom: 40px;
   }
 `
 
@@ -100,7 +102,7 @@ const TextWrapper = styled(W.TextWrapper)`
 
 const ImageWrapper = styled.div`
   position: relative;
-  top: 32px;
+  top: 64px;
 `
 
 const CtaWrapper = styled.div`
