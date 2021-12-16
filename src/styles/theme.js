@@ -52,8 +52,9 @@ const width2 = {
   s: "970px",
   m: "1170px",
   l: "1270px",
+  ll: "1370px",
   xl: "1470px",
-  xxl: "1670px",
+  xxl: "1570px",
   max: "1770px",
   full: "100%",
 }
@@ -63,8 +64,9 @@ const maxWidth = {
   s: "51vw",
   m: "61vw",
   l: "67vw",
+  ll: "72vw",
   xl: "77vw",
-  xxl: "87vw",
+  xxl: "81vw",
   max: "93vw",
   full: "100%",
 }

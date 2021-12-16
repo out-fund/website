@@ -6,6 +6,7 @@ import SectionWeAreInvesting from "./sections/SectionWeAreInvesting"
 import SectionFoundersCompanies from "./sections/SectionFoundersCompanies"
 import SectionLatestNews from "./sections/SectionLatestNews"
 import SectionJoinUs from "./sections/SectionJoinUs"
+import SectionCoolPeople from "./sections/SectionCoolPeople"
 import Offices from "./sections/Offices"
 import Button from "./Button"
 import Link from "./Link"
@@ -15,6 +16,7 @@ import SectionContainer from "./sections/SectionContainer"
 import SectionWrapper from "./sections/SectionWrapper"
 import CardNews from "./CardNews"
 import SectionRegulated from "./sections/SectionRegulated"
+import SectionWeGrow from "./sections/SectionWeGrow"
 
 export {
   HeroHomepage,
@@ -34,4 +36,6 @@ export {
   SectionJoinUs,
   SectionRegulated,
   HeroImage,
+  SectionWeGrow,
+  SectionCoolPeople,
 }

@@ -25,15 +25,72 @@ export const ContainerXl = styled.div`
 `
 // -----------------------------------------
 export const ContainerL = styled.div`
-  width: ${theme.width2.l};
+  /* width: ${theme.width2.l};
   max-width: ${theme.maxWidth.l};
+  margin: 0 auto; */
+  padding: 0 16px;
   margin: 0 auto;
+  width: ${theme.width2.full};
+  max-width: ${theme.maxWidth.full};
+
+  /* ${theme.above.tablet} {
+    width: ${theme.width2.max};
+    max-width: ${theme.maxWidth.m};
+    padding: 0;
+  } */
+  /* ${theme.above.laptop} {
+    width: ${theme.width2.max};
+    max-width: ${theme.maxWidth.max};
+  } */
+  ${theme.above.mediumLaptop} {
+    width: ${theme.width2.max};
+    max-width: ${theme.maxWidth.max};
+  }
+  ${theme.above.desktop} {
+    width: ${theme.width2.xxl};
+    max-width: ${theme.maxWidth.xxl};
+  }
+  ${theme.above.mediumDesktop} {
+    width: ${theme.width2.xl};
+    max-width: ${theme.maxWidth.xl};
+  }
+  ${theme.above.largeDesktop} {
+    width: ${theme.width2.l};
+    max-width: ${theme.maxWidth.l};
+  }
 `
 // -----------------------------------------
 export const ContainerM = styled.div`
-  width: ${theme.width2.m};
-  max-width: ${theme.maxWidth.m};
+  padding: 0 16px;
   margin: 0 auto;
+  width: ${theme.width2.full};
+  max-width: ${theme.maxWidth.full};
+
+  /* ${theme.above.tablet} {
+    width: ${theme.width2.max};
+    max-width: ${theme.maxWidth.m};
+    padding: 0;
+  } */
+  ${theme.above.laptop} {
+    width: ${theme.width2.max};
+    max-width: ${theme.maxWidth.max};
+  }
+  ${theme.above.mediumLaptop} {
+    width: ${theme.width2.xxl};
+    max-width: ${theme.maxWidth.xxl};
+  }
+  ${theme.above.desktop} {
+    width: ${theme.width2.xl};
+    max-width: ${theme.maxWidth.xl};
+  }
+  ${theme.above.mediumDesktop} {
+    width: ${theme.width2.l};
+    max-width: ${theme.maxWidth.l};
+  }
+  ${theme.above.largeDesktop} {
+    width: ${theme.width2.m};
+    max-width: ${theme.maxWidth.m};
+  }
 `
 // -----------------------------------------
 export const ContainerS = styled.div`

@@ -8,12 +8,14 @@ import * as F from "./formElements"
 import * as W from "./wrapper"
 import * as S from "./textStyles"
 import * as U from "./utils"
+import { theme2 } from "./theme2"
 
 export {
   reset,
   resetDevelopment,
   normalize,
   theme,
+  theme2,
   cssVariables,
   breakpoints,
   W,

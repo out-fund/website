@@ -2,7 +2,14 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import EnLayout from "layouts/en"
-import { HeroSimple, SectionRegulated, HeroImage } from "components"
+import {
+  HeroSimple,
+  SectionRegulated,
+  HeroImage,
+  Stats,
+  SectionWeGrow,
+  SectionCoolPeople,
+} from "components"
 import { W } from "styles"
 
 const Careers = (props) => {
@@ -11,6 +18,10 @@ const Careers = (props) => {
       <HeroSimple data={props.data.careersJson.hero} />
       <W.Main>
         <HeroImage data={props.data.careersJson.hero.image} />
+        <Stats data={props.data.careersJson.stats} />
+        <SectionWeGrow data={props.data.careersJson.weGrow} />
+        <SectionCoolPeople data={props.data.careersJson.coolPeople} />
+
         <SectionRegulated data={props.data.trustJson} />
       </W.Main>
     </EnLayout>
@@ -27,10 +38,6 @@ export const query = graphql`
         btn
         description
         title
-        stats {
-          text
-          stat
-        }
         image {
           alt
           src {
@@ -40,18 +47,24 @@ export const query = graphql`
           }
         }
       }
+      stats {
+        text
+        stat
+      }
       coolPeople {
         btn
         btnUrl
         title
         people {
           description
-          imageAlt
           name
           role
           image {
-            childImageSharp {
-              gatsbyImageData
+            alt
+            src {
+              childImageSharp {
+                gatsbyImageData
+              }
             }
           }
         }
@@ -88,15 +101,17 @@ export const query = graphql`
       seoTitle
       weGrow {
         description
-        imageAlt
         title
         teamWorked {
           logos
           title
         }
         image {
-          childImageSharp {
-            gatsbyImageData
+          alt
+          src {
+            childImageSharp {
+              gatsbyImageData
+            }
           }
         }
       }

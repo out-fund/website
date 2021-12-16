@@ -18,7 +18,7 @@ const AboutUs = (props) => {
     <EnLayout>
       <HeroAbout data={props.data.aboutUsJson.hero} />
       <W.Main>
-        <Stats stats={props.data.aboutUsJson.stats} />
+        <Stats data={props.data.aboutUsJson.stats} />
         <SectionWeAreInvesting data={props.data.aboutUsJson.weInvesting} />
         <SectionFoundersCompanies data={props.data.aboutUsJson.companies} />
         <SectionLatestNews data={props.data.aboutUsJson.latestNews} />

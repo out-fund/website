@@ -91,9 +91,10 @@ export const H4 = styled.h4`
     font-size: 40px;
   }
 `
-export const H5 = styled.h4`
+export const H5 = styled.h5`
   ${sharedHeading}
   font-size: 20px;
+  font-weight: 600;
 
   ${breakpoints.tablet} {
     font-size: 20px;
@@ -108,7 +109,7 @@ export const H5 = styled.h4`
     font-size: 32px;
   }
 `
-export const H6 = styled.h4`
+export const H6 = styled.h6`
   ${sharedHeading}
   font-weight: 600;
   font-size: 18px;
@@ -187,8 +188,9 @@ export const BodyText = styled.p`
 export const BodyMedium = styled.p`
   font-weight: normal;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.4;
   color: ${theme.bodyText};
+  opacity: 0.8;
 
   ${breakpoints.tablet} {
     font-size: 15px;
