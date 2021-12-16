@@ -43,6 +43,11 @@ const Navbar = (props) => {
           </LeftLinks>
 
           <RightLinks>
+            <li>
+              <Button btnUrl="/" variant="primary">
+                Get Funded
+              </Button>
+            </li>
             {rightLinks.map((link) => (
               <li key={link.btn}>
                 <Button btnUrl={link.btnUrl} variant="navLink">
@@ -153,6 +158,7 @@ const LeftLinks = styled.ul`
     grid-template-columns: repeat(6, auto);
     align-items: center;
     justify-content: space-between;
+    column-gap: 16px;
   }
 `
 const RightLinks = styled.ul`
@@ -160,9 +166,10 @@ const RightLinks = styled.ul`
   ${breakpoints.laptop} {
     position: static;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
     align-items: center;
     justify-content: space-between;
+    column-gap: 16px;
   }
 `
 
