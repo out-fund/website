@@ -44,7 +44,7 @@ const SectionOpenings = ({ data }) => {
               </Opening>
             </Grid>
             <BtnWrapper>
-              <Button href={data.btnUrl} variant="secondary">
+              <Button href={data.btnUrl} variant="secondary" target="_blank">
                 {data.btn}
               </Button>
             </BtnWrapper>
