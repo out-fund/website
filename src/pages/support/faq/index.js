@@ -7,7 +7,9 @@ const FAQ = () => {
   return (
     <EnLayout>
       <HeroSimple
-        title={"We’re always here to help answer your questions"}
+        data={{
+          title: "We’re always here to help answer your questions",
+        }}
       ></HeroSimple>
       <main>Test</main>
     </EnLayout>

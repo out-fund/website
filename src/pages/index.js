@@ -105,7 +105,7 @@ const IndexPage = (props) => {
             />
           </div>
 
-          <Stats stats={aboutUs.stats} className="" />
+          <Stats data={aboutUs.stats} />
 
           <div className="actions">
             <Link to={aboutUs.primaryBtnUrl} variant="secondary">

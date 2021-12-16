@@ -17,7 +17,7 @@ const SuccessStoryLayout = ({ data: { mdx } }) => {
           h3: S.H3,
         }}
       >
-        <HeroSimple title={mdx.frontmatter.title} />
+        <HeroSimple data={mdx.frontmatter.title} />
         <main>
           <MDXRenderer frontmatter={mdx.frontmatter}>{mdx.body}</MDXRenderer>
         </main>

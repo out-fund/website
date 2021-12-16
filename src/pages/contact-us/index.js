@@ -18,7 +18,7 @@ const ContactUs = (props) => {
 
   return (
     <EnLayout>
-      <HeroSimple title={hero.title}></HeroSimple>
+      <HeroSimple data={props.data.contactUsJson.hero}></HeroSimple>
       <W.Main>
         <Wrapper>
           <ContentWrapper>

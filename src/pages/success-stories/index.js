@@ -10,9 +10,12 @@ const SuccessStories = ({ data }) => {
     <EnLayout>
       <main>
         <HeroSimple
-          title={"Founders and how Outfund helped them succeed"}
-          description="Outfund is a team of success-driven, highly motivated people who are passionate about growing businesses in the UK. Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission possible."
-        ></HeroSimple>
+          data={{
+            title: "Founders and how Outfund helped them succeed",
+            description:
+              "Outfund is a team of success-driven, highly motivated people who are passionate about growing businesses in the UK. Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission possible.",
+          }}
+        />
         <ul>
           {successStories.map(({ node: story }) => (
             <li key={story.id}>
