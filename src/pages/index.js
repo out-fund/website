@@ -3,24 +3,26 @@ import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import EnLayout from "layouts/en"
-import {
-  HeroHomepage,
-  SectionRegulated,
-  Button,
-  SectionFindOut,
-} from "components"
+// import {
+//   HeroHomepage,
+//   SectionRegulated,
+//   Button,
+//   SectionFindOut,
+// } from "components"
 
-import SectionContainer from "components/SectionContainer"
-import Card from "components/Card"
-import Stats from "components/Stats"
+import HeroHomepage from "./../components/hero/HeroHomepage"
 
-import ArtImage from "components/ArtImage"
+// import SectionContainer from "components/SectionContainer"
+// import Card from "components/Card"
+// import Stats from "components/Stats"
+
+// import ArtImage from "components/ArtImage"
 
 const IndexPage = (props) => {
   // console.log("indexpage:", props)
   // console.log(props.data)
   // console.log(props.location)
-  const hero = props.data.homepageJson.hero
+  // const hero = props.data.homepageJson.hero
 
   const weFunded = props.data.homepageJson.weFunded
   const feel = props.data.homepageJson.weFunded.cards.feel
@@ -36,7 +38,8 @@ const IndexPage = (props) => {
 
   return (
     <EnLayout>
-      <HeroHomepage
+      <HeroHomepage data={props.data.homepageJson.hero} />
+      {/* <HeroHomepage
         title={hero.title}
         description={hero.description}
         primaryBtn={hero.primaryBtn}
@@ -45,8 +48,8 @@ const IndexPage = (props) => {
         secondaryBtnUrl={hero.secondaryBtnUrl}
         image={hero.image}
         imageAlt={hero.imageAlt}
-      />
-      <main>
+      /> */}
+      {/* <main>
         <SectionContainer
           className="weFunded"
           title={weFunded.title}
@@ -148,12 +151,13 @@ const IndexPage = (props) => {
         <SectionFindOut data={props.data.homepageJson.findOut} />
 
         <SectionRegulated data={props.data.trustJson} />
-        {/* <section className="latestFromBlog">
+
+      </main> */}
+      {/* <section className="latestFromBlog">
           <h3>{blog.title}</h3>
           <a href={blog.btnUrl}>{startSupercharging.btn}</a>
           <div className="blogArticles">articles</div>
         </section> */}
-      </main>
     </EnLayout>
   )
 }

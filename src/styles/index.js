@@ -1,5 +1,4 @@
 import { reset } from "./reset"
-import { resetDevelopment } from "./resetDevelopment"
 import { normalize } from "./normalize"
 import { cssVariables } from "./colorStyles"
 import { theme } from "./theme"
@@ -12,7 +11,6 @@ import { theme2 } from "./theme2"
 
 export {
   reset,
-  resetDevelopment,
   normalize,
   theme,
   theme2,

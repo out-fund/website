@@ -3,13 +3,12 @@ import GlobalLayout from "./GlobalLayout"
 import Navbar from "components/Navbar"
 import Footer from "components/Footer"
 
-const EN = ({ children, ...props }) => {
+const EN = ({ children }) => {
   return (
-    // <Layout {...props}>
     <GlobalLayout>
-      <Navbar />
+      {/* <Navbar /> */}
       {children}
-      <Footer />
+      {/* <Footer /> */}
     </GlobalLayout>
   )
 }
