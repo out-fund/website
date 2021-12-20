@@ -1,7 +1,14 @@
 import styled from "styled-components"
 // import { theme } from "./../theme"
 
-export const BodyLarge = styled.p``
+export const BodyLarge = styled.p`
+  font-size: 20px;
+  line-height: 1.4;
+`
+export const Body = styled.p`
+  font-size: 18px;
+  line-height: 1.5;
+`
 
 // color: ${theme.headingsColor};
 // letter-spacing: -0.01em;

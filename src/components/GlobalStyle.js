@@ -1,5 +1,6 @@
 import { createGlobalStyle, css } from "styled-components"
-import { normalize, theme, cssVariables } from "styles"
+import { normalize, theme } from "styles"
+import { InterWebLatin } from "./../styles/new/typography/font"
 // import isDevEnv from "./../utils/isDevEnv"
 
 import { colorVariables } from "./../styles/new/tokens/colors"
@@ -22,7 +23,7 @@ const globalCss = css`
 `
 // Component that gets imported in the index layout
 const GlobalStyle = createGlobalStyle`
-  /* ${cssVariables} */
+  ${InterWebLatin}
   ${colorVariables}
   ${reset}
   ${normalize}

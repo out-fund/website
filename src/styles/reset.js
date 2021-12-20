@@ -54,9 +54,9 @@ export const reset = css`
   }
   body {
     font-size: 16px;
-    font-family: "Work Sans", -apple-system, BlinkMacSystemFont,
-      "Helvetica Neue", "Helvetica", "Segoe UI", "Arial", Roboto, Oxygen, Ubuntu,
-      Cantarell, "Open Sans", sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+      "Helvetica", "Segoe UI", "Arial", Roboto, Oxygen, Ubuntu, Cantarell,
+      "Open Sans", sans-serif;
     line-height: 1;
   }
   ol,

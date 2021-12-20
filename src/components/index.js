@@ -31,6 +31,8 @@ import CardNews from "./CardNews"
 // --------------------
 
 import Main from "./sections/Main"
+import SectionWeFunded from "./sections/SectionWeFunded"
+import SectionHeader from "./sections/SectionHeader"
 
 export {
   HeroHomepage,
@@ -62,4 +64,6 @@ export {
   //
   Main,
   Section,
+  SectionWeFunded,
+  SectionHeader,
 }
