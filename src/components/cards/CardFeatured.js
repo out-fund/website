@@ -4,6 +4,7 @@ import styled from "styled-components"
 import parse from "html-react-parser"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
+import T from "./../../styles/new/typography"
 import { Button } from "components"
 import { U, theme } from "styles"
 
@@ -14,19 +15,21 @@ const CardLogoReadMore = ({
   btn,
   image,
   tagColor,
-  bgc,
+  title,
+  by,
 }) => {
   return (
     <Wrapper>
+      {tag && (
+        <Tag tagColor={tagColor}>
+          <span>{tag}</span>
+          <U.VisuallyHidden>{company}</U.VisuallyHidden>
+        </Tag>
+      )}
+      <LogoWrapper>{parse(logo)}</LogoWrapper>
       <TextWrapper>
-        {tag && (
-          <Tag tagColor={tagColor}>
-            <span>{tag}</span>
-            <U.VisuallyHidden>{company}</U.VisuallyHidden>
-          </Tag>
-        )}
-
-        <LogoWrapper>{parse(logo)}</LogoWrapper>
+        <Title>{title}</Title>
+        <By>{by}</By>
         {btn && (
           <BtnWrapper>
             <Button to={btn.url} variant="secondary" color="white">
@@ -43,6 +46,10 @@ const CardLogoReadMore = ({
 }
 
 export default CardLogoReadMore
+
+const Title = styled(T.H3)``
+
+const By = styled.div``
 
 const Wrapper = styled.div`
   /* max-width: 570px;

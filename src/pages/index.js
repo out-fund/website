@@ -11,7 +11,7 @@ import EnLayout from "layouts/en"
 // } from "components"
 
 import HeroHomepage from "./../components/hero/HeroHomepage"
-import { Main, SectionWeFunded } from "./../components"
+import { Main, SectionWeFunded, SectionWeAreInvesting } from "./../components"
 
 // import SectionContainer from "components/SectionContainer"
 // import Card from "components/Card"
@@ -42,6 +42,7 @@ const IndexPage = (props) => {
       <HeroHomepage data={props.data.homepageJson.hero} />
       <Main>
         <SectionWeFunded data={props.data.homepageJson.weFunded} />
+        <SectionWeAreInvesting data={props.data.homepageJson.weInvesting} />
       </Main>
       {/* <main>
         <SectionContainer
@@ -256,45 +257,56 @@ export const query = graphql`
         title
         cards {
           feel {
-            bgColor
             by
             company
-            btn
-            btnUrl
-            imageAlt
+            btn {
+              text
+              url
+            }
             logo
             tag
             title
             image {
-              childImageSharp {
-                gatsbyImageData
+              src {
+                childImageSharp {
+                  gatsbyImageData
+                }
               }
+              alt
             }
           }
           lemonadeDolls {
             company
-            btn
-            btnUrl
-            imageAlt
+            btn {
+              text
+              url
+            }
             logo
             tag
             image {
-              childImageSharp {
-                gatsbyImageData
+              src {
+                childImageSharp {
+                  gatsbyImageData
+                }
               }
+              alt
             }
           }
         }
       }
       weInvesting {
-        btn
-        btnUrl
-        image {
-          childImageSharp {
-            gatsbyImageData
-          }
+        btn {
+          text
+          url
         }
-        imageAlt
+        image {
+          src {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+          alt
+        }
         description
         title
       }

@@ -1,11 +1,14 @@
 import React from "react"
 import styled from "styled-components"
-import { W, S, theme } from "styles"
+import { W, theme } from "styles"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Button, Section } from "components"
 
+import T from "./../../styles/new/typography"
+
 const SectionWeAreInvesting = ({ data }) => {
-  const { title, description, btn, btnUrl, image, imageAlt } = data
+  console.log(data)
+  const { title, description, btn, image } = data
   return (
     <Section>
       <Wrapper>
@@ -14,13 +17,13 @@ const SectionWeAreInvesting = ({ data }) => {
             <Title>{title}</Title>
             <Description>{description}</Description>
             <BtnWrapper>
-              <Button btnUrl={btnUrl} variant="secondary">
-                {btn}
+              <Button to={btn.url} variant="secondary">
+                {btn.text}
               </Button>
             </BtnWrapper>
           </TextWrapper>
           <ImageWrapper>
-            <GatsbyImage image={getImage(image)} alt={imageAlt} />
+            <GatsbyImage image={getImage(image.src)} alt={image.alt} />
           </ImageWrapper>
         </ContentWrapper>
       </Wrapper>
@@ -29,9 +32,12 @@ const SectionWeAreInvesting = ({ data }) => {
 }
 export default SectionWeAreInvesting
 
-const Wrapper = styled(W.Wrapper)``
-const ContentWrapper = styled(W.ContentWrapper)`
-  display: grid;
+const Title = styled(T.H2)``
+const Description = styled(T.BodyLarge)``
+
+const Wrapper = styled.div``
+const ContentWrapper = styled.div`
+  /* display: grid;
   grid-template-rows: auto;
   row-gap: 16px;
 
@@ -39,7 +45,7 @@ const ContentWrapper = styled(W.ContentWrapper)`
     grid-template-columns: 1fr 1fr;
     align-items: center;
     column-gap: 3vw;
-  }
+  } */
   /* ${theme.above.laptop} {
     grid-template-columns: 1fr 370px;
     column-gap: 32px;
@@ -63,16 +69,16 @@ const ContentWrapper = styled(W.ContentWrapper)`
   } */
 `
 const TextWrapper = styled(W.TextWrapper)`
-  ${theme.below.tablet} {
+  /* ${theme.below.tablet} {
     text-align: center;
-  }
+  } */
 `
 const BtnWrapper = styled.div`
-  margin-bottom: 32px;
+  /* margin-bottom: 32px; */
 `
 const ImageWrapper = styled(W.ImageWrapper)`
-  border-radius: 10px;
-  overflow: hidden;
+  /* border-radius: 10px; */
+  /* overflow: hidden;
   height: 100%;
   position: relative;
   z-index: 1;
@@ -82,11 +88,5 @@ const ImageWrapper = styled(W.ImageWrapper)`
     img {
       object-position: left top;
     }
-  }
-`
-const Title = styled(S.H2)``
-const Description = styled(S.BodyText)`
-  margin-top: 16px;
-  margin-bottom: 32px;
-  text-align: left;
+  } */
 `

@@ -16,9 +16,17 @@ const globalCss = css`
   body {
     /* padding-top: 80px; */
     /* background-color: ${theme.backgroundColor}; */
+    background-color: #ccc;
     /*    ${theme.above.laptop} {
       padding-top: 104px;
     }*/
+    img,
+    svg {
+      max-width: 400px !important;
+    }
+    svg {
+      max-height: 32px !important;
+    }
   }
 `
 // Component that gets imported in the index layout
