@@ -6,6 +6,15 @@ import { css } from "styled-components"
 // License: none (public domain)
 
 export const reset = css`
+  html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
   div,
   span,
   h1,
@@ -24,7 +33,6 @@ export const reset = css`
   header,
   menu,
   nav {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font: inherit;
@@ -72,8 +80,8 @@ export const reset = css`
   } */
   /* Additions */
   input {
-    box-sizing: border-box;
-    background: red;
+    /* box-sizing: border-box;
+    background: red; */
   }
 `
 

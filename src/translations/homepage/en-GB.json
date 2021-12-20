@@ -8,8 +8,10 @@
     "primaryBtnUrl": "/",
     "secondaryBtn": "Learn How It Works",
     "secondaryBtnUrl": "/",
-    "image": "../../images/Outfund-hero-UK.png",
-    "imageAlt": "Photo of two founders"
+    "image": {
+      "src": "../../images/Outfund-hero-UK.png",
+      "alt": "Photo of two founders"
+    }
   },
   "weFunded": {
     "title": "We funded brands like yours",

@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+// import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import EnLayout from "layouts/en"
 // import {
@@ -24,31 +24,21 @@ const IndexPage = (props) => {
   // console.log(props.location)
   // const hero = props.data.homepageJson.hero
 
-  const weFunded = props.data.homepageJson.weFunded
-  const feel = props.data.homepageJson.weFunded.cards.feel
-  const lemonadeDolls = props.data.homepageJson.weFunded.cards.lemonadeDolls
-  const weInvesting = props.data.homepageJson.weInvesting
-  const weInvestingImage = getImage(props.data.homepageJson.weInvesting.image)
-  const aboutUs = props.data.homepageJson.aboutUs
-  const startSupercharging = props.data.homepageJson.startSupercharging
-  const onto = props.data.homepageJson.startSupercharging.card
+  // const weFunded = props.data.homepageJson.weFunded
+  // const feel = props.data.homepageJson.weFunded.cards.feel
+  // const lemonadeDolls = props.data.homepageJson.weFunded.cards.lemonadeDolls
+  // const weInvesting = props.data.homepageJson.weInvesting
+  // const weInvestingImage = getImage(props.data.homepageJson.weInvesting.image)
+  // const aboutUs = props.data.homepageJson.aboutUs
+  // const startSupercharging = props.data.homepageJson.startSupercharging
+  // const onto = props.data.homepageJson.startSupercharging.card
   // const findOut = props.data.homepageJson.findOut
 
-  const blog = props.data.homepageJson.blog
+  // const blog = props.data.homepageJson.blog
 
   return (
     <EnLayout>
       <HeroHomepage data={props.data.homepageJson.hero} />
-      {/* <HeroHomepage
-        title={hero.title}
-        description={hero.description}
-        primaryBtn={hero.primaryBtn}
-        primaryBtnUrl={hero.primaryBtnUrl}
-        secondaryBtn={hero.secondaryBtn}
-        secondaryBtnUrl={hero.secondaryBtnUrl}
-        image={hero.image}
-        imageAlt={hero.imageAlt}
-      /> */}
       {/* <main>
         <SectionContainer
           className="weFunded"
@@ -221,11 +211,14 @@ export const query = graphql`
       }
       hero {
         image {
-          childImageSharp {
-            gatsbyImageData
+          alt
+          src {
+            childImageSharp {
+              gatsbyImageData
+            }
           }
         }
-        imageAlt
+
         primaryBtn
         primaryBtnUrl
         secondaryBtn

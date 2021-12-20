@@ -1,17 +1,9 @@
-import React, { Fragment } from "react"
-import {
-  HeroSimple,
-  SectionFeaturedCards,
-  SectionOtherBrands,
-  SectionContainer,
-  CardLogoReadMore,
-  CardCta,
-  Button,
-} from "components"
+import React from "react"
+import { HeroSimple } from "components"
 import EnLayout from "layouts/en"
 import { graphql } from "gatsby"
 import styled from "styled-components"
-import { W, theme } from "styles"
+import { W } from "styles"
 import { Link } from "gatsby"
 
 const Blog = (props) => {
@@ -115,22 +107,22 @@ const Wrapper = styled(W.ContainerFull)`
   margin-top: 64px;
 `
 const ContentWrapper = styled(W.ContainerMax)``
-const CardsWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  column-gap: 30px;
-  row-gap: 30px;
+// const CardsWrapper = styled.div`
+//   display: grid;
+//   grid-template-columns: repeat(1, 1fr);
+//   column-gap: 30px;
+//   row-gap: 30px;
 
-  ${theme.above.tablet} {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  ${theme.above.laptop} {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  > div:last-child {
-    svg {
-      width: 100px;
-      height: 95px;
-    }
-  }
-`
+//   ${theme.above.tablet} {
+//     grid-template-columns: repeat(2, 1fr);
+//   }
+//   ${theme.above.laptop} {
+//     grid-template-columns: repeat(3, 1fr);
+//   }
+//   > div:last-child {
+//     svg {
+//       width: 100px;
+//       height: 95px;
+//     }
+//   }
+// `

@@ -14,7 +14,7 @@ const globalCss = css`
   }
   body {
     /* padding-top: 80px; */
-    background-color: ${theme.backgroundColor};
+    /* background-color: ${theme.backgroundColor}; */
     /*    ${theme.above.laptop} {
       padding-top: 104px;
     }*/

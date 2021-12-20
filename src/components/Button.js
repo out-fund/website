@@ -2,11 +2,11 @@ import React from "react"
 import styled, { css } from "styled-components"
 import { Link as GatsbyLink } from "gatsby"
 import PropTypes from "prop-types"
-import { theme } from "styles"
+import { theme } from "./../styles/new/theme"
 
-const Button = ({ btnUrl, variant, children, size, href, color, ...props }) => {
+const Button = ({ to, variant, children, size, href, color, ...props }) => {
   // console.log("btn", props)
-  // const { btnUrl, variant, children, size } = props
+  // const { to, variant, children, size } = props
   return (
     <ButtonWrap
       variant={variant}
@@ -14,8 +14,8 @@ const Button = ({ btnUrl, variant, children, size, href, color, ...props }) => {
       color={color}
       className="ButtonWrap"
     >
-      {btnUrl ? (
-        <GatsbyLink to={btnUrl} activeClassName="currentPage" {...props}>
+      {to ? (
+        <GatsbyLink to={to} activeClassName="currentPage" {...props}>
           {children}
         </GatsbyLink>
       ) : href ? (
@@ -28,6 +28,8 @@ const Button = ({ btnUrl, variant, children, size, href, color, ...props }) => {
     </ButtonWrap>
   )
 }
+
+export default Button
 
 const ButtonWrap = styled.div`
   display: inline-block;
@@ -57,27 +59,31 @@ const ButtonWrap = styled.div`
     ${({ variant }) =>
       variant === "primary"
         ? css`
-            background-color: ${theme.primaryAction};
-            color: ${theme.white};
+            background-color: ${theme.color.button.primary.backgroundColor};
+            color: ${theme.color.white};
             transition: background-color 0.1s ease-in-out;
             :hover {
-              background-color: #0956ac;
+              background-color: ${theme.color.button.primary.hover};
             }
           `
         : variant === "secondary"
         ? css`
             box-shadow: ${(props) =>
               props.color === "white"
-                ? `inset 0px 0px 0px 1px #fff`
-                : `inset 0px 0px 0px 1px ${theme.primaryAction}`};
+                ? `inset 0px 0px 0px 1px ${theme.color.white}`
+                : `inset 0px 0px 0px 1px ${theme.color.button.secondary.color}`};
 
-            background-color: transparent;
+            background-color: ${theme.color.button.secondary.backgroundColor};
             color: ${(props) =>
-              props.color === "white" ? "#fff" : theme.primaryAction};
+              props.color === "white"
+                ? theme.color.white
+                : theme.color.button.secondary.color};
             transition: background-color 0.1s ease-in-out;
             :hover {
               background-color: ${(props) =>
-                props.color === "white" ? "rgba(255,255,255, 0.3)" : "#deeeff"};
+                props.color === "white"
+                  ? theme.color.white
+                  : theme.color.button.secondary.hover};
             }
           `
         : variant === "navLink"
@@ -122,5 +128,3 @@ Button.propTypes = {
 Button.defaultProps = {
   size: "medium",
 }
-
-export default Button

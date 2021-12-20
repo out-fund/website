@@ -1,6 +1,6 @@
-import * as H from "./Headings"
+import * as Headings from "./Headings"
 import * as Text from "./Text"
 
-export { Text, H }
+const T = { ...Text, ...Headings }
 
-// import * as S from "./textStyles"
+export default T

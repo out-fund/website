@@ -40,10 +40,12 @@ export const color = {
     primary: {
       color: "var(--white)",
       backgroundColor: "var(--actiton-primary)",
+      hover: "#0956ac",
     },
     secondary: {
       color: "var(--actiton-primary)",
       backgroundColor: "transparetn",
+      hover: "#deeeff",
     },
     tertiary: {
       color: "var(--actiton-secondary)",

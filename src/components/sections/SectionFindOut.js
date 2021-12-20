@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { W, S, theme } from "styles"
+import { W, S } from "styles"
 import { SectionWrapper, Button } from "components"
 import Calculator from "components/Calculator"
 import parse from "html-react-parser"
