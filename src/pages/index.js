@@ -11,7 +11,12 @@ import EnLayout from "layouts/en"
 // } from "components"
 
 import HeroHomepage from "./../components/hero/HeroHomepage"
-import { Main, SectionWeFunded, SectionWeAreInvesting } from "./../components"
+import {
+  Main,
+  SectionWeFunded,
+  SectionWeAreInvesting,
+  SectionSupercharging,
+} from "./../components"
 
 // import SectionContainer from "components/SectionContainer"
 // import Card from "components/Card"
@@ -21,6 +26,10 @@ import { Main, SectionWeFunded, SectionWeAreInvesting } from "./../components"
 
 const IndexPage = (props) => {
   // console.log("indexpage:", props)
+  const {
+    data: { homepageJson: data },
+  } = props
+  // console.log("hj", data.aboutUs)
   // console.log(props.data.homepageJson.weFunded)
   // console.log(props.location)
   // const hero = props.data.homepageJson.hero
@@ -39,120 +48,12 @@ const IndexPage = (props) => {
 
   return (
     <EnLayout>
-      <HeroHomepage data={props.data.homepageJson.hero} />
+      <HeroHomepage data={data.hero} />
       <Main>
-        <SectionWeFunded data={props.data.homepageJson.weFunded} />
-        <SectionWeAreInvesting data={props.data.homepageJson.weInvesting} />
+        <SectionWeFunded data={data.weFunded} />
+        <SectionWeAreInvesting data={data.weInvesting} />
+        <SectionSupercharging data={data.startSupercharging} />
       </Main>
-      {/* <main>
-        <SectionContainer
-          className="weFunded"
-          title={weFunded.title}
-          description={weFunded.description}
-          fullWidth
-        >
-          <Card
-            className={lemonadeDolls.company.split(" ").join("")}
-            tagColor="#F6C34E"
-            variant="squereLogoOnly"
-            tag={lemonadeDolls.tag}
-            company={lemonadeDolls.company}
-            logo={lemonadeDolls.logo}
-            title={lemonadeDolls.title}
-            image={lemonadeDolls.image}
-            imageAlt={lemonadeDolls.imageAlt}
-            btn={lemonadeDolls.btn}
-            btnUrl={lemonadeDolls.btnUrl}
-          />
-          <Card
-            className={feel.company}
-            variant="wide"
-            tag={feel.tag}
-            tagColor="#F9F1EA"
-            company={feel.company}
-            logo={feel.logo}
-            title={feel.title}
-            by={feel.by}
-            image={feel.image}
-            imageAlt={feel.imageAlt}
-            btn={feel.btn}
-            btnUrl={feel.btnUrl}
-            bgColor={feel.bgColor}
-            titleColor="#A7825E"
-          />
-        </SectionContainer>
-        <SectionContainer
-          className="weInvesting"
-          title={weInvesting.title}
-          description={weInvesting.description}
-          align="left"
-          btn={weInvesting.btn}
-          btnUrl={weInvesting.btnUrl}
-          simple
-        >
-          <div className="image">
-            <GatsbyImage image={weInvestingImage} alt={weInvesting.imageAlt} />
-          </div>
-        </SectionContainer>
-        <SectionContainer
-          className="aboutUs"
-          title={aboutUs.title}
-          description={aboutUs.description}
-        >
-          <div className="aboutUsImage">
-            <ArtImage
-              largeImage={aboutUs.image}
-              smallImage={aboutUs.smallImage}
-              alt={aboutUs.imageAlt}
-            />
-          </div>
-
-          <Stats data={aboutUs.stats} />
-
-          <div className="actions">
-            <Button btnUrl={aboutUs.primaryBtnUrl} variant="secondary">
-              {aboutUs.primaryBtn}
-            </Button>
-            <Button btnUrl={aboutUs.secondaryBtn} variant="secondary">
-              {aboutUs.secondaryBtn}
-            </Button>
-          </div>
-        </SectionContainer>
-        <SectionContainer
-          className="startSupercharging "
-          title={startSupercharging.title}
-          btn={startSupercharging.btn}
-          btnUrl={startSupercharging.btnUrl}
-          // titleRight
-          reinforcement
-          fullWidth
-        >
-          <Card
-            variant="onto"
-            className={onto.company}
-            tag={onto.tag}
-            tagColor="#A3C7FF"
-            company={onto.company}
-            logo={onto.logo}
-            title={onto.title}
-            image={onto.image}
-            imageAlt={onto.imageAlt}
-            by={onto.by}
-            bgColor={onto.bgColor}
-            titleColor="#deeeff"
-          />
-        </SectionContainer>
-
-        <SectionFindOut data={props.data.homepageJson.findOut} />
-
-        <SectionRegulated data={props.data.trustJson} />
-
-      </main> */}
-      {/* <section className="latestFromBlog">
-          <h3>{blog.title}</h3>
-          <a href={blog.btnUrl}>{startSupercharging.btn}</a>
-          <div className="blogArticles">articles</div>
-        </section> */}
     </EnLayout>
   )
 }
@@ -236,20 +137,23 @@ export const query = graphql`
       startSupercharging {
         card {
           logo
-          bgColor
           by
           company
           title
           tag
-          imageAlt
           image {
-            childImageSharp {
-              gatsbyImageData
+            src {
+              childImageSharp {
+                gatsbyImageData
+              }
             }
+            alt
           }
         }
-        btn
-        btnUrl
+        btn {
+          text
+          url
+        }
         title
       }
       weFunded {
@@ -322,3 +226,112 @@ export const query = graphql`
     }
   }
 `
+// <main>
+//   <SectionContainer
+//     className="weFunded"
+//     title={weFunded.title}
+//     description={weFunded.description}
+//     fullWidth
+//   >
+//     <Card
+//       className={lemonadeDolls.company.split(" ").join("")}
+//       tagColor="#F6C34E"
+//       variant="squereLogoOnly"
+//       tag={lemonadeDolls.tag}
+//       company={lemonadeDolls.company}
+//       logo={lemonadeDolls.logo}
+//       title={lemonadeDolls.title}
+//       image={lemonadeDolls.image}
+//       imageAlt={lemonadeDolls.imageAlt}
+//       btn={lemonadeDolls.btn}
+//       btnUrl={lemonadeDolls.btnUrl}
+//     />
+//     <Card
+//       className={feel.company}
+//       variant="wide"
+//       tag={feel.tag}
+//       tagColor="#F9F1EA"
+//       company={feel.company}
+//       logo={feel.logo}
+//       title={feel.title}
+//       by={feel.by}
+//       image={feel.image}
+//       imageAlt={feel.imageAlt}
+//       btn={feel.btn}
+//       btnUrl={feel.btnUrl}
+//       bgColor={feel.bgColor}
+//       titleColor="#A7825E"
+//     />
+//   </SectionContainer>
+//   <SectionContainer
+//     className="weInvesting"
+//     title={weInvesting.title}
+//     description={weInvesting.description}
+//     align="left"
+//     btn={weInvesting.btn}
+//     btnUrl={weInvesting.btnUrl}
+//     simple
+//   >
+//     <div className="image">
+//       <GatsbyImage image={weInvestingImage} alt={weInvesting.imageAlt} />
+//     </div>
+//   </SectionContainer>
+//   <SectionContainer
+//     className="aboutUs"
+//     title={aboutUs.title}
+//     description={aboutUs.description}
+//   >
+//     <div className="aboutUsImage">
+//       <ArtImage
+//         largeImage={aboutUs.image}
+//         smallImage={aboutUs.smallImage}
+//         alt={aboutUs.imageAlt}
+//       />
+//     </div>
+
+//     <Stats data={aboutUs.stats} />
+
+//     <div className="actions">
+//       <Button btnUrl={aboutUs.primaryBtnUrl} variant="secondary">
+//         {aboutUs.primaryBtn}
+//       </Button>
+//       <Button btnUrl={aboutUs.secondaryBtn} variant="secondary">
+//         {aboutUs.secondaryBtn}
+//       </Button>
+//     </div>
+//   </SectionContainer>
+//   <SectionContainer
+//     className="startSupercharging "
+//     title={startSupercharging.title}
+//     btn={startSupercharging.btn}
+//     btnUrl={startSupercharging.btnUrl}
+//     // titleRight
+//     reinforcement
+//     fullWidth
+//   >
+//     <Card
+//       variant="onto"
+//       className={onto.company}
+//       tag={onto.tag}
+//       tagColor="#A3C7FF"
+//       company={onto.company}
+//       logo={onto.logo}
+//       title={onto.title}
+//       image={onto.image}
+//       imageAlt={onto.imageAlt}
+//       by={onto.by}
+//       bgColor={onto.bgColor}
+//       titleColor="#deeeff"
+//     />
+//   </SectionContainer>
+
+//   <SectionFindOut data={props.data.homepageJson.findOut} />
+
+//   <SectionRegulated data={props.data.trustJson} />
+
+// </main>
+// <section className="latestFromBlog">
+//     <h3>{blog.title}</h3>
+//     <a href={blog.btnUrl}>{startSupercharging.btn}</a>
+//     <div className="blogArticles">articles</div>
+//   </section>

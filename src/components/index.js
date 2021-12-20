@@ -33,6 +33,7 @@ import CardNews from "./CardNews"
 import Main from "./sections/Main"
 import SectionWeFunded from "./sections/SectionWeFunded"
 import SectionHeader from "./sections/SectionHeader"
+import SectionSupercharging from "./sections/SectionSupercharging"
 import CardFeatured from "./cards/CardFeatured"
 
 export {
@@ -68,4 +69,5 @@ export {
   SectionWeFunded,
   SectionHeader,
   CardFeatured,
+  SectionSupercharging,
 }

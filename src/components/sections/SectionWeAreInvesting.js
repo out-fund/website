@@ -7,7 +7,6 @@ import { Button, Section } from "components"
 import T from "./../../styles/new/typography"
 
 const SectionWeAreInvesting = ({ data }) => {
-  console.log(data)
   const { title, description, btn, image } = data
   return (
     <Section>
