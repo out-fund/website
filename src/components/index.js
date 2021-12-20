@@ -4,7 +4,7 @@ import HeroAbout from "./sections/HeroAbout"
 import HeroImage from "./sections/HeroImage"
 
 import SectionContainer from "./sections/SectionContainer"
-import SectionWrapper from "./sections/SectionWrapper"
+import Section from "./sections/Section"
 import SectionWeAreInvesting from "./sections/SectionWeAreInvesting"
 import SectionFoundersCompanies from "./sections/SectionFoundersCompanies"
 import SectionLatestNews from "./sections/SectionLatestNews"
@@ -28,6 +28,10 @@ import CardFounder from "./CardFounder"
 import Stats from "./Stats"
 import CardNews from "./CardNews"
 
+// --------------------
+
+import Main from "./sections/Main"
+
 export {
   HeroHomepage,
   Button,
@@ -39,7 +43,6 @@ export {
   CardFounder,
   Stats,
   SectionContainer,
-  SectionWrapper,
   CardNews,
   SectionFoundersCompanies,
   SectionLatestNews,
@@ -56,4 +59,7 @@ export {
   SectionOtherBrands,
   CardCta,
   SectionFindOut,
+  //
+  Main,
+  Section,
 }

@@ -11,6 +11,7 @@ import EnLayout from "layouts/en"
 // } from "components"
 
 import HeroHomepage from "./../components/hero/HeroHomepage"
+import { Main } from "./../components"
 
 // import SectionContainer from "components/SectionContainer"
 // import Card from "components/Card"
@@ -39,6 +40,7 @@ const IndexPage = (props) => {
   return (
     <EnLayout>
       <HeroHomepage data={props.data.homepageJson.hero} />
+      <Main>main</Main>
       {/* <main>
         <SectionContainer
           className="weFunded"

@@ -1,13 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 import { W, S, theme } from "styles"
-import { SectionWrapper } from "components"
+import { Section } from "components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 
 const SectionWeGrow = ({ data }) => {
   return (
-    <SectionWrapper>
+    <Section>
       <Wrapper>
         <ContentWrapper>
           <TextWrapper>
@@ -26,7 +26,7 @@ const SectionWeGrow = ({ data }) => {
           </ImageWrapper>
         </ContentWrapper>
       </Wrapper>
-    </SectionWrapper>
+    </Section>
   )
 }
 export default SectionWeGrow

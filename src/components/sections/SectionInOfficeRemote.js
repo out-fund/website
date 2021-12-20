@@ -1,12 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import { W, S, U, theme } from "styles"
-import { SectionWrapper, Offices, Button } from "components"
+import { Section, Offices, Button } from "components"
 import parse from "html-react-parser"
 
 const SectionInOfficeRemote = ({ data, officeData }) => {
   return (
-    <SectionWrapper>
+    <Section>
       <Wrapper>
         <ContentWrapper>
           <TextWrapper>
@@ -38,7 +38,7 @@ const SectionInOfficeRemote = ({ data, officeData }) => {
           </BtnWrapper>
         </ContentWrapper>
       </Wrapper>
-    </SectionWrapper>
+    </Section>
   )
 }
 export default SectionInOfficeRemote

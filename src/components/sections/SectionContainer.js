@@ -2,12 +2,12 @@ import React from "react"
 import styled from "styled-components"
 import parse from "html-react-parser"
 
-import { SectionWrapper } from ".."
+import { Section } from ".."
 import { W, S } from "styles"
 
 const SectionContainer = ({ title, description, children }) => {
   return (
-    <SectionWrapper>
+    <Section>
       {title && (
         <Wrapper>
           <ContentWrapper>
@@ -20,7 +20,7 @@ const SectionContainer = ({ title, description, children }) => {
       )}
 
       {children}
-    </SectionWrapper>
+    </Section>
   )
 }
 

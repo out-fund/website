@@ -2,12 +2,12 @@ import React from "react"
 import styled from "styled-components"
 import parse from "html-react-parser"
 
-import { SectionWrapper } from "components"
+import { Section } from "components"
 import { W, S, theme } from "styles"
 
 const SectionRegulated = ({ data, bg }) => {
   return (
-    <SectionWrapper>
+    <Section>
       <Wrapper bg={bg}>
         <ContentWrapper bg={bg}>
           <Title>{data.title}</Title>
@@ -28,7 +28,7 @@ const SectionRegulated = ({ data, bg }) => {
           </TextWrapper>
         </ContentWrapper>
       </Wrapper>
-    </SectionWrapper>
+    </Section>
   )
 }
 export default SectionRegulated

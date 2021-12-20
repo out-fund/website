@@ -1,12 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 
-import { SectionWrapper } from "components"
+import { Section } from "components"
 import { W, S, theme } from "styles"
 
 const Stats = ({ data }) => {
   return (
-    <SectionWrapper>
+    <Section>
       <Wrapper>
         <Grid>
           {data.map((item, index) => (
@@ -17,7 +17,7 @@ const Stats = ({ data }) => {
           ))}
         </Grid>
       </Wrapper>
-    </SectionWrapper>
+    </Section>
   )
 }
 

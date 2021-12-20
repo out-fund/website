@@ -1,13 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 
-import { SectionWrapper, Button } from "components"
+import { Section, Button } from "components"
 import { W, S } from "styles"
 import ExpandIcon from "images/svg/expand-right.svg"
 
 const SectionOpenings = ({ data }) => {
   return (
-    <SectionWrapper>
+    <Section>
       <Wrapper id="open-positions">
         <ContentWrapper>
           <TopWrapper>
@@ -51,7 +51,7 @@ const SectionOpenings = ({ data }) => {
           </OpeningsWrapper>
         </ContentWrapper>
       </Wrapper>
-    </SectionWrapper>
+    </Section>
   )
 }
 export default SectionOpenings

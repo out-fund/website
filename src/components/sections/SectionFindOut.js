@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { W, S } from "styles"
-import { SectionWrapper, Button } from "components"
+import { Section, Button } from "components"
 import Calculator from "components/Calculator"
 import parse from "html-react-parser"
 
@@ -31,7 +31,7 @@ const Accordions = (props) => {
 
 const SectionFindOut = ({ data }) => {
   return (
-    <SectionWrapper>
+    <Section>
       <Wrapper>
         <ContentWrapper>
           <TopWrapper>
@@ -85,7 +85,7 @@ const SectionFindOut = ({ data }) => {
           </FaqWrapper>
         </ContentWrapper>
       </Wrapper>
-    </SectionWrapper>
+    </Section>
   )
 }
 export default SectionFindOut

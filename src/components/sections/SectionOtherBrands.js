@@ -1,13 +1,13 @@
 import React, { Fragment } from "react"
 import styled from "styled-components"
 import { W, theme } from "styles"
-import { SectionWrapper, CardLogoReadMore, CardCta } from "components"
+import { Section, CardLogoReadMore, CardCta } from "components"
 
 const SectionOtherBrands = (props) => {
   console.log(props.data)
 
   return (
-    <SectionWrapper>
+    <Section>
       <Wrapper>
         <ContentWrapper>
           <CardsWrapper>
@@ -26,7 +26,7 @@ const SectionOtherBrands = (props) => {
           </CardsWrapper>
         </ContentWrapper>
       </Wrapper>
-    </SectionWrapper>
+    </Section>
   )
 }
 export default SectionOtherBrands

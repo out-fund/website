@@ -1,12 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import { W, S, theme } from "styles"
-import { SectionWrapper, Button } from "components"
+import { Section, Button } from "components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const SectionJoinUs = ({ data }) => {
   return (
-    <SectionWrapper>
+    <Section>
       <Wrapper>
         <ContentWrapper>
           <TextWrapper>
@@ -23,7 +23,7 @@ const SectionJoinUs = ({ data }) => {
           </ImageWrapper>
         </ContentWrapper>
       </Wrapper>
-    </SectionWrapper>
+    </Section>
   )
 }
 export default SectionJoinUs

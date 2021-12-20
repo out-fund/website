@@ -2,12 +2,12 @@ import React from "react"
 import styled from "styled-components"
 import { W, S, theme } from "styles"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { Button, SectionWrapper } from "components"
+import { Button, Section } from "components"
 
 const SectionWeAreInvesting = ({ data }) => {
   const { title, description, btn, btnUrl, image, imageAlt } = data
   return (
-    <SectionWrapper>
+    <Section>
       <Wrapper>
         <ContentWrapper>
           <TextWrapper>
@@ -24,7 +24,7 @@ const SectionWeAreInvesting = ({ data }) => {
           </ImageWrapper>
         </ContentWrapper>
       </Wrapper>
-    </SectionWrapper>
+    </Section>
   )
 }
 export default SectionWeAreInvesting
