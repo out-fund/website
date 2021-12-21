@@ -38,6 +38,7 @@ import SectionFaq from "./sections/SectionFaq"
 import SectionAboutUs from "./sections/SectionAboutUs"
 import CardFeatured from "./cards/CardFeatured"
 import Calculator from "./Calculator"
+import ImageSwiper from "./ImageSwiper"
 
 export {
   HeroHomepage,
@@ -76,4 +77,5 @@ export {
   Calculator,
   SectionFaq,
   SectionAboutUs,
+  ImageSwiper,
 }

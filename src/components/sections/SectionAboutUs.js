@@ -1,8 +1,13 @@
 import React from "react"
 import styled from "styled-components"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-import { Section, SectionHeader, Button, Stats } from "./../../components"
+import {
+  Section,
+  SectionHeader,
+  Button,
+  Stats,
+  ImageSwiper,
+} from "./../../components"
 
 const SectionAboutUs = ({ data }) => {
   // console.log(data)
@@ -14,12 +19,7 @@ const SectionAboutUs = ({ data }) => {
           <Stats data={data.stats} />
 
           <ImagesWrapper>
-            {data.teamImages.map((item, index) => (
-              <Image key={index}>
-                <GatsbyImage image={getImage(item.src)} alt={item.name} />
-                <Name>{item.name}</Name>
-              </Image>
-            ))}
+            <ImageSwiper data={data.teamImages} />
           </ImagesWrapper>
 
           <ButtonWrapper>
@@ -36,9 +36,6 @@ const SectionAboutUs = ({ data }) => {
   )
 }
 export default SectionAboutUs
-
-const Image = styled.div``
-const Name = styled.div``
 
 const Wrapper = styled.div``
 const ContentWrapper = styled.div``
