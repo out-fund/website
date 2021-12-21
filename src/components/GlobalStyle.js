@@ -17,6 +17,11 @@ const globalCss = css`
     /* padding-top: 80px; */
     /* background-color: ${theme.backgroundColor}; */
     background-color: #ccc;
+    font-feature-settings: "case" 0, "cpsp" 0, "dlig" 0, "frac" 0, "dnom" 0,
+      "numr" 0, "salt" 0, "subs" 0, "sups" 0, "tnum" 0, "zero" 0, "ss01" 0,
+      "ss02", "ss03" 0, "ss04" 0, "cv01" 0, "cv02", "cv03", "cv04", "cv05" 0,
+      "cv06" 0, "cv07" 0, "cv08" 0, "cv09", "cv10" 0, "cv11" 0, "calt", "ccmp",
+      "kern";
     /*    ${theme.above.laptop} {
       padding-top: 104px;
     }*/

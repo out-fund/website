@@ -59,23 +59,6 @@
       "url": "/how-funding-works/"
     }
   },
-  "aboutUs": {
-    "title": "About us",
-    "description": "Outfund is a team of success-driven, highly motivated people who are passionate about growing businesses in the UK. Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission possible. ",
-    "image": "../../images/Outfund-teamProfiles-default.png",
-    "smallImage": "../../images/Outfund-teamProfiles-small.png",
-    "imageAlt": "Profile photos of the team",
-    "stats": [
-      { "stat": "£100M", "text": "Invested in 2020 globaly" },
-      { "stat": "4", "text": "Operating countries" },
-      { "stat": "52+", "text": "Team and growing" },
-      { "stat": "£37M", "text": "We raised so far" }
-    ],
-    "primaryBtn": "Read more About us",
-    "primaryBtnUrl": "/about/",
-    "secondaryBtn": "Careers",
-    "secondaryBtnUrl": "/careers/"
-  },
   "startSupercharging": {
     "title": "Start Supercharging Your Growth!",
     "btn": {
@@ -115,31 +98,98 @@
           "Something else"
         ]
       },
-      "btn": "btn",
-      "btnUrl": "btn url"
-    },
-    "faq": {
-      "title": "Freequesntly asked questiond",
-      "questions": [
-        {
-          "question": "How much fuanding do you offer?",
-          "answer": "Lorem"
-        },
-        {
-          "question": "Does the repayment percentage ever change?",
-          "answer": "Lorem"
-        },
-        {
-          "question": "Can I apply for funding if I have a business partner?",
-          "answer": "Lorme"
-        },
-        {
-          "question": "Why do you need my bank account information?",
-          "answer": "lorem"
-        }
-      ],
-      "btn": "Check Support",
-      "btnUrl": "btnUrl"
+      "btn": {
+        "text": "Check eligibility",
+        "url": "/"
+      }
+    }
+  },
+  "faq": {
+    "title": "Freequesntly asked questiond",
+    "questions": [
+      {
+        "question": "How much fuanding do you offer?",
+        "answer": "Lorem"
+      },
+      {
+        "question": "Does the repayment percentage ever change?",
+        "answer": "Lorem"
+      },
+      {
+        "question": "Can I apply for funding if I have a business partner?",
+        "answer": "Lorme"
+      },
+      {
+        "question": "Why do you need my bank account information?",
+        "answer": "lorem"
+      }
+    ],
+    "btn": {
+      "text": "Check Support",
+      "url": "btnUrl"
+    }
+  },
+  "aboutUs": {
+    "title": "About us",
+    "description": "Outfund is a team of success-driven, highly motivated people who are passionate about growing businesses in the UK. Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission possible. ",
+    "teamImages": [
+      {
+        "src": "../../images/team/Outfund-team-Alexandra.jpg",
+        "name": "Alexandra"
+      },
+      {
+        "src": "../../images/team/Outfund-team-Jake.jpg",
+        "name": "Jake"
+      },
+      {
+        "src": "../../images/team/Outfund-team-Yolanda.jpg",
+        "name": "Yolanda"
+      },
+      {
+        "src": "../../images/team/Outfund-team-Rob.jpg",
+        "name": "Rob"
+      },
+      {
+        "src": "../../images/team/Outfund-team-James.jpg",
+        "name": "James"
+      },
+      {
+        "src": "../../images/team/Outfund-team-Senam.jpg",
+        "name": "Senam"
+      },
+      {
+        "src": "../../images/team/Outfund-team-Alexandra.jpg",
+        "name": "Alexandra"
+      },
+      {
+        "src": "../../images/team/Outfund-team-Alexandra.jpg",
+        "name": "Alexandra"
+      },
+      {
+        "src": "../../images/team/Outfund-team-Alexandra.jpg",
+        "name": "Alexandra"
+      },
+      {
+        "src": "../../images/team/Outfund-team-Alexandra.jpg",
+        "name": "Alexandra"
+      }
+    ],
+    "stats": [
+      { "stat": "£100M", "text": "Invested in 2020 globaly" },
+      { "stat": "4", "text": "Operating countries" },
+      { "stat": "52+", "text": "Team and growing" },
+      { "stat": "£37M", "text": "We raised so far" }
+    ],
+    "buttons": {
+      "primary": {
+        "text": "Read more About us",
+        "url": "/about/"
+      },
+
+      "secondary": {
+        "text": "Careers",
+        "url": "/careers/"
+      }
     }
   },
   "blog": {

@@ -34,7 +34,10 @@ import Main from "./sections/Main"
 import SectionWeFunded from "./sections/SectionWeFunded"
 import SectionHeader from "./sections/SectionHeader"
 import SectionSupercharging from "./sections/SectionSupercharging"
+import SectionFaq from "./sections/SectionFaq"
+import SectionAboutUs from "./sections/SectionAboutUs"
 import CardFeatured from "./cards/CardFeatured"
+import Calculator from "./Calculator"
 
 export {
   HeroHomepage,
@@ -70,4 +73,7 @@ export {
   SectionHeader,
   CardFeatured,
   SectionSupercharging,
+  Calculator,
+  SectionFaq,
+  SectionAboutUs,
 }

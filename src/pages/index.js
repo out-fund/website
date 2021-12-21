@@ -16,6 +16,9 @@ import {
   SectionWeFunded,
   SectionWeAreInvesting,
   SectionSupercharging,
+  SectionFindOut,
+  SectionFaq,
+  SectionAboutUs,
 } from "./../components"
 
 // import SectionContainer from "components/SectionContainer"
@@ -53,6 +56,9 @@ const IndexPage = (props) => {
         <SectionWeFunded data={data.weFunded} />
         <SectionWeAreInvesting data={data.weInvesting} />
         <SectionSupercharging data={data.startSupercharging} />
+        <SectionFindOut data={props.data.homepageJson.findOut} />
+        <SectionFaq data={props.data.homepageJson.faq} />
+        <SectionAboutUs data={props.data.homepageJson.aboutUs} />
       </Main>
     </EnLayout>
   )
@@ -63,27 +69,30 @@ export const query = graphql`
   query {
     homepageJson(language: { regex: "/en-GB/" }) {
       aboutUs {
-        image {
-          childImageSharp {
-            gatsbyImageData
+        buttons {
+          primary {
+            text
+            url
+          }
+          secondary {
+            text
+            url
           }
         }
-        smallImage {
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
-        imageAlt
-        primaryBtn
-        primaryBtnUrl
-        secondaryBtn
-        secondaryBtnUrl
         stats {
           stat
           text
         }
         description
         title
+        teamImages {
+          src {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+          name
+        }
       }
       blog {
         btn
@@ -92,8 +101,10 @@ export const query = graphql`
       }
       findOut {
         calculator {
-          btn
-          btnUrl
+          btn {
+            text
+            url
+          }
           max
           min
           select {
@@ -102,17 +113,19 @@ export const query = graphql`
           }
           title
         }
-        faq {
-          btn
-          btnUrl
-          questions {
-            answer
-            question
-          }
-          title
-        }
         list
         description
+        title
+      }
+      faq {
+        btn {
+          text
+          url
+        }
+        questions {
+          answer
+          question
+        }
         title
       }
       hero {
@@ -281,24 +294,24 @@ export const query = graphql`
 //     title={aboutUs.title}
 //     description={aboutUs.description}
 //   >
-//     <div className="aboutUsImage">
-//       <ArtImage
-//         largeImage={aboutUs.image}
-//         smallImage={aboutUs.smallImage}
-//         alt={aboutUs.imageAlt}
-//       />
-//     </div>
+// <div className="aboutUsImage">
+//   <ArtImage
+//     largeImage={aboutUs.image}
+//     smallImage={aboutUs.smallImage}
+//     alt={aboutUs.imageAlt}
+//   />
+// </div>
 
-//     <Stats data={aboutUs.stats} />
+// <Stats data={aboutUs.stats} />
 
-//     <div className="actions">
-//       <Button btnUrl={aboutUs.primaryBtnUrl} variant="secondary">
-//         {aboutUs.primaryBtn}
-//       </Button>
-//       <Button btnUrl={aboutUs.secondaryBtn} variant="secondary">
-//         {aboutUs.secondaryBtn}
-//       </Button>
-//     </div>
+// <div className="actions">
+//   <Button btnUrl={aboutUs.primaryBtnUrl} variant="secondary">
+//     {aboutUs.primaryBtn}
+//   </Button>
+//   <Button btnUrl={aboutUs.secondaryBtn} variant="secondary">
+//     {aboutUs.secondaryBtn}
+//   </Button>
+// </div>
 //   </SectionContainer>
 //   <SectionContainer
 //     className="startSupercharging "

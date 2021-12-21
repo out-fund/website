@@ -8,7 +8,7 @@ import T from "./../../styles/new/typography"
 import { Button } from "components"
 import { U, theme } from "styles"
 
-const CardLogoReadMore = ({
+const CardFeatured = ({
   tag,
   company,
   logo,
@@ -45,7 +45,7 @@ const CardLogoReadMore = ({
   )
 }
 
-export default CardLogoReadMore
+export default CardFeatured
 
 const Title = styled(T.H3)``
 

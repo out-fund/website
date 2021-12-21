@@ -5,25 +5,16 @@ import {
   SectionHeader,
   CardLogoReadMore,
   CardFeatured,
+  CardCta,
 } from "./../../components"
 
 const SectionSupercharging = ({ data }) => {
-  console.log(data)
+  // console.log(data)
   return (
     <Section>
       <Wrapper>
-        {/* <SectionHeader title={data.title} description={data.description} /> */}
         <ContentWrapper>
-          {/* <CardLogoReadMore
-            tagColor="#F6C34E"
-            bgc="test"
-            tag={data.cards.lemonadeDolls.tag}
-            company={data.cards.lemonadeDolls.company}
-            logo={data.cards.lemonadeDolls.logo}
-            title={data.cards.lemonadeDolls.title}
-            image={data.cards.lemonadeDolls.image}
-            btn={data.cards.lemonadeDolls.btn}
-          /> */}
+          <CardCta title={data.title} btn={data.btn} />
           <CardFeatured
             tagColor="#72B4F0"
             bgc="#0E3674"
