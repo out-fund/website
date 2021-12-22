@@ -2,17 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import EnLayout from "layouts/en"
-// import {
-//   HeroSimple,
-//   SectionRegulated,
-//   HeroImage,
-//   Stats,
-//   SectionWeGrow,
-//   SectionCoolPeople,
-//   SectionInOfficeRemote,
-//   SectionWeValue,
-//   SectionOpenings,
-// } from "components"
 
 import {
   Main,
@@ -55,8 +44,10 @@ export const query = graphql`
   query {
     careersJson(language: { regex: "/en-GB/" }) {
       hero {
-        btnUrl
-        btn
+        btn {
+          text
+          url
+        }
         description
         title
         image {
@@ -73,8 +64,10 @@ export const query = graphql`
         stat
       }
       coolPeople {
-        btn
-        btnUrl
+        btn {
+          text
+          url
+        }
         title
         people {
           description

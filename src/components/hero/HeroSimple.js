@@ -12,8 +12,8 @@ const HeroSimple = ({ data }) => {
       {description && <Description>{description}</Description>}
       {btn && (
         <BtnWrapper>
-          <Button btnUrl={btnUrl} variant="secondary">
-            {btn}
+          <Button to={btn.url} variant="secondary">
+            {btn.text}
           </Button>
         </BtnWrapper>
       )}

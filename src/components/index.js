@@ -1,8 +1,6 @@
 // import HeroHomepage from "./sections/HeroHomepage"
 import HeroAbout from "./sections/HeroAbout"
-
 import SectionContainer from "./sections/SectionContainer"
-import Section from "./sections/Section"
 import SectionWeAreInvesting from "./sections/SectionWeAreInvesting"
 import SectionFoundersCompanies from "./sections/SectionFoundersCompanies"
 import SectionLatestNews from "./sections/SectionLatestNews"
@@ -27,9 +25,10 @@ import CardNews from "./CardNews"
 
 // --------------------
 
-import Main from "./sections/Main"
+import Main from "./elements/Main"
+import Section from "./elements/Section"
 import SectionWeFunded from "./sections/SectionWeFunded"
-import SectionHeader from "./sections/SectionHeader"
+import SectionHeader from "./elements/SectionHeader"
 import SectionSupercharging from "./sections/SectionSupercharging"
 import SectionFaq from "./sections/SectionFaq"
 import SectionAboutUs from "./sections/SectionAboutUs"

@@ -1,13 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 
-import T from "./../../styles/new/typography"
+import T from "../../styles/new/typography"
 
 const SectionHeader = ({ title, description }) => {
   return (
     <Header>
       <Title>{title}</Title>
-      <Description>{description}</Description>
+      {description && <Description>{description}</Description>}
     </Header>
   )
 }
