@@ -1,20 +1,21 @@
 import React from "react"
 import styled from "styled-components"
-
-import T from "./../../styles/new/typography"
-import { Button } from "./../../components/"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
+import { Button } from "./../../components/"
+import T from "./../../styles/new/typography"
+
 const HeroHomepage = ({ data }) => {
+  const { title, description, primaryBtn, secondaryBtn } = data
   return (
     <HeroWrapper>
-      <Title>{data.title}</Title>
-      <Description>{data.description}</Description>
-      <Button to={data.primaryBtnUrl} variant="primary">
-        {data.primaryBtn}
+      <Title>{title}</Title>
+      <Description>{description}</Description>
+      <Button to={primaryBtn.url} variant="primary">
+        {primaryBtn.text}
       </Button>
-      <Button to={data.secondaryBtnUrl} variant="secondary">
-        {data.secondaryBtn}
+      <Button to={secondaryBtn.url} variant="secondary">
+        {secondaryBtn.text}
       </Button>
       <ImageWrapper>
         <GatsbyImage image={getImage(data.image.src)} alt={data.image.alt} />

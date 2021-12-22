@@ -1,16 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
-// import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import EnLayout from "layouts/en"
-// import {
-//   HeroHomepage,
-//   SectionRegulated,
-//   Button,
-//   SectionFindOut,
-// } from "components"
-
-import HeroHomepage from "./../components/hero/HeroHomepage"
 import {
   Main,
   SectionWeFunded,
@@ -19,35 +10,13 @@ import {
   SectionFindOut,
   SectionFaq,
   SectionAboutUs,
+  HeroHomepage,
 } from "./../components"
 
-// import SectionContainer from "components/SectionContainer"
-// import Card from "components/Card"
-// import Stats from "components/Stats"
-
-// import ArtImage from "components/ArtImage"
-
 const IndexPage = (props) => {
-  // console.log("indexpage:", props)
   const {
     data: { homepageJson: data },
   } = props
-  // console.log("hj", data.aboutUs)
-  // console.log(props.data.homepageJson.weFunded)
-  // console.log(props.location)
-  // const hero = props.data.homepageJson.hero
-
-  // const weFunded = props.data.homepageJson.weFunded
-  // const feel = props.data.homepageJson.weFunded.cards.feel
-  // const lemonadeDolls = props.data.homepageJson.weFunded.cards.lemonadeDolls
-  // const weInvesting = props.data.homepageJson.weInvesting
-  // const weInvestingImage = getImage(props.data.homepageJson.weInvesting.image)
-  // const aboutUs = props.data.homepageJson.aboutUs
-  // const startSupercharging = props.data.homepageJson.startSupercharging
-  // const onto = props.data.homepageJson.startSupercharging.card
-  // const findOut = props.data.homepageJson.findOut
-
-  // const blog = props.data.homepageJson.blog
 
   return (
     <EnLayout>
@@ -138,10 +107,14 @@ export const query = graphql`
           }
         }
 
-        primaryBtn
-        primaryBtnUrl
-        secondaryBtn
-        secondaryBtnUrl
+        primaryBtn {
+          text
+          url
+        }
+        secondaryBtn {
+          text
+          url
+        }
         description
         title
       }
@@ -348,3 +321,26 @@ export const query = graphql`
 //     <a href={blog.btnUrl}>{startSupercharging.btn}</a>
 //     <div className="blogArticles">articles</div>
 //   </section>
+
+// console.log("hj", data.aboutUs)
+// console.log(props.data.homepageJson.weFunded)
+// console.log(props.location)
+// const hero = props.data.homepageJson.hero
+
+// const weFunded = props.data.homepageJson.weFunded
+// const feel = props.data.homepageJson.weFunded.cards.feel
+// const lemonadeDolls = props.data.homepageJson.weFunded.cards.lemonadeDolls
+// const weInvesting = props.data.homepageJson.weInvesting
+// const weInvestingImage = getImage(props.data.homepageJson.weInvesting.image)
+// const aboutUs = props.data.homepageJson.aboutUs
+// const startSupercharging = props.data.homepageJson.startSupercharging
+// const onto = props.data.homepageJson.startSupercharging.card
+// const findOut = props.data.homepageJson.findOut
+
+// const blog = props.data.homepageJson.blog
+
+// import SectionContainer from "components/SectionContainer"
+// import Card from "components/Card"
+// import Stats from "components/Stats"
+
+// import ArtImage from "components/ArtImage"

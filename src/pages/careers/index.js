@@ -2,7 +2,20 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import EnLayout from "layouts/en"
+// import {
+//   HeroSimple,
+//   SectionRegulated,
+//   HeroImage,
+//   Stats,
+//   SectionWeGrow,
+//   SectionCoolPeople,
+//   SectionInOfficeRemote,
+//   SectionWeValue,
+//   SectionOpenings,
+// } from "components"
+
 import {
+  Main,
   HeroSimple,
   SectionRegulated,
   HeroImage,
@@ -12,14 +25,13 @@ import {
   SectionInOfficeRemote,
   SectionWeValue,
   SectionOpenings,
-} from "components"
-import { W } from "styles"
+} from "./../../components"
 
 const Careers = (props) => {
   return (
     <EnLayout>
       <HeroSimple data={props.data.careersJson.hero} />
-      <W.Main>
+      <Main>
         <HeroImage data={props.data.careersJson.hero.image} />
         <Stats data={props.data.careersJson.stats} />
         <SectionWeGrow data={props.data.careersJson.weGrow} />
@@ -32,7 +44,7 @@ const Careers = (props) => {
         <SectionOpenings data={props.data.careersJson.currentOpenings} />
 
         <SectionRegulated data={props.data.trustJson} bg={"transparent"} />
-      </W.Main>
+      </Main>
     </EnLayout>
   )
 }

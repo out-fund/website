@@ -4,10 +4,14 @@
   "hero": {
     "title": "Growth capital for founders like You",
     "description": "Supercharged funding from £15K to £2M for your marketing & inventory purchases.",
-    "primaryBtn": "Get funded",
-    "primaryBtnUrl": "/",
-    "secondaryBtn": "Learn How It Works",
-    "secondaryBtnUrl": "/",
+    "primaryBtn": {
+      "text": "Get funded",
+      "url": "/get-funded/"
+    },
+    "secondaryBtn": {
+      "text": "Learn How It Works",
+      "url": "/bla/"
+    },
     "image": {
       "src": "../../images/Outfund-hero-UK.png",
       "alt": "Photo of two founders"

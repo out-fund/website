@@ -1,5 +1,4 @@
-import HeroHomepage from "./sections/HeroHomepage"
-import HeroSimple from "./sections/HeroSimple"
+// import HeroHomepage from "./sections/HeroHomepage"
 import HeroAbout from "./sections/HeroAbout"
 import HeroImage from "./sections/HeroImage"
 
@@ -39,11 +38,11 @@ import SectionAboutUs from "./sections/SectionAboutUs"
 import CardFeatured from "./cards/CardFeatured"
 import Calculator from "./Calculator"
 import ImageSwiper from "./ImageSwiper"
+import HeroSimple from "./hero/HeroSimple"
+import HeroHomepage from "./hero/HeroHomepage"
 
 export {
-  HeroHomepage,
   Button,
-  HeroSimple,
   Offices,
   Link,
   HeroAbout,
@@ -78,4 +77,6 @@ export {
   SectionFaq,
   SectionAboutUs,
   ImageSwiper,
+  HeroSimple,
+  HeroHomepage,
 }
