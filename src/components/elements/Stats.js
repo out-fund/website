@@ -1,18 +1,17 @@
 import React from "react"
 import styled from "styled-components"
 
-// import { Section } from "components"
-import { W, S, theme } from "styles"
+import T from "./../../styles/new/typography"
 
 const Stats = ({ data }) => {
   return (
     <Wrapper>
       <Grid>
         {data.map((item, index) => (
-          <li key={index}>
+          <Block key={index}>
             <Title as="h3">{item.stat}</Title>
             <Description>{item.text}</Description>
-          </li>
+          </Block>
         ))}
       </Grid>
     </Wrapper>
@@ -21,19 +20,14 @@ const Stats = ({ data }) => {
 
 export default Stats
 
-const Title = styled(S.H3)``
-const Description = styled(S.BodyText)``
+const Title = styled(T.H3)``
+const Description = styled(T.BodyLarge)``
+const Grid = styled.ul``
+const Block = styled.li``
 
-// const StatsWrapper = styled.section``
-const Wrapper = styled.div`
-  /* margin-top: 16px;
-  ${theme.above.laptop} {
-    margin-top: 56px;
-  } */
-`
+const Wrapper = styled.section``
 
-const Grid = styled.ul`
-  /* display: grid;
+/* display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin: 0;
   padding: 0;
@@ -43,13 +37,13 @@ const Grid = styled.ul`
   li {
     text-align: center;
   }
-  ${theme.above.laptop} {
+  theme.above.laptop {
     grid-template-columns: repeat(4, 1fr);
   } */
-`
+// `
 
 // margin: 40px auto 24px;
-// ${breakpoints.laptop} {
+// breakpoints.laptop {
 //   max-width: ${theme.width.text};
 //   margin: 80px auto 64px;
 // }

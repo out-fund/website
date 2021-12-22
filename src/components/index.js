@@ -1,6 +1,5 @@
 // import HeroHomepage from "./sections/HeroHomepage"
 import HeroAbout from "./sections/HeroAbout"
-import HeroImage from "./sections/HeroImage"
 
 import SectionContainer from "./sections/SectionContainer"
 import Section from "./sections/Section"
@@ -24,7 +23,6 @@ import Offices from "./sections/Offices"
 import Button from "./Button"
 import Link from "./Link"
 import CardFounder from "./CardFounder"
-import Stats from "./Stats"
 import CardNews from "./CardNews"
 
 // --------------------
@@ -40,6 +38,8 @@ import Calculator from "./Calculator"
 import ImageSwiper from "./ImageSwiper"
 import HeroSimple from "./hero/HeroSimple"
 import HeroHomepage from "./hero/HeroHomepage"
+import Stats from "./elements/Stats"
+import HeroImage from "./elements/HeroImage"
 
 export {
   Button,
@@ -48,14 +48,12 @@ export {
   HeroAbout,
   SectionWeAreInvesting,
   CardFounder,
-  Stats,
   SectionContainer,
   CardNews,
   SectionFoundersCompanies,
   SectionLatestNews,
   SectionJoinUs,
   SectionRegulated,
-  HeroImage,
   SectionWeGrow,
   SectionCoolPeople,
   SectionInOfficeRemote,
@@ -79,4 +77,6 @@ export {
   ImageSwiper,
   HeroSimple,
   HeroHomepage,
+  Stats,
+  HeroImage,
 }
