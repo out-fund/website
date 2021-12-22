@@ -84,8 +84,10 @@ export const query = graphql`
         }
       }
       currentOpenings {
-        btn
-        btnUrl
+        btn {
+          text
+          url
+        }
         description
         title
         openings {
@@ -101,10 +103,11 @@ export const query = graphql`
         }
       }
       inOffice {
-        btn
-        btnUrl
+        btn {
+          text
+          url
+        }
         description
-
         title
         blocks {
           icon

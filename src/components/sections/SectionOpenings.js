@@ -1,22 +1,22 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Section, Button } from "components"
+import { Section, Button, SectionHeader } from "./../../components"
+import T from "./../../styles/new/typography"
+
 import { W, S } from "styles"
 import ExpandIcon from "images/svg/expand-right.svg"
 
 const SectionOpenings = ({ data }) => {
+  const { title, description, openings, openApplication, btn } = data
   return (
     <Section>
       <Wrapper id="open-positions">
         <ContentWrapper>
-          <TopWrapper>
-            <Title>{data.title}</Title>
-            <Description>{data.description}</Description>
-          </TopWrapper>
+          <SectionHeader title={title} description={description} />
           <OpeningsWrapper>
             <Grid>
-              {data.openings.map((opening, index) => (
+              {openings.map((opening, index) => (
                 <Opening key={index}>
                   <WorkableLink href={opening.link} target="_blank">
                     <PositionTitle as="h3">{opening.title}</PositionTitle>
@@ -24,28 +24,26 @@ const SectionOpenings = ({ data }) => {
                       {opening.location} | {opening.time}
                     </Details>
                   </WorkableLink>
-                  <IconWrap>
+                  {/* <IconWrap>
                     <ExpandIcon />
-                  </IconWrap>
+                  </IconWrap> */}
                 </Opening>
               ))}
               <Opening>
-                <PositionTitle as="h5">
-                  {data.openApplication.title}
-                </PositionTitle>
+                <PositionTitle as="h5">{openApplication.title}</PositionTitle>
                 <OpenApplication>
-                  {data.openApplication.description}{" "}
+                  {openApplication.description}{" "}
                   <a
-                    href={`mailto:${data.openApplication.email}?subject='Outfund-Openapplication'`}
+                    href={`mailto:${openApplication.email}?subject='Outfund-Openapplication'`}
                   >
-                    {data.openApplication.email}
+                    {openApplication.email}
                   </a>
                 </OpenApplication>
               </Opening>
             </Grid>
             <BtnWrapper>
-              <Button href={data.btnUrl} variant="secondary" target="_blank">
-                {data.btn}
+              <Button href={btn.url} variant="secondary" target="_blank">
+                {btn.text}
               </Button>
             </BtnWrapper>
           </OpeningsWrapper>
@@ -56,46 +54,37 @@ const SectionOpenings = ({ data }) => {
 }
 export default SectionOpenings
 
-const PositionTitle = styled(S.H6)``
-const OpenApplication = styled(S.BodyMedium)`
-  margin-top: 8px;
+const PositionTitle = styled(T.H6)``
+const OpenApplication = styled(T.Body)`
+  /* margin-top: 8px; */
 `
 const Details = styled.span`
-  margin-left: 16px;
-  color: #405e80;
+  /* margin-left: 16px;
+  color: #405e80; */
 `
 const IconWrap = styled.div`
-  svg {
+  /* svg {
     width: 24px;
     height: 24px;
-  }
+  } */
 `
 
-const Wrapper = styled(W.ContainerMax)`
-  background-color: #fff;
-  border-radius: 10px;
+const Wrapper = styled.div`
+  /* background-color: #fff;
+  border-radius: 10px; */
 `
-const ContentWrapper = styled(W.ContainerXl)`
+const ContentWrapper = styled.div`
   padding-bottom: 80px;
 `
 
-const TopWrapper = styled(W.ContainerS)`
-  text-align: center;
-  padding: 80px 0 64px;
-`
-const Title = styled(S.H2)``
-const Description = styled(S.SubHeading)`
-  max-width: 540px;
-  margin: 0 auto;
-`
-const OpeningsWrapper = styled(W.ContainerM)``
+const OpeningsWrapper = styled.div``
 const Grid = styled.ul`
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(1, auto);
-  border-top: 1px solid #bbc7d6;
+  border-top: 1px solid #bbc7d6; */
 `
 const Opening = styled.li`
-  &:not(:last-child) {
+  /* &:not(:last-child) {
     display: grid;
     grid-template-columns: auto 24px;
     align-items: center;
@@ -108,17 +97,17 @@ const Opening = styled.li`
   &:last-child {
     max-width: 670px;
     padding: 24px;
-  }
+  } */
 `
 const WorkableLink = styled.a`
-  text-decoration: none;
+  /* text-decoration: none;
   display: flex;
   align-items: baseline;
   padding: 24px;
-  color: inherit;
+  color: inherit; */
 `
 
 const BtnWrapper = styled.div`
-  text-align: center;
-  margin-top: 48px;
+  /* text-align: center;
+  margin-top: 48px; */
 `
