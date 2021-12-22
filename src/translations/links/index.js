@@ -71,14 +71,14 @@ const links = {
       en: "Login",
       es: "Acceso",
     },
-    url: "/",
+    url: "/login/",
   },
   getFunded: {
     text: {
       en: "Get Funded",
       es: "Solicitar Financiación",
     },
-    url: "/",
+    url: "/get-funded/",
   },
 }
 

@@ -90,7 +90,7 @@ const DesktopLinks = ({ lang }) => {
         {links.getFunded.text[lang]}
       </Button>
       <Button to={links.login.url} variant="navLink">
-        Login
+        {links.login.text[lang]}
       </Button>
       <Button variant="navDropDown">flag</Button>
       {/* <FlagDropdown /> */}
@@ -143,6 +143,9 @@ const Wrapper = styled.div`
   align-items: center;
   height: ${theme.size.navbarHeight}px;
   justify-content: space-between;
+  ${theme.above.t.l} {
+    justify-content: flex-start;
+  }
 `
 // const LinksWrapper = styled.div`
 //   position: absolute;
@@ -196,6 +199,13 @@ const Menue = styled.div`
 
 const DesktopLinksWrapper = styled.div`
   display: none;
+  ${theme.above.t.l} {
+    display: flex;
+    width: 100%;
+    .getFunded {
+      margin-left: auto;
+    }
+  }
 `
 
 const CompanyWrapper = styled.div``

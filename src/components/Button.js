@@ -4,7 +4,16 @@ import { Link as GatsbyLink } from "gatsby"
 import PropTypes from "prop-types"
 import { theme } from "./../styles/new/theme"
 
-const Button = ({ to, variant, children, size, href, color, ...props }) => {
+const Button = ({
+  to,
+  variant,
+  children,
+  size,
+  href,
+  color,
+  className,
+  ...props
+}) => {
   // console.log("btn", props)
   // const { to, variant, children, size } = props
   return (
@@ -12,7 +21,7 @@ const Button = ({ to, variant, children, size, href, color, ...props }) => {
       variant={variant}
       size={size}
       color={color}
-      className="ButtonWrap"
+      className={`ButtonWrap ${className ? className : ""}`}
     >
       {to ? (
         <GatsbyLink to={to} activeClassName="currentPage" {...props}>
