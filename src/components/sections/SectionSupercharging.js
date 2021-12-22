@@ -1,12 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import {
-  Section,
-  SectionHeader,
-  CardLogoReadMore,
-  CardFeatured,
-  CardCta,
-} from "./../../components"
+import { Section, CardFeatured, CardCta } from "./../../components"
 
 const SectionSupercharging = ({ data }) => {
   // console.log(data)

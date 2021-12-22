@@ -1,5 +1,4 @@
 // import HeroHomepage from "./sections/HeroHomepage"
-import HeroAbout from "./sections/HeroAbout"
 import SectionContainer from "./sections/SectionContainer"
 import SectionWeAreInvesting from "./sections/SectionWeAreInvesting"
 import SectionFoundersCompanies from "./sections/SectionFoundersCompanies"
@@ -39,12 +38,12 @@ import SectionInOfficeRemote from "./sections/SectionInOfficeRemote"
 import SectionWeValue from "./sections/SectionWeValue"
 import SectionOpenings from "./sections/SectionOpenings"
 import SectionRegulated from "./sections/SectionRegulated"
+import HeroAbout from "./hero/HeroAbout"
 
 export {
   Button,
   Offices,
   Link,
-  HeroAbout,
   SectionWeAreInvesting,
   CardFounder,
   SectionContainer,
@@ -78,4 +77,5 @@ export {
   SectionWeValue,
   SectionOpenings,
   SectionRegulated,
+  HeroAbout,
 }

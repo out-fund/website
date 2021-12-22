@@ -99,7 +99,6 @@ const ContactUs = (props) => {
 
 export default ContactUs
 
-const Wrapper = styled.div``
 const CenterSectionTitle = styled.div``
 const ContentWrapper = styled.div`
   /* max-width: theme.width.text};

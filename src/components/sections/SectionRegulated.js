@@ -99,16 +99,6 @@ const IconWrapper = styled.div`
     height: 48px;
   } */
 `
-const Title = styled(T.H2)`
-  /* text-align: center; */
-`
-
-const Description = styled(T.BodyLarge)`
-  /* max-width: 770px;
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 16px; */
-`
 const BlockDescription = styled(T.Body)`
   /* text-align: center; */
 `

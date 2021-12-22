@@ -2,7 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import parse from "html-react-parser"
 
-import { U, theme, S } from "styles"
+import { VisuallyHidden } from "./../styles/utils"
+import T from "./../styles/new/typography"
 
 const CardNews = ({ company, logo, quote, tag, url }) => {
   return (
@@ -11,11 +12,11 @@ const CardNews = ({ company, logo, quote, tag, url }) => {
         <Tag tag={tag}>{tag}</Tag>
         <Figure>
           <blockquote>
-            <S.H5 as="h3" dangerouslySetInnerHTML={{ __html: `“${quote}` }} />
+            <T.H5 as="h3" dangerouslySetInnerHTML={{ __html: `“${quote}` }} />
           </blockquote>
           <figcaption>
             <a href={url}>
-              <U.VisuallyHidden>{company}</U.VisuallyHidden>
+              <VisuallyHidden>{company}</VisuallyHidden>
               <LogoWrapper>{parse(logo)}</LogoWrapper>
             </a>
           </figcaption>
@@ -28,16 +29,16 @@ const CardNews = ({ company, logo, quote, tag, url }) => {
 export default CardNews
 
 const Wrapper = styled.div`
-  background-color: #fff;
+  /* background-color: #fff;
   border-radius: 20px;
-  box-shadow: ${theme.shadows.boxShadow};
+  box-shadow: theme.shadows.boxShadow};
   padding: 40px;
-  ${theme.above.desktop} {
+  theme.above.desktop} {
     padding: 40px 56px;
-  }
+  } */
 `
 const Tag = styled.div`
-  padding: 8px 16px;
+  /* padding: 8px 16px;
   background-color: #edca80;
   display: inline-block;
   border-radius: 4px;
@@ -47,19 +48,18 @@ const Tag = styled.div`
   background-color: ${({ tag }) =>
     tag === "Partnership" ? "#80EDED" : "#edca80"};
   margin-bottom: 24px;
-  align-self: flex-start;
+  align-self: flex-start; */
 `
 const TextWrapper = styled.div`
-  height: 100%;
-  /* max-height: 480px; */
+  /* height: 100%;
   display: flex;
   flex-direction: column;
   b {
     display: inline;
-  }
+  } */
 `
 const Figure = styled.figure`
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   height: 100%;
   blockquote h3 {
@@ -72,6 +72,6 @@ const Figure = styled.figure`
       max-width: 100%;
     }
     margin-top: auto;
-  }
+  } */
 `
 const LogoWrapper = styled.div``

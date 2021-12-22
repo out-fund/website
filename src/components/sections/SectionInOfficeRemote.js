@@ -96,6 +96,3 @@ const TextWrapper = styled.div`
 `
 
 const GridWrapper = styled.div``
-const TopWrapper = styled.div`
-  /* margin-bottom: 40px; */
-`

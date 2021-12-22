@@ -5,11 +5,11 @@ import parse from "html-react-parser"
 
 import { U, theme } from "styles"
 
-const CardFounder = ({ company, logo, image, imageAlt }) => {
+const CardFounder = ({ company, logo, image }) => {
   return (
     <Wrapper>
       <ImageWrapper>
-        <GatsbyImage image={getImage(image)} alt={imageAlt} />
+        <GatsbyImage image={getImage(image.src)} alt={image.alt} />
       </ImageWrapper>
       <CompanyWrapper>
         <U.VisuallyHidden>{company}</U.VisuallyHidden>

@@ -1,70 +1,69 @@
 import React from "react"
 import styled from "styled-components"
-import { W, theme } from "styles"
-
-import { Button, SectionContainer, CardFounder } from "components"
 import parse from "html-react-parser"
 
+import { Button, Section, CardFounder, SectionHeader } from "./../../components"
+
 const SectionFoundersCompanies = ({ data }) => {
+  const { title, btn, logos, cards } = data
   return (
-    <SectionContainer title={data.title}>
+    <Section>
       <Wrapper>
         <ContentWrapper>
+          <SectionHeader title={title} />
           <GridFounders>
-            {data.cards.map((item, index) => (
+            {cards.map((item, index) => (
               <CardFounder
                 key={index}
                 company={item.company}
                 logo={item.logo}
                 image={item.image}
-                imageAlt={item.imageAlt}
               />
             ))}
           </GridFounders>
-          <GridLogos count={data.logos.length}>
-            {data.logos.map((item, index) => (
+          <GridLogos count={logos.length}>
+            {logos.map((item, index) => (
               <LogoWrapper key={index}>{parse(item)} </LogoWrapper>
             ))}
           </GridLogos>
           <BtnWrapper>
-            <Button btnUrl={data.btnUrl} variant="secondary">
-              {data.btn}
+            <Button to={btn.url} variant="secondary">
+              {btn.text}
             </Button>
           </BtnWrapper>
         </ContentWrapper>
       </Wrapper>
-    </SectionContainer>
+    </Section>
   )
 }
 export default SectionFoundersCompanies
 
-const Wrapper = styled(W.Wrapper)``
-const ContentWrapper = styled(W.ContentWrapper)``
+const Wrapper = styled.div``
+const ContentWrapper = styled.div``
 
-const GridFounders = styled(W.ContentWrapper)`
-  display: grid;
+const GridFounders = styled.div`
+  /* display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 30px;
   margin-bottom: 64px;
   row-gap: 30px;
 
-  ${theme.above.tablet} {
+  theme.above.tablet} {
   }
-  ${theme.above.laptop} {
+  theme.above.laptop} {
     grid-template-columns: repeat(4, 1fr);
-  }
+  } */
 `
-const GridLogos = styled(W.ContentWrapper)`
-  display: grid;
-  /* grid-template-columns: repeat(${(props) => props.count}, auto); */
+const GridLogos = styled.div`
+  /* display: grid;
   grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
   align-items: center;
   column-gap: 40px;
   row-gap: 24px;
-  margin-bottom: 64px;
+  margin-bottom: 64px; */
 `
 const LogoWrapper = styled.div`
-  display: flex;
+  /* display: flex;
   align-items: center;
   justify-content: center;
 
@@ -75,8 +74,8 @@ const LogoWrapper = styled.div`
     path {
       fill: #405e80;
     }
-  }
+  } */
 `
 const BtnWrapper = styled.div`
-  text-align: center;
+  /* text-align: center; */
 `

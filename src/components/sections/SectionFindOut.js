@@ -1,11 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-// import { W, S } from "styles"
-import { Section, Button, SectionHeader, Calculator } from "./../../components"
-// import parse from "html-react-parser"
+import { Section, SectionHeader, Calculator } from "./../../components"
 
 const SectionFindOut = ({ data }) => {
-  // console.log(data.calculator)
   return (
     <Section>
       <Wrapper>

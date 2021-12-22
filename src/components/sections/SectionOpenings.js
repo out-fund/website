@@ -4,8 +4,7 @@ import styled from "styled-components"
 import { Section, Button, SectionHeader } from "./../../components"
 import T from "./../../styles/new/typography"
 
-import { W, S } from "styles"
-import ExpandIcon from "images/svg/expand-right.svg"
+// import ExpandIcon from "images/svg/expand-right.svg"
 
 const SectionOpenings = ({ data }) => {
   const { title, description, openings, openApplication, btn } = data
@@ -62,12 +61,12 @@ const Details = styled.span`
   /* margin-left: 16px;
   color: #405e80; */
 `
-const IconWrap = styled.div`
-  /* svg {
-    width: 24px;
-    height: 24px;
-  } */
-`
+// const IconWrap = styled.div`
+//   /* svg {
+//     width: 24px;
+//     height: 24px;
+//   } */
+// `
 
 const Wrapper = styled.div`
   /* background-color: #fff;

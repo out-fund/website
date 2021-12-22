@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import { W, S, theme, breakpoints } from "styles"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+
+import T from "./../../styles/new/typography"
 
 const Offices = ({ offices, image, imageAlt }) => {
   return (
@@ -13,28 +14,28 @@ const Offices = ({ offices, image, imageAlt }) => {
         <TextWrapper>
           <OfficeList>
             <Region>
-              <S.H5 as="h3">{offices.main.title}</S.H5>
+              <T.H5 as="h3">{offices.main.title}</T.H5>
               <Office>
-                <S.H6 as="h4">{offices.main.country}</S.H6>
-                <S.BodyText>
+                <T.H6 as="h4">{offices.main.country}</T.H6>
+                <T.Body>
                   {offices.main.firstLine}
                   <br />
                   {offices.main.secondLine}
-                </S.BodyText>
+                </T.Body>
               </Office>
             </Region>
 
             <Region>
-              <S.H5 as="h6">{offices.world.title}</S.H5>
+              <T.H5 as="h6">{offices.world.title}</T.H5>
               <OfficesWorld>
                 {offices.world.list.map((office) => (
                   <Office key={office.country}>
-                    <S.H6 as="h4">{office.country}</S.H6>
-                    <S.BodyText>
+                    <T.H6 as="h4">{office.country}</T.H6>
+                    <T.Body>
                       {office.firstLine}
                       <br />
                       {office.secondLine}
-                    </S.BodyText>
+                    </T.Body>
                   </Office>
                 ))}
               </OfficesWorld>

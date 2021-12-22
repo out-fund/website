@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import EnLayout from "layouts/en"
+
 import {
   HeroAbout,
   SectionWeAreInvesting,
@@ -10,21 +11,21 @@ import {
   SectionLatestNews,
   SectionJoinUs,
   SectionRegulated,
-} from "components"
-import { W } from "styles"
+  Main,
+} from "./../../components"
 
 const AboutUs = (props) => {
   return (
     <EnLayout>
       <HeroAbout data={props.data.aboutUsJson.hero} />
-      <W.Main>
+      <Main>
         <Stats data={props.data.aboutUsJson.stats} />
         <SectionWeAreInvesting data={props.data.aboutUsJson.weInvesting} />
         <SectionFoundersCompanies data={props.data.aboutUsJson.companies} />
         <SectionLatestNews data={props.data.aboutUsJson.latestNews} />
         <SectionJoinUs data={props.data.aboutUsJson.joinUs} />
         <SectionRegulated data={props.data.trustJson} />
-      </W.Main>
+      </Main>
     </EnLayout>
   )
 }
@@ -37,11 +38,13 @@ export const query = graphql`
       hero {
         title
         description
-        imageAlt
         image {
-          childImageSharp {
-            gatsbyImageData
+          src {
+            childImageSharp {
+              gatsbyImageData
+            }
           }
+          alt
         }
       }
       stats {
@@ -49,43 +52,55 @@ export const query = graphql`
         text
       }
       weInvesting {
-        btn
-        btnUrl
-        image {
-          childImageSharp {
-            gatsbyImageData
-          }
+        btn {
+          url
+          text
         }
-        imageAlt
+        image {
+          src {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+          alt
+        }
         description
         title
       }
       companies {
         title
-        btn
-        btnUrl
+        btn {
+          text
+          url
+        }
         cards {
           company
-          imageAlt
           logo
           image {
-            childImageSharp {
-              gatsbyImageData
+            src {
+              childImageSharp {
+                gatsbyImageData
+              }
             }
+            alt
           }
         }
         logos
       }
       joinUs {
-        imageAlt
         description
         title
-        btn
-        btnUrl
+        btn {
+          url
+          text
+        }
         image {
-          childImageSharp {
-            gatsbyImageData
+          src {
+            childImageSharp {
+              gatsbyImageData
+            }
           }
+          alt
         }
       }
       latestNews {

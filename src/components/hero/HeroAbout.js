@@ -1,10 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-import { W, S, theme, breakpoints } from "styles"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
+import T from "./../../styles/new/typography"
+
 const HeroAbout = ({ data }) => {
-  const { title, image, description, imageAlt } = data
+  const { title, image, description } = data
   return (
     <HeroWrapper>
       <Wrapper>
@@ -12,9 +13,10 @@ const HeroAbout = ({ data }) => {
           <TextWrapper>
             <Title>{title}</Title>
             <Description>{description}</Description>
+            {/* <SectionHeader title={title} description={description}/> */}
           </TextWrapper>
           <ImageWrapper>
-            <GatsbyImage image={getImage(image)} alt={imageAlt} />
+            <GatsbyImage image={getImage(image.src)} alt={image.alt} />
           </ImageWrapper>
         </ContentWrapper>
       </Wrapper>
@@ -22,21 +24,31 @@ const HeroAbout = ({ data }) => {
   )
 }
 
-const HeroWrapper = styled.header`
-  margin: 0 16px;
+export default HeroAbout
+
+const Title = styled(T.H1)`
+  /* color: #fff;
+  text-align: center; */
 `
-const Wrapper = styled(W.Wrapper)``
-const ContentWrapper = styled(W.ContentWrapper)`
-  max-width: ${theme.width.max};
+
+const Description = styled(T.BodyLarge)`
+  /* color: #fff;
+  text-align: center;
+  margin-top: 16px; */
+`
+
+const HeroWrapper = styled.header`
+  /* margin: 0 16px; */
+`
+const Wrapper = styled.div``
+const ContentWrapper = styled.div`
+  /* max-width: theme.width.max};
   position: relative;
   border-radius: 10px;
-  overflow: hidden;
-  /* margin: 0 auto;
-  padding-top: 12vh;
-  padding-bottom: 80px; */
+  overflow: hidden; */
 `
-const TextWrapper = styled(W.TextWrapper)`
-  max-width: 830px;
+const TextWrapper = styled.div`
+  /* max-width: 830px;
   position: absolute;
   z-index: 2;
   margin-left: 50%;
@@ -46,13 +58,13 @@ const TextWrapper = styled(W.TextWrapper)`
   left: 0;
   width: 100%;
 
-  ${breakpoints.belowLaptop} {
+  breakpoints.belowLaptop} {
     padding: 16px;
-  }
+  } */
 `
 const ImageWrapper = styled.div`
-  width: 100%;
-  ${breakpoints.belowLaptop} {
+  /* width: 100%;
+  breakpoints.belowLaptop} {
     height: 400px;
 
     .gatsby-image-wrapper {
@@ -63,18 +75,5 @@ const ImageWrapper = styled.div`
         border-radius: 10px;
       }
     }
-  }
+  } */
 `
-
-const Title = styled(S.H1)`
-  color: #fff;
-  text-align: center;
-`
-
-const Description = styled(S.SubHeading)`
-  color: #fff;
-  text-align: center;
-  margin-top: 16px;
-`
-
-export default HeroAbout

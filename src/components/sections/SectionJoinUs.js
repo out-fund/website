@@ -1,25 +1,25 @@
 import React from "react"
 import styled from "styled-components"
-import { W, S, theme } from "styles"
-import { Section, Button } from "components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
+import { Button, Section, SectionHeader } from "./../../components"
+
 const SectionJoinUs = ({ data }) => {
+  const { title, btn, description, image } = data
   return (
     <Section>
       <Wrapper>
         <ContentWrapper>
           <TextWrapper>
-            <Title>{data.title}</Title>
-            <Description>{data.description}</Description>
+            <SectionHeader title={title} description={description} />
             <BtnWrapper>
-              <Button btnUrl={data.btnUrl} variant="secondary">
-                {data.btn}
+              <Button to={btn.url} variant="secondary">
+                {btn.text}
               </Button>
             </BtnWrapper>
           </TextWrapper>
           <ImageWrapper>
-            <GatsbyImage image={getImage(data.image)} alt={data.imageAlt} />
+            <GatsbyImage image={getImage(image.src)} alt={data.image.alt} />
           </ImageWrapper>
         </ContentWrapper>
       </Wrapper>
@@ -28,25 +28,17 @@ const SectionJoinUs = ({ data }) => {
 }
 export default SectionJoinUs
 
-const Wrapper = styled(W.Wrapper)``
-const ContentWrapper = styled(W.MediumWrapper)`
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  column-gap: 100px;
-  align-items: center;
-  row-gap: 40px;
+const Wrapper = styled.div``
+const ContentWrapper = styled.div``
+// /* display: grid;
+// grid-template-columns: repeat(1, 1fr);
+// column-gap: 100px;
+// align-items: center;
+// row-gap: 40px;
 
-  ${theme.above.laptop} {
-    grid-template-columns: 1fr 1.2fr;
-  }
-`
-
-const Title = styled(S.H2)``
-const Description = styled(S.BodyText)`
-  margin-top: 16px;
-  margin-bottom: 32px;
-  max-width: 540px;
-`
+// theme.above.laptop} {
+//   grid-template-columns: 1fr 1.2fr;
+// } */
 
 const TextWrapper = styled.div``
 const BtnWrapper = styled.div``
