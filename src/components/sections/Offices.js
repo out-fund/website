@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const Offices = ({ offices, image, imageAlt }) => {
   return (
-    <HeroWrapper>
+    <Wrapper>
       <ContentWrapper>
         <ImageWrapper>
           <GatsbyImage image={getImage(image)} alt={imageAlt} />
@@ -42,48 +42,46 @@ const Offices = ({ offices, image, imageAlt }) => {
           </OfficeList>
         </TextWrapper>
       </ContentWrapper>
-    </HeroWrapper>
+    </Wrapper>
   )
 }
 
-const HeroWrapper = styled.header``
-// const Wrapper = styled(W.Wrapper)``
-const ContentWrapper = styled(W.ContentWrapper)``
-const TextWrapper = styled(W.TextWrapper)`
-  max-width: ${theme.width.text};
-  margin: 0 auto;
+export default Offices
+
+const Wrapper = styled.div``
+const ContentWrapper = styled.div``
+const TextWrapper = styled.div`
+  /* max-width: theme.width.text};
+  margin: 0 auto; */
 `
-const ImageWrapper = styled(W.ImageWrapper)`
-  max-width: ${theme.width.image};
+const ImageWrapper = styled.div`
+  /* max-width: theme.width.image};
   margin: 0 auto;
-  margin-bottom: 80px;
+  margin-bottom: 80px; */
 `
 const OfficeList = styled.div`
-  display: grid;
+  /* display: grid;
   grid-template-rows: auto;
   row-gap: 32px;
 
-  ${breakpoints.tablet} {
+  breakpoints.tablet} {
     grid-template-columns: 1fr 3fr;
     column-gap: 16px;
-  }
+  } */
 `
 
 const OfficesWorld = styled.div`
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 16px;
-  /*grid-column-gap:*/
+  column-gap: 16px; */
 `
 const Office = styled.div`
-  h4 {
+  /* h4 {
     margin-bottom: 8px;
-  }
+  } */
 `
 const Region = styled.div`
-  display: grid;
+  /* display: grid;
   grid-template-rows: auto;
-  row-gap: 16px;
+  row-gap: 16px; */
 `
-
-export default Offices

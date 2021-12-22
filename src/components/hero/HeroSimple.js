@@ -1,11 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Button } from "components"
+import { Button } from "./../../components"
 import T from "./../../styles/new/typography"
 
 const HeroSimple = ({ data }) => {
-  const { title, description, btn, btnUrl } = data
+  const { title, description, btn } = data
   return (
     <HeroWrapper>
       <Title>{title}</Title>

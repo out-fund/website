@@ -31,7 +31,6 @@ const Careers = (props) => {
         />
         <SectionWeValue data={props.data.careersJson.weValue} />
         <SectionOpenings data={props.data.careersJson.currentOpenings} />
-
         <SectionRegulated data={props.data.trustJson} bg={"transparent"} />
       </Main>
     </EnLayout>

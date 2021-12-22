@@ -74,7 +74,7 @@ const Wrapper = styled.div`
   border-radius: 10px; */
 `
 const ContentWrapper = styled.div`
-  padding-bottom: 80px;
+  /* padding-bottom: 80px; */
 `
 
 const OpeningsWrapper = styled.div``
