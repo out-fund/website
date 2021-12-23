@@ -4,7 +4,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
   const blogPosts = await graphql(`
     query AllPosts {
-      allMdx(filter: { fileAbsolutePath: { regex: "/blog/" } }) {
+      allMdx(
+        filter: {
+          fileAbsolutePath: { regex: "/blog/" }
+          frontmatter: { published: { eq: true } }
+        }
+      ) {
         edges {
           node {
             id
@@ -17,7 +22,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   `)
   const successStories = await graphql(`
     query AllStories {
-      allMdx(filter: { fileAbsolutePath: { regex: "/success-stories/" } }) {
+      allMdx(
+        filter: {
+          fileAbsolutePath: { regex: "/success-stories/" }
+          frontmatter: { published: { eq: true } }
+        }
+      ) {
         edges {
           node {
             id
@@ -45,7 +55,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
   createSuccessStories.forEach(({ node }, index) => {
     createPage({
-      path: `/success-stories/${node.slug}`,
+      path: `/success-stories/${node.slug.split("/").slice(1).join("-")}`,
       component: path.resolve(`./src/layouts/successStoryLayout.js`),
       context: { storyId: node.id },
     })
