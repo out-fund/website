@@ -35,7 +35,7 @@ const IndexPage = (props) => {
 export default IndexPage
 
 export const query = graphql`
-  query {
+  query HomePage {
     homepageJson(language: { regex: "/en-GB/" }) {
       aboutUs {
         buttons {
@@ -106,7 +106,6 @@ export const query = graphql`
             }
           }
         }
-
         primaryBtn {
           text
           url
@@ -126,7 +125,10 @@ export const query = graphql`
           by
           company
           title
-          tag
+          tag {
+            text
+            color
+          }
           image {
             src {
               childImageSharp {
@@ -154,7 +156,10 @@ export const query = graphql`
               url
             }
             logo
-            tag
+            tag {
+              text
+              color
+            }
             title
             image {
               src {
@@ -172,7 +177,10 @@ export const query = graphql`
               url
             }
             logo
-            tag
+            tag {
+              text
+              color
+            }
             image {
               src {
                 childImageSharp {

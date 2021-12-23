@@ -14,22 +14,18 @@ const SectionWeFunded = ({ data }) => {
         <SectionHeader title={data.title} description={data.description} />
         <ContentWrapper>
           <CardLogoReadMore
-            tagColor="#F6C34E"
             bgc="test"
             tag={data.cards.lemonadeDolls.tag}
             company={data.cards.lemonadeDolls.company}
             logo={data.cards.lemonadeDolls.logo}
-            title={data.cards.lemonadeDolls.title}
             image={data.cards.lemonadeDolls.image}
             btn={data.cards.lemonadeDolls.btn}
           />
           <CardFeatured
-            tagColor="#F6C34E"
             bgc="test"
             tag={data.cards.feel.tag}
             company={data.cards.feel.company}
             logo={data.cards.feel.logo}
-            title={data.cards.feel.title}
             image={data.cards.feel.image}
             btn={data.cards.feel.btn}
             by={data.cards.feel.by}

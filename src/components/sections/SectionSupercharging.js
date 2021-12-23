@@ -10,7 +10,6 @@ const SectionSupercharging = ({ data }) => {
         <ContentWrapper>
           <CardCta title={data.title} btn={data.btn} />
           <CardFeatured
-            tagColor="#72B4F0"
             bgc="#0E3674"
             tag={data.card.tag}
             company={data.card.company}

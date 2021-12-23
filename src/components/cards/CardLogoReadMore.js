@@ -1,28 +1,21 @@
 import React from "react"
 import styled from "styled-components"
-// import { Link } from "gatsby"
-import parse from "html-react-parser"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import parse from "html-react-parser"
 
-import { Button } from "components"
-import { U, theme } from "styles"
+import { Button } from "./../../components"
+import { VisuallyHidden } from "./../../styles/utils"
 
-const CardLogoReadMore = ({
-  tag,
-  company,
-  logo,
-  btn,
-  image,
-  tagColor,
-  bgc,
-}) => {
+const CardLogoReadMore = (props) => {
+  const { tag, company, logo, btn, image, bgc } = props
+
   return (
     <Wrapper>
       <TextWrapper>
         {tag && (
-          <Tag tagColor={tagColor}>
-            <span>{tag}</span>
-            <U.VisuallyHidden>{company}</U.VisuallyHidden>
+          <Tag tagColor={tag.color}>
+            <span>{tag.text}</span>
+            <VisuallyHidden>{company}</VisuallyHidden>
           </Tag>
         )}
 
@@ -49,10 +42,10 @@ const Wrapper = styled.div`
   position: relative;
   height: 370px;
 
-  ${theme.above.tablet} {
+  theme.above.tablet} {
     height: 470px;
   }
-  ${theme.above.laptop} {
+  theme.above.laptop} {
     height: 570px;
   } */
 `
@@ -81,10 +74,10 @@ const TextWrapper = styled.div`
   flex-direction: column;
   padding: 24px 32px 32px;
 
-  ${theme.above.tablet} {
+  theme.above.tablet} {
     padding: 24px 48px 32px;
   }
-  ${theme.above.laptop} {
+  theme.above.laptop} {
     padding: 32px 64px 56px;
   } */
 `

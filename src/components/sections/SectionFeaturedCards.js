@@ -1,11 +1,10 @@
 import React, { Fragment } from "react"
 import styled from "styled-components"
-import { W, theme } from "styles"
-import { Section, CardLogoReadMore } from "components"
+
+import { Section, CardLogoReadMore } from "./../../components"
 
 const SectionFeaturedCards = (props) => {
-  console.log(props.data)
-
+  console.log("SectionFeaturedCards", props.data)
   return (
     <Section>
       <Wrapper>
@@ -14,7 +13,15 @@ const SectionFeaturedCards = (props) => {
             {props.data.map(({ node: story }, index) => (
               <Fragment key={index}>
                 {story.frontmatter.featured && (
-                  <CardLogoReadMore data={story} tag={"We funded"} />
+                  // <CardLogoReadMore data={story} tag={"We funded"} />
+                  // <p>test{console.log(story.frontmatter.card)}</p>
+                  <CardLogoReadMore
+                    tag={story.frontmatter.card.tag}
+                    company={story.frontmatter.card.company}
+                    logo={story.frontmatter.card.logo}
+                    image={story.frontmatter.card.image}
+                    btn={story.frontmatter.card.btn}
+                  />
                 )}
               </Fragment>
             ))}
@@ -26,17 +33,17 @@ const SectionFeaturedCards = (props) => {
 }
 export default SectionFeaturedCards
 
-const Wrapper = styled(W.ContainerFull)`
-  margin-top: 64px;
+const Wrapper = styled.div`
+  /* margin-top: 64px; */
 `
-const ContentWrapper = styled(W.ContainerM)``
+const ContentWrapper = styled.div``
 const CardsWrapper = styled.div`
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(1, 1fr);
   column-gap: 30px;
   row-gap: 30px;
 
-  ${theme.above.tablet} {
+  theme.above.tablet} {
     grid-template-columns: repeat(2, 1fr);
-  }
+  } */
 `
