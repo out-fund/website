@@ -5,8 +5,6 @@ import {
   HeroSimple,
   SectionFeaturedCards,
   SectionOtherBrands,
-  SectionContainer,
-  SectionHeader,
 } from "./../../components"
 
 import EnLayout from "layouts/en"

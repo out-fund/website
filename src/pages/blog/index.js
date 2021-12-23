@@ -1,113 +1,89 @@
 import React from "react"
-import { HeroSimple } from "components"
-import EnLayout from "layouts/en"
-import { graphql } from "gatsby"
 import styled from "styled-components"
-import { W } from "styles"
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+
+import EnLayout from "layouts/en"
+
+import { HeroSimple, Main } from "./../../components"
 
 const Blog = (props) => {
   console.log(props)
   return (
     <EnLayout>
-      {/* <HeroSimple data={"Awesome Blog"} /> */}
-
-      <main>
-        <HeroSimple data={{ title: "Awesome Blog" }} />
-        {/* <SectionOtherBrands data={data.allMdx.edges} /> */}
-        {/* <SectionFeaturedCards data={data.allMdx.edges} /> */}
-        {/* <SectionContainer title="We’ve funded 100s <br/> of brands like yours">
-          
-        </SectionContainer> */}
+      <Main>
+        <HeroSimple
+          data={{
+            title: "Latest from our blog",
+            description:
+              "Outfund is a team of success-driven, highly motivated people who are passionate about growing businesses in the UK. Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission possible.",
+          }}
+        />
         <Wrapper>
           <ContentWrapper>
-            {/* <CardsWrapper>
-              {props.data.allMdx.edges.map(({ node: story }, index) => (
-                <Fragment key={index}>
-                  {!story.frontmatter.featured && (
-                    <CardLogoReadMore data={story} />
-                  )}
-                </Fragment>
-              ))}
- 
-            </CardsWrapper> */}
             <ul>
               {props.data.allMdx.edges.map(({ node: post }) => (
                 <li key={post.id}>
-                  {/* <Button
-                    // ctaUrl={post.slug.split("-").slice(3).join("-")}
-                    ctaUrl={`/${post.slug}/`}
-                    variant="secondary"
-                  >
-                    <h2>{post.frontmatter.title}</h2>
-                  </Button> */}
                   <Link to={post.slug.split("-").slice(3).join("-")}>
                     <h2>{post.frontmatter.title}</h2>
+                    <GatsbyImage
+                      image={getImage(post.frontmatter.card.image.src)}
+                      alt={post.frontmatter.card.image.alt}
+                    />
                   </Link>
-                  {/* <p>{post.excerpt}</p> */}
                 </li>
               ))}
             </ul>
           </ContentWrapper>
         </Wrapper>
-      </main>
+      </Main>
     </EnLayout>
   )
 }
 
 export default Blog
 
-// export const query = graphql`
-//   query blog {
-//     allMdx(
-//       filter: {
-//         fileAbsolutePath: { regex: "/success-stories/" }
-//         frontmatter: { language: { regex: "/en-GB/" } }
-//       }
-//     ) {
-//       edges {
-//         node {
-//           frontmatter {
-//             company
-//             logo
-//             featured
-//             card {
-//               alt
-//               src {
-//                 childImageSharp {
-//                   gatsbyImageData
-//                 }
-//               }
-//             }
-//           }
-//           slug
-//         }
-//       }
-//     }
-//   }
-// `
-
 export const query = graphql`
-  query blogIndex {
-    allMdx(filter: { fileAbsolutePath: { regex: "/blog/" } }) {
+  query blogPage {
+    allMdx(
+      filter: {
+        fileAbsolutePath: { regex: "/blog/" }
+        frontmatter: { published: { eq: true } }
+      }
+    ) {
       edges {
         node {
           id
-          excerpt
+          slug
           frontmatter {
+            card {
+              image {
+                alt
+                src {
+                  childImageSharp {
+                    gatsbyImageData
+                  }
+                }
+              }
+            }
             title
           }
-          slug
         }
+      }
+    }
+    blogJson(language: { regex: "/en-GB/" }) {
+      hero {
+        description
+        title
       }
     }
   }
 `
-const Wrapper = styled(W.ContainerFull)`
-  margin-top: 64px;
-`
-const ContentWrapper = styled(W.ContainerMax)``
-// const CardsWrapper = styled.div`
+const Wrapper = styled.div``
+// margin-top: 64px;
+
+const ContentWrapper = styled.div``
+// const CardsWrapper = styled.div``
 //   display: grid;
 //   grid-template-columns: repeat(1, 1fr);
 //   column-gap: 30px;
