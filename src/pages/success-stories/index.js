@@ -17,7 +17,10 @@ const SuccessStories = ({ data }) => {
       <main>
         <HeroSimple data={data.successStoriesJson.hero} />
         <SectionFeaturedCards data={data.allMdx.edges} />
-        <SectionOtherBrands data={data.allMdx.edges} />
+        <SectionOtherBrands
+          data={data.allMdx.edges}
+          content={data.successStoriesJson.otherBrands}
+        />
       </main>
     </EnLayout>
   )
@@ -63,6 +66,16 @@ export const query = graphql`
       hero {
         description
         title
+      }
+      otherBrands {
+        title
+        card {
+          title
+          btn {
+            text
+            url
+          }
+        }
       }
     }
   }

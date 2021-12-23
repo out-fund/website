@@ -1,7 +1,9 @@
 {
   "language": "en-GB",
-  "image": "../../../images/Outfund-office-building.png",
-  "imageAlt": "Outfund office pictures",
+  "image": {
+    "src": "./../../../images/Outfund-office-building.png",
+    "alt": "Outfund office pictures"
+  },
   "offices": {
     "main": {
       "title": "Main office",

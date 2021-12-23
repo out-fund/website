@@ -10,7 +10,7 @@
     "description": "Invest your funds into the repeatable scalable aspects of your business like ad spend and inventory.",
     "btn": "Start live chat",
     "btnUrl": "/",
-    "image": "../../images/Outfund-live-chat.png",
+    "image": "./../../../images/Outfund-live-chat.png",
     "imageAlt": "Outfund live Chat"
   },
   "support": {

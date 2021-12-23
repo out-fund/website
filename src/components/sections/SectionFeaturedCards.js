@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { Section, CardLogoReadMore } from "./../../components"
 
 const SectionFeaturedCards = (props) => {
-  console.log("SectionFeaturedCards", props.data)
+  // console.log("SectionFeaturedCards", props.data)
   return (
     <Section>
       <Wrapper>

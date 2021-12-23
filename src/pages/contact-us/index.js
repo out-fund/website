@@ -225,11 +225,13 @@ export const query = graphql`
       }
     }
     officesJson(language: { regex: "/en-GB/" }) {
-      imageAlt
       image {
-        childImageSharp {
-          gatsbyImageData
+        src {
+          childImageSharp {
+            gatsbyImageData
+          }
         }
+        alt
       }
       offices {
         world {

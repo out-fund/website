@@ -1,0 +1,19 @@
+{
+  "language": "en-GB",
+  "seoTitle": "seo title",
+  "seoKeywords": ["test", "keywors"],
+  "hero": {
+    "title": "Founders and how Outfund helped them succeed",
+    "description": "Outfund is a team of success-driven, highly motivated people who are passionate about growing businesses in the UK. Our fast-paced "
+  },
+  "otherBrands": {
+    "title": "We’ve funded 100s <br/> of brands like yours",
+    "card": {
+      "title": "And many more... <br/><br/>Become a part of the group.<b> Start supercharging <br/>Your Growth!</b>",
+      "btn": {
+        "text": "Get funded",
+        "url": "/"
+      }
+    }
+  }
+}

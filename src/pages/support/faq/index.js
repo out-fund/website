@@ -1,107 +1,34 @@
 import React from "react"
+import { graphql } from "gatsby"
+import styled from "styled-components"
 // import parse from "html-react-parser"
 
 import EnLayout from "layouts/en"
-import { HeroSimple } from "components"
-import styled from "styled-components"
-import { W } from "styles"
-// import {
-//   Accordion,
-//   AccordionItem,
-//   AccordionItemHeading,
-//   AccordionItemButton,
-//   AccordionItemPanel,
-// } from "react-accessible-accordion"
-import "react-accessible-accordion/dist/fancy-example.css"
+import { HeroSimple, Main } from "./../../../components"
 
-// const Section = (props) => {
-//   return (
-//     <SectionWrapper>
-//       <Title>{props.title}</Title>
-//       <Container>{props.children}</Container>
-//     </SectionWrapper>
-//   )
-// }
-
-// const howItWorks = [
-//   {
-//     heading: "How much fuanding do you offer?",
-//     content: "We can deploy between £10,000 and £2,000,000 at a time.",
-//   },
-//   {
-//     heading: "Does the repayment percentage ever change?",
-//     content:
-//       "Outfund uses a unique corporate revenue share to fund the growth of our portfolio companies. We have powerful predictive models that look at your revenue, ad performance and other third party data to generate funding offers. Our funding is based on your performance. We don't take equity, meaning we don't dilute you or your investors.",
-//   },
-//   {
-//     heading: "Can I apply for funding if I have a business partner?",
-//     content:
-//       "To fund your company, we need you to have the following: <ul><li>Open banking</li><li>Online Payment processor</li><li>Trading for at least 6 months</li><li>Greater than £10,000 turnover pm</li></ul>",
-//   },
-//   {
-//     heading: "Why do you need my bank account information?",
-//     content: "We can deploy between £10,000 and £2,000,000 at a time.",
-//   },
-// ]
-
-// const Accordions = (props) => {
-//   return (
-//     <Accordion allowZeroExpanded>
-//       {props.data.map((item, index) => (
-//         <AccordionItem key={index}>
-//           <AccordionItemHeading>
-//             <AccordionItemButton>{item.heading}</AccordionItemButton>
-//           </AccordionItemHeading>
-//           <AccordionItemPanel>{parse(item.content)}</AccordionItemPanel>
-//         </AccordionItem>
-//       ))}
-//     </Accordion>
-//   )
-// }
-
-const FAQ = () => {
+const FAQ = (props) => {
   return (
     <EnLayout>
-      <HeroSimple
-        data={{
-          title: "We’re always here to help answer your questions",
-        }}
-      ></HeroSimple>
-      <W.Main>
-        <ContentWrapper>
-          {/* <Menue>
-            <Section title="FAQ">
-              <ul>
-                <li>
-                  <a href="">How it works</a>
-                </li>
-                <li>
-                  <a href="">Fees</a>
-                </li>
-                <li>
-                  <a href="">Repayment</a>
-                </li>
-              </ul>
-            </Section>
-          </Menue>
-          <FaqWrapper>
-            <Section title="How it works">
-              <Accordions data={howItWorks} />
-            </Section>
-            <Section title="Fees">
-              <Accordions data={howItWorks} />
-            </Section>
-            <Section title="Repayment">
-              <Accordions data={howItWorks} />
-            </Section>
-          </FaqWrapper> */}
-        </ContentWrapper>
-      </W.Main>
+      <HeroSimple data={props.data.faqJson.hero} />
+      <Main>
+        <ContentWrapper>FAQ</ContentWrapper>
+      </Main>
     </EnLayout>
   )
 }
 
 export default FAQ
+
+export const query = graphql`
+  query faqPage {
+    faqJson(language: { regex: "/en-GB/" }) {
+      hero {
+        description
+        title
+      }
+    }
+  }
+`
 
 // const SectionWrapper = styled.div`
 //   margin-top: 80px;
@@ -111,14 +38,14 @@ export default FAQ
 //   margin-top: 24px;
 // `
 
-const ContentWrapper = styled(W.ContainerS)`
-  display: grid;
+const ContentWrapper = styled.div`
+  /* display: grid;
   grid-template-columns: 240px auto;
   column-gap: 40px;
-  margin-top: 40px;
+  margin-top: 40px; */
 `
 // const Menue = styled.section`
-//   ${Container} {
+//   Container} {
 //     padding: 24px;
 //     background-color: #fff;
 //     border-radius: 10px;
@@ -171,3 +98,84 @@ const ContentWrapper = styled(W.ContainerS)`
 //     border-bottom: 4px solid #f2f6fa !important;
 //   }
 // `
+
+// {/* <Menue>
+//         <Section title="FAQ">
+//           <ul>
+//             <li>
+//               <a href="">How it works</a>
+//             </li>
+//             <li>
+//               <a href="">Fees</a>
+//             </li>
+//             <li>
+//               <a href="">Repayment</a>
+//             </li>
+//           </ul>
+//         </Section>
+//       </Menue>
+//       <FaqWrapper>
+//         <Section title="How it works">
+//           <Accordions data={howItWorks} />
+//         </Section>
+//         <Section title="Fees">
+//           <Accordions data={howItWorks} />
+//         </Section>
+//         <Section title="Repayment">
+//           <Accordions data={howItWorks} />
+//         </Section>
+//       </FaqWrapper> */}
+
+// import {
+//   Accordion,
+//   AccordionItem,
+//   AccordionItemHeading,
+//   AccordionItemButton,
+//   AccordionItemPanel,
+// } from "react-accessible-accordion"
+// import "react-accessible-accordion/dist/fancy-example.css"
+
+// const Section = (props) => {
+//   return (
+//     <SectionWrapper>
+//       <Title>{props.title}</Title>
+//       <Container>{props.children}</Container>
+//     </SectionWrapper>
+//   )
+// }
+
+// const howItWorks = [
+//   {
+//     heading: "How much fuanding do you offer?",
+//     content: "We can deploy between £10,000 and £2,000,000 at a time.",
+//   },
+//   {
+//     heading: "Does the repayment percentage ever change?",
+//     content:
+//       "Outfund uses a unique corporate revenue share to fund the growth of our portfolio companies. We have powerful predictive models that look at your revenue, ad performance and other third party data to generate funding offers. Our funding is based on your performance. We don't take equity, meaning we don't dilute you or your investors.",
+//   },
+//   {
+//     heading: "Can I apply for funding if I have a business partner?",
+//     content:
+//       "To fund your company, we need you to have the following: <ul><li>Open banking</li><li>Online Payment processor</li><li>Trading for at least 6 months</li><li>Greater than £10,000 turnover pm</li></ul>",
+//   },
+//   {
+//     heading: "Why do you need my bank account information?",
+//     content: "We can deploy between £10,000 and £2,000,000 at a time.",
+//   },
+// ]
+
+// const Accordions = (props) => {
+//   return (
+//     <Accordion allowZeroExpanded>
+//       {props.data.map((item, index) => (
+//         <AccordionItem key={index}>
+//           <AccordionItemHeading>
+//             <AccordionItemButton>{item.heading}</AccordionItemButton>
+//           </AccordionItemHeading>
+//           <AccordionItemPanel>{parse(item.content)}</AccordionItemPanel>
+//         </AccordionItem>
+//       ))}
+//     </Accordion>
+//   )
+// }

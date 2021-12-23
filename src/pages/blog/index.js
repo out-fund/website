@@ -12,28 +12,24 @@ const Blog = (props) => {
   return (
     <EnLayout>
       <Main>
-        <HeroSimple
-          data={{
-            title: "Latest from our blog",
-            description:
-              "Outfund is a team of success-driven, highly motivated people who are passionate about growing businesses in the UK. Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission possible.",
-          }}
-        />
+        <HeroSimple data={props.data.blogJson.hero} />
         <Wrapper>
           <ContentWrapper>
-            <ul>
+            <List>
               {props.data.allMdx.edges.map(({ node: post }) => (
-                <li key={post.id}>
-                  <Link to={post.slug.split("-").slice(3).join("-")}>
-                    <h2>{post.frontmatter.title}</h2>
-                    <GatsbyImage
-                      image={getImage(post.frontmatter.card.image.src)}
-                      alt={post.frontmatter.card.image.alt}
-                    />
-                  </Link>
-                </li>
+                <Item key={post.id}>
+                  <CardPost>
+                    <Link to={post.slug.split("-").slice(3).join("-")}>
+                      <h2>{post.frontmatter.title}</h2>
+                      <GatsbyImage
+                        image={getImage(post.frontmatter.card.image.src)}
+                        alt={post.frontmatter.card.image.alt}
+                      />
+                    </Link>
+                  </CardPost>
+                </Item>
               ))}
-            </ul>
+            </List>
           </ContentWrapper>
         </Wrapper>
       </Main>
@@ -80,6 +76,9 @@ export const query = graphql`
   }
 `
 const Wrapper = styled.div``
+const List = styled.ul``
+const Item = styled.li``
+const CardPost = styled.div``
 // margin-top: 64px;
 
 const ContentWrapper = styled.div``

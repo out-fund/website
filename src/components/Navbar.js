@@ -6,7 +6,7 @@ import { Button, Link } from "."
 import styled from "styled-components"
 import { theme } from "./../styles/new/theme"
 
-import links from "./../translations/links/"
+import links from "./../content/links"
 
 const MenueGroup = ({ title, children }) => {
   return (

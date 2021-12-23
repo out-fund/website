@@ -10,7 +10,7 @@ const CardLogoReadMore = (props) => {
   const { tag, company, logo, btn, image, bgc } = props
 
   return (
-    <Wrapper>
+    <Wrapper bgc={bgc}>
       <TextWrapper>
         {tag && (
           <Tag tagColor={tag.color}>

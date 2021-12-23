@@ -10,7 +10,7 @@
       "url": "#open-positions"
     },
     "image": {
-      "src": "./../../images/Outfund-London-Team.jpg",
+      "src": "./../../../images/Outfund-London-Team.jpg",
       "alt": "Outfund London Team"
     }
   },
@@ -36,7 +36,7 @@
     "title": "We Grow Businesses and We Grow People",
     "description": "Invest your funds into the repeatable scalable aspects of your business like ad spend and inventory. <ul><li>Sell products or services online</li><li>Have been trading for 6 months +</li><li>Earn £10K+ monthly revenue</li></ul>",
     "image": {
-      "src": "./../../images/Outfund-we-grow.png",
+      "src": "./../../../images/Outfund-we-grow.png",
       "alt": "Collage of photos from Outfund office"
     },
     "teamWorked": {
@@ -55,7 +55,7 @@
         "name": "Alan",
         "role": "Chief Operating Officer",
         "image": {
-          "src": "./../../images/Outfund-Alan.jpg",
+          "src": "./../../../images/Outfund-Alan.jpg",
           "alt": "Alan Outfund"
         },
         "description": "Alan has been part of Outfund since its inception, and was previously a magic circle solicitor. As our dynamic COO, he works with our tech team to ensure that our platform and processes align with the needs of our investments and team members. He’s basically our go-to man for everything!"
@@ -64,7 +64,7 @@
         "name": "Jolanda",
         "role": "Underwriter",
         "image": {
-          "src": "./../../images/Outfund-Jolanda.jpg",
+          "src": "./../../../images/Outfund-Jolanda.jpg",
           "alt": "Alan Outfund"
         },
         "description": "Alan has been part of Outfund since its inception, and was previously a magic circle solicitor. As our dynamic COO, he works with our tech team to ensure that our platform and processes align with the needs of our investments and team members. He’s basically our go-to man for everything!"
@@ -73,7 +73,7 @@
         "name": "Senam",
         "role": "Chief of Staff",
         "image": {
-          "src": "./../../images/Outfund-Senam.jpg",
+          "src": "./../../../images/Outfund-Senam.jpg",
           "alt": "Alan Outfund"
         },
         "description": "Alan has been part of Outfund since its inception, and was previously a magic circle solicitor. As our dynamic COO, he works with our tech team to ensure that our platform and processes align with the needs of our investments and team members. He’s basically our go-to man for everything!"
@@ -82,7 +82,7 @@
         "name": "Rob",
         "role": "Portfolio Manager",
         "image": {
-          "src": "./../../images/Outfund-Rob.jpg",
+          "src": "./../../../images/Outfund-Rob.jpg",
           "alt": "Rob Outfund"
         },
         "description": "Alan has been part of Outfund since its inception, and was previously a magic circle solicitor. As our dynamic COO, he works with our tech team to ensure that our platform and processes align with the needs of our investments and team members. He’s basically our go-to man for everything!"

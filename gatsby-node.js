@@ -55,7 +55,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
   createSuccessStories.forEach(({ node }, index) => {
     createPage({
-      path: `/success-stories/${node.slug.split("/").slice(1).join("-")}`,
+      path: `/success-stories/${node.slug.split("/").slice(2).join("-")}`,
       component: path.resolve(`./src/layouts/successStoryLayout.js`),
       context: { storyId: node.id },
     })

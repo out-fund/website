@@ -9,13 +9,13 @@ import {
 } from "./../../components"
 
 const SectionOtherBrands = (props) => {
-  console.log("otherBrands", props.data)
+  // console.log("otherBrands", props.data)
 
   return (
     <Section>
       <Wrapper>
         <ContentWrapper>
-          <SectionHeader title="We’ve funded 100s <br/> of brands like yours" />
+          <SectionHeader title={props.content.title} />
           <CardsWrapper>
             {props.data.map(({ node: story }, index) => (
               <Fragment key={index}>
@@ -29,10 +29,10 @@ const SectionOtherBrands = (props) => {
                 )}
               </Fragment>
             ))}
-            {/* <CardCta
-              title="And many more... <br/><br/>Become a part of the group.<b> Start supercharging <br/>Your Growth!</b>"
-              btn={{ src: "Get funded", url: "/" }}
-            /> */}
+            <CardCta
+              title={props.content.card.title}
+              btn={props.content.card.btn}
+            />
           </CardsWrapper>
         </ContentWrapper>
       </Wrapper>

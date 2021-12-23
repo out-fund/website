@@ -4,12 +4,12 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import T from "./../../styles/new/typography"
 
-const Offices = ({ offices, image, imageAlt }) => {
+const Offices = ({ offices, image }) => {
   return (
     <Wrapper>
       <ContentWrapper>
         <ImageWrapper>
-          <GatsbyImage image={getImage(image)} alt={imageAlt} />
+          <GatsbyImage image={getImage(image.src)} alt={image.alt} />
         </ImageWrapper>
         <TextWrapper>
           <OfficeList>

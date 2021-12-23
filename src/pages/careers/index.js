@@ -167,10 +167,12 @@ export const query = graphql`
           title
         }
       }
-      imageAlt
       image {
-        childImageSharp {
-          gatsbyImageData
+        alt
+        src {
+          childImageSharp {
+            gatsbyImageData
+          }
         }
       }
     }
