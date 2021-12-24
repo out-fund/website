@@ -1,6 +1,6 @@
 import * as React from "react"
-import GlobalLayout from "./GlobalLayout"
-import Navbar from "./../components/Navbar"
+import GlobalLayout from "./../layouts/GlobalLayout"
+import Navbar from "./../components/elements/Navbar"
 // import Footer from "components/Footer"
 
 const EN = ({ children }) => {

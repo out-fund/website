@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 
-import { U, theme } from "styles"
+import { VisuallyHidden } from "./../../styles/utils"
 
 const CardFounder = ({ company, logo, image }) => {
   return (
@@ -12,7 +12,7 @@ const CardFounder = ({ company, logo, image }) => {
         <GatsbyImage image={getImage(image.src)} alt={image.alt} />
       </ImageWrapper>
       <CompanyWrapper>
-        <U.VisuallyHidden>{company}</U.VisuallyHidden>
+        <VisuallyHidden>{company}</VisuallyHidden>
         <LogoWrapper>{parse(logo)} </LogoWrapper>
       </CompanyWrapper>
     </Wrapper>
@@ -22,32 +22,25 @@ const CardFounder = ({ company, logo, image }) => {
 export default CardFounder
 
 const Wrapper = styled.div`
-  background-color: #fff;
+  /* background-color: #fff;
   max-width: 370px;
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: ${theme.shadows.boxShadow};
+  box-shadow: theme.shadows.boxShadow}; */
 `
 const ImageWrapper = styled.div``
 const CompanyWrapper = styled.div`
-  /* padding: 24px; */
-  height: 64px;
+  /* height: 64px;
   display: grid;
   align-items: center;
   padding: 0 24px;
-  ${theme.above.tablet} {
+  theme.above.tablet} {
     height: 80px;
-  }
-  /* display: flex; */
-  /* flex-direction: column;
-  align-items: center; */
+  } */
 `
 const LogoWrapper = styled.div`
-  /* display: flex;
-  align-items: center; */
-  /* justify-content: center; */
-  svg {
+  /* svg {
     max-width: 190px;
     max-height: 24px;
-  }
+  } */
 `

@@ -11,10 +11,6 @@ import SectionOtherBrands from "./sections/SectionOtherBrands"
 import CardCta from "./cards/CardCta"
 import SectionFindOut from "./sections/SectionFindOut"
 import Offices from "./sections/Offices"
-import Button from "./Button"
-import Link from "./Link"
-import CardFounder from "./CardFounder"
-import CardNews from "./CardNews"
 
 // --------------------
 
@@ -26,8 +22,8 @@ import SectionSupercharging from "./sections/SectionSupercharging"
 import SectionFaq from "./sections/SectionFaq"
 import SectionAboutUs from "./sections/SectionAboutUs"
 import CardFeatured from "./cards/CardFeatured"
-import Calculator from "./Calculator"
-import ImageSwiper from "./ImageSwiper"
+import Calculator from "./elements/Calculator"
+import ImageSwiper from "./elements/ImageSwiper"
 import HeroSimple from "./hero/HeroSimple"
 import HeroHomepage from "./hero/HeroHomepage"
 import Stats from "./elements/Stats"
@@ -39,13 +35,15 @@ import SectionWeValue from "./sections/SectionWeValue"
 import SectionOpenings from "./sections/SectionOpenings"
 import SectionRegulated from "./sections/SectionRegulated"
 import HeroAbout from "./hero/HeroAbout"
+import Button from "./elements/Button"
+import Link from "./elements/Link"
+import CardFounder from "./cards/CardFounder"
+import CardNews from "./cards/CardNews"
+import SectionPartners from "./sections/SectionPartners"
+import SectionWhy from "./sections/SectionWhy"
 
 export {
-  Button,
-  Offices,
-  Link,
   SectionWeAreInvesting,
-  CardFounder,
   SectionContainer,
   CardNews,
   SectionFoundersCompanies,
@@ -62,6 +60,7 @@ export {
   SectionWeFunded,
   SectionHeader,
   CardFeatured,
+  CardFounder,
   SectionSupercharging,
   Calculator,
   SectionFaq,
@@ -78,4 +77,9 @@ export {
   SectionOpenings,
   SectionRegulated,
   HeroAbout,
+  Button,
+  Link,
+  Offices,
+  SectionPartners,
+  SectionWhy,
 }

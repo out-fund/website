@@ -2,8 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import parse from "html-react-parser"
 
-import { VisuallyHidden } from "./../styles/utils"
-import T from "./../styles/new/typography"
+import { VisuallyHidden } from "../../styles/utils"
+import T from "../../styles/new/typography"
 
 const CardNews = ({ company, logo, quote, tag, url }) => {
   return (

@@ -1,11 +1,11 @@
 import { createGlobalStyle, css } from "styled-components"
 import { normalize } from "styles"
-import { InterWebLatin } from "./../styles/new/typography/font"
+import { InterWebLatin } from "../typography/font"
 // import isDevEnv from "./../utils/isDevEnv"
 
-import { colorVariables } from "./../styles/new/tokens/colors"
-import { reset } from "./../styles/reset"
-import {theme} from "./../styles/new/theme"
+import { colorVariables } from "../tokens/colors"
+import { reset } from "../../reset"
+import { theme } from "../theme"
 
 // const rightReset = isDevEnv() ? resetDevelopment : reset
 

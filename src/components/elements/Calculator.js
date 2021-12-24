@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Button } from "./../components"
-import T from "./../styles/new/typography"
+import { Button } from "./../../components"
+import T from "./../../styles/new/typography"
 
 const Calculator = ({ data }) => {
   return (

@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import shuffle from "./../utils/shuffle"
+import shuffle from "../../utils/shuffle"
 
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"

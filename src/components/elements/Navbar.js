@@ -1,12 +1,12 @@
 import React from "react"
-import LogoSvg from "images/svg/Outfund-logo.svg"
-import MenueIconSvg from "images/svg/MenueIcon.svg"
-
-import { Button, Link } from "."
 import styled from "styled-components"
-import { theme } from "./../styles/new/theme"
 
-import links from "./../content/links"
+import { Button, Link } from "./../../components"
+import { theme } from "./../../styles/new/theme"
+import links from "./../../content/links"
+
+import LogoSvg from "./../../images//svg/Outfund-logo.svg"
+import MenueIconSvg from "./../../images/svg/MenueIcon.svg"
 
 const MenueGroup = ({ title, children }) => {
   return (

@@ -2,7 +2,7 @@ import React from "react"
 import styled, { css } from "styled-components"
 import { Link as GatsbyLink } from "gatsby"
 import PropTypes from "prop-types"
-import { theme } from "./../styles/new/theme"
+import { theme } from "./../../styles/new/theme"
 
 const Button = ({
   to,
