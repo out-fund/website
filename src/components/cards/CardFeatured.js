@@ -7,6 +7,7 @@ import T from "./../../styles/new/typography"
 import { Button } from "./../../components"
 
 import { VisuallyHidden } from "./../../styles/utils"
+import { theme } from "./../../styles/new/theme"
 
 const CardFeatured = (props) => {
   const { tag, company, logo, btn, image, title, by } = props
@@ -40,74 +41,11 @@ const CardFeatured = (props) => {
 export default CardFeatured
 
 const Title = styled(T.H3)``
-
 const By = styled.div``
 
-const Wrapper = styled.div`
-  /* max-width: 570px;
-  position: relative;
-  height: 370px;
-
-  theme.above.tablet} {
-    height: 470px;
-  }
-  theme.above.laptop} {
-    height: 570px;
-  } */
-`
-const ImageWrapper = styled.div`
-  /* position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 10px;
-
-  border-radius: 10px;
-  overflow: hidden;
-  z-index: 1;
-  .gatsby-image-wrapper {
-    height: 100%;
-  } */
-`
-const TextWrapper = styled.div`
-  /* position: relative;
-  z-index: 2;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 24px 32px 32px;
-
-  theme.above.tablet} {
-    padding: 24px 48px 32px;
-  }
-  theme.above.laptop} {
-    padding: 32px 64px 56px;
-  } */
-`
-const LogoWrapper = styled.div`
-  /* margin-top: auto;
-
-  svg {
-    max-width: 100%;
-    height: 32px;
-  } */
-`
-const Tag = styled.div`
-  /* padding: 4px 16px;
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(20px);
-  border-radius: 4px;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  color: #000000;
-  opacity: 0.8;
-  align-self: flex-start; */
-`
-const BtnWrapper = styled.div`
-  /* margin-top: 40px; */
-`
+const Wrapper = styled.div``
+const ImageWrapper = styled.div``
+const TextWrapper = styled.div``
+const LogoWrapper = styled.div``
+const Tag = styled.div``
+const BtnWrapper = styled.div``

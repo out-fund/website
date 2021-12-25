@@ -4,6 +4,7 @@ import parse from "html-react-parser"
 
 import T from "./../../styles/new/typography"
 import { Button } from "./../../components"
+import { theme } from "./../../styles/new/theme"
 
 const CardCta = ({ title, btn }) => {
   return (
@@ -24,6 +25,8 @@ export default CardCta
 
 const Title = styled(T.H2)``
 
-const Wrapper = styled.div``
+const Wrapper = styled.div`
+  background-color: ${theme.color.white};
+`
 const TextWrapper = styled.div``
 const BtnWrapper = styled.div``
