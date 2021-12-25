@@ -12,6 +12,7 @@ const Button = ({
   href,
   color,
   className,
+  isOpen,
   ...props
 }) => {
   // console.log("btn", props)
@@ -22,6 +23,7 @@ const Button = ({
       size={size}
       color={color}
       className={`ButtonWrap ${className ? className : ""}`}
+      isOpen={isOpen}
     >
       {to ? (
         <GatsbyLink to={to} activeClassName="currentPage" {...props}>
@@ -51,6 +53,7 @@ const ButtonWrap = styled.div`
     display: inline-block;
     margin: 0;
     padding: 8px 24px;
+    color: ${theme.color.text.headings};
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -99,7 +102,7 @@ const ButtonWrap = styled.div`
         ? css`
             box-shadow: inset 0px 0px 0px 1px transparent;
             background-color: transparent;
-            color: #1c3654;
+            color: ${theme.color.text.headings};
             transition: all 0.1s ease-in-out;
             :hover {
               color: ${theme.color.button.primary.backgroundColor};
@@ -113,8 +116,14 @@ const ButtonWrap = styled.div`
         : variant === "navDropDown"
         ? css`
             box-shadow: inset 0px 0px 0px 1px transparent;
+            /* box-shadow: inset 0px 0px 0px 1px
+              ${({ isOpen }) =>
+              isOpen
+                ? theme.color.button.primary.backgroundColor
+                : "transparent"}; */
+
             background-color: transparent;
-            color: #1c3654;
+            /* color: ${theme.color.button.primary.backgroundColor}; */
             transition: all 0.1s ease-in-out;
             position: relative;
             display: flex;
@@ -139,12 +148,23 @@ const ButtonWrap = styled.div`
             }
             :hover {
               /* background-color: #deeeff; */
-              box-shadow: inset 0px 0px 0px 1px
-                ${theme.color.button.primary.backgroundColor};
+              box-shadow: inset 0px 0px 0px 1px ${theme.color.text.headings};
               &:after {
                 opacity: 1;
               }
             }
+            ${(props) =>
+              props.isOpen
+                ? css`
+                    background-color: #deeeff;
+                    /* visibility: visible; */
+                    &:after {
+                      opacity: 1;
+                    }
+                  `
+                : css`
+                    /* visibility: hidden; */
+                  `}
           `
         : ""};
 

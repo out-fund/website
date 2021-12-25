@@ -32,7 +32,7 @@ const ContactUs = (props) => {
                 image={getImage(liveChat.image)}
                 alt={liveChat.imageAlt}
               />
-              <Button btnUrl={liveChat.btnUrl} variant="secondary">
+              <Button href={liveChat.btnUrl} variant="secondary">
                 {liveChat.btn}
               </Button>
             </LiveChat>
@@ -40,14 +40,14 @@ const ContactUs = (props) => {
           <Box style={{ gridArea: "support" }}>
             <T.H6 as="h2">{support.title}</T.H6>
             <T.Body>{support.description}</T.Body>
-            <Button btnUrl={support.btnUrl} variant="secondary">
+            <Button href={support.btnUrl} variant="secondary">
               {support.btn}
             </Button>
           </Box>
           <Box style={{ gridArea: "feedback" }}>
             <T.H6 as="h2">{feedback.title}</T.H6>
             <T.Body>{feedback.description}</T.Body>
-            <Button btnUrl={feedback.btnUrl} variant="secondary">
+            <Button href={feedback.btnUrl} variant="secondary">
               {feedback.btn}
             </Button>
           </Box>
@@ -78,7 +78,7 @@ const ContactUs = (props) => {
           <Box style={{ gridArea: "demoCall" }}>
             <T.H6 as="h2">{demoCall.title}</T.H6>
             <T.Body>{demoCall.description}</T.Body>
-            <Button btnUrl={demoCall.btnUrl} variant="secondary">
+            <Button href={demoCall.btnUrl} variant="secondary">
               {demoCall.btn}
             </Button>
           </Box>

@@ -1,5 +1,5 @@
 import * as React from "react"
-import GlobalStyle from "./../styles/new/utils/GlobalStyle"
+// import GlobalStyle from "./../styles/new/utils/GlobalStyle"
 
 // const GlobalLayout = ({ children, location }) => {
 const GlobalLayout = ({ children }) => {
@@ -7,7 +7,7 @@ const GlobalLayout = ({ children }) => {
   return (
     <>
       {/* <p>Helmet</p> */}
-      <GlobalStyle />
+      {/* <GlobalStyle /> */}
       {children}
     </>
   )
