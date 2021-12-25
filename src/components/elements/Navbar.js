@@ -101,18 +101,13 @@ const CompanyDropdown = ({ lang, isOpen }) => {
         </Button>
       </li>
       <li>
-        <Button to={links.successStories.url} variant="navLink">
-          {links.successStories.text[lang]}
+        <Button to={links.careers.url} variant="navLink">
+          {links.careers.text[lang]}
         </Button>
       </li>
       <li>
         <Button to={links.blog.url} variant="navLink">
           {links.blog.text[lang]}
-        </Button>
-      </li>
-      <li>
-        <Button to={links.faq.url} variant="navLink">
-          {links.faq.text[lang]}
         </Button>
       </li>
     </DesktopDropdownWrappepr>
@@ -122,8 +117,13 @@ const FundingDropdown = ({ lang, isOpen }) => {
   return (
     <DesktopDropdownWrappepr isOpen={isOpen}>
       <li>
-        <Button to={links.aboutUs.url} variant="navLink">
-          {links.aboutUs.text[lang]}
+        <Button to={links.howItWorks.url} variant="navLink">
+          {links.howItWorks.text[lang]}
+        </Button>
+      </li>
+      <li>
+        <Button to={links.successStories.url} variant="navLink">
+          {links.successStories.text[lang]}
         </Button>
       </li>
     </DesktopDropdownWrappepr>
@@ -201,11 +201,11 @@ function DesktopLinks({ lang }) {
           {links.partners.text[lang]}
         </Button>
       </li>
-      <li>
+      {/* <li>
         <Button to={links.contactUs.url} variant="navLink">
           {links.contactUs.text[lang]}
         </Button>
-      </li>
+      </li> */}
       <li className="getFunded">
         <Button to={links.getFunded.url} variant="primary" size="medium">
           {links.getFunded.text[lang]}
@@ -216,10 +216,10 @@ function DesktopLinks({ lang }) {
           {links.login.text[lang]}
         </Button>
       </li>
-      <li>
+      {/* <li>
         <Button variant="navDropDown">flag</Button>
-        {/* <FlagDropdown /> */}
-      </li>
+        <FlagDropdown />
+      </li> */}
     </DesktopLinksWrapper>
   )
 }
@@ -272,19 +272,14 @@ const Wrapper = styled.div`
   ${theme.above.t.l} {
     justify-content: flex-start;
   }
+  max-width: 1218px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
 `
-// const LinksWrapper = styled.div`
-//   position: absolute;
-//   background-color: #fff;
-//   display: flex;
-//   flex-direction: column;
-//   top: ${theme.size.navbarHeight + 10}px;
-//   width: 100%;
-//   max-width: 100%;
-
-// `
 
 const MobileLinksWrapper = styled.div`
+  position: relative;
   ${theme.above.t.l} {
     display: none;
   }
@@ -302,7 +297,7 @@ const MobileDropdownWrapper = styled.div`
   background-color: #fff;
   display: grid;
   grid-template-columns: 1fr;
-  width: 100%;
+  /* width: 100%; */
   max-width: 260px;
   border-radius: 10px;
   padding: 24px;
@@ -337,16 +332,16 @@ const Menue = styled.button`
     width: 24px;
     height: 16px;
   }
-
-  /* display: none; */
 `
 
 // --------------------- Desktop
 
 const DesktopLinksWrapper = styled.ul`
   display: none;
+  margin-left: 40px;
   ${theme.above.t.l} {
     display: flex;
+    gap: 8px;
     width: 100%;
     .getFunded {
       margin-left: auto;
@@ -360,19 +355,17 @@ const DesktopLinksWrapper = styled.ul`
 
 const DesktopDropdownWrappepr = styled.ul`
   position: absolute;
-  /* right: 0; */
+
   left: 0;
   top: ${theme.size.navbarHeight}px;
   z-index: 99;
   background-color: #fff;
   display: grid;
   grid-template-columns: 1fr;
-  /* width: 100%; */
   max-width: 260px;
   padding: 24px;
   border-radius: 10px;
   row-gap: 8px;
-  /* opacity: ${(props) => (props.isOpen ? 1 : 0.5)}; */
   opacity: 0;
   transition: all 0.2s ease-in-out;
   transform: skewY(-5deg) rotate(7deg) translateY(-30px);
@@ -397,46 +390,3 @@ const DesktopDropdownWrappepr = styled.ul`
           visibility: hidden;
         `}
 `
-// const FundingWrapper = styled.div``
-
-// const MenueGroupWrapper = styled.div``
-
-// const GroupTitle = styled.div``
-// const LinkGroup = styled.div``
-
-// {
-//   /* <LeftLinks>
-//   {leftLinks.map((link) => (
-//     <li key={link.btn}>
-//       {link.btnUrl === "/company/" ? (
-//         <Button to={link.btnUrl} variant="navLink">
-//           {link.btn}
-//         </Button>
-//       ) : link.btnUrl === "/funding/" ? (
-//         <Button to={link.btnUrl} variant="navLink">
-//           {link.btn}
-//         </Button>
-//       ) : (
-//         <Button to={link.btnUrl} variant="navLink">
-//           {link.btn}
-//         </Button>
-//       )}
-//     </li>
-//   ))}
-// </LeftLinks>
-
-// <RightLinks>
-//   <li>
-//     <Button btnUrl="/" variant="primary">
-//       Get Funded
-//     </Button>
-//   </li>
-//   {rightLinks.map((link) => (
-//     <li key={link.btn}>
-//       <Button btnUrl={link.btnUrl} variant="navLink">
-//         {link.btn}
-//       </Button>
-//     </li>
-//   ))}
-// </RightLinks> */
-// }

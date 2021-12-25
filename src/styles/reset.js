@@ -53,13 +53,7 @@ export const reset = css`
   section {
     display: block;
   }
-  body {
-    font-size: 16px;
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
-      "Helvetica", "Segoe UI", "Arial", Roboto, Oxygen, Ubuntu, Cantarell,
-      "Open Sans", sans-serif;
-    line-height: 1;
-  }
+
   ol,
   ul {
     list-style: none;

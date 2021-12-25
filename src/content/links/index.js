@@ -23,6 +23,13 @@ const links = {
     },
     url: "/support/faq/",
   },
+  howItWorks: {
+    text: {
+      en: "How Funding Works",
+      es: "HIW Spanish",
+    },
+    url: "/how-funding-works/",
+  },
   partners: {
     text: {
       en: "Partners",

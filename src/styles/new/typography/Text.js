@@ -1,13 +1,29 @@
 import styled from "styled-components"
-// import { theme } from "./../theme"
+import { theme } from "./../../new/theme"
 
 export const BodyLarge = styled.p`
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.4;
+  ${theme.above.t.s} {
+    font-size: 19px;
+  }
+
+  ${theme.above.d.m} {
+    font-size: 20px;
+  }
 `
 export const Body = styled.p`
-  font-size: 18px;
+  font-weight: normal;
+  font-size: 16px;
   line-height: 1.5;
+
+  ${theme.above.t.s} {
+    font-size: 17px;
+  }
+
+  ${theme.above.d.m} {
+    font-size: 18px;
+  }
 `
 
 // color: ${theme.headingsColor};

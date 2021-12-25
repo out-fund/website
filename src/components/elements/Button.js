@@ -156,7 +156,7 @@ const ButtonWrap = styled.div`
             ${(props) =>
               props.isOpen
                 ? css`
-                    background-color: #deeeff;
+                    background-color: #fff;
                     /* visibility: visible; */
                     &:after {
                       opacity: 1;
