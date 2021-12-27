@@ -44,6 +44,10 @@ export const query = graphql`
               company
               logo
               title
+              tag {
+                text
+                color
+              }
               btn {
                 text
                 url

@@ -11,7 +11,7 @@ const CardLogoReadMore = (props) => {
   const { tag, company, logo, btn, image, bgc } = props
 
   return (
-    <Wrapper bgc={bgc}>
+    <Wrapper bgc={bgc} {...props}>
       <TextWrapper>
         {tag && (
           <Tag tagColor={tag.color}>
@@ -38,17 +38,34 @@ const CardLogoReadMore = (props) => {
 
 export default CardLogoReadMore
 
+const LogoWrapper = styled.div`
+  margin-top: auto;
+
+  svg {
+    max-width: 100%;
+    height: 32px;
+  }
+`
+
 const Wrapper = styled.div`
   max-width: 570px;
   position: relative;
   height: 370px;
-
+  border-radius: 10px;
   ${theme.above.t.s} {
     height: 470px;
   }
 
   ${theme.above.d.m} {
     height: 570px;
+  }
+  &.thevegankind {
+    ${LogoWrapper} {
+      svg {
+        width: 100px;
+        height: 95px;
+      }
+    }
   }
 `
 const ImageWrapper = styled.div`
@@ -82,15 +99,8 @@ const TextWrapper = styled.div`
     padding: 32px 64px 56px;
   }
 `
-const LogoWrapper = styled.div`
-  margin-top: auto;
 
-  svg {
-    max-width: 100%;
-    height: 32px;
-  }
-`
-const Tag = styled.div`
+const Tag = styled.h3`
   padding: 4px 16px;
   background-color: ${(props) => props.tagColor};
   backdrop-filter: blur(20px);

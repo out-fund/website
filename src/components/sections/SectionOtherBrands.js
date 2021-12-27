@@ -10,6 +10,7 @@ import {
 
 const SectionOtherBrands = (props) => {
   // console.log("otherBrands", props.data)
+  // const classN = story.frontmatter.card.company.toLowrCase().replace(/\s/g, "")
 
   return (
     <Section>
@@ -25,6 +26,10 @@ const SectionOtherBrands = (props) => {
                     company={story.frontmatter.card.company}
                     logo={story.frontmatter.card.logo}
                     image={story.frontmatter.card.image}
+                    className={story.frontmatter.card.company
+                      .toLowerCase()
+                      .split(" ")
+                      .join("")}
                   />
                 )}
               </Fragment>

@@ -2,9 +2,9 @@ import { br } from "./../tokens/breakpoints"
 
 export const above = {
   p: {
-    s: `@media (min-width: ${br.p.s}px)`, // 0 - 320 default CSS withou media quarry
-    m: `@media (min-width: ${br.p.m}px)`, // 320 - 380
-    l: `@media (min-width: ${br.p.l}px)`, // 380 - 500
+    s: `@media (min-width: ${br.p.s}px)`, // 0 - 370 default CSS withou media quarry
+    m: `@media (min-width: ${br.p.m}px)`, // 370 - 420
+    l: `@media (min-width: ${br.p.l}px)`, // 420 - 500
   },
   t: {
     s: `@media (min-width: ${br.t.s}px)`, // 500 - 720
