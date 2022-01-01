@@ -14,10 +14,9 @@ const SectionSupercharging = ({ data }) => {
             tag={data.card.tag}
             company={data.card.company}
             logo={data.card.logo}
-            title={data.card.title}
             image={data.card.image}
             btn={data.card.btn}
-            by={data.card.by}
+            quote={data.card.quote}
           />
         </ContentWrapper>
       </Wrapper>

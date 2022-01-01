@@ -70,16 +70,13 @@ const BtnWrapper = styled.div`
   /* margin-bottom: 32px; */
 `
 const ImageWrapper = styled.div`
-  /* border-radius: 10px; */
-  /* overflow: hidden;
-  height: 100%;
-  position: relative;
-  z-index: 1;
+  max-width: 560px;
 
   .gatsby-image-wrapper {
-    height: 100%;
+    border-radius: 10px;
     img {
-      object-position: left top;
+      /* object-position: left top; */
+      border-radius: 10px;
     }
-  } */
+  }
 `

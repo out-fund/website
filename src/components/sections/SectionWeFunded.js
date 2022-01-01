@@ -14,7 +14,6 @@ const SectionWeFunded = ({ data }) => {
         <SectionHeader title={data.title} description={data.description} />
         <ContentWrapper>
           <CardLogoReadMore
-            bgc="test"
             tag={data.cards.lemonadeDolls.tag}
             company={data.cards.lemonadeDolls.company}
             logo={data.cards.lemonadeDolls.logo}
@@ -22,13 +21,13 @@ const SectionWeFunded = ({ data }) => {
             btn={data.cards.lemonadeDolls.btn}
           />
           <CardFeatured
-            bgc="test"
+            bgc="#EDE3D9"
+            quote={data.cards.feel.quote}
             tag={data.cards.feel.tag}
             company={data.cards.feel.company}
             logo={data.cards.feel.logo}
             image={data.cards.feel.image}
             btn={data.cards.feel.btn}
-            by={data.cards.feel.by}
           />
         </ContentWrapper>
       </Wrapper>

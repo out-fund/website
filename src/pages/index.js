@@ -122,9 +122,11 @@ export const query = graphql`
       startSupercharging {
         card {
           logo
-          by
+          quote {
+            by
+            title
+          }
           company
-          title
           tag {
             text
             color
@@ -149,7 +151,6 @@ export const query = graphql`
         title
         cards {
           feel {
-            by
             company
             btn {
               text
@@ -160,7 +161,10 @@ export const query = graphql`
               text
               color
             }
-            title
+            quote {
+              by
+              title
+            }
             image {
               src {
                 childImageSharp {

@@ -103,14 +103,13 @@ const TextWrapper = styled.div`
 const Tag = styled.h3`
   padding: 4px 16px;
   background-color: ${(props) => props.tagColor};
-  backdrop-filter: blur(20px);
+  /* backdrop-filter: blur(20px); */
   border-radius: 4px;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   color: #000000;
-
   align-self: flex-start;
 `
 const BtnWrapper = styled.div`
