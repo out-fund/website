@@ -8,7 +8,7 @@ const SectionSupercharging = ({ data }) => {
     <Section>
       <Wrapper>
         <ContentWrapper>
-          <CardCta title={data.title} btn={data.btn} />
+          <CardCta title={data.title} btn={data.btn} bgc="#F2F6FA" />
           <CardFeatured
             bgc="#0E3674"
             tag={data.card.tag}

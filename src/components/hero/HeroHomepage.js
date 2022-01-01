@@ -29,7 +29,9 @@ export default HeroHomepage
 const Title = styled(T.H1)``
 const Description = styled(T.BodyLarge)``
 
-const HeroWrapper = styled.header``
+const HeroWrapper = styled.header`
+  background-color: #f2f6fa;
+`
 const ImageWrapper = styled.div`
   max-width: 400px;
 `

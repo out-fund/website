@@ -15,8 +15,6 @@ const ImageSwiper = ({ data }) => {
   return (
     <Wrapper>
       <Swiper
-        slidesPerView={5}
-        spaceBetween={24}
         freeMode={true}
         grabCursor={true}
         speed={9000}
@@ -26,16 +24,24 @@ const ImageSwiper = ({ data }) => {
           pauseOnMouseEnter: true,
         }}
         breakpoints={{
-          640: {
+          300: {
             slidesPerView: 2,
-            spaceBetween: 20,
+            spaceBetween: 24,
+          },
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 24,
           },
           768: {
             slidesPerView: 4,
-            spaceBetween: 40,
+            spaceBetween: 24,
           },
           1024: {
             slidesPerView: 5,
+            spaceBetween: 24,
+          },
+          1200: {
+            slidesPerView: 10,
             spaceBetween: 24,
           },
         }}
@@ -56,8 +62,9 @@ export default ImageSwiper
 
 const Image = styled.div`
   position: relative;
-  width: 160px;
-  height: 200px;
+  /* width: 160px; */
+  /* width: 50%; */
+  /* height: 200px; */
   /* object-fit: cover; */
 `
 const Name = styled.div`
@@ -67,9 +74,10 @@ const Name = styled.div`
 `
 
 const Wrapper = styled.div`
+  background-color: #afa;
   .swiper {
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
   }
 
   .swiper-slide {

@@ -6,9 +6,9 @@ import T from "./../../styles/new/typography"
 import { Button } from "./../../components"
 import { theme } from "./../../styles/new/theme"
 
-const CardCta = ({ title, btn }) => {
+const CardCta = ({ title, btn, bgc }) => {
   return (
-    <Wrapper>
+    <Wrapper bgc={bgc}>
       <TextWrapper>
         <Title as="h2">{parse(title)}</Title>
         <BtnWrapper>
@@ -46,7 +46,7 @@ const TextWrapper = styled.div`
 const BtnWrapper = styled.div``
 
 const Wrapper = styled.div`
-  background-color: ${theme.color.white};
+  background-color: ${({ bgc }) => (bgc ? bgc : theme.color.white)};
   max-width: 570px;
   position: relative;
   height: 370px;

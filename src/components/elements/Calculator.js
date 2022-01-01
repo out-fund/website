@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 import { Button } from "./../../components"
 import T from "./../../styles/new/typography"
+import { theme } from "./../../styles/new/theme"
 
 const Calculator = ({ data }) => {
   return (
@@ -62,7 +63,16 @@ const BtnWrapper = styled.div``
 // `
 
 const Wrapper = styled.div`
-  background-color: #fff;
+  background-color: ${theme.color.background.emphesized};
+  padding: 32px 24px;
+
+  ${theme.above.t.s} {
+    padding: 48px 24px;
+  }
+
+  ${theme.above.d.m} {
+    padding: 64px 32px;
+  }
 `
 //   ;
 //   box-shadow: ${theme.shadows.boxShadow};

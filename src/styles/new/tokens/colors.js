@@ -25,8 +25,8 @@ export const colorVariables = css`
 export const color = {
   white: "var(--white)",
   background: {
-    default: "var(--background)",
-    emphesized: "var(--background)",
+    default: "var(--white)",
+    emphesized: "var(--gray100)",
   },
   storke: {
     default: "var(--gray200)",

@@ -328,6 +328,7 @@ const Menue = styled.button`
   border: 1px solid ${theme.color.button.primary.backgroundColor};
   border-radius: 28px;
   display: flex;
+  background-color: transparent;
   svg {
     width: 24px;
     height: 16px;
@@ -355,7 +356,6 @@ const DesktopLinksWrapper = styled.ul`
 
 const DesktopDropdownWrappepr = styled.ul`
   position: absolute;
-
   left: 0;
   top: ${theme.size.navbarHeight}px;
   z-index: 99;

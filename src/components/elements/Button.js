@@ -157,14 +157,11 @@ const ButtonWrap = styled.div`
               props.isOpen
                 ? css`
                     background-color: #fff;
-                    /* visibility: visible; */
                     &:after {
                       opacity: 1;
                     }
                   `
-                : css`
-                    /* visibility: hidden; */
-                  `}
+                : ""}
           `
         : ""};
 

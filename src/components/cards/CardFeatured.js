@@ -22,7 +22,7 @@ const CardFeatured = (props) => {
           </Tag>
         )}
         <LogoWrapper>{parse(logo)}</LogoWrapper>
-        <Title>{quote.title}</Title>
+        <Quote as="q">{quote.title}</Quote>
         <By>{quote.by}</By>
         {btn && (
           <BtnWrapper>
@@ -41,7 +41,7 @@ const CardFeatured = (props) => {
 
 export default CardFeatured
 
-const Title = styled(T.H3)`
+const Quote = styled(T.H3)`
   font-weight: 400;
 `
 const By = styled.div``
@@ -57,6 +57,14 @@ const Wrapper = styled.div`
   border-radius: 10px;
   &.feel {
     padding-right: 16px;
+  }
+  &.onto {
+    q,
+    div {
+      color: #deeeff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
   }
 `
 

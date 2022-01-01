@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { graphql, Link } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { graphql } from "gatsby"
+// import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import EnLayout from "layouts/en"
 
@@ -34,7 +34,7 @@ export const query = graphql`
   }
 `
 const Wrapper = styled.div``
-const List = styled.ul``
-const Item = styled.li``
-const CardPost = styled.div``
+// const List = styled.ul``
+// const Item = styled.li``
+// const CardPost = styled.div``
 const ContentWrapper = styled.div``

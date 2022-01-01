@@ -1,6 +1,7 @@
 import * as React from "react"
 import GlobalLayout from "./../layouts/GlobalLayout"
 import Navbar from "./../components/elements/Navbar"
+import "./../styles/new/typography/font.css"
 // import Footer from "components/Footer"
 
 const EN = ({ children }) => {
