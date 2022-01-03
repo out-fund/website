@@ -68,13 +68,13 @@ const TextWrapper = styled.div`
 `
 
 const Grid = styled.ul`
-  /* display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   column-gap: 24px;
   row-gap: 24px;
   margin-bottom: 40px;
 
-  theme.above.tablet} {
+  /* theme.above.tablet} {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 32px;
   }
@@ -91,13 +91,13 @@ const BlockTitle = styled(T.H6)`
 
 const IconWrapper = styled.div`
   /* margin-bottom: 16px;
-  text-align: center;
-  theme.above.tablet} {
-  }
+  text-align: center; */
+  /* theme.above.tablet} {
+  } */
   svg {
     width: 48px;
     height: 48px;
-  } */
+  }
 `
 const BlockDescription = styled(T.Body)`
   /* text-align: center; */

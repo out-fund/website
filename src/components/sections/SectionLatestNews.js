@@ -33,13 +33,13 @@ export default SectionLatestNews
 const Wrapper = styled.div``
 const ContentWrapper = styled.div``
 const GridNews = styled.div`
-  /* display: grid;
+  display: grid;
   grid-template-columns: repeat(1, 1fr);
   column-gap: 30px;
-  margin-bottom: 64px;
+  /* margin-bottom: 64px; */
   row-gap: 30px;
 
-
+  /* 
   theme.above.tablet} {
     grid-template-columns: repeat(1, 1fr);
 

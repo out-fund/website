@@ -71,6 +71,9 @@ const MobileLinks = ({ lang }) => {
         <Button to={links.aboutUs.url} variant="navLink">
           {links.aboutUs.text[lang]}
         </Button>
+        <Button to={links.careers.url} variant="navLink">
+          {links.careers.text[lang]}
+        </Button>
         <Button to={links.successStories.url} variant="navLink">
           {links.successStories.text[lang]}
         </Button>
@@ -256,6 +259,15 @@ const Nav = styled.nav`
   backdrop-filter: blur(20px);
 `
 const LogoWrapper = styled.div`
+  height: 100%;
+  div {
+    height: 100%;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
   svg {
     height: 24px;
   }

@@ -4,6 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 
 import { VisuallyHidden } from "./../../styles/utils"
+import { theme } from "./../../styles/new/theme"
 
 const CardFounder = ({ company, logo, image }) => {
   return (
@@ -22,25 +23,28 @@ const CardFounder = ({ company, logo, image }) => {
 export default CardFounder
 
 const Wrapper = styled.div`
-  /* background-color: #fff;
   max-width: 370px;
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: theme.shadows.boxShadow}; */
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px 17px 33px rgba(5, 24, 64, 0.07),
+    0px 3.8002px 13.45px rgba(5, 24, 64, 0.0522616),
+    0px 1.07885px 7.14579px rgba(5, 24, 64, 0.0377807);
 `
 const ImageWrapper = styled.div``
 const CompanyWrapper = styled.div`
-  /* height: 64px;
-  display: grid;
+  background-color: ${theme.color.white};
+  height: 64px;
+  display: flex;
   align-items: center;
+  justify-content: flex-start;
   padding: 0 24px;
-  theme.above.tablet} {
-    height: 80px;
-  } */
 `
 const LogoWrapper = styled.div`
-  /* svg {
+  svg {
+    width: 100%;
     max-width: 190px;
-    max-height: 24px;
-  } */
+    height: 24px;
+  }
 `

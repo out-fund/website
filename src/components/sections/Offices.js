@@ -61,20 +61,20 @@ const ImageWrapper = styled.div`
   margin-bottom: 80px; */
 `
 const OfficeList = styled.div`
-  /* display: grid;
-  grid-template-rows: auto;
+  display: grid;
+  grid-template-columns: 1fr;
   row-gap: 32px;
 
-  breakpoints.tablet} {
+  /* breakpoints.tablet} {
     grid-template-columns: 1fr 3fr;
     column-gap: 16px;
   } */
 `
 
 const OfficesWorld = styled.div`
-  /* display: grid;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 16px; */
+  column-gap: 16px;
 `
 const Office = styled.div`
   /* h4 {

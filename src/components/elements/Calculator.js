@@ -4,34 +4,37 @@ import styled from "styled-components"
 import { Button } from "./../../components"
 import T from "./../../styles/new/typography"
 import { theme } from "./../../styles/new/theme"
+import F from "./../../styles/new/form"
 
 const Calculator = ({ data }) => {
   return (
     <Wrapper>
-      <Title>{data.title}</Title>
-      <Selected>£100 000</Selected>
-      <div className="range">
+      <TextWrapper>
+        <Title>{data.title}</Title>
+        <Selected>£100 000</Selected>
+      </TextWrapper>
+      <RangeWrapper>
         <div className="top">
           <div>{data.min}</div>
           <div>{data.max}</div>
         </div>
 
         <input className="slider" type="range" min="1" max="100" step="1" />
-      </div>
-      <div className="select">
+      </RangeWrapper>
+      <SelectWrapper>
         <label className="label" htmlFor="reasons">
           {data.select.title}
         </label>
         <div className="dropdown">
-          <select name="reasons" id="reasons">
+          <F.Select name="reasons" id="reasons">
             {data.select.dropdown.map((item) => (
               <option key={item} value={item}>
                 {item}
               </option>
             ))}
-          </select>
+          </F.Select>
         </div>
-      </div>
+      </SelectWrapper>
       <BtnWrapper>
         <Button to={data.btn.url} variant="primary" size="large">
           {data.btn.text}
@@ -61,6 +64,32 @@ const BtnWrapper = styled.div``
 //     width: 100%;
 //   }
 // `
+
+const RangeWrapper = styled.div`
+  width: 100%;
+  margin-bottom: 40px;
+  .top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  input {
+    width: 100%;
+  }
+`
+
+const SelectWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 40px;
+  select {
+    width: 100%;
+  }
+`
+
+const TextWrapper = styled.div``
 
 const Wrapper = styled.div`
   background-color: ${theme.color.background.emphesized};

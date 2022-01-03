@@ -43,11 +43,11 @@ const SectionInOfficeRemote = ({ data, officeData }) => {
 export default SectionInOfficeRemote
 
 const Grid = styled.ul`
-  /* display: grid;
+  display: grid;
   grid-template-columns: repeat(1, 1fr);
   row-gap: 24px;
 
-    eme.above.tablet} {
+  /* eme.above.tablet} {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 24px;
   }
@@ -60,10 +60,10 @@ const Block = styled.li`
   text-align: center;
 `
 const IconWrapper = styled.div`
-  /* svg {
+  svg {
     width: 48px;
     height: 48px;
-  } */
+  }
 `
 const BtnWrapper = styled.div`
   /* text-align: center;

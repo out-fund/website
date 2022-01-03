@@ -35,12 +35,12 @@ const Wrapper = styled.div``
 const ContentWrapper = styled.div``
 
 const Grid = styled.ul`
-  /* display: grid;
+  display: grid;
   grid-template-columns: repeat(1, 1fr);
   column-gap: 24px;
   row-gap: 24px;
 
-  theme.above.tablet} {
+  /* theme.above.tablet} {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 40px;
     row-gap: 40px;

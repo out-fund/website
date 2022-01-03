@@ -75,11 +75,12 @@ const ImageWrapper = styled.div`
 `
 
 const PeopleGrid = styled.div`
-  /* display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 24px;
   row-gap: 24px;
 
-  theme.above.tablet} {
+  /* theme.above.tablet} {
     row-gap: 32px;
   }
   theme.above.laptop} {

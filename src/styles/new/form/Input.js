@@ -24,6 +24,10 @@ export const Form = styled.form`
 export const InputText = styled.input`
   ${sharedInput}
 `
+export const Select = styled.select`
+  ${sharedInput}
+  appearance: none;
+`
 
 export const InputEmail = styled.input`
   ${sharedInput}

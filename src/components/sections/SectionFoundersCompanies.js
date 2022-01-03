@@ -42,28 +42,31 @@ const Wrapper = styled.div``
 const ContentWrapper = styled.div``
 
 const GridFounders = styled.div`
-  /* display: grid;
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 30px;
   margin-bottom: 64px;
   row-gap: 30px;
+  /* align-content: center;
+  justify-items: stretch; */
+  place-items: center;
 
-  theme.above.tablet} {
+  /* theme.above.tablet} {
   }
   theme.above.laptop} {
     grid-template-columns: repeat(4, 1fr);
   } */
 `
 const GridLogos = styled.div`
-  /* display: grid;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
   align-items: center;
   column-gap: 40px;
   row-gap: 24px;
-  margin-bottom: 64px; */
+  margin-bottom: 64px;
 `
 const LogoWrapper = styled.div`
-  /* display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 
@@ -74,7 +77,7 @@ const LogoWrapper = styled.div`
     path {
       fill: #405e80;
     }
-  } */
+  }
 `
 const BtnWrapper = styled.div`
   /* text-align: center; */
