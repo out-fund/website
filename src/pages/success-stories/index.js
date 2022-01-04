@@ -44,7 +44,6 @@ export const query = graphql`
             card {
               company
               logo
-              title
               tag {
                 text
                 color

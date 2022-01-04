@@ -43,6 +43,7 @@ import CardFounder from "./cards/CardFounder"
 import CardNews from "./cards/CardNews"
 import SectionPartners from "./sections/SectionPartners"
 import SectionWhy from "./sections/SectionWhy"
+import CardFounderName from "./cards/CardFounderName"
 
 export {
   SectionWeAreInvesting,
@@ -86,4 +87,5 @@ export {
   Offices,
   SectionPartners,
   SectionWhy,
+  CardFounderName,
 }

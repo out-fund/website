@@ -94,7 +94,7 @@ const ButtonWrap = styled.div`
             :hover {
               background-color: ${(props) =>
                 props.color === "white"
-                  ? theme.color.white
+                  ? "rgba(255,255,255, 0.2)"
                   : theme.color.button.secondary.hover};
             }
           `
@@ -135,8 +135,6 @@ const ButtonWrap = styled.div`
 
             &:after {
               position: relative;
-              /* top: 17px;
-              right: 12px; */
               display: inline-block;
               width: 8px;
               height: 6px;

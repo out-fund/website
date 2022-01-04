@@ -23,12 +23,13 @@ const MobileLinks = ({ lang }) => {
   const mobileDropdownRef = useRef()
 
   const handleMobileMenueClick = (event) => {
+    // console.log("test")
     event.preventDefault()
     setMobileMenueIsOpen(!mobileMenueIsOpen)
   }
 
   const handleMobileClickOutside = (event) => {
-    console.log("mobile doc is clicked")
+    // console.log("mobile doc is clicked")
     if (
       mobileButtonRef.current &&
       !mobileButtonRef.current.contains(event.target) &&
@@ -145,6 +146,14 @@ function DesktopLinks({ lang }) {
     setFundingIsOpen(false)
     // console.log("event", event)
   }
+  // const handleCompanyMouseEnter = (event) => {
+  //   // console.log("test", event)
+  //   setCompanyIsOpen(true)
+  // }
+  // const handleCompanyMouseLeave = (event) => {
+  //   // console.log("test", event)
+  //   setCompanyIsOpen(false)
+  // }
 
   const handleFundingClick = (event) => {
     event.preventDefault()
@@ -178,6 +187,8 @@ function DesktopLinks({ lang }) {
         <Button
           variant="navDropDown"
           onClick={(event) => handleCompanyClick(event)}
+          // onMouseEnter={(event) => handleCompanyMouseEnter(event)}
+          // onMouseLeave={(event) => handleCompanyMouseLeave(event)}
           isOpen={companyIsOpen}
         >
           {links.company.text[lang]}
