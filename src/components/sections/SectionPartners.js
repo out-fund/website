@@ -24,4 +24,6 @@ export default SectionPartners
 
 const Wrapper = styled.div``
 const ContentWrapper = styled.div``
-const ImageWrapper = styled.div``
+const ImageWrapper = styled.div`
+  max-width: 548px;
+`

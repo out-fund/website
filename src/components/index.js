@@ -15,6 +15,8 @@ import Offices from "./sections/Offices"
 // --------------------
 
 import Main from "./elements/Main"
+import Navbar from "./elements/Navbar"
+import Footer from "./elements/Footer"
 import Section from "./elements/Section"
 import SectionWeFunded from "./sections/SectionWeFunded"
 import SectionHeader from "./elements/SectionHeader"
@@ -56,6 +58,8 @@ export {
   SectionFindOut,
   //
   Main,
+  Navbar,
+  Footer,
   Section,
   SectionWeFunded,
   SectionHeader,

@@ -5,6 +5,7 @@ import {
   HeroSimple,
   SectionFeaturedCards,
   SectionOtherBrands,
+  Main,
 } from "./../../components"
 
 import EnLayout from "layouts/en"
@@ -14,14 +15,14 @@ const SuccessStories = ({ data }) => {
   // console.log(data)
   return (
     <EnLayout>
-      <main>
-        <HeroSimple data={data.successStoriesJson.hero} />
+      <HeroSimple data={data.successStoriesJson.hero} />
+      <Main>
         <SectionFeaturedCards data={data.allMdx.edges} />
         <SectionOtherBrands
           data={data.allMdx.edges}
           content={data.successStoriesJson.otherBrands}
         />
-      </main>
+      </Main>
     </EnLayout>
   )
 }

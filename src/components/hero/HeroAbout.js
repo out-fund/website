@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import T from "./../../styles/new/typography"
+import { theme } from "./../../styles/new/theme"
 
 const HeroAbout = ({ data }) => {
   const { title, image, description } = data
@@ -27,18 +28,24 @@ const HeroAbout = ({ data }) => {
 export default HeroAbout
 
 const Title = styled(T.H1)`
-  /* color: #fff;
-  text-align: center; */
+  max-width: 970px;
+  text-align: center;
 `
 
 const Description = styled(T.BodyLarge)`
-  /* color: #fff;
+  max-width: 770px;
   text-align: center;
-  margin-top: 16px; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #1c3654;
 `
 
 const HeroWrapper = styled.header`
-  /* margin: 0 16px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: ${theme.color.background.emphesized};
+  gap: 16px;
 `
 const Wrapper = styled.div``
 const ContentWrapper = styled.div`

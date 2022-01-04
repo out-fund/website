@@ -46,7 +46,8 @@ const TextWrapper = styled.div`
 const BtnWrapper = styled.div``
 
 const Wrapper = styled.div`
-  background-color: ${({ bgc }) => (bgc ? bgc : theme.color.white)};
+  background-color: ${({ bgc }) =>
+    bgc ? bgc : theme.color.background.emphesized};
   max-width: 570px;
   position: relative;
   height: 370px;

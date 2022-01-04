@@ -251,12 +251,18 @@ const Nav = styled.nav`
   background-color: #fff;
   position: fixed;
   width: 100%;
+  /* width: calc(100% - 48px); */
+  /* top: 24px; */
   top: 0;
   right: 0;
+  /* right: 24px; */
+  left: 0;
+  /* left: 24px; */
   z-index: 100;
-
+  /* padding: 0 24px; */
   background: rgba(242, 246, 250, 0.9);
   backdrop-filter: blur(20px);
+  /* border-radius: 10px; */
 `
 const LogoWrapper = styled.div`
   height: 100%;
@@ -286,8 +292,18 @@ const Wrapper = styled.div`
   }
   max-width: 1218px;
   margin: 0 auto;
-  padding-left: 24px;
-  padding-right: 24px;
+
+  padding: 0 8px;
+
+  ${theme.above.p.m} {
+    padding: 0 16px;
+  }
+  ${theme.above.t.s} {
+    padding: 0 20px;
+  }
+  ${theme.above.l.m} {
+    padding: 0 24px;
+  }
 `
 
 const MobileLinksWrapper = styled.div`

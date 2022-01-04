@@ -2,6 +2,7 @@ import React, { Fragment } from "react"
 import styled from "styled-components"
 
 import { Section, CardLogoReadMore } from "./../../components"
+import { theme } from "./../../styles/new/theme"
 
 const SectionFeaturedCards = (props) => {
   // console.log("SectionFeaturedCards", props.data)
@@ -34,16 +35,29 @@ const SectionFeaturedCards = (props) => {
 export default SectionFeaturedCards
 
 const Wrapper = styled.div`
-  /* margin-top: 64px; */
+  margin-top: 64px;
 `
 const ContentWrapper = styled.div``
 const CardsWrapper = styled.div`
-  /* display: grid;
+  display: grid;
   grid-template-columns: repeat(1, 1fr);
-  column-gap: 30px;
   row-gap: 30px;
 
-  theme.above.tablet} {
+  ${theme.above.p.m} {
+  }
+
+  ${theme.above.t.s} {
     grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    column-gap: 30px;
+  }
+  ${theme.above.l.m} {
+    grid-template-columns: repeat(2, 570px);
+  }
+
+  /* ${theme.above.d.m} {
+    grid-template-columns: repeat(2, 570px);
+    justify-content: center;
+    column-gap: 30px;
   } */
 `

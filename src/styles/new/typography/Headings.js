@@ -9,13 +9,16 @@ const sharedHeading = css`
 export const H1 = styled.h1`
   ${sharedHeading}
   font-weight: 800;
-  font-size: 40px;
+  font-size: 32px;
 
   ${theme.above.p.m} {
-    font-size: 48px;
+    font-size: 40px;
   }
 
   ${theme.above.t.s} {
+    font-size: 48px;
+  }
+  ${theme.above.l.m} {
     font-size: 56px;
   }
 
