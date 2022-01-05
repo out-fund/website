@@ -4,7 +4,8 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 
 import { Section } from "./../../components"
-import T from "../../styles/new/typography"
+import T from "./../../styles/new/typography"
+import { theme } from "./../../styles/new/theme"
 
 const SectionWeGrow = ({ data }) => {
   const { title, description, teamWorked, image } = data
@@ -16,7 +17,7 @@ const SectionWeGrow = ({ data }) => {
             <Title as="h2">{title}</Title>
             <Description as="div">{parse(description)}</Description>
             <TeamWorkedWrapper>
-              <BlockTitle as="h4">{teamWorked.title}</BlockTitle>
+              <BlockTitle as="h3">{teamWorked.title}</BlockTitle>
               <LogosWrap>{parse(teamWorked.logos)}</LogosWrap>
             </TeamWorkedWrapper>
           </TextWrapper>
@@ -30,11 +31,11 @@ const SectionWeGrow = ({ data }) => {
 }
 export default SectionWeGrow
 
-const Title = styled(T.H3)`
-  /* margin-bottom: 16px; */
+const Title = styled(T.H2)`
+  margin-bottom: 16px;
 `
-const Description = styled(T.Body)`
-  /* margin-bottom: 24px;
+const Description = styled(T.BodyLarge)`
+  margin-bottom: 40px;
   ul {
     margin-top: 16px;
     list-style-position: inside;
@@ -43,7 +44,7 @@ const Description = styled(T.Body)`
       display: list-item;
     }
   }
-  theme.above.tablet} {
+  /* theme.above.tablet} {
     margin-bottom: 48px;
   }
   theme.above.desktop} {
@@ -51,28 +52,31 @@ const Description = styled(T.Body)`
   } */
 `
 const TeamWorkedWrapper = styled.div``
-const BlockTitle = styled(T.H6)`
+
+const BlockTitle = styled(T.H3)`
   margin-bottom: 24px;
 `
 const LogosWrap = styled.div`
-  /* svg {
+  svg {
     max-width: 328px;
-  } */
+  }
 `
 
 const Wrapper = styled.div``
 const ContentWrapper = styled.div`
-  /* display: grid;
+  display: grid;
   grid-template-columns: repeat(1, 1fr);
   row-gap: 40px;
-  theme.above.tablet} {
-    grid-template-columns: repeat(2, 1fr);
+  max-width: 1370px;
+  margin: 0 auto;
+  ${theme.above.t.m} {
+    grid-template-columns: 570fr 670fr;
     align-items: center;
     column-gap: 40px;
   }
-  theme.above.laptop} {
+  ${theme.above.l.m} {
     column-gap: 80px;
-  } */
+  }
 `
 
 const TextWrapper = styled.div``

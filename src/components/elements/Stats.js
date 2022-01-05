@@ -21,8 +21,12 @@ const Stats = ({ data }) => {
 
 export default Stats
 
-const Title = styled(T.H3)``
-const Description = styled(T.BodyLarge)``
+const Title = styled(T.H3)`
+  text-align: center;
+`
+const Description = styled(T.Body)`
+  text-align: center;
+`
 const Grid = styled.ul`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -37,4 +41,7 @@ const Grid = styled.ul`
 `
 const Block = styled.li``
 
-const Wrapper = styled.section``
+const Wrapper = styled.section`
+  max-width: 970px;
+  margin: 0 auto;
+`

@@ -8,4 +8,5 @@ export default Section
 
 const SectionWrapper = styled.section`
   margin-bottom: 120px;
+  margin-top: 120px;
 `
