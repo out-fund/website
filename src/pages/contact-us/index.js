@@ -184,12 +184,6 @@ const Form = styled.div`
 
     background-color: ${theme.color.background.emphesized};
     border-radius: 10px;
-    /* box-shadow: 0px 100px 80px rgba(1, 14, 25, 0.07),
-      0px 41.7776px 33.1139px rgba(1, 14, 25, 0.0503198),
-      0px 22.3363px 16.2366px rgba(1, 14, 25, 0.0417275),
-      0px 12.5216px 7.80488px rgba(1, 14, 25, 0.035),
-      0px 6.6501px 3.28033px rgba(1, 14, 25, 0.0282725),
-      0px 2.76726px 0.952807px rgba(1, 14, 25, 0.0196802); */
 
     row-gap: 24px;
     ${theme.above.l.m} {
@@ -208,6 +202,9 @@ const Form = styled.div`
     breakpoints.largeDesktop} {
       padding: 64px 56px;
     } */
+    button {
+      width: 100%;
+    }
   }
 `
 

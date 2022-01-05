@@ -60,7 +60,7 @@ const ButtonWrap = styled.div`
     white-space: nowrap;
     text-align: center;
     border: none;
-    border-radius: 20px;
+    border-radius: 22px;
     cursor: pointer;
     user-select: none;
 
@@ -168,13 +168,13 @@ const ButtonWrap = styled.div`
         ? css`
             font-size: 18px;
             padding: 12px 32px;
-            border-radius: 24px;
+            border-radius: 26px;
           `
         : size === "small"
         ? css`
             font-size: 14px;
             padding: 8px 16px;
-            border-radius: 18px;
+            border-radius: 20px;
           `
         : ""};
   }
