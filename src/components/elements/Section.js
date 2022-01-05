@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
-const Section = ({ children }) => {
-  return <SectionWrapper>{children}</SectionWrapper>
+const Section = ({ children, ...props }) => {
+  return <SectionWrapper {...props}>{children}</SectionWrapper>
 }
 export default Section
 

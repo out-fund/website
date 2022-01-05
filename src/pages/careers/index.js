@@ -146,6 +146,7 @@ export const query = graphql`
       statement
       description
       blocks {
+        title
         icon
         text
       }

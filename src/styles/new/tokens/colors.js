@@ -32,7 +32,8 @@ export const color = {
     default: "var(--gray200)",
   },
   text: {
-    body: "var(--gray400)",
+    // body: "var(--gray400)",
+    body: "var(--gray500)",
     placeholder: "var(--gray300)",
     headings: "var(--gray500)",
   },

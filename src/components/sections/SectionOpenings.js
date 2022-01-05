@@ -3,16 +3,20 @@ import styled from "styled-components"
 
 import { Section, Button, SectionHeader } from "./../../components"
 import T from "./../../styles/new/typography"
+import { theme } from "./../../styles/new/theme"
 
-// import ExpandIcon from "images/svg/expand-right.svg"
+import ExpandIcon from "images/svg/expand-right.svg"
 
 const SectionOpenings = ({ data }) => {
   const { title, description, openings, openApplication, btn } = data
   return (
-    <Section>
-      <Wrapper id="open-positions">
+    <Section id="open-positions">
+      <Wrapper>
         <ContentWrapper>
-          <SectionHeader title={title} description={description} />
+          <HeaderWrapper>
+            <SectionHeader title={title} description={description} />
+          </HeaderWrapper>
+
           <OpeningsWrapper>
             <Grid>
               {openings.map((opening, index) => (
@@ -22,30 +26,31 @@ const SectionOpenings = ({ data }) => {
                     <Details>
                       {opening.location} | {opening.time}
                     </Details>
+                    <IconWrap>
+                      <ExpandIcon />
+                    </IconWrap>
                   </WorkableLink>
-                  {/* <IconWrap>
-                    <ExpandIcon />
-                  </IconWrap> */}
                 </Opening>
               ))}
-              <Opening>
-                <PositionTitle as="h5">{openApplication.title}</PositionTitle>
-                <OpenApplication>
-                  {openApplication.description}{" "}
-                  <a
-                    href={`mailto:${openApplication.email}?subject='Outfund-Openapplication'`}
-                  >
-                    {openApplication.email}
-                  </a>
-                </OpenApplication>
-              </Opening>
             </Grid>
             <BtnWrapper>
-              <Button href={btn.url} variant="secondary" target="_blank">
+              <Button href={btn.url} variant="primary" target="_blank">
                 {btn.text}
               </Button>
             </BtnWrapper>
           </OpeningsWrapper>
+
+          <CantFindWrapper>
+            <PositionTitle as="h5">{openApplication.title}</PositionTitle>
+            <OpenApplication>
+              {openApplication.description}{" "}
+              <a
+                href={`mailto:${openApplication.email}?subject='Outfund-Openapplication'`}
+              >
+                {openApplication.email}
+              </a>
+            </OpenApplication>
+          </CantFindWrapper>
         </ContentWrapper>
       </Wrapper>
     </Section>
@@ -53,60 +58,70 @@ const SectionOpenings = ({ data }) => {
 }
 export default SectionOpenings
 
-const PositionTitle = styled(T.H6)``
+const PositionTitle = styled(T.H5)``
 const OpenApplication = styled(T.Body)`
-  /* margin-top: 8px; */
+  margin-top: 16px;
 `
-const Details = styled.span`
-  /* margin-left: 16px;
-  color: #405e80; */
+const Details = styled(T.Body)`
+  margin-left: 24px;
+  color: #405e80;
 `
-// const IconWrap = styled.div`
-//   /* svg {
-//     width: 24px;
-//     height: 24px;
-//   } */
-// `
 
-const Wrapper = styled.div`
-  /* background-color: #fff;
-  border-radius: 10px; */
+const HeaderWrapper = styled.div`
+  text-align: center;
+  max-width: 540px;
+  margin: 0 auto;
 `
+
+const IconWrap = styled.div`
+  display: flex;
+  margin-left: auto;
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+`
+
+const CantFindWrapper = styled.div`
+  background-color: ${theme.color.background.emphesized};
+  padding: 40px;
+  border-radius: 10px;
+  margin-top: 40px;
+`
+
+const Wrapper = styled.div``
 const ContentWrapper = styled.div`
   /* padding-bottom: 80px; */
+  max-width: 970px;
+  margin: 0 auto;
 `
 
-const OpeningsWrapper = styled.div``
+const OpeningsWrapper = styled.div`
+  margin-top: 40px;
+`
+
 const Grid = styled.ul`
-  /* display: grid;
-  grid-template-columns: repeat(1, auto);
-  border-top: 1px solid #bbc7d6; */
+  display: flex;
+  flex-direction: column;
+  max-width: 970px;
 `
-const Opening = styled.li`
-  /* &:not(:last-child) {
-    display: grid;
-    grid-template-columns: auto 24px;
-    align-items: center;
-    padding-right: 24px;
-    border-bottom: 1px solid #bbc7d6;
-    :hover {
-      background-color: #f2f6fa;
-    }
-  }
-  &:last-child {
-    max-width: 670px;
-    padding: 24px;
-  } */
-`
+const Opening = styled.li``
 const WorkableLink = styled.a`
-  /* text-decoration: none;
   display: flex;
   align-items: baseline;
-  padding: 24px;
-  color: inherit; */
+  align-items: center;
+  text-decoration: none;
+  width: 100%;
+
+  padding: 16px 24px;
+  border-radius: 30px;
+
+  &:hover {
+    background-color: ${theme.color.background.emphesized};
+  }
 `
 
 const BtnWrapper = styled.div`
-  /* text-align: center;
-  margin-top: 48px; */
+  text-align: center;
+  margin-top: 40px;
 `

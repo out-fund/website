@@ -34,11 +34,11 @@ const SectionCoolPeople = ({ data }) => {
               </Person>
             ))}
           </PeopleGrid>
-          <BtnWrapper>
+          {/* <BtnWrapper>
             <Button to={btn.url} variant="secondary">
               {btn.text}
             </Button>
-          </BtnWrapper>
+          </BtnWrapper> */}
         </ContentWrapper>
       </Wrapper>
     </Section>
@@ -71,10 +71,10 @@ const HeaderWrapper = styled.div`
   margin-bottom: 64px;
 `
 const TextWrapper = styled.div``
-const BtnWrapper = styled.div`
-  text-align: center;
-  margin-top: 64px;
-`
+// const BtnWrapper = styled.div`
+//   text-align: center;
+//   margin-top: 64px;
+// `
 const ImageWrapper = styled.div`
   max-width: 80px;
   ${theme.above.t.m} {
@@ -95,15 +95,15 @@ const ImageWrapper = styled.div`
 
 const PeopleGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   column-gap: 24px;
   row-gap: 24px;
 
-  ${theme.above.t.s} {
-    /* row-gap: 32px; */
+  ${theme.above.t.l} {
+    grid-template-columns: repeat(2, 1fr);
   }
   ${theme.above.l.m} {
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
     /* column-gap: 80px; */
     /* row-gap: 80px; */
   }

@@ -215,11 +215,11 @@ function DesktopLinks({ lang }) {
           {links.partners.text[lang]}
         </Button>
       </li>
-      {/* <li>
+      <li>
         <Button to={links.contactUs.url} variant="navLink">
           {links.contactUs.text[lang]}
         </Button>
-      </li> */}
+      </li>
       <li className="getFunded">
         <Button to={links.getFunded.url} variant="primary" size="medium">
           {links.getFunded.text[lang]}

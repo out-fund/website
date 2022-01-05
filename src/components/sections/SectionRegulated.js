@@ -1,10 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-import parse from "html-react-parser"
+// import parse from "html-react-parser"
 
-import { Section, SectionHeader } from "./../../components"
+import { Section, SectionHeader, ThreeColumnIcons } from "./../../components"
 
 import T from "./../../styles/new/typography"
+import { theme } from "./../../styles/new/theme"
 
 const SectionRegulated = ({ data, bg }) => {
   const { title, description, blocks, statement } = data
@@ -12,9 +13,12 @@ const SectionRegulated = ({ data, bg }) => {
     <Section>
       <Wrapper bg={bg}>
         <ContentWrapper bg={bg}>
-          <SectionHeader title={title} description={description} />
+          <HeaderWrapper>
+            <SectionHeader title={title} description={description} />
+          </HeaderWrapper>
+
           <TextWrapper>
-            <Grid>
+            {/* <Grid>
               {blocks.map((item, index) => (
                 <Block key={index}>
                   <IconWrapper>{parse(item.icon)}</IconWrapper>
@@ -22,7 +26,8 @@ const SectionRegulated = ({ data, bg }) => {
                   <BlockDescription>{item.text}</BlockDescription>
                 </Block>
               ))}
-            </Grid>
+            </Grid> */}
+            <ThreeColumnIcons blocks={blocks} />
             <StatementWrapper>
               <Statement>{statement}</Statement>
             </StatementWrapper>
@@ -34,6 +39,12 @@ const SectionRegulated = ({ data, bg }) => {
 }
 export default SectionRegulated
 
+const HeaderWrapper = styled.div`
+  text-align: center;
+  max-width: 770px;
+  margin: 0 auto;
+  margin-bottom: 48px;
+`
 const Wrapper = styled.div`
   /* background-color: ${(props) =>
     props.bg === "transparent" ? "transparent" : "#fff"};
@@ -67,48 +78,48 @@ const TextWrapper = styled.div`
   } */
 `
 
-const Grid = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 24px;
-  row-gap: 24px;
-  margin-bottom: 40px;
+// const Grid = styled.ul`
+//   display: grid;
+//   grid-template-columns: repeat(3, 1fr);
+//   column-gap: 24px;
+//   row-gap: 24px;
+//   margin-bottom: 40px;
 
-  /* theme.above.tablet} {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 32px;
-  }
-  theme.above.laptop} {
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 48px;
-  } */
-`
-const Block = styled.li``
-const BlockTitle = styled(T.H6)`
-  /* text-align: center;
-  margin-bottom: 8px; */
-`
+//   /* theme.above.tablet} {
+//     grid-template-columns: repeat(2, 1fr);
+//     column-gap: 32px;
+//   }
+//   theme.above.laptop} {
+//     grid-template-columns: repeat(3, 1fr);
+//     column-gap: 48px;
+//   } */
+// `
+// const Block = styled.li``
+// const BlockTitle = styled(T.H6)`
+//   /* text-align: center;
+//   margin-bottom: 8px; */
+// `
 
-const IconWrapper = styled.div`
-  /* margin-bottom: 16px;
-  text-align: center; */
-  /* theme.above.tablet} {
-  } */
-  svg {
-    width: 48px;
-    height: 48px;
-  }
-`
-const BlockDescription = styled(T.Body)`
-  /* text-align: center; */
-`
+// const IconWrapper = styled.div`
+//   /* margin-bottom: 16px;
+//   text-align: center; */
+//   /* theme.above.tablet} {
+//   } */
+//   svg {
+//     width: 48px;
+//     height: 48px;
+//   }
+// `
+// const BlockDescription = styled(T.Body)`
+//   /* text-align: center; */
+// `
 
 const StatementWrapper = styled.div`
-  /* padding: 12px 24px;
-  background-color: #edf1f5;
-  border-radius: 4px; */
+  padding: 12px 24px;
+  background-color: ${theme.color.background.emphesized};
+  border-radius: 4px;
+  max-width: 1170px;
+  margin: 0 auto;
+  margin-top: 64px;
 `
-const Statement = styled(T.Body)`
-  /* font-weight: 400;
-  text-align: center; */
-`
+const Statement = styled(T.Body)``

@@ -16,6 +16,10 @@ const SectionHeader = ({ title, description }) => {
 export default SectionHeader
 
 const Title = styled(T.H2)``
-const Description = styled(T.BodyLarge)``
+const Description = styled(T.BodyLarge)`
+  max-width: 970px;
+  margin: 0 auto;
+  margin-top: 16px;
+`
 
 const Header = styled.header``
