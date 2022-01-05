@@ -131,10 +131,10 @@ const ButtonWrap = styled.div`
 
             /* Not sure if padding needs to be different here
                But I will leave it for now */
-            padding: 8px 20px 8px 24px;
+            padding: 8px 24px 8px 24px;
 
             &:after {
-              position: relative;
+              /* position: relative;
               display: inline-block;
               width: 8px;
               height: 6px;
@@ -142,7 +142,7 @@ const ButtonWrap = styled.div`
               background-image: url("data:image/svg+xml,%3Csvg width='8' height='6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6 0 2h8L4 6Z' fill='%23051734'/%3E%3C/svg%3E");
               opacity: 0.5;
               transition: all 0.1s ease-in-out;
-              content: "";
+              content: ""; */
             }
             :hover {
               /* background-color: #deeeff; */

@@ -4,6 +4,7 @@ import parse from "html-react-parser"
 
 import { Section, SectionHeader } from "./../../components"
 import T from "./../../styles/new/typography"
+import { theme } from "./../../styles/new/theme"
 
 const SectionWhy = ({ data }) => {
   // console.log(data)
@@ -29,8 +30,20 @@ const SectionWhy = ({ data }) => {
 }
 export default SectionWhy
 
-const Wrapper = styled.div``
-const ContentWrapper = styled.div``
+const Wrapper = styled.div`
+  background-color: ${theme.color.background.emphesized};
+  max-width: 1370px;
+  margin: 0 auto;
+  padding: 80px 0;
+`
+const ContentWrapper = styled.div`
+  max-width: 1170px;
+  margin: 0 auto;
+  text-align: center;
+  h2 {
+    margin-bottom: 64px;
+  }
+`
 
 const Grid = styled.ul`
   display: grid;
@@ -39,10 +52,16 @@ const Grid = styled.ul`
   row-gap: 24px;
   margin-bottom: 40px;
 `
-const Block = styled.li``
-const BlockTitle = styled(T.H6)``
+const Block = styled.li`
+  text-align: center;
+`
+const BlockTitle = styled(T.H4)`
+  max-width: 260px;
+  margin: 0 auto;
+`
 
 const IconWrapper = styled.div`
+  margin-bottom: 24px;
   svg {
     width: 48px;
     height: 48px;

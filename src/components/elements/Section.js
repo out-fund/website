@@ -6,4 +6,6 @@ const Section = ({ children }) => {
 }
 export default Section
 
-const SectionWrapper = styled.section``
+const SectionWrapper = styled.section`
+  margin-bottom: 120px;
+`
