@@ -5,9 +5,18 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import EnLayout from "layouts/en"
 
-import { Main, HeroSimple, Button, Offices } from "./../../components"
+import {
+  Main,
+  HeroSimple,
+  Button,
+  Offices,
+  SectionHeader,
+  Section,
+  SectionRegulated,
+} from "./../../components"
 import T from "../../styles/new/typography"
 import F from "../../styles/new/form"
+import { theme } from "./../../styles/new/theme"
 
 const ContactUs = (props) => {
   const liveChat = props.data.contactUsJson.liveChat
@@ -23,9 +32,9 @@ const ContactUs = (props) => {
       <Main>
         <ContentWrapper>
           <Box style={{ gridArea: "liveChat" }}>
-            <T.H6 as="h2" style={{ maxWidth: 300 }}>
+            <T.H4 as="h2" style={{ maxWidth: 300 }}>
               {liveChat.title}
-            </T.H6>
+            </T.H4>
             <T.Body>{liveChat.description}</T.Body>
             <LiveChat>
               <GatsbyImage
@@ -38,23 +47,23 @@ const ContactUs = (props) => {
             </LiveChat>
           </Box>
           <Box style={{ gridArea: "support" }}>
-            <T.H6 as="h2">{support.title}</T.H6>
+            <T.H4 as="h2">{support.title}</T.H4>
             <T.Body>{support.description}</T.Body>
             <Button href={support.btnUrl} variant="secondary">
               {support.btn}
             </Button>
           </Box>
           <Box style={{ gridArea: "feedback" }}>
-            <T.H6 as="h2">{feedback.title}</T.H6>
+            <T.H4 as="h2">{feedback.title}</T.H4>
             <T.Body>{feedback.description}</T.Body>
             <Button href={feedback.btnUrl} variant="secondary">
               {feedback.btn}
             </Button>
           </Box>
           <Form style={{ gridArea: "emailForm" }}>
-            <T.H6 as="h2" style={{ maxWidth: 400 }}>
+            <T.H4 as="h2" style={{ maxWidth: 400 }}>
               {emailForm.title}
-            </T.H6>
+            </T.H4>
             {/* TODO Add html parser to the title props everywhere https://www.npmjs.com/package/html-react-parser */}
             <F.Form action="">
               <F.InputText
@@ -76,7 +85,7 @@ const ContactUs = (props) => {
             </F.Form>
           </Form>
           <Box style={{ gridArea: "demoCall" }}>
-            <T.H6 as="h2">{demoCall.title}</T.H6>
+            <T.H4 as="h2">{demoCall.title}</T.H4>
             <T.Body>{demoCall.description}</T.Body>
             <Button href={demoCall.btnUrl} variant="secondary">
               {demoCall.btn}
@@ -84,14 +93,19 @@ const ContactUs = (props) => {
           </Box>
         </ContentWrapper>
 
-        <CenterSectionTitle>
-          {props.data.contactUsJson.globalCoverage.title}
-        </CenterSectionTitle>
-        <Offices
-          offices={offices.offices}
-          image={offices.image}
-          imageAlt={offices.imageAlt}
-        />
+        <Section>
+          <HeaderWrapper>
+            <SectionHeader
+              title={props.data.contactUsJson.globalCoverage.title}
+            />
+          </HeaderWrapper>
+          <Offices
+            showOffices
+            offices={offices.offices}
+            image={offices.image}
+          />
+        </Section>
+        <SectionRegulated data={props.data.trustJson} />
       </Main>
     </EnLayout>
   )
@@ -99,10 +113,13 @@ const ContactUs = (props) => {
 
 export default ContactUs
 
-const CenterSectionTitle = styled.div``
+const HeaderWrapper = styled.div`
+  text-align: center;
+  margin-bottom: 48px;
+`
 const ContentWrapper = styled.div`
-  /* max-width: theme.width.text};
   margin: 0 auto;
+  margin-top: 64px;
   display: grid;
   grid-template-areas:
     "liveChat"
@@ -113,9 +130,9 @@ const ContentWrapper = styled.div`
   grid-template-rows: auto;
   grid-template-columns: 1fr;
   row-gap: 40px;
+  max-width: 1170px;
 
-  breakpoints.tablet} {
-    display: grid;
+  ${theme.above.t.l} {
     grid-template-areas:
       "liveChat emailForm"
       "support emailForm"
@@ -124,7 +141,13 @@ const ContentWrapper = styled.div`
     grid-template-columns: 1fr 1fr;
     column-gap: 100px;
     row-gap: 80px;
-  } */
+  }
+  h2 {
+    margin-bottom: 16px;
+  }
+  p {
+    margin-bottom: 24px;
+  }
 `
 const Box = styled.div`
   /* S.BodyText} {
@@ -133,34 +156,50 @@ const Box = styled.div`
   } */
 `
 const LiveChat = styled.div`
-  /* display: grid;
+  display: grid;
   grid-template-rows: auto auto;
   row-gap: 24px;
   .gatsby-image-wrapper {
     max-width: 284px;
+    filter: drop-shadow(0px 100px 80px rgba(1, 14, 25, 0.07))
+      drop-shadow(0px 41.7776px 33.1139px rgba(1, 14, 25, 0.0503198))
+      drop-shadow(0px 22.3363px 16.2366px rgba(1, 14, 25, 0.0417275))
+      drop-shadow(0px 12.5216px 7.80488px rgba(1, 14, 25, 0.035))
+      drop-shadow(0px 6.6501px 3.28033px rgba(1, 14, 25, 0.0282725))
+      drop-shadow(0px 2.76726px 0.952807px rgba(1, 14, 25, 0.0196802));
   }
-  breakpoints.desktop} {
-    display: grid;
+  ${theme.above.l.m} {
     grid-template-columns: 284px auto;
     align-items: center;
     column-gap: 16px;
-  } */
+  }
 `
 
 const Form = styled.div`
-  /* F.Form} {
+  ${F.Form} {
     display: grid;
     grid-template-rows: auto;
     margin-top: 16px;
     padding: 32px 24px;
-    background-color: #fff;
+
+    background-color: ${theme.color.background.emphesized};
     border-radius: 10px;
-    box-shadow: theme.shadows.boxShadow};
+    /* box-shadow: 0px 100px 80px rgba(1, 14, 25, 0.07),
+      0px 41.7776px 33.1139px rgba(1, 14, 25, 0.0503198),
+      0px 22.3363px 16.2366px rgba(1, 14, 25, 0.0417275),
+      0px 12.5216px 7.80488px rgba(1, 14, 25, 0.035),
+      0px 6.6501px 3.28033px rgba(1, 14, 25, 0.0282725),
+      0px 2.76726px 0.952807px rgba(1, 14, 25, 0.0196802); */
+
     row-gap: 24px;
-    breakpoints.tablet} {
+    ${theme.above.l.m} {
       padding: 40px 32px;
     }
-    breakpoints.laptop} {
+
+    ${theme.above.d.m} {
+      padding: 64px 56px;
+    }
+    /* breakpoints.laptop} {
       padding: 48px 40px;
     }
     breakpoints.desktop} {
@@ -168,8 +207,8 @@ const Form = styled.div`
     }
     breakpoints.largeDesktop} {
       padding: 64px 56px;
-    }
-  } */
+    } */
+  }
 `
 
 export const query = graphql`
@@ -248,6 +287,16 @@ export const query = graphql`
           secondLine
           title
         }
+      }
+    }
+    trustJson(language: { regex: "/en-GB/" }) {
+      title
+      statement
+      description
+      blocks {
+        title
+        icon
+        text
       }
     }
   }

@@ -44,7 +44,7 @@ const HeroWrapper = styled.header`
   align-items: center;
   background-color: ${theme.color.background.emphesized};
 
-  border-radius: 0 0 10px 10px;
+  /* border-radius: 0 0 10px 10px; */
   /* gap: 16px; */
   padding: 48px 0 24px;
   /* margin: 0 8px; */
