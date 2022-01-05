@@ -55,11 +55,11 @@ const HeroWrapper = styled.header`
   }
 
   ${theme.above.t.s} {
-    margin: 0 20px;
+    /* margin: 0 20px; */
     padding: 96px 0 56px;
   }
   ${theme.above.l.m} {
-    margin: 0 24px;
+    /* margin: 0 24px; */
     padding: 120px 0 96px;
   }
 

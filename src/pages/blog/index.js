@@ -1,11 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql, Link } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+// import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import EnLayout from "layouts/en"
 
-import { HeroSimple, Main } from "./../../components"
+import { HeroSimple, Main, CardBlog } from "./../../components"
+import { theme } from "./../../styles/new/theme"
 
 const Blog = (props) => {
   console.log(props)
@@ -14,23 +15,13 @@ const Blog = (props) => {
       <Main>
         <HeroSimple data={props.data.blogJson.hero} />
         <Wrapper>
-          <ContentWrapper>
-            <List>
-              {props.data.allMdx.edges.map(({ node: post }) => (
-                <Item key={post.id}>
-                  <CardPost>
-                    <Link to={post.slug.split("-").slice(3).join("-")}>
-                      <h2>{post.frontmatter.title}</h2>
-                      <GatsbyImage
-                        image={getImage(post.frontmatter.card.image.src)}
-                        alt={post.frontmatter.card.image.alt}
-                      />
-                    </Link>
-                  </CardPost>
-                </Item>
-              ))}
-            </List>
-          </ContentWrapper>
+          <List>
+            {props.data.allMdx.edges.map(({ node: post }) => (
+              <Item key={post.id}>
+                <CardBlog data={post} key={post.id} />
+              </Item>
+            ))}
+          </List>
         </Wrapper>
       </Main>
     </EnLayout>
@@ -46,6 +37,7 @@ export const query = graphql`
         fileAbsolutePath: { regex: "/blog/" }
         frontmatter: { published: { eq: true } }
       }
+      sort: { fields: slug, order: DESC }
     ) {
       edges {
         node {
@@ -57,7 +49,12 @@ export const query = graphql`
                 alt
                 src {
                   childImageSharp {
-                    gatsbyImageData
+                    gatsbyImageData(
+                      aspectRatio: 1.777
+                      height: 570
+                      jpgOptions: { progressive: true, quality: 90 }
+                      transformOptions: { cropFocus: CENTER, fit: COVER }
+                    )
                   }
                 }
               }
@@ -75,13 +72,30 @@ export const query = graphql`
     }
   }
 `
-const Wrapper = styled.div``
-const List = styled.ul``
+const Wrapper = styled.div`
+  max-width: 1770px;
+  margin: 0 auto;
+  margin-top: 64px;
+`
+const List = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+  /* max-width: 100%; */
+  justify-items: center;
+
+  ${theme.above.t.m} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  ${theme.above.l.m} {
+    grid-template-columns: repeat(3, 1fr);
+  }
+`
 const Item = styled.li``
-const CardPost = styled.div``
+// const CardPost = styled.div``
 // margin-top: 64px;
 
-const ContentWrapper = styled.div``
+// const ContentWrapper = styled.div``
 // const CardsWrapper = styled.div``
 //   display: grid;
 //   grid-template-columns: repeat(1, 1fr);

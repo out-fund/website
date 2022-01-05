@@ -45,6 +45,7 @@ import SectionPartners from "./sections/SectionPartners"
 import SectionWhy from "./sections/SectionWhy"
 import CardFounderName from "./cards/CardFounderName"
 import ThreeColumnIcons from "./sections/ThreeColumnIcons"
+import CardBlog from "./cards/CardBlog"
 
 export {
   SectionWeAreInvesting,
@@ -90,4 +91,5 @@ export {
   SectionWhy,
   CardFounderName,
   ThreeColumnIcons,
+  CardBlog,
 }
