@@ -1,13 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
 
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import EnLayout from "layouts/en"
-import { CardFounderName, Main } from "./../components"
+import { CardFounderName, Main, Button } from "./../components"
 import { theme } from "./../styles/new/theme"
 import T from "./../styles/new/typography"
 
@@ -16,7 +16,7 @@ const Quote = ({ text, by, role }) => {
     <QuoteWrapper>
       <figure>
         <q>
-          <T.H3>{text}</T.H3>
+          <T.H3>“ {text}</T.H3>
         </q>
         <figcaption>
           <T.Body>
@@ -45,8 +45,33 @@ const ChalangeSolution = ({ chalange, solution }) => {
     </ChalangeSolutionWrapper>
   )
 }
+const CtaBlock = () => {
+  return (
+    <CtaBlockWrapper>
+      <InnerWrapper>
+        <CtaBlockTextWrapper>
+          <T.H2>
+            Start Supercharging <br />
+            Your Growth!
+          </T.H2>
+          <Button variant="primary" size="large">
+            Get funded
+          </Button>
+        </CtaBlockTextWrapper>
+        <ImageWrapper>
+          <StaticImage
+            src="./../images/components/ss-cta-block.png"
+            alt="Group profile photos"
+          />
+        </ImageWrapper>
+      </InnerWrapper>
+    </CtaBlockWrapper>
+  )
+}
 
-const SuccessStoryLayout = ({ data: { mdx } }) => {
+const SuccessStoryLayout = ({ data }) => {
+  const { mdx } = data
+
   // console.log("ss", mdx)
   return (
     <EnLayout>
@@ -61,6 +86,7 @@ const SuccessStoryLayout = ({ data: { mdx } }) => {
           PhotoStrip,
           ChalangeSolution,
           Text,
+          StaticImage,
         }}
       >
         <Main>
@@ -70,6 +96,7 @@ const SuccessStoryLayout = ({ data: { mdx } }) => {
             <MDXRenderer frontmatter={mdx.frontmatter}>{mdx.body}</MDXRenderer>
             {/* </Content> */}
           </Article>
+          <CtaBlock />
         </Main>
       </MDXProvider>
     </EnLayout>
@@ -78,39 +105,75 @@ const SuccessStoryLayout = ({ data: { mdx } }) => {
 
 export default SuccessStoryLayout
 
-// const Content = styled.div``
+const CtaBlockWrapper = styled.aside`
+  margin-top: 80px;
+  background-color: ${theme.color.background.emphesized};
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px 40px;
+`
+const InnerWrapper = styled.aside`
+  display: grid;
+  grid-template-columns: 1;
+  max-width: 970px;
+  gap: 64px;
+  align-items: center;
+  ${theme.above.t.s} {
+    grid-template-columns: 1fr 2fr;
+  }
+  ${theme.above.t.l} {
+    grid-template-columns: 460fr 440fr;
+  }
+`
+const CtaBlockTextWrapper = styled.div`
+  h2 {
+    margin-bottom: 40px;
+  }
+`
+
+const ImageWrapper = styled.div``
+
 const Article = styled.article`
   max-width: 970px;
   margin: 0 auto;
   margin-top: 120px;
   /* padding-bottom: 120px; */
+  h2,
+  h3 {
+    margin-bottom: 16px;
+  }
+  p {
+    margin-bottom: 24px;
+    line-height: 1.6;
+  }
 `
 
 const ChalangeSolutionWrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 24px;
-  h2 {
-    margin-bottom: 16px;
+
+  ${theme.above.t.s} {
+    grid-template-columns: 1fr 1fr;
   }
+  /* h2 {
+    margin-bottom: 16px;
+  } */
 `
 
 const Text = styled.div`
   /* background-color: #faa; */
-  max-width: 570px;
+  max-width: 540px;
   h1 {
     margin-bottom: 16px;
-  }
-  p {
-    margin-bottom: 16px;
-    line-height: 1.6;
   }
 `
 
 const QuoteWrapper = styled.div`
   background-color: ${theme.color.background.emphesized};
-  /* max-width: 970px; */
-  padding: 64px 100px;
+  padding: 24px 40px;
   border-radius: 10px;
   margin-top: 64px;
   margin-bottom: 64px;
@@ -118,9 +181,15 @@ const QuoteWrapper = styled.div`
   q:after {
     content: "";
   }
+  p {
+    margin: 0;
+  }
   q h3 {
     font-weight: 400;
     line-height: 1.4;
+  }
+  ${theme.above.t.s} {
+    padding: 64px 100px;
   }
 `
 

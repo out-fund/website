@@ -4,6 +4,7 @@ import { theme } from "./../../new/theme"
 export const BodyLarge = styled.p`
   font-size: 18px;
   line-height: 1.4;
+  color: ${theme.color.text.body};
   ${theme.above.t.s} {
     font-size: 19px;
   }
@@ -16,6 +17,7 @@ export const Body = styled.p`
   font-weight: normal;
   font-size: 16px;
   line-height: 1.5;
+  color: ${theme.color.text.body};
 
   ${theme.above.t.s} {
     font-size: 17px;
