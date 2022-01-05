@@ -3,43 +3,54 @@ import styled from "styled-components"
 import parse from "html-react-parser"
 
 import { Button, Section, CardFounder, SectionHeader } from "./../../components"
+import { theme } from "./../../styles/new/theme"
 
 const SectionFoundersCompanies = ({ data }) => {
   const { title, btn, logos, cards } = data
   return (
     <Section>
       <Wrapper>
-        <ContentWrapper>
+        <HeaderWrapper>
           <SectionHeader title={title} />
-          <GridFounders>
-            {cards.map((item, index) => (
-              <CardFounder
-                key={index}
-                company={item.company}
-                logo={item.logo}
-                image={item.image}
-              />
-            ))}
-          </GridFounders>
-          <GridLogos count={logos.length}>
-            {logos.map((item, index) => (
-              <LogoWrapper key={index}>{parse(item)} </LogoWrapper>
-            ))}
-          </GridLogos>
-          <BtnWrapper>
-            <Button to={btn.url} variant="secondary">
-              {btn.text}
-            </Button>
-          </BtnWrapper>
-        </ContentWrapper>
+        </HeaderWrapper>
+
+        <GridFounders>
+          {cards.map((item, index) => (
+            <CardFounder
+              key={index}
+              company={item.company}
+              logo={item.logo}
+              image={item.image}
+            />
+          ))}
+        </GridFounders>
+        <GridLogos count={logos.length}>
+          {logos.map((item, index) => (
+            <LogoWrapper key={index}>{parse(item)} </LogoWrapper>
+          ))}
+        </GridLogos>
+        <BtnWrapper>
+          <Button to={btn.url} variant="secondary">
+            {btn.text}
+          </Button>
+        </BtnWrapper>
       </Wrapper>
     </Section>
   )
 }
 export default SectionFoundersCompanies
 
-const Wrapper = styled.div``
-const ContentWrapper = styled.div``
+const Wrapper = styled.div`
+  max-width: 1570px;
+  margin: 0 auto;
+`
+
+const HeaderWrapper = styled.div`
+  text-align: center;
+  max-width: 570px;
+  margin: 0 auto;
+  margin-bottom: 48px;
+`
 
 const GridFounders = styled.div`
   display: grid;
@@ -51,11 +62,9 @@ const GridFounders = styled.div`
   justify-items: stretch; */
   place-items: center;
 
-  /* theme.above.tablet} {
-  }
-  theme.above.laptop} {
+  ${theme.above.t.m} {
     grid-template-columns: repeat(4, 1fr);
-  } */
+  }
 `
 const GridLogos = styled.div`
   display: grid;
@@ -80,5 +89,5 @@ const LogoWrapper = styled.div`
   }
 `
 const BtnWrapper = styled.div`
-  /* text-align: center; */
+  text-align: center;
 `

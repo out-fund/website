@@ -24,7 +24,7 @@ export default CardFounder
 
 const Wrapper = styled.div`
   max-width: 370px;
-  border-radius: 4px;
+  border-radius: 10px;
   overflow: hidden;
   position: relative;
   z-index: 1;

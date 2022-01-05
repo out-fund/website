@@ -12,13 +12,17 @@ import {
   SectionJoinUs,
   SectionRegulated,
   Main,
+  HeroSimple,
+  HeroImage,
 } from "./../../components"
 
 const AboutUs = (props) => {
   return (
     <EnLayout>
-      <HeroAbout data={props.data.aboutUsJson.hero} />
+      {/* <HeroAbout data={props.data.aboutUsJson.hero} /> */}
+      <HeroSimple data={props.data.aboutUsJson.hero} />
       <Main>
+        <HeroImage data={props.data.aboutUsJson.hero.image} />
         <Stats data={props.data.aboutUsJson.stats} />
         <SectionWeAreInvesting data={props.data.aboutUsJson.weInvesting} />
         <SectionFoundersCompanies data={props.data.aboutUsJson.companies} />

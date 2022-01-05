@@ -41,6 +41,8 @@ const Wrapper = styled.div`
 `
 const ImageWrapper = styled.div`
   max-width: 1570px;
+  border-radius: 10px;
+  overflow: hidden;
   /* position: absolute; */
   /* position: relative;
 

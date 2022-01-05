@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import { Section, CardNews, SectionHeader } from "./../../components"
+import { theme } from "./../../styles/new/theme"
 // import parse from "html-react-parser"
 
 const SectionLatestNews = ({ data }) => {
@@ -9,7 +10,9 @@ const SectionLatestNews = ({ data }) => {
   return (
     <Section>
       <Wrapper>
-        <SectionHeader title={title} />
+        <HeaderWrapper>
+          <SectionHeader title={title} />
+        </HeaderWrapper>
         <ContentWrapper>
           <GridNews>
             {cards.map((item, index) => (
@@ -30,26 +33,24 @@ const SectionLatestNews = ({ data }) => {
 }
 export default SectionLatestNews
 
+const HeaderWrapper = styled.div`
+  text-align: center;
+  margin-bottom: 40px;
+`
 const Wrapper = styled.div``
 const ContentWrapper = styled.div``
 const GridNews = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  column-gap: 30px;
-  /* margin-bottom: 64px; */
-  row-gap: 30px;
+  gap: 24px;
+  max-width: 1770px;
+  margin: 0 auto;
 
-  /* 
-  theme.above.tablet} {
-    grid-template-columns: repeat(1, 1fr);
-
-  }
-  theme.above.laptop} {
+  ${theme.above.t.m} {
     grid-template-columns: repeat(2, 1fr);
-
   }
-  theme.above.desktop} {
-    grid-template-columns: repeat(3, 1fr);
 
-  }  */
+  ${theme.above.l.m} {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `

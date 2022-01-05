@@ -72,6 +72,9 @@ const Figure = styled.figure`
       max-width: 100%;
     }
     margin-top: auto;
+
+    padding-top: 40px;
+    /* margin-top: 40px; */
   }
 `
 const LogoWrapper = styled.div``
@@ -88,17 +91,17 @@ const Wrapper = styled.div`
 
   max-width: 570px;
   position: relative;
-  height: 370px;
+  /* height: 370px; */
   border-radius: 10px;
   /* display: grid;
   align-content: center;
   justify-content: center; */
 
   ${theme.above.t.s} {
-    height: 470px;
+    /* height: 470px; */
   }
 
   ${theme.above.d.m} {
-    height: 570px;
+    /* height: 570px; */
   }
 `
