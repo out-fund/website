@@ -70,6 +70,8 @@ const Wrapper = styled.div`
   flex-direction: column;
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
+  z-index: 1;
 
   /* background-color: ${({ bgc }) =>
     bgc ? bgc : theme.color.background.emphesized};

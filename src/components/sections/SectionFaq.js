@@ -125,35 +125,5 @@ const AccordionWrapper = styled.div`
     line-height: 1.5;
     background-color: #fff;
     background-color: ${theme.color.background.emphesized};
-    /* border-bottom: 1px solid #bbc7d6 !important; */
   }
 `
-
-// <FaqWrapper>
-//   <FaqTitle>{data.faq.title}</FaqTitle>
-//   {/* <dl>
-//     {data.faq.questions.map((item) => (
-//       <React.Fragment key={item.question}>
-//         <dt>
-//           <span>{item.question}</span>
-//           <svg
-//             fill="none"
-//             xmlns="http://www.w3.org/2000/svg"
-//             viewBox="0 0 24 24"
-//           >
-//             <path
-//               d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41Z"
-//               fill="#00A3D7"
-//             />
-//           </svg>
-//         </dt>
-//         <dd>{item.answer}</dd>
-//         >
-//       </React.Fragment>
-//     ))}
-//   </dl> */}
-//   <AccordionWrapper>
-//     <Accordions data={data.faq.questions} />
-//   </AccordionWrapper>
-
-// </FaqWrapper>

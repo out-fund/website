@@ -107,13 +107,17 @@ const LinksWrapper = styled.ul`
 
 const ContentWrapper = styled.div`
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 100px;
+  grid-template-columns: 1fr;
+  gap: 40px;
   max-width: 970px;
   margin: 0 auto;
   padding-top: 80px;
   h3 {
     margin-bottom: 24px;
+  }
+  ${theme.above.l.m} {
+    grid-template-columns: 200px 1fr;
+    gap: 100px;
   }
 `
 const Container = styled.div``
@@ -146,6 +150,7 @@ const FaqWrapper = styled.section`
     line-height: 1.2;
     letter-spacing: -0.02em;
     background-color: #fff;
+    outline: none;
     user-select: none;
 
     ${theme.above.t.s} {

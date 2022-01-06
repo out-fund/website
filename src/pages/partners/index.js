@@ -59,7 +59,7 @@ export const query = graphql`
       why {
         title
         blocks {
-          description
+          text
           icon
           title
         }

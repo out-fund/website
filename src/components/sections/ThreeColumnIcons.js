@@ -31,7 +31,7 @@ const Wrapper = styled.ul`
   max-width: 1170px;
   margin: 0 auto;
 
-  ${theme.above.t.s} {
+  ${theme.above.t.l} {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 24px;
   }

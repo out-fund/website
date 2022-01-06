@@ -8,6 +8,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import EnLayout from "layouts/en"
 import { HeroSimple, Main } from "./../components"
 import T from "./../styles/new/typography"
+import { theme } from "./../styles/new/theme"
 
 const BlogPostLayout = ({ data: { mdx } }) => {
   console.log(mdx)
@@ -41,13 +42,17 @@ const BlogPostLayout = ({ data: { mdx } }) => {
 export default BlogPostLayout
 
 const ImageWrapper = styled.div`
-  /* margin: 0 auto; */
   display: flex;
   justify-content: center;
-  position: relative;
-  top: -64px;
+  margin: 40px 0;
+
   img {
     border-radius: 10px;
+  }
+  ${theme.above.t.m} {
+    position: relative;
+    top: -64px;
+    margin-bottom: 0;
   }
 `
 const Article = styled.article`

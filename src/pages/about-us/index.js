@@ -24,9 +24,9 @@ const AboutUs = (props) => {
       <Main>
         <HeroImage data={props.data.aboutUsJson.hero.image} />
         <Stats data={props.data.aboutUsJson.stats} />
+        <SectionLatestNews data={props.data.aboutUsJson.latestNews} />
         <SectionWeAreInvesting data={props.data.aboutUsJson.weInvesting} />
         <SectionFoundersCompanies data={props.data.aboutUsJson.companies} />
-        <SectionLatestNews data={props.data.aboutUsJson.latestNews} />
         <SectionJoinUs data={props.data.aboutUsJson.joinUs} />
         <SectionRegulated data={props.data.trustJson} />
       </Main>

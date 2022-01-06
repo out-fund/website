@@ -23,7 +23,7 @@ const SectionOpenings = ({ data }) => {
                 <Opening key={index}>
                   <WorkableLink href={opening.link} target="_blank">
                     <PositionTitle as="h3">{opening.title}</PositionTitle>
-                    <Details>
+                    <Details as="span">
                       {opening.location} | {opening.time}
                     </Details>
                     <IconWrap>
@@ -63,8 +63,10 @@ const OpenApplication = styled(T.Body)`
   margin-top: 16px;
 `
 const Details = styled(T.Body)`
-  margin-left: 24px;
   color: #405e80;
+  ${theme.above.t.m} {
+    margin-left: 24px;
+  }
 `
 
 const HeaderWrapper = styled.div`
@@ -73,12 +75,16 @@ const HeaderWrapper = styled.div`
   margin: 0 auto;
 `
 
-const IconWrap = styled.div`
-  display: flex;
-  margin-left: auto;
-  svg {
-    width: 24px;
-    height: 24px;
+const IconWrap = styled.span`
+  display: none;
+
+  ${theme.above.t.m} {
+    display: flex;
+    margin-left: auto;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
   }
 `
 
@@ -108,13 +114,20 @@ const Grid = styled.ul`
 const Opening = styled.li``
 const WorkableLink = styled.a`
   display: flex;
-  align-items: baseline;
-  align-items: center;
+
   text-decoration: none;
   width: 100%;
 
   padding: 16px 24px;
   border-radius: 30px;
+
+  flex-direction: column;
+
+  ${theme.above.t.m} {
+    flex-direction: row;
+    align-items: center;
+    align-items: baseline;
+  }
 
   &:hover {
     background-color: ${theme.color.background.emphesized};

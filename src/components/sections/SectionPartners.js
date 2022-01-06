@@ -74,10 +74,13 @@ const TextWrapper = styled.div`
 `
 const ContentWrapper = styled.div`
   display: grid;
-  grid-template-columns: 570fr 520fr;
+  grid-template-columns: 1fr;
   max-width: 1170px;
   margin: 0 auto;
   gap: 64px;
+  ${theme.above.t.m} {
+    grid-template-columns: 570fr 520fr;
+  }
 `
 const ImageWrapper = styled.div`
   /* max-width: 548px; */
