@@ -90,7 +90,7 @@ const MobileLinks = ({ lang }) => {
         <Button to={links.contactUs.url} variant="navLink">
           {links.contactUs.text[lang]}
         </Button>
-        <Button variant="navLink">Flag</Button>
+        {/* <Button variant="navLink">Flag</Button> */}
       </MobileDropdownWrapper>
     </MobileLinksWrapper>
   )
@@ -380,9 +380,10 @@ const MobileDropdownWrapper = styled.div`
 `
 
 const Menue = styled.button`
-  padding: 11px 16px;
+  padding: 11px 8px;
   border: 1px solid ${theme.color.button.primary.backgroundColor};
-  border-radius: 28px;
+  /* border-radius: 28px; */
+  border-radius: 10px;
   display: flex;
   background-color: transparent;
   svg {

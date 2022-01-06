@@ -111,6 +111,10 @@ const RightImage = styled.div`
 const ImageWrapper = styled.div`
   height: 100%;
   position: relative;
+  top: 0;
+  ${theme.above.t.s} {
+    top: -16px;
+  }
 `
 
 const Wrapper = styled.div`
@@ -127,7 +131,7 @@ const Wrapper = styled.div`
     gap: 32px;
   }
 
-  @media (min-width: 800px) {
+  @media (min-width: 880px) {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -140,16 +144,22 @@ const Wrapper = styled.div`
 const HeroWrapper = styled.header`
   background-color: #f2f6fa;
   overflow: visible;
-  padding: 80px 24px 48px;
+  padding: 48px 24px 48px;
 
   ${theme.above.t.s} {
-    padding: 100px 40px 64px;
+    padding: 64px 40px 64px;
     overflow: hidden;
   }
 
   ${theme.above.t.l} {
-    padding: 140px 40px 96px;
+    padding: 80px 40px 96px;
     overflow: visible;
+  }
+  ${theme.above.l.m} {
+    padding: 80px 40px 96px;
+  }
+  ${theme.above.d.l} {
+    padding: 140px 40px 96px;
   }
 `
 

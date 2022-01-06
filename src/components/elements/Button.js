@@ -55,7 +55,6 @@ const ButtonWrap = styled.div`
 
     display: flex;
     justify-content: center;
-    height: calc(100% - 1px);
     margin: 0;
     padding: 0.5em 1.5em;
     color: ${theme.color.text.headings};
@@ -75,9 +74,9 @@ const ButtonWrap = styled.div`
       opacity: 0.5;
     }
 
-    ${theme.above.t.s} {
+    /* ${theme.above.t.s} {
       font-size: 17px;
-    }
+    } */
 
     ${theme.above.d.m} {
       font-size: 18px;
@@ -184,8 +183,9 @@ const ButtonWrap = styled.div`
             font-size: 16px;
             padding: 0.66666667em 1.77777778em;
             border-radius: 26px;
+
             ${theme.above.t.s} {
-              font-size: 17px;
+              /* font-size: 17px; */
             }
 
             ${theme.above.d.m} {
@@ -197,8 +197,9 @@ const ButtonWrap = styled.div`
             font-size: 12px;
             padding: 0.57142857em 1.14285714em;
             border-radius: 20px;
+
             ${theme.above.t.s} {
-              font-size: 13px;
+              /* font-size: 13px; */
             }
 
             ${theme.above.d.m} {
