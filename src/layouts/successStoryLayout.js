@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
+import parse from "html-react-parser"
 
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -91,10 +92,9 @@ const SuccessStoryLayout = ({ data }) => {
       >
         <Main>
           <Article>
+            <Heading>{parse(mdx.frontmatter.title)}</Heading>
             <CardFounderName data={mdx.frontmatter.founderCard} />
-            {/* <Content> */}
             <MDXRenderer frontmatter={mdx.frontmatter}>{mdx.body}</MDXRenderer>
-            {/* </Content> */}
           </Article>
           <CtaBlock />
         </Main>
@@ -105,6 +105,10 @@ const SuccessStoryLayout = ({ data }) => {
 
 export default SuccessStoryLayout
 
+const Heading = styled(T.H1)`
+  margin-bottom: 16px;
+`
+
 const CtaBlockWrapper = styled.aside`
   margin-top: 80px;
   background-color: ${theme.color.background.emphesized};
@@ -112,7 +116,10 @@ const CtaBlockWrapper = styled.aside`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 64px 40px;
+  padding: 40px 16px;
+  ${theme.above.l.m} {
+    padding: 64px 40px;
+  }
 `
 const InnerWrapper = styled.aside`
   display: grid;
@@ -120,14 +127,21 @@ const InnerWrapper = styled.aside`
   max-width: 970px;
   gap: 64px;
   align-items: center;
-  ${theme.above.t.s} {
-    grid-template-columns: 1fr 2fr;
+  ${theme.above.t.m} {
+    grid-template-columns: 1fr 230px;
   }
-  ${theme.above.t.l} {
+  /* ${theme.above.t.s} {
+    grid-template-columns: 1fr 2fr;
+  } */
+  ${theme.above.l.m} {
     grid-template-columns: 460fr 440fr;
   }
 `
 const CtaBlockTextWrapper = styled.div`
+  text-align: center;
+  ${theme.above.t.m} {
+    text-align: left;
+  }
   h2 {
     margin-bottom: 40px;
   }
@@ -138,8 +152,8 @@ const ImageWrapper = styled.div``
 const Article = styled.article`
   max-width: 970px;
   margin: 0 auto;
-  margin-top: 120px;
-  /* padding-bottom: 120px; */
+  margin-top: 24px;
+
   h2,
   h3 {
     margin-bottom: 16px;
@@ -147,6 +161,15 @@ const Article = styled.article`
   p {
     margin-bottom: 24px;
     line-height: 1.6;
+  }
+  ${theme.above.t.s} {
+    margin-top: 80px;
+  }
+  ${theme.above.l.m} {
+    margin-top: 100px;
+  }
+  ${theme.above.d.m} {
+    margin-top: 120px;
   }
 `
 

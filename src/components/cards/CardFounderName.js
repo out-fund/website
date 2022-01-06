@@ -28,16 +28,17 @@ const Wrapper = styled.div`
   overflow: hidden;
   position: relative;
   z-index: 1;
-  float: right;
-  margin: 0px 0 32px 32px;
+  margin: 16px 0 32px;
   box-shadow: 0px 17px 33px rgba(5, 24, 64, 0.07),
     0px 3.8002px 13.45px rgba(5, 24, 64, 0.0522616),
     0px 1.07885px 7.14579px rgba(5, 24, 64, 0.0377807);
 
-  max-width: 40vw;
-  display: none;
+  /* display: none; */
   ${theme.above.t.s} {
-    display: block;
+    /* display: block; */
+    float: right;
+    max-width: 40vw;
+    margin: 0px 0 32px 32px;
   }
   ${theme.above.t.m} {
     max-width: 370px;
