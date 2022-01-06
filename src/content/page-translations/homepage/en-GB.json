@@ -221,7 +221,7 @@
     "buttons": {
       "primary": {
         "text": "Read more About us",
-        "url": "/about/"
+        "url": "/about-us/"
       },
 
       "secondary": {
