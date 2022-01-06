@@ -4,7 +4,7 @@ import styled from "styled-components"
 const Footer = () => {
   return (
     <Wrapper>
-      <p>footer Links</p>
+      <p>footer WIP</p>
     </Wrapper>
   )
 }
@@ -15,4 +15,5 @@ const Wrapper = styled.div`
   /* margin-top: 100px; */
   background-color: #0d2c4f;
   height: 300px;
+  color: white;
 `

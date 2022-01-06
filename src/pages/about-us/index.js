@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import EnLayout from "layouts/en"
 
 import {
-  HeroAbout,
+  // HeroAbout,
   SectionWeAreInvesting,
   Stats,
   SectionFoundersCompanies,

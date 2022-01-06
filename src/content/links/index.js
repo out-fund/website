@@ -37,6 +37,13 @@ const links = {
     },
     url: "/partners/",
   },
+  b2b: {
+    text: {
+      en: "B2B",
+      es: "B2=",
+    },
+    url: "/b2b/",
+  },
   contactUs: {
     text: {
       en: "Contact us",

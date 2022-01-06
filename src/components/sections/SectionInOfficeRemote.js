@@ -1,11 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-import parse from "html-react-parser"
+// import parse from "html-react-parser"
 
 import {
   Section,
   Offices,
-  Button,
+  // Button,
   SectionHeader,
   ThreeColumnIcons,
 } from "./../../components"

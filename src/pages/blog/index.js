@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 // import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import EnLayout from "layouts/en"
@@ -29,6 +29,27 @@ const Blog = (props) => {
 }
 
 export default Blog
+
+const Wrapper = styled.div`
+  max-width: 1770px;
+  margin: 0 auto;
+  margin-top: 64px;
+  margin-bottom: 80px;
+`
+const List = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+  justify-items: center;
+
+  ${theme.above.t.m} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  ${theme.above.l.m} {
+    grid-template-columns: repeat(3, 1fr);
+  }
+`
+const Item = styled.li``
 
 export const query = graphql`
   query blogPage {
@@ -72,46 +93,3 @@ export const query = graphql`
     }
   }
 `
-const Wrapper = styled.div`
-  max-width: 1770px;
-  margin: 0 auto;
-  margin-top: 64px;
-`
-const List = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 24px;
-  /* max-width: 100%; */
-  justify-items: center;
-
-  ${theme.above.t.m} {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  ${theme.above.l.m} {
-    grid-template-columns: repeat(3, 1fr);
-  }
-`
-const Item = styled.li``
-// const CardPost = styled.div``
-// margin-top: 64px;
-
-// const ContentWrapper = styled.div``
-// const CardsWrapper = styled.div``
-//   display: grid;
-//   grid-template-columns: repeat(1, 1fr);
-//   column-gap: 30px;
-//   row-gap: 30px;
-
-//   ${theme.above.tablet} {
-//     grid-template-columns: repeat(2, 1fr);
-//   }
-//   ${theme.above.laptop} {
-//     grid-template-columns: repeat(3, 1fr);
-//   }
-//   > div:last-child {
-//     svg {
-//       width: 100px;
-//       height: 95px;
-//     }
-//   }
-// `

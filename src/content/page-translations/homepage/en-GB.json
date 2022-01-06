@@ -123,7 +123,7 @@
     }
   },
   "faq": {
-    "title": "Freequesntly asked questiond",
+    "title": "Frequently asked questions",
     "questions": [
       {
         "question": "How much fuanding do you offer?",
@@ -164,6 +164,10 @@
         "name": "Yolanda"
       },
       {
+        "src": "./../../../images/team/Outfund-team-Yolanda.jpg",
+        "name": "Yolanda"
+      },
+      {
         "src": "./../../../images/team/Outfund-team-Rob.jpg",
         "name": "Rob"
       },
@@ -180,12 +184,28 @@
         "name": "Alexandra"
       },
       {
-        "src": "./../../../images/team/Outfund-team-Alexandra.jpg",
-        "name": "Alexandra"
+        "src": "./../../../images/team/Outfund-team-Jake.jpg",
+        "name": "Jake"
       },
       {
         "src": "./../../../images/team/Outfund-team-Alexandra.jpg",
         "name": "Alexandra"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Rob.jpg",
+        "name": "Rob"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Jake.jpg",
+        "name": "Jake"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Alexandra.jpg",
+        "name": "Alexandra"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Rob.jpg",
+        "name": "Rob"
       },
       {
         "src": "./../../../images/team/Outfund-team-Alexandra.jpg",

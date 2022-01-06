@@ -54,7 +54,9 @@ const Quote = styled(T.H3)`
     left: -14px;
   }
 `
-const By = styled(T.Body)``
+const By = styled(T.Body)`
+  margin-bottom: 24px;
+`
 
 const ImageWrapper = styled.div`
   order: -1;
@@ -70,7 +72,7 @@ const TextWrapper = styled.div`
   padding: 24px 32px 0px;
 
   ${theme.above.t.s} {
-    padding: 24px 48px 0px;
+    padding: 24px 0px 24px;
   }
 
   ${theme.above.d.m} {
@@ -84,15 +86,16 @@ const Wrapper = styled.div`
   max-width: 986px;
   border-radius: 10px;
   overflow: hidden;
+  max-height: 560px;
 
   display: grid;
-  grid-template-columns: 500px 1fr;
+  grid-template-columns: 500fr 416fr;
   gap: 70px;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   &.feel {
-    padding-right: 16px;
+    padding-right: 40px;
     .ButtonWrap a {
       color: var(--gray500);
       box-shadow: inset 0px 0px 0px 1px var(--gray500);
@@ -114,10 +117,12 @@ const Wrapper = styled.div`
 `
 
 const LogoWrapper = styled.div`
-  ${theme.above.d.m} {
+  margin-top: 32px;
+  margin-bottom: 48px;
+  /* ${theme.above.d.m} {
     margin-top: 32px;
     margin-bottom: 48px;
-  }
+  } */
   svg {
     max-width: 100%;
     height: 32px;

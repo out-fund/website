@@ -1,5 +1,5 @@
 import React from "react"
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 
 import { Section, SectionHeader } from "./../../components"
 import T from "./../../styles/new/typography"

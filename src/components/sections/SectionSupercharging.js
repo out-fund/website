@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Section, CardFeatured, CardCta } from "./../../components"
+import { theme } from "./../../styles/new/theme"
 
 const SectionSupercharging = ({ data }) => {
   // console.log(data)
@@ -28,8 +29,13 @@ export default SectionSupercharging
 const Wrapper = styled.div``
 const ContentWrapper = styled.div`
   display: grid;
-  grid-template-columns: 986fr 560fr;
+  grid-template-columns: 1fr;
   gap: 24px;
   max-width: 1570px;
   margin: 0 auto;
+  justify-items: center;
+
+  ${theme.above.l.m} {
+    grid-template-columns: 986fr 560fr;
+  }
 `

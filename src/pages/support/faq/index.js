@@ -141,12 +141,16 @@ const QuestionSectionWrapper = styled.div`
 const MenueWrapper = styled.section``
 
 const FaqWrapper = styled.section`
+  border-bottom: 1px solid #bbc7d6 !important;
   .accordion {
     border: none;
     border-radius: 0;
   }
   .accordion__item {
     border-top: 1px solid #bbc7d6 !important;
+    &:last-child {
+      border-bottom: 1px solid #bbc7d6 !important;
+    }
   }
   .accordion__button {
     display: flex;
@@ -158,7 +162,7 @@ const FaqWrapper = styled.section`
     font-size: 20px;
     letter-spacing: -0.02em;
     background-color: #fff;
-    border-radius: 4px;
+    /* border-radius: 4px; */
     user-select: none;
 
     :hover {
@@ -174,6 +178,6 @@ const FaqWrapper = styled.section`
     color: #1c3654;
     line-height: 1.5;
     background-color: #fff;
-    border-bottom: 1px solid #bbc7d6 !important;
+    /* border-bottom: 1px solid #bbc7d6 !important; */
   }
 `

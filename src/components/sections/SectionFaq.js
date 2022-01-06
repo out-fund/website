@@ -32,7 +32,10 @@ const SectionFaq = ({ data }) => {
   return (
     <Section>
       <Wrapper>
-        <SectionHeader title={data.title} />
+        <HeaderWrapper>
+          <SectionHeader title={data.title} />
+        </HeaderWrapper>
+
         <ContentWrapper>
           <AccordionWrapper>
             <Accordions data={data.questions} />
@@ -49,10 +52,61 @@ const SectionFaq = ({ data }) => {
 }
 export default SectionFaq
 
+const HeaderWrapper = styled.div`
+  text-align: center;
+  margin-bottom: 64px;
+`
 const Wrapper = styled.div``
-const ContentWrapper = styled.div``
-const AccordionWrapper = styled.div``
-const BtnWrapper = styled.div``
+const ContentWrapper = styled.div`
+  max-width: 970px;
+  margin: 0 auto;
+`
+
+const BtnWrapper = styled.div`
+  text-align: center;
+  margin-top: 64px;
+`
+
+const AccordionWrapper = styled.div`
+  .accordion {
+    border: none;
+    border-radius: 0;
+  }
+  .accordion__item {
+    border-top: 1px solid #bbc7d6 !important;
+    &:last-child {
+      border-bottom: 1px solid #bbc7d6 !important;
+    }
+  }
+  .accordion__button {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 24px 24px;
+    color: #051734;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    background-color: #fff;
+    /* border-radius: 4px; */
+    user-select: none;
+
+    :hover {
+      background-color: #deeeff;
+    }
+    &:before {
+      margin-left: auto;
+      color: #1a65ba;
+    }
+  }
+  .accordion__panel {
+    padding: 16px 40px 32px;
+    color: #1c3654;
+    line-height: 1.5;
+    background-color: #fff;
+    border-bottom: 1px solid #bbc7d6 !important;
+  }
+`
 
 // <FaqWrapper>
 //   <FaqTitle>{data.faq.title}</FaqTitle>

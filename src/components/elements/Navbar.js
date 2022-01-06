@@ -130,6 +130,11 @@ const FundingDropdown = ({ lang, isOpen }) => {
           {links.successStories.text[lang]}
         </Button>
       </li>
+      <li>
+        <Button to={links.b2b.url} variant="navLink">
+          {links.b2b.text[lang]}
+        </Button>
+      </li>
     </DesktopDropdownWrappepr>
   )
 }

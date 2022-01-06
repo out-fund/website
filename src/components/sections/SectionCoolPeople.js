@@ -2,12 +2,12 @@ import React from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-import { Button, SectionHeader, Section } from "./../../components"
+import { SectionHeader, Section } from "./../../components"
 import T from "./../../styles/new/typography"
 import { theme } from "./../../styles/new/theme"
 
 const SectionCoolPeople = ({ data }) => {
-  const { title, people, btn } = data
+  const { title, people } = data //btn removed
   return (
     <Section>
       <Wrapper>

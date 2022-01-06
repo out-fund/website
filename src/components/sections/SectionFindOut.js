@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Section, SectionHeader, Calculator } from "./../../components"
+import { theme } from "./../../styles/new/theme"
 
 const SectionFindOut = ({ data }) => {
   return (
@@ -23,11 +24,18 @@ export default SectionFindOut
 const Wrapper = styled.div``
 const ContentWrapper = styled.div`
   display: grid;
-  grid-template-columns: 560fr 570fr;
+  grid-template-columns: 1fr;
   gap: 24px;
-  width: 1170px;
+  max-width: 1170px;
   margin: 0 auto;
   align-items: center;
+
+  ${theme.above.t.m} {
+    grid-template-columns: 560fr 570fr;
+  }
+
+  ${theme.above.d.m} {
+  }
 `
 const TextWrapper = styled.div`
   max-width: 470px;
@@ -36,42 +44,3 @@ const TextWrapper = styled.div`
   }
 `
 const CalculatorWrapper = styled.div``
-
-// const AccordionWrapper = styled.section`
-//   .accordion {
-//     border: none;
-//     border-bottom: 1px solid #bbc7d6 !important;
-//     border-radius: 0;
-//   }
-//   .accordion__item {
-//     border-top: 1px solid #bbc7d6 !important;
-//   }
-//   .accordion__button {
-//     display: flex;
-//     flex-direction: row-reverse;
-//     align-items: center;
-//     justify-content: flex-end;
-//     padding: 24px 24px;
-//     color: #051734;
-//     font-size: 20px;
-//     letter-spacing: -0.02em;
-//     background-color: transparent;
-//     border-radius: 4px;
-//     user-select: none;
-
-//     :hover {
-//       background-color: #deeeff;
-//     }
-//     &:before {
-//       margin-left: auto;
-//       color: #1a65ba;
-//     }
-//   }
-//   .accordion__panel {
-//     padding: 16px 40px 32px;
-//     color: #1c3654;
-//     line-height: 1.5;
-//     background-color: transparent;
-//     border-bottom: 1px solid #bbc7d6 !important;
-//   }
-// `

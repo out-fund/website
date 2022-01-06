@@ -50,34 +50,20 @@ export default Calculator
 const Title = styled(T.H6)`
   margin-bottom: 8px;
 `
-//   font-size: 18px;
-//   font-weight: 400;
-// `
+
 const Selected = styled(T.H3)`
   margin-bottom: 24px;
 `
-//   /* font-size: 24px; */
-//   /* font-weight: 400; */
-//   margin-top: 8px;
-//   margin-bottom: 24px;
-// `
+
 const BtnWrapper = styled.div`
   text-align: center;
 `
-//   margin-top: 32px;
-//   width: 100%;
-//   text-align: center;
-//   a {
-//     width: 100%;
-//   }
-// `
 
 const InputWrapper = styled.div`
-  /* background-color: #faf; */
   padding: 1px;
   margin-top: 4px;
   position: relative;
-  &:after {
+  /* &:after {
     position: absolute;
     top: 8px;
     right: 0;
@@ -88,7 +74,7 @@ const InputWrapper = styled.div`
     background-color: #bbc7d6;
     border-radius: 10px;
     content: "";
-  }
+  } */
 `
 const RangeWrapper = styled.div`
   width: 100%;
@@ -102,21 +88,13 @@ const RangeWrapper = styled.div`
     width: 100%;
   }
 
-  .slider {
+  /* .slider {
     position: relative;
     z-index: 2;
     width: 100%;
     margin: 7.5px 0;
     background-color: transparent;
     -webkit-appearance: none;
-    /* &:after{
-      position: absolute;
-      content: ""
-      background-color: #faf;
-      top: 0;
-      right: 0;
-      width: 100%;
-    } */
   }
   .slider:focus {
     outline: none;
@@ -124,7 +102,6 @@ const RangeWrapper = styled.div`
   .slider::-webkit-slider-runnable-track {
     width: 100%;
     height: 17px;
-    /* overflow: hidden; */
     background: #89d9f3;
     border: 3px solid #ffffff;
     border-radius: 12px;
@@ -136,9 +113,7 @@ const RangeWrapper = styled.div`
     height: 32px;
     margin-top: -10.6px;
     background: #1a65ba;
-    /* border: 1px solid #1a65ba; */
     border-radius: 20px;
-    /* box-shadow: -80px 0 0 80px #fff; */
     cursor: pointer;
     -webkit-appearance: none;
   }
@@ -185,26 +160,15 @@ const RangeWrapper = styled.div`
     height: 32px;
     margin-top: 0px;
     background: #1a65ba;
-    /* border: 1px solid #1a65ba; */
     border-radius: 16px;
     cursor: pointer;
-    /*Needed to keep the Edge thumb centred*/
   }
   .slider:focus::-ms-fill-lower {
     background: #89d9f3;
   }
   .slider:focus::-ms-fill-upper {
     background: #89d9f3;
-  }
-  /*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
-how to remove the virtical space around the range input in IE*/
-  @supports (-ms-ime-align: auto) {
-    /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
-    .slider {
-      margin: 0;
-      /*Edge starts the margin from the thumb, not the track as other browsers do*/
-    }
-  }
+  } */
 `
 
 const SelectWrapper = styled.div`
@@ -233,58 +197,3 @@ const Wrapper = styled.div`
     padding: 64px 64px;
   }
 `
-//   ;
-//   box-shadow: ${theme.shadows.boxShadow};
-//   border-radius: 10px;
-//   /*padding: 32px 24px;*/
-//   padding: 64px 70px;
-//   /* margin: 24px -16px; */
-//   .slider {
-//     width: 100%;
-//     height: 20px;
-
-//     &:hover {
-//     }
-//     &::-webkit-slider-runnable-track {
-//     }
-//     &::-webkit-slider-thumb {
-//       width: 24px;
-//       height: 24px;
-//       cursor: pointer;
-//     }
-//   }
-
-//   .range {
-//     width: 100%;
-//     margin-bottom: 24px;
-//     .top {
-//       display: flex;
-//       justify-content: space-between;
-//       width: 100%;
-//       margin-bottom: 4px;
-//     }
-//   }
-//   .select {
-//     .label {
-//       display: inline-block;
-//       margin-bottom: 8px;
-//     }
-//     .dropdown {
-//       width: 100%;
-//       select {
-//         width: 100%;
-//         /* padding: 12px 16px; */
-//         padding-top: 12px;
-//         padding-bottom: 12px;
-//         padding-left: 16px;
-//         color: inherit;
-//         background-color: #fff;
-//         border: 1px solid #bbc7d6;
-//         border-radius: 4px;
-//         -moz-appearance: none;
-//         -webkit-appearance: none;
-//         appearance: none;
-//       }
-//     }
-//   }
-// `

@@ -6,6 +6,7 @@ import {
   CardLogoReadMore,
   CardFeatured,
 } from "./../../components"
+import { theme } from "./../../styles/new/theme"
 
 const SectionWeFunded = ({ data }) => {
   return (
@@ -51,6 +52,23 @@ const Wrapper = styled.div`
 `
 const ContentWrapper = styled.div`
   display: grid;
-  grid-template-columns: 560fr 986fr;
+  grid-template-columns: 1fr;
   gap: 24px;
+  justify-items: center;
+
+  > div {
+    order: 1;
+  }
+  .feel {
+    order: -1;
+  }
+  ${theme.above.l.m} {
+    grid-template-columns: 560fr 986fr;
+    > div {
+      order: -1;
+    }
+    .feel {
+      order: 1;
+    }
+  }
 `

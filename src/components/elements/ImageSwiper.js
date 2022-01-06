@@ -62,6 +62,11 @@ export default ImageSwiper
 
 const Image = styled.div`
   position: relative;
+  box-shadow: 0px 17px 33px rgba(5, 24, 64, 0.07),
+    0px 3.8002px 13.45px rgba(5, 24, 64, 0.0522616),
+    0px 1.07885px 7.14579px rgba(5, 24, 64, 0.0377807);
+  border-radius: 10px;
+  overflow: hidden;
   /* width: 160px; */
   /* width: 50%; */
   /* height: 200px; */
@@ -69,15 +74,18 @@ const Image = styled.div`
 `
 const Name = styled.div`
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 16px;
+  right: 24px;
+  font-size: 16px;
+  color: #fff;
 `
 
 const Wrapper = styled.div`
-  background-color: #afa;
+  /* background-color: #afa; */
   .swiper {
     /* width: 100%;
     height: 100%; */
+    overflow: visible;
   }
 
   .swiper-slide {
@@ -86,7 +94,7 @@ const Wrapper = styled.div`
     justify-content: center;
     /* width: 160px;
     height: 200px; */
-    background: #faf;
+
     user-select: none;
   }
 `

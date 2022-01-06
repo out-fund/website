@@ -1,10 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
 
 import { Button } from "./../../components/"
 import T from "./../../styles/new/typography"
 import { Triangle } from "./../../styles/utils"
+import { theme } from "./../../styles/new/theme"
 
 const HeroHomepage = ({ data }) => {
   const { title, description, primaryBtn, secondaryBtn } = data
@@ -92,11 +93,22 @@ const ImageWrapper = styled.div`
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 470fr 640fr;
-  gap: 60px;
-  max-width: 1170px;
+  grid-template-columns: 1fr;
+  gap: 24px;
   align-items: center;
+  max-width: 1170px;
   margin: 0 auto;
+  /* overflow: hidden; */
+
+  ${theme.above.p.l} {
+    grid-template-columns: 1fr 400px;
+    gap: 32px;
+  }
+
+  ${theme.above.t.l} {
+    grid-template-columns: 470fr 640fr;
+    gap: 60px;
+  }
 `
 
 const HeroWrapper = styled.header`
@@ -105,6 +117,15 @@ const HeroWrapper = styled.header`
   padding-bottom: 96px;
   padding-left: 40px;
   padding-right: 40px;
+  overflow: visible;
+
+  ${theme.above.p.l} {
+    overflow: hidden;
+  }
+
+  ${theme.above.t.l} {
+    overflow: visible;
+  }
 `
 
 const TextWrapper = styled.div`
@@ -117,4 +138,8 @@ const ButtonWrapper = styled.div`
   margin-top: 40px;
   display: flex;
   gap: 16px;
+  flex-direction: column;
+  ${theme.above.t.l} {
+    flex-direction: row;
+  }
 `

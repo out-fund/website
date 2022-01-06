@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 // import { Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import parse from "html-react-parser"
+// import parse from "html-react-parser"
 
 import T from "./../../styles/new/typography"
 import { Button } from "./../../components"

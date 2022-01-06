@@ -48,16 +48,18 @@ const LogoWrapper = styled.div`
 `
 
 const Wrapper = styled.div`
-  max-width: 570px;
+  /* max-width: 570px; */
+  width: 100%;
   position: relative;
-  height: 370px;
+  min-height: 370px;
   border-radius: 10px;
+  max-width: 986px;
   ${theme.above.t.s} {
-    height: 470px;
+    /* height: 470px; */
   }
 
   ${theme.above.d.m} {
-    height: 570px;
+    /* height: 570px; */
   }
   &.thevegankind {
     ${LogoWrapper} {
@@ -111,6 +113,7 @@ const Tag = styled.h3`
   text-transform: uppercase;
   color: #000000;
   align-self: flex-start;
+  margin-bottom: 40px;
 `
 const BtnWrapper = styled.div`
   margin-top: 40px;

@@ -48,19 +48,20 @@ const BtnWrapper = styled.div``
 const Wrapper = styled.div`
   background-color: ${({ bgc }) =>
     bgc ? bgc : theme.color.background.emphesized};
-  max-width: 570px;
+  /* max-width: 570px; */
   position: relative;
-  height: 370px;
+  /* height: 370px; */
+  width: 100%;
   border-radius: 10px;
   display: grid;
   align-content: center;
   justify-content: center;
 
   ${theme.above.t.s} {
-    height: 470px;
+    /* height: 470px; */
   }
 
   ${theme.above.d.m} {
-    height: 570px;
+    /* height: 570px; */
   }
 `
