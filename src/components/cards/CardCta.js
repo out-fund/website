@@ -32,17 +32,17 @@ const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 40px;
-  /* padding: 24px 32px 32px; */
+  padding: 24px 32px 32px;
   justify-content: center;
-  max-width: 320px;
-  /* align-items: center; */
+  align-items: center;
 
   ${theme.above.t.s} {
     /* padding: 24px 48px 32px; */
   }
 
-  ${theme.above.d.m} {
+  ${theme.above.l.m} {
     /* padding: 32px 64px 56px; */
+    max-width: 320px;
   }
 `
 const BtnWrapper = styled.div``
