@@ -143,8 +143,8 @@
       }
     ],
     "btn": {
-      "text": "Check Support",
-      "url": "btnUrl"
+      "text": "More FAQs",
+      "url": "/support/faq/"
     }
   },
   "aboutUs": {
