@@ -353,7 +353,6 @@ const MobileDropdownWrapper = styled.div`
   background-color: #fff;
   display: grid;
   grid-template-columns: 1fr;
-  /* width: 100%; */
   max-width: 260px;
   border-radius: 10px;
   padding: 24px;
@@ -382,7 +381,6 @@ const MobileDropdownWrapper = styled.div`
 const Menue = styled.button`
   padding: 11px 8px;
   border: 1px solid ${theme.color.button.primary.backgroundColor};
-  /* border-radius: 28px; */
   border-radius: 10px;
   display: flex;
   background-color: transparent;
