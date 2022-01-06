@@ -63,6 +63,8 @@ const ButtonWrap = styled.div`
     border-radius: 22px;
     cursor: pointer;
     user-select: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
     :disabled {
       opacity: 0.5;

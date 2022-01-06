@@ -12,7 +12,7 @@ import { theme } from "../theme"
 
 const globalCss = css`
   html {
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
   }
   body {
     padding-top: ${theme.size.navbarHeight}px;

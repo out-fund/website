@@ -21,8 +21,20 @@ const SectionFindOut = ({ data }) => {
 export default SectionFindOut
 
 const Wrapper = styled.div``
-const ContentWrapper = styled.div``
-const TextWrapper = styled.div``
+const ContentWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 560fr 570fr;
+  gap: 24px;
+  width: 1170px;
+  margin: 0 auto;
+  align-items: center;
+`
+const TextWrapper = styled.div`
+  max-width: 470px;
+  h2 {
+    max-width: 410px;
+  }
+`
 const CalculatorWrapper = styled.div``
 
 // const AccordionWrapper = styled.section`

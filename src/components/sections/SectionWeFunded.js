@@ -11,7 +11,9 @@ const SectionWeFunded = ({ data }) => {
   return (
     <Section>
       <Wrapper>
-        <SectionHeader title={data.title} description={data.description} />
+        <HeaderWrapper>
+          <SectionHeader title={data.title} description={data.description} />
+        </HeaderWrapper>
         <ContentWrapper>
           <CardLogoReadMore
             tag={data.cards.lemonadeDolls.tag}
@@ -20,6 +22,7 @@ const SectionWeFunded = ({ data }) => {
             image={data.cards.lemonadeDolls.image}
             btn={data.cards.lemonadeDolls.btn}
           />
+
           <CardFeatured
             bgc="#EDE3D9"
             quote={data.cards.feel.quote}
@@ -36,35 +39,18 @@ const SectionWeFunded = ({ data }) => {
 }
 export default SectionWeFunded
 
-const Wrapper = styled.div``
-const ContentWrapper = styled.div``
-
-// <Card
-//     className={lemonadeDolls.company.split(" ").join("")}
-// tagColor="#F6C34E"
-// variant="squereLogoOnly"
-// tag={lemonadeDolls.tag}
-// company={lemonadeDolls.company}
-// logo={lemonadeDolls.logo}
-// title={lemonadeDolls.title}
-// image={lemonadeDolls.image}
-// imageAlt={lemonadeDolls.imageAlt}
-// btn={lemonadeDolls.btn}
-// btnUrl={lemonadeDolls.btnUrl}
-//   />
-//   <Card
-//     className={feel.company}
-//     variant="wide"
-//     tag={feel.tag}
-//     tagColor="#F9F1EA"
-//     company={feel.company}
-//     logo={feel.logo}
-//     title={feel.title}
-//     by={feel.by}
-//     image={feel.image}
-//     imageAlt={feel.imageAlt}
-//     btn={feel.btn}
-//     btnUrl={feel.btnUrl}
-//     bgColor={feel.bgColor}
-//     titleColor="#A7825E"
-//   />
+const HeaderWrapper = styled.div`
+  text-align: center;
+  max-width: 770px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+`
+const Wrapper = styled.div`
+  max-width: 1570px;
+  margin: 0 auto;
+`
+const ContentWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 560fr 986fr;
+  gap: 24px;
+`

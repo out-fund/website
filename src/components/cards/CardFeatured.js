@@ -43,29 +43,22 @@ export default CardFeatured
 
 const Quote = styled(T.H3)`
   font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 16px;
+  position: relative;
+  &:before,
+  &:after {
+    position: absolute;
+  }
+  &:before {
+    left: -14px;
+  }
 `
-const By = styled.div``
+const By = styled(T.Body)``
 
 const ImageWrapper = styled.div`
-  max-width: 500px;
-  /* padding: 0 16px; */
-`
-
-const Wrapper = styled.div`
-  background-color: ${({ bgc }) => bgc};
-  max-width: 986px;
-  border-radius: 10px;
-  &.feel {
-    padding-right: 16px;
-  }
-  &.onto {
-    q,
-    div {
-      color: #deeeff;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-  }
+  order: -1;
+  display: flex;
 `
 
 const TextWrapper = styled.div`
@@ -81,11 +74,50 @@ const TextWrapper = styled.div`
   }
 
   ${theme.above.d.m} {
-    padding: 32px 64px 0px;
+    order: 1;
+    padding: 32px 0px 48px;
+  }
+`
+
+const Wrapper = styled.div`
+  background-color: ${({ bgc }) => bgc};
+  max-width: 986px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  gap: 70px;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &.feel {
+    padding-right: 16px;
+    .ButtonWrap a {
+      color: var(--gray500);
+      box-shadow: inset 0px 0px 0px 1px var(--gray500);
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+    }
+  }
+  &.onto {
+    padding-right: 56px;
+    q,
+    p {
+      color: #deeeff;
+    }
+    ${By} {
+      margin-top: auto;
+    }
   }
 `
 
 const LogoWrapper = styled.div`
+  ${theme.above.d.m} {
+    margin-top: 32px;
+    margin-bottom: 48px;
+  }
   svg {
     max-width: 100%;
     height: 32px;
@@ -95,7 +127,6 @@ const LogoWrapper = styled.div`
 const Tag = styled.h3`
   padding: 4px 16px;
   background-color: ${(props) => props.tagColor};
-  /* backdrop-filter: blur(20px); */
   border-radius: 4px;
   font-size: 14px;
   line-height: 24px;
@@ -104,4 +135,6 @@ const Tag = styled.h3`
   color: #000000;
   align-self: flex-start;
 `
-const BtnWrapper = styled.div``
+const BtnWrapper = styled.div`
+  margin-top: auto;
+`

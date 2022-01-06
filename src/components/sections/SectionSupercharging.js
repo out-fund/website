@@ -8,7 +8,6 @@ const SectionSupercharging = ({ data }) => {
     <Section>
       <Wrapper>
         <ContentWrapper>
-          <CardCta title={data.title} btn={data.btn} bgc="#F2F6FA" />
           <CardFeatured
             bgc="#0E3674"
             tag={data.card.tag}
@@ -18,6 +17,7 @@ const SectionSupercharging = ({ data }) => {
             btn={data.card.btn}
             quote={data.card.quote}
           />
+          <CardCta title={data.title} btn={data.btn} bgc="#F2F6FA" />
         </ContentWrapper>
       </Wrapper>
     </Section>
@@ -26,34 +26,10 @@ const SectionSupercharging = ({ data }) => {
 export default SectionSupercharging
 
 const Wrapper = styled.div``
-const ContentWrapper = styled.div``
-
-// <Card
-//     className={lemonadeDolls.company.split(" ").join("")}
-// tagColor="#F6C34E"
-// variant="squereLogoOnly"
-// tag={lemonadeDolls.tag}
-// company={lemonadeDolls.company}
-// logo={lemonadeDolls.logo}
-// title={lemonadeDolls.title}
-// image={lemonadeDolls.image}
-// imageAlt={lemonadeDolls.imageAlt}
-// btn={lemonadeDolls.btn}
-// btnUrl={lemonadeDolls.btnUrl}
-//   />
-//   <Card
-//     className={feel.company}
-//     variant="wide"
-//     tag={feel.tag}
-//     tagColor="#F9F1EA"
-//     company={feel.company}
-//     logo={feel.logo}
-//     title={feel.title}
-//     by={feel.by}
-//     image={feel.image}
-//     imageAlt={feel.imageAlt}
-//     btn={feel.btn}
-//     btnUrl={feel.btnUrl}
-//     bgColor={feel.bgColor}
-//     titleColor="#A7825E"
-//   />
+const ContentWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 986fr 560fr;
+  gap: 24px;
+  max-width: 1570px;
+  margin: 0 auto;
+`
