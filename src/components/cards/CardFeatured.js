@@ -55,12 +55,14 @@ const Quote = styled(T.H3)`
   }
 `
 const By = styled(T.Body)`
-  margin-bottom: 24px;
+  /* margin-bottom: 24px; */
 `
 
 const ImageWrapper = styled.div`
-  order: -1;
   display: flex;
+  ${theme.above.t.m} {
+    order: -1;
+  }
 `
 
 const TextWrapper = styled.div`
@@ -72,11 +74,14 @@ const TextWrapper = styled.div`
   padding: 24px 32px 0px;
 
   ${theme.above.t.s} {
-    padding: 24px 0px 24px;
+    padding: 32px 40px 32px;
+  }
+  ${theme.above.t.m} {
+    order: 1;
+    padding: 32px 0px 32px;
   }
 
   ${theme.above.d.m} {
-    order: 1;
     padding: 32px 0px 48px;
   }
 `
@@ -86,16 +91,14 @@ const Wrapper = styled.div`
   max-width: 986px;
   border-radius: 10px;
   overflow: hidden;
-  max-height: 560px;
 
   display: grid;
-  grid-template-columns: 500fr 416fr;
-  gap: 70px;
+  grid-template-columns: 1fr;
+  gap: 0px;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   &.feel {
-    padding-right: 40px;
     .ButtonWrap a {
       color: var(--gray500);
       box-shadow: inset 0px 0px 0px 1px var(--gray500);
@@ -103,9 +106,17 @@ const Wrapper = styled.div`
         background-color: rgba(0, 0, 0, 0.05);
       }
     }
+    ${By} {
+      margin-bottom: 40px;
+    }
+    ${ImageWrapper} {
+      padding-right: 10px;
+      ${theme.above.t.m} {
+        padding-right: 0;
+      }
+    }
   }
   &.onto {
-    padding-right: 56px;
     q,
     p {
       color: #deeeff;
@@ -113,6 +124,18 @@ const Wrapper = styled.div`
     ${By} {
       margin-top: auto;
     }
+    ${TextWrapper} {
+      padding: 24px 32px;
+    }
+  }
+  ${theme.above.t.m} {
+    grid-template-columns: 500fr 416fr;
+    gap: 40px;
+    max-height: 560px;
+    padding-right: 40px;
+  }
+  ${theme.above.d.m} {
+    gap: 70px;
   }
 `
 
@@ -142,4 +165,7 @@ const Tag = styled.h3`
 `
 const BtnWrapper = styled.div`
   margin-top: auto;
+  gap: 40px;
+  /* padding-top: 40px; */
+  /* margin-top: 40px; */
 `

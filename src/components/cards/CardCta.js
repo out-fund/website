@@ -24,23 +24,25 @@ const CardCta = ({ title, btn, bgc }) => {
 export default CardCta
 
 const Title = styled(T.H2)`
-  /* font-weight: 400; */
   line-height: 1.2;
-  max-width: 412px;
+  /* max-width: 412px; */
 `
 
 const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 40px;
-  padding: 24px 32px 32px;
+  /* padding: 24px 32px 32px; */
+  justify-content: center;
+  max-width: 320px;
+  /* align-items: center; */
 
   ${theme.above.t.s} {
-    padding: 24px 48px 32px;
+    /* padding: 24px 48px 32px; */
   }
 
   ${theme.above.d.m} {
-    padding: 32px 64px 56px;
+    /* padding: 32px 64px 56px; */
   }
 `
 const BtnWrapper = styled.div``
@@ -48,20 +50,11 @@ const BtnWrapper = styled.div``
 const Wrapper = styled.div`
   background-color: ${({ bgc }) =>
     bgc ? bgc : theme.color.background.emphesized};
-  /* max-width: 570px; */
   position: relative;
-  /* height: 370px; */
   width: 100%;
+  max-width: 986px;
   border-radius: 10px;
   display: grid;
   align-content: center;
   justify-content: center;
-
-  ${theme.above.t.s} {
-    /* height: 470px; */
-  }
-
-  ${theme.above.d.m} {
-    /* height: 570px; */
-  }
 `
