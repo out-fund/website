@@ -16,11 +16,16 @@ const SectionAboutUs = ({ data }) => {
     <Section>
       <Wrapper>
         <ContentWrapper>
-          <HeaderWrapper>
-            <SectionHeader title={data.title} description={data.description} />
-          </HeaderWrapper>
+          <TextWrapper>
+            <HeaderWrapper>
+              <SectionHeader
+                title={data.title}
+                description={data.description}
+              />
+            </HeaderWrapper>
 
-          <Stats data={data.stats} />
+            <Stats data={data.stats} />
+          </TextWrapper>
 
           <ImagesWrapper>
             <ImageSwiper data={data.teamImages} />
@@ -45,11 +50,27 @@ const HeaderWrapper = styled.div`
   text-align: center;
   margin-bottom: 40px;
 `
+const TextWrapper = styled.div`
+  padding: 0 24px;
+`
+
 const Wrapper = styled.div``
 const ContentWrapper = styled.div`
   background-color: ${theme.color.background.emphesized};
-  padding: 120px 0;
   overflow: hidden;
+  border-radius: 10px;
+  padding: 64px 0;
+
+  /* ${theme.above.p.s} {
+    padding: 64px 0;
+  } */
+
+  ${theme.above.t.m} {
+    padding: 100px 0;
+  }
+  ${theme.above.d.m} {
+    padding: 120px 0;
+  }
 `
 const ImagesWrapper = styled.div`
   margin-top: 64px;

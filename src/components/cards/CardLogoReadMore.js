@@ -54,12 +54,13 @@ const Wrapper = styled.div`
   min-height: 370px;
   border-radius: 10px;
   max-width: 986px;
+
   ${theme.above.t.s} {
-    /* height: 470px; */
+    min-height: 470px;
   }
 
-  ${theme.above.d.m} {
-    /* height: 570px; */
+  ${theme.above.l.m} {
+    min-height: 570px;
   }
   &.thevegankind {
     ${LogoWrapper} {

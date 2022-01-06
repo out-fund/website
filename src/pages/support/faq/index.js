@@ -86,24 +86,6 @@ const FAQ = (props) => {
 
 export default FAQ
 
-export const query = graphql`
-  query faqPage {
-    faqJson {
-      hero {
-        description
-        title
-      }
-      faq {
-        title
-        qa {
-          answer
-          question
-        }
-      }
-    }
-  }
-`
-
 const Title = styled(T.H3)``
 
 const LinksWrapper = styled.ul`
@@ -157,14 +139,26 @@ const FaqWrapper = styled.section`
     flex-direction: row-reverse;
     align-items: center;
     justify-content: flex-end;
-    padding: 24px 24px;
+    padding: 1.2em 1.2em;
     color: #051734;
-    font-size: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
     letter-spacing: -0.02em;
     background-color: #fff;
-    /* border-radius: 4px; */
     user-select: none;
 
+    ${theme.above.t.s} {
+      font-size: 18px;
+    }
+
+    ${theme.above.d.m} {
+      font-size: 20px;
+    }
+
+    &[aria-expanded="true"] {
+      background-color: ${theme.color.background.emphesized};
+    }
     :hover {
       background-color: #deeeff;
     }
@@ -178,6 +172,24 @@ const FaqWrapper = styled.section`
     color: #1c3654;
     line-height: 1.5;
     background-color: #fff;
-    /* border-bottom: 1px solid #bbc7d6 !important; */
+    background-color: ${theme.color.background.emphesized};
+  }
+`
+
+export const query = graphql`
+  query faqPage {
+    faqJson {
+      hero {
+        description
+        title
+      }
+      faq {
+        title
+        qa {
+          answer
+          question
+        }
+      }
+    }
   }
 `

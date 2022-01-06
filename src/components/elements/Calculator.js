@@ -63,7 +63,7 @@ const InputWrapper = styled.div`
   padding: 1px;
   margin-top: 4px;
   position: relative;
-  &:after {
+  /* &:after {
     position: absolute;
     top: 7px;
     right: 0;
@@ -74,7 +74,7 @@ const InputWrapper = styled.div`
     background-color: #bbc7d6;
     border-radius: 10px;
     content: "";
-  }
+  } */
 `
 const RangeWrapper = styled.div`
   width: 100%;
@@ -105,13 +105,14 @@ const RangeWrapper = styled.div`
     background: #89d9f3;
     border: 3px solid #ffffff;
     border-radius: 12px;
+    box-shadow: 0px 0px 0px 1px #bbc7d6;
     cursor: pointer;
   }
   .slider::-webkit-slider-thumb {
     position: relative;
     width: 32px;
     height: 32px;
-    margin-top: -10.6px;
+    margin-top: -10px;
     background: #1a65ba;
     border-radius: 20px;
     cursor: pointer;
@@ -125,7 +126,8 @@ const RangeWrapper = styled.div`
     height: 17px;
     background: #89d9f3;
     border: 3px solid #ffffff;
-    border-radius: 9px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 0px 1px #bbc7d6;
     cursor: pointer;
   }
   .slider::-moz-range-thumb {
@@ -133,7 +135,7 @@ const RangeWrapper = styled.div`
     height: 32px;
     background: #1a65ba;
     border: 1px solid #1a65ba;
-    border-radius: 16px;
+    border-radius: 32px;
     cursor: pointer;
   }
   .slider::-ms-track {
@@ -142,7 +144,7 @@ const RangeWrapper = styled.div`
     color: transparent;
     background: transparent;
     border-color: transparent;
-    border-width: 8.5px 0;
+    border-width: 8px 0;
     cursor: pointer;
   }
   .slider::-ms-fill-lower {

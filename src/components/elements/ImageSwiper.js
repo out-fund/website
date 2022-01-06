@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import shuffle from "../../utils/shuffle"
+import T from "./../../styles/new/typography"
 
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
@@ -15,8 +16,10 @@ const ImageSwiper = ({ data }) => {
   return (
     <Wrapper>
       <Swiper
-        freeMode={true}
         grabCursor={true}
+        preloadImages={true}
+        roundLengths={true}
+        freeMode={true}
         speed={9000}
         autoplay={{
           delay: 100,
@@ -25,35 +28,35 @@ const ImageSwiper = ({ data }) => {
         }}
         breakpoints={{
           300: {
-            slidesPerView: 2,
+            slidesPerView: 2.4,
             spaceBetween: 24,
           },
           640: {
-            slidesPerView: 3,
+            slidesPerView: 3.4,
             spaceBetween: 24,
           },
           768: {
-            slidesPerView: 4,
+            slidesPerView: 4.4,
             spaceBetween: 24,
           },
           1024: {
-            slidesPerView: 5,
+            slidesPerView: 5.4,
             spaceBetween: 24,
           },
           1100: {
-            slidesPerView: 6,
+            slidesPerView: 6.4,
             spaceBetween: 24,
           },
           1200: {
-            slidesPerView: 7,
+            slidesPerView: 7.4,
             spaceBetween: 24,
           },
           1400: {
-            slidesPerView: 8,
+            slidesPerView: 8.4,
             spaceBetween: 24,
           },
           1600: {
-            slidesPerView: 10,
+            slidesPerView: 9.4,
             spaceBetween: 24,
           },
         }}
@@ -73,30 +76,32 @@ const ImageSwiper = ({ data }) => {
 export default ImageSwiper
 
 const Image = styled.div`
-  position: relative;
   box-shadow: 0px 17px 33px rgba(5, 24, 64, 0.07),
     0px 3.8002px 13.45px rgba(5, 24, 64, 0.0522616),
     0px 1.07885px 7.14579px rgba(5, 24, 64, 0.0377807);
   border-radius: 10px;
-  overflow: hidden;
-  /* width: 160px; */
-  /* width: 50%; */
-  /* height: 200px; */
-  /* object-fit: cover; */
+
+  img {
+    overflow: hidden;
+    border-radius: 10px;
+  }
 `
-const Name = styled.div`
+const Name = styled(T.Body)`
   position: absolute;
-  bottom: 16px;
-  right: 24px;
-  font-size: 16px;
+  display: flex;
+  bottom: 8px;
+  right: 16px;
+  z-index: 10;
+  float: right;
+  transform: translate3d(0, 0, 0);
   color: #fff;
 `
 
 const Wrapper = styled.div`
-  /* background-color: #afa; */
+  padding-left: 24px;
+  padding-right: 24px;
   .swiper {
-    /* width: 100%;
-    height: 100%; */
+    width: auto;
     overflow: visible;
   }
 
@@ -104,9 +109,7 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    /* width: 160px;
-    height: 200px; */
-
+    width: auto;
     user-select: none;
   }
 `

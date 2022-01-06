@@ -11,7 +11,7 @@ import { theme } from "./../../styles/new/theme"
 
 const CardFeatured = (props) => {
   const { tag, company, logo, btn, image, bgc, quote } = props
-  console.log(quote)
+  // console.log(quote)
   return (
     <Wrapper bgc={bgc} className={company.toLowerCase()}>
       <TextWrapper>
@@ -110,8 +110,10 @@ const Wrapper = styled.div`
       margin-bottom: 40px;
     }
     ${ImageWrapper} {
+      margin-top: -40px;
       padding-right: 10px;
       ${theme.above.t.m} {
+        margin-top: unset;
         padding-right: 0;
       }
     }

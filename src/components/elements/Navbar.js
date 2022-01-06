@@ -96,61 +96,56 @@ const MobileLinks = ({ lang }) => {
   )
 }
 
-const CompanyDropdown = ({ lang, isOpen }) => {
-  return (
-    <DesktopDropdownWrappepr isOpen={isOpen}>
-      <li>
-        <Button to={links.aboutUs.url} variant="navLink">
-          {links.aboutUs.text[lang]}
-        </Button>
-      </li>
-      <li>
-        <Button to={links.careers.url} variant="navLink">
-          {links.careers.text[lang]}
-        </Button>
-      </li>
-      <li>
-        <Button to={links.blog.url} variant="navLink">
-          {links.blog.text[lang]}
-        </Button>
-      </li>
-    </DesktopDropdownWrappepr>
-  )
-}
-const FundingDropdown = ({ lang, isOpen }) => {
-  return (
-    <DesktopDropdownWrappepr isOpen={isOpen}>
-      <li>
-        <Button to={links.howItWorks.url} variant="navLink">
-          {links.howItWorks.text[lang]}
-        </Button>
-      </li>
-      <li>
-        <Button to={links.successStories.url} variant="navLink">
-          {links.successStories.text[lang]}
-        </Button>
-      </li>
-      <li>
-        <Button to={links.b2b.url} variant="navLink">
-          {links.b2b.text[lang]}
-        </Button>
-      </li>
-    </DesktopDropdownWrappepr>
-  )
-}
+// const CompanyDropdown = ({ lang, isOpen }) => {
+//   return (
+//     <DesktopDropdownWrappepr isOpen={isOpen}>
+//       <li>
+//         <Button to={links.aboutUs.url} variant="navLink">
+//           {links.aboutUs.text[lang]}
+//         </Button>
+//       </li>
+//       <li>
+//         <Button to={links.careers.url} variant="navLink">
+//           {links.careers.text[lang]}
+//         </Button>
+//       </li>
+//       <li>
+//         <Button to={links.blog.url} variant="navLink">
+//           {links.blog.text[lang]}
+//         </Button>
+//       </li>
+//     </DesktopDropdownWrappepr>
+//   )
+// }
+// const FundingDropdown = ({ lang, isOpen }) => {
+//   return (
+//     <DesktopDropdownWrappepr isOpen={isOpen}>
+//       <li>
+//         <Button to={links.howItWorks.url} variant="navLink">
+//           {links.howItWorks.text[lang]}
+//         </Button>
+//       </li>
+//       <li>
+//         <Button to={links.successStories.url} variant="navLink">
+//           {links.successStories.text[lang]}
+//         </Button>
+//       </li>
+//       <li>
+//         <Button to={links.b2b.url} variant="navLink">
+//           {links.b2b.text[lang]}
+//         </Button>
+//       </li>
+//     </DesktopDropdownWrappepr>
+//   )
+// }
 
 function DesktopLinks({ lang }) {
-  const [companyIsOpen, setCompanyIsOpen] = useState(false)
-  const [fundingIsOpen, setFundingIsOpen] = useState(false)
-  const companyRef = useRef()
-  const fundingRef = useRef()
+  // const [companyIsOpen, setCompanyIsOpen] = useState(false)
+  // const [fundingIsOpen, setFundingIsOpen] = useState(false)
 
-  const handleCompanyClick = (event) => {
-    event.preventDefault()
-    setCompanyIsOpen(!companyIsOpen)
-    setFundingIsOpen(false)
-    // console.log("event", event)
-  }
+  // const companyRef = useRef()
+  // const fundingRef = useRef()
+
   // const handleCompanyMouseEnter = (event) => {
   //   // console.log("test", event)
   //   setCompanyIsOpen(true)
@@ -160,35 +155,42 @@ function DesktopLinks({ lang }) {
   //   setCompanyIsOpen(false)
   // }
 
-  const handleFundingClick = (event) => {
-    event.preventDefault()
-    setFundingIsOpen(!fundingIsOpen)
-    setCompanyIsOpen(false)
-  }
+  // const handleCompanyClick = (event) => {
+  //   event.preventDefault()
+  //   setCompanyIsOpen(!companyIsOpen)
+  //   setFundingIsOpen(false)
+  //   // console.log("event", event)
+  // }
 
-  const handleClickOutside = (event) => {
-    if (
-      companyRef.current &&
-      !companyRef.current.contains(event.target) &&
-      fundingRef.current &&
-      !fundingRef.current.contains(event.target)
-    ) {
-      setFundingIsOpen(false)
-      setCompanyIsOpen(false)
-      // console.log("doc is clicked")
-    }
-  }
+  // const handleFundingClick = (event) => {
+  //   event.preventDefault()
+  //   setFundingIsOpen(!fundingIsOpen)
+  //   setCompanyIsOpen(false)
+  // }
 
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside)
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
-    }
-  }, [])
+  // const handleClickOutside = (event) => {
+  //   if (
+  //     companyRef.current &&
+  //     !companyRef.current.contains(event.target) &&
+  //     fundingRef.current &&
+  //     !fundingRef.current.contains(event.target)
+  //   ) {
+  //     setFundingIsOpen(false)
+  //     setCompanyIsOpen(false)
+  //     // console.log("doc is clicked")
+  //   }
+  // }
+
+  // useEffect(() => {
+  //   document.addEventListener("mousedown", handleClickOutside)
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside)
+  //   }
+  // }, [])
 
   return (
     <DesktopLinksWrapper>
-      <li ref={companyRef}>
+      {/* <li ref={companyRef}>
         <Button
           variant="navDropDown"
           onClick={(event) => handleCompanyClick(event)}
@@ -209,13 +211,23 @@ function DesktopLinks({ lang }) {
           {links.funding.text[lang]}
         </Button>
         <FundingDropdown lang={lang} isOpen={fundingIsOpen} />
+      </li> */}
+      <li>
+        <Button to={links.aboutUs.url} variant="navLink">
+          {links.aboutUs.text[lang]}
+        </Button>
+      </li>
+      <li>
+        <Button to={links.successStories.url} variant="navLink">
+          {links.successStories.text[lang]}
+        </Button>
       </li>
       <li>
         <Button to={links.faq.url} variant="navLink">
           {links.faq.text[lang]}
         </Button>
       </li>
-      <li>
+      {/* <li>
         <Button to={links.partners.url} variant="navLink">
           {links.partners.text[lang]}
         </Button>
@@ -224,7 +236,7 @@ function DesktopLinks({ lang }) {
         <Button to={links.contactUs.url} variant="navLink">
           {links.contactUs.text[lang]}
         </Button>
-      </li>
+      </li> */}
       <li className="getFunded">
         <Button to={links.getFunded.url} variant="primary" size="medium">
           {links.getFunded.text[lang]}
@@ -398,39 +410,39 @@ const DesktopLinksWrapper = styled.ul`
   }
 `
 
-const DesktopDropdownWrappepr = styled.ul`
-  position: absolute;
-  left: 0;
-  top: ${theme.size.navbarHeight}px;
-  z-index: 99;
-  background-color: #fff;
-  display: grid;
-  grid-template-columns: 1fr;
-  max-width: 260px;
-  padding: 24px;
-  border-radius: 10px;
-  row-gap: 8px;
-  opacity: 0;
-  transition: all 0.2s ease-in-out;
-  transform: skewY(-5deg) rotate(7deg) translateY(-30px);
-  box-shadow: 0px 100px 80px rgba(1, 14, 25, 0.07),
-    0px 41.7776px 33.1139px rgba(1, 14, 25, 0.0503198),
-    0px 22.3363px 16.2366px rgba(1, 14, 25, 0.0417275),
-    0px 12.5216px 7.80488px rgba(1, 14, 25, 0.035),
-    0px 6.6501px 3.28033px rgba(1, 14, 25, 0.0282725),
-    0px 2.76726px 0.952807px rgba(1, 14, 25, 0.0196802);
+// const DesktopDropdownWrappepr = styled.ul`
+//   position: absolute;
+//   left: 0;
+//   top: ${theme.size.navbarHeight}px;
+//   z-index: 99;
+//   background-color: #fff;
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   max-width: 260px;
+//   padding: 24px;
+//   border-radius: 10px;
+//   row-gap: 8px;
+//   opacity: 0;
+//   transition: all 0.2s ease-in-out;
+//   transform: skewY(-5deg) rotate(7deg) translateY(-30px);
+//   box-shadow: 0px 100px 80px rgba(1, 14, 25, 0.07),
+//     0px 41.7776px 33.1139px rgba(1, 14, 25, 0.0503198),
+//     0px 22.3363px 16.2366px rgba(1, 14, 25, 0.0417275),
+//     0px 12.5216px 7.80488px rgba(1, 14, 25, 0.035),
+//     0px 6.6501px 3.28033px rgba(1, 14, 25, 0.0282725),
+//     0px 2.76726px 0.952807px rgba(1, 14, 25, 0.0196802);
 
-  li {
-    position: relative;
-  }
-  ${(props) =>
-    props.isOpen
-      ? css`
-          visibility: visible;
-          opacity: 1;
-          transform: skewY(0deg) rotate(0deg) translateY(0px);
-        `
-      : css`
-          visibility: hidden;
-        `}
-`
+//   li {
+//     position: relative;
+//   }
+//   ${(props) =>
+//     props.isOpen
+//       ? css`
+//           visibility: visible;
+//           opacity: 1;
+//           transform: skewY(0deg) rotate(0deg) translateY(0px);
+//         `
+//       : css`
+//           visibility: hidden;
+//         `}
+// `

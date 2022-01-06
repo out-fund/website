@@ -3,6 +3,7 @@ import styled from "styled-components"
 import parse from "html-react-parser"
 
 import { Section, SectionHeader, Button } from "./../../components"
+import { theme } from "./../../styles/new/theme"
 
 import {
   Accordion,
@@ -64,7 +65,13 @@ const ContentWrapper = styled.div`
 
 const BtnWrapper = styled.div`
   text-align: center;
-  margin-top: 64px;
+  margin-top: 24px;
+  ${theme.above.t.s} {
+    margin-top: 48px;
+  }
+  ${theme.above.l.m} {
+    margin-top: 64px;
+  }
 `
 
 const AccordionWrapper = styled.div`
@@ -83,13 +90,26 @@ const AccordionWrapper = styled.div`
     flex-direction: row-reverse;
     align-items: center;
     justify-content: flex-end;
-    padding: 24px 24px;
+    padding: 1.2em 1.2em;
     color: #051734;
-    font-size: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
     letter-spacing: -0.02em;
     background-color: #fff;
-    /* border-radius: 4px; */
     user-select: none;
+
+    ${theme.above.t.s} {
+      font-size: 18px;
+    }
+
+    ${theme.above.d.m} {
+      font-size: 20px;
+    }
+
+    &[aria-expanded="true"] {
+      background-color: ${theme.color.background.emphesized};
+    }
 
     :hover {
       background-color: #deeeff;
@@ -104,7 +124,8 @@ const AccordionWrapper = styled.div`
     color: #1c3654;
     line-height: 1.5;
     background-color: #fff;
-    border-bottom: 1px solid #bbc7d6 !important;
+    background-color: ${theme.color.background.emphesized};
+    /* border-bottom: 1px solid #bbc7d6 !important; */
   }
 `
 

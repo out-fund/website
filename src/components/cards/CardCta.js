@@ -35,17 +35,24 @@ const TextWrapper = styled.div`
   padding: 24px 32px 32px;
   justify-content: center;
   align-items: center;
+  text-align: center;
 
-  ${theme.above.t.s} {
-    /* padding: 24px 48px 32px; */
+  ${theme.above.t.l} {
+    max-width: 340px;
+    padding: 0;
+    text-align: left;
   }
 
   ${theme.above.l.m} {
     /* padding: 32px 64px 56px; */
-    max-width: 320px;
+    /* max-width: 320px; */
   }
 `
-const BtnWrapper = styled.div``
+const BtnWrapper = styled.div`
+  ${theme.above.l.m} {
+    align-self: start;
+  }
+`
 
 const Wrapper = styled.div`
   background-color: ${({ bgc }) =>

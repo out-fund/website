@@ -64,20 +64,21 @@ const CardsWrapper = styled.div`
   grid-template-columns: repeat(1, 1fr);
   row-gap: 30px;
   justify-content: center;
+  /* max-width: 100%; */
   /* justify-items: center; */
 
-  ${theme.above.p.m} {
-  }
+  /* ${theme.above.p.m} {
+  } */
 
-  ${theme.above.t.s} {
+  ${theme.above.t.l} {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 30px;
   }
   ${theme.above.l.m} {
-    grid-template-columns: repeat(2, 570px);
+    /* grid-template-columns: repeat(2, 1fr); */
   }
 
   ${theme.above.d.m} {
-    grid-template-columns: repeat(3, 570px);
+    grid-template-columns: repeat(3, 1fr);
   }
 `
