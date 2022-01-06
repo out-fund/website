@@ -49,10 +49,10 @@ const Title = styled(T.H1)``
 const Description = styled(T.BodyLarge)``
 
 const LeftImage = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 56.875%;
+  border-radius: 10px;
+  /* overflow: hidden; */
   box-shadow: 0px 100px 80px rgba(1, 14, 25, 0.07),
     0px 41.7776px 33.1139px rgba(1, 14, 25, 0.0503198),
     0px 22.3363px 16.2366px rgba(1, 14, 25, 0.0417275),
@@ -63,46 +63,72 @@ const LeftImage = styled.div`
   &:after {
     z-index: 3;
   }
-  border-radius: 10px;
+
   .gatsby-image-wrapper {
+    position: relative;
+    z-index: 1;
     overflow: hidden;
     border-radius: 10px;
+  }
+  ${theme.above.t.s} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 56.875%;
   }
 `
 const RightImage = styled.div`
   border-radius: 10px;
   overflow: hidden;
   width: 56.875%;
+  position: relative;
   position: absolute;
-  left: 276px;
-  top: 112px;
+  top: 0;
+  top: 20px;
   left: 43%;
-  top: 20%;
+
   box-shadow: 0px 100px 80px rgba(1, 14, 25, 0.07),
     0px 41.7776px 33.1139px rgba(1, 14, 25, 0.0503198),
     0px 22.3363px 16.2366px rgba(1, 14, 25, 0.0417275),
     0px 12.5216px 7.80488px rgba(1, 14, 25, 0.035),
     0px 6.6501px 3.28033px rgba(1, 14, 25, 0.0282725),
     0px 2.76726px 0.952807px rgba(1, 14, 25, 0.0196802);
+  .gatsby-image-wrapper {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  ${theme.above.t.s} {
+    position: absolute;
+    top: 112px;
+    top: 20%;
+    left: 276px;
+    left: 43%;
+    width: 56.875%;
+  }
 `
 const ImageWrapper = styled.div`
   height: 100%;
   position: relative;
-  /* display: flex; */
 `
 
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
+  gap: 40px;
   align-items: center;
   max-width: 1170px;
   margin: 0 auto;
   /* overflow: hidden; */
 
-  ${theme.above.p.l} {
-    grid-template-columns: 1fr 400px;
+  ${theme.above.t.s} {
+    grid-template-columns: 345px 400px;
     gap: 32px;
+  }
+
+  @media (min-width: 800px) {
+    grid-template-columns: 1fr 1fr;
   }
 
   ${theme.above.t.l} {
@@ -113,17 +139,16 @@ const Wrapper = styled.div`
 
 const HeroWrapper = styled.header`
   background-color: #f2f6fa;
-  padding-top: 140px;
-  padding-bottom: 96px;
-  padding-left: 40px;
-  padding-right: 40px;
   overflow: visible;
+  padding: 80px 24px 48px;
 
-  ${theme.above.p.l} {
+  ${theme.above.t.s} {
+    padding: 100px 40px 64px;
     overflow: hidden;
   }
 
   ${theme.above.t.l} {
+    padding: 140px 40px 96px;
     overflow: visible;
   }
 `

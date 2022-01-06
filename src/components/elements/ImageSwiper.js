@@ -40,7 +40,19 @@ const ImageSwiper = ({ data }) => {
             slidesPerView: 5,
             spaceBetween: 24,
           },
+          1100: {
+            slidesPerView: 6,
+            spaceBetween: 24,
+          },
           1200: {
+            slidesPerView: 7,
+            spaceBetween: 24,
+          },
+          1400: {
+            slidesPerView: 8,
+            spaceBetween: 24,
+          },
+          1600: {
             slidesPerView: 10,
             spaceBetween: 24,
           },

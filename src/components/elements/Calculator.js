@@ -23,9 +23,9 @@ const Calculator = ({ data }) => {
         </InputWrapper>
       </RangeWrapper>
       <SelectWrapper>
-        <label className="label" htmlFor="reasons">
+        <T.Body as="label" className="label" htmlFor="reasons">
           {data.select.title}
-        </label>
+        </T.Body>
         <div className="dropdown">
           <F.Select name="reasons" id="reasons">
             {data.select.dropdown.map((item) => (
@@ -63,9 +63,9 @@ const InputWrapper = styled.div`
   padding: 1px;
   margin-top: 4px;
   position: relative;
-  /* &:after {
+  &:after {
     position: absolute;
-    top: 8px;
+    top: 7px;
     right: 0;
     bottom: 0;
     left: 0;
@@ -74,7 +74,7 @@ const InputWrapper = styled.div`
     background-color: #bbc7d6;
     border-radius: 10px;
     content: "";
-  } */
+  }
 `
 const RangeWrapper = styled.div`
   width: 100%;
@@ -88,7 +88,7 @@ const RangeWrapper = styled.div`
     width: 100%;
   }
 
-  /* .slider {
+  .slider {
     position: relative;
     z-index: 2;
     width: 100%;
@@ -168,7 +168,7 @@ const RangeWrapper = styled.div`
   }
   .slider:focus::-ms-fill-upper {
     background: #89d9f3;
-  } */
+  }
 `
 
 const SelectWrapper = styled.div`
@@ -179,6 +179,8 @@ const SelectWrapper = styled.div`
   margin-bottom: 40px;
   select {
     width: 100%;
+  }
+  label {
   }
 `
 

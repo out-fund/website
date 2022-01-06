@@ -3,6 +3,7 @@ import styled, { css } from "styled-components"
 import { Link as GatsbyLink } from "gatsby"
 import PropTypes from "prop-types"
 import { theme } from "./../../styles/new/theme"
+// import T from "./../../styles/new/typography"
 
 const Button = ({
   to,
@@ -50,9 +51,13 @@ const ButtonWrap = styled.div`
 
   a,
   button {
-    display: inline-block;
+    /* display: inline-block; */
+
+    display: flex;
+    justify-content: center;
+    height: calc(100% - 1px);
     margin: 0;
-    padding: 8px 24px;
+    padding: 0.5em 1.5em;
     color: ${theme.color.text.headings};
     font-weight: 500;
     font-size: 16px;
@@ -68,6 +73,14 @@ const ButtonWrap = styled.div`
 
     :disabled {
       opacity: 0.5;
+    }
+
+    ${theme.above.t.s} {
+      font-size: 17px;
+    }
+
+    ${theme.above.d.m} {
+      font-size: 18px;
     }
 
     ${({ variant }) =>
@@ -168,15 +181,29 @@ const ButtonWrap = styled.div`
     ${({ size }) =>
       size === "large"
         ? css`
-            font-size: 18px;
-            padding: 12px 32px;
+            font-size: 16px;
+            padding: 0.66666667em 1.77777778em;
             border-radius: 26px;
+            ${theme.above.t.s} {
+              font-size: 17px;
+            }
+
+            ${theme.above.d.m} {
+              font-size: 18px;
+            }
           `
         : size === "small"
         ? css`
-            font-size: 14px;
-            padding: 8px 16px;
+            font-size: 12px;
+            padding: 0.57142857em 1.14285714em;
             border-radius: 20px;
+            ${theme.above.t.s} {
+              font-size: 13px;
+            }
+
+            ${theme.above.d.m} {
+              font-size: 14px;
+            }
           `
         : ""};
   }
