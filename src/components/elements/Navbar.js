@@ -53,7 +53,6 @@ const MobileLinks = ({ lang }) => {
         <Button
           to={links.getFunded.url}
           variant="primary"
-          size="medium"
           className="getFunded"
         >
           {links.getFunded.text[lang]}
@@ -238,7 +237,7 @@ function DesktopLinks({ lang }) {
         </Button>
       </li> */}
       <li className="getFunded">
-        <Button to={links.getFunded.url} variant="primary" size="medium">
+        <Button to={links.getFunded.url} variant="primary">
           {links.getFunded.text[lang]}
         </Button>
       </li>

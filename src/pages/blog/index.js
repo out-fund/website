@@ -12,8 +12,8 @@ const Blog = (props) => {
   console.log(props)
   return (
     <EnLayout>
+      <HeroSimple data={props.data.blogJson.hero} />
       <Main>
-        <HeroSimple data={props.data.blogJson.hero} />
         <Wrapper>
           <List>
             {props.data.allMdx.edges.map(({ node: post }) => (
@@ -42,7 +42,7 @@ const List = styled.ul`
   gap: 24px;
   justify-items: center;
 
-  ${theme.above.t.m} {
+  ${theme.above.t.l} {
     grid-template-columns: repeat(2, 1fr);
   }
   ${theme.above.l.m} {

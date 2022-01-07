@@ -56,7 +56,8 @@ const ButtonWrap = styled.div`
     display: flex;
     justify-content: center;
     margin: 0;
-    padding: 0.5em 1.5em;
+    /* padding: 0.5em 1.5em; */
+    padding: 8px 24px;
     color: ${theme.color.text.headings};
     font-weight: 500;
     font-size: 16px;
@@ -79,7 +80,7 @@ const ButtonWrap = styled.div`
     } */
 
     ${theme.above.d.m} {
-      font-size: 18px;
+      /* font-size: 18px; */
     }
 
     ${({ variant }) =>
@@ -88,6 +89,7 @@ const ButtonWrap = styled.div`
             background-color: ${theme.color.button.primary.backgroundColor};
             color: ${theme.color.white};
             transition: background-color 0.1s ease-in-out;
+            font-weight: 600;
             :hover {
               background-color: ${theme.color.button.primary.hover};
             }
@@ -189,7 +191,9 @@ const ButtonWrap = styled.div`
             }
 
             ${theme.above.d.m} {
+              padding: 12px 32px;
               font-size: 18px;
+              line-height: 24px;
             }
           `
         : size === "small"
@@ -203,6 +207,7 @@ const ButtonWrap = styled.div`
             }
 
             ${theme.above.d.m} {
+              padding: 8px 16px;
               font-size: 14px;
             }
           `

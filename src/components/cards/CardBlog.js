@@ -41,24 +41,21 @@ const Title = styled(T.H3)``
 const ImageWrapper = styled.div``
 
 const TextWrapper = styled.div`
-  padding: 40px 48px;
   display: flex;
   flex-direction: column;
   gap: 24px;
   height: 100%;
   justify-content: space-between;
-  /* display: flex;
-  flex-direction: column;
-  gap: 40px;
-  padding: 24px 32px 32px;
+
+  padding: 24px 24px;
 
   ${theme.above.t.s} {
-    padding: 24px 48px 32px;
+    padding: 32px 48px;
   }
 
   ${theme.above.d.m} {
-    padding: 32px 64px 56px;
-  } */
+    padding: 40px 48px;
+  }
 `
 const BtnWrapper = styled.div``
 
@@ -72,22 +69,4 @@ const Wrapper = styled.div`
   overflow: hidden;
   position: relative;
   z-index: 1;
-
-  /* background-color: ${({ bgc }) =>
-    bgc ? bgc : theme.color.background.emphesized};
-  max-width: 570px;
-  position: relative;
-  height: 370px;
-  border-radius: 10px;
-  display: grid;
-  align-content: center;
-  justify-content: center;
-
-  ${theme.above.t.s} {
-    height: 470px;
-  }
-
-  ${theme.above.d.m} {
-    height: 570px;
-  } */
 `

@@ -164,20 +164,24 @@ const FaqWrapper = styled.section`
     &[aria-expanded="true"] {
       background-color: ${theme.color.background.emphesized};
     }
-    :hover {
+    ::hover {
       background-color: #deeeff;
     }
-    &:before {
+    &::before {
       margin-left: auto;
       color: #1a65ba;
+      transform: rotate(45deg);
+      transition: transform 0.5s ease;
+    }
+    &[aria-expanded="true"]::before {
+      transform: rotate(-135deg);
     }
   }
   .accordion__panel {
+    margin: 0;
     padding: 16px 40px 32px;
-    color: #1c3654;
-    line-height: 1.5;
-    background-color: #fff;
     background-color: ${theme.color.background.emphesized};
+    transform: translate3d(0, 0, 0);
   }
 `
 
