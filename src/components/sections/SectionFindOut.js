@@ -1,7 +1,9 @@
 import React from "react"
 import styled from "styled-components"
+
 import { Section, SectionHeader, Calculator } from "./../../components"
 import { theme } from "./../../styles/new/theme"
+import { Triangle } from "./../../styles/utils"
 
 const SectionFindOut = ({ data }) => {
   return (
@@ -43,4 +45,16 @@ const TextWrapper = styled.div`
     max-width: 410px;
   }
 `
-const CalculatorWrapper = styled.div``
+const CalculatorWrapper = styled.div`
+  position: relative;
+  ${Triangle}
+  &:after {
+    bottom: -36px;
+    left: 608px;
+    z-index: -1;
+    /* transform: rotate(-180deg); */
+  }
+
+  ${theme.above.d.m} {
+  }
+`

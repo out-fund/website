@@ -192,6 +192,7 @@ const Wrapper = styled.div`
   background-color: ${theme.color.background.emphesized};
   padding: 32px 24px;
   border-radius: 10px;
+  position: relative;
 
   ${theme.above.t.s} {
     padding: 48px 24px;

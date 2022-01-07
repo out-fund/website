@@ -55,9 +55,9 @@ const HeaderWrapper = styled.div`
 const GridFounders = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 30px;
+  column-gap: 24px;
   margin-bottom: 64px;
-  row-gap: 30px;
+  row-gap: 24px;
   /* align-content: center;
   justify-items: stretch; */
   place-items: center;
@@ -72,7 +72,13 @@ const GridLogos = styled.div`
   align-items: center;
   column-gap: 40px;
   row-gap: 24px;
-  margin-bottom: 64px;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  ${theme.above.d.m} {
+    margin-bottom: 64px;
+  }
 `
 const LogoWrapper = styled.div`
   display: flex;

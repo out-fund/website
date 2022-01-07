@@ -4,6 +4,7 @@ import parse from "html-react-parser"
 
 import { Section, SectionHeader, Button } from "./../../components"
 import { theme } from "./../../styles/new/theme"
+import T from "./../../styles/new/typography"
 
 import {
   Accordion,
@@ -21,7 +22,9 @@ const Accordions = (props) => {
           <AccordionItemHeading>
             <AccordionItemButton>{item.question}</AccordionItemButton>
           </AccordionItemHeading>
-          <AccordionItemPanel>{parse(item.answer)}</AccordionItemPanel>
+          <AccordionItemPanel>
+            <T.Body as="div">{parse(item.answer)}</T.Body>
+          </AccordionItemPanel>
         </AccordionItem>
       ))}
     </Accordion>

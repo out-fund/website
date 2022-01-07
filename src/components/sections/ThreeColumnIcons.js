@@ -37,14 +37,14 @@ const Wrapper = styled.ul`
   }
   ${theme.above.l.m} {
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 30px;
+    column-gap: 24px;
   }
 `
 
 const BlockTitle = styled(T.H4)`
   margin-bottom: 16px;
 `
-const BlockDescription = styled(T.BodyLarge)``
+const BlockDescription = styled(T.Body)``
 const Block = styled.li`
   text-align: center;
 `

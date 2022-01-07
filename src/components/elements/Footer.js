@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Button, Link } from "./../../components"
-import { theme } from "./../../styles/new/theme"
+import { Button } from "./../../components"
+// import { theme } from "./../../styles/new/theme"
 import links from "./../../content/links"
 
 const lang = "en"

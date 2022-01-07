@@ -31,13 +31,14 @@ const Title = styled(T.H2)`
 const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 24px;
   padding: 24px 32px 32px;
   justify-content: center;
   align-items: center;
   text-align: center;
 
-  ${theme.above.t.l} {
+  ${theme.above.l.m} {
+    gap: 40px;
     max-width: 340px;
     padding: 0;
     text-align: left;

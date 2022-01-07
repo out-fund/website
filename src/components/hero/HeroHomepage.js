@@ -61,6 +61,8 @@ const LeftImage = styled.div`
     0px 2.76726px 0.952807px rgba(1, 14, 25, 0.0196802);
   ${Triangle}
   &:after {
+    bottom: -35px;
+    left: 27px;
     z-index: 3;
   }
 

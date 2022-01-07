@@ -62,7 +62,7 @@ const ContentWrapper = styled.div``
 const CardsWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  row-gap: 30px;
+  row-gap: 24px;
   justify-content: center;
   /* max-width: 100%; */
   /* justify-items: center; */
@@ -72,7 +72,7 @@ const CardsWrapper = styled.div`
 
   ${theme.above.t.l} {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 30px;
+    column-gap: 24px;
   }
   ${theme.above.l.m} {
     /* grid-template-columns: repeat(2, 1fr); */

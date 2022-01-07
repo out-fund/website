@@ -22,7 +22,7 @@ const ImageSwiper = ({ data }) => {
         freeMode={true}
         speed={9000}
         autoplay={{
-          delay: 100,
+          delay: 1,
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
@@ -86,7 +86,7 @@ const Image = styled.div`
     border-radius: 10px;
   }
 `
-const Name = styled(T.Body)`
+const Name = styled(T.BodySmall)`
   position: absolute;
   display: flex;
   bottom: 8px;

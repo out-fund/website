@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import parse from "html-react-parser"
+// import parse from "html-react-parser"
 
 import { Section, SectionHeader, ThreeColumnIcons } from "./../../components"
-import T from "./../../styles/new/typography"
+// import T from "./../../styles/new/typography"
 import { theme } from "./../../styles/new/theme"
 
 const SectionWhy = ({ data }) => {

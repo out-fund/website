@@ -5,6 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Button, Section, SectionHeader } from "./../../components"
 import { theme } from "./../../styles/new/theme"
 import T from "./../../styles/new/typography"
+import { Triangle } from "./../../styles/utils"
 
 const SectionWeAreInvesting = ({ data }) => {
   const { title, description, btn, image } = data
@@ -46,10 +47,18 @@ const Wrapper = styled.div`
   gap: 40px;
   margin: 0 auto;
   align-items: center;
+  position: relative;
 
   ${theme.above.t.m} {
     grid-template-columns: 700fr 770fr;
     gap: 80px;
+  }
+  ${Triangle}
+  &:after {
+    bottom: -5px;
+    left: -106px;
+    z-index: 3;
+    transform: rotate(-90deg);
   }
 `
 

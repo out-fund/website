@@ -56,10 +56,10 @@ const Wrapper = styled.div`
   max-width: 986px;
 
   ${theme.above.t.s} {
-    min-height: 470px;
+    /* min-height: 470px; */
   }
 
-  ${theme.above.l.m} {
+  ${theme.above.d.l} {
     min-height: 570px;
   }
   &.thevegankind {
@@ -84,6 +84,9 @@ const ImageWrapper = styled.div`
   z-index: -1;
   .gatsby-image-wrapper {
     height: 100%;
+    img {
+      object-position: 0 40%;
+    }
   }
 `
 const TextWrapper = styled.div`

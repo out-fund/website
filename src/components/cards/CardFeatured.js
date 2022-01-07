@@ -128,6 +128,10 @@ const Wrapper = styled.div`
     }
     ${TextWrapper} {
       padding: 24px 32px;
+      ${theme.above.t.m} {
+        padding-right: 0;
+        padding-left: 0;
+      }
     }
   }
   ${theme.above.t.m} {
@@ -142,12 +146,12 @@ const Wrapper = styled.div`
 `
 
 const LogoWrapper = styled.div`
-  margin-top: 32px;
-  margin-bottom: 48px;
-  /* ${theme.above.d.m} {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  ${theme.above.d.m} {
     margin-top: 32px;
     margin-bottom: 48px;
-  } */
+  }
   svg {
     max-width: 100%;
     height: 32px;

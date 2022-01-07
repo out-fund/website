@@ -41,7 +41,7 @@ const ContentWrapper = styled.div``
 const CardsWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  row-gap: 30px;
+  row-gap: 24px;
 
   /* ${theme.above.p.m} {
   } */
@@ -49,7 +49,7 @@ const CardsWrapper = styled.div`
   ${theme.above.t.s} {
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
-    column-gap: 30px;
+    column-gap: 24px;
   }
   ${theme.above.l.m} {
     grid-template-columns: repeat(2, 570px);
@@ -58,6 +58,6 @@ const CardsWrapper = styled.div`
   /* ${theme.above.d.m} {
     grid-template-columns: repeat(2, 570px);
     justify-content: center;
-    column-gap: 30px;
+    column-gap: 24px;
   } */
 `
