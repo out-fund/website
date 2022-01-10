@@ -9,6 +9,7 @@ import F from "./../../styles/new/form"
 const Calculator = ({ data }) => {
   let intialRangeValue = 3
   const [value, setValue] = React.useState(intialRangeValue)
+  const [isDisabled, setDisabled] = React.useState(true)
   let selectedAmount = data.range[value]
 
   const handleRangeChange = (event) => {
@@ -17,6 +18,10 @@ const Calculator = ({ data }) => {
     // selectedAmount = data.range[value]
     // console.log("selectedAmount", selectedAmount)
     // console.log("value", value)
+  }
+
+  const handleButton = () => {
+    setDisabled(false)
   }
 
   return (
@@ -62,6 +67,7 @@ const Calculator = ({ data }) => {
               name="reasons"
               id="reasons"
               defaultValue={"DEFAULT"}
+              onChange={() => handleButton()}
               required
             >
               <option value="DEFAULT" disabled>
@@ -77,15 +83,24 @@ const Calculator = ({ data }) => {
         </SelectWrapper>
         <BtnWrapper>
           {/* <Button to={data.btn.url} variant="primary" size="large"> */}
-          <Button
-            // type="submit"
-            to={data.btn.url}
-            state={{ selected: value }}
-            variant="primary"
-            size="large"
-          >
-            {data.btn.text}
-          </Button>
+          {isDisabled ? (
+            <>
+              <Button variant="primary" size="large" disabled>
+                {data.btn.text}
+              </Button>
+            </>
+          ) : (
+            <>
+              <Button
+                to={data.btn.url}
+                state={{ selected: value }}
+                variant="primary"
+                size="large"
+              >
+                {data.btn.text}
+              </Button>
+            </>
+          )}
         </BtnWrapper>
       </FormWrapper>
     </Wrapper>

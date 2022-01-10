@@ -13,8 +13,8 @@ export const SimpleNavbar = ({ lang }) => {
     <Nav>
       <SimpleWrapper>
         <LogoWrapper>
-          {/* <Link to={`/${lang}/`}> */}
-          <Link to="#">
+          <Link to={`/`}>
+            {/* <Link to="#"> */}
             <LogoSvg />
           </Link>
         </LogoWrapper>

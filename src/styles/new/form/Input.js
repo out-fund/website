@@ -19,11 +19,14 @@ const sharedInput = css`
     opacity: 1; /* Firefox */
   }
 
-  &:focus {
-    /* border: 1px solid ${theme.color.input.focus.border}; */
+  /* &:focus {
+    border: 1px solid ${theme.color.input.focus.border};
+    outline: 2px solid ${theme.color.input.focus.border};
+  } */
+
+  &:focus-visible {
     outline: 2px solid ${theme.color.input.focus.border};
   }
-
   /* line-height: 1.5; */
   /* color: ${theme.color.text.body}; */
   -webkit-font-smoothing: antialiased;
