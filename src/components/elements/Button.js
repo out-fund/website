@@ -74,7 +74,10 @@ const ButtonWrap = styled.div`
     :disabled {
       opacity: 0.5;
     }
-
+    &:focus {
+      /* border: 1px solid ${theme.color.input.focus.border} !important; */
+      outline: 2px solid ${theme.color.input.focus.border};
+    }
     /* ${theme.above.t.s} {
       font-size: 17px;
     } */

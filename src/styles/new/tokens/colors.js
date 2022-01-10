@@ -53,6 +53,15 @@ export const color = {
       backgroundColor: "transparetn",
     },
   },
+  input: {
+    default: {
+      border: "var(--gray200)",
+      placeholder: "var(--gray300)",
+    },
+    focus: {
+      border: "var(--actiton-primary)",
+    },
+  },
 }
 
 // const colors = {

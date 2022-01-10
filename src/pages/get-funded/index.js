@@ -19,8 +19,11 @@ const GetFunded = (props) => {
     <EnLayout simpleNavbar>
       <Wrapper>
         <ContentWrapper>
-          <Title>{data.title}</Title>
-          <Description>{data.description}</Description>
+          <TextWrapper>
+            <Title>{data.title}</Title>
+            <Description>{data.description}</Description>
+          </TextWrapper>
+
           <FormWrapper>
             <F.Form
               name="get-funded"
@@ -33,75 +36,75 @@ const GetFunded = (props) => {
                 type="hidden"
                 name="form-name"
                 value="get-funded"
-                maxlength="256"
+                maxLength="256"
               />
               <VisuallyHidden>
                 <label>
                   Don’t fill this out if you’re human:
-                  <input name="bot-field" tabindex="-1" />
+                  <input name="bot-field" tabIndex="-1" />
                 </label>
               </VisuallyHidden>
 
               <F.Group>
                 <VisuallyHidden>
-                  <F.Label for="name">{data.form.name}</F.Label>
+                  <F.Label htmlFor="name">{data.form.name}</F.Label>
                 </VisuallyHidden>
                 <F.Input
                   type="text"
                   name="name"
                   id="name"
                   placeholder={data.form.name}
-                  maxlength="256"
+                  maxLength="256"
                   required
                 />
               </F.Group>
 
               <F.Group>
                 <VisuallyHidden>
-                  <F.Label for="email">{data.form.email}</F.Label>
+                  <F.Label htmlFor="email">{data.form.email}</F.Label>
                 </VisuallyHidden>
                 <F.Input
                   id="email"
                   type="email"
                   name="email"
                   placeholder={data.form.email}
-                  maxlength="256"
+                  maxLength="256"
                   required
                 />
               </F.Group>
 
               <F.Group>
                 <VisuallyHidden>
-                  <F.Label for="phone">{data.form.phone}</F.Label>
+                  <F.Label htmlFor="phone">{data.form.phone}</F.Label>
                 </VisuallyHidden>
                 <F.Input
                   id="phone"
                   type="tel"
                   name="phone"
                   placeholder={data.form.phone}
-                  maxlength="256"
+                  maxLength="256"
                   required
                 />
               </F.Group>
 
               <F.Group>
                 <VisuallyHidden>
-                  <F.Label for="website">{data.form.website}</F.Label>
+                  <F.Label htmlFor="website">{data.form.website}</F.Label>
                 </VisuallyHidden>
                 <F.Input
                   id="website"
                   type="url"
                   name="website"
                   placeholder={data.form.website}
-                  maxlength="256"
+                  maxLength="256"
                   required
                 />
               </F.Group>
 
               <SelectWrapper>
-                <F.Label for="amr">{data.form.select.title}</F.Label>
-                <F.Select name="amr" id="amr" required>
-                  <option value="" disabled selected>
+                <F.Label htmlFor="amr">{data.form.select.title}</F.Label>
+                <F.Select name="amr" id="amr" defaultValue={"DEFAULT"} required>
+                  <option value="DEFAULT" disabled>
                     {data.form.select.default}
                   </option>
                   {data.form.select.options.map((item) => (
@@ -134,6 +137,9 @@ const SelectWrapper = styled(F.Group)`
 `
 const Description = styled(T.Body)``
 
+const TextWrapper = styled.div`
+  text-align: center;
+`
 const Wrapper = styled.div`
   background-color: ${theme.color.background.emphesized};
   min-height: 90vh;

@@ -76,9 +76,9 @@ export const query = graphql`
             text
             url
           }
-          max
-          min
+          range
           select {
+            default
             dropdown
             title
           }

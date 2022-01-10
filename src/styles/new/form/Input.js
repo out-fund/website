@@ -4,7 +4,7 @@ import { theme } from "./../../new/theme"
 
 const sharedInput = css`
   background: #fff;
-  border: 1px solid #bbc7d6;
+  border: 1px solid ${theme.color.input.default.border};
   margin: 0;
   padding: 12px 16px;
   max-width: 100%;
@@ -17,6 +17,11 @@ const sharedInput = css`
   &::placeholder {
     color: #8a9cb0;
     opacity: 1; /* Firefox */
+  }
+
+  &:focus {
+    /* border: 1px solid ${theme.color.input.focus.border}; */
+    outline: 2px solid ${theme.color.input.focus.border};
   }
 
   /* line-height: 1.5; */

@@ -7,40 +7,87 @@ import { theme } from "./../../styles/new/theme"
 import F from "./../../styles/new/form"
 
 const Calculator = ({ data }) => {
+  let intialRangeValue = 3
+  const [value, setValue] = React.useState(intialRangeValue)
+  let selectedAmount = data.range[value]
+
+  const handleRangeChange = (event) => {
+    // setValue(data.range[event.target.value])
+    setValue(event.target.value)
+    // selectedAmount = data.range[value]
+    // console.log("selectedAmount", selectedAmount)
+    // console.log("value", value)
+  }
+
   return (
     <Wrapper>
       <TextWrapper>
         <Title>{data.title}</Title>
-        <Selected as="div">£100 000</Selected>
+        <Selected as="div">{selectedAmount}</Selected>
       </TextWrapper>
-      <RangeWrapper>
-        <div className="top">
-          <div>{data.min}</div>
-          <div>{data.max}</div>
-        </div>
-        <InputWrapper>
-          <input className="slider" type="range" min="0" max="10" step="1" />
-        </InputWrapper>
-      </RangeWrapper>
-      <SelectWrapper>
-        <T.Body as="label" className="label" htmlFor="reasons">
-          {data.select.title}
-        </T.Body>
-        <div className="dropdown">
-          <F.Select name="reasons" id="reasons">
-            {data.select.dropdown.map((item) => (
-              <option key={item} value={item}>
-                {item}
+      <FormWrapper>
+        <input
+          type="hidden"
+          name="form-name"
+          value="calculator"
+          maxLength="256"
+        />
+        <RangeWrapper>
+          <div className="top">
+            {/* <div>{data.min}</div> */}
+            <div>{data.range[0]}</div>
+            {/* <div>{data.max}</div> */}
+            <div>{data.range[10]}</div>
+          </div>
+          <InputWrapper>
+            <input
+              className="slider"
+              type="range"
+              min="0"
+              max="10"
+              step="1"
+              defaultValue={intialRangeValue}
+              // onChange={handleRangeChange}
+              onChange={(event) => handleRangeChange(event)}
+            />
+          </InputWrapper>
+        </RangeWrapper>
+        <SelectWrapper>
+          {/* <T.Body as="label" className="label" htmlFor="reasons">
+            {data.select.title}
+          </T.Body> */}
+          <F.Label htmlFor="reasons">{data.select.title}</F.Label>
+          <div className="dropdown">
+            <F.Select
+              name="reasons"
+              id="reasons"
+              defaultValue={"DEFAULT"}
+              required
+            >
+              <option value="DEFAULT" disabled>
+                {data.select.default}
               </option>
-            ))}
-          </F.Select>
-        </div>
-      </SelectWrapper>
-      <BtnWrapper>
-        <Button to={data.btn.url} variant="primary" size="large">
-          {data.btn.text}
-        </Button>
-      </BtnWrapper>
+              {data.select.dropdown.map((item) => (
+                <option key={item} value={item}>
+                  {item}
+                </option>
+              ))}
+            </F.Select>
+          </div>
+        </SelectWrapper>
+        <BtnWrapper>
+          {/* <Button to={data.btn.url} variant="primary" size="large"> */}
+          <Button
+            // type="submit"
+            to={data.btn.url}
+            state={{ selected: value }}
+            variant="primary"
+            size="large"
+          >
+            {data.btn.text}
+          </Button>
+        </BtnWrapper>
+      </FormWrapper>
     </Wrapper>
   )
 }
@@ -54,6 +101,8 @@ const Title = styled(T.H6)`
 const Selected = styled(T.H3)`
   margin-bottom: 24px;
 `
+
+const FormWrapper = styled.div``
 
 const BtnWrapper = styled.div`
   text-align: center;
@@ -198,7 +247,11 @@ const Wrapper = styled.div`
     padding: 48px 24px;
   }
 
-  ${theme.above.d.m} {
+  ${theme.above.l.m} {
     padding: 64px 64px;
   }
+
+  /* ${theme.above.d.m} {
+    padding: 64px 64px;
+  } */
 `

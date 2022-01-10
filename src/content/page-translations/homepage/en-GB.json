@@ -105,20 +105,27 @@
     ],
     "calculator": {
       "title": "Your monthly revenue",
-      "min": "Under £10K",
-      "max": "Over £2M",
+      "range": [
+        "Under £10 000",
+        "£10 000",
+        "£20 000",
+        "£50 000",
+        "£70 000",
+        "£100 000",
+        "£200 000",
+        "£500 000",
+        "£700 000",
+        "£1 000 000",
+        "Over £1 000 000"
+      ],
       "select": {
         "title": "You need funding for",
-        "dropdown": [
-          "Select",
-          "Inventory purchuses",
-          "Marketing spend",
-          "Something else"
-        ]
+        "default": "Select",
+        "dropdown": ["Inventory purchuses", "Marketing spend", "Something else"]
       },
       "btn": {
         "text": "Check eligibility",
-        "url": "/"
+        "url": "/eligibility/"
       }
     }
   },
