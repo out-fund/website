@@ -26,6 +26,7 @@ const GetFunded = (props) => {
               name="get-funded"
               action="/thank-you/"
               method="POST"
+              netlify-honeypot="honeypot-field"
               data-netlify="true"
             >
               <input type="hidden" name="form-name" value="get-funded" />
@@ -41,6 +42,13 @@ const GetFunded = (props) => {
                   required
                 />
               </F.Group>
+              <VisuallyHidden>
+                <label>
+                  Don’t fill this out if you’re human:
+                  <input name="honeypot-field" type="text" tabindex="-1" />
+                </label>
+              </VisuallyHidden>
+
               <F.Group>
                 <VisuallyHidden>
                   <F.Label for="email">{data.form.email}</F.Label>
@@ -88,11 +96,9 @@ const GetFunded = (props) => {
                 </F.Select>
               </SelectWrapper>
 
-              {/* <ButtonWrapper> */}
               <Button type="submit" variant="primary" size="large">
                 {data.form.btn}
               </Button>
-              {/* </ButtonWrapper> */}
             </F.Form>
           </FormWrapper>
         </ContentWrapper>
