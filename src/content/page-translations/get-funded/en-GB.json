@@ -12,8 +12,8 @@
       "website": "Company Website",
       "select": {
         "title": "Average Monthly Revenue",
+        "default": "Select",
         "options": [
-          "Select",
           "Less than £10K",
           "£10k - £50K",
           "£50K - £100K",

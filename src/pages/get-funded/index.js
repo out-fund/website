@@ -30,6 +30,13 @@ const GetFunded = (props) => {
               data-netlify="true"
             >
               <input type="hidden" name="form-name" value="get-funded" />
+              <VisuallyHidden>
+                <label>
+                  Don’t fill this out if you’re human:
+                  <input name="honeypot-field" type="text" tabindex="-1" />
+                </label>
+              </VisuallyHidden>
+
               <F.Group>
                 <VisuallyHidden>
                   <F.Label for="name">{data.form.name}</F.Label>
@@ -42,12 +49,6 @@ const GetFunded = (props) => {
                   required
                 />
               </F.Group>
-              <VisuallyHidden>
-                <label>
-                  Don’t fill this out if you’re human:
-                  <input name="honeypot-field" type="text" tabindex="-1" />
-                </label>
-              </VisuallyHidden>
 
               <F.Group>
                 <VisuallyHidden>
@@ -61,6 +62,7 @@ const GetFunded = (props) => {
                   required
                 />
               </F.Group>
+
               <F.Group>
                 <VisuallyHidden>
                   <F.Label for="phone">{data.form.phone}</F.Label>
@@ -73,6 +75,7 @@ const GetFunded = (props) => {
                   required
                 />
               </F.Group>
+
               <F.Group>
                 <VisuallyHidden>
                   <F.Label for="website">{data.form.website}</F.Label>
@@ -82,12 +85,16 @@ const GetFunded = (props) => {
                   type="url"
                   name="website"
                   placeholder={data.form.website}
+                  required
                 />
               </F.Group>
-              <SelectWrapper>
-                <F.Label for="revenue">{data.form.select.title}</F.Label>
 
-                <F.Select name="reasons" id="revenue">
+              <SelectWrapper>
+                <F.Label for="amr">{data.form.select.title}</F.Label>
+                <F.Select name="amr" id="amr" required>
+                  <option value="" disabled selected>
+                    {data.form.select.default}
+                  </option>
                   {data.form.select.options.map((item) => (
                     <option key={item} value={item}>
                       {item}
@@ -131,13 +138,13 @@ const ContentWrapper = styled.div`
 `
 const FormWrapper = styled.div`
   margin-top: 40px;
-  /* ${F.Group} {
-    margin-bottom: 16px;
-  } */
   ${F.Form} {
     display: flex;
     flex-direction: column;
     gap: 16px;
+  }
+  .ButtonWrap button {
+    width: 100%;
   }
 `
 
@@ -154,6 +161,7 @@ export const query = graphql`
           website
           select {
             title
+            default
             options
           }
           btn
