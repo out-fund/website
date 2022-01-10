@@ -9,7 +9,6 @@ import T from "../../styles/new/typography"
 import { theme } from "../../styles/new/theme"
 
 const Eligibility = ({ location }) => {
-  console.log(location.state.selected)
   let selected
   if (location.state) {
     selected = location.state.selected
