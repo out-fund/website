@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components"
-// import { breakpoints } from "styles"
-// import { theme } from "styles"
+
+import { theme } from "./../../new/theme"
 
 const sharedInput = css`
   background: #fff;
@@ -12,15 +12,41 @@ const sharedInput = css`
   border-radius: 4px;
   font-size: 16px;
   font-weight: 500;
+  line-height: 1.5;
+
   &::placeholder {
     color: #8a9cb0;
     opacity: 1; /* Firefox */
+  }
+
+  /* line-height: 1.5; */
+  /* color: ${theme.color.text.body}; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  ${theme.above.d.m} {
+    font-size: 18px;
   }
 `
 export const Form = styled.form`
   /*background: yellow;*/
 `
+export const Group = styled.div`
+  /* background-color: #afa; */
+  /* label {
+    padding-bottom: 16px;
+  } */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`
+export const Label = styled.label`
+  color: ${theme.color.text.body};
+`
 
+export const Input = styled.input`
+  ${sharedInput}
+`
 export const InputText = styled.input`
   ${sharedInput}
 `

@@ -1,13 +1,15 @@
 import * as React from "react"
 import GlobalLayout from "./../layouts/GlobalLayout"
 import { Navbar, Footer } from "./../components"
+import { SimpleNavbar } from "./../components/elements/Navbar"
 
 import "./../styles/new/typography/font.css"
 
-const EN = ({ children }) => {
+const EN = ({ children, simpleNavbar }) => {
   return (
     <GlobalLayout>
-      <Navbar lang={"en"} />
+      {!simpleNavbar && <Navbar lang={"en"} />}
+      {simpleNavbar && <SimpleNavbar lang={"en"} />}
       {children}
       <Footer />
     </GlobalLayout>

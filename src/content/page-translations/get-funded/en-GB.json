@@ -1,0 +1,27 @@
+{
+  "language": "en-GB",
+  "seoTitle": "Get funded",
+  "seoKeywords": ["test", "keywors"],
+  "content": {
+    "title": "Get funded",
+    "description": "Tell us about you and your company.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone number",
+      "website": "Company Website",
+      "select": {
+        "title": "Average Monthly Revenue",
+        "options": [
+          "Select",
+          "Less than £10K",
+          "£10k - £50K",
+          "£50K - £100K",
+          "£100 - £500K",
+          "More than £500K"
+        ]
+      },
+      "btn": "Get started"
+    }
+  }
+}

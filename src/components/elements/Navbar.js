@@ -8,6 +8,21 @@ import links from "./../../content/links"
 import LogoSvg from "./../../images//svg/Outfund-logo.svg"
 import MenueIconSvg from "./../../images/svg/MenueIcon.svg"
 
+export const SimpleNavbar = ({ lang }) => {
+  return (
+    <Nav>
+      <SimpleWrapper>
+        <LogoWrapper>
+          {/* <Link to={`/${lang}/`}> */}
+          <Link to="#">
+            <LogoSvg />
+          </Link>
+        </LogoWrapper>
+      </SimpleWrapper>
+    </Nav>
+  )
+}
+
 // const MenueGroup = ({ title, children }) => {
 //   return (
 //     <MenueGroupWrapper>
@@ -408,39 +423,6 @@ const DesktopLinksWrapper = styled.ul`
   }
 `
 
-// const DesktopDropdownWrappepr = styled.ul`
-//   position: absolute;
-//   left: 0;
-//   top: ${theme.size.navbarHeight}px;
-//   z-index: 99;
-//   background-color: #fff;
-//   display: grid;
-//   grid-template-columns: 1fr;
-//   max-width: 260px;
-//   padding: 24px;
-//   border-radius: 10px;
-//   row-gap: 8px;
-//   opacity: 0;
-//   transition: all 0.2s ease-in-out;
-//   transform: skewY(-5deg) rotate(7deg) translateY(-30px);
-//   box-shadow: 0px 100px 80px rgba(1, 14, 25, 0.07),
-//     0px 41.7776px 33.1139px rgba(1, 14, 25, 0.0503198),
-//     0px 22.3363px 16.2366px rgba(1, 14, 25, 0.0417275),
-//     0px 12.5216px 7.80488px rgba(1, 14, 25, 0.035),
-//     0px 6.6501px 3.28033px rgba(1, 14, 25, 0.0282725),
-//     0px 2.76726px 0.952807px rgba(1, 14, 25, 0.0196802);
-
-//   li {
-//     position: relative;
-//   }
-//   ${(props) =>
-//     props.isOpen
-//       ? css`
-//           visibility: visible;
-//           opacity: 1;
-//           transform: skewY(0deg) rotate(0deg) translateY(0px);
-//         `
-//       : css`
-//           visibility: hidden;
-//         `}
-// `
+const SimpleWrapper = styled(Wrapper)`
+  justify-content: center;
+`
