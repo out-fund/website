@@ -2,11 +2,11 @@ import React from "react"
 import styled from "styled-components"
 // import { graphql } from "gatsby"
 
-import EnLayout from "../layouts/en"
+import EnLayout from "../../layouts/en"
 
-import { Button } from "./../components"
-import T from "../styles/new/typography"
-import { theme } from "../styles/new/theme"
+import { Button } from "../../components"
+import T from "../../styles/new/typography"
+import { theme } from "../../styles/new/theme"
 
 const ThankYou = () => {
   return (

@@ -26,7 +26,7 @@ const GetFunded = (props) => {
               name="get-funded"
               action="/thank-you/"
               method="POST"
-              netlify-honeypot="honeypot-field"
+              netlify-honeypot="bot-field"
               data-netlify="true"
             >
               <input
@@ -38,12 +38,7 @@ const GetFunded = (props) => {
               <VisuallyHidden>
                 <label>
                   Don’t fill this out if you’re human:
-                  <input
-                    name="honeypot-field"
-                    type="text"
-                    tabindex="-1"
-                    maxlength="256"
-                  />
+                  <input name="bot-field" tabindex="-1" />
                 </label>
               </VisuallyHidden>
 

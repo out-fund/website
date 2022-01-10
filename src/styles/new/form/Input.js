@@ -53,9 +53,6 @@ export const InputText = styled.input`
 export const Select = styled.select`
   ${sharedInput}
   appearance: none;
-  option {
-    appearance: none;
-  }
 `
 
 export const InputEmail = styled.input`
