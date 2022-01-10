@@ -29,11 +29,21 @@ const GetFunded = (props) => {
               netlify-honeypot="honeypot-field"
               data-netlify="true"
             >
-              <input type="hidden" name="form-name" value="get-funded" />
+              <input
+                type="hidden"
+                name="form-name"
+                value="get-funded"
+                maxlength="256"
+              />
               <VisuallyHidden>
                 <label>
                   Don’t fill this out if you’re human:
-                  <input name="honeypot-field" type="text" tabindex="-1" />
+                  <input
+                    name="honeypot-field"
+                    type="text"
+                    tabindex="-1"
+                    maxlength="256"
+                  />
                 </label>
               </VisuallyHidden>
 
@@ -46,6 +56,7 @@ const GetFunded = (props) => {
                   name="name"
                   id="name"
                   placeholder={data.form.name}
+                  maxlength="256"
                   required
                 />
               </F.Group>
@@ -59,6 +70,7 @@ const GetFunded = (props) => {
                   type="email"
                   name="email"
                   placeholder={data.form.email}
+                  maxlength="256"
                   required
                 />
               </F.Group>
@@ -72,6 +84,7 @@ const GetFunded = (props) => {
                   type="tel"
                   name="phone"
                   placeholder={data.form.phone}
+                  maxlength="256"
                   required
                 />
               </F.Group>
@@ -85,6 +98,7 @@ const GetFunded = (props) => {
                   type="url"
                   name="website"
                   placeholder={data.form.website}
+                  maxlength="256"
                   required
                 />
               </F.Group>

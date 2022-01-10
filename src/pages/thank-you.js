@@ -22,7 +22,7 @@ const ThankYou = () => {
             variant="primary"
             size="large"
           >
-            Procesd with application
+            Proceed with application
           </Button>
         </ContentWrapper>
       </Wrapper>
