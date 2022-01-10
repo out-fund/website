@@ -32,7 +32,7 @@
     "title": "Founders and companies we funded",
     "btn": {
       "text": "Read sucess stories",
-      "url": "url"
+      "url": "/success-stories/"
     },
     "cards": [
       {
@@ -110,7 +110,7 @@
     "description": "Invest your funds into the repeatable scalable aspects of your business like ad spend and inventory.",
     "btn": {
       "text": "See open positions",
-      "url": "/how-funding-works/"
+      "url": "/careers/"
     },
     "image": {
       "src": "./../../../images/Outfund-we-grow.png",

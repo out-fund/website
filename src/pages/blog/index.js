@@ -9,7 +9,7 @@ import { HeroSimple, Main, CardBlog } from "./../../components"
 import { theme } from "./../../styles/new/theme"
 
 const Blog = (props) => {
-  console.log(props)
+  // console.log(props)
   return (
     <EnLayout>
       <HeroSimple data={props.data.blogJson.hero} />

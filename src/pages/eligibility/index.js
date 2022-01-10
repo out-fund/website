@@ -9,7 +9,7 @@ import T from "../../styles/new/typography"
 import { theme } from "../../styles/new/theme"
 
 const Eligibility = ({ location }) => {
-  console.log(location.state.selected)
+  // console.log(location.state.selected)
   const selected = location.state.selected
 
   const values = [
@@ -22,14 +22,24 @@ const Eligibility = ({ location }) => {
     "£650 000",
     "£910 000",
     "£1 300 000",
-    "£1 300 000",
   ]
 
   return (
     <EnLayout simpleNavbar>
       <Wrapper>
         <ContentWrapper>
-          {selected > 0 ? (
+          {selected > 9 ? (
+            <>
+              <Title>Please contact us for tailored offer</Title>
+              <Button
+                href="https://app.out.fund/enquire?"
+                variant="primary"
+                size="large"
+              >
+                Contact Us
+              </Button>
+            </>
+          ) : selected > 0 ? (
             <>
               <Title>You are elegible for funding</Title>
               <Description>

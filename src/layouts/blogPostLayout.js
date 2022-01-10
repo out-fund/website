@@ -11,7 +11,7 @@ import T from "./../styles/new/typography"
 import { theme } from "./../styles/new/theme"
 
 const BlogPostLayout = ({ data: { mdx } }) => {
-  console.log(mdx)
+  // console.log(mdx)
   return (
     <EnLayout>
       <MDXProvider

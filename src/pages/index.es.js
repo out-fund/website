@@ -6,7 +6,7 @@ import LangLayout from "layouts/en"
 // import SectionContainer from "../components/SectionContainer"
 
 const IndexPage = ({ data, ...props }) => {
-  console.log(data)
+  // console.log(data)
   return (
     <LangLayout location={props.location}>
       test

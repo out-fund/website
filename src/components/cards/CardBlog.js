@@ -10,7 +10,7 @@ import { theme } from "./../../styles/new/theme"
 
 const CardBlog = ({ data }) => {
   // const { image, title, btn } = data
-  console.log("cardBlog", data)
+  // console.log("cardBlog", data)
   return (
     <Wrapper>
       <ImageWrapper>
