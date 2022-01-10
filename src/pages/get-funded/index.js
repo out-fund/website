@@ -28,14 +28,10 @@ const GetFunded = (props) => {
               method="POST"
               data-netlify="true"
             >
-              <input
-                type="hidden"
-                name="get-funded"
-                value="the-name-of-the-html-form"
-              />
+              <input type="hidden" name="form-name" value="get-funded" />
               <F.Group>
                 <VisuallyHidden>
-                  <F.Label for="name">Name</F.Label>
+                  <F.Label for="name">{data.form.name}</F.Label>
                 </VisuallyHidden>
                 <F.Input
                   type="text"
