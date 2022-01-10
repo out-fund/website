@@ -9,8 +9,11 @@ import T from "../../styles/new/typography"
 import { theme } from "../../styles/new/theme"
 
 const Eligibility = ({ location }) => {
-  // console.log(location.state.selected)
-  const selected = location.state.selected
+  console.log(location.state.selected)
+  let selected
+  if (location.state) {
+    selected = location.state.selected
+  }
 
   const values = [
     "£13 000",
@@ -56,16 +59,6 @@ const Eligibility = ({ location }) => {
           ) : (
             <>
               <Title>You are not eliegible</Title>
-              {/* <Description>
-                We need to know more about you and your UK registered company.
-              </Description> */}
-              {/* <Button
-                href="https://app.out.fund/enquire?"
-                variant="primary"
-                size="large"
-              >
-                Proceed with application
-              </Button> */}
             </>
           )}
         </ContentWrapper>
@@ -96,25 +89,3 @@ const Wrapper = styled.div`
   padding-left: 24px;
   padding-right: 24px;
 `
-
-// export const query = graphql`
-//   query getFundedPage {
-//     getFundedJson(language: { regex: "/en-GB/" }) {
-//       content {
-//         title
-//         description
-//         form {
-//           name
-//           email
-//           phone
-//           website
-//           select {
-//             title
-//             options
-//           }
-//           btn
-//         }
-//       }
-//     }
-//   }
-// `
