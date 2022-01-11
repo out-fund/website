@@ -24,7 +24,7 @@ const PrivacyPolicy = (props) => {
   return (
     <EnLayout>
       <Main>
-        <HeroSimple data={props.data.howFundingWorksJson.hero} />
+        {/* <HeroSimple data={props.data.howFundingWorksJson.hero} /> */}
         <Wrapper>
           <ContentWrapper>WIP</ContentWrapper>
         </Wrapper>
