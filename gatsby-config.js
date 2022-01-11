@@ -1,6 +1,6 @@
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
+// require("dotenv").config({
+//   path: `.env.${process.env.NODE_ENV}`,
+// })
 
 module.exports = {
   siteMetadata: {
@@ -134,12 +134,12 @@ module.exports = {
         // your segment write key for your production environment
         // when process.env.NODE_ENV === 'production'
         // required; non-empty string
-        prodKey: "SEGMENT_PRODUCTION_WRITE_KEY",
+        prodKey: "vbgfxlp9m23Z1yGNmuO9w5FyM0mcSont",
 
         // if you have a development env for your segment account, paste that key here
         // when process.env.NODE_ENV === 'development'
         // optional; non-empty string
-        devKey: "SEGMENT_DEV_WRITE_KEY",
+        devKey: "vbgfxlp9m23Z1yGNmuO9w5FyM0mcSont",
 
         // boolean (defaults to false) on whether you want
         // to include analytics.page() automatically
