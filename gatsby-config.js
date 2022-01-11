@@ -203,8 +203,8 @@ module.exports = {
         //   then you must either:
         //   1. Manually load it and set the `manualLoad` option here to `true`
         //   2. Use the `delayLoad` option here
-        customSnippet:
-          '!function(){var analytics=window.analytics||[];...;analytics.load("${writeKey}");analytics.page();}}();',
+        // customSnippet:
+        // '!function(){var analytics=window.analytics||[];...;analytics.load("${writeKey}");analytics.page();}}();',
       },
     },
   ],
