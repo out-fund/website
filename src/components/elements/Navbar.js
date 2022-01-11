@@ -226,6 +226,12 @@ function DesktopLinks({ lang }) {
         </Button>
         <FundingDropdown lang={lang} isOpen={fundingIsOpen} />
       </li> */}
+
+      <li>
+        <Button to={links.howItWorks.url} variant="navLink">
+          {links.howItWorks.text[lang]}
+        </Button>
+      </li>
       <li>
         <Button to={links.aboutUs.url} variant="navLink">
           {links.aboutUs.text[lang]}
