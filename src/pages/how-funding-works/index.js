@@ -8,7 +8,7 @@ import EnLayout from "layouts/en"
 import { HeroSimple, Main } from "./../../components"
 
 const HowFundingWorks = (props) => {
-  console.log(props)
+  // console.log(props)
   return (
     <EnLayout>
       <Main>
