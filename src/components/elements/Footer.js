@@ -113,10 +113,10 @@ const Footer = () => {
             Copyright © 2022 Outfund. All rights reserved.
           </T.BodySmaller>
           <div>
-            <T.BodySmaller as={Link} to="/">
+            <T.BodySmaller as={Link} to="/legal/privacy-policy/">
               Privacy policy
             </T.BodySmaller>
-            <T.BodySmaller as={Link} to="/">
+            <T.BodySmaller as={Link} to="/legal/cookie-policy/">
               Cookie policy
             </T.BodySmaller>
           </div>
@@ -140,8 +140,8 @@ const LinksWrapper = styled.div`
 `
 const ColumntTitle = styled(T.BodySmall)`
   margin-bottom: 8px;
-  color: #fff;
-  opacity: 0.5;
+  color: #aad2ff;
+  opacity: 0.7;
   font-weight: 400;
 `
 const LinksColumn = styled.div`
@@ -208,16 +208,16 @@ const Bottom = styled.div`
   text-align: center;
 
   ${T.BodySmaller} {
-    color: #fff;
   }
   p {
-    opacity: 0.5;
+    color: #aad2ff;
+    opacity: 0.7;
   }
   a {
-    /* margin-left: 16px; */
     margin: 0 8px;
+    color: #aad2ff;
     text-decoration: none;
-    opacity: 0.7;
+    opacity: 0.9;
     &:hover {
       text-decoration: underline;
     }
@@ -256,8 +256,8 @@ const LogoWrapper = styled.div`
   }
   p {
     margin-top: 8px;
-    color: #fff;
-    opacity: 0.5;
+    color: #aad2ff;
+    opacity: 0.7;
   }
 `
 

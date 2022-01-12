@@ -7,7 +7,7 @@ import parse from "html-react-parser"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-import EnLayout from "layouts/en"
+import EnLayout from "./../layouts/en"
 import { CardFounderName, Main, Button } from "./../components"
 import { theme } from "./../styles/new/theme"
 import T from "./../styles/new/typography"
