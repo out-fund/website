@@ -130,7 +130,7 @@ export default Footer
 
 const LinksWrapper = styled.div`
   display: flex;
-  gap: 24px;
+  gap: 40px;
   flex-direction: column;
 
   ${theme.above.t.s} {
@@ -149,16 +149,16 @@ const LinksColumn = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
-  width: 100%;
+  /* width: 100%; */
   ${theme.above.t.l} {
-    min-width: 170px;
+    min-width: 120px;
   }
 `
 
 const CountryLinksWrapper = styled.div`
   display: flex;
   flex-direction: column-reverse;
-  gap: 40px;
+  gap: 64px;
   ${theme.above.t.l} {
     flex-direction: row;
   }
@@ -173,6 +173,10 @@ const CuntryButtonWrapper = styled.div`
 `
 
 const CountryWrapper = styled.div`
+  /* background-color: #afa; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   ${ColumntTitle} {
     text-align: right;
   }
@@ -229,6 +233,7 @@ const ContentWrapper = styled.div`
 `
 const LogoWrapper = styled.div`
   /* height: 100%; */
+  /* min-width: 216px; */
   div {
     /* height: 100%; */
   }
