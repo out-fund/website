@@ -15,7 +15,7 @@ const globalCss = css`
     /* scroll-behavior: smooth; */
   }
   body {
-    padding-top: ${theme.size.navbarHeight}px;
+    /* padding-top: ${theme.size.navbarHeight}px; */
     overflow-x: hidden;
     font-size: 16px;
     font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue",

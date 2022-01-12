@@ -158,10 +158,9 @@ const LinksColumn = styled.div`
 const CountryLinksWrapper = styled.div`
   display: flex;
   flex-direction: column-reverse;
-  /* gap: 64px; */
-  /* row-gap: 64px; */
   ${theme.above.t.l} {
     flex-direction: row;
+    padding-top: 8px;
   }
 `
 const CuntryButtonWrapper = styled.div`
@@ -181,8 +180,11 @@ const CountryWrapper = styled.div`
   margin-bottom: 64px;
 
   ${theme.above.t.l} {
-    align-items: flex-end;
-    margin-left: 40px;
+    /* align-items: flex-end; */
+    margin-left: 64px;
+  }
+  ${ColumntTitle} {
+    margin-bottom: 16px;
   }
 `
 

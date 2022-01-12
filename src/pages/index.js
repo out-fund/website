@@ -221,6 +221,7 @@ export const query = graphql`
       description
       blocks {
         icon
+        title
         text
       }
     }

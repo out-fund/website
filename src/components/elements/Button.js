@@ -155,17 +155,12 @@ const ButtonWrap = styled.div`
         ? css`
             box-shadow: inset 0px 0px 0px 1px #4f6781;
             background-color: transparent;
-            margin-left: -24px;
+            /* margin-left: -24px; */
             color: #deeeff;
             transition: all 0.1s ease-in-out;
             padding: 8px 24px 8px 24px;
             align-items: center;
 
-            :hover,
-            :focus {
-              color: #fff;
-              box-shadow: inset 0px 0px 0px 1px #fff;
-            }
             &:after {
               position: relative;
               display: inline-block;
@@ -176,6 +171,15 @@ const ButtonWrap = styled.div`
               opacity: 0.5;
               transition: all 0.1s ease-in-out;
               content: "";
+            }
+
+            :hover,
+            :focus {
+              color: #fff;
+              box-shadow: inset 0px 0px 0px 1px #fff;
+              &:after {
+                opacity: 1;
+              }
             }
           `
         : variant === "navDropDown"

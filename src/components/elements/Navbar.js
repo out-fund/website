@@ -5,7 +5,7 @@ import { Button, Link } from "./../../components"
 import { theme } from "./../../styles/new/theme"
 import links from "./../../content/links"
 
-import LogoSvg from "./../../images//svg/Outfund-logo.svg"
+import LogoSvg from "./../../images/svg/Outfund-logo.svg"
 import MenueIconSvg from "./../../images/svg/MenueIcon.svg"
 
 export const SimpleNavbar = ({ lang }) => {

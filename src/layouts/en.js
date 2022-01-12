@@ -5,11 +5,11 @@ import { SimpleNavbar } from "./../components/elements/Navbar"
 
 import "./../styles/new/typography/font.css"
 
-const EN = ({ children, simpleNavbar }) => {
+const EN = ({ children, simpleNavbar, pt, noNavbar }) => {
   return (
-    <GlobalLayout>
-      {!simpleNavbar && <Navbar lang={"en"} />}
-      {simpleNavbar && <SimpleNavbar lang={"en"} />}
+    <GlobalLayout pt={pt}>
+      {!simpleNavbar && !noNavbar && <Navbar lang={"en"} />}
+      {simpleNavbar && !noNavbar && <SimpleNavbar lang={"en"} />}
       {children}
       <Footer />
     </GlobalLayout>
