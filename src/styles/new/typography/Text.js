@@ -48,6 +48,22 @@ export const BodySmall = styled.p`
     font-size: 16px;
   }
 `
+export const BodySmaller = styled.p`
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.5;
+  color: ${theme.color.text.body};
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  ${theme.above.t.s} {
+    font-size: 13px;
+  }
+
+  ${theme.above.d.m} {
+    font-size: 14px;
+  }
+`
 
 // color: ${theme.headingsColor};
 // letter-spacing: -0.01em;

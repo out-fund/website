@@ -117,6 +117,7 @@ const AccordionWrapper = styled.div`
     :hover {
       background-color: #deeeff;
     }
+
     &:before {
       margin-left: auto;
       color: #1a65ba;

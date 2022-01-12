@@ -51,12 +51,9 @@ const ButtonWrap = styled.div`
 
   a,
   button {
-    /* display: inline-block; */
-
     display: flex;
     justify-content: center;
     margin: 0;
-    /* padding: 0.5em 1.5em; */
     padding: 8px 24px;
     color: ${theme.color.text.headings};
     font-weight: 500;
@@ -134,6 +131,53 @@ const ButtonWrap = styled.div`
               background-color: #deeeff;
             }
           `
+        : variant === "footerLink"
+        ? css`
+            box-shadow: inset 0px 0px 0px 1px transparent;
+            background-color: transparent;
+            margin-left: -24px;
+            /* color: ${theme.color.text.headings}; */
+            color: #deeeff;
+            transition: all 0.1s ease-in-out;
+            :hover,
+            :focus {
+              /* color: ${theme.color.button.primary.backgroundColor}; */
+              color: #fff;
+              /* box-shadow: inset 0px 0px 0px 1px
+                ${theme.color.button.primary.backgroundColor}; */
+              box-shadow: inset 0px 0px 0px 1px #deeeff;
+            }
+            /* &.currentPage {
+              background-color: #deeeff;
+            } */
+          `
+        : variant === "countrySelector"
+        ? css`
+            box-shadow: inset 0px 0px 0px 1px #4f6781;
+            background-color: transparent;
+            margin-left: -24px;
+            color: #deeeff;
+            transition: all 0.1s ease-in-out;
+            padding: 8px 24px 8px 24px;
+            align-items: center;
+
+            :hover,
+            :focus {
+              color: #fff;
+              box-shadow: inset 0px 0px 0px 1px #fff;
+            }
+            &:after {
+              position: relative;
+              display: inline-block;
+              width: 8px;
+              height: 6px;
+              margin-left: 6px;
+              background-image: url("data:image/svg+xml,%3Csvg width='8' height='6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6 0 2h8L4 6Z' fill='%23fff'/%3E%3C/svg%3E");
+              opacity: 0.5;
+              transition: all 0.1s ease-in-out;
+              content: "";
+            }
+          `
         : variant === "navDropDown"
         ? css`
             box-shadow: inset 0px 0px 0px 1px transparent;
@@ -169,9 +213,9 @@ const ButtonWrap = styled.div`
             :focus {
               /* background-color: #deeeff; */
               box-shadow: inset 0px 0px 0px 1px ${theme.color.text.headings};
-              &:after {
+              /* &:after {
                 opacity: 1;
-              }
+              } */
             }
             ${(props) =>
               props.isOpen
@@ -222,10 +266,19 @@ const ButtonWrap = styled.div`
 `
 
 Button.propTypes = {
-  variant: PropTypes.oneOf(["primary", "secondary", "navLink", "navDropDown"])
-    .isRequired,
+  variant: PropTypes.oneOf([
+    "primary",
+    "secondary",
+    "navLink",
+    "navDropDown",
+    "footerLink",
+    "countrySelector",
+  ]).isRequired,
   size: PropTypes.oneOf(["large", "medium", "small"]).isRequired,
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
 }
 
 Button.defaultProps = {

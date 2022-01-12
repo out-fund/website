@@ -164,9 +164,11 @@ const FaqWrapper = styled.section`
     &[aria-expanded="true"] {
       background-color: ${theme.color.background.emphesized};
     }
-    ::hover {
+
+    :hover {
       background-color: #deeeff;
     }
+
     &::before {
       margin-left: auto;
       color: #1a65ba;
