@@ -10,6 +10,9 @@ export default Main
 const MainWrapper = styled.main`
   position: relative;
   padding: 0 8px;
+  max-width: 1920px;
+  margin: 0 auto;
+
   ${theme.above.p.m} {
     padding: 0 16px;
   }
