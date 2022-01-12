@@ -3,7 +3,7 @@
   "seoTitle": "Growth capital",
   "hero": {
     "title": "Growth capital for founders like You",
-    "description": "Supercharged funding from £15K to £2M for your marketing & inventory purchases.",
+    "description": "Supercharged funding from £10K to £2M for your marketing & inventory.",
     "primaryBtn": {
       "text": "Get funded",
       "url": "/get-funded/"
@@ -18,8 +18,8 @@
     }
   },
   "weFunded": {
-    "title": "We funded brands like yours",
-    "description": "We build you a unique deal based on your track record and success. Repayments are automatically made from a pre-agreed.",
+    "title": "We fund brands like yours",
+    "description": "We work with the world’s fastest growing online businesses to help founders scale faster. When we partner with you, your vision becomes our mission. We help you to build it with rocket-fuel funding, growth expertise, and a trusted support network. Capital that’s fast, fair, and more human.",
     "cards": {
       "feel": {
         "tag": {
@@ -60,19 +60,19 @@
     }
   },
   "weInvesting": {
-    "title": "We’re Investing into Online Businesses",
-    "description": "As founders ourselves, we know running a business is hard work and often unfair. Outfund doesn’t charge interest, take personal guarantees, and our facility is simply repaid from a revenue share of new sales. ",
+    "title": "We convert future revenue streams into up-front capital",
+    "description": "A better way to fund your online business. We provide the capital you need, when you need it. No dilution, no personal guarantees, no interest rates. Simply connect your digital payment providers with Outfund, and we will present bespoke funding offers based on your revenue data within 48 hours. Invest in growth, and repay as you make sales.",
     "image": {
       "src": "./../../../images/PaymentCounterPhone.jpg",
       "alt": "Payment made ont the phone"
     },
     "btn": {
-      "text": "Learn more how funding works",
+      "text": "Learn more about how the funding works",
       "url": "/how-funding-works/"
     }
   },
   "startSupercharging": {
-    "title": "Start Supercharging Your Growth!",
+    "title": "Start Supercharging Your Growth",
     "btn": {
       "text": "Get started",
       "url": "/get-funded/"
@@ -80,7 +80,7 @@
     "card": {
       "company": "Onto",
       "quote": {
-        "title": "We have doubled in size in the last quarter and are due to double in size again this quarter!",
+        "title": "We have doubled in size in the last quarter and are due to double in size again this quarter",
         "by": "Rob Jolly, Founder of ONTO"
       },
       "tag": {
@@ -97,7 +97,7 @@
   },
   "findOut": {
     "title": "Find out how much you can get",
-    "description": "Invest your funds into the repeatable scalable aspects of your business like ad spend and inventory.",
+    "description": "Funding offers are based on your average monthly revenue. Get a quick indication of your eligibility with our easy-to-use calculator.",
     "list": [
       "Sell products or services online",
       "Have been trading for 6 months +",
@@ -133,20 +133,20 @@
     "title": "Frequently asked questions",
     "questions": [
       {
-        "question": "How much fuanding do you offer?",
-        "answer": "Lorem"
+        "question": "How much funding do you offer?",
+        "answer": "We can deploy between £10,000 and £2,000,000 at a time."
       },
       {
-        "question": "Does the repayment percentage ever change?",
-        "answer": "Lorem"
+        "question": "How do you calculate my offer?",
+        "answer": "Outfund securely connects to your existing banking, payment processing, and accounting platforms. Using predictive models, we assess key metrics from your revenue, ad performance and other third party data to create bespoke funding offers. <br/><br/> Our funding is based on your performance. We don't take any equity, meaning we don't dilute you or your investors. Instead, funding is repaid through a simple revenue share."
       },
       {
-        "question": "Can I apply for funding if I have a business partner?",
-        "answer": "Lorme"
+        "question": "How long does the whole process take?",
+        "answer": "The entire process (application, offer, approval, sending funds) can be completed in as little as two business days. Large advances and applications requiring special considerations or analysis may take slightly longer."
       },
       {
-        "question": "Why do you need my bank account information?",
-        "answer": "lorem"
+        "question": "How do I apply?",
+        "answer": "You can apply in minutes here. You'll need to be a director of the company you're applying for. <br/><br/> You'll need to connect your business bank account, payment processor and company financial accounts. This data will allow us to build your funding offer."
       }
     ],
     "btn": {
@@ -156,7 +156,7 @@
   },
   "aboutUs": {
     "title": "About us",
-    "description": "Outfund is a team of success-driven, highly motivated people who are passionate about growing businesses in the UK. Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission possible. ",
+    "description": "Outfund is all about growing businesses. Our team is a mix of founders, developers, consultants, coffee lovers, and climbers. We move fast and seek impact in everything we do. Our fast-paced environment makes us a highly adaptive team, who all buy into the mission to democratise funding and fuel the growth of the next generation of online businesses.",
     "teamImages": [
       {
         "src": "./../../../images/team/Outfund-team-Alexandra.jpg",
@@ -220,10 +220,10 @@
       }
     ],
     "stats": [
-      { "stat": "£100M", "text": "Invested in 2020 globaly" },
+      { "stat": "£200M", "text": "To invest in 2022" },
       { "stat": "4", "text": "Operating countries" },
-      { "stat": "52+", "text": "Team and growing" },
-      { "stat": "£37M", "text": "We raised so far" }
+      { "stat": "53+", "text": "Growing team" },
+      { "stat": "£37M", "text": "Raised so far" }
     ],
     "buttons": {
       "primary": {

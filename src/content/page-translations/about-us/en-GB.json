@@ -3,22 +3,22 @@
   "seoTitle": "About",
   "seoKeywords": ["test", "keywors"],
   "hero": {
-    "title": "We’re the UK’s Largest eCommerce Investor",
-    "description": "We have been there, done it and got the t-shirt. Our founders have grown multiple businesses in the past and been through the struggles of raising Bank Loans, Venture",
+    "title": "We’re the UK’s largest eCommerce investor",
+    "description": "Nobody said founding, running, and scaling your own business was easy. But accessing capital should be. We started Outfund because we didn’t think founders like you had the right funding options, from complicated equity finance to restrictive debt. We’re changing the way businesses scale.",
     "image": {
       "src": "./../../../images/Outfund-London-Team.jpg",
       "alt": "Test"
     }
   },
   "stats": [
-    { "stat": "£100M", "text": "Invested in 2020 globaly" },
-    { "stat": "4", "text": "Operating countries" },
-    { "stat": "52+", "text": "Team and growing" },
-    { "stat": "£37M", "text": "We raised so far" }
+    { "stat": "£200M", "text": "To invest in 2022" },
+    { "stat": "4", "text": "Operating countries " },
+    { "stat": "53+", "text": "Growing team" },
+    { "stat": "£37M", "text": "Raised so far" }
   ],
   "weInvesting": {
-    "title": "We’re Investing into Online Businesses",
-    "description": "As founders ourselves, we know running a business is hard work and often unfair. Outfund doesn’t charge interest, take personal guarantees, and our facility is simply repaid from a revenue share of new sales. ",
+    "title": "We’re investing in online business with more than just numbers",
+    "description": "We are data-driven, but we value the story of every business. Data analysis lets us assess historic performance and forecast future growth, but we believe in human capital too. There’s more to a business than an algorithm. And because we didn’t think traditional finance providers were doing enough for businesses like yours, we designed Outfund to enable access to non-dilutive capital for every online business which deserves it. <br/><br/> Our founders have grown multiple businesses in the past and understand how stress-inducing outdated forms of funding can be, from the barriers of bank loans to the dilution of venture capital. We get it. Our CEO, Daniel, knows how painful the process is. He built his first company, ParcelBright, and raised millions from VCs. And he realised the cost of losing so many pieces of his business. Outfund now gives founders a chance to grow on their own terms.",
     "image": {
       "src": "./../../../images/PaymentCounterPhone.jpg",
       "alt": "alt"
@@ -80,7 +80,7 @@
     ]
   },
   "latestNews": {
-    "title": "Latest upadates",
+    "title": "Featured in",
     "cards": [
       {
         "tag": "In the news",
@@ -107,7 +107,7 @@
   },
   "joinUs": {
     "title": "Join us",
-    "description": "Invest your funds into the repeatable scalable aspects of your business like ad spend and inventory.",
+    "description": "Come and redefine how founders grow businesses",
     "btn": {
       "text": "See open positions",
       "url": "/careers/"

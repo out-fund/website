@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import parse from "html-react-parser"
 
 import { Button, Section, SectionHeader } from "./../../components"
 import { theme } from "./../../styles/new/theme"
@@ -17,7 +18,7 @@ const SectionWeAreInvesting = ({ data }) => {
           <MobileImageWrapper>
             <GatsbyImage image={getImage(image.src)} alt={image.alt} />
           </MobileImageWrapper>
-          <Description>{description}</Description>
+          <Description>{parse(description)}</Description>
 
           <BtnWrapper>
             <Button to={btn.url} variant="secondary">

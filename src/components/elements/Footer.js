@@ -158,7 +158,8 @@ const LinksColumn = styled.div`
 const CountryLinksWrapper = styled.div`
   display: flex;
   flex-direction: column-reverse;
-  gap: 64px;
+  /* gap: 64px; */
+  /* row-gap: 64px; */
   ${theme.above.t.l} {
     flex-direction: row;
   }
@@ -176,9 +177,12 @@ const CountryWrapper = styled.div`
   /* background-color: #afa; */
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  ${ColumntTitle} {
-    text-align: right;
+  align-items: flex-start;
+  margin-bottom: 64px;
+
+  ${theme.above.t.l} {
+    align-items: flex-end;
+    margin-left: 40px;
   }
 `
 
@@ -229,7 +233,10 @@ const ContentWrapper = styled.div`
   padding-bottom: 120px;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 40px;
+  ${theme.above.t.l} {
+    gap: 80px;
+  }
 `
 const LogoWrapper = styled.div`
   /* height: 100%; */

@@ -4,7 +4,7 @@
   "seoKeywords": ["test", "keywors"],
   "hero": {
     "title": "Join the fastest growing eCommerce investor in the UK",
-    "description": "Outfund is a team of success-driven, highly motivated people who are passionate about growing businesses in the UK. Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission possible.",
+    "description": "At Outfund, we’ve created a funding option that redefines how founders grow their businesses. We’re a mix of founders, engineers, debaters and innovators, but we’re all building the same thing. A business that wants to fuel the growth of the next generation of founders. We’re a team of success-driven, highly motivated people who are passionate about growing businesses. Our fast-paced environment makes us a highly adaptive team who rely on one another to make this mission possible. Our team’s experiences are global in nature and encompass a wide range of industries, with Outfund employees having worked at some of the world’s largest companies. We are able to offer our clients a level of practical knowledge, insight, and enthusiasm that we believe is unmatched. It’s a place where ‘good enough’ is never good enough.",
     "btn": {
       "text": "See open positions",
       "url": "#open-positions"
@@ -33,8 +33,8 @@
     }
   ],
   "weGrow": {
-    "title": "We Grow Businesses and We Grow People",
-    "description": "Invest your funds into the repeatable scalable aspects of your business like ad spend and inventory. <ul><li>Sell products or services online</li><li>Have been trading for 6 months +</li><li>Earn £10K+ monthly revenue</li></ul>",
+    "title": "We grow businesses and we grow people",
+    "description": "Outfund is committed to the success of the businesses it works with, and we believe this commitment provides meaningful rewards to the people who work here. As a team, we embrace challenges and are passionate about helping everyone grow to their full potential. We accept criticism and learn from our mistakes with empathy and eagerness. We value honesty and transparency, so you will always be encouraged to share new ideas and speak freely with every member of the team.",
     "image": {
       "src": "./../../../images/Outfund-we-grow.png",
       "alt": "Collage of photos from Outfund office"
@@ -91,7 +91,7 @@
   },
   "inOffice": {
     "title": "In office and remote",
-    "description": "Joining Outfund gets you on the ground floor of one of the UK’s fastest growing Fintech companies. You get to see and be part of making 100s of founders’ dreams come true and it inspires you to build a role within Outfund that you not only love, but are guaranteed to grow within.",
+    "description": "Joining Outfund gets you on the ground floor of one of the UK’s fastest growing fintech companies. You get to play a part in the growth of hundreds of businesses, as well as this one. We believe in bringing on the most-talented people and offer them the opportunity to learn the skills they will need to be among the top-tier of business professionals as their careers progress.",
 
     "blocks": [
       {

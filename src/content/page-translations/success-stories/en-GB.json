@@ -4,12 +4,12 @@
   "seoKeywords": ["test", "keywors"],
   "hero": {
     "title": "Founders and how Outfund helped them succeed",
-    "description": "Outfund is a team of success-driven, highly motivated people who are passionate about growing businesses in the UK. Our fast-paced "
+    "description": "Electric vehicle subscriptions. Biotech. Ultra-fast grocery delivery. Wine in a can. The world’s darkest paint. Vegan dog food. Some of the world’s most exciting brands in some of the world’s most exciting sectors are part of the Outfund portfolio. Each business is led by a founder with a vision. We know how hard it is to build that vision, and are obsessed with helping the businesses we partner with succeed sooner."
   },
   "otherBrands": {
     "title": "We’ve funded 100s <br/> of brands like yours",
     "card": {
-      "title": "Become a part of the group!",
+      "title": "Join us",
       "btn": {
         "text": "Get funded",
         "url": "/get-funded/"
