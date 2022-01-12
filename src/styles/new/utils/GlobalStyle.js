@@ -16,6 +16,7 @@ const globalCss = css`
   }
   body {
     padding-top: ${theme.size.navbarHeight}px;
+    overflow-x: hidden;
     font-size: 16px;
     font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
       "Helvetica", "Segoe UI", "Arial", Roboto, Oxygen, Ubuntu, Cantarell,
