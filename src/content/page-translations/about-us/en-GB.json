@@ -17,8 +17,8 @@
     { "stat": "£37M", "text": "Raised so far" }
   ],
   "weInvesting": {
-    "title": "We’re investing in online business with more than just numbers",
-    "description": "We are data-driven, but we value the story of every business. Data analysis lets us assess historic performance and forecast future growth, but we believe in human capital too. There’s more to a business than an algorithm. And because we didn’t think traditional finance providers were doing enough for businesses like yours, we designed Outfund to enable access to non-dilutive capital for every online business which deserves it. <br/><br/> Our founders have grown multiple businesses in the past and understand how stress-inducing outdated forms of funding can be, from the barriers of bank loans to the dilution of venture capital. We get it. Our CEO, Daniel, knows how painful the process is. He built his first company, ParcelBright, and raised millions from VCs. And he realised the cost of losing so many pieces of his business. Outfund now gives founders a chance to grow on their own terms.",
+    "title": "We invest in more than just numbers",
+    "description": "We are data-driven, but we value the human story in every business. There’s more to your vision than an algorithm. And because we didn’t think traditional finance providers were doing enough for founders like you, we designed Outfund. Non-dilutive capital so you can grow on your terms.",
     "image": {
       "src": "./../../../images/PaymentCounterPhone.jpg",
       "alt": "alt"

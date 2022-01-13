@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import parse from "html-react-parser"
 
 import { Button } from "./../../components"
 import T from "./../../styles/new/typography"
@@ -10,7 +11,7 @@ const HeroSimple = ({ data }) => {
   return (
     <HeroWrapper>
       <Title>{title}</Title>
-      {description && <Description>{description}</Description>}
+      {description && <Description>{parse(description)}</Description>}
       {btn && (
         <BtnWrapper>
           <Button to={btn.url} variant="primary" size="large">

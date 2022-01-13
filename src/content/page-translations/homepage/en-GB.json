@@ -19,7 +19,7 @@
   },
   "weFunded": {
     "title": "We fund brands like yours",
-    "description": "We work with the world’s fastest growing online businesses to help founders scale faster. When we partner with you, your vision becomes our mission. We help you to build it with rocket-fuel funding, growth expertise, and a trusted support network. Capital that’s fast, fair, and more human.",
+    "description": "We want growing businesses to succeed sooner. We help you build your vision with capital that’s fast, fair, and more human.",
     "cards": {
       "feel": {
         "tag": {
@@ -61,7 +61,7 @@
   },
   "weInvesting": {
     "title": "We convert future revenue streams into up-front capital",
-    "description": "A better way to fund your online business. We provide the capital you need, when you need it. No dilution, no personal guarantees, no interest rates. Simply connect your digital payment providers with Outfund, and we will present bespoke funding offers based on your revenue data within 48 hours. Invest in growth, and repay as you make sales.",
+    "description": "We provide the capital you need, when you need it. No dilution, no personal guarantees, no interest rates. It’s funding, made fairer. Simply connect your digital payment providers with Outfund, and we will generate bespoke funding offers based on your revenue data within 48 hours. Invest in growth, and repay as you make sales.",
     "image": {
       "src": "./../../../images/PaymentCounterPhone.jpg",
       "alt": "Payment made ont the phone"
@@ -156,7 +156,7 @@
   },
   "aboutUs": {
     "title": "About us",
-    "description": "Outfund is all about growing businesses. Our team is a mix of founders, developers, consultants, coffee lovers, and climbers. We move fast and seek impact in everything we do. Our fast-paced environment makes us a highly adaptive team, who all buy into the mission to democratise funding and fuel the growth of the next generation of online businesses.",
+    "description": "Outfund is all about growing businesses. Our team is a mix of founders, developers, consultants, coffee lovers, and climbers. We move fast and seek impact in everything we do. Because finance should make ideas happen.",
     "teamImages": [
       {
         "src": "./../../../images/team/Outfund-team-Alexandra.jpg",
