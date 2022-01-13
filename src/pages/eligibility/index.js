@@ -33,31 +33,40 @@ const Eligibility = ({ location }) => {
           {selected > 9 ? (
             <>
               <Title>Please contact us for tailored offer</Title>
-              <Button
-                href="https://app.out.fund/enquire?"
-                variant="primary"
-                size="large"
-              >
-                Contact Us
-              </Button>
+              <ButtonWrapper>
+                <Button
+                  href="https://app.out.fund/enquire?"
+                  variant="primary"
+                  size="large"
+                >
+                  Contact Us
+                </Button>
+              </ButtonWrapper>
             </>
           ) : selected > 0 ? (
             <>
-              <Title>You are elegible for funding</Title>
+              <Title>Great!</Title>
               <Description>
-                You could get up to {values[selected - 1]}
+                It looks like you could be eligible for up to{" "}
+                <b>{values[selected - 1]}</b> of funding.
               </Description>
-              <Button
-                href="https://app.out.fund/enquire?"
-                variant="primary"
-                size="large"
-              >
-                Proceed with application
-              </Button>
+              <ButtonWrapper>
+                <Button
+                  href="https://app.out.fund/enquire"
+                  variant="primary"
+                  size="large"
+                >
+                  Apply now
+                </Button>
+              </ButtonWrapper>
             </>
           ) : (
             <>
               <Title>You are not eliegible</Title>
+              <Description>
+                We only fund businesses that have at least £10 000 of monthly
+                revenue
+              </Description>
             </>
           )}
         </ContentWrapper>
@@ -71,10 +80,13 @@ export default Eligibility
 const Title = styled(T.H2)`
   margin-bottom: 8px;
 `
-const Description = styled(T.H3)`
-  margin-bottom: 40px;
+const Description = styled(T.BodyLarge)`
+  font-weight: 400;
 `
 
+const ButtonWrapper = styled.div`
+  margin-top: 40px;
+`
 const ContentWrapper = styled.div`
   max-width: 600px;
   margin: 0 auto;
@@ -83,7 +95,7 @@ const ContentWrapper = styled.div`
 
 const Wrapper = styled.div`
   background-color: ${theme.color.background.emphesized};
-  min-height: 90vh;
+  min-height: 100vh;
   padding-top: 10vh;
   padding-left: 24px;
   padding-right: 24px;

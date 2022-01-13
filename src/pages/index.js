@@ -84,7 +84,7 @@ export const query = graphql`
           }
           title
         }
-        list
+
         description
         title
       }

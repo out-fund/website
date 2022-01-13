@@ -98,13 +98,8 @@
   "findOut": {
     "title": "Find out how much you can get",
     "description": "Funding offers are based on your average monthly revenue. Get a quick indication of your eligibility with our easy-to-use calculator.",
-    "list": [
-      "Sell products or services online",
-      "Have been trading for 6 months +",
-      "Earn £10K+ monthly revenue"
-    ],
     "calculator": {
-      "title": "Your monthly revenue",
+      "title": "Your average monthly revenue",
       "range": [
         "Under £10 000",
         "£10 000",
