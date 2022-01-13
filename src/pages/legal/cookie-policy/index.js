@@ -122,5 +122,3 @@ export const query = graphql`
     }
   }
 `
-const Wrapper = styled.div``
-const ContentWrapper = styled.div``

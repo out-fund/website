@@ -20,11 +20,13 @@ const SectionWeAreInvesting = ({ data }) => {
           </MobileImageWrapper>
           <Description>{parse(description)}</Description>
 
-          <BtnWrapper>
-            <Button to={btn.url} variant="secondary">
-              {btn.text}
-            </Button>
-          </BtnWrapper>
+          {btn && (
+            <BtnWrapper>
+              <Button to={btn.url} variant="secondary">
+                {btn.text}
+              </Button>
+            </BtnWrapper>
+          )}
         </TextWrapper>
         <ImageWrapper>
           <GatsbyImage image={getImage(image.src)} alt={image.alt} />

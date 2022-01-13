@@ -125,7 +125,7 @@ const GetFunded = (props) => {
                     </VisuallyHidden>
                     <F.Input
                       id="website"
-                      type="url"
+                      type="text"
                       name="website"
                       placeholder={data.form.website}
                       maxLength="256"
