@@ -6,11 +6,11 @@ import T from "./../../styles/new/typography"
 import { theme } from "./../../styles/new/theme"
 
 const SectionWeValue = ({ data }) => {
-  const { title, description, blocks } = data
+  const { title, description, blocks, white } = data
   return (
     <Section>
-      <Wrapper>
-        <ContentWrapper>
+      <Wrapper white={white}>
+        <ContentWrapper white={white}>
           <HeadingWrapper>
             <SectionHeader title={title} description={description} />
           </HeadingWrapper>
@@ -37,7 +37,8 @@ const Description = styled(T.Body)``
 const Wrapper = styled.div`
   max-width: 1570px;
   margin: 0 auto;
-  background-color: ${theme.color.background.emphesized};
+  background-color: ${(props) =>
+    props.white ? "#fff" : theme.color.background.emphesized};
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -46,7 +47,7 @@ const Wrapper = styled.div`
 const ContentWrapper = styled.div`
   max-width: 1270px;
   margin: 0 40px;
-  padding: 80px 0;
+  padding: ${(props) => (props.white ? "0px" : "80px 0")};
 `
 const HeadingWrapper = styled.div`
   margin-bottom: 64px;
@@ -70,17 +71,4 @@ const Grid = styled.ul`
     row-gap: 64px;
   }
 `
-const Value = styled.li`
-  /* display: grid;
-  grid-template-rows: auto;
-
-
-  theme.above.tablet} {
-    grid-template-columns: 100px auto;
-    column-gap: 24px;
-  }
-  theme.above.laptop} {
-    grid-template-columns: 160px auto;
-    column-gap: 40px;
-  } */
-`
+const Value = styled.li``

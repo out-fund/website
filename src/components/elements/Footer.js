@@ -62,6 +62,9 @@ const Footer = () => {
                 >
                   {links.partners.text[lang]}
                 </Button>
+                <Button to={links.b2b.url} variant="footerLink" color="white">
+                  {links.b2b.text[lang]}
+                </Button>
               </LinksColumn>
 
               <LinksColumn>

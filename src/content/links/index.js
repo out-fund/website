@@ -40,7 +40,7 @@ const links = {
   b2b: {
     text: {
       en: "B2B",
-      es: "B2=",
+      es: "B2B",
     },
     url: "/b2b/",
   },

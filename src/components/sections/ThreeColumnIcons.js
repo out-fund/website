@@ -12,7 +12,7 @@ const ThreeColumnIcons = ({ blocks }) => {
     <Wrapper>
       {blocks.map((block, index) => (
         <Block key={index}>
-          <IconWrapper>{parse(block.icon)}</IconWrapper>
+          {block.icon && <IconWrapper>{parse(block.icon)}</IconWrapper>}
           <BlockTitle as="h3">{block.title}</BlockTitle>
           <BlockDescription>{block.text}</BlockDescription>
         </Block>

@@ -18,9 +18,11 @@ const SectionRegulated = ({ data, bg }) => {
           </HeaderWrapper>
           <TextWrapper>
             <ThreeColumnIcons blocks={blocks} />
-            <StatementWrapper>
-              <Statement>{statement}</Statement>
-            </StatementWrapper>
+            {statement && (
+              <StatementWrapper>
+                <Statement>{statement}</Statement>
+              </StatementWrapper>
+            )}
           </TextWrapper>
         </ContentWrapper>
       </Wrapper>
