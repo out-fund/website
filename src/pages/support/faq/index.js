@@ -184,6 +184,18 @@ const FaqWrapper = styled.section`
     padding: 16px 40px 32px;
     background-color: ${theme.color.background.emphesized};
     transform: translate3d(0, 0, 0);
+    ul,
+    ol {
+      margin-top: 8px;
+      padding-left: 24px;
+      list-style-type: disc;
+      li {
+        display: list-item;
+      }
+    }
+    ol {
+      list-style-type: decimal;
+    }
   }
 `
 
