@@ -3,36 +3,36 @@
   "seoTitle": "seo title",
   "seoKeywords": ["test", "keywors"],
   "hero": {
-    "title": "Get in touch and let us know how we can help."
+    "title": "Want to know more?<br/> Get in touch"
   },
   "liveChat": {
-    "title": "Team of experts is ready to help",
-    "description": "Invest your funds into the repeatable scalable aspects of your business like ad spend and inventory.",
+    "title": "How can we help?",
+    "description": "Get quick answers on questions and queries from our expert team",
     "btn": "Start live chat",
     "btnUrl": "/",
     "image": "./../../../images/Outfund-live-chat.png",
     "imageAlt": "Outfund live Chat"
   },
   "support": {
-    "title": "📚 Need more support",
-    "description": "Invest your funds into the repeatable scalable aspects of your business like ad spend and inventory.",
-    "btn": "Find an answer",
-    "btnUrl": "/"
+    "title": "🚀 Interested in joining our portfolio?",
+    "description": "Connect your accounts and get funded",
+    "btn": "Sign up",
+    "btnUrl": "/get-funded/"
   },
   "feedback": {
-    "title": "🥇 How can we improve",
-    "description": "Invest your funds into the repeatable scalable aspects of your business like ad spend and inventory.",
+    "title": "🥇 How can we improve?",
+    "description": "We’re obsessed with getting better everyday. If there’s anything we could fine-tune, let us know.",
     "btn": "Give us feedback",
-    "btnUrl": "/"
+    "btnUrl": "#"
   },
   "demoCall": {
-    "title": "☎️ Don’t like emails?",
-    "description": "Invest your funds into the repeatable scalable aspects of your business like ad spend and inventory.",
-    "btn": "Schedule a demo call",
+    "title": "☎️ Fancy a chat?",
+    "description": "We’re always happy to talk about your business and how we can support your growth.",
+    "btn": "Schedule a call",
     "btnUrl": "/"
   },
   "emailForm": {
-    "title": "Prefer async communication? Send us an email",
+    "title": "Prefer email? Drop us a line using the form below and we’ll get back to you",
     "form": {
       "fullName": "Full Name",
       "email": "Business Email",

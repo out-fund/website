@@ -21,10 +21,10 @@ const Offices = ({ offices, image, showOffices }) => {
                 <Office>
                   <T.H6 as="h4">{offices.main.country}</T.H6>
                   <T.Body>
-                    {/* {offices.main.firstLine} */}
-                    Do we need this?
+                    {/* {offices.main.firstLine}
+
                     <br />
-                    {offices.main.secondLine}
+                    {offices.main.secondLine} */}
                   </T.Body>
                 </Office>
               </Region>
@@ -37,9 +37,9 @@ const Offices = ({ offices, image, showOffices }) => {
                       <T.H6 as="h4">{office.country}</T.H6>
                       <T.Body>
                         {/* {office.firstLine} */}
-                        Do we need this?
+                        {/* Do we need this?
                         <br />
-                        {office.secondLine}
+                        {office.secondLine} */}
                       </T.Body>
                     </Office>
                   ))}

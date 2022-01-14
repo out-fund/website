@@ -10,7 +10,7 @@ const HeroSimple = ({ data }) => {
   const { title, description, btn } = data
   return (
     <HeroWrapper>
-      <Title>{title}</Title>
+      <Title>{parse(title)}</Title>
       {description && <Description>{parse(description)}</Description>}
       {btn && (
         <BtnWrapper>
