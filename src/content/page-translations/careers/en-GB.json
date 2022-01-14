@@ -56,36 +56,36 @@
         "role": "Chief Operating Officer",
         "image": {
           "src": "./../../../images/Outfund-Alan.jpg",
-          "alt": "Alan Outfund"
+          "alt": "Alan - Chief Operating Officer"
         },
         "description": "Alan has been part of Outfund since its inception, and was previously a magic circle solicitor. As our dynamic COO, he works with our tech team to ensure that our platform and processes align with the needs of our investments and team members. He’s basically our go-to man for everything!"
       },
       {
-        "name": "Jolanda",
-        "role": "Underwriter",
+        "name": "Jack",
+        "role": "Investment Associate",
         "image": {
-          "src": "./../../../images/Outfund-Jolanda.jpg",
-          "alt": "Alan Outfund"
+          "src": "./../../../images/Outfund-Jack.jpg",
+          "alt": "Jack - Investment Associate"
         },
-        "description": "Alan has been part of Outfund since its inception, and was previously a magic circle solicitor. As our dynamic COO, he works with our tech team to ensure that our platform and processes align with the needs of our investments and team members. He’s basically our go-to man for everything!"
+        "description": "Jack is one of our star investment managers and is passionate about exploring and helping businesses reach their full potential. He comes from great companies like EatWith and Sonnovate, he is a born winner, and enjoys the camaraderie between everyone in the company, especially when he discovers hidden gems to invest in."
       },
       {
-        "name": "Senam",
-        "role": "Chief of Staff",
+        "name": "Bertil",
+        "role": "Data Scientist",
         "image": {
-          "src": "./../../../images/Outfund-Senam.jpg",
-          "alt": "Alan Outfund"
+          "src": "./../../../images/Outfund-Bertil.jpg",
+          "alt": "Bertil - Data Scientist"
         },
-        "description": "Alan has been part of Outfund since its inception, and was previously a magic circle solicitor. As our dynamic COO, he works with our tech team to ensure that our platform and processes align with the needs of our investments and team members. He’s basically our go-to man for everything!"
+        "description": "Bertil is a data king from Facebook and Deliveroo. He owns our data science function and works with data flow, quality, reporting and statistical models. He appreciates the fact that employees are trusted to do their jobs to the best of their ability, and enjoys the open communication throughout multiple departments."
       },
       {
         "name": "Rob",
         "role": "Portfolio Manager",
         "image": {
           "src": "./../../../images/Outfund-Rob.jpg",
-          "alt": "Rob Outfund"
+          "alt": "Rob - Portfolio Manager"
         },
-        "description": "Alan has been part of Outfund since its inception, and was previously a magic circle solicitor. As our dynamic COO, he works with our tech team to ensure that our platform and processes align with the needs of our investments and team members. He’s basically our go-to man for everything!"
+        "description": "Rob comes from Seedrs, and now nurtures existing clients and supports their continual growth. He’s extremely passionate about working alongside founders of some of the most exciting startups in the UK, and helping to ensure they reach their growth goals."
       }
     ]
   },
