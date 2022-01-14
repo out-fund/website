@@ -314,7 +314,7 @@ const Nav = styled.nav`
 `
 const LogoWrapper = styled.div`
   height: 100%;
-  div {
+  span {
     height: 100%;
   }
   a {
