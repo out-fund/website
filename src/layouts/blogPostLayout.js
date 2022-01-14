@@ -3,10 +3,10 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 
 import EnLayout from "layouts/en"
-import { HeroSimple, Main } from "./../components"
+import { HeroSimple, Main, Link, Button } from "./../components"
 import T from "./../styles/new/typography"
 import { theme } from "./../styles/new/theme"
 
@@ -19,18 +19,29 @@ const BlogPostLayout = ({ data: { mdx } }) => {
           h1: T.H1,
           h2: T.H2,
           h3: T.H3,
+          h4: T.H4,
+          h5: T.H5,
+          h6: T.H6,
           p: T.Body,
+          figcaption: (props) => <T.BodySmall as="figcaption" {...props} />,
+          li: (props) => <ListElement as="li" {...props} />,
+          blockquote: T.Blockquote,
+          a: Link,
+          Button,
+          StaticImage,
         }}
       >
         <HeroSimple data={mdx.frontmatter} />
         <Main>
-          <ImageWrapper>
-            <GatsbyImage
-              image={getImage(mdx.frontmatter.heroImage.src)}
-              alt={mdx.frontmatter.heroImage.alt}
-            />
-          </ImageWrapper>
-          <Article>
+          {mdx.frontmatter.heroImage && (
+            <ImageWrapper>
+              <GatsbyImage
+                image={getImage(mdx.frontmatter.heroImage.src)}
+                alt={mdx.frontmatter.heroImage.alt}
+              />
+            </ImageWrapper>
+          )}
+          <Article mt={mdx.frontmatter.heroImage}>
             <MDXRenderer frontmatter={mdx.frontmatter}>{mdx.body}</MDXRenderer>
           </Article>
         </Main>
@@ -40,6 +51,11 @@ const BlogPostLayout = ({ data: { mdx } }) => {
 }
 
 export default BlogPostLayout
+
+const ListElement = styled(T.Body)`
+  list-style-type: disc;
+  margin-left: 16px;
+`
 
 const ImageWrapper = styled.div`
   display: flex;
@@ -57,31 +73,47 @@ const ImageWrapper = styled.div`
 `
 const Article = styled.article`
   max-width: 970px;
-  margin: 0 auto;
-  /* margin-top: 120px; */
-  /* padding-bottom: 120px; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: ${(props) => (props.mt ? "0px" : "80px")};
+  margin-bottom: 80px;
   h2,
-  h3 {
-    margin-bottom: 16px;
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
   }
   p {
     margin-bottom: 24px;
     line-height: 1.6;
   }
+  ul {
+    margin-top: -16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+  }
+
+  a {
+    :hover {
+      text-decoration: underline;
+    }
+  }
+
+  li ul {
+    margin-top: 0px;
+  }
+  figure {
+    margin-bottom: 16px;
+    p {
+      margin: 0;
+    }
+    figcaption {
+      text-align: center;
+    }
+  }
 `
-
-// import { Link } from "gatsby"
-
-// const shortcodes = { Link } // Provide common components here
-
-// import { Chart, Pullquote } from "./ui"
-// import { Message } from "theme-ui"
-
-// const shortcodes = { Chart, Pullquote, Message }
-
-// export default function Layout({ children }) {
-//   return <MDXProvider components={shortcodes}>{children}</MDXProvider>
-// }
 
 export const query = graphql`
   query BlogPostQuery($postId: String) {

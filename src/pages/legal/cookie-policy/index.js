@@ -76,7 +76,9 @@ const Article = styled(Section)`
   margin-bottom: 80px;
   h2,
   h3,
-  h4 {
+  h4,
+  h5,
+  h6 {
     margin-top: 32px;
     margin-bottom: 16px;
   }

@@ -64,6 +64,26 @@ export const BodySmaller = styled.p`
     font-size: 14px;
   }
 `
+export const Blockquote = styled.blockquote`
+  p {
+    padding-left: 24px;
+    color: ${theme.color.text.body};
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.4;
+    border-left: 2px solid #051734;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    ${theme.above.t.s} {
+      font-size: 19px;
+    }
+
+    ${theme.above.d.m} {
+      font-size: 20px;
+    }
+  }
+`
 
 // color: ${theme.headingsColor};
 // letter-spacing: -0.01em;

@@ -71,11 +71,8 @@ const Article = styled(Section)`
     margin-bottom: 24px;
   }
   ul {
-    margin-left: 16px;
-  }
-  ul {
     margin-top: -16px;
-    /* margin-bottom: 16px; */
+    margin-left: 16px;
   }
 
   /* ol,
