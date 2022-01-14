@@ -30,7 +30,7 @@ const Eligibility = ({ location }) => {
     <EnLayout simpleNavbar>
       <Wrapper>
         <ContentWrapper>
-          {selected > 9 ? (
+          {/* {selected > 9 ? (
             <>
               <Title>Please contact us for tailored offer</Title>
               <ButtonWrapper>
@@ -43,7 +43,8 @@ const Eligibility = ({ location }) => {
                 </Button>
               </ButtonWrapper>
             </>
-          ) : selected > 0 ? (
+          ) :} */}
+          {selected > 0 ? (
             <>
               <Title>Great!</Title>
               <Description>
@@ -62,11 +63,18 @@ const Eligibility = ({ location }) => {
             </>
           ) : (
             <>
-              <Title>You are not eliegible</Title>
+              <Title>
+                It looks like you're not currently eligible for funding
+              </Title>
               <Description>
-                We only fund businesses that have at least £10 000 of monthly
-                revenue
+                Please keep in touch and check back with us in a few months,
+                once your monthly revenue has increased.
               </Description>
+              <ButtonWrapper>
+                <Button to="/" variant="primary" size="large">
+                  Go back
+                </Button>
+              </ButtonWrapper>
             </>
           )}
         </ContentWrapper>

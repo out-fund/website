@@ -112,6 +112,7 @@ const ContentWrapper = styled.div`
   gap: 80px;
 `
 const TextWrapper = styled.div``
+
 const ImageWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -136,7 +137,14 @@ const Step = styled.div`
     grid-template-columns: 470px 1fr;
     gap: 64px;
     align-items: center;
+    text-align: left;
   }
 `
-const StepTitle = styled(T.H3)``
+const StepTitle = styled(T.H3)`
+  margin-bottom: 8px;
+  ${theme.above.t.l} {
+    margin-bottom: 16px;
+  }
+`
+
 const StepDescription = styled(T.Body)``

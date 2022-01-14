@@ -149,28 +149,34 @@
     "description": "Joining Outfund gets you on the ground floor of one of the UK’s fastest growing Fintech companies.",
     "openings": [
       {
-        "title": "Frontend Developer ",
-        "location": "London, United Kingdom",
-        "time": "Full-Time",
-        "link": "https://apply.workable.com/outfund/j/7CFBD3578A/"
-      },
-      {
-        "title": "Senior Full Stack Developer",
+        "title": "Senior Ruby Developer (London, UK)",
         "location": "London, United Kingdom",
         "time": "Full-Time",
         "link": "https://apply.workable.com/outfund/j/68D29EDB85/"
       },
       {
-        "title": "Senior Full Stack Developer",
-        "location": "Remote",
-        "time": "Full-Time",
-        "link": "https://apply.workable.com/outfund/j/34D61D59C3/"
-      },
-      {
-        "title": "Senior Full Stack Developer",
+        "title": "Senior Ruby Developer (Barcelona, Spain)",
         "location": "Barcelona, Spain",
         "time": "Full-Time",
         "link": "https://apply.workable.com/outfund/j/F6EAF56D4B/"
+      },
+      {
+        "title": "Client Operations Specialist",
+        "location": "London, United Kingdom",
+        "time": "Full-Time",
+        "link": "https://apply.workable.com/outfund/j/EBE78B8130/"
+      },
+      {
+        "title": "Investment Associate - Australian Market",
+        "location": "Sydney, New South Wales, Australia",
+        "time": "Full-Time",
+        "link": "https://apply.workable.com/outfund/j/621A5D5CA2/"
+      },
+      {
+        "title": "Sales Executive",
+        "location": "London, United Kingdom",
+        "time": "Full-Time",
+        "link": "https://apply.workable.com/outfund/j/FD9135D7B5/"
       }
     ],
     "openApplication": {
@@ -179,7 +185,7 @@
       "email": "careers@out.fund"
     },
     "btn": {
-      "text": "See all 14 open positions",
+      "text": "See all 21 open positions",
       "url": "https://apply.workable.com/outfund/"
     }
   }
