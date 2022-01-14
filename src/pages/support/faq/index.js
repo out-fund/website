@@ -77,6 +77,18 @@ const FAQ = (props) => {
                 <Accordions qa={item.qa} />
               </QuestionSection>
             ))}
+            <CantFindWrapper>
+              <PositionTitle as="h5">
+                Can’t find an answer to your question?
+              </PositionTitle>
+              <OpenApplication>
+                Don’t stress. Feel free to chat to us via the icon in the bottom
+                left corner of this page, or just drop us a line here -{" "}
+                <a href={`mailto:contact@out.fund?subject='Outfund-Question'`}>
+                  contact@out.fund
+                </a>
+              </OpenApplication>
+            </CantFindWrapper>
           </FaqWrapper>
         </ContentWrapper>
       </Main>
@@ -87,6 +99,17 @@ const FAQ = (props) => {
 export default FAQ
 
 const Title = styled(T.H3)``
+const PositionTitle = styled(T.H5)``
+const OpenApplication = styled(T.Body)`
+  margin-top: 16px;
+`
+
+const CantFindWrapper = styled.div`
+  background-color: ${theme.color.background.emphesized};
+  padding: 40px;
+  border-radius: 10px;
+  margin-top: 40px;
+`
 
 const LinksWrapper = styled.ul`
   background-color: ${theme.color.background.emphesized};
@@ -112,6 +135,7 @@ const ContentWrapper = styled.div`
   max-width: 970px;
   margin: 0 auto;
   padding-top: 80px;
+  margin-bottom: 80px;
   h3 {
     margin-bottom: 24px;
   }
@@ -127,7 +151,7 @@ const QuestionSectionWrapper = styled.div`
 const MenueWrapper = styled.section``
 
 const FaqWrapper = styled.section`
-  border-bottom: 1px solid #bbc7d6 !important;
+  /* border-bottom: 1px solid #bbc7d6 !important; */
   .accordion {
     border: none;
     border-radius: 0;
