@@ -263,7 +263,7 @@ function DesktopLinks({ lang }) {
         </Button>
       </li>
       <li>
-        <Button to={links.login.url} variant="navLink">
+        <Button href={links.login.url} variant="navLink">
           {links.login.text[lang]}
         </Button>
       </li>

@@ -47,7 +47,7 @@ const ContentWrapper = styled.div`
 
 const Wrapper = styled.div`
   background-color: ${theme.color.background.emphesized};
-  min-height: 90vh;
+  min-height: 100vh;
   padding-top: 10vh;
   padding-left: 24px;
   padding-right: 24px;

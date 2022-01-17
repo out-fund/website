@@ -85,7 +85,7 @@ const links = {
       en: "Login",
       es: "Acceso",
     },
-    url: "/login/",
+    url: "https://app.out.fund/users/sign_in",
   },
   getFunded: {
     text: {
