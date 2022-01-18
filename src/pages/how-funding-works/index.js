@@ -53,27 +53,28 @@ const HowFundingWorks = (props) => {
             <SectionWeAreInvesting
               data={props.data.howFundingWorksJson.humanCapital}
             />
+            <CtaBlockWrapper>
+              <InnerWrapper>
+                <CtaBlockTextWrapper>
+                  <T.H2>
+                    Start Supercharging <br />
+                    Your Growth!
+                  </T.H2>
+                  <Button to="/get-funded/" variant="primary" size="large">
+                    Get funded
+                  </Button>
+                </CtaBlockTextWrapper>
+                <ImageWrapper>
+                  <StaticImage
+                    src="./../images/components/ss-cta-block.png"
+                    alt="Group profile photos"
+                  />
+                </ImageWrapper>
+              </InnerWrapper>
+            </CtaBlockWrapper>
             <SectionFaq data={props.data.howFundingWorksJson.faq} />
           </ContentWrapper>
-          <CtaBlockWrapper>
-            <InnerWrapper>
-              <CtaBlockTextWrapper>
-                <T.H2>
-                  Start Supercharging <br />
-                  Your Growth!
-                </T.H2>
-                <Button to="/get-funded/" variant="primary" size="large">
-                  Get funded
-                </Button>
-              </CtaBlockTextWrapper>
-              <ImageWrapper>
-                <StaticImage
-                  src="./../images/components/ss-cta-block.png"
-                  alt="Group profile photos"
-                />
-              </ImageWrapper>
-            </InnerWrapper>
-          </CtaBlockWrapper>
+
           <SectionRegulated data={props.data.trustJson} />
         </Wrapper>
       </Main>
