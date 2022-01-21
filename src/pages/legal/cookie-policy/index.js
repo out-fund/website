@@ -24,6 +24,23 @@ import T from "./../../../styles/new/typography"
 import EnLayout from "./../../../layouts/en"
 import { Main, Section } from "./../../../components"
 
+export const query = graphql`
+  query cookiePolicy {
+    allMdx(filter: { slug: { regex: "/cookie-policy/" } }) {
+      edges {
+        node {
+          id
+          slug
+          frontmatter {
+            title
+          }
+          body
+        }
+      }
+    }
+  }
+`
+
 const CookiePolicy = (props) => {
   const data = props.data.allMdx.edges[0].node
   console.log(data)
@@ -104,23 +121,6 @@ const Article = styled(Section)`
     }
     th {
       font-weight: 600;
-    }
-  }
-`
-
-export const query = graphql`
-  query cookiePolicy {
-    allMdx(filter: { slug: { regex: "/cookie-policy/" } }) {
-      edges {
-        node {
-          id
-          slug
-          frontmatter {
-            title
-          }
-          body
-        }
-      }
     }
   }
 `
