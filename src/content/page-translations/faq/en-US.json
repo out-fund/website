@@ -1,0 +1,146 @@
+{
+    "language": "en-US",
+    "seoTitle": "seo title",
+    "seoKeywords": ["test", "keywords"],
+    "hero": {
+      "title": "We’re always here to help answer your questions",
+      "description": "Learn the ins and outs of how the funding works. If you’d like to learn more about joining our portfolio, get in touch."
+    },
+    "faq": [
+      {
+        "title": "How it works",
+        "qa": [
+          {
+            "question": "How much funding do you offer?",
+            "answer": "We can deploy between £10,000 and £2,000,000 at a time."
+          },
+          {
+            "question": "How do you calculate my offer?",
+            "answer": "Outfund uses a unique corporate revenue share to fund the growth of our portfolio companies. We have powerful predictive models that look at your revenue, ad performance and other third party data to generate funding offers. <br/><br/> Our funding is based on your performance. We don't take equity, meaning we don't dilute you or your investors."
+          },
+          {
+            "question": "What do I need to do to qualify for an advance?",
+            "answer": "To fund your company, we need you to have the following: <ul><li>Open banking</li><li>Online Payment processor</li><li>Trading for at least 6 months</li><li>Greater than £10,000 turnover pm</li></ul>"
+          },
+          {
+            "question": "Can I receive more than one advance at a time?",
+            "answer": "Yes, you can receive an additional advance if you qualify for more capital. <br/><br/> You may qualify for more capital if: <ul><li>You did not choose the max amount of capital on the first advance</li><li>Your company revenue has grown significantly since the last advance</li><li>You have a new source of income that significantly increases your revenue</li><li>You are 80%+ repaid on your previous advance</li></ul><br/> All offers are subject to due diligence."
+          },
+          {
+            "question": "How does it work?",
+            "answer": "<ol><li>You apply for funding with Outfund.</li><li>Our model uses your revenues, ad performance and third party data to build you a unique offer for capital at a flat fixed fee.</li> <li>You use the funding to grow your revenues.</li> <li>You pay back the original funding as well as the fixed fee with small amounts of your revenue over time.</li> <li>We automatically calculate how much more we can advance next time.</li></ol><br/> You don’t give up any stake in your business and, unlike a loan, your total repayment is capped from the start."
+          },
+          {
+            "question": "How do I apply?",
+            "answer": "You can apply in minutes <a href='https://www.out.fund/get-funded/'>here</a>. You'll need to be a director of the company you're applying for. <br/><br/> You'll need to connect your business bank account, payment processor and company financial accounts. This data means we can build your funding offer."
+          }
+        ]
+      },
+      {
+        "title": "Fees",
+        "qa": [
+          {
+            "question": "How is my fee set?",
+            "answer": "The fee is based on the data analysed by our platform. We take your revenue data, business metrics, and market data into consideration when determining your unique offer and the fee associated with it."
+          },
+          {
+            "question": "Is there any application fee?",
+            "answer": "There's no fee to apply for funding."
+          },
+          {
+            "question": "What fee do you charge?",
+            "answer": "We charge one flat, fixed fee ranging from 6%-12% of the funding. For a £100,000 investment at a 6% flat fee, you’ll pay back £106,000 in pre-agreed chunks of your revenue. <br/><br/> You will know exactly how much you’ll pay back before you accept the offer and the fee will never change. There’s no interest and our fee doesn’t compound over time."
+          }
+        ]
+      },
+      {
+        "title": "Repayment",
+        "qa": [
+          {
+            "question": "When does repayment start?",
+            "answer": "We will begin to collect the agreed repayment percentage on your ongoing future revenues, until your balance is 0. <br/><br/> Automatic repayments normally begin 5 business days after we agree the funding."
+          },
+          {
+            "question": "Does the repayment percentage ever change?",
+            "answer": "We aim to stick to our original estimated percentage share of revenue. However, we may have to vary the repayment percentage depending on your revenues during the repayment period. You can contact your account manager with any queries about your account."
+          },
+          {
+            "question": "How long does repayment take",
+            "answer": "Repayment is based on your future revenues so the time to repay varies depending on your business and the revenue share we agree. We usually aim for a 6 month repayment period but we’ll advise you on your expected repayment time after your offer completes."
+          },
+          {
+            "question": "What is my repayment percentage?",
+            "answer": "The repayment percentage is the percentage of revenue we take while you repay your funding. We typically set it at 1-20% of future revenue over the course of repayment, to keep a healthy cash flow in your day to day operations. We’ll work with you to find a rate that fits your business."
+          },
+          {
+            "question": "How long does the whole process take?",
+            "answer": "We automatically collect a pre-agreed percentage share of revenue on a daily direct debit from your bank account. The debit usually runs two business days in arrears of the revenue."
+          }
+        ]
+      },
+      {
+        "title": "General",
+        "qa": [
+          {
+            "question": "What other info do you need?",
+            "answer": "In order to provide you with an offer, we need to verify both your identity and your business. The first step is to connect the accounts you use to run your business - we use this information to analyze your revenue data."
+          },
+          {
+            "question": "Why do you need my bank account information?",
+            "answer": "We can deploy between £10,000 and £1,000,000 at a time.We use your financial information to determine your eligibility for growth funding. We ask that you connect this information to our platform so we can assess your business performance quickly. The bank account you connect to Outfund is also the bank account which we'll debit your repayments from."
+          },
+          {
+            "question": "How do you secure my company information?",
+            "answer": "Your data is securely used to enhance your experience at Outfund and offer us insights on how to build more financial products for the modern day entrepreneur. We will never share your data with a third party without express consent. See our <a href='https://out.fund/legal/privacy-policy/'>privacy policy</a> for more details."
+          },
+          {
+            "question": "Can I apply for funding if I have a business partner?",
+            "answer": "Of course! We may require multiple business partners to go through the verification process and sign."
+          }
+        ]
+      },
+      {
+        "title": "Using funds",
+        "qa": [
+          {
+            "question": "How can I use my funds?",
+            "answer": "You can use the funds with your Outfund marketing card or by uploading invoices to your Outfund account.We don't send funds directly to your business account."
+          },
+          {
+            "question": "How soon can I use the funds?",
+            "answer": "Once your advance contract has been countersigned, funds should arrive within 24 hours. Sometimes large amounts may take an additional day. <br/><br/> If you have a Outfund marketing card, it should be available on your dashboard same day."
+          },
+          {
+            "question": "How can I see my payment history?",
+            "answer": "Your payments history is under the payments tab on your Outfund account."
+          },
+          {
+            "question": "How do I manage my funding deal?",
+            "answer": "Once your deal has been completed, you can use your dashboard to manage your deal and check your repayments. <br/><br/> You can spend the funds by bank transfer from the Outfund dashboard or your Outfund marketing card."
+          }
+        ]
+      },
+      {
+        "title": "Marketing",
+        "qa": [
+          {
+            "question": "Where can I find the details for my marketing card?",
+            "answer": "Your Outfund marketing card details are available on your account tab in your Outfund dashboard."
+          },
+          {
+            "question": "My marketing card has been declined. What do I do?",
+            "answer": "If this happens, you’ll receive an email informing you why the card was declined. <br/><br/> It’s worth checking the CVC expiry date and card number on your Outfund dashboard to make sure you entered it correctly. <br/><br/> Please note that large transactions may be blocked for fraud prevention. If you need to make a large transaction, please let us know ahead of time so we can ensure it is successful."
+          },
+          {
+            "question": "How do I get an Outfund marketing card?",
+            "answer": "We’ll send you a marketing card on request once your investment has been confirmed."
+          },
+          {
+            "question": "What is an Outfund marketing card?",
+            "answer": "An Outfund marketing card is a preloaded virtual card you can use to fund your marketing spend. You can spend it on digital ads or other items in your marketing budget."
+          }
+        ]
+      }
+    ]
+  }
+  

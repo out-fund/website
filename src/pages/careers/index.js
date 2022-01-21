@@ -16,29 +16,6 @@ import {
   SectionOpenings,
 } from "./../../components"
 
-const Careers = (props) => {
-  return (
-    <LangLayout>
-      <HeroSimple data={props.data.careersJson.hero} />
-      <Main>
-        <HeroImage data={props.data.careersJson.hero.image} />
-        <Stats data={props.data.careersJson.stats} />
-        <SectionWeGrow data={props.data.careersJson.weGrow} />
-        <SectionCoolPeople data={props.data.careersJson.coolPeople} />
-        <SectionInOfficeRemote
-          data={props.data.careersJson.inOffice}
-          officeData={props.data.officesJson}
-        />
-        <SectionWeValue data={props.data.careersJson.weValue} />
-        <SectionOpenings data={props.data.careersJson.currentOpenings} />
-        <SectionRegulated data={props.data.trustJson} bg={"transparent"} />
-      </Main>
-    </LangLayout>
-  )
-}
-
-export default Careers
-
 export const query = graphql`
   query {
     careersJson(language: { regex: "/en-GB/" }) {
@@ -179,3 +156,26 @@ export const query = graphql`
     }
   }
 `
+
+const Careers = (props) => {
+  return (
+    <LangLayout>
+      <HeroSimple data={props.data.careersJson.hero} />
+      <Main>
+        <HeroImage data={props.data.careersJson.hero.image} />
+        <Stats data={props.data.careersJson.stats} />
+        <SectionWeGrow data={props.data.careersJson.weGrow} />
+        <SectionCoolPeople data={props.data.careersJson.coolPeople} />
+        <SectionInOfficeRemote
+          data={props.data.careersJson.inOffice}
+          officeData={props.data.officesJson}
+        />
+        <SectionWeValue data={props.data.careersJson.weValue} />
+        <SectionOpenings data={props.data.careersJson.currentOpenings} />
+        <SectionRegulated data={props.data.trustJson} bg={"transparent"} />
+      </Main>
+    </LangLayout>
+  )
+}
+
+export default Careers
