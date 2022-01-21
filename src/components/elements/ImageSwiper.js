@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import shuffle from "../../utils/shuffle"
+// import shuffle from "../../utils/shuffle"
 import T from "./../../styles/new/typography"
 
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -12,7 +12,10 @@ import SwiperCore, { FreeMode, Autoplay } from "swiper"
 SwiperCore.use([FreeMode, Autoplay])
 
 const ImageSwiper = ({ data }) => {
-  const images = shuffle(data)
+  // const images = shuffle(data)
+  // console.log("data", data)
+  // console.log("images", images)
+  const images = data
   return (
     <Wrapper>
       <Swiper

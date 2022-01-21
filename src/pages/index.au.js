@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import EsLayout from "layouts/es"
+import EnLayout from "layouts/us"
 import {
   Main,
   SectionWeFunded,
@@ -20,7 +20,7 @@ const IndexPage = (props) => {
   } = props
 
   return (
-    <EsLayout>
+    <EnLayout>
       <HeroHomepage data={data.hero} />
       <Main>
         <SectionWeFunded data={data.weFunded} />
@@ -31,14 +31,14 @@ const IndexPage = (props) => {
         <SectionAboutUs data={props.data.homepageJson.aboutUs} />
         <SectionRegulated data={props.data.trustJson} />
       </Main>
-    </EsLayout>
+    </EnLayout>
   )
 }
 export default IndexPage
 
 export const query = graphql`
-  query esHomePage {
-    homepageJson(language: { regex: "/es-ES/" }) {
+  query auHomePage {
+    homepageJson(language: { regex: "/en-AU/" }) {
       aboutUs {
         buttons {
           primary {

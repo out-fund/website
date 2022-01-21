@@ -8,8 +8,8 @@ import "./../styles/new/typography/font.css"
 const EN = ({ children, simpleNavbar, pt, noNavbar }) => {
   return (
     <GlobalLayout pt={pt}>
-      {!simpleNavbar && !noNavbar && <Navbar lang={"en"} />}
-      {simpleNavbar && !noNavbar && <SimpleNavbar lang={"en"} />}
+      {!simpleNavbar && !noNavbar && <Navbar lang={"au"} />}
+      {simpleNavbar && !noNavbar && <SimpleNavbar lang={"au"} />}
       {children}
       <Footer />
     </GlobalLayout>

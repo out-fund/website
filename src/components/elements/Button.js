@@ -16,7 +16,7 @@ const Button = ({
   isOpen,
   ...props
 }) => {
-  // console.log("btn", props)
+  // console.log("btn test", props)
   // const { to, variant, children, size } = props
   return (
     <ButtonWrap
