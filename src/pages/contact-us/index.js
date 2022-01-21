@@ -18,6 +18,97 @@ import T from "../../styles/new/typography"
 import F from "../../styles/new/form"
 import { theme } from "./../../styles/new/theme"
 
+export const query = graphql`
+  query {
+    contactUsJson(language: { regex: "/en-GB/" }) {
+      language
+      seoTitle
+      liveChat {
+        btn
+        btnUrl
+        description
+        title
+        image {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+        imageAlt
+      }
+      hero {
+        title
+      }
+      globalCoverage {
+        title
+      }
+      feedback {
+        btn
+        btnUrl
+        description
+        title
+      }
+      emailForm {
+        title
+        form {
+          btn
+          email
+          message
+          fullName
+          btnUrl
+        }
+      }
+      demoCall {
+        btn
+        btnUrl
+        description
+        title
+      }
+      support {
+        btn
+        btnUrl
+        description
+        title
+      }
+    }
+    officesJson(language: { regex: "/en-GB/" }) {
+      image {
+        src {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+        alt
+      }
+      offices {
+        world {
+          list {
+            country
+            firstLine
+            secondLine
+          }
+          title
+        }
+        main {
+          country
+          firstLine
+          secondLine
+          title
+        }
+      }
+    }
+    trustJson(language: { regex: "/en-GB/" }) {
+      title
+      statement
+      description
+      blocks {
+        title
+        icon
+        text
+      }
+    }
+  }
+`
+
 const ContactUs = (props) => {
   const liveChat = props.data.contactUsJson.liveChat
   const support = props.data.contactUsJson.support
@@ -204,97 +295,6 @@ const Form = styled.div`
     } */
     button {
       width: 100%;
-    }
-  }
-`
-
-export const query = graphql`
-  query {
-    contactUsJson(language: { regex: "/en-GB/" }) {
-      language
-      seoTitle
-      liveChat {
-        btn
-        btnUrl
-        description
-        title
-        image {
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
-        imageAlt
-      }
-      hero {
-        title
-      }
-      globalCoverage {
-        title
-      }
-      feedback {
-        btn
-        btnUrl
-        description
-        title
-      }
-      emailForm {
-        title
-        form {
-          btn
-          email
-          message
-          fullName
-          btnUrl
-        }
-      }
-      demoCall {
-        btn
-        btnUrl
-        description
-        title
-      }
-      support {
-        btn
-        btnUrl
-        description
-        title
-      }
-    }
-    officesJson(language: { regex: "/en-GB/" }) {
-      image {
-        src {
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
-        alt
-      }
-      offices {
-        world {
-          list {
-            country
-            firstLine
-            secondLine
-          }
-          title
-        }
-        main {
-          country
-          firstLine
-          secondLine
-          title
-        }
-      }
-    }
-    trustJson(language: { regex: "/en-GB/" }) {
-      title
-      statement
-      description
-      blocks {
-        title
-        icon
-        text
-      }
     }
   }
 `

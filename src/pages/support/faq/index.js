@@ -17,6 +17,24 @@ import {
 } from "react-accessible-accordion"
 import "react-accessible-accordion/dist/fancy-example.css"
 
+export const query = graphql`
+  query faqPage {
+    faqJson {
+      hero {
+        description
+        title
+      }
+      faq {
+        title
+        qa {
+          answer
+          question
+        }
+      }
+    }
+  }
+`
+
 const Accordions = ({ qa }) => {
   return (
     <Accordion allowZeroExpanded>
@@ -219,24 +237,6 @@ const FaqWrapper = styled.section`
     }
     ol {
       list-style-type: decimal;
-    }
-  }
-`
-
-export const query = graphql`
-  query faqPage {
-    faqJson {
-      hero {
-        description
-        title
-      }
-      faq {
-        title
-        qa {
-          answer
-          question
-        }
-      }
     }
   }
 `

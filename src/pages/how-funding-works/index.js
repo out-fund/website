@@ -17,6 +17,51 @@ import {
 import { theme } from "./../../styles/new/theme"
 import T from "./../../styles/new/typography"
 
+// TODO Transfer content in graphql
+export const query = graphql`
+  query HowFundingWorksPage {
+    howFundingWorksJson(language: { regex: "/en-GB/" }) {
+      hero {
+        description
+        title
+      }
+      humanCapital {
+        image {
+          src {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+          alt
+        }
+        description
+        title
+      }
+      faq {
+        btn {
+          text
+          url
+        }
+        questions {
+          answer
+          question
+        }
+        title
+      }
+    }
+    trustJson(language: { regex: "/en-GB/" }) {
+      title
+      statement
+      description
+      blocks {
+        icon
+        title
+        text
+      }
+    }
+  }
+`
+
 const HowFundingWorks = (props) => {
   return (
     <LangLayout>
@@ -128,48 +173,3 @@ const CtaBlockTextWrapper = styled.div`
 `
 
 const ImageWrapper = styled.div``
-
-// TODO Transfer content in graphql
-export const query = graphql`
-  query HowFundingWorksPage {
-    howFundingWorksJson(language: { regex: "/en-GB/" }) {
-      hero {
-        description
-        title
-      }
-      humanCapital {
-        image {
-          src {
-            childImageSharp {
-              gatsbyImageData
-            }
-          }
-          alt
-        }
-        description
-        title
-      }
-      faq {
-        btn {
-          text
-          url
-        }
-        questions {
-          answer
-          question
-        }
-        title
-      }
-    }
-    trustJson(language: { regex: "/en-GB/" }) {
-      title
-      statement
-      description
-      blocks {
-        icon
-        title
-        text
-      }
-    }
-  }
-`

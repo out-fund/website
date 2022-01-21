@@ -14,28 +14,6 @@ import {
   HeroHomepage,
 } from "./../components"
 
-const IndexPage = (props) => {
-  const {
-    data: { homepageJson: data },
-  } = props
-
-  return (
-    <EnLayout>
-      <HeroHomepage data={data.hero} />
-      <Main>
-        <SectionWeFunded data={data.weFunded} />
-        <SectionWeAreInvesting data={data.weInvesting} />
-        <SectionSupercharging data={data.startSupercharging} />
-        <SectionFindOut data={props.data.homepageJson.findOut} />
-        <SectionFaq data={props.data.homepageJson.faq} />
-        <SectionAboutUs data={props.data.homepageJson.aboutUs} />
-        <SectionRegulated data={props.data.trustJson} />
-      </Main>
-    </EnLayout>
-  )
-}
-export default IndexPage
-
 export const query = graphql`
   query usHomePage {
     homepageJson(language: { regex: "/en-US/" }) {
@@ -227,3 +205,25 @@ export const query = graphql`
     }
   }
 `
+
+const IndexPage = (props) => {
+  const {
+    data: { homepageJson: data },
+  } = props
+
+  return (
+    <EnLayout>
+      <HeroHomepage data={data.hero} />
+      <Main>
+        <SectionWeFunded data={data.weFunded} />
+        <SectionWeAreInvesting data={data.weInvesting} />
+        <SectionSupercharging data={data.startSupercharging} />
+        <SectionFindOut data={props.data.homepageJson.findOut} />
+        <SectionFaq data={props.data.homepageJson.faq} />
+        <SectionAboutUs data={props.data.homepageJson.aboutUs} />
+        <SectionRegulated data={props.data.trustJson} />
+      </Main>
+    </EnLayout>
+  )
+}
+export default IndexPage

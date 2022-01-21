@@ -10,23 +10,6 @@ import {
   SectionWhy,
 } from "./../../components"
 
-const Partners = (props) => {
-  return (
-    <LangLayout>
-      <HeroSimple data={props.data.partnersJson.hero} />
-      <Main>
-        <SectionPartners
-          data={props.data.partnersJson.ourPartners}
-          form={props.data.partnersJson.form}
-        />
-        <SectionWhy data={props.data.partnersJson.why} />
-      </Main>
-    </LangLayout>
-  )
-}
-
-export default Partners
-
 export const query = graphql`
   query PartnerQuerry {
     partnersJson {
@@ -67,3 +50,20 @@ export const query = graphql`
     }
   }
 `
+
+const Partners = (props) => {
+  return (
+    <LangLayout>
+      <HeroSimple data={props.data.partnersJson.hero} />
+      <Main>
+        <SectionPartners
+          data={props.data.partnersJson.ourPartners}
+          form={props.data.partnersJson.form}
+        />
+        <SectionWhy data={props.data.partnersJson.why} />
+      </Main>
+    </LangLayout>
+  )
+}
+
+export default Partners

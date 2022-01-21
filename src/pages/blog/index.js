@@ -7,48 +7,6 @@ import LangLayout from "layouts/en"
 import { HeroSimple, Main, CardBlog } from "./../../components"
 import { theme } from "./../../styles/new/theme"
 
-const Blog = (props) => {
-  return (
-    <LangLayout>
-      <HeroSimple data={props.data.blogJson.hero} />
-      <Main>
-        <Wrapper>
-          <List>
-            {props.data.allMdx.edges.map(({ node: post }) => (
-              <Item key={post.id}>
-                <CardBlog data={post} key={post.id} />
-              </Item>
-            ))}
-          </List>
-        </Wrapper>
-      </Main>
-    </LangLayout>
-  )
-}
-
-export default Blog
-
-const Wrapper = styled.div`
-  max-width: 1770px;
-  margin: 0 auto;
-  margin-top: 64px;
-  margin-bottom: 80px;
-`
-const List = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 24px;
-  justify-items: center;
-
-  ${theme.above.t.l} {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  ${theme.above.l.m} {
-    grid-template-columns: repeat(3, 1fr);
-  }
-`
-const Item = styled.li``
-
 export const query = graphql`
   query BlogPage {
     allMdx(
@@ -91,3 +49,45 @@ export const query = graphql`
     }
   }
 `
+
+const Blog = (props) => {
+  return (
+    <LangLayout>
+      <HeroSimple data={props.data.blogJson.hero} />
+      <Main>
+        <Wrapper>
+          <List>
+            {props.data.allMdx.edges.map(({ node: post }) => (
+              <Item key={post.id}>
+                <CardBlog data={post} key={post.id} />
+              </Item>
+            ))}
+          </List>
+        </Wrapper>
+      </Main>
+    </LangLayout>
+  )
+}
+
+export default Blog
+
+const Wrapper = styled.div`
+  max-width: 1770px;
+  margin: 0 auto;
+  margin-top: 64px;
+  margin-bottom: 80px;
+`
+const List = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+  justify-items: center;
+
+  ${theme.above.t.l} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  ${theme.above.l.m} {
+    grid-template-columns: repeat(3, 1fr);
+  }
+`
+const Item = styled.li``
