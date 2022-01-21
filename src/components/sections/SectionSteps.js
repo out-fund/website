@@ -17,8 +17,8 @@ const SectionSteps = () => {
       <Wrapper>
         <HeaderWrapper>
           <SectionHeader
-            title="The process-start growing now"
-            description="No paperwork, just funding at your fingertips"
+            title="The Process"
+            description="Start growing now - No paperwork, just funding at your fingertips"
           />
         </HeaderWrapper>
         <ContentWrapper>

@@ -21,18 +21,19 @@ import GlobalLayout from "./../layouts/GlobalLayout"
 import { Navbar, Footer } from "./../components"
 import { SimpleNavbar } from "./../components/elements/Navbar"
 
-import "./../styles/new/typography/font.css"
+import { LangProvider } from "./../utils/LangProvider"
 
-// const LangContext = React.createContext("es")
+import "./../styles/new/typography/font.css"
 
 const ES = ({ children, simpleNavbar, pt, noNavbar }) => {
   return (
     <GlobalLayout pt={pt}>
-      {!simpleNavbar && !noNavbar && <Navbar lang={"es"} />}
-      {simpleNavbar && !noNavbar && <SimpleNavbar lang={"es"} />}
-      {/* <LangContext>{children}</LangContext> */}
-      {children}
-      <Footer />
+      <LangProvider langKey="es">
+        {!simpleNavbar && !noNavbar && <Navbar lang="es" />}
+        {simpleNavbar && !noNavbar && <SimpleNavbar lang="es" />}
+        {children}
+        <Footer />
+      </LangProvider>
     </GlobalLayout>
   )
 }

@@ -5,15 +5,19 @@ import { SimpleNavbar } from "./../components/elements/Navbar"
 
 import "./../styles/new/typography/font.css"
 
-const EN = ({ children, simpleNavbar, pt, noNavbar }) => {
+import { LangProvider } from "./../utils/LangProvider"
+
+const AU = ({ children, simpleNavbar, pt, noNavbar }) => {
   return (
     <GlobalLayout pt={pt}>
-      {!simpleNavbar && !noNavbar && <Navbar lang={"au"} />}
-      {simpleNavbar && !noNavbar && <SimpleNavbar lang={"au"} />}
-      {children}
-      <Footer />
+      <LangProvider langKey="au">
+        {!simpleNavbar && !noNavbar && <Navbar lang="en" />}
+        {simpleNavbar && !noNavbar && <SimpleNavbar lang="en" />}
+        {children}
+        <Footer />
+      </LangProvider>
     </GlobalLayout>
   )
 }
 
-export default EN
+export default AU

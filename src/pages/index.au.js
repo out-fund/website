@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import EnLayout from "layouts/us"
+import EnLayout from "layouts/au"
 import {
   Main,
   SectionWeFunded,

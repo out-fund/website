@@ -5,13 +5,17 @@ import { SimpleNavbar } from "./../components/elements/Navbar"
 
 import "./../styles/new/typography/font.css"
 
+import { LangProvider } from "./../utils/LangProvider"
+
 const EN = ({ children, simpleNavbar, pt, noNavbar }) => {
   return (
     <GlobalLayout pt={pt}>
-      {!simpleNavbar && !noNavbar && <Navbar lang={"en"} />}
-      {simpleNavbar && !noNavbar && <SimpleNavbar lang={"en"} />}
-      {children}
-      <Footer />
+      <LangProvider langKey="us">
+        {!simpleNavbar && !noNavbar && <Navbar lang="en" />}
+        {simpleNavbar && !noNavbar && <SimpleNavbar lang="en" />}
+        {children}
+        <Footer />
+      </LangProvider>
     </GlobalLayout>
   )
 }

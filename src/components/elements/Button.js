@@ -5,6 +5,8 @@ import PropTypes from "prop-types"
 import { theme } from "./../../styles/new/theme"
 // import T from "./../../styles/new/typography"
 
+import { useLangProvider } from "./../../utils/LangProvider"
+
 const Button = ({
   to,
   variant,
@@ -16,8 +18,11 @@ const Button = ({
   isOpen,
   ...props
 }) => {
-  // console.log("btn test", props)
-  // const { to, variant, children, size } = props
+  const langKey = useLangProvider()
+  if (to && langKey !== "en") {
+    to = "/" + langKey + to
+  }
+
   return (
     <ButtonWrap
       variant={variant}
