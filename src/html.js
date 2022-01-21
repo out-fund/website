@@ -65,11 +65,11 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <GoogleTagManager />
+        {/* <GoogleTagManager /> */}
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
-        <GoogleTagManagerNoScript />
+        {/* <GoogleTagManagerNoScript /> */}
         {props.preBodyComponents}
         <div
           key={`body`}
@@ -77,7 +77,7 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        <LiveChat />
+        {/* <LiveChat /> */}
       </body>
     </html>
   )

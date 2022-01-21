@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import EnLayout from "layouts/en"
+import LangLayout from "layouts/en"
 
 import {
   // HeroAbout,
@@ -18,7 +18,7 @@ import {
 
 const AboutUs = (props) => {
   return (
-    <EnLayout>
+    <LangLayout>
       {/* <HeroAbout data={props.data.aboutUsJson.hero} /> */}
       <HeroSimple data={props.data.aboutUsJson.hero} />
       <Main>
@@ -30,7 +30,7 @@ const AboutUs = (props) => {
         <SectionJoinUs data={props.data.aboutUsJson.joinUs} />
         <SectionRegulated data={props.data.trustJson} />
       </Main>
-    </EnLayout>
+    </LangLayout>
   )
 }
 

@@ -1,17 +1,15 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
-// import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-import EnLayout from "layouts/en"
+import LangLayout from "layouts/en"
 
 import { HeroSimple, Main, CardBlog } from "./../../components"
 import { theme } from "./../../styles/new/theme"
 
 const Blog = (props) => {
-  // console.log(props)
   return (
-    <EnLayout>
+    <LangLayout>
       <HeroSimple data={props.data.blogJson.hero} />
       <Main>
         <Wrapper>
@@ -24,7 +22,7 @@ const Blog = (props) => {
           </List>
         </Wrapper>
       </Main>
-    </EnLayout>
+    </LangLayout>
   )
 }
 
@@ -52,7 +50,7 @@ const List = styled.ul`
 const Item = styled.li``
 
 export const query = graphql`
-  query blogPage {
+  query BlogPage {
     allMdx(
       filter: {
         fileAbsolutePath: { regex: "/blog/" }

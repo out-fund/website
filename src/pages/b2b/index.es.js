@@ -1,7 +1,7 @@
 import React from "react"
 // import { graphql } from "gatsby"
 
-import LangLayout from "./../../layouts/en"
+import LangLayout from "./../../layouts/es"
 
 import {
   HeroSimple,
@@ -11,12 +11,13 @@ import {
   SectionFaq,
 } from "./../../components"
 
-const B2B = () => {
+const B2B = (props) => {
   return (
     <LangLayout>
       <HeroSimple
         data={{
-          title: "Outfund to take your B2B or SaaS business to the next level ",
+          title:
+            "ES Outfund to take your B2B or SaaS business to the next level ",
           description:
             "Outfund Funds high growth B2B and SaaS businesses alongside their current investors with a unique capital structure and funding model. With this comes no further dilution or personal guarantees. We provide recurring Capital-as-a-Service to these businesses to fund the repeatable areas of them like customer acquisition or payroll.",
           btn: {

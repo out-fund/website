@@ -210,7 +210,7 @@ const Form = styled.div`
 
 export const query = graphql`
   query {
-    contactUsJson {
+    contactUsJson(language: { regex: "/en-GB/" }) {
       language
       seoTitle
       liveChat {

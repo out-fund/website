@@ -1,15 +1,303 @@
-import * as React from "react"
+import React from "react"
+import { graphql } from "gatsby"
+import styled from "styled-components"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-const Contact = () => {
+import LangLayout from "layouts/es"
+
+import {
+  Main,
+  HeroSimple,
+  Button,
+  Offices,
+  SectionHeader,
+  Section,
+  SectionRegulated,
+} from "./../../components"
+import T from "../../styles/new/typography"
+import F from "../../styles/new/form"
+import { theme } from "./../../styles/new/theme"
+
+const ContactUs = (props) => {
+  const liveChat = props.data.contactUsJson.liveChat
+  const support = props.data.contactUsJson.support
+  const feedback = props.data.contactUsJson.feedback
+  const emailForm = props.data.contactUsJson.emailForm
+  const demoCall = props.data.contactUsJson.demoCall
+  const offices = props.data.officesJson
+
   return (
-    <main>
-      <title>Contact ES</title>
-      <h1>Contact</h1>
-    </main>
+    <LangLayout>
+      <HeroSimple data={props.data.contactUsJson.hero} />
+      <Main>
+        <ContentWrapper>
+          <Box style={{ gridArea: "liveChat" }}>
+            <T.H4 as="h2" style={{ maxWidth: 300 }}>
+              {liveChat.title}
+            </T.H4>
+            <T.Body>{liveChat.description}</T.Body>
+            <LiveChat>
+              <GatsbyImage
+                image={getImage(liveChat.image)}
+                alt={liveChat.imageAlt}
+              />
+              <Button href={liveChat.btnUrl} variant="secondary">
+                {liveChat.btn}
+              </Button>
+            </LiveChat>
+          </Box>
+          <Box style={{ gridArea: "support" }}>
+            <T.H4 as="h2">{support.title}</T.H4>
+            <T.Body>{support.description}</T.Body>
+            <Button href={support.btnUrl} variant="secondary">
+              {support.btn}
+            </Button>
+          </Box>
+          <Box style={{ gridArea: "feedback" }}>
+            <T.H4 as="h2">{feedback.title}</T.H4>
+            <T.Body>{feedback.description}</T.Body>
+            <Button href={feedback.btnUrl} variant="secondary">
+              {feedback.btn}
+            </Button>
+          </Box>
+          <Form style={{ gridArea: "emailForm" }}>
+            <T.H4 as="h2" style={{ maxWidth: 400 }}>
+              {emailForm.title}
+            </T.H4>
+            {/* TODO Add html parser to the title props everywhere https://www.npmjs.com/package/html-react-parser */}
+            <F.Form action="">
+              <F.InputText
+                type="text"
+                name="fullName"
+                placeholder={emailForm.form.fullName}
+              />
+              <F.InputEmail
+                type="email"
+                name="businessEmail"
+                placeholder={emailForm.form.email}
+              />
+              <F.TextArea
+                name="message"
+                rows="4"
+                placeholder={emailForm.form.message}
+              />
+              <Button variant="primary">{emailForm.form.btn}</Button>
+            </F.Form>
+          </Form>
+          <Box style={{ gridArea: "demoCall" }}>
+            <T.H4 as="h2">{demoCall.title}</T.H4>
+            <T.Body>{demoCall.description}</T.Body>
+            <Button href={demoCall.btnUrl} variant="secondary">
+              {demoCall.btn}
+            </Button>
+          </Box>
+        </ContentWrapper>
+
+        <Section>
+          <HeaderWrapper>
+            <SectionHeader
+              title={props.data.contactUsJson.globalCoverage.title}
+            />
+          </HeaderWrapper>
+          <Offices
+            showOffices
+            offices={offices.offices}
+            image={offices.image}
+          />
+        </Section>
+        <SectionRegulated data={props.data.trustJson} />
+      </Main>
+    </LangLayout>
   )
 }
 
-export default Contact
+export default ContactUs
+
+const HeaderWrapper = styled.div`
+  text-align: center;
+  margin-bottom: 48px;
+`
+const ContentWrapper = styled.div`
+  margin: 0 auto;
+  margin-top: 64px;
+  display: grid;
+  grid-template-areas:
+    "liveChat"
+    "emailForm"
+    "demoCall"
+    "support"
+    "feedback";
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  row-gap: 40px;
+  max-width: 1170px;
+
+  ${theme.above.t.l} {
+    grid-template-areas:
+      "liveChat emailForm"
+      "support emailForm"
+      "feedback demoCall";
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+    row-gap: 80px;
+  }
+  h2 {
+    margin-bottom: 16px;
+  }
+  p {
+    margin-bottom: 24px;
+  }
+`
+const Box = styled.div`
+  /* S.BodyText} {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  } */
+`
+const LiveChat = styled.div`
+  display: grid;
+  grid-template-rows: auto auto;
+  row-gap: 24px;
+  .gatsby-image-wrapper {
+    max-width: 284px;
+    filter: drop-shadow(0px 100px 80px rgba(1, 14, 25, 0.07))
+      drop-shadow(0px 41.7776px 33.1139px rgba(1, 14, 25, 0.0503198))
+      drop-shadow(0px 22.3363px 16.2366px rgba(1, 14, 25, 0.0417275))
+      drop-shadow(0px 12.5216px 7.80488px rgba(1, 14, 25, 0.035))
+      drop-shadow(0px 6.6501px 3.28033px rgba(1, 14, 25, 0.0282725))
+      drop-shadow(0px 2.76726px 0.952807px rgba(1, 14, 25, 0.0196802));
+  }
+  ${theme.above.l.m} {
+    grid-template-columns: 284px auto;
+    align-items: center;
+    column-gap: 16px;
+  }
+`
+
+const Form = styled.div`
+  ${F.Form} {
+    display: grid;
+    grid-template-rows: auto;
+    margin-top: 16px;
+    padding: 32px 24px;
+
+    background-color: ${theme.color.background.emphesized};
+    border-radius: 10px;
+
+    row-gap: 24px;
+    ${theme.above.l.m} {
+      padding: 40px 32px;
+    }
+
+    ${theme.above.d.m} {
+      padding: 64px 56px;
+    }
+    /* breakpoints.laptop} {
+      padding: 48px 40px;
+    }
+    breakpoints.desktop} {
+      padding: 56px 48px;
+    }
+    breakpoints.largeDesktop} {
+      padding: 64px 56px;
+    } */
+    button {
+      width: 100%;
+    }
+  }
+`
+
+export const query = graphql`
+  query {
+    contactUsJson(language: { regex: "/es-ES/" }) {
+      language
+      seoTitle
+      liveChat {
+        btn
+        btnUrl
+        description
+        title
+        image {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+        imageAlt
+      }
+      hero {
+        title
+      }
+      globalCoverage {
+        title
+      }
+      feedback {
+        btn
+        btnUrl
+        description
+        title
+      }
+      emailForm {
+        title
+        form {
+          btn
+          email
+          message
+          fullName
+          btnUrl
+        }
+      }
+      demoCall {
+        btn
+        btnUrl
+        description
+        title
+      }
+      support {
+        btn
+        btnUrl
+        description
+        title
+      }
+    }
+    officesJson(language: { regex: "/en-GB/" }) {
+      image {
+        src {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+        alt
+      }
+      offices {
+        world {
+          list {
+            country
+            firstLine
+            secondLine
+          }
+          title
+        }
+        main {
+          country
+          firstLine
+          secondLine
+          title
+        }
+      }
+    }
+    trustJson(language: { regex: "/en-GB/" }) {
+      title
+      statement
+      description
+      blocks {
+        title
+        icon
+        text
+      }
+    }
+  }
+`
 
 // offices {
 //   main {

@@ -224,7 +224,7 @@ const FaqWrapper = styled.section`
 `
 
 export const query = graphql`
-  query faqPage {
+  query esFaqPage {
     faqJson {
       hero {
         description

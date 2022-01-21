@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import LangLayout from "./../../layouts/en"
+import LangLayout from "./../../layouts/es"
 
 import {
   HeroSimple,
@@ -28,7 +28,7 @@ const Partners = (props) => {
 export default Partners
 
 export const query = graphql`
-  query PartnerQuerry {
+  query esPartnerQuerry {
     partnersJson {
       hero {
         description

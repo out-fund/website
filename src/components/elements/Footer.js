@@ -8,9 +8,7 @@ import links from "./../../content/links"
 
 import T from "./../../styles/new/typography"
 
-const lang = "en"
-
-const Footer = () => {
+const Footer = ({ lang }) => {
   return (
     <Wrapper>
       <ContentWrapper>
@@ -39,9 +37,15 @@ const Footer = () => {
                 >
                   {links.careers.text[lang]}
                 </Button>
-                <Button to={links.blog.url} variant="footerLink" color="white">
-                  {links.blog.text[lang]}
-                </Button>
+                {links.blog.text[lang] && (
+                  <Button
+                    to={links.blog.url}
+                    variant="footerLink"
+                    color="white"
+                  >
+                    {links.blog.text[lang]}
+                  </Button>
+                )}
               </LinksColumn>
               <LinksColumn>
                 <ColumntTitle>Funding</ColumntTitle>

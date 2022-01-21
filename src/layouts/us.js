@@ -14,7 +14,7 @@ const EN = ({ children, simpleNavbar, pt, noNavbar }) => {
         {!simpleNavbar && !noNavbar && <Navbar lang="en" />}
         {simpleNavbar && !noNavbar && <SimpleNavbar lang="en" />}
         {children}
-        <Footer />
+        <Footer lang="en" />
       </LangProvider>
     </GlobalLayout>
   )

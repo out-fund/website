@@ -16,18 +16,18 @@
       "list": [
         {
           "country": "Spain",
-          "firstLine": "1 Mark Square",
-          "secondLine": "London EC2A 4EG"
+          "firstLine": "Paseo de Gracia, 50,",
+          "secondLine": "5a planta. 08007, Barcelona"
         },
         {
           "country": "Canada",
-          "firstLine": "1 Mark Square",
-          "secondLine": "London EC2A 4EG"
+          "firstLine": "212 King St. W. Suite 600",
+          "secondLine": "Toronto, Ontario M5H 1K5"
         },
         {
           "country": "Australia",
-          "firstLine": "1 Mark Square",
-          "secondLine": "London EC2A 4EG"
+          "firstLine": "Level 1/8 Beulah Rd",
+          "secondLine": "Norwood SA 5067"
         }
       ]
     }

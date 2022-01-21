@@ -8,7 +8,7 @@ import {
   Main,
 } from "./../../components"
 
-import LangLayout from "./../../layouts/en"
+import LangLayout from "./../../layouts/es"
 
 const SuccessStories = ({ data }) => {
   // const { edges: successStories } = data.allMdx
@@ -30,7 +30,7 @@ const SuccessStories = ({ data }) => {
 export default SuccessStories
 
 export const query = graphql`
-  query successStories {
+  query esSuccessStories {
     allMdx(
       filter: {
         fileAbsolutePath: { regex: "/success-stories/" }

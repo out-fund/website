@@ -76,7 +76,6 @@ const links = {
   blog: {
     text: {
       en: "Blog",
-      es: "Blog",
     },
     url: "/blog/",
   },

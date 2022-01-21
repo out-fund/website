@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
-import LangLayout from "./../../layouts/en"
+import LangLayout from "./../../layouts/es"
 
 import {
   HeroSimple,
@@ -131,7 +131,7 @@ const ImageWrapper = styled.div``
 
 // TODO Transfer content in graphql
 export const query = graphql`
-  query HowFundingWorksPage {
+  query esHowFundingWorksPage {
     howFundingWorksJson(language: { regex: "/en-GB/" }) {
       hero {
         description

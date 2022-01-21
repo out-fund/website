@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 // import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-import LangLayout from "./../../layouts/en"
+import LangLayout from "./../../layouts/es"
 
 import LogoWhite from "./../../images/svg/Outfund-logo-white.svg"
 import LogoDark from "./../../images/svg/Outfund-logo.svg"
@@ -318,7 +318,7 @@ const FormWrapper = styled.div`
 `
 
 export const query = graphql`
-  query GetFundedPage {
+  query esGetFundedPage {
     getFundedJson(language: { regex: "/en-GB/" }) {
       content {
         title
