@@ -18,7 +18,6 @@ import { theme } from "./../../styles/new/theme"
 import T from "./../../styles/new/typography"
 
 const HowFundingWorks = (props) => {
-  // console.log(props)
   return (
     <EnLayout>
       <HeroSimple data={props.data.howFundingWorksJson.hero} />
