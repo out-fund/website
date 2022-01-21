@@ -20,6 +20,10 @@ cd website/
 yarn develop
 ```
 
+Use this command to keep project formatting consistent
+
+    yarn prettier
+
 ## Open the code and start customizing!
 
 Your site is now running at http://localhost:8000!
