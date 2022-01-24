@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import parse from "html-react-parser"
 
-import LangLayout from "./../../../layouts/es"
+import LangLayout from "./../../../layouts/us"
 import { HeroSimple, Main } from "./../../../components"
 import T from "./../../../styles/new/typography"
 import { theme } from "./../../../styles/new/theme"

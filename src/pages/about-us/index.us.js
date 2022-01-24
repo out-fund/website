@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import LangLayout from "layouts/en"
+import LangLayout from "layouts/us"
 
 import {
   // HeroAbout,

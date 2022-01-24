@@ -21,7 +21,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 
 // import { theme } from "./../../../styles/new/theme"
 import T from "./../../../styles/new/typography"
-import EnLayout from "./../../../layouts/en"
+import EnLayout from "./../../../layouts/us"
 import { Main, Section } from "./../../../components"
 
 export const query = graphql`
