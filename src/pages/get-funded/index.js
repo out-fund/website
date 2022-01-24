@@ -70,23 +70,49 @@ const GetFunded = (props) => {
                     alert(JSON.stringify(values, null, 2))
                     actions.setSubmitting(false)
                   }}
+                  validate={(values) => {
+                    const emailRegex =
+                      /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+                    const errors = {}
+                    if (!values.name) {
+                      errors.name = "Name Required"
+                    }
+                    if (!values.email || !emailRegex.test(values.email)) {
+                      errors.email = "Valid Email Required"
+                    }
+                    if (!values.message) {
+                      errors.phoneNumber = "Phone Number Required"
+                    }
+                    if (!values.message) {
+                      errors.companyWebsite = "Company Website Required"
+                    }
+                    if (!values.message) {
+                      errors.monthlyRevenue = "Message Monthly Revenue Required"
+                    }
+                    return errors
+                  }}
                 >
                   {() => (
                     <Form>
                       <label htmlFor="name">Name: </label>
                       <Field name="name" />
+                      <ErrorMessage name="name" />
 
                       <label htmlFor="email">Email: </label>
                       <Field name="email" />
+                      <ErrorMessage name="email" />
 
                       <label htmlFor="message">Phone Number: </label>
                       <Field name="phoneNumber" />
+                      <ErrorMessage name="phoneNumber" />
 
                       <label htmlFor="message">Company Website: </label>
                       <Field name="companyWebsite" />
+                      <ErrorMessage name="companyWebsite" />
 
                       <label htmlFor="message">Company Website: </label>
                       <Field name="monthlyRevenue" />
+                      <ErrorMessage name="monthlyRevenue" />
 
                       <button type="submit">Send</button>
                     </Form>
