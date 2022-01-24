@@ -3,7 +3,11 @@
   "seoTitle": "seo title",
   "seoKeywords": ["test", "keywors"],
   "hero": {
+<<<<<<< HEAD
     "title": "Want to know more?<br/> Get in touch US"
+=======
+    "title": "Want to know more?<br/> Get in touch"
+>>>>>>> 0ad03aa ([DEV-1298] Prettier for JSON files)
   },
   "liveChat": {
     "title": "How can we help?",
