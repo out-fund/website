@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 // import { graphql } from "gatsby"
 
-import EnLayout from "../../layouts/en"
+import EnLayout from "../../layouts/us"
 
 import { Button } from "../../components"
 import T from "../../styles/new/typography"

@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
-import LangLayout from "./../../layouts/en"
+import LangLayout from "./../../layouts/us"
 
 import {
   HeroSimple,

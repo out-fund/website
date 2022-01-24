@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 
-import LangLayout from "layouts/en"
+import LangLayout from "layouts/us"
 
 import { HeroSimple, Main, CardBlog } from "./../../components"
 import { theme } from "./../../styles/new/theme"

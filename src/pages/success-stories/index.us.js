@@ -8,7 +8,7 @@ import {
   Main,
 } from "./../../components"
 
-import LangLayout from "./../../layouts/en"
+import LangLayout from "./../../layouts/us"
 
 export const query = graphql`
   query usSuccessStories {

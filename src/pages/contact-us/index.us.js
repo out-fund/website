@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-import EnLayout from "layouts/en"
+import EnLayout from "layouts/us"
 
 import {
   Main,
