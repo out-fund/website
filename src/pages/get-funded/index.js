@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Formik, Form, Field, ErrorMessage } from "formik"
 import { graphql } from "gatsby"
 // import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
@@ -57,6 +58,40 @@ const GetFunded = (props) => {
               </TextWrapper>
 
               <FormWrapper>
+                <Formik
+                  initialValues={{
+                    name: "",
+                    email: "",
+                    phoneNumber: "",
+                    companyWebsite: "",
+                    monthlyRevenue: "",
+                  }}
+                  onSubmit={(values, actions) => {
+                    alert(JSON.stringify(values, null, 2))
+                    actions.setSubmitting(false)
+                  }}
+                >
+                  {() => (
+                    <Form>
+                      <label htmlFor="name">Name: </label>
+                      <Field name="name" />
+
+                      <label htmlFor="email">Email: </label>
+                      <Field name="email" />
+
+                      <label htmlFor="message">Phone Number: </label>
+                      <Field name="phoneNumber" />
+
+                      <label htmlFor="message">Company Website: </label>
+                      <Field name="companyWebsite" />
+
+                      <label htmlFor="message">Company Website: </label>
+                      <Field name="monthlyRevenue" />
+
+                      <button type="submit">Send</button>
+                    </Form>
+                  )}
+                </Formik>
                 <F.Form
                   name="get-funded"
                   action="/thank-you/"
