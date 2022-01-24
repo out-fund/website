@@ -56,7 +56,28 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   createSuccessStories.forEach(({ node }, index) => {
     createPage({
       path: `/success-stories/${node.slug.split("/").slice(2).join("-")}`,
-      component: path.resolve(`./src/layouts/successStoryLayout.js`),
+      component: path.resolve(`./src/layouts/GbSuccessStoryLayout.js`),
+      context: { storyId: node.id },
+    })
+  })
+  createSuccessStories.forEach(({ node }, index) => {
+    createPage({
+      path: `/us/success-stories/${node.slug.split("/").slice(2).join("-")}`,
+      component: path.resolve(`./src/layouts/UsSuccessStoryLayout.js`),
+      context: { storyId: node.id },
+    })
+  })
+  createSuccessStories.forEach(({ node }, index) => {
+    createPage({
+      path: `/au/success-stories/${node.slug.split("/").slice(2).join("-")}`,
+      component: path.resolve(`./src/layouts/AuSuccessStoryLayout.js`),
+      context: { storyId: node.id },
+    })
+  })
+  createSuccessStories.forEach(({ node }, index) => {
+    createPage({
+      path: `/es/success-stories/${node.slug.split("/").slice(2).join("-")}`,
+      component: path.resolve(`./src/layouts/EsSuccessStoryLayout.js`),
       context: { storyId: node.id },
     })
   })

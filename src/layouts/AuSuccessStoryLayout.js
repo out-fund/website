@@ -7,7 +7,7 @@ import parse from "html-react-parser"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-import EnLayout from "./../layouts/en"
+import LangLayout from "./../layouts/au"
 import { CardFounderName, Main, Button } from "./../components"
 import { theme } from "./../styles/new/theme"
 import T from "./../styles/new/typography"
@@ -75,7 +75,7 @@ const SuccessStoryLayout = ({ data }) => {
 
   // console.log("ss", mdx)
   return (
-    <EnLayout>
+    <LangLayout>
       <MDXProvider
         components={{
           h1: T.H1,
@@ -99,7 +99,7 @@ const SuccessStoryLayout = ({ data }) => {
           <CtaBlock />
         </Main>
       </MDXProvider>
-    </EnLayout>
+    </LangLayout>
   )
 }
 
@@ -229,7 +229,7 @@ const PhotoStrip = styled.div`
 `
 
 export const query = graphql`
-  query SuccessStoryQuery($storyId: String) {
+  query auSuccessStoryQuery($storyId: String) {
     mdx(id: { eq: $storyId }) {
       id
       body
