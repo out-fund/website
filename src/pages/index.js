@@ -1,7 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import EnLayout from "layouts/en"
+import LangLayout from "./../layouts/en"
+
 import {
   Main,
   SectionWeFunded,
@@ -13,6 +14,28 @@ import {
   SectionRegulated,
   HeroHomepage,
 } from "./../components"
+
+const HomePage = (props) => {
+  const {
+    data: { homepageJson: data },
+  } = props
+
+  return (
+    <LangLayout>
+      <HeroHomepage data={data.hero} />
+      <Main>
+        <SectionWeFunded data={data.weFunded} />
+        <SectionWeAreInvesting data={data.weInvesting} />
+        <SectionSupercharging data={data.startSupercharging} />
+        <SectionFindOut data={props.data.homepageJson.findOut} />
+        <SectionFaq data={props.data.homepageJson.faq} />
+        <SectionAboutUs data={props.data.homepageJson.aboutUs} />
+        <SectionRegulated data={props.data.trustJson} />
+      </Main>
+    </LangLayout>
+  )
+}
+export default HomePage
 
 export const query = graphql`
   query HomePage {
@@ -205,25 +228,3 @@ export const query = graphql`
     }
   }
 `
-
-const IndexPage = (props) => {
-  const {
-    data: { homepageJson: data },
-  } = props
-
-  return (
-    <EnLayout>
-      <HeroHomepage data={data.hero} />
-      <Main>
-        <SectionWeFunded data={data.weFunded} />
-        <SectionWeAreInvesting data={data.weInvesting} />
-        <SectionSupercharging data={data.startSupercharging} />
-        <SectionFindOut data={props.data.homepageJson.findOut} />
-        <SectionFaq data={props.data.homepageJson.faq} />
-        <SectionAboutUs data={props.data.homepageJson.aboutUs} />
-        <SectionRegulated data={props.data.trustJson} />
-      </Main>
-    </EnLayout>
-  )
-}
-export default IndexPage

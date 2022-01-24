@@ -4,6 +4,7 @@ import styled from "styled-components"
 import parse from "html-react-parser"
 
 import LangLayout from "./../../../layouts/es"
+
 import { HeroSimple, Main } from "./../../../components"
 import T from "./../../../styles/new/typography"
 import { theme } from "./../../../styles/new/theme"
@@ -46,7 +47,6 @@ const QuestionSection = (props) => {
 }
 
 const Menue = ({ data }) => {
-  // console.log("menu", data)
   return (
     <MenueWrapper>
       <Title>Faq</Title>
@@ -64,7 +64,6 @@ const Menue = ({ data }) => {
 }
 
 const FAQ = (props) => {
-  // console.log("faq", props.data.faqJson)
   return (
     <LangLayout>
       <HeroSimple data={props.data.faqJson.hero} />
@@ -225,7 +224,7 @@ const FaqWrapper = styled.section`
 
 export const query = graphql`
   query esFaqPage {
-    faqJson {
+    faqJson(language: { regex: "/es-ES/" }) {
       hero {
         description
         title

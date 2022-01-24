@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import LangLayout from "layouts/es"
+import LangLayout from "./../../layouts/es"
 
 import {
   Main,
@@ -40,7 +40,7 @@ const Careers = (props) => {
 export default Careers
 
 export const query = graphql`
-  query {
+  query esCareersPage {
     careersJson(language: { regex: "/es-ES/" }) {
       hero {
         btn {
@@ -141,7 +141,7 @@ export const query = graphql`
         }
       }
     }
-    trustJson(language: { regex: "/en-GB/" }) {
+    trustJson(language: { regex: "/es-ES/" }) {
       title
       statement
       description

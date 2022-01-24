@@ -4,6 +4,7 @@ import styled from "styled-components"
 import parse from "html-react-parser"
 
 import LangLayout from "./../../../layouts/us"
+
 import { HeroSimple, Main } from "./../../../components"
 import T from "./../../../styles/new/typography"
 import { theme } from "./../../../styles/new/theme"
@@ -19,7 +20,7 @@ import "react-accessible-accordion/dist/fancy-example.css"
 
 export const query = graphql`
   query usFaqPage {
-    faqJson {
+    faqJson(language: { regex: "/en-US/" }) {
       hero {
         description
         title
@@ -64,7 +65,6 @@ const QuestionSection = (props) => {
 }
 
 const Menue = ({ data }) => {
-  // console.log("menu", data)
   return (
     <MenueWrapper>
       <Title>Faq</Title>
@@ -82,7 +82,6 @@ const Menue = ({ data }) => {
 }
 
 const FAQ = (props) => {
-  // console.log("faq", props.data.faqJson)
   return (
     <LangLayout>
       <HeroSimple data={props.data.faqJson.hero} />

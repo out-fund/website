@@ -4,6 +4,7 @@ import styled from "styled-components"
 import parse from "html-react-parser"
 
 import LangLayout from "./../../../layouts/en"
+
 import { HeroSimple, Main } from "./../../../components"
 import T from "./../../../styles/new/typography"
 import { theme } from "./../../../styles/new/theme"
@@ -16,24 +17,6 @@ import {
   AccordionItemPanel,
 } from "react-accessible-accordion"
 import "react-accessible-accordion/dist/fancy-example.css"
-
-export const query = graphql`
-  query faqPage {
-    faqJson {
-      hero {
-        description
-        title
-      }
-      faq {
-        title
-        qa {
-          answer
-          question
-        }
-      }
-    }
-  }
-`
 
 const Accordions = ({ qa }) => {
   return (
@@ -64,7 +47,6 @@ const QuestionSection = (props) => {
 }
 
 const Menue = ({ data }) => {
-  // console.log("menu", data)
   return (
     <MenueWrapper>
       <Title>Faq</Title>
@@ -82,7 +64,6 @@ const Menue = ({ data }) => {
 }
 
 const FAQ = (props) => {
-  // console.log("faq", props.data.faqJson)
   return (
     <LangLayout>
       <HeroSimple data={props.data.faqJson.hero} />
@@ -237,6 +218,24 @@ const FaqWrapper = styled.section`
     }
     ol {
       list-style-type: decimal;
+    }
+  }
+`
+
+export const query = graphql`
+  query FaqPage {
+    faqJson(language: { regex: "/en-GB/" }) {
+      hero {
+        description
+        title
+      }
+      faq {
+        title
+        qa {
+          answer
+          question
+        }
+      }
     }
   }
 `

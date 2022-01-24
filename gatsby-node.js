@@ -2,6 +2,7 @@ const path = require("path")
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
+
   const blogPosts = await graphql(`
     query AllPosts {
       allMdx(
@@ -20,12 +21,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       }
     }
   `)
-  const successStories = await graphql(`
-    query AllStories {
+
+  const enSuccessStories = await graphql(`
+    query enAllStories {
       allMdx(
         filter: {
           fileAbsolutePath: { regex: "/success-stories/" }
-          frontmatter: { published: { eq: true } }
+          frontmatter: {
+            published: { eq: true }
+            language: { regex: "/en-GB/" }
+          }
         }
       ) {
         edges {
@@ -39,12 +44,36 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
   `)
 
-  if (blogPosts.errors || successStories.errors) {
+  const esSuccessStories = await graphql(`
+    query esAllStories {
+      allMdx(
+        filter: {
+          fileAbsolutePath: { regex: "/success-stories/" }
+          frontmatter: {
+            published: { eq: true }
+            language: { regex: "/es-ES/" }
+          }
+        }
+      ) {
+        edges {
+          node {
+            id
+            slug
+            fileAbsolutePath
+          }
+        }
+      }
+    }
+  `)
+
+  if (blogPosts.errors || enSuccessStories.errors || esSuccessStories.errors) {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
   }
 
   const createBlogPosts = blogPosts.data.allMdx.edges
-  const createSuccessStories = successStories.data.allMdx.edges
+
+  const enCreateSuccessStories = enSuccessStories.data.allMdx.edges
+  const esCreateSuccessStories = esSuccessStories.data.allMdx.edges
 
   createBlogPosts.forEach(({ node }, index) => {
     createPage({
@@ -53,28 +82,36 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       context: { postId: node.id },
     })
   })
-  createSuccessStories.forEach(({ node }, index) => {
+
+  // GB
+  enCreateSuccessStories.forEach(({ node }, index) => {
     createPage({
       path: `/success-stories/${node.slug.split("/").slice(2).join("-")}`,
       component: path.resolve(`./src/layouts/GbSuccessStoryLayout.js`),
       context: { storyId: node.id },
     })
   })
-  createSuccessStories.forEach(({ node }, index) => {
+
+  // US
+  enCreateSuccessStories.forEach(({ node }, index) => {
     createPage({
       path: `/us/success-stories/${node.slug.split("/").slice(2).join("-")}`,
       component: path.resolve(`./src/layouts/UsSuccessStoryLayout.js`),
       context: { storyId: node.id },
     })
   })
-  createSuccessStories.forEach(({ node }, index) => {
+
+  // AU
+  enCreateSuccessStories.forEach(({ node }, index) => {
     createPage({
       path: `/au/success-stories/${node.slug.split("/").slice(2).join("-")}`,
       component: path.resolve(`./src/layouts/AuSuccessStoryLayout.js`),
       context: { storyId: node.id },
     })
   })
-  createSuccessStories.forEach(({ node }, index) => {
+
+  // ES
+  esCreateSuccessStories.forEach(({ node }, index) => {
     createPage({
       path: `/es/success-stories/${node.slug.split("/").slice(2).join("-")}`,
       component: path.resolve(`./src/layouts/EsSuccessStoryLayout.js`),

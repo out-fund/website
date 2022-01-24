@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 // import { graphql } from "gatsby"
 
-import EnLayout from "../../layouts/en"
+import LangLayout from "../../layouts/en"
 
 import { Button } from "../../components"
 import T from "../../styles/new/typography"
@@ -27,7 +27,7 @@ const Eligibility = ({ location }) => {
   ]
 
   return (
-    <EnLayout simpleNavbar>
+    <LangLayout simpleNavbar>
       <Wrapper>
         <ContentWrapper>
           {/* {selected > 9 ? (
@@ -79,7 +79,7 @@ const Eligibility = ({ location }) => {
           )}
         </ContentWrapper>
       </Wrapper>
-    </EnLayout>
+    </LangLayout>
   )
 }
 

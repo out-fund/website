@@ -7,8 +7,10 @@ import { theme } from "./../../styles/new/theme"
 import links from "./../../content/links"
 
 import T from "./../../styles/new/typography"
+import { useLangProvider } from "./../../utils/LangProvider"
 
 const Footer = ({ lang }) => {
+  const langKey = useLangProvider()
   return (
     <Wrapper>
       <ContentWrapper>
@@ -37,7 +39,7 @@ const Footer = ({ lang }) => {
                 >
                   {links.careers.text[lang]}
                 </Button>
-                {links.blog.text[lang] && (
+                {langKey === "en" && (
                   <Button
                     to={links.blog.url}
                     variant="footerLink"

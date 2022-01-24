@@ -6,14 +6,19 @@ import parse from "html-react-parser"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-// import { theme } from "./../../../styles/new/theme"
+import LangLayout from "./../../../layouts/us"
+
 import T from "./../../../styles/new/typography"
-import EnLayout from "./../../../layouts/us"
 import { Main, Section } from "./../../../components"
 
 export const query = graphql`
   query usPrivacyPolicy {
-    allMdx(filter: { slug: { regex: "/privacy-policy/" } }) {
+    allMdx(
+      filter: {
+        slug: { regex: "/privacy-policy/" }
+        frontmatter: { language: { regex: "/en-US/" } }
+      }
+    ) {
       edges {
         node {
           id
@@ -31,7 +36,7 @@ export const query = graphql`
 const PrivacyPolicy = (props) => {
   const data = props.data.allMdx.edges[0].node
   return (
-    <EnLayout>
+    <LangLayout>
       <MDXProvider
         components={{
           h1: T.H1,
@@ -58,7 +63,7 @@ const PrivacyPolicy = (props) => {
           </Article>
         </Main>
       </MDXProvider>
-    </EnLayout>
+    </LangLayout>
   )
 }
 

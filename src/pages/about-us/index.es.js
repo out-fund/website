@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import LangLayout from "layouts/es"
+import LangLayout from "./../../layouts/es"
 
 import {
   SectionWeAreInvesting,
@@ -116,7 +116,7 @@ export const query = graphql`
         }
       }
     }
-    trustJson(language: { regex: "/en-GB/" }) {
+    trustJson(language: { regex: "/es-ES/" }) {
       title
       statement
       description

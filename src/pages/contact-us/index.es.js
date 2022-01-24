@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-import LangLayout from "layouts/es"
+import LangLayout from "./../../layouts/es"
 
 import {
   Main,
@@ -149,12 +149,7 @@ const ContentWrapper = styled.div`
     margin-bottom: 24px;
   }
 `
-const Box = styled.div`
-  /* S.BodyText} {
-    margin-top: 16px;
-    margin-bottom: 16px;
-  } */
-`
+const Box = styled.div``
 const LiveChat = styled.div`
   display: grid;
   grid-template-rows: auto auto;
@@ -193,15 +188,6 @@ const Form = styled.div`
     ${theme.above.d.m} {
       padding: 64px 56px;
     }
-    /* breakpoints.laptop} {
-      padding: 48px 40px;
-    }
-    breakpoints.desktop} {
-      padding: 56px 48px;
-    }
-    breakpoints.largeDesktop} {
-      padding: 64px 56px;
-    } */
     button {
       width: 100%;
     }
@@ -286,7 +272,7 @@ export const query = graphql`
         }
       }
     }
-    trustJson(language: { regex: "/en-GB/" }) {
+    trustJson(language: { regex: "/es-ES/" }) {
       title
       statement
       description
@@ -298,25 +284,3 @@ export const query = graphql`
     }
   }
 `
-
-// offices {
-//   main {
-//     country
-//     firstLine
-//     secondLine
-//     title
-//   }
-//   world {
-//     title
-//     list {
-//       country
-//       firstLine
-//       secondLine
-//     }
-//   }
-// }
-// image {
-//   childImageSharp {
-//     gatsbyImageData
-//   }
-// }

@@ -1,8 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-// import { graphql } from "gatsby"
 
-import EnLayout from "../../layouts/en"
+import LangLayout from "../../layouts/en"
 
 import { Button } from "../../components"
 import T from "../../styles/new/typography"
@@ -10,7 +9,7 @@ import { theme } from "../../styles/new/theme"
 
 const ThankYou = () => {
   return (
-    <EnLayout simpleNavbar>
+    <LangLayout simpleNavbar>
       <Wrapper>
         <ContentWrapper>
           <Title>Almost there</Title>
@@ -26,7 +25,7 @@ const ThankYou = () => {
           </Button>
         </ContentWrapper>
       </Wrapper>
-    </EnLayout>
+    </LangLayout>
   )
 }
 
@@ -52,25 +51,3 @@ const Wrapper = styled.div`
   padding-left: 24px;
   padding-right: 24px;
 `
-
-// export const query = graphql`
-//   query getFundedPage {
-//     getFundedJson(language: { regex: "/en-GB/" }) {
-//       content {
-//         title
-//         description
-//         form {
-//           name
-//           email
-//           phone
-//           website
-//           select {
-//             title
-//             options
-//           }
-//           btn
-//         }
-//       }
-//     }
-//   }
-// `

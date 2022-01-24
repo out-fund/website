@@ -29,7 +29,7 @@ export default Partners
 
 export const query = graphql`
   query esPartnerQuerry {
-    partnersJson {
+    partnersJson(language: { regex: "/es-ES/" }) {
       hero {
         description
         title

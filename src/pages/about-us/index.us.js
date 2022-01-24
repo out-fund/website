@@ -1,10 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import LangLayout from "layouts/us"
+import LangLayout from "./../../layouts/us"
 
 import {
-  // HeroAbout,
   SectionWeAreInvesting,
   Stats,
   SectionFoundersCompanies,
@@ -98,7 +97,7 @@ export const query = graphql`
         }
       }
     }
-    trustJson(language: { regex: "/en-GB/" }) {
+    trustJson(language: { regex: "/en-US/" }) {
       title
       statement
       description
@@ -114,7 +113,6 @@ export const query = graphql`
 const AboutUs = (props) => {
   return (
     <LangLayout>
-      {/* <HeroAbout data={props.data.aboutUsJson.hero} /> */}
       <HeroSimple data={props.data.aboutUsJson.hero} />
       <Main>
         <HeroImage data={props.data.aboutUsJson.hero.image} />

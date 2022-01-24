@@ -132,7 +132,7 @@ const ImageWrapper = styled.div``
 // TODO Transfer content in graphql
 export const query = graphql`
   query esHowFundingWorksPage {
-    howFundingWorksJson(language: { regex: "/en-GB/" }) {
+    howFundingWorksJson(language: { regex: "/es-ES/" }) {
       hero {
         description
         title
@@ -161,7 +161,7 @@ export const query = graphql`
         title
       }
     }
-    trustJson(language: { regex: "/en-GB/" }) {
+    trustJson(language: { regex: "/es-ES/" }) {
       title
       statement
       description

@@ -1,10 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import LangLayout from "layouts/en"
+import LangLayout from "./../../layouts/en"
 
 import {
-  // HeroAbout,
   SectionWeAreInvesting,
   Stats,
   SectionFoundersCompanies,
@@ -15,6 +14,25 @@ import {
   HeroSimple,
   HeroImage,
 } from "./../../components"
+
+const AboutUs = (props) => {
+  return (
+    <LangLayout>
+      <HeroSimple data={props.data.aboutUsJson.hero} />
+      <Main>
+        <HeroImage data={props.data.aboutUsJson.hero.image} />
+        <Stats data={props.data.aboutUsJson.stats} />
+        <SectionLatestNews data={props.data.aboutUsJson.latestNews} />
+        <SectionWeAreInvesting data={props.data.aboutUsJson.weInvesting} />
+        <SectionFoundersCompanies data={props.data.aboutUsJson.companies} />
+        <SectionJoinUs data={props.data.aboutUsJson.joinUs} />
+        <SectionRegulated data={props.data.trustJson} />
+      </Main>
+    </LangLayout>
+  )
+}
+
+export default AboutUs
 
 export const query = graphql`
   query AboutPage {
@@ -110,23 +128,3 @@ export const query = graphql`
     }
   }
 `
-
-const AboutUs = (props) => {
-  return (
-    <LangLayout>
-      {/* <HeroAbout data={props.data.aboutUsJson.hero} /> */}
-      <HeroSimple data={props.data.aboutUsJson.hero} />
-      <Main>
-        <HeroImage data={props.data.aboutUsJson.hero.image} />
-        <Stats data={props.data.aboutUsJson.stats} />
-        <SectionLatestNews data={props.data.aboutUsJson.latestNews} />
-        <SectionWeAreInvesting data={props.data.aboutUsJson.weInvesting} />
-        <SectionFoundersCompanies data={props.data.aboutUsJson.companies} />
-        <SectionJoinUs data={props.data.aboutUsJson.joinUs} />
-        <SectionRegulated data={props.data.trustJson} />
-      </Main>
-    </LangLayout>
-  )
-}
-
-export default AboutUs

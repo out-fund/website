@@ -5,7 +5,8 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 
-import EnLayout from "layouts/en"
+import LangLayout from "./../layouts/en"
+
 import { HeroSimple, Main, Link, Button } from "./../components"
 import T from "./../styles/new/typography"
 import { theme } from "./../styles/new/theme"
@@ -13,7 +14,7 @@ import { theme } from "./../styles/new/theme"
 const BlogPostLayout = ({ data: { mdx } }) => {
   // console.log(mdx)
   return (
-    <EnLayout>
+    <LangLayout>
       <MDXProvider
         components={{
           h1: T.H1,
@@ -46,7 +47,7 @@ const BlogPostLayout = ({ data: { mdx } }) => {
           </Article>
         </Main>
       </MDXProvider>
-    </EnLayout>
+    </LangLayout>
   )
 }
 

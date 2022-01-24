@@ -17,29 +17,6 @@ import { Triangle } from "./../../styles/utils"
 
 import { VisuallyHidden } from "./../../styles/utils"
 
-export const query = graphql`
-  query GetFundedPage {
-    getFundedJson(language: { regex: "/en-GB/" }) {
-      content {
-        title
-        description
-        form {
-          name
-          email
-          phone
-          website
-          select {
-            title
-            default
-            options
-          }
-          btn
-        }
-      }
-    }
-  }
-`
-
 const GetFunded = (props) => {
   const data = props.data.getFundedJson.content
 
@@ -337,5 +314,28 @@ const FormWrapper = styled.div`
   }
   .ButtonWrap button {
     width: 100%;
+  }
+`
+
+export const query = graphql`
+  query GetFundedPage {
+    getFundedJson(language: { regex: "/en-GB/" }) {
+      content {
+        title
+        description
+        form {
+          name
+          email
+          phone
+          website
+          select {
+            title
+            default
+            options
+          }
+          btn
+        }
+      }
+    }
   }
 `

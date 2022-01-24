@@ -1,16 +1,3 @@
-// import React from "react"
-
-// const CookiePolicy = () => {
-//   return (
-//     <main>
-//       <title>CookiePolicy</title>
-//       <h1>CookiePolicy</h1>
-//     </main>
-//   )
-// }
-
-// export default CookiePolicy
-
 import React from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
@@ -19,33 +6,16 @@ import parse from "html-react-parser"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-// import { theme } from "./../../../styles/new/theme"
-import T from "./../../../styles/new/typography"
-import EnLayout from "./../../../layouts/en"
-import { Main, Section } from "./../../../components"
+import LangLayout from "./../../../layouts/en"
 
-export const query = graphql`
-  query cookiePolicy {
-    allMdx(filter: { slug: { regex: "/cookie-policy/" } }) {
-      edges {
-        node {
-          id
-          slug
-          frontmatter {
-            title
-          }
-          body
-        }
-      }
-    }
-  }
-`
+import T from "./../../../styles/new/typography"
+import { Main, Section } from "./../../../components"
 
 const CookiePolicy = (props) => {
   const data = props.data.allMdx.edges[0].node
   console.log(data)
   return (
-    <EnLayout>
+    <LangLayout>
       <MDXProvider
         components={{
           h1: T.H1,
@@ -72,7 +42,7 @@ const CookiePolicy = (props) => {
           </Article>
         </Main>
       </MDXProvider>
-    </EnLayout>
+    </LangLayout>
   )
 }
 
@@ -121,6 +91,28 @@ const Article = styled(Section)`
     }
     th {
       font-weight: 600;
+    }
+  }
+`
+
+export const query = graphql`
+  query CookiePolicy {
+    allMdx(
+      filter: {
+        slug: { regex: "/cookie-policy/" }
+        frontmatter: { language: { regex: "/en-GB/" } }
+      }
+    ) {
+      edges {
+        node {
+          id
+          slug
+          frontmatter {
+            title
+          }
+          body
+        }
+      }
     }
   }
 `

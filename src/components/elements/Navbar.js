@@ -83,28 +83,18 @@ const MobileLinks = ({ lang }) => {
         </div>
       </ButtonWrapper>
       <MobileDropdownWrapper isOpen={mobileMenueIsOpen} ref={mobileDropdownRef}>
+        <Button to={links.howItWorks.url} variant="navLink">
+          {links.howItWorks.text[lang]}
+        </Button>
         <Button to={links.aboutUs.url} variant="navLink">
           {links.aboutUs.text[lang]}
-        </Button>
-        <Button to={links.careers.url} variant="navLink">
-          {links.careers.text[lang]}
         </Button>
         <Button to={links.successStories.url} variant="navLink">
           {links.successStories.text[lang]}
         </Button>
-        <Button to={links.blog.url} variant="navLink">
-          {links.blog.text[lang]}
-        </Button>
         <Button to={links.faq.url} variant="navLink">
           {links.faq.text[lang]}
         </Button>
-        <Button to={links.partners.url} variant="navLink">
-          {links.partners.text[lang]}
-        </Button>
-        <Button to={links.contactUs.url} variant="navLink">
-          {links.contactUs.text[lang]}
-        </Button>
-        {/* <Button variant="navLink">Flag</Button> */}
       </MobileDropdownWrapper>
     </MobileLinksWrapper>
   )

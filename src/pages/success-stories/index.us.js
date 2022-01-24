@@ -15,7 +15,7 @@ export const query = graphql`
     allMdx(
       filter: {
         fileAbsolutePath: { regex: "/success-stories/" }
-        frontmatter: { language: { regex: "/en-US/" } }
+        frontmatter: { language: { regex: "/en-GB/" } }
       }
     ) {
       edges {
@@ -47,7 +47,7 @@ export const query = graphql`
         }
       }
     }
-    successStoriesJson(language: { regex: "/en-GB/" }) {
+    successStoriesJson(language: { regex: "/en-US/" }) {
       hero {
         description
         title
@@ -67,8 +67,6 @@ export const query = graphql`
 `
 
 const SuccessStories = ({ data }) => {
-  // const { edges: successStories } = data.allMdx
-  // console.log(data)
   return (
     <LangLayout>
       <HeroSimple data={data.successStoriesJson.hero} />

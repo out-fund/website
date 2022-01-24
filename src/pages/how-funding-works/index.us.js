@@ -110,7 +110,7 @@ const HowFundingWorks = (props) => {
                 </CtaBlockTextWrapper>
                 <ImageWrapper>
                   <StaticImage
-                    src="./../images/components/ss-cta-block.png"
+                    src="./../../images/components/ss-cta-block.png"
                     alt="Group profile photos"
                   />
                 </ImageWrapper>

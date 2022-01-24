@@ -154,6 +154,10 @@
     "description": "Outfund is all about growing businesses. Our team is a mix of founders, developers, consultants, coffee lovers, and climbers. We move fast and seek impact in everything we do. Because finance should make ideas happen.",
     "teamImages": [
       {
+        "src": "./../../../images/team/Outfund-team-Abanoub.jpg",
+        "name": "Abanoub"
+      },
+      {
         "src": "./../../../images/team/Outfund-team-Adam.jpg",
         "name": "Adam"
       },
@@ -232,10 +236,6 @@
       {
         "src": "./../../../images/team/Outfund-team-Thomas.jpg",
         "name": "Thomas"
-      },
-      {
-        "src": "./../../../images/team/Outfund-team-Abanoub.jpg",
-        "name": "Abanoub"
       }
     ],
     "stats": [

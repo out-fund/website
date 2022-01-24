@@ -12,7 +12,7 @@ import {
 
 export const query = graphql`
   query usPartnerQuerry {
-    partnersJson {
+    partnersJson(language: { regex: "/en-US/" }) {
       hero {
         description
         title

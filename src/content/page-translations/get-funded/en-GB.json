@@ -14,11 +14,11 @@
         "title": "Average Monthly Revenue",
         "default": "Select",
         "options": [
-          "Less than £10K",
-          "£10k - £50K",
-          "£50K - £100K",
-          "£100 - £500K",
-          "More than £500K"
+          "Less than £10k",
+          "£10k - £50k",
+          "£50k - £100k",
+          "£100k - £500k",
+          "More than £500k"
         ]
       },
       "btn": "Get started"

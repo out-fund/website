@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 // import { graphql } from "gatsby"
 
-import EnLayout from "../../layouts/us"
+import LangLayout from "../../layouts/us"
 
 import { Button } from "../../components"
 import T from "../../styles/new/typography"
@@ -15,19 +15,19 @@ const Eligibility = ({ location }) => {
   }
 
   const values = [
-    "£13 000",
-    "£26 000",
-    "£65 000",
-    "£91 000",
-    "£130 000",
-    "£260 000",
-    "£650 000",
-    "£910 000",
-    "£1 300 000",
+    "$13 000",
+    "$26 000",
+    "$65 000",
+    "$91 000",
+    "$130 000",
+    "$260 000",
+    "$650 000",
+    "$910 000",
+    "$1 300 000",
   ]
 
   return (
-    <EnLayout simpleNavbar>
+    <LangLayout simpleNavbar>
       <Wrapper>
         <ContentWrapper>
           {/* {selected > 9 ? (
@@ -79,7 +79,7 @@ const Eligibility = ({ location }) => {
           )}
         </ContentWrapper>
       </Wrapper>
-    </EnLayout>
+    </LangLayout>
   )
 }
 

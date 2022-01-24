@@ -319,7 +319,7 @@ const FormWrapper = styled.div`
 
 export const query = graphql`
   query esGetFundedPage {
-    getFundedJson(language: { regex: "/en-GB/" }) {
+    getFundedJson(language: { regex: "/es-ES/" }) {
       content {
         title
         description

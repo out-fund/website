@@ -10,6 +10,23 @@ import {
 
 import LangLayout from "./../../layouts/en"
 
+const SuccessStories = ({ data }) => {
+  return (
+    <LangLayout>
+      <HeroSimple data={data.successStoriesJson.hero} />
+      <Main>
+        <SectionFeaturedCards data={data.allMdx.edges} />
+        <SectionOtherBrands
+          data={data.allMdx.edges}
+          content={data.successStoriesJson.otherBrands}
+        />
+      </Main>
+    </LangLayout>
+  )
+}
+
+export default SuccessStories
+
 export const query = graphql`
   query successStories {
     allMdx(
@@ -65,22 +82,3 @@ export const query = graphql`
     }
   }
 `
-
-const SuccessStories = ({ data }) => {
-  // const { edges: successStories } = data.allMdx
-  // console.log(data)
-  return (
-    <LangLayout>
-      <HeroSimple data={data.successStoriesJson.hero} />
-      <Main>
-        <SectionFeaturedCards data={data.allMdx.edges} />
-        <SectionOtherBrands
-          data={data.allMdx.edges}
-          content={data.successStoriesJson.otherBrands}
-        />
-      </Main>
-    </LangLayout>
-  )
-}
-
-export default SuccessStories

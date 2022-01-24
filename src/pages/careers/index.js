@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import LangLayout from "layouts/en"
+import LangLayout from "./../../layouts/en"
 
 import {
   Main,
@@ -17,7 +17,7 @@ import {
 } from "./../../components"
 
 export const query = graphql`
-  query {
+  query CareersPage {
     careersJson(language: { regex: "/en-GB/" }) {
       hero {
         btn {

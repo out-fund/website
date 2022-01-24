@@ -11,8 +11,6 @@ import {
 import LangLayout from "./../../layouts/es"
 
 const SuccessStories = ({ data }) => {
-  // const { edges: successStories } = data.allMdx
-  // console.log(data)
   return (
     <LangLayout>
       <HeroSimple data={data.successStoriesJson.hero} />
@@ -34,7 +32,7 @@ export const query = graphql`
     allMdx(
       filter: {
         fileAbsolutePath: { regex: "/success-stories/" }
-        frontmatter: { language: { regex: "/en-GB/" } }
+        frontmatter: { language: { regex: "/es-ES/" } }
       }
     ) {
       edges {
@@ -66,7 +64,7 @@ export const query = graphql`
         }
       }
     }
-    successStoriesJson(language: { regex: "/en-GB/" }) {
+    successStoriesJson(language: { regex: "/es-ES/" }) {
       hero {
         description
         title
