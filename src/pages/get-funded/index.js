@@ -18,6 +18,35 @@ import { Triangle } from "./../../styles/utils"
 
 import { VisuallyHidden } from "./../../styles/utils"
 
+export const query = graphql`
+  query GetFundedPage {
+    getFundedJson(language: { regex: "/en-GB/" }) {
+      content {
+        title
+        description
+        form {
+          name
+          email
+          phone
+          website
+          select {
+            title
+            default
+            options
+          }
+          btn
+        }
+      }
+    }
+  }
+`
+
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
+
 const GetFunded = (props) => {
   const data = props.data.getFundedJson.content
 
@@ -64,11 +93,24 @@ const GetFunded = (props) => {
                     email: "",
                     phoneNumber: "",
                     companyWebsite: "",
-                    monthlyRevenue: "",
+                    monthlyRevenue: "50,000",
                   }}
                   onSubmit={(values, actions) => {
-                    alert(JSON.stringify(values, null, 2))
-                    actions.setSubmitting(false)
+                    fetch("/", {
+                      method: "POST",
+                      headers: {
+                        "Content-Type": "application/x-www-form-urlencoded",
+                      },
+                      body: encode({ "form-name": "get-funded", ...values }),
+                    })
+                      .then(() => {
+                        alert("Success")
+                        actions.resetForm()
+                      })
+                      .catch(() => {
+                        alert("Error")
+                      })
+                      .finally(() => actions.setSubmitting(false))
                   }}
                   validate={(values) => {
                     const emailRegex =
@@ -80,45 +122,95 @@ const GetFunded = (props) => {
                     if (!values.email || !emailRegex.test(values.email)) {
                       errors.email = "Valid Email Required"
                     }
-                    if (!values.message) {
+                    if (!values.phoneNumber) {
                       errors.phoneNumber = "Phone Number Required"
                     }
-                    if (!values.message) {
+                    if (!values.companyWebsite) {
                       errors.companyWebsite = "Company Website Required"
                     }
-                    if (!values.message) {
-                      errors.monthlyRevenue = "Message Monthly Revenue Required"
+                    if (!values.monthlyRevenue) {
+                      errors.monthlyRevenue = "Monthly Revenue Required"
                     }
                     return errors
                   }}
                 >
                   {() => (
-                    <Form>
-                      <label htmlFor="name">Name: </label>
-                      <Field name="name" />
-                      <ErrorMessage name="name" />
-
-                      <label htmlFor="email">Email: </label>
-                      <Field name="email" />
-                      <ErrorMessage name="email" />
-
-                      <label htmlFor="message">Phone Number: </label>
-                      <Field name="phoneNumber" />
-                      <ErrorMessage name="phoneNumber" />
-
-                      <label htmlFor="message">Company Website: </label>
-                      <Field name="companyWebsite" />
-                      <ErrorMessage name="companyWebsite" />
-
-                      <label htmlFor="message">Company Website: </label>
-                      <Field name="monthlyRevenue" />
-                      <ErrorMessage name="monthlyRevenue" />
-
-                      <button type="submit">Send</button>
-                    </Form>
+                    <F.FormikForm name="get-funded" data-netlify={true}>
+                      <F.Group>
+                        <VisuallyHidden>
+                          <label htmlFor="name">{data.form.name}</label>
+                        </VisuallyHidden>
+                        <F.FormikField
+                          name="name"
+                          placeholder={data.form.name}
+                        />
+                        <ErrorMessage name="name" />
+                      </F.Group>
+                      <F.Group>
+                        <VisuallyHidden>
+                          <label htmlFor="email">{data.form.email}</label>
+                        </VisuallyHidden>
+                        <F.FormikField
+                          name="email"
+                          placeholder={data.form.email}
+                        />
+                        <ErrorMessage name="email" />
+                      </F.Group>
+                      <F.Group>
+                        <VisuallyHidden>
+                          <label htmlFor="message">{data.form.phone}</label>
+                        </VisuallyHidden>
+                        <F.FormikField
+                          name="phoneNumber"
+                          placeholder={data.form.phone}
+                        />
+                        <ErrorMessage name="phoneNumber" />
+                      </F.Group>
+                      <F.Group>
+                        <VisuallyHidden>
+                          <label htmlFor="message">{data.form.website}</label>
+                        </VisuallyHidden>
+                        <F.FormikField
+                          name="companyWebsite"
+                          placeholder={data.form.website}
+                        />
+                        <ErrorMessage name="companyWebsite" />
+                      </F.Group>
+                      <F.Group>
+                        <SelectWrapper>
+                          <F.Label htmlFor="amr">
+                            {data.form.select.title}
+                          </F.Label>
+                          <F.Select
+                            name="amr"
+                            id="amr"
+                            defaultValue={"DEFAULT"}
+                            required
+                          >
+                            <option value="DEFAULT" disabled>
+                              {data.form.select.default}
+                            </option>
+                            {data.form.select.options.map((item) => (
+                              <option key={item} value={item}>
+                                {item}
+                              </option>
+                            ))}
+                          </F.Select>
+                        </SelectWrapper>
+                      </F.Group>
+                      <Button
+                        disabled={false}
+                        type="submit"
+                        variant="primary"
+                        size="large"
+                      >
+                        {data.form.btn}
+                      </Button>
+                    </F.FormikForm>
                   )}
                 </Formik>
-                <F.Form
+
+                {/* <F.Form
                   name="get-funded"
                   action="/thank-you/"
                   method="POST"
@@ -216,7 +308,7 @@ const GetFunded = (props) => {
                   <Button type="submit" variant="primary" size="large">
                     {data.form.btn}
                   </Button>
-                </F.Form>
+                </F.Form> */}
               </FormWrapper>
             </RightContentWrapper>
           </RightWrapper>
@@ -375,28 +467,5 @@ const FormWrapper = styled.div`
   }
   .ButtonWrap button {
     width: 100%;
-  }
-`
-
-export const query = graphql`
-  query GetFundedPage {
-    getFundedJson(language: { regex: "/en-GB/" }) {
-      content {
-        title
-        description
-        form {
-          name
-          email
-          phone
-          website
-          select {
-            title
-            default
-            options
-          }
-          btn
-        }
-      }
-    }
   }
 `
