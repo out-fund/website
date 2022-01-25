@@ -24,6 +24,7 @@ const Eligibility = ({ location }) => {
     "£650 000",
     "£910 000",
     "£1 300 000",
+    "£2M",
   ]
 
   return (
