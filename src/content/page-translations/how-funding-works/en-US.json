@@ -3,11 +3,7 @@
   "seoTitle": "How the funding works",
   "seoKeywords": ["test", "keywors"],
   "hero": {
-<<<<<<< HEAD
     "title": "How the funding works US",
-=======
-    "title": "How the funding works",
->>>>>>> 0ad03aa ([DEV-1298] Prettier for JSON files)
     "description": "Outfund offers on-demand, non-dilutive funding. We combine the best of debt and equity finance, and avoid the worst of each."
   },
   "humanCapital": {

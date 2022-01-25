@@ -3,11 +3,7 @@
   "seoTitle": "seo title",
   "seoKeywords": ["test", "keywors"],
   "hero": {
-<<<<<<< HEAD
     "title": "Latest from our blog US",
-=======
-    "title": "Latest from our blog",
->>>>>>> 0ad03aa ([DEV-1298] Prettier for JSON files)
     "description": "Outfund is a team of success-driven, highly motivated people who are passionate about growing businesses in the UK. Our fast-paced "
   }
 }
