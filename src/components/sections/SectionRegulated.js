@@ -4,11 +4,11 @@ import styled from "styled-components"
 
 import { Section, SectionHeader, ThreeColumnIcons } from "./../../components"
 
-import T from "./../../styles/new/typography"
-import { theme } from "./../../styles/new/theme"
+// import T from "./../../styles/new/typography"
+// import { theme } from "./../../styles/new/theme"
 
 const SectionRegulated = ({ data, bg }) => {
-  const { title, description, blocks, statement } = data
+  const { title, description, blocks } = data
   return (
     <Section>
       <Wrapper bg={bg}>
@@ -18,11 +18,6 @@ const SectionRegulated = ({ data, bg }) => {
           </HeaderWrapper>
           <TextWrapper>
             <ThreeColumnIcons blocks={blocks} />
-            {statement && (
-              <StatementWrapper>
-                <Statement>{statement}</Statement>
-              </StatementWrapper>
-            )}
           </TextWrapper>
         </ContentWrapper>
       </Wrapper>
@@ -40,13 +35,3 @@ const HeaderWrapper = styled.div`
 const Wrapper = styled.div``
 const ContentWrapper = styled.div``
 const TextWrapper = styled.div``
-
-const StatementWrapper = styled.div`
-  padding: 12px 24px;
-  background-color: ${theme.color.background.emphesized};
-  border-radius: 4px;
-  max-width: 1170px;
-  margin: 0 auto;
-  margin-top: 64px;
-`
-const Statement = styled(T.Body)``

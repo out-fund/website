@@ -143,7 +143,6 @@ export const query = graphql`
     }
     trustJson(language: { regex: "/es-ES/" }) {
       title
-      statement
       description
       blocks {
         title

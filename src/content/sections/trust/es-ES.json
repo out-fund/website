@@ -18,6 +18,5 @@
       "icon": "<svg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path d='M28 27h8v-3h-8v3Zm0 6h8v-3h-8v3Zm12-19H30V8c0-2.2-1.8-4-4-4h-4c-2.2 0-4 1.8-4 4v6H8c-2.2 0-4 1.8-4 4v22c0 2.2 1.8 4 4 4h32c2.2 0 4-1.8 4-4V18c0-2.2-1.8-4-4-4ZM22 8h4v10h-4V8Zm18 32H8V18h10c0 2.2 1.8 4 4 4h4c2.2 0 4-1.8 4-4h10v22ZM18 30c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3Zm4.16 2.36c-1.28-.56-2.68-.86-4.16-.86s-2.88.3-4.16.86A3.011 3.011 0 0 0 12 35.14V36h12v-.86c0-1.22-.72-2.3-1.84-2.78Z' fill='#2D65BF'/><path opacity='.3' d='M26 22h-4c-2.2 0-4-1.8-4-4H8v22h32V18H30c0 2.2-1.8 4-4 4Zm-8 2c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3Zm6 12H12v-.86c0-1.2.72-2.3 1.84-2.78 1.28-.56 2.68-.86 4.16-.86s2.88.3 4.16.86c1.1.48 1.84 1.56 1.84 2.78V36Zm12-3h-8v-3h8v3Zm0-6h-8v-3h8v3Z' fill='#2D65BF'/></svg>",
       "text": "Our platform support team is available 24/7. Their mission is to make things easy for you."
     }
-  ],
-  "statement": "Outfund is the trading name of MTL Financial LTD, which is a Lender. MTL Financial LTD is authorised and regulated by the Financial Conduct Authority (FCA) as a credit broker (FRN 803345)"
+  ]
 }

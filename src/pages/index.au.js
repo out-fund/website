@@ -218,7 +218,6 @@ export const query = graphql`
     }
     trustJson(language: { regex: "/en-AU/" }) {
       title
-      statement
       description
       blocks {
         icon

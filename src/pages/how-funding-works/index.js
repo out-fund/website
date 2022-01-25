@@ -28,7 +28,7 @@ const HowFundingWorks = (props) => {
               data={{
                 title: "Revenue based financing",
                 description:
-                  "The model is simple. Using your monthly recurring revenue as a guide, we provide up-front capital for growth in exchange for a small percentage of future earnings. You repay us via a flexible revenue share as daily sales come in, which means we only succeed when you succeed. If revenues slow, so do repayments. ",
+                  "The model is simple. Using your monthly revenue as a guide, we provide up-front capital for growth in exchange for a small percentage of future earnings. You repay us via a flexible revenue share as daily sales come in, which means we only succeed when you succeed. If revenues slow, so do repayments. ",
                 blocks: [
                   {
                     title: "No dilution",
@@ -163,7 +163,6 @@ export const query = graphql`
     }
     trustJson(language: { regex: "/en-GB/" }) {
       title
-      statement
       description
       blocks {
         icon

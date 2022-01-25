@@ -174,6 +174,13 @@ const Footer = ({ lang }) => {
             </CountryWrapper>
           </CountryLinksWrapper>
         </Top>
+        <Statement>
+          <T.BodySmall>
+            Outfund is the trading name of MTL Financial LTD, which is a Lender.
+            MTL Financial LTD is also authorised and regulated by the Financial
+            Conduct Authority (FCA) as an e-money institution.
+          </T.BodySmall>
+        </Statement>
         <Bottom>
           <T.BodySmaller>
             Copyright © 2022 Outfund. All rights reserved.
@@ -193,6 +200,22 @@ const Footer = ({ lang }) => {
 }
 
 export default Footer
+
+const Statement = styled.div`
+  margin-bottom: 24px;
+  margin-top: 40px;
+  background-color: #183454;
+  padding: 12px 16px;
+  border-radius: 10px;
+  ${theme.above.t.l} {
+    margin-top: 80px;
+    margin-bottom: 48px;
+  }
+  ${T.BodySmall} {
+    color: #aad2ff;
+    /* opacity: 0.7; */
+  }
+`
 
 const LinksWrapper = styled.div`
   display: flex;
@@ -277,8 +300,8 @@ const Bottom = styled.div`
   align-items: center;
   text-align: center;
 
-  ${T.BodySmaller} {
-  }
+  /* ${T.BodySmaller} {
+  } */
   p {
     color: #aad2ff;
     opacity: 0.7;
@@ -305,10 +328,6 @@ const ContentWrapper = styled.div`
   padding-bottom: 120px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  ${theme.above.t.l} {
-    gap: 80px;
-  }
 `
 const LogoWrapper = styled.div`
   /* height: 100%; */
