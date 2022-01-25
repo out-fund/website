@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components"
-
+import { Field as FormikFields, Form as FormikForms } from "formik"
 import { theme } from "./../../new/theme"
 
 const sharedInput = css`
@@ -39,6 +39,15 @@ const sharedInput = css`
 export const Form = styled.form`
   /*background: yellow;*/
 `
+
+export const FormikField = styled(FormikFields)`
+  ${sharedInput}
+`
+
+export const FormikForm = styled(FormikForms)`
+  ${sharedInput}
+`
+
 export const Group = styled.div`
   /* background-color: #afa; */
   /* label {
@@ -55,6 +64,7 @@ export const Label = styled.label`
 export const Input = styled.input`
   ${sharedInput}
 `
+
 export const InputText = styled.input`
   ${sharedInput}
 `
