@@ -36,9 +36,9 @@ const sharedInput = css`
     font-size: 18px;
   }
 `
-export const Form = styled.form`
-  /*background: yellow;*/
-`
+// export const Form = styled.form`
+//   /*background: yellow;*/
+// `
 export const Group = styled.div`
   /* background-color: #afa; */
   /* label {
