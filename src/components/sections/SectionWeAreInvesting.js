@@ -37,7 +37,7 @@ const SectionWeAreInvesting = ({ data }) => {
 }
 export default SectionWeAreInvesting
 
-const Description = styled(T.BodyLarge)`
+const Description = styled(T.Body)`
   max-width: 970px;
   margin: 0 auto;
   margin-top: 16px;
