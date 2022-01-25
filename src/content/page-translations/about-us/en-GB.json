@@ -116,5 +116,101 @@
       "src": "./../../../images/Outfund-we-grow.png",
       "alt": "Boris Hodakel and Cheryl holidin Feel package"
     }
+  },
+  "aboutUs": {
+    "title": "The team",
+    "description": "Our team is a mix of founders, developers, consultants, coffee lovers, and climbers. We move fast and seek impact in everything we do. Because finance should make ideas happen.",
+    "teamImages": [
+      {
+        "src": "./../../../images/team/Outfund-team-Abanoub.jpg",
+        "name": "Abanoub"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Adam.jpg",
+        "name": "Adam"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Alan.jpg",
+        "name": "Alan"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Alejandro.jpg",
+        "name": "Alejandro"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Alex.jpg",
+        "name": "Alex"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Alexandra.jpg",
+        "name": "Alexandra"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Alexi.jpg",
+        "name": "Alexi"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Andrew.jpg",
+        "name": "Andrew"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Brad.jpg",
+        "name": "Brad"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Emmeline.jpg",
+        "name": "Emmeline"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Ian.jpg",
+        "name": "Ian"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Jack-R.jpg",
+        "name": "Jack"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Jack.jpg",
+        "name": "Jack"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Jackson.jpg",
+        "name": "Jackson"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Jake.jpg",
+        "name": "Jake"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-James.jpg",
+        "name": "James"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Jolanda.jpg",
+        "name": "Jolanda"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Rob.jpg",
+        "name": "Rob"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Senam.jpg",
+        "name": "Senam"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Stjepan.jpg",
+        "name": "Steven"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Thomas.jpg",
+        "name": "Thomas"
+      }
+    ],
+    "buttons": {
+      "primary": {
+        "text": "Join us",
+        "url": "/careers/"
+      }
+    }
   }
 }

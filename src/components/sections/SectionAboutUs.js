@@ -11,7 +11,7 @@ import {
 import { theme } from "./../../styles/new/theme"
 
 const SectionAboutUs = ({ data }) => {
-  // console.log(data)
+  // console.log("length", Object.keys(data.buttons).length)
   return (
     <Section>
       <Wrapper>
@@ -23,8 +23,7 @@ const SectionAboutUs = ({ data }) => {
                 description={data.description}
               />
             </HeaderWrapper>
-
-            <Stats data={data.stats} />
+            {data.stats && <Stats data={data.stats} />}
           </TextWrapper>
 
           <ImagesWrapper>
@@ -32,12 +31,24 @@ const SectionAboutUs = ({ data }) => {
           </ImagesWrapper>
 
           <ButtonWrapper>
-            <Button to={data.buttons.primary.url} variant="secondary">
-              {data.buttons.primary.text}
-            </Button>
-            <Button to={data.buttons.secondary.url} variant="secondary">
-              {data.buttons.secondary.text}
-            </Button>
+            {Object.keys(data.buttons).length === 1 ? (
+              <Button
+                to={data.buttons.primary.url}
+                variant="primary"
+                size="large"
+              >
+                {data.buttons.primary.text}
+              </Button>
+            ) : (
+              <>
+                <Button to={data.buttons.primary.url} variant="secondary">
+                  {data.buttons.primary.text}
+                </Button>
+                <Button to={data.buttons.secondary.url} variant="secondary">
+                  {data.buttons.secondary.text}
+                </Button>
+              </>
+            )}
           </ButtonWrapper>
         </ContentWrapper>
       </Wrapper>

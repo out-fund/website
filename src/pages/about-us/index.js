@@ -8,11 +8,12 @@ import {
   Stats,
   SectionFoundersCompanies,
   SectionLatestNews,
-  SectionJoinUs,
+  // SectionJoinUs,
   SectionRegulated,
   Main,
   HeroSimple,
   HeroImage,
+  SectionAboutUs,
 } from "./../../components"
 
 const AboutUs = (props) => {
@@ -25,7 +26,8 @@ const AboutUs = (props) => {
         <SectionLatestNews data={props.data.aboutUsJson.latestNews} />
         <SectionWeAreInvesting data={props.data.aboutUsJson.weInvesting} />
         <SectionFoundersCompanies data={props.data.aboutUsJson.companies} />
-        <SectionJoinUs data={props.data.aboutUsJson.joinUs} />
+        {/* <SectionJoinUs data={props.data.aboutUsJson.joinUs} /> */}
+        <SectionAboutUs data={props.data.aboutUsJson.aboutUs} />
         <SectionRegulated data={props.data.trustJson} />
       </Main>
     </LangLayout>
@@ -103,6 +105,25 @@ export const query = graphql`
             }
           }
           alt
+        }
+      }
+      aboutUs {
+        buttons {
+          primary {
+            text
+            url
+          }
+        }
+
+        description
+        title
+        teamImages {
+          src {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+          name
         }
       }
       latestNews {
