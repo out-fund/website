@@ -93,6 +93,36 @@ const links = {
     },
     url: "/get-funded/",
   },
+  countries: {
+    en: {
+      text: {
+        en: "United Kingdom",
+        es: "Reino Unido",
+      },
+      url: "https://new.out.fund/",
+    },
+    us: {
+      text: {
+        en: "United States",
+        es: "Estados Unidos",
+      },
+      url: "https://new.out.fund/us/",
+    },
+    au: {
+      text: {
+        en: "Australia",
+        es: "Australia",
+      },
+      url: "https://new.out.fund/au/",
+    },
+    es: {
+      text: {
+        en: "Spain",
+        es: "España",
+      },
+      url: "https://new.out.fund/es/",
+    },
+  },
 }
 
 export default links

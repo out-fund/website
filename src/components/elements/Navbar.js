@@ -14,7 +14,6 @@ export const SimpleNavbar = ({ lang }) => {
       <SimpleWrapper>
         <LogoWrapper>
           <Link to={`/`}>
-            {/* <Link to="#"> */}
             <LogoSvg />
           </Link>
         </LogoWrapper>

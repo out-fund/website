@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React, { useEffect, useRef, useState } from "react"
+import styled, { css } from "styled-components"
 
 import { Button, Link } from "./../../components"
 import LogoSvg from "./../../images//svg/Outfund-logo-white.svg"
@@ -9,8 +9,42 @@ import links from "./../../content/links"
 import T from "./../../styles/new/typography"
 import { useLangProvider } from "./../../utils/LangProvider"
 
+import UkFlag from "./../../images/svg/flags/uk.svg"
+import UsFlag from "./../../images/svg/flags/us.svg"
+import EsFlag from "./../../images/svg/flags/es.svg"
+import AuFlag from "./../../images/svg/flags/au.svg"
+
 const Footer = ({ lang }) => {
   const langKey = useLangProvider()
+  const [countryIsOpen, setCountryIsOpen] = useState(false)
+  const countryButtonRef = useRef()
+  const countryDropdownRef = useRef()
+
+  const handleCountryClick = (event) => {
+    console.log("test", event)
+    event.preventDefault()
+    setCountryIsOpen(!countryIsOpen)
+  }
+
+  const handleCountryClickkOutside = (event) => {
+    // console.log("mobile doc is clicked")
+    if (
+      countryButtonRef.current &&
+      !countryButtonRef.current.contains(event.target) &&
+      countryDropdownRef.current &&
+      !countryDropdownRef.current.contains(event.target)
+    ) {
+      setCountryIsOpen(false)
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleCountryClickkOutside)
+    return () => {
+      document.removeEventListener("mousedown", handleCountryClickkOutside)
+    }
+  }, [])
+
   return (
     <Wrapper>
       <ContentWrapper>
@@ -89,31 +123,54 @@ const Footer = ({ lang }) => {
             </LinksWrapper>
             <CountryWrapper>
               <ColumntTitle>Country</ColumntTitle>
-              <CuntryButtonWrapper>
-                <Button variant="countrySelector" color="white">
-                  <svg
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 18"
-                  >
-                    <path d="M0 0h24v18H0V0Z" fill="#012169" />
-                    <path
-                      d="m2.813 0 9.15 6.787L21.075 0H24v2.325l-9 6.712 9 6.675V18h-3l-9-6.713L3.037 18H0v-2.25l8.963-6.675L0 2.4V0h2.813Z"
-                      fill="#fff"
-                    />
-                    <path
-                      d="M15.9 10.537 24 16.5V18l-10.162-7.463H15.9Zm-6.9.75.225 1.313-7.2 5.4H0l9-6.713ZM24 0v.113l-9.338 7.05.075-1.65L22.126 0H24ZM0 0l8.963 6.6h-2.25L0 1.575V0Z"
-                      fill="#C8102E"
-                    />
-                    <path d="M9.037 0v18h6V0h-6ZM0 6v6h24V6H0Z" fill="#fff" />
-                    <path
-                      d="M0 7.237v3.6h24v-3.6H0ZM10.238 0v18h3.6V0h-3.6Z"
-                      fill="#C8102E"
-                    />
-                  </svg>
-                  United Kingdom
+              <CuntryButtonWrapper ref={countryButtonRef}>
+                <Button
+                  variant="countrySelector"
+                  color="white"
+                  onClick={(event) => handleCountryClick(event)}
+                >
+                  {langKey === "en" && <UkFlag />}
+                  {langKey === "es" && <EsFlag />}
+                  {langKey === "au" && <AuFlag />}
+                  {langKey === "us" && <UsFlag />}
+
+                  {langKey === "es" && links.countries[langKey].text["es"]}
+                  {langKey !== "es" && links.countries[langKey].text["en"]}
                 </Button>
               </CuntryButtonWrapper>
+              <CountryDropdownWrapper
+                isOpen={countryIsOpen}
+                ref={countryDropdownRef}
+              >
+                <CuntryButtonWrapper>
+                  <Button variant="secondary" href={links.countries.au.url}>
+                    <AuFlag />
+                    {langKey === "es" && links.countries.au.text["es"]}
+                    {langKey !== "es" && links.countries.au.text["en"]}
+                  </Button>
+                </CuntryButtonWrapper>
+                <CuntryButtonWrapper>
+                  <Button variant="secondary" href={links.countries.es.url}>
+                    <EsFlag />
+                    {langKey === "es" && links.countries.es.text["es"]}
+                    {langKey !== "es" && links.countries.es.text["en"]}
+                  </Button>
+                </CuntryButtonWrapper>
+                <CuntryButtonWrapper>
+                  <Button variant="secondary" href={links.countries.en.url}>
+                    <UkFlag />
+                    {langKey === "es" && links.countries.en.text["es"]}
+                    {langKey !== "es" && links.countries.en.text["en"]}
+                  </Button>
+                </CuntryButtonWrapper>
+                <CuntryButtonWrapper>
+                  <Button variant="secondary" href={links.countries.us.url}>
+                    <UsFlag />
+                    {langKey === "es" && links.countries.us.text["es"]}
+                    {langKey !== "es" && links.countries.us.text["en"]}
+                  </Button>
+                </CuntryButtonWrapper>
+              </CountryDropdownWrapper>
             </CountryWrapper>
           </CountryLinksWrapper>
         </Top>
@@ -179,10 +236,14 @@ const CuntryButtonWrapper = styled.div`
     margin-right: 12px;
     border-radius: 2px;
   }
+  a {
+    display: none;
+  }
 `
 
 const CountryWrapper = styled.div`
   /* background-color: #afa; */
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -268,6 +329,43 @@ const LogoWrapper = styled.div`
     color: #aad2ff;
     opacity: 0.7;
   }
+`
+
+const CountryDropdownWrapper = styled.div`
+  position: absolute;
+  left: 0;
+  top: 32px;
+
+  background-color: #0a213b;
+  background-color: #fff;
+  z-index: 99;
+  border-radius: 10px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 260px;
+
+  row-gap: 8px;
+  padding: 24px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  transform: skewY(-5deg) rotate(7deg) translateY(-30px);
+  box-shadow: 0px 100px 80px rgba(1, 14, 25, 0.07),
+    0px 41.7776px 33.1139px rgba(1, 14, 25, 0.0503198),
+    0px 22.3363px 16.2366px rgba(1, 14, 25, 0.0417275),
+    0px 12.5216px 7.80488px rgba(1, 14, 25, 0.035),
+    0px 6.6501px 3.28033px rgba(1, 14, 25, 0.0282725),
+    0px 2.76726px 0.952807px rgba(1, 14, 25, 0.0196802);
+  ${(props) =>
+    props.isOpen
+      ? css`
+          visibility: visible;
+          opacity: 1;
+          transform: skewY(0deg) rotate(0deg) translateY(0px);
+        `
+      : css`
+          visibility: hidden;
+        `}
 `
 
 const Wrapper = styled.div`

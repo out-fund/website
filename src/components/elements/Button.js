@@ -57,6 +57,7 @@ const ButtonWrap = styled.div`
   a,
   button {
     display: flex;
+    align-items: center;
     justify-content: center;
     margin: 0;
     padding: 8px 24px;

@@ -45,12 +45,12 @@ export const color = {
     },
     secondary: {
       color: "var(--actiton-primary)",
-      backgroundColor: "transparetn",
+      backgroundColor: "transparent",
       hover: "#deeeff",
     },
     tertiary: {
       color: "var(--actiton-secondary)",
-      backgroundColor: "transparetn",
+      backgroundColor: "transparent",
     },
   },
   input: {
