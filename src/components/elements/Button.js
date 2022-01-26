@@ -166,6 +166,12 @@ const ButtonWrap = styled.div`
             transition: all 0.1s ease-in-out;
             padding: 8px 24px 8px 24px;
             align-items: center;
+            svg {
+              width: 24px;
+              height: 18px;
+              margin-right: 12px;
+              border-radius: 2px;
+            }
 
             &:after {
               position: relative;

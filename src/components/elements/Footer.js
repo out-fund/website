@@ -259,9 +259,9 @@ const CuntryButtonWrapper = styled.div`
     margin-right: 12px;
     border-radius: 2px;
   }
-  a {
+  /* a {
     display: none;
-  }
+  } */
 `
 
 const CountryWrapper = styled.div`

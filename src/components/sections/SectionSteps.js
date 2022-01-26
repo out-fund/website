@@ -117,10 +117,14 @@ const ImageWrapper = styled.div`
   display: flex;
   justify-content: center;
   svg {
+    width: 100%;
+    height: 100%;
     max-height: 240px;
   }
   ${theme.above.t.l} {
     svg {
+      width: 470px;
+      height: 240px;
       max-height: unset;
     }
   }
@@ -130,7 +134,6 @@ const Step = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 8px;
-  /* grid-template-rows: 240px 1fr; */
   text-align: center;
 
   ${theme.above.t.l} {
