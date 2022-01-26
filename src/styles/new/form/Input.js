@@ -46,7 +46,7 @@ export const Form = styled.form`
 
 export const FormikField = styled(FormikFields)`
   ${sharedInput}
-  border: ${(props) => (props.valid ? "1px solid red" : "")};
+  border: ${(props) => (props.$valid ? "1px solid red" : "")};
 `
 
 export const FormikForm = styled(FormikForms)`
