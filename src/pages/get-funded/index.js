@@ -246,106 +246,6 @@ const GetFunded = (props) => {
                     </F.FormikForm>
                   )}
                 </Formik>
-
-                {/* <F.Form
-                  name="get-funded"
-                  action="/thank-you/"
-                  method="POST"
-                  netlify-honeypot="bot-field"
-                  data-netlify="true"
-                >
-                  <input
-                    type="hidden"
-                    name="form-name"
-                    value="get-funded"
-                    maxLength="256"
-                  />
-                  <VisuallyHidden>
-                    <label>
-                      Don’t fill this out if you’re human:
-                      <input name="bot-field" tabIndex="-1" />
-                    </label>
-                  </VisuallyHidden>
-
-                  <F.Group>
-                    <VisuallyHidden>
-                      <F.Label htmlFor="name">{data.form.name}</F.Label>
-                    </VisuallyHidden>
-                    <F.Input
-                      type="text"
-                      name="name"
-                      id="name"
-                      placeholder={data.form.name}
-                      maxLength="256"
-                      required
-                    />
-                  </F.Group>
-
-                  <F.Group>
-                    <VisuallyHidden>
-                      <F.Label htmlFor="email">{data.form.email}</F.Label>
-                    </VisuallyHidden>
-                    <F.Input
-                      id="email"
-                      type="email"
-                      name="email"
-                      placeholder={data.form.email}
-                      maxLength="256"
-                      required
-                    />
-                  </F.Group>
-
-                  <F.Group>
-                    <VisuallyHidden>
-                      <F.Label htmlFor="phone">{data.form.phone}</F.Label>
-                    </VisuallyHidden>
-                    <F.Input
-                      id="phone"
-                      type="tel"
-                      name="phone"
-                      placeholder={data.form.phone}
-                      maxLength="256"
-                      required
-                    />
-                  </F.Group>
-
-                  <F.Group>
-                    <VisuallyHidden>
-                      <F.Label htmlFor="website">{data.form.website}</F.Label>
-                    </VisuallyHidden>
-                    <F.Input
-                      id="website"
-                      type="text"
-                      name="website"
-                      placeholder={data.form.website}
-                      maxLength="256"
-                      required
-                    />
-                  </F.Group>
-
-                  <SelectWrapper>
-                    <F.Label htmlFor="amr">{data.form.select.title}</F.Label>
-                    <F.Select
-                      name="amr"
-                      id="amr"
-                      defaultValue={"DEFAULT"}
-                      required
-                    >
-                      <option value="DEFAULT" disabled>
-                        {data.form.select.default}
-                      </option>
-                      {data.form.select.options.map((item) => (
-                        <option key={item} value={item}>
-                          {item}
-                        </option>
-                      ))}
-                    </F.Select>
-                  </SelectWrapper>
-
-                  <Button type="submit" variant="primary" size="large">
-                    {data.form.btn}
-                  </Button>
-                </F.Form> */}
               </FormWrapper>
             </RightContentWrapper>
           </RightWrapper>
@@ -497,11 +397,7 @@ const ContentWrapper = styled.div`
 `
 const FormWrapper = styled.div`
   margin-top: 24px;
-  ${F.Form} {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
+
   .ButtonWrap button {
     width: 100%;
     margin: 16px 0 0 0;

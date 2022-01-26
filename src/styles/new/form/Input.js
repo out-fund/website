@@ -55,7 +55,7 @@ export const FormikForm = styled(FormikForms)`
 `
 export const FormikError = styled(FormikErrors)`
   position: absolute;
-  top: -12px;
+  top: -13px;
 `
 
 export const ErrorWrapper = styled.div`
