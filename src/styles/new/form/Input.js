@@ -50,6 +50,8 @@ export const FormikField = styled(FormikFields)`
 
 export const FormikForm = styled(FormikForms)`
   /* ${sharedInput} */
+  display: flex;
+  flex-direction: column;
 `
 export const FormikError = styled(FormikErrors)``
 

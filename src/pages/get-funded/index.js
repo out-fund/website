@@ -134,7 +134,18 @@ const GetFunded = (props) => {
                     return errors
                   }}
                 >
-                  {() => (
+                  {({
+                    values,
+                    errors,
+                    touched,
+                    handleChange,
+                    handleBlur,
+                    handleSubmit,
+                    isSubmitting,
+                    isValid,
+                    dirty,
+                    /* and other goodies */
+                  }) => (
                     <F.FormikForm name="get-funded" data-netlify={true}>
                       <F.Group>
                         <VisuallyHidden>
@@ -207,7 +218,7 @@ const GetFunded = (props) => {
                         </SelectWrapper>
                       </F.Group>
                       <Button
-                        disabled={false}
+                        disabled={isSubmitting || !isValid || !dirty}
                         type="submit"
                         variant="primary"
                         size="large"
