@@ -70,7 +70,7 @@ const GetFunded = (props) => {
                     email: "",
                     phone: "",
                     website: "",
-                    amr: "50,000",
+                    amr: "",
                   }}
                   onSubmit={(values, actions) => {
                     fetch("/", {
@@ -127,6 +127,7 @@ const GetFunded = (props) => {
                       data-netlify={true}
                       netlify-honeypot="bot-field"
                     >
+                      {console.log(values)}
                       <VisuallyHidden>
                         <label>
                           Don’t fill this out if you’re human:
@@ -138,7 +139,7 @@ const GetFunded = (props) => {
                           <label htmlFor="name">{data.form.name}</label>
                         </VisuallyHidden>
                         <F.FormikField
-                          valid={errors.name}
+                          valid={errors.name && touched.name}
                           name="name"
                           placeholder={data.form.name}
                         />
@@ -151,7 +152,7 @@ const GetFunded = (props) => {
                           <label htmlFor="email">{data.form.email}</label>
                         </VisuallyHidden>
                         <F.FormikField
-                          valid={errors.email}
+                          valid={errors.email && touched.email}
                           name="email"
                           placeholder={data.form.email}
                         />
@@ -164,7 +165,7 @@ const GetFunded = (props) => {
                           <label htmlFor="message">{data.form.phone}</label>
                         </VisuallyHidden>
                         <F.FormikField
-                          valid={errors.phone}
+                          valid={errors.phone && touched.phone}
                           name="phone"
                           placeholder={data.form.phone}
                         />
@@ -177,7 +178,7 @@ const GetFunded = (props) => {
                           <label htmlFor="message">{data.form.website}</label>
                         </VisuallyHidden>
                         <F.FormikField
-                          valid={errors.website}
+                          valid={errors.website && touched.website}
                           name="website"
                           placeholder={data.form.website}
                         />
@@ -194,6 +195,8 @@ const GetFunded = (props) => {
                             name="amr"
                             id="amr"
                             defaultValue={"DEFAULT"}
+                            onChange={handleChange}
+                            onBlur={handleBlur}
                             required
                           >
                             <option value="DEFAULT" disabled>

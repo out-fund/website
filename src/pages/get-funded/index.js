@@ -93,7 +93,7 @@ const GetFunded = (props) => {
                     email: "",
                     phone: "",
                     website: "",
-                    amr: "50,000",
+                    amr: "",
                   }}
                   onSubmit={(values, actions) => {
                     fetch("/", {
@@ -150,6 +150,7 @@ const GetFunded = (props) => {
                       data-netlify={true}
                       netlify-honeypot="bot-field"
                     >
+                      {console.log(values)}
                       <VisuallyHidden>
                         <label>
                           Don’t fill this out if you’re human:
@@ -217,6 +218,8 @@ const GetFunded = (props) => {
                             name="amr"
                             id="amr"
                             defaultValue={"DEFAULT"}
+                            onChange={handleChange}
+                            onBlur={handleBlur}
                             required
                           >
                             <option value="DEFAULT" disabled>
