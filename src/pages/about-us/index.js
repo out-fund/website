@@ -4,9 +4,9 @@ import { graphql } from "gatsby"
 import LangLayout from "./../../layouts/en"
 
 import {
-  SectionWeAreInvesting,
+  // SectionWeAreInvesting,
   Stats,
-  SectionFoundersCompanies,
+  // SectionFoundersCompanies,
   SectionLatestNews,
   // SectionJoinUs,
   SectionRegulated,
@@ -14,6 +14,7 @@ import {
   HeroSimple,
   HeroImage,
   SectionAboutUs,
+  SectionWeValue,
 } from "./../../components"
 
 const AboutUs = (props) => {
@@ -24,10 +25,11 @@ const AboutUs = (props) => {
         <HeroImage data={props.data.aboutUsJson.hero.image} />
         <Stats data={props.data.aboutUsJson.stats} />
         <SectionLatestNews data={props.data.aboutUsJson.latestNews} />
-        <SectionWeAreInvesting data={props.data.aboutUsJson.weInvesting} />
-        <SectionFoundersCompanies data={props.data.aboutUsJson.companies} />
+        {/* <SectionWeAreInvesting data={props.data.aboutUsJson.weInvesting} /> */}
+        {/* <SectionFoundersCompanies data={props.data.aboutUsJson.companies} /> */}
         {/* <SectionJoinUs data={props.data.aboutUsJson.joinUs} /> */}
-        <SectionAboutUs data={props.data.aboutUsJson.aboutUs} />
+        <SectionAboutUs data={props.data.aboutUsJson.aboutUs} white />
+        <SectionWeValue data={props.data.aboutUsJson.weValue} />
         <SectionRegulated data={props.data.trustJson} />
       </Main>
     </LangLayout>
@@ -54,6 +56,13 @@ export const query = graphql`
       stats {
         stat
         text
+      }
+      weValue {
+        title
+        blocks {
+          text
+          title
+        }
       }
       weInvesting {
         btn {

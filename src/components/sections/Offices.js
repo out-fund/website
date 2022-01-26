@@ -85,8 +85,15 @@ const OfficeList = styled.div`
 
 const OfficesWorld = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 16px;
+  grid-template-columns: repeat(1, auto);
+  gap: 16px;
+
+  ${theme.above.t.s} {
+    grid-template-columns: repeat(2, auto);
+  }
+  ${theme.above.l.m} {
+    grid-template-columns: repeat(3, auto);
+  }
 `
 const Office = styled.div`
   h4 {
@@ -97,4 +104,5 @@ const Region = styled.div`
   display: grid;
   grid-template-rows: auto;
   row-gap: 16px;
+  align-content: start;
 `

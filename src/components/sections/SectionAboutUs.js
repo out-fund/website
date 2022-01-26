@@ -10,12 +10,12 @@ import {
 } from "./../../components"
 import { theme } from "./../../styles/new/theme"
 
-const SectionAboutUs = ({ data }) => {
+const SectionAboutUs = ({ data, white }) => {
   // console.log("length", Object.keys(data.buttons).length)
   return (
     <Section>
       <Wrapper>
-        <ContentWrapper>
+        <ContentWrapper white={white}>
           <TextWrapper>
             <HeaderWrapper>
               <SectionHeader
@@ -66,21 +66,29 @@ const TextWrapper = styled.div`
 `
 
 const Wrapper = styled.div``
+
 const ContentWrapper = styled.div`
-  background-color: ${theme.color.background.emphesized};
+  background-color: ${(props) =>
+    props.white ? "#fff" : theme.color.background.emphesized};
   overflow: hidden;
   border-radius: 10px;
-  padding: 64px 0;
-
-  /* ${theme.above.p.s} {
-    padding: 64px 0;
-  } */
+  padding: ${(props) => (props.white ? "0px" : "64px 0;")};
 
   ${theme.above.t.m} {
-    padding: 100px 0;
+    padding: ${(props) => (props.white ? "0px" : "100px 0;")};
   }
   ${theme.above.d.m} {
-    padding: 120px 0;
+    padding: ${(props) => (props.white ? "0px" : "120px 0;")};
+  }
+
+  ${theme.above.p.m} {
+    margin: ${(props) => (props.white ? "0 -16px;" : "")};
+  }
+  ${theme.above.t.s} {
+    margin: ${(props) => (props.white ? "0 -20px;" : "")};
+  }
+  ${theme.above.l.m} {
+    margin: ${(props) => (props.white ? "0 -24px;" : "")};
   }
 `
 const ImagesWrapper = styled.div`

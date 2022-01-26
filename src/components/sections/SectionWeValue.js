@@ -5,8 +5,8 @@ import { Section, SectionHeader } from "./../../components"
 import T from "./../../styles/new/typography"
 import { theme } from "./../../styles/new/theme"
 
-const SectionWeValue = ({ data }) => {
-  const { title, description, blocks, white } = data
+const SectionWeValue = ({ data, white }) => {
+  const { title, description, blocks } = data
   return (
     <Section>
       <Wrapper white={white}>
