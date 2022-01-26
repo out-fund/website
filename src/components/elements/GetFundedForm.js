@@ -11,7 +11,7 @@ import { VisuallyHidden } from "./../../styles/utils"
 //EXTERNALISE GET FUNDED FORM (TOO MUCH CODE) AND PASS IN APPROPRIATE LANGUAGE QUERIES
 
 export const query = graphql`
-  query GetFundedPage {
+  query GetFundedFormComponent {
     getFundedJson(language: { regex: "/en-GB/" }) {
       content {
         title
