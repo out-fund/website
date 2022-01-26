@@ -161,7 +161,7 @@ const GetFunded = (props) => {
                           <label htmlFor="name">{data.form.name}</label>
                         </VisuallyHidden>
                         <F.FormikField
-                          valid={errors.name}
+                          valid={errors.name && touched.name}
                           name="name"
                           placeholder={data.form.name}
                         />
@@ -174,7 +174,7 @@ const GetFunded = (props) => {
                           <label htmlFor="email">{data.form.email}</label>
                         </VisuallyHidden>
                         <F.FormikField
-                          valid={errors.email}
+                          valid={errors.email && touched.email}
                           name="email"
                           placeholder={data.form.email}
                         />
@@ -187,7 +187,7 @@ const GetFunded = (props) => {
                           <label htmlFor="message">{data.form.phone}</label>
                         </VisuallyHidden>
                         <F.FormikField
-                          valid={errors.phone}
+                          valid={errors.phone && touched.phone}
                           name="phone"
                           placeholder={data.form.phone}
                         />
@@ -200,7 +200,7 @@ const GetFunded = (props) => {
                           <label htmlFor="message">{data.form.website}</label>
                         </VisuallyHidden>
                         <F.FormikField
-                          valid={errors.website}
+                          valid={errors.website && touched.website}
                           name="website"
                           placeholder={data.form.website}
                         />
