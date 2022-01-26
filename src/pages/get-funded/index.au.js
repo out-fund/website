@@ -68,9 +68,9 @@ const GetFunded = (props) => {
                   initialValues={{
                     name: "",
                     email: "",
-                    phoneNumber: "",
-                    companyWebsite: "",
-                    monthlyRevenue: "50,000",
+                    phone: "",
+                    website: "",
+                    amr: "50,000",
                   }}
                   onSubmit={(values, actions) => {
                     fetch("/", {
@@ -99,14 +99,14 @@ const GetFunded = (props) => {
                     if (!values.email || !emailRegex.test(values.email)) {
                       errors.email = "Valid Email Required"
                     }
-                    if (!values.phoneNumber) {
-                      errors.phoneNumber = "Phone Number Required"
+                    if (!values.phone) {
+                      errors.phone = "Phone Number Required"
                     }
-                    if (!values.companyWebsite) {
-                      errors.companyWebsite = "Company Website Required"
+                    if (!values.website) {
+                      errors.website = "Company Website Required"
                     }
-                    if (!values.monthlyRevenue) {
-                      errors.monthlyRevenue = "Monthly Revenue Required"
+                    if (!values.amr) {
+                      errors.amr = "Monthly Revenue Required"
                     }
                     return errors
                   }}
@@ -164,12 +164,12 @@ const GetFunded = (props) => {
                           <label htmlFor="message">{data.form.phone}</label>
                         </VisuallyHidden>
                         <F.FormikField
-                          valid={errors.phoneNumber}
-                          name="phoneNumber"
+                          valid={errors.phone}
+                          name="phone"
                           placeholder={data.form.phone}
                         />
                         <F.ErrorWrapper>
-                          <F.FormikError component="div" name="phoneNumber" />
+                          <F.FormikError component="div" name="phone" />
                         </F.ErrorWrapper>
                       </F.Group>
                       <F.Group>
@@ -177,15 +177,12 @@ const GetFunded = (props) => {
                           <label htmlFor="message">{data.form.website}</label>
                         </VisuallyHidden>
                         <F.FormikField
-                          valid={errors.companyWebsite}
-                          name="companyWebsite"
+                          valid={errors.website}
+                          name="website"
                           placeholder={data.form.website}
                         />
                         <F.ErrorWrapper>
-                          <F.FormikError
-                            component="div"
-                            name="companyWebsite"
-                          />
+                          <F.FormikError component="div" name="website" />
                         </F.ErrorWrapper>
                       </F.Group>
                       <F.Group>
