@@ -150,7 +150,6 @@ const GetFunded = (props) => {
                       data-netlify={true}
                       netlify-honeypot="bot-field"
                     >
-                      {console.log(values)}
                       <VisuallyHidden>
                         <label>
                           Don’t fill this out if you’re human:
