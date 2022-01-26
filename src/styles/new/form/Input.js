@@ -1,5 +1,9 @@
 import styled, { css } from "styled-components"
-import { Field as FormikFields, Form as FormikForms } from "formik"
+import {
+  Field as FormikFields,
+  Form as FormikForms,
+  ErrorMessage as FormikErrors,
+} from "formik"
 import { theme } from "./../../new/theme"
 
 const sharedInput = css`
@@ -45,7 +49,13 @@ export const FormikField = styled(FormikFields)`
 `
 
 export const FormikForm = styled(FormikForms)`
-  ${sharedInput}
+  /* ${sharedInput} */
+`
+export const FormikError = styled(FormikErrors)``
+
+export const ErrorWrapper = styled.div`
+  font-size: 12px;
+  color: #d52e2e;
 `
 
 export const Group = styled.div`

@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { Formik, Form, Field, ErrorMessage } from "formik"
-import { graphql } from "gatsby"
+import { Formik } from "formik"
+import { graphql, navigate } from "gatsby"
 // import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import LangLayout from "./../../layouts/en"
@@ -144,7 +144,9 @@ const GetFunded = (props) => {
                           name="name"
                           placeholder={data.form.name}
                         />
-                        <ErrorMessage name="name" />
+                        <F.ErrorWrapper>
+                          <F.FormikError name="name" />
+                        </F.ErrorWrapper>
                       </F.Group>
                       <F.Group>
                         <VisuallyHidden>
@@ -154,7 +156,9 @@ const GetFunded = (props) => {
                           name="email"
                           placeholder={data.form.email}
                         />
-                        <ErrorMessage name="email" />
+                        <F.ErrorWrapper>
+                          <F.FormikError name="email" />
+                        </F.ErrorWrapper>
                       </F.Group>
                       <F.Group>
                         <VisuallyHidden>
@@ -164,7 +168,9 @@ const GetFunded = (props) => {
                           name="phoneNumber"
                           placeholder={data.form.phone}
                         />
-                        <ErrorMessage name="phoneNumber" />
+                        <F.ErrorWrapper>
+                          <F.FormikError name="phoneNumber" />
+                        </F.ErrorWrapper>
                       </F.Group>
                       <F.Group>
                         <VisuallyHidden>
@@ -174,7 +180,9 @@ const GetFunded = (props) => {
                           name="companyWebsite"
                           placeholder={data.form.website}
                         />
-                        <ErrorMessage name="companyWebsite" />
+                        <F.ErrorWrapper>
+                          <F.FormikError name="companyWebsite" />
+                        </F.ErrorWrapper>
                       </F.Group>
                       <F.Group>
                         <SelectWrapper>
