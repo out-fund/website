@@ -1,6 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import { Formik } from "formik"
+import { graphql, navigate } from "gatsby"
+
+import { Button, Link } from "./../../components"
+import F from "./../../styles/new/form"
+
+import { VisuallyHidden } from "./../../styles/utils"
 
 //EXTERNALISE GET FUNDED FORM (TOO MUCH CODE) AND PASS IN APPROPRIATE LANGUAGE QUERIES
 
