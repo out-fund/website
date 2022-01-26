@@ -104,7 +104,7 @@ const GetFunded = (props) => {
                       body: encode({ "form-name": "get-funded", ...values }),
                     })
                       .then(() => {
-                        alert("Success")
+                        navigate("/thank-you/")
                         actions.resetForm()
                       })
                       .catch(() => {
