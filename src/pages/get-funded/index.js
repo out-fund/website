@@ -504,5 +504,6 @@ const FormWrapper = styled.div`
   }
   .ButtonWrap button {
     width: 100%;
+    margin: 16px 0 0 0;
   }
 `
