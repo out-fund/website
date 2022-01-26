@@ -46,17 +46,22 @@ export const Form = styled.form`
 
 export const FormikField = styled(FormikFields)`
   ${sharedInput}
+  border: ${(props) => (props.valid ? "1px solid red" : "")};
 `
 
 export const FormikForm = styled(FormikForms)`
-  /* ${sharedInput} */
   display: flex;
   flex-direction: column;
 `
-export const FormikError = styled(FormikErrors)``
+export const FormikError = styled(FormikErrors)`
+  position: absolute;
+  top: -12px;
+`
 
 export const ErrorWrapper = styled.div`
-  font-size: 12px;
+  font-size: 11px;
+  margin: 3px 0;
+  position: relative;
   color: #d52e2e;
 `
 
@@ -67,7 +72,7 @@ export const Group = styled.div`
   } */
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
 `
 export const Label = styled.label`
   color: ${theme.color.text.body};

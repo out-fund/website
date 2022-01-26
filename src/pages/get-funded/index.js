@@ -144,19 +144,29 @@ const GetFunded = (props) => {
                     isSubmitting,
                     isValid,
                     dirty,
-                    /* and other goodies */
                   }) => (
-                    <F.FormikForm name="get-funded" data-netlify={true}>
+                    <F.FormikForm
+                      name="get-funded"
+                      data-netlify={true}
+                      netlify-honeypot="bot-field"
+                    >
+                      <VisuallyHidden>
+                        <label>
+                          Don’t fill this out if you’re human:
+                          <input name="bot-field" tabIndex="-1" />
+                        </label>
+                      </VisuallyHidden>
                       <F.Group>
                         <VisuallyHidden>
                           <label htmlFor="name">{data.form.name}</label>
                         </VisuallyHidden>
                         <F.FormikField
+                          valid={errors.name}
                           name="name"
                           placeholder={data.form.name}
                         />
                         <F.ErrorWrapper>
-                          <F.FormikError name="name" />
+                          <F.FormikError component="div" name="name" />
                         </F.ErrorWrapper>
                       </F.Group>
                       <F.Group>
@@ -164,11 +174,12 @@ const GetFunded = (props) => {
                           <label htmlFor="email">{data.form.email}</label>
                         </VisuallyHidden>
                         <F.FormikField
+                          valid={errors.email}
                           name="email"
                           placeholder={data.form.email}
                         />
                         <F.ErrorWrapper>
-                          <F.FormikError name="email" />
+                          <F.FormikError component="div" name="email" />
                         </F.ErrorWrapper>
                       </F.Group>
                       <F.Group>
@@ -176,11 +187,12 @@ const GetFunded = (props) => {
                           <label htmlFor="message">{data.form.phone}</label>
                         </VisuallyHidden>
                         <F.FormikField
+                          valid={errors.phoneNumber}
                           name="phoneNumber"
                           placeholder={data.form.phone}
                         />
                         <F.ErrorWrapper>
-                          <F.FormikError name="phoneNumber" />
+                          <F.FormikError component="div" name="phoneNumber" />
                         </F.ErrorWrapper>
                       </F.Group>
                       <F.Group>
@@ -188,11 +200,15 @@ const GetFunded = (props) => {
                           <label htmlFor="message">{data.form.website}</label>
                         </VisuallyHidden>
                         <F.FormikField
+                          valid={errors.companyWebsite}
                           name="companyWebsite"
                           placeholder={data.form.website}
                         />
                         <F.ErrorWrapper>
-                          <F.FormikError name="companyWebsite" />
+                          <F.FormikError
+                            component="div"
+                            name="companyWebsite"
+                          />
                         </F.ErrorWrapper>
                       </F.Group>
                       <F.Group>
@@ -217,14 +233,16 @@ const GetFunded = (props) => {
                           </F.Select>
                         </SelectWrapper>
                       </F.Group>
-                      <Button
-                        disabled={isSubmitting || !isValid || !dirty}
-                        type="submit"
-                        variant="primary"
-                        size="large"
-                      >
-                        {data.form.btn}
-                      </Button>
+                      <F.Group>
+                        <Button
+                          disabled={isSubmitting || !isValid || !dirty}
+                          type="submit"
+                          variant="primary"
+                          size="large"
+                        >
+                          {data.form.btn}
+                        </Button>
+                      </F.Group>
                     </F.FormikForm>
                   )}
                 </Formik>
