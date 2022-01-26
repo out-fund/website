@@ -116,31 +116,31 @@
     }
   },
   "weValue": {
-    "title": "What We Value",
+    "title": "Values & behaviours",
     "blocks": [
       {
-        "title": "🎮 Ownership",
-        "text": "We value self-starters who treat the work we do as their own. Being responsible for the growth of businesses also means being responsible for your own growth too."
+        "title": "Entrepreneurship",
+        "text": "Nothing is impossible. We hustle harder, fail better, and succeed sooner."
       },
       {
-        "title": "🥇 Passion for Winning",
-        "text": "We love the feeling that comes with winning. We will always root for each other and do what is needed to take the team to the finish line, first."
+        "title": "Ownership",
+        "text": "We get things done. Every task is approached with passion, energy, and accountability. Because good work works."
       },
       {
-        "title": "⏱ Urgency",
-        "text": "A sense of urgency is crucial to our success and taking ownership over your role is of utmost importance. Get it done, today!"
+        "title": "Balance",
+        "text": "We’re a mixture of willingness and non-conformism. Logic and creativity. Work and play."
       },
       {
-        "title": "🤗 Empathy",
-        "text": "We all lead different lives, and sometimes, disasters happen. We always lend an ear and a helping hand when one of us needs it."
+        "title": "Growth Mindset",
+        "text": "We don’t do ‘business as usual’. Our challenger attitude means we’re always looking to go beyond."
       },
       {
-        "title": "🤝 Collaboration",
-        "text": "When we do things together, there’s a higher chance of doing them well. We constantly share ideas and are transparent with each other, because everyone’s ideas are valuable."
+        "title": "Trust",
+        "text": "We’re radically transparent; we’re all building the same thing, and we know that none of us are as smart as all of us."
       },
       {
-        "title": "🔬 Innovation",
-        "text": "Finding new, fresh and innovative ways of doing things is how we stay ahead of the game. All ideas and suggestions on improvements on processes are always welcome."
+        "title": "Empathy",
+        "text": "The heart of good business is understanding. From our customers to our colleagues, we put people first."
       }
     ]
   },
