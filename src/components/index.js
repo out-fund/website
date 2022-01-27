@@ -47,6 +47,7 @@ import CardFounderName from "./cards/CardFounderName"
 import ThreeColumnIcons from "./sections/ThreeColumnIcons"
 import CardBlog from "./cards/CardBlog"
 import SectionSteps from "./sections/SectionSteps"
+import GetFundedForm from "./elements/GetFundedForm"
 
 export {
   SectionWeAreInvesting,
@@ -60,6 +61,7 @@ export {
   SectionOtherBrands,
   CardCta,
   SectionFindOut,
+  GetFundedForm,
   //
   Main,
   Navbar,
