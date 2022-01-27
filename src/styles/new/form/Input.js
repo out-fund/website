@@ -1,5 +1,9 @@
 import styled, { css } from "styled-components"
-
+import {
+  Field as FormikFields,
+  Form as FormikForms,
+  ErrorMessage as FormikErrors,
+} from "formik"
 import { theme } from "./../../new/theme"
 
 const sharedInput = css`
@@ -39,6 +43,28 @@ const sharedInput = css`
 export const Form = styled.form`
   /*background: yellow;*/
 `
+
+export const FormikField = styled(FormikFields)`
+  ${sharedInput}
+  border: ${(props) => (props.$valid ? "1px solid red" : "")};
+`
+
+export const FormikForm = styled(FormikForms)`
+  display: flex;
+  flex-direction: column;
+`
+export const FormikError = styled(FormikErrors)`
+  position: absolute;
+  top: -13px;
+`
+
+export const ErrorWrapper = styled.div`
+  font-size: 11px;
+  margin: 3px 0;
+  position: relative;
+  color: #d52e2e;
+`
+
 export const Group = styled.div`
   /* background-color: #afa; */
   /* label {
@@ -46,7 +72,7 @@ export const Group = styled.div`
   } */
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
 `
 export const Label = styled.label`
   color: ${theme.color.text.body};
@@ -55,6 +81,7 @@ export const Label = styled.label`
 export const Input = styled.input`
   ${sharedInput}
 `
+
 export const InputText = styled.input`
   ${sharedInput}
 `

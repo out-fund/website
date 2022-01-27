@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { graphql } from "gatsby"
+import { Formik } from "formik"
+import { graphql, navigate } from "gatsby"
 // import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import LangLayout from "./../../layouts/es"
@@ -16,6 +17,12 @@ import { theme } from "./../../styles/new/theme"
 import { Triangle } from "./../../styles/utils"
 
 import { VisuallyHidden } from "./../../styles/utils"
+
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
 
 const GetFunded = (props) => {
   const data = props.data.getFundedJson.content
@@ -57,105 +64,164 @@ const GetFunded = (props) => {
               </TextWrapper>
 
               <FormWrapper>
-                <F.Form
-                  name="get-funded"
-                  action="/thank-you/"
-                  method="POST"
-                  netlify-honeypot="bot-field"
-                  data-netlify="true"
+                <Formik
+                  initialValues={{
+                    name: "",
+                    email: "",
+                    phone: "",
+                    website: "",
+                    amr: "",
+                  }}
+                  onSubmit={(values, actions) => {
+                    fetch("/", {
+                      method: "POST",
+                      headers: {
+                        "Content-Type": "application/x-www-form-urlencoded",
+                      },
+                      body: encode({ "form-name": "get-funded-es", ...values }),
+                    })
+                      .then(() => {
+                        navigate("/es/thank-you/")
+                        actions.resetForm()
+                      })
+                      .catch(() => {
+                        alert("Error")
+                      })
+                      .finally(() => actions.setSubmitting(false))
+                  }}
+                  validate={(values) => {
+                    const emailRegex =
+                      /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+                    const errors = {}
+                    if (!values.name) {
+                      errors.name = "Name Required"
+                    }
+                    if (!values.email || !emailRegex.test(values.email)) {
+                      errors.email = "Valid Email Required"
+                    }
+                    if (!values.phone) {
+                      errors.phone = "Phone Number Required"
+                    }
+                    if (!values.website) {
+                      errors.website = "Company Website Required"
+                    }
+                    if (!values.amr) {
+                      errors.amr = "Monthly Revenue Required"
+                    }
+                    return errors
+                  }}
                 >
-                  <input
-                    type="hidden"
-                    name="form-name"
-                    value="get-funded"
-                    maxLength="256"
-                  />
-                  <VisuallyHidden>
-                    <label>
-                      Don’t fill this out if you’re human:
-                      <input name="bot-field" tabIndex="-1" />
-                    </label>
-                  </VisuallyHidden>
-
-                  <F.Group>
-                    <VisuallyHidden>
-                      <F.Label htmlFor="name">{data.form.name}</F.Label>
-                    </VisuallyHidden>
-                    <F.Input
-                      type="text"
-                      name="name"
-                      id="name"
-                      placeholder={data.form.name}
-                      maxLength="256"
-                      required
-                    />
-                  </F.Group>
-
-                  <F.Group>
-                    <VisuallyHidden>
-                      <F.Label htmlFor="email">{data.form.email}</F.Label>
-                    </VisuallyHidden>
-                    <F.Input
-                      id="email"
-                      type="email"
-                      name="email"
-                      placeholder={data.form.email}
-                      maxLength="256"
-                      required
-                    />
-                  </F.Group>
-
-                  <F.Group>
-                    <VisuallyHidden>
-                      <F.Label htmlFor="phone">{data.form.phone}</F.Label>
-                    </VisuallyHidden>
-                    <F.Input
-                      id="phone"
-                      type="tel"
-                      name="phone"
-                      placeholder={data.form.phone}
-                      maxLength="256"
-                      required
-                    />
-                  </F.Group>
-
-                  <F.Group>
-                    <VisuallyHidden>
-                      <F.Label htmlFor="website">{data.form.website}</F.Label>
-                    </VisuallyHidden>
-                    <F.Input
-                      id="website"
-                      type="text"
-                      name="website"
-                      placeholder={data.form.website}
-                      maxLength="256"
-                      required
-                    />
-                  </F.Group>
-
-                  <SelectWrapper>
-                    <F.Label htmlFor="amr">{data.form.select.title}</F.Label>
-                    <F.Select
-                      name="amr"
-                      id="amr"
-                      defaultValue={"DEFAULT"}
-                      required
+                  {({
+                    values,
+                    errors,
+                    touched,
+                    handleChange,
+                    handleBlur,
+                    handleSubmit,
+                    isSubmitting,
+                    isValid,
+                    dirty,
+                  }) => (
+                    <F.FormikForm
+                      name="get-funded-es"
+                      data-netlify={true}
+                      netlify-honeypot="bot-field"
                     >
-                      <option value="DEFAULT" disabled>
-                        {data.form.select.default}
-                      </option>
-                      {data.form.select.options.map((item) => (
-                        <option key={item} value={item}>
-                          {item}
-                        </option>
-                      ))}
-                    </F.Select>
-                  </SelectWrapper>
-
-                  <Button type="submit" variant="primary" size="large">
-                    {data.form.btn}
-                  </Button>
-                </F.Form>
+                      <VisuallyHidden>
+                        <label>
+                          Don’t fill this out if you’re human:
+                          <input name="bot-field" tabIndex="-1" />
+                        </label>
+                      </VisuallyHidden>
+                      <F.Group>
+                        <VisuallyHidden>
+                          <label htmlFor="name">{data.form.name}</label>
+                        </VisuallyHidden>
+                        <F.FormikField
+                          $valid={errors.name && touched.name}
+                          name="name"
+                          placeholder={data.form.name}
+                        />
+                        <F.ErrorWrapper>
+                          <F.FormikError component="div" name="name" />
+                        </F.ErrorWrapper>
+                      </F.Group>
+                      <F.Group>
+                        <VisuallyHidden>
+                          <label htmlFor="email">{data.form.email}</label>
+                        </VisuallyHidden>
+                        <F.FormikField
+                          $valid={errors.email && touched.email}
+                          name="email"
+                          placeholder={data.form.email}
+                        />
+                        <F.ErrorWrapper>
+                          <F.FormikError component="div" name="email" />
+                        </F.ErrorWrapper>
+                      </F.Group>
+                      <F.Group>
+                        <VisuallyHidden>
+                          <label htmlFor="message">{data.form.phone}</label>
+                        </VisuallyHidden>
+                        <F.FormikField
+                          $valid={errors.phone && touched.phone}
+                          name="phone"
+                          placeholder={data.form.phone}
+                        />
+                        <F.ErrorWrapper>
+                          <F.FormikError component="div" name="phone" />
+                        </F.ErrorWrapper>
+                      </F.Group>
+                      <F.Group>
+                        <VisuallyHidden>
+                          <label htmlFor="message">{data.form.website}</label>
+                        </VisuallyHidden>
+                        <F.FormikField
+                          $valid={errors.website && touched.website}
+                          name="website"
+                          placeholder={data.form.website}
+                        />
+                        <F.ErrorWrapper>
+                          <F.FormikError component="div" name="website" />
+                        </F.ErrorWrapper>
+                      </F.Group>
+                      <F.Group>
+                        <SelectWrapper>
+                          <F.Label htmlFor="amr">
+                            {data.form.select.title}
+                          </F.Label>
+                          <F.Select
+                            name="amr"
+                            id="amr"
+                            defaultValue={"DEFAULT"}
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            required
+                          >
+                            <option value="DEFAULT" disabled>
+                              {data.form.select.default}
+                            </option>
+                            {data.form.select.options.map((item) => (
+                              <option key={item} value={item}>
+                                {item}
+                              </option>
+                            ))}
+                          </F.Select>
+                        </SelectWrapper>
+                      </F.Group>
+                      <F.Group>
+                        <Button
+                          disabled={isSubmitting || !isValid || !dirty}
+                          type="submit"
+                          variant="primary"
+                          size="large"
+                        >
+                          {data.form.btn}
+                        </Button>
+                      </F.Group>
+                    </F.FormikForm>
+                  )}
+                </Formik>
               </FormWrapper>
             </RightContentWrapper>
           </RightWrapper>
@@ -307,13 +373,10 @@ const ContentWrapper = styled.div`
 `
 const FormWrapper = styled.div`
   margin-top: 24px;
-  ${F.Form} {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
+
   .ButtonWrap button {
     width: 100%;
+    margin: 16px 0 0 0;
   }
 `
 
