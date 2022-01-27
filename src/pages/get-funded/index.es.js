@@ -78,10 +78,10 @@ const GetFunded = (props) => {
                       headers: {
                         "Content-Type": "application/x-www-form-urlencoded",
                       },
-                      body: encode({ "form-name": "get-funded", ...values }),
+                      body: encode({ "form-name": "get-funded-es", ...values }),
                     })
                       .then(() => {
-                        navigate("/thank-you/")
+                        navigate("/es/thank-you/")
                         actions.resetForm()
                       })
                       .catch(() => {
@@ -123,7 +123,7 @@ const GetFunded = (props) => {
                     dirty,
                   }) => (
                     <F.FormikForm
-                      name="get-funded"
+                      name="get-funded-es"
                       data-netlify={true}
                       netlify-honeypot="bot-field"
                     >
