@@ -1,37 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import { Formik } from "formik"
-import { graphql, navigate } from "gatsby"
+import { navigate } from "gatsby"
 
-import { Button, Link } from "./../../components"
+import { Button } from "./../../components"
 import F from "./../../styles/new/form"
 
 import { VisuallyHidden } from "./../../styles/utils"
-
-//EXTERNALISE GET FUNDED FORM (TOO MUCH CODE) AND PASS IN APPROPRIATE LANGUAGE QUERIES
-
-export const query = graphql`
-  query GetFundedFormComponent {
-    getFundedJson(language: { regex: "/en-GB/" }) {
-      content {
-        title
-        description
-        form {
-          name
-          email
-          phone
-          website
-          select {
-            title
-            default
-            options
-          }
-          btn
-        }
-      }
-    }
-  }
-`
 
 const encode = (data) => {
   return Object.keys(data)
@@ -39,18 +14,16 @@ const encode = (data) => {
     .join("&")
 }
 
-const GetFundedForm = (props) => {
-  const data = props.data.getFundedJson.content
-
+const GetFundedForm = ({ data, language }) => {
   return (
     <FormWrapper>
       <Formik
         initialValues={{
           name: "",
           email: "",
-          phoneNumber: "",
-          companyWebsite: "",
-          monthlyRevenue: "50,000",
+          phone: "",
+          website: "",
+          amr: "",
         }}
         onSubmit={(values, actions) => {
           fetch("/", {
@@ -58,10 +31,15 @@ const GetFundedForm = (props) => {
             headers: {
               "Content-Type": "application/x-www-form-urlencoded",
             },
-            body: encode({ "form-name": "get-funded", ...values }),
+            body: encode({
+              "form-name": `get-funded${language ? "-" + language : ""}`,
+              ...values,
+            }),
           })
             .then(() => {
-              navigate("/thank-you/")
+              navigate(
+                `${language ? "/" + language + "/thank-you/" : "/thank-you/"}`
+              )
               actions.resetForm()
             })
             .catch(() => {
@@ -78,14 +56,14 @@ const GetFundedForm = (props) => {
           if (!values.email || !emailRegex.test(values.email)) {
             errors.email = "Valid Email Required"
           }
-          if (!values.phoneNumber) {
-            errors.phoneNumber = "Phone Number Required"
+          if (!values.phone) {
+            errors.phone = "Phone Number Required"
           }
-          if (!values.companyWebsite) {
-            errors.companyWebsite = "Company Website Required"
+          if (!values.website) {
+            errors.website = "Company Website Required"
           }
-          if (!values.monthlyRevenue) {
-            errors.monthlyRevenue = "Monthly Revenue Required"
+          if (!values.amr) {
+            errors.amr = "Monthly Revenue Required"
           }
           return errors
         }}
@@ -102,7 +80,7 @@ const GetFundedForm = (props) => {
           dirty,
         }) => (
           <F.FormikForm
-            name="get-funded"
+            name={`get-funded${language ? "-" + language : ""}`}
             data-netlify={true}
             netlify-honeypot="bot-field"
           >
@@ -117,7 +95,7 @@ const GetFundedForm = (props) => {
                 <label htmlFor="name">{data.form.name}</label>
               </VisuallyHidden>
               <F.FormikField
-                valid={errors.name}
+                $valid={errors.name && touched.name}
                 name="name"
                 placeholder={data.form.name}
               />
@@ -130,7 +108,7 @@ const GetFundedForm = (props) => {
                 <label htmlFor="email">{data.form.email}</label>
               </VisuallyHidden>
               <F.FormikField
-                valid={errors.email}
+                $valid={errors.email && touched.email}
                 name="email"
                 placeholder={data.form.email}
               />
@@ -143,12 +121,12 @@ const GetFundedForm = (props) => {
                 <label htmlFor="message">{data.form.phone}</label>
               </VisuallyHidden>
               <F.FormikField
-                valid={errors.phoneNumber}
-                name="phoneNumber"
+                $valid={errors.phone && touched.phone}
+                name="phone"
                 placeholder={data.form.phone}
               />
               <F.ErrorWrapper>
-                <F.FormikError component="div" name="phoneNumber" />
+                <F.FormikError component="div" name="phone" />
               </F.ErrorWrapper>
             </F.Group>
             <F.Group>
@@ -156,18 +134,25 @@ const GetFundedForm = (props) => {
                 <label htmlFor="message">{data.form.website}</label>
               </VisuallyHidden>
               <F.FormikField
-                valid={errors.companyWebsite}
-                name="companyWebsite"
+                $valid={errors.website && touched.website}
+                name="website"
                 placeholder={data.form.website}
               />
               <F.ErrorWrapper>
-                <F.FormikError component="div" name="companyWebsite" />
+                <F.FormikError component="div" name="website" />
               </F.ErrorWrapper>
             </F.Group>
             <F.Group>
               <SelectWrapper>
                 <F.Label htmlFor="amr">{data.form.select.title}</F.Label>
-                <F.Select name="amr" id="amr" defaultValue={"DEFAULT"} required>
+                <F.Select
+                  name="amr"
+                  id="amr"
+                  defaultValue={"DEFAULT"}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  required
+                >
                   <option value="DEFAULT" disabled>
                     {data.form.select.default}
                   </option>
@@ -203,6 +188,11 @@ const FormWrapper = styled.div`
     width: 100%;
     margin: 16px 0 0 0;
   }
+`
+
+const SelectWrapper = styled(F.Group)`
+  margin-top: 16px;
+  /* margin-bottom: 40px; */
 `
 
 export default GetFundedForm
