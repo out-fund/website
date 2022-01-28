@@ -8,7 +8,6 @@ import T from "../../styles/new/typography"
 import { theme } from "./../../styles/new/theme"
 
 const SectionPartners = ({ data, form }) => {
-  console.log(data)
   const { title, description, image } = data
   return (
     <Section>
