@@ -65,7 +65,6 @@ const ButtonWrap = styled.div`
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-    white-space: nowrap;
     text-align: center;
     border: none;
     border-radius: 22px;
@@ -80,9 +79,10 @@ const ButtonWrap = styled.div`
     &:focus-visible {
       outline: 2px solid #000;
     }
-    /* ${theme.above.t.s} {
-      font-size: 17px;
-    } */
+
+    ${theme.above.t.s} {
+      white-space: nowrap;
+    }
 
     ${theme.above.d.m} {
       /* font-size: 18px; */

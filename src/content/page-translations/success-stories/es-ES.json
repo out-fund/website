@@ -3,13 +3,13 @@
   "seoTitle": "seo title",
   "seoKeywords": ["test", "keywors"],
   "hero": {
-    "title": "Founders and how Outfund helped them succeed ES",
-    "description": "Electric vehicle subscriptions. Biotech. Ultra-fast grocery delivery. Wine in a can. The world’s darkest paint. Vegan dog food. Some of the world’s most exciting brands are part of the Outfund portfolio. Each business is led by a founder with a vision. We know how hard it is to build that vision. That’s why we provide rocket-fuel funding to make scaling simple."
+    "title": "Los fundadores y cómo Outfund les ayudó a triunfar",
+    "description": "Suscripción de vehículos eléctricos. Biotecnología. Entrega ultrarrápida de alimentos. Vino en lata. La pintura más oscura del mundo. Comida vegana para perros. Algunas de las marcas más interesantes del mundo forman parte de la cartera de Outfund. Cada empresa está dirigida por un fundador con una visión. Sabemos lo difícil que es construir esa idea. Por eso proporcionamos una financiación que hace más fácil la escalabilidad de la empresa."
   },
   "otherBrands": {
-    "title": "We’ve funded 1000s <br/> of brands like yours",
+    "title": "Hemos financiado miles de marcas como la tuya",
     "card": {
-      "title": "Join us",
+      "title": "Únete",
       "btn": {
         "text": "Get funded",
         "url": "/get-funded/"

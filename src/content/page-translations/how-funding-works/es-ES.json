@@ -1,18 +1,44 @@
 {
   "language": "es-ES",
-  "seoTitle": "How the funding works",
+  "seoTitle": "Cómo funciona la financiación",
   "seoKeywords": ["test", "keywors"],
   "hero": {
-    "title": "How the funding works ES",
-    "description": "Outfund offers on-demand, non-dilutive funding. We combine the best of debt and equity finance, and avoid the worst of each."
+    "title": "Cómo funciona la financiación",
+    "description": "Outfund ofrece financiación a medida y sin dilución. Combinamos los mejores aspectos de la financiación de la deuda y del equity, y evitamos lo peor de cada una de ellas."
   },
   "humanCapital": {
-    "title": "Human capital",
-    "description": "We provide support beyond funding. Our portfolio team are here to regularly check in, advise on your growth, and make introductions to our extensive network of trusted partners. We give every founder access to services which are usually hidden behind the walls of venture capital. <br/><br/> Your Growth Manager is an advisor, sparring partner, troubleshooter, and follow-on funding manager, all rolled into one. At Outfund, we prioritise long-term relationships over short-term gains",
+    "title": "Capital humano",
+    "description": "Ofrecemos apoyo más allá de la financiación. Nuestro equipo está aquí para comprobar regularmente, asesorar sobre tu crecimiento y hacer presentaciones a nuestra amplia red de socios de confianza. Damos a todos los fundadores acceso a servicios que suelen estar ocultos tras los muros del capital riesgo.",
     "image": {
       "src": "./../../../images/human-capital.jpg",
       "alt": "Payment made ont the phone"
     }
+  },
+  "process": {
+    "title": "El Proceso",
+    "description": "Empieza a crecer ahora - Sin papeleo, sólo financiación tú alcance.",
+    "steps": [
+      {
+        "title": "1. Solicita la financiación",
+        "description": "Conecta tus cuentas de forma segura: nos sincronizamos con tus sistemas bancarios y pasarelas de pago existentes para analizar los datos de tus ingresos en tiempo real. Recibe una oferta a medida desde 10.000€ hasta 2 millones de€ en 48 horas."
+      },
+      {
+        "title": "2. Selecciona una oferta",
+        "description": "Empieza a gastar tus fondos: El 100% del capital está disponible para ser utilizado una vez seleccionada nuestra oferta. Aumenta tu inversión en marketing y stock para impulsar tu crecimiento."
+      },
+      {
+        "title": "3. Devuelve el capital según tus condiciones",
+        "description": "Devuelve el capital con una pequeña parte de tus nuevas ventas. Los reembolsos suben y bajan en función de tus ingresos. ¿Un mes tranquilo? Se reducen los pagos."
+      },
+      {
+        "title": "4. Escala más rapido",
+        "description": "Descubre nuestra red: te ponemos en contacto con socios de crecimiento, agencias especializadas y fondos de capital riesgo para que puedas alcanzar tus objetivos a largo plazo."
+      },
+      {
+        "title": "5. Top Up",
+        "description": "Accede a capital de seguimiento: tu gestor de crecimiento dedicado apoya tus necesidades continuas de capital para que puedas seguir escalando sin límites."
+      }
+    ]
   },
   "faq": {
     "title": "Frequently asked questions",

@@ -26,7 +26,7 @@ const links = {
   howItWorks: {
     text: {
       en: "How Funding Works",
-      es: "HIW Spanish",
+      es: "Cómo funciona",
     },
     url: "/how-funding-works/",
   },

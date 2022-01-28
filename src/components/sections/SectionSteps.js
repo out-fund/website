@@ -11,15 +11,14 @@ import Step3 from "./../../images/svg/how-it-works/step-3.svg"
 import Step4 from "./../../images/svg/how-it-works/step-4.svg"
 import Step5 from "./../../images/svg/how-it-works/step-5.svg"
 
-const SectionSteps = () => {
+const SectionSteps = ({ data }) => {
+  // console.log("hfw", data)
+  // const { title, description, steps } = data
   return (
     <Section>
       <Wrapper>
         <HeaderWrapper>
-          <SectionHeader
-            title="The Process"
-            description="Start growing now - No paperwork, just funding at your fingertips"
-          />
+          <SectionHeader title={data.title} description={data.description} />
         </HeaderWrapper>
         <ContentWrapper>
           <Step>
@@ -27,13 +26,8 @@ const SectionSteps = () => {
               <Step1 />
             </ImageWrapper>
             <TextWrapper>
-              <StepTitle>1. Apply for funding</StepTitle>
-              <StepDescription>
-                Securely connect your accounts: we sync with your existing
-                banking and payments systems to analyse your revenue data in
-                realtime. Receive a tailored offer from £10K to £2M within 48
-                hours.
-              </StepDescription>
+              <StepTitle>{data.steps[0].title}</StepTitle>
+              <StepDescription>{data.steps[0].description}</StepDescription>
             </TextWrapper>
           </Step>
           <Step>
@@ -41,12 +35,8 @@ const SectionSteps = () => {
               <Step2 />
             </ImageWrapper>
             <TextWrapper>
-              <StepTitle>2. Select an offer</StepTitle>
-              <StepDescription>
-                Start spending your funds: 100% of the capital is available to
-                use after selecting our offer. Ramp your investment in marketing
-                and inventory to fuel your growth.
-              </StepDescription>
+              <StepTitle>{data.steps[1].title}</StepTitle>
+              <StepDescription>{data.steps[1].description}</StepDescription>
             </TextWrapper>
           </Step>
           <Step>
@@ -54,12 +44,8 @@ const SectionSteps = () => {
               <Step3 />
             </ImageWrapper>
             <TextWrapper>
-              <StepTitle>3. Repay on your terms</StepTitle>
-              <StepDescription>
-                Pay back your balance with a small share of your new sales.
-                Payments flex up and down in line with your incoming revenue.
-                Quiet month? Lower repayments.
-              </StepDescription>
+              <StepTitle>{data.steps[2].title}</StepTitle>
+              <StepDescription>{data.steps[2].description}</StepDescription>
             </TextWrapper>
           </Step>
           <Step>
@@ -67,12 +53,8 @@ const SectionSteps = () => {
               <Step4 />
             </ImageWrapper>
             <TextWrapper>
-              <StepTitle>4. Scale faster</StepTitle>
-              <StepDescription>
-                Meet our network: we connect you with growth partners,
-                specialist agencies and VCs so you can hit your long-term
-                milestones.
-              </StepDescription>
+              <StepTitle>{data.steps[3].title}</StepTitle>
+              <StepDescription>{data.steps[3].description}</StepDescription>
             </TextWrapper>
           </Step>
           <Step>
@@ -80,12 +62,8 @@ const SectionSteps = () => {
               <Step5 />
             </ImageWrapper>
             <TextWrapper>
-              <StepTitle>5. Top up</StepTitle>
-              <StepDescription>
-                Access follow-on capital: your dedicated Growth Manager supports
-                your ongoing capital needs so you can keep scaling without
-                limits.
-              </StepDescription>
+              <StepTitle>{data.steps[4].title}</StepTitle>
+              <StepDescription>{data.steps[4].description}</StepDescription>
             </TextWrapper>
           </Step>
         </ContentWrapper>

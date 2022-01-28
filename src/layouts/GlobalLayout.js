@@ -20,6 +20,7 @@ const GlobalLayout = ({ children, pt }) => {
 export default GlobalLayout
 
 const GlobalWrapper = styled.div`
+  overflow-x: hidden;
   ${(props) =>
     props.pt
       ? `padding-top: 0px;`

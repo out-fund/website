@@ -25,6 +25,14 @@ export const query = graphql`
         description
         title
       }
+      process {
+        title
+        description
+        steps {
+          title
+          description
+        }
+      }
       humanCapital {
         image {
           src {
@@ -92,7 +100,7 @@ const HowFundingWorks = (props) => {
                 ],
               }}
             />
-            <SectionSteps />
+            <SectionSteps data={props.data.howFundingWorksJson.process} />
             <SectionWeAreInvesting
               data={props.data.howFundingWorksJson.humanCapital}
             />

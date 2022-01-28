@@ -48,7 +48,7 @@ const HowFundingWorks = (props) => {
                 ],
               }}
             />
-            <SectionSteps />
+            <SectionSteps data={props.data.howFundingWorksJson.process} />
             <SectionWeAreInvesting
               data={props.data.howFundingWorksJson.humanCapital}
             />
@@ -136,6 +136,14 @@ export const query = graphql`
       hero {
         description
         title
+      }
+      process {
+        title
+        description
+        steps {
+          title
+          description
+        }
       }
       humanCapital {
         image {

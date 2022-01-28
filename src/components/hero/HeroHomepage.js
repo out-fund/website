@@ -45,7 +45,9 @@ const HeroHomepage = ({ data }) => {
 
 export default HeroHomepage
 
-const Title = styled(T.H1)``
+const Title = styled(T.H1)`
+  /* max-width: 500px; */
+`
 const Description = styled(T.BodyLarge)``
 
 const LeftImage = styled.div`
@@ -178,5 +180,6 @@ const ButtonWrapper = styled.div`
   flex-direction: column;
   ${theme.above.t.l} {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 `

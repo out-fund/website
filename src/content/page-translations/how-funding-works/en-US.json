@@ -14,6 +14,32 @@
       "alt": "Payment made ont the phone"
     }
   },
+  "process": {
+    "title": "The Process",
+    "description": "Start growing now - No paperwork, just funding at your fingertips",
+    "steps": [
+      {
+        "title": "1. Apply for funding",
+        "description": "Securely connect your accounts: we sync with your existing banking and payments systems to analyse your revenue data in realtime. Receive a tailored offer from £10K to £2M within 48 hours."
+      },
+      {
+        "title": "2. Select an offer",
+        "description": "Start spending your funds: 100% of the capital is available to use after selecting our offer. Ramp your investment in marketing and inventory to fuel your growth."
+      },
+      {
+        "title": "3. Repay on your terms",
+        "description": "Pay back your balance with a small share of your new sales. Payments flex up and down in line with your incoming revenue. Quiet month? Lower repayments."
+      },
+      {
+        "title": "4. Scale faster",
+        "description": "Meet our network: we connect you with growth partners, specialist agencies and VCs so you can hit your long-term milestones."
+      },
+      {
+        "title": "5. Top up",
+        "description": "Access follow-on capital: your dedicated Growth Manager supports your ongoing capital needs so you can keep scaling without limits."
+      }
+    ]
+  },
   "faq": {
     "title": "Frequently asked questions",
     "questions": [
