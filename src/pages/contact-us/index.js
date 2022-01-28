@@ -61,13 +61,15 @@ const ContactUs = (props) => {
               {feedback.btn}
             </Button>
           </Box>
-          <Form style={{ gridArea: "emailForm" }}>
-            <T.H4 as="h2" style={{ maxWidth: 400 }}>
-              {emailForm.title}
-            </T.H4>
-            {/* TODO Add html parser to the title props everywhere https://www.npmjs.com/package/html-react-parser */}
-            <ContactUsForm data={emailForm} language="" />
-          </Form>
+          <FormWrapper>
+            <Form style={{ gridArea: "emailForm" }}>
+              <T.H4 as="h2" style={{ maxWidth: 400 }}>
+                {emailForm.title}
+              </T.H4>
+              {/* TODO Add html parser to the title props everywhere https://www.npmjs.com/package/html-react-parser */}
+              <ContactUsForm data={emailForm} language="" />
+            </Form>
+          </FormWrapper>
           <Box style={{ gridArea: "demoCall" }}>
             <T.H4 as="h2">{demoCall.title}</T.H4>
             <T.Body>{demoCall.description}</T.Body>
@@ -175,6 +177,15 @@ const Form = styled.div`
     button {
       width: 100%;
     }
+  }
+`
+
+const FormWrapper = styled.div`
+  background-color: ${theme.color.background.emphesized};
+  padding: 32px 40px;
+  border-radius: 10px;
+  h4 {
+    margin-bottom: 24px;
   }
 `
 
