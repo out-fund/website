@@ -13,6 +13,7 @@ import {
   SectionHeader,
   Section,
   SectionRegulated,
+  ContactUsForm,
 } from "./../../components"
 import T from "../../styles/new/typography"
 import F from "../../styles/new/form"
@@ -65,24 +66,7 @@ const ContactUs = (props) => {
               {emailForm.title}
             </T.H4>
             {/* TODO Add html parser to the title props everywhere https://www.npmjs.com/package/html-react-parser */}
-            <F.Form action="">
-              <F.InputText
-                type="text"
-                name="fullName"
-                placeholder={emailForm.form.fullName}
-              />
-              <F.InputEmail
-                type="email"
-                name="businessEmail"
-                placeholder={emailForm.form.email}
-              />
-              <F.TextArea
-                name="message"
-                rows="4"
-                placeholder={emailForm.form.message}
-              />
-              <Button variant="primary">{emailForm.form.btn}</Button>
-            </F.Form>
+            <ContactUsForm data={emailForm} language="" />
           </Form>
           <Box style={{ gridArea: "demoCall" }}>
             <T.H4 as="h2">{demoCall.title}</T.H4>
