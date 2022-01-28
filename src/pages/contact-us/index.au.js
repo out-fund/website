@@ -67,7 +67,7 @@ const ContactUs = (props) => {
                 {emailForm.title}
               </T.H4>
               {/* TODO Add html parser to the title props everywhere https://www.npmjs.com/package/html-react-parser */}
-              <ContactUsForm data={emailForm} language="" />
+              <ContactUsForm data={emailForm} language="au" />
             </Form>
           </FormWrapper>
           <Box style={{ gridArea: "demoCall" }}>
