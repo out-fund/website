@@ -155,12 +155,18 @@ const FormWrapper = styled.div`
 const Form = styled.div`
   ${F.Form} {
     display: grid;
+    grid-template-areas:
+      "liveChat"
+      "emailForm"
+      "demoCall"
+      "support"
+      "feedback";
     grid-template-rows: auto;
-    margin-top: 16px;
-    padding: 32px 24px;
-
+    grid-template-columns: 1fr;
+    max-width: 1170px;
     background-color: ${theme.color.background.emphesized};
     border-radius: 10px;
+    row-gap: 40px;
 
     row-gap: 24px;
     ${theme.above.l.m} {

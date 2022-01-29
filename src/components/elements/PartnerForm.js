@@ -13,8 +13,10 @@ const encode = (data) => {
     .join("&")
 }
 
-const PartnerForm = ({ data, language }) => {
-  const [buttonSent, setButtonSent] = useState("Become a partner")
+const PartnerForm = ({ form, language }) => {
+  const [buttonSent, setButtonSent] = useState(form.btn.text)
+
+  console.log(form)
 
   return (
     <FormWrapper>
@@ -83,12 +85,12 @@ const PartnerForm = ({ data, language }) => {
             </VisuallyHidden>
             <F.Group>
               <VisuallyHidden>
-                <label htmlFor="businessName">Business Name</label>
+                <label htmlFor="businessName">{form.company}</label>
               </VisuallyHidden>
               <F.FormikField
                 $valid={errors.businessName && touched.businessName}
                 name="businessName"
-                placeholder="Company name"
+                placeholder={form.company}
               />
               <F.ErrorWrapper>
                 <F.FormikError component="div" name="businessName" />
@@ -96,12 +98,12 @@ const PartnerForm = ({ data, language }) => {
             </F.Group>
             <F.Group>
               <VisuallyHidden>
-                <label htmlFor="fullName">Your name</label>
+                <label htmlFor="fullName">{form.name}</label>
               </VisuallyHidden>
               <F.FormikField
                 $valid={errors.fullName && touched.fullName}
                 name="fullName"
-                placeholder="Your name"
+                placeholder={form.name}
               />
               <F.ErrorWrapper>
                 <F.FormikError component="div" name="fullName" />
@@ -109,13 +111,13 @@ const PartnerForm = ({ data, language }) => {
             </F.Group>
             <F.Group>
               <VisuallyHidden>
-                <label htmlFor="email">Your email</label>
+                <label htmlFor="email">{form.email}</label>
               </VisuallyHidden>
               <F.FormikField
                 $valid={errors.email && touched.email}
                 name="email"
                 rows="4"
-                placeholder="Your email"
+                placeholder={form.email}
               />
               <F.ErrorWrapper>
                 <F.FormikError component="div" name="email" />

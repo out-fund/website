@@ -22,7 +22,7 @@ const SectionPartners = ({ data, form }) => {
 
           <FormWrapper>
             <T.H4>Partner with us today!</T.H4>
-            <PartnerForm />
+            <PartnerForm form={form} />
           </FormWrapper>
         </ContentWrapper>
       </Wrapper>
