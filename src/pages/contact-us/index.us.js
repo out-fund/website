@@ -16,7 +16,6 @@ import {
   ContactUsForm,
 } from "./../../components"
 import T from "../../styles/new/typography"
-import F from "../../styles/new/form"
 import { theme } from "./../../styles/new/theme"
 
 export const query = graphql`
@@ -236,38 +235,5 @@ const LiveChat = styled.div`
     grid-template-columns: 284px auto;
     align-items: center;
     column-gap: 16px;
-  }
-`
-
-const Form = styled.div`
-  ${F.Form} {
-    display: grid;
-    grid-template-rows: auto;
-    margin-top: 16px;
-    padding: 32px 24px;
-
-    background-color: ${theme.color.background.emphesized};
-    border-radius: 10px;
-
-    row-gap: 24px;
-    ${theme.above.l.m} {
-      padding: 40px 32px;
-    }
-
-    ${theme.above.d.m} {
-      padding: 64px 56px;
-    }
-    button {
-      width: 100%;
-    }
-  }
-`
-
-const FormWrapper = styled.div`
-  background-color: ${theme.color.background.emphesized};
-  padding: 32px 40px;
-  border-radius: 10px;
-  h4 {
-    margin-bottom: 24px;
   }
 `

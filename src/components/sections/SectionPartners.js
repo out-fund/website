@@ -2,8 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-import { Section, SectionHeader, Button, PartnerForm } from "./../../components"
-import F from "./../../styles/new/form"
+import { Section, SectionHeader, PartnerForm } from "./../../components"
 import T from "../../styles/new/typography"
 import { theme } from "./../../styles/new/theme"
 

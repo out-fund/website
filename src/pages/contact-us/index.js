@@ -16,7 +16,6 @@ import {
   ContactUsForm,
 } from "./../../components"
 import T from "../../styles/new/typography"
-import F from "../../styles/new/form"
 import { theme } from "./../../styles/new/theme"
 
 const ContactUs = (props) => {
