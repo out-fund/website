@@ -2,13 +2,11 @@ import React from "react"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-import { Section, SectionHeader, Button } from "./../../components"
-import F from "./../../styles/new/form"
+import { Section, SectionHeader, PartnerForm } from "./../../components"
 import T from "../../styles/new/typography"
 import { theme } from "./../../styles/new/theme"
 
-const SectionPartners = ({ data, form }) => {
-  console.log(data)
+const SectionPartners = ({ data, form, language }) => {
   const { title, description, image } = data
   return (
     <Section>
@@ -23,25 +21,7 @@ const SectionPartners = ({ data, form }) => {
 
           <FormWrapper>
             <T.H4>Partner with us today!</T.H4>
-            <F.Form action="">
-              <F.InputText
-                type="text"
-                name="fullName"
-                placeholder="Company Name"
-              />
-              <F.InputText
-                type="text"
-                name="fullName"
-                placeholder="Your Name"
-              />
-              <F.InputEmail
-                type="email"
-                name="businessEmail"
-                placeholder="Your email"
-              />
-
-              <Button variant="primary">Become a partner</Button>
-            </F.Form>
+            <PartnerForm form={form} language={language} />
           </FormWrapper>
         </ContentWrapper>
       </Wrapper>
@@ -56,12 +36,6 @@ const FormWrapper = styled.div`
   border-radius: 10px;
   h4 {
     margin-bottom: 24px;
-  }
-  input {
-    margin-bottom: 16px;
-  }
-  .ButtonWrap {
-    margin-top: 16px;
   }
 `
 const Wrapper = styled.div`

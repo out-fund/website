@@ -13,9 +13,9 @@ import {
   SectionHeader,
   Section,
   SectionRegulated,
+  ContactUsForm,
 } from "./../../components"
 import T from "../../styles/new/typography"
-import F from "../../styles/new/form"
 import { theme } from "./../../styles/new/theme"
 
 const ContactUs = (props) => {
@@ -60,30 +60,8 @@ const ContactUs = (props) => {
               {feedback.btn}
             </Button>
           </Box>
-          <Form style={{ gridArea: "emailForm" }}>
-            <T.H4 as="h2" style={{ maxWidth: 400 }}>
-              {emailForm.title}
-            </T.H4>
-            {/* TODO Add html parser to the title props everywhere https://www.npmjs.com/package/html-react-parser */}
-            <F.Form action="">
-              <F.InputText
-                type="text"
-                name="fullName"
-                placeholder={emailForm.form.fullName}
-              />
-              <F.InputEmail
-                type="email"
-                name="businessEmail"
-                placeholder={emailForm.form.email}
-              />
-              <F.TextArea
-                name="message"
-                rows="4"
-                placeholder={emailForm.form.message}
-              />
-              <Button variant="primary">{emailForm.form.btn}</Button>
-            </F.Form>
-          </Form>
+          {/* TODO Add html parser to the title props everywhere https://www.npmjs.com/package/html-react-parser */}
+          <ContactUsForm data={emailForm} language="es" />
           <Box style={{ gridArea: "demoCall" }}>
             <T.H4 as="h2">{demoCall.title}</T.H4>
             <T.Body>{demoCall.description}</T.Body>
@@ -167,30 +145,6 @@ const LiveChat = styled.div`
     grid-template-columns: 284px auto;
     align-items: center;
     column-gap: 16px;
-  }
-`
-
-const Form = styled.div`
-  ${F.Form} {
-    display: grid;
-    grid-template-rows: auto;
-    margin-top: 16px;
-    padding: 32px 24px;
-
-    background-color: ${theme.color.background.emphesized};
-    border-radius: 10px;
-
-    row-gap: 24px;
-    ${theme.above.l.m} {
-      padding: 40px 32px;
-    }
-
-    ${theme.above.d.m} {
-      padding: 64px 56px;
-    }
-    button {
-      width: 100%;
-    }
   }
 `
 

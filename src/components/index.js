@@ -48,6 +48,8 @@ import ThreeColumnIcons from "./sections/ThreeColumnIcons"
 import CardBlog from "./cards/CardBlog"
 import SectionSteps from "./sections/SectionSteps"
 import GetFundedForm from "./elements/GetFundedForm"
+import ContactUsForm from "./elements/ContactUsForm"
+import PartnerForm from "./elements/PartnerForm"
 
 export {
   SectionWeAreInvesting,
@@ -62,6 +64,8 @@ export {
   CardCta,
   SectionFindOut,
   GetFundedForm,
+  ContactUsForm,
+  PartnerForm,
   //
   Main,
   Navbar,
