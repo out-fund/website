@@ -6,7 +6,7 @@ import { Section, SectionHeader, PartnerForm } from "./../../components"
 import T from "../../styles/new/typography"
 import { theme } from "./../../styles/new/theme"
 
-const SectionPartners = ({ data, form }) => {
+const SectionPartners = ({ data, form, language }) => {
   const { title, description, image } = data
   return (
     <Section>
@@ -21,7 +21,7 @@ const SectionPartners = ({ data, form }) => {
 
           <FormWrapper>
             <T.H4>Partner with us today!</T.H4>
-            <PartnerForm form={form} />
+            <PartnerForm form={form} language={language} />
           </FormWrapper>
         </ContentWrapper>
       </Wrapper>

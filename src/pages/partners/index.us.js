@@ -59,6 +59,7 @@ const Partners = (props) => {
         <SectionPartners
           data={props.data.partnersJson.ourPartners}
           form={props.data.partnersJson.form}
+          language="us"
         />
         <SectionWhy data={props.data.partnersJson.why} />
       </Main>
