@@ -44,6 +44,9 @@ const ContactUsForm = ({ data, language }) => {
             })
               .then(() => {
                 setButtonSent("✓")
+                setTimeout(() => {
+                  setButtonSent(data.form.btn)
+                }, 3000)
                 actions.resetForm()
               })
               .catch(() => {

@@ -37,6 +37,9 @@ const PartnerForm = ({ form, language }) => {
           })
             .then(() => {
               setButtonSent("✓")
+              setTimeout(() => {
+                setButtonSent(form.btn.text)
+              }, 3000)
               actions.resetForm()
             })
             .catch(() => {
