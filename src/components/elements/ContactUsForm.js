@@ -4,6 +4,8 @@ import { Formik } from "formik"
 
 import { Button } from "./../../components"
 import F from "./../../styles/new/form"
+import T from "./../../styles/new/typography"
+
 import { theme } from "./../../styles/new/theme"
 
 import { VisuallyHidden } from "./../../styles/utils"
@@ -17,8 +19,13 @@ const encode = (data) => {
 const ContactUsForm = ({ data, language }) => {
   const [buttonSent, setButtonSent] = useState(data.form.btn)
 
+  console.log(data)
+
   return (
     <Form style={{ gridArea: "emailForm" }}>
+      <T.H4 as="h2" style={{ maxWidth: 400 }}>
+        {data.title}
+      </T.H4>
       <FormWrapper>
         <Formik
           initialValues={{
@@ -117,6 +124,7 @@ const ContactUsForm = ({ data, language }) => {
                   $valid={errors.message && touched.message}
                   name="message"
                   rows="4"
+                  component="textarea"
                   placeholder={data.form.message}
                 />
                 <F.ErrorWrapper>
@@ -145,6 +153,26 @@ export default ContactUsForm
 
 const FormWrapper = styled.div`
   margin-top: 24px;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  max-width: 1170px;
+  background-color: ${theme.color.background.emphesized};
+  border-radius: 10px;
+  row-gap: 40px;
+  padding: 25px;
+
+  row-gap: 24px;
+  ${theme.above.l.m} {
+    padding: 40px 32px;
+  }
+
+  ${theme.above.d.m} {
+    padding: 64px 56px;
+  }
+  button {
+    width: 100%;
+  }
 
   .ButtonWrap button {
     width: 100%;

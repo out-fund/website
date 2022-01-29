@@ -61,15 +61,8 @@ const ContactUs = (props) => {
               {feedback.btn}
             </Button>
           </Box>
-          <FormWrapper>
-            <Form style={{ gridArea: "emailForm" }}>
-              <T.H4 as="h2" style={{ maxWidth: 400 }}>
-                {emailForm.title}
-              </T.H4>
-              {/* TODO Add html parser to the title props everywhere https://www.npmjs.com/package/html-react-parser */}
-              <ContactUsForm data={emailForm} language="" />
-            </Form>
-          </FormWrapper>
+          {/* TODO Add html parser to the title props everywhere https://www.npmjs.com/package/html-react-parser */}
+          <ContactUsForm data={emailForm} language="" />
           <Box style={{ gridArea: "demoCall" }}>
             <T.H4 as="h2">{demoCall.title}</T.H4>
             <T.Body>{demoCall.description}</T.Body>
@@ -153,39 +146,6 @@ const LiveChat = styled.div`
     grid-template-columns: 284px auto;
     align-items: center;
     column-gap: 16px;
-  }
-`
-
-const Form = styled.div`
-  ${F.Form} {
-    display: grid;
-    grid-template-rows: auto;
-    margin-top: 16px;
-    padding: 32px 24px;
-
-    background-color: ${theme.color.background.emphesized};
-    border-radius: 10px;
-
-    row-gap: 24px;
-    ${theme.above.l.m} {
-      padding: 40px 32px;
-    }
-
-    ${theme.above.d.m} {
-      padding: 64px 56px;
-    }
-    button {
-      width: 100%;
-    }
-  }
-`
-
-const FormWrapper = styled.div`
-  background-color: ${theme.color.background.emphesized};
-  padding: 32px 40px;
-  border-radius: 10px;
-  h4 {
-    margin-bottom: 24px;
   }
 `
 

@@ -16,8 +16,6 @@ const encode = (data) => {
 const PartnerForm = ({ form, language }) => {
   const [buttonSent, setButtonSent] = useState(form.btn.text)
 
-  console.log(form)
-
   return (
     <FormWrapper>
       <Formik

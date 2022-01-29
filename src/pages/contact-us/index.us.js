@@ -151,15 +151,8 @@ const ContactUs = (props) => {
               {feedback.btn}
             </Button>
           </Box>
-          <FormWrapper>
-            <Form style={{ gridArea: "emailForm" }}>
-              <T.H4 as="h2" style={{ maxWidth: 400 }}>
-                {emailForm.title}
-              </T.H4>
-              {/* TODO Add html parser to the title props everywhere https://www.npmjs.com/package/html-react-parser */}
-              <ContactUsForm data={emailForm} language="us" />
-            </Form>
-          </FormWrapper>
+          {/* TODO Add html parser to the title props everywhere https://www.npmjs.com/package/html-react-parser */}
+          <ContactUsForm data={emailForm} language="us" />
           <Box style={{ gridArea: "demoCall" }}>
             <T.H4 as="h2">{demoCall.title}</T.H4>
             <T.Body>{demoCall.description}</T.Body>
