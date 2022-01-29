@@ -19,8 +19,6 @@ const encode = (data) => {
 const ContactUsForm = ({ data, language }) => {
   const [buttonSent, setButtonSent] = useState(data.form.btn)
 
-  console.log(data)
-
   return (
     <Form style={{ gridArea: "emailForm" }}>
       <T.H4 as="h2" style={{ maxWidth: 400 }}>
@@ -80,7 +78,7 @@ const ContactUsForm = ({ data, language }) => {
             dirty,
           }) => (
             <F.FormikForm
-              name={`get-funded${language ? "-" + language : ""}`}
+              name={`contact-us${language ? "-" + language : ""}`}
               data-netlify={true}
               netlify-honeypot="bot-field"
             >
