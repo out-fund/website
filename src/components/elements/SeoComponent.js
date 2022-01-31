@@ -66,7 +66,15 @@ const SeoComponent = ({ title, description, image, article }) => {
       {seo.description && (
         <meta name="twitter:description" content={seo.description} />
       )}
-      {seo.image && <meta name="twitter:image" content={seo.image} />}
+      {seo.image && langKey !== "es" && (
+        <meta name="twitter:image" content={seo.image} />
+      )}
+      {seo.image && langKey === "es" && (
+        <meta
+          name="twitter:image"
+          content="https://www.out.fund/Outfund-es.png"
+        />
+      )}
     </Helmet>
   )
 }

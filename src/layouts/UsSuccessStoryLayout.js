@@ -8,7 +8,7 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import LangLayout from "./../layouts/us"
-import { CardFounderName, Main, Button } from "./../components"
+import { CardFounderName, Main, Button, SeoComponent } from "./../components"
 import { theme } from "./../styles/new/theme"
 import T from "./../styles/new/typography"
 
@@ -76,6 +76,10 @@ const SuccessStoryLayout = ({ data }) => {
   // console.log("ss", mdx)
   return (
     <LangLayout>
+      <SeoComponent
+        title={mdx.frontmatter.seo.title}
+        description={mdx.frontmatter.seo.description}
+      />
       <MDXProvider
         components={{
           h1: T.H1,
@@ -235,6 +239,10 @@ export const query = graphql`
       body
       frontmatter {
         title
+        seo {
+          title
+          description
+        }
         founderCard {
           image {
             alt
