@@ -5,7 +5,6 @@ import { Section, CardLogoReadMore } from "./../../components"
 import { theme } from "./../../styles/new/theme"
 
 const SectionFeaturedCards = (props) => {
-  // console.log("SectionFeaturedCards", props.data)
   return (
     <Section>
       <Wrapper>

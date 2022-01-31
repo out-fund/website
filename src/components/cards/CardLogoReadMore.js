@@ -7,15 +7,20 @@ import { Button } from "./../../components"
 import { VisuallyHidden } from "./../../styles/utils"
 import { theme } from "./../../styles/new/theme"
 
+import { useLangProvider } from "./../../utils/LangProvider"
+
 const CardLogoReadMore = (props) => {
   const { tag, company, logo, btn, image, bgc } = props
-
+  const langKey = useLangProvider()
   return (
     <Wrapper bgc={bgc} {...props}>
       <TextWrapper>
         {tag && (
           <Tag tagColor={tag.color}>
-            <span>{tag.text}</span>
+            {(langKey === "es" || langKey === "en") && <span>{tag.text}</span>}
+            {(langKey === "au" || langKey === "us") && (
+              <span>{tag.text.replace("£", "$")}</span>
+            )}
             <VisuallyHidden>{company}</VisuallyHidden>
           </Tag>
         )}
