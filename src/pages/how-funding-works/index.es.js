@@ -13,6 +13,7 @@ import {
   SectionWeAreInvesting,
   SectionFaq,
   Button,
+  SeoComponent,
 } from "./../../components"
 import { theme } from "./../../styles/new/theme"
 import T from "./../../styles/new/typography"
@@ -20,6 +21,10 @@ import T from "./../../styles/new/typography"
 const HowFundingWorks = (props) => {
   return (
     <LangLayout>
+      <SeoComponent
+        title="Cómo funciona"
+        description="Outfund ofrece financiación a medida y sin dilución. Combinamos los mejores aspectos de la financiación de la deuda y del equity, y evitamos lo peor de cada una de ellas."
+      />
       <HeroSimple data={props.data.howFundingWorksJson.hero} />
       <Main>
         <Wrapper>

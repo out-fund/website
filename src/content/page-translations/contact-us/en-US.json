@@ -1,7 +1,5 @@
 {
   "language": "en-US",
-  "seoTitle": "seo title",
-  "seoKeywords": ["test", "keywors"],
   "hero": {
     "title": "Want to know more?<br/> Get in touch"
   },
@@ -21,18 +19,18 @@
   },
   "feedback": {
     "title": "🥇 How can we improve?",
-    "description": "We’re obsessed with getting better everyday. If there’s anything we could fine-tune, let us know.",
+    "description": "We're obsessed with getting better everyday. If there's anything we could fine-tune, let us know.",
     "btn": "Give us feedback",
     "btnUrl": "#"
   },
   "demoCall": {
     "title": "☎️ Fancy a chat?",
-    "description": "We’re always happy to talk about your business and how we can support your growth.",
+    "description": "We're always happy to talk about your business and how we can support your growth.",
     "btn": "Schedule a call",
     "btnUrl": "/"
   },
   "emailForm": {
-    "title": "Prefer email? Drop us a line using the form below and we’ll get back to you",
+    "title": "Prefer email? Drop us a line using the form below and we'll get back to you",
     "form": {
       "fullName": "Full Name",
       "email": "Business Email",

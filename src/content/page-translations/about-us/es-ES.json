@@ -1,7 +1,5 @@
 {
   "language": "es-ES",
-  "seoTitle": "About",
-  "seoKeywords": ["test", "keywors"],
   "hero": {
     "title": "Somos el mayor inversor de Ecommerce del Reino Unido y de España",
     "description": "Nadie dijo que fundar, dirigir y hacer crecer tu propia empresa fuera fácil. Pero el acceso al capital sí debería serlo. Creamos Outfund porque pensamos que los fundadores como tú no tenían las opciones de financiación adecuadas. Estamos cambiando la forma en que las empresas aceleran su negocio.",
@@ -18,7 +16,7 @@
   ],
   "weInvesting": {
     "title": "We invest in more than just numbers",
-    "description": "We are data-driven, but we value the human story in every business. There’s more to your vision than an algorithm. And because we didn’t think traditional finance providers were doing enough for founders like you, we designed Outfund. Non-dilutive capital so you can grow on your terms.",
+    "description": "We are data-driven, but we value the human story in every business. There's more to your vision than an algorithm. And because we didn't think traditional finance providers were doing enough for founders like you, we designed Outfund. Non-dilutive capital so you can grow on your terms.",
     "image": {
       "src": "./../../../images/PaymentCounterPhone.jpg",
       "alt": "alt"

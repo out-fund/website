@@ -1,6 +1,9 @@
 {
   "language": "en-US",
-  "seoTitle": "Growth capital",
+  "seo": {
+    "title": "Growth Capital for your Online Businesses",
+    "description": "Supercharged funding from $10K to $2M for your marketing & inventory."
+  },
   "hero": {
     "title": "Growth capital for founders like You",
     "description": "Supercharged funding from $10K to $2M for your marketing & inventory.",
@@ -19,7 +22,7 @@
   },
   "weFunded": {
     "title": "We fund brands like yours",
-    "description": "We want growing businesses to succeed sooner. We help you build your vision with capital that’s fast, fair, and more human.",
+    "description": "We want growing businesses to succeed sooner. We help you build your vision with capital that's fast, fair, and more human.",
     "cards": {
       "feel": {
         "tag": {
@@ -61,7 +64,7 @@
   },
   "weInvesting": {
     "title": "We convert future revenue streams into up-front capital",
-    "description": "We provide the capital you need, when you need it. No dilution, no personal guarantees, no interest rates. It’s funding, made fairer. <br/><br/> Simply connect your digital payment providers with Outfund, and we will generate bespoke funding offers based on your revenue data within 48 hours. Invest in growth, and repay as you make sales.",
+    "description": "We provide the capital you need, when you need it. No dilution, no personal guarantees, no interest rates. It's funding, made fairer. <br/><br/> Simply connect your digital payment providers with Outfund, and we will generate bespoke funding offers based on your revenue data within 48 hours. Invest in growth, and repay as you make sales.",
     "image": {
       "src": "./../../../images/PaymentCounterPhone.jpg",
       "alt": "Payment made ont the phone"

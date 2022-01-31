@@ -1,10 +1,8 @@
 {
   "language": "en-GB",
-  "seoTitle": "seo title",
-  "seoKeywords": ["test", "keywors"],
   "hero": {
-    "title": "We’re always here to help answer your questions",
-    "description": "Learn the ins and outs of how the funding works. If you’d like to learn more about joining our portfolio, get in touch."
+    "title": "We're always here to help answer your questions",
+    "description": "Learn the ins and outs of how the funding works. If you'd like to learn more about joining our portfolio, get in touch."
   },
   "faq": [
     {
@@ -28,7 +26,7 @@
         },
         {
           "question": "How does it work?",
-          "answer": "<ol><li>You apply for funding with Outfund.</li><li>Our model uses your revenues, ad performance and third party data to build you a unique offer for capital at a flat fixed fee.</li> <li>You use the funding to grow your revenues.</li> <li>You pay back the original funding as well as the fixed fee with small amounts of your revenue over time.</li> <li>We automatically calculate how much more we can advance next time.</li></ol><br/> You don’t give up any stake in your business and, unlike a loan, your total repayment is capped from the start."
+          "answer": "<ol><li>You apply for funding with Outfund.</li><li>Our model uses your revenues, ad performance and third party data to build you a unique offer for capital at a flat fixed fee.</li> <li>You use the funding to grow your revenues.</li> <li>You pay back the original funding as well as the fixed fee with small amounts of your revenue over time.</li> <li>We automatically calculate how much more we can advance next time.</li></ol><br/> You don't give up any stake in your business and, unlike a loan, your total repayment is capped from the start."
         },
         {
           "question": "How do I apply?",
@@ -49,7 +47,7 @@
         },
         {
           "question": "What fee do you charge?",
-          "answer": "We charge one flat, fixed fee ranging from 6%-12% of the funding. For a £100,000 investment at a 6% flat fee, you’ll pay back £106,000 in pre-agreed chunks of your revenue. <br/><br/> You will know exactly how much you’ll pay back before you accept the offer and the fee will never change. There’s no interest and our fee doesn’t compound over time."
+          "answer": "We charge one flat, fixed fee ranging from 6%-12% of the funding. For a £100,000 investment at a 6% flat fee, you'll pay back £106,000 in pre-agreed chunks of your revenue. <br/><br/> You will know exactly how much you'll pay back before you accept the offer and the fee will never change. There's no interest and our fee doesn't compound over time."
         }
       ]
     },
@@ -66,11 +64,11 @@
         },
         {
           "question": "How long does repayment take",
-          "answer": "Repayment is based on your future revenues so the time to repay varies depending on your business and the revenue share we agree. We usually aim for a 6 month repayment period but we’ll advise you on your expected repayment time after your offer completes."
+          "answer": "Repayment is based on your future revenues so the time to repay varies depending on your business and the revenue share we agree. We usually aim for a 6 month repayment period but we'll advise you on your expected repayment time after your offer completes."
         },
         {
           "question": "What is my repayment percentage?",
-          "answer": "The repayment percentage is the percentage of revenue we take while you repay your funding. We typically set it at 1-20% of future revenue over the course of repayment, to keep a healthy cash flow in your day to day operations. We’ll work with you to find a rate that fits your business."
+          "answer": "The repayment percentage is the percentage of revenue we take while you repay your funding. We typically set it at 1-20% of future revenue over the course of repayment, to keep a healthy cash flow in your day to day operations. We'll work with you to find a rate that fits your business."
         },
         {
           "question": "How long does the whole process take?",
@@ -129,11 +127,11 @@
         },
         {
           "question": "My marketing card has been declined. What do I do?",
-          "answer": "If this happens, you’ll receive an email informing you why the card was declined. <br/><br/> It’s worth checking the CVC expiry date and card number on your Outfund dashboard to make sure you entered it correctly. <br/><br/> Please note that large transactions may be blocked for fraud prevention. If you need to make a large transaction, please let us know ahead of time so we can ensure it is successful."
+          "answer": "If this happens, you'll receive an email informing you why the card was declined. <br/><br/> It's worth checking the CVC expiry date and card number on your Outfund dashboard to make sure you entered it correctly. <br/><br/> Please note that large transactions may be blocked for fraud prevention. If you need to make a large transaction, please let us know ahead of time so we can ensure it is successful."
         },
         {
           "question": "How do I get an Outfund marketing card?",
-          "answer": "We’ll send you a marketing card on request once your investment has been confirmed."
+          "answer": "We'll send you a marketing card on request once your investment has been confirmed."
         },
         {
           "question": "What is an Outfund marketing card?",

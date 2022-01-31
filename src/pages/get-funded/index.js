@@ -9,7 +9,7 @@ import LogoWhite from "./../../images/svg/Outfund-logo-white.svg"
 import LogoDark from "./../../images/svg/Outfund-logo.svg"
 import LogoStrip from "./../../images/svg/get-funded-logo-strip.svg"
 
-import { GetFundedForm, Link } from "./../../components"
+import { GetFundedForm, Link, SeoComponent } from "./../../components"
 import T from "../../styles/new/typography"
 import { theme } from "./../../styles/new/theme"
 import { Triangle } from "./../../styles/utils"
@@ -42,6 +42,10 @@ const GetFunded = (props) => {
 
   return (
     <LangLayout noNavbar pt>
+      <SeoComponent
+        title="Get Funded"
+        description="We've funded 1000s of brands like yours"
+      />
       <Wrapper>
         <ContentWrapper>
           <LeftWrapper>
@@ -56,7 +60,7 @@ const GetFunded = (props) => {
               </LeftTextWrapper>
               <LogoSection>
                 <LogoSectionTitle>
-                  We’ve funded 100s of brands like yours
+                  We've funded 1000s of brands like yours
                 </LogoSectionTitle>
                 <LogoStripWrapper>
                   <LogoStrip />

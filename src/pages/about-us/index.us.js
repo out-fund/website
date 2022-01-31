@@ -12,6 +12,7 @@ import {
   HeroImage,
   SectionAboutUs,
   SectionWeValue,
+  SeoComponent,
 } from "./../../components"
 
 export const query = graphql`
@@ -137,6 +138,10 @@ export const query = graphql`
 const AboutUs = (props) => {
   return (
     <LangLayout>
+      <SeoComponent
+        title="About us"
+        description="We're the US's largest eCommerce investor"
+      />
       <HeroSimple data={props.data.aboutUsJson.hero} />
       <Main>
         <HeroImage data={props.data.aboutUsJson.hero.image} />

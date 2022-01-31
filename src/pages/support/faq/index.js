@@ -5,7 +5,7 @@ import parse from "html-react-parser"
 
 import LangLayout from "./../../../layouts/en"
 
-import { HeroSimple, Main } from "./../../../components"
+import { HeroSimple, Main, SeoComponent } from "./../../../components"
 import T from "./../../../styles/new/typography"
 import { theme } from "./../../../styles/new/theme"
 
@@ -66,6 +66,10 @@ const Menue = ({ data }) => {
 const FAQ = (props) => {
   return (
     <LangLayout>
+      <SeoComponent
+        title="FAQs"
+        description="We're always here to help answer your questions"
+      />
       <HeroSimple data={props.data.faqJson.hero} />
       <Main>
         <ContentWrapper>
@@ -78,10 +82,10 @@ const FAQ = (props) => {
             ))}
             <CantFindWrapper>
               <PositionTitle as="h5">
-                Can’t find an answer to your question?
+                Can't find an answer to your question?
               </PositionTitle>
               <OpenApplication>
-                Don’t stress. Feel free to chat to us via the icon in the bottom
+                Don't stress. Feel free to chat to us via the icon in the bottom
                 left corner of this page, or just drop us a line here -{" "}
                 <a href={`mailto:contact@out.fund?subject='Outfund-Question'`}>
                   contact@out.fund

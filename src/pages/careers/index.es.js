@@ -14,11 +14,16 @@ import {
   SectionInOfficeRemote,
   SectionWeValue,
   SectionOpenings,
+  SeoComponent,
 } from "./../../components"
 
 const Careers = (props) => {
   return (
     <LangLayout>
+      <SeoComponent
+        title="Carreras"
+        description="Únete al inversor de comercio electrónico de más rápido crecimiento en España"
+      />
       <HeroSimple data={props.data.careersJson.hero} />
       <Main>
         <HeroImage data={props.data.careersJson.hero.image} />
@@ -115,8 +120,6 @@ export const query = graphql`
         }
       }
       language
-      seoKeywords
-      seoTitle
       weGrow {
         description
         title

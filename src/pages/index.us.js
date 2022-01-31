@@ -13,11 +13,16 @@ import {
   SectionAboutUs,
   SectionRegulated,
   HeroHomepage,
+  SeoComponent,
 } from "./../components"
 
 export const query = graphql`
   query usHomePage {
     homepageJson(language: { regex: "/en-US/" }) {
+      seo {
+        title
+        description
+      }
       aboutUs {
         buttons {
           primary {
@@ -99,7 +104,6 @@ export const query = graphql`
         title
       }
       language
-      seoTitle
       startSupercharging {
         card {
           logo
@@ -213,6 +217,7 @@ const HomePage = (props) => {
 
   return (
     <LangLayout>
+      <SeoComponent title={data.seo.title} description={data.seo.description} />
       <HeroHomepage data={data.hero} />
       <Main>
         <SectionWeFunded data={data.weFunded} />

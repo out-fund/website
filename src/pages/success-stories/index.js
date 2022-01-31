@@ -6,6 +6,7 @@ import {
   SectionFeaturedCards,
   SectionOtherBrands,
   Main,
+  SeoComponent,
 } from "./../../components"
 
 import LangLayout from "./../../layouts/en"
@@ -13,6 +14,10 @@ import LangLayout from "./../../layouts/en"
 const SuccessStories = ({ data }) => {
   return (
     <LangLayout>
+      <SeoComponent
+        title="Success Stories"
+        description="Founders and how Outfund helped them succeed"
+      />
       <HeroSimple data={data.successStoriesJson.hero} />
       <Main>
         <SectionFeaturedCards data={data.allMdx.edges} />

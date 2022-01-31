@@ -14,6 +14,7 @@ import {
   Section,
   SectionRegulated,
   ContactUsForm,
+  SeoComponent,
 } from "./../../components"
 import T from "../../styles/new/typography"
 import { theme } from "./../../styles/new/theme"
@@ -22,7 +23,6 @@ export const query = graphql`
   query {
     contactUsJson(language: { regex: "/en-US/" }) {
       language
-      seoTitle
       liveChat {
         btn
         btnUrl
@@ -118,6 +118,10 @@ const ContactUs = (props) => {
 
   return (
     <LangLayout>
+      <SeoComponent
+        title="Contact us"
+        description="Want to know more? Get in touch"
+      />
       <HeroSimple data={props.data.contactUsJson.hero} />
       <Main>
         <ContentWrapper>

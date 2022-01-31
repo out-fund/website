@@ -14,6 +14,7 @@ import {
   SectionInOfficeRemote,
   SectionWeValue,
   SectionOpenings,
+  SeoComponent,
 } from "./../../components"
 
 export const query = graphql`
@@ -92,8 +93,6 @@ export const query = graphql`
         }
       }
       language
-      seoKeywords
-      seoTitle
       weGrow {
         description
         title
@@ -159,6 +158,10 @@ export const query = graphql`
 const Careers = (props) => {
   return (
     <LangLayout>
+      <SeoComponent
+        title="Careers"
+        description="Join the fastest growing eCommerce investor in the US"
+      />
       <HeroSimple data={props.data.careersJson.hero} />
       <Main>
         <HeroImage data={props.data.careersJson.hero.image} />

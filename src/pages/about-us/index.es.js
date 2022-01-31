@@ -12,11 +12,16 @@ import {
   HeroImage,
   SectionAboutUs,
   SectionWeValue,
+  SeoComponent,
 } from "./../../components"
 
 const AboutUs = (props) => {
   return (
     <LangLayout>
+      <SeoComponent
+        title="Sobre nosotras"
+        description="Somos el mayor inversor de Ecommerce del Reino Unido y de España"
+      />
       <HeroSimple data={props.data.aboutUsJson.hero} />
       <Main>
         <HeroImage data={props.data.aboutUsJson.hero.image} />

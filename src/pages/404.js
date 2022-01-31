@@ -7,7 +7,7 @@ const NotFoundPage = () => {
       <title>Not found</title>
       <h1>Page not found</h1>
       <p>
-        Sorry we couldn’t find what you were looking for.
+        Sorry we couldn't find what you were looking for.
         <br />
         <Link to="/">Go home</Link>.
       </p>

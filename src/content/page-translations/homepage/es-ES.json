@@ -1,6 +1,9 @@
 {
   "language": "es-ES",
-  "seoTitle": "Growth capital",
+  "seo": {
+    "title": "Growth Capital Para Fundadores Como tú",
+    "description": "Financiación para tu marketing & inventario. De 10k€ a 2M€."
+  },
   "hero": {
     "title": "Growth Capital Para Fundadores Como tú",
     "description": "Financiación para tu marketing & inventario. De 10k€ a 2M€.",

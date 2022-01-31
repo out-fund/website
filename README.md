@@ -13,7 +13,7 @@ Hello world out.fund website - testing the setup
 
 ## Start developing
 
-Navigate into the site’s directory and start it up.
+Navigate into the site's directory and start it up.
 
 ```shell
 cd website/

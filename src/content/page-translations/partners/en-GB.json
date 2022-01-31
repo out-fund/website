@@ -3,12 +3,12 @@
   "seoTitle": "About",
   "seoKeywords": ["test", "keywors"],
   "hero": {
-    "title": "We’re the UK’s Largest eCommerce Investor",
+    "title": "We're the UK's Largest eCommerce Investor",
     "description": "We have been there, done it and got the t-shirt. Our founders have grown multiple businesses in the past and been through the struggles of raising Bank Loans, Venture"
   },
   "ourPartners": {
     "title": "Our Partners",
-    "description": "Outfund’s extensive partner ecosystem consists of global software platforms, marketing agencies, VCs / alternative capital providers, and value-add services. ",
+    "description": "Outfund's extensive partner ecosystem consists of global software platforms, marketing agencies, VCs / alternative capital providers, and value-add services. ",
     "image": {
       "src": "./../../../images/Outfund-Partners.png",
       "alt": "Partner logos"

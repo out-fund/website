@@ -1,10 +1,8 @@
 {
   "language": "en-GB",
-  "seoTitle": "About",
-  "seoKeywords": ["test", "keywors"],
   "hero": {
-    "title": "We’re the UK’s largest eCommerce investor",
-    "description": "Nobody said founding, running, and scaling your own business was easy. But accessing capital should be. We started Outfund because we didn’t think founders like you had the right funding options, from complicated equity finance to restrictive debt. We’re changing the way businesses scale.",
+    "title": "We're the UK's largest eCommerce investor",
+    "description": "Nobody said founding, running, and scaling your own business was easy. But accessing capital should be. We started Outfund because we didn't think founders like you had the right funding options, from complicated equity finance to restrictive debt. We're changing the way businesses scale.",
     "image": {
       "src": "./../../../images/Outfund-London-Team.jpg",
       "alt": "Test"
@@ -18,7 +16,7 @@
   ],
   "weInvesting": {
     "title": "We invest in more than just numbers",
-    "description": "We are data-driven, but we value the human story in every business. There’s more to your vision than an algorithm. And because we didn’t think traditional finance providers were doing enough for founders like you, we designed Outfund. Non-dilutive capital so you can grow on your terms.",
+    "description": "We are data-driven, but we value the human story in every business. There's more to your vision than an algorithm. And because we didn't think traditional finance providers were doing enough for founders like you, we designed Outfund. Non-dilutive capital so you can grow on your terms.",
     "image": {
       "src": "./../../../images/PaymentCounterPhone.jpg",
       "alt": "alt"
@@ -130,15 +128,15 @@
       },
       {
         "title": "⚖️ Balance",
-        "text": "We’re a mixture of willingness and non-conformism. Logic and creativity. Work and play."
+        "text": "We're a mixture of willingness and non-conformism. Logic and creativity. Work and play."
       },
       {
         "title": "🧠 Growth Mindset",
-        "text": "We don’t do ‘business as usual’. Our challenger attitude means we’re always looking to go beyond."
+        "text": "We don't do ‘business as usual'. Our challenger attitude means we're always looking to go beyond."
       },
       {
         "title": "🤝 Trust",
-        "text": "We’re radically transparent; we’re all building the same thing, and we know that none of us are as smart as all of us."
+        "text": "We're radically transparent; we're all building the same thing, and we know that none of us are as smart as all of us."
       },
       {
         "title": "🤗 Empathy",

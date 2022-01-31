@@ -1,47 +1,45 @@
 {
   "language": "es-ES",
-  "seoTitle": "seo title",
-  "seoKeywords": ["test", "keywors"],
   "hero": {
-    "title": "Want to know more?<br/> Get in touch"
+    "title": "¿Quieres saber más? <br/> Ponerse en contacto."
   },
   "liveChat": {
-    "title": "How can we help?",
-    "description": "Get quick answers on questions and queries from our expert team",
-    "btn": "Start live chat",
+    "title": "¿Cómo podemos ayudar?",
+    "description": "Obtenga respuestas rápidas sobre preguntas y consultas de nuestro equipo de expertos",
+    "btn": "Iniciar chat en vivo",
     "btnUrl": "/",
     "image": "./../../../images/Outfund-live-chat.png",
-    "imageAlt": "Outfund live Chat"
+    "imageAlt": "Chat en vivo de Outfund"
   },
   "support": {
-    "title": "🚀 Interested in joining our portfolio?",
-    "description": "Connect your accounts and get funded",
-    "btn": "Sign up",
+    "title": "🚀 ¿Interesado en unirse a nuestro portafolio?",
+    "description": "Conecte sus cuentas y obtenga fondos",
+    "btn": "Inscribirse",
     "btnUrl": "/get-funded/"
   },
   "feedback": {
-    "title": "🥇 How can we improve?",
-    "description": "We’re obsessed with getting better everyday. If there’s anything we could fine-tune, let us know.",
-    "btn": "Give us feedback",
+    "title": "🥇 ¿Como podemos mejorar?",
+    "description": "Estamos obsesionados con mejorar cada día. Si hay algo que podamos afinar, háganoslo saber.",
+    "btn": "Danos su opinión",
     "btnUrl": "#"
   },
   "demoCall": {
-    "title": "☎️ Fancy a chat?",
-    "description": "We’re always happy to talk about your business and how we can support your growth.",
-    "btn": "Schedule a call",
+    "title": "☎️ ¿Te apetece una charla?",
+    "description": "Siempre nos complace hablar sobre su negocio y cómo podemos apoyar su crecimiento.",
+    "btn": "Programe una llamada",
     "btnUrl": "/"
   },
   "emailForm": {
-    "title": "Prefer email? Drop us a line using the form below and we’ll get back to you",
+    "title": "¿Prefieres el correo electrónico? Envíenos una línea utilizando el siguiente formulario y nos pondremos en contacto con usted.",
     "form": {
-      "fullName": "Full Name",
-      "email": "Business Email",
-      "message": "Message",
-      "btn": "Send",
+      "fullName": "Nombre completo",
+      "email": "Email de negocios",
+      "message": "Mensaje",
+      "btn": "Enviar",
       "btnUrl": "/"
     }
   },
   "globalCoverage": {
-    "title": "Global coverage"
+    "title": "Cobertura mundial"
   }
 }

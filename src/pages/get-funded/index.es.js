@@ -9,7 +9,7 @@ import LogoWhite from "./../../images/svg/Outfund-logo-white.svg"
 import LogoDark from "./../../images/svg/Outfund-logo.svg"
 import LogoStrip from "./../../images/svg/get-funded-logo-strip.svg"
 
-import { Link, GetFundedForm } from "./../../components"
+import { Link, GetFundedForm, SeoComponent } from "./../../components"
 import T from "../../styles/new/typography"
 import { theme } from "./../../styles/new/theme"
 import { Triangle } from "./../../styles/utils"
@@ -19,6 +19,10 @@ const GetFunded = (props) => {
 
   return (
     <LangLayout noNavbar pt>
+      <SeoComponent
+        title="Solicita Financiación"
+        description="Hemos financiado miles de marcas como la tuya"
+      />
       <Wrapper>
         <ContentWrapper>
           <LeftWrapper>

@@ -5,7 +5,7 @@ import parse from "html-react-parser"
 
 import LangLayout from "./../../../layouts/es"
 
-import { HeroSimple, Main } from "./../../../components"
+import { HeroSimple, Main, SeoComponent } from "./../../../components"
 import T from "./../../../styles/new/typography"
 import { theme } from "./../../../styles/new/theme"
 
@@ -66,6 +66,10 @@ const Menue = ({ data }) => {
 const FAQ = (props) => {
   return (
     <LangLayout>
+      <SeoComponent
+        title="FAQs"
+        description="Siempre estamos aquí para ayudar a responder sus preguntas"
+      />
       <HeroSimple data={props.data.faqJson.hero} />
       <Main>
         <ContentWrapper>

@@ -80,7 +80,7 @@ const PartnerForm = ({ form, language }) => {
           >
             <VisuallyHidden>
               <label>
-                Don’t fill this out if you’re human:
+                Don't fill this out if you're human:
                 <input name="bot-field" tabIndex="-1" />
               </label>
             </VisuallyHidden>

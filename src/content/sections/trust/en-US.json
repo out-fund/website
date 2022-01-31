@@ -1,17 +1,17 @@
 {
   "language": "en-US",
   "title": "Delivering unmatched service",
-  "description": "We’re on your side. We’ve invested tens of millions into hundreds of businesses around the world. We’ve been supported with £100m by leading investors, including Fuel Ventures, Force Over Mass, and TMT Investments, among others. Our backers have previously invested in global businesses like Deliveroo, Facebook, Bolt, Heroes, and Paddle. And now we want to help every founder build their own vision.",
+  "description": "We're on your side. We've invested tens of millions into hundreds of businesses around the world. We've been supported with £100m by leading investors, including Fuel Ventures, Force Over Mass, and TMT Investments, among others. Our backers have previously invested in global businesses like Deliveroo, Facebook, Bolt, Heroes, and Paddle. And now we want to help every founder build their own vision.",
   "blocks": [
     {
       "title": "Regulated by the FCA",
       "icon": "<svg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path opacity='.3' d='m12.579 12 10.42-5.48L33.419 12h-20.84Z' fill='#2D65BF'/><path d='M13 20H9v14h4V20Zm12 0h-4v14h4V20Zm17 18H4v4h38v-4Zm-5-18h-4v14h4V20ZM23 2 4 12v4h38v-4L23 2ZM12.58 12 23 6.52 33.42 12H12.58Z' fill='#2D65BF'/></svg>",
-      "text": "We’re regulated by the FCA in the UK and uphold stringent requirements to the highest standards"
+      "text": "We're regulated by the FCA in the UK and uphold stringent requirements to the highest standards"
     },
     {
       "title": "Data protection",
       "icon": "<svg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path opacity='.3' d='M12 12.62v9.56c0 8 5.1 15.4 12 17.66 6.9-2.26 12-9.64 12-17.66v-9.56L24 8.38l-12 4.24Zm21.2 7.14L21.88 31.08 14.8 24l2.82-2.82 4.24 4.24 8.48-8.48 2.86 2.82Z' fill='#2D65BF'/><path d='M24 4 8 10v12.18C8 32.28 14.82 41.7 24 44c9.18-2.3 16-11.72 16-21.82V10L24 4Zm12 18.18c0 8-5.1 15.4-12 17.66-6.9-2.26-12-9.64-12-17.66v-9.56l12-4.24 12 4.24v9.56Zm-18.36-1L14.8 24l7.08 7.08L33.2 19.76l-2.82-2.82-8.48 8.48-4.26-4.24Z' fill='#2D65BF'/></svg>",
-      "text": "Your security is our priority. We’re committed to keeping your business data safe, and we’re transparent in how we collect, process, and store it."
+      "text": "Your security is our priority. We're committed to keeping your business data safe, and we're transparent in how we collect, process, and store it."
     },
     {
       "title": "24/7 support",
