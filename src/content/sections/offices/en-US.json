@@ -1,36 +1,35 @@
 {
-    "language": "en-US",
-    "image": {
-      "src": "./../../../images/sections/Outfund-office-building.jpg",
-      "alt": "Outfund office pictures"
+  "language": "en-GB",
+  "image": {
+    "src": "./../../../images/sections/Outfund-office-building.jpg",
+    "alt": "Outfund office pictures"
+  },
+  "offices": {
+    "main": {
+      "title": "Main office",
+      "country": "US",
+      "firstLine": "1 Mark Square",
+      "secondLine": "London EC2A 4EG"
     },
-    "offices": {
-      "main": {
-        "title": "Main office",
-        "country": "UK",
-        "firstLine": "1 Mark Square",
-        "secondLine": "London EC2A 4EG"
-      },
-      "world": {
-        "title": "Around the world",
-        "list": [
-          {
-            "country": "Spain",
-            "firstLine": "1 Mark Square",
-            "secondLine": "London EC2A 4EG"
-          },
-          {
-            "country": "Canada",
-            "firstLine": "1 Mark Square",
-            "secondLine": "London EC2A 4EG"
-          },
-          {
-            "country": "Australia",
-            "firstLine": "1 Mark Square",
-            "secondLine": "London EC2A 4EG"
-          }
-        ]
-      }
+    "world": {
+      "title": "Around the world",
+      "list": [
+        {
+          "country": "Spain",
+          "firstLine": "Paseo de Gracia, 50,",
+          "secondLine": "5a planta. 08007, Barcelona"
+        },
+        {
+          "country": "Canada",
+          "firstLine": "212 King St. W. Suite 600",
+          "secondLine": "Toronto, Ontario M5H 1K5"
+        },
+        {
+          "country": "Australia",
+          "firstLine": "Level 1/8 Beulah Rd",
+          "secondLine": "Norwood SA 5067"
+        }
+      ]
     }
   }
-  
+}
