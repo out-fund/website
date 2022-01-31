@@ -47,10 +47,10 @@ const Eligibility = ({ location }) => {
           ) :} */}
           {selected > 0 ? (
             <>
-              <Title>Great!</Title>
+              <Title>¡Estupenda!</Title>
               <Description>
-                It looks like you could be eligible for up to{" "}
-                <b>{values[selected - 1]}</b> of funding.
+                Parece que podría ser elegible para recibir hasta{" "}
+                <b>{values[selected - 1]}</b> de financiación.
               </Description>
               <ButtonWrapper>
                 <Button
@@ -58,22 +58,23 @@ const Eligibility = ({ location }) => {
                   variant="primary"
                   size="large"
                 >
-                  Apply now
+                  Aplica ya
                 </Button>
               </ButtonWrapper>
             </>
           ) : (
             <>
               <Title>
-                It looks like you're not currently eligible for funding
+                Parece que actualmente no cumple los requisitos para recibir
+                financiación
               </Title>
               <Description>
-                Please keep in touch and check back with us in a few months,
-                once your monthly revenue has increased.
+                Manténgase en contacto y vuelva a consultarnos en unos meses,
+                una vez que sus ingresos mensuales hayan aumentado.
               </Description>
               <ButtonWrapper>
                 <Button to="/" variant="primary" size="large">
-                  Go back
+                  Regresa
                 </Button>
               </ButtonWrapper>
             </>
