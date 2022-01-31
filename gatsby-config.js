@@ -7,7 +7,7 @@ module.exports = {
     title: "Growth Capital for your Online Businesses",
     titleTemplate: "%s | Outfund",
     description: "Growth Capital for your Online Businesses",
-    url: "https://www.out.fund",
+    siteUrl: "https://www.out.fund",
     image: "/Outfund.png",
   },
   plugins: [
