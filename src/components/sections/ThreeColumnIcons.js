@@ -32,7 +32,7 @@ const Wrapper = styled.ul`
   margin: 0 auto;
 
   ${theme.above.t.l} {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 24px;
   }
   ${theme.above.l.m} {
