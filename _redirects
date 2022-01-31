@@ -2,7 +2,6 @@
 /about/us            /us/about-us/
 /about/es            /es/about-us/
 /about/au            /au/about-us/
-/success-stories     /success-stories/
 /stories/es          /es/success-stories/
 /stories/au          /au/success-stories/
 /stories/us          /us/success-stories/
@@ -17,3 +16,15 @@
 /contact/us          /us/get-funded/
 /contact/es          /es/get-funded/
 /contact/contact-au  /au/get-funded/
+
+# Redirect users in Australia to /au/.
+/  /au/     302  Country=au
+
+# Redirect users in Spain to /es/.
+/  /es/     302  Country=es
+
+# Redirect users in US to /us/.
+/  /us/     302  Country=us
+
+# Redirect users in UK to /.
+/  /        302  Country=gb
