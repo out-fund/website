@@ -1,6 +1,17 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+const Hotjar = () => {
+  return (
+    <>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `(function(h,o,t,j,a,r){h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};h._hjSettings={hjid:2676815,hjsv:6};a=o.getElementsByTagName('head')[0];r=o.createElement('script');r.async=1;r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;a.appendChild(r);})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`,
+        }}
+      />
+    </>
+  )
+}
 const GoogleTagManager = () => {
   return (
     <>
@@ -54,6 +65,53 @@ const LiveChat = () => {
     </>
   )
 }
+const DecorateUrls = () => {
+  return (
+    <>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function() {
+              var domainsToDecorate = [
+                      'out.fund'
+                  ],
+                  queryParams = [
+                      'utm_medium',
+                      'utm_source',
+                      'utm_campaign',
+                      'utm_content',
+                      'utm_term',
+                      'referring_URL'
+                  ]
+              var links = document.querySelectorAll('a');
+              for (var linkIndex = 0; linkIndex < links.length; linkIndex++) {
+                  for (var domainIndex = 0; domainIndex < domainsToDecorate.length; domainIndex++) {
+                      if (links[linkIndex].href.indexOf(domainsToDecorate[domainIndex]) > -1 && links[linkIndex].href.indexOf('#') === -1) {
+                          links[linkIndex].href = decorateUrl(links[linkIndex].href);
+                      }
+                  }
+              }
+              function decorateUrl(urlToDecorate) {
+                  urlToDecorate = (urlToDecorate.indexOf('?') === -1) ? urlToDecorate + '?' : urlToDecorate + '&';
+                  var collectedQueryParams = [];
+                  for (var queryIndex = 0; queryIndex < queryParams.length; queryIndex++) {
+                      if (getQueryParam(queryParams[queryIndex])) {
+                          collectedQueryParams.push(queryParams[queryIndex] + '=' + getQueryParam(queryParams[queryIndex]))
+                      }
+                  }
+                  return urlToDecorate + collectedQueryParams.join('&');
+              }
+              function getQueryParam(name) {
+                  if (name = (new RegExp('[?&]' + encodeURIComponent(name) + '=([^&]*)')).exec(window.location.search))
+                      return decodeURIComponent(name[1]);
+              }
+            })();
+          `,
+        }}
+      />
+    </>
+  )
+}
 
 export default function HTML(props) {
   return (
@@ -65,6 +123,7 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <Hotjar />
         <GoogleTagManager />
         {props.headComponents}
       </head>
@@ -77,6 +136,7 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
+        <DecorateUrls />
         <LiveChat />
       </body>
     </html>
