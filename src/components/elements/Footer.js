@@ -53,12 +53,21 @@ const Footer = ({ lang }) => {
             <Link to={`/`}>
               <LogoSvg />
             </Link>
-            <T.BodySmall>Growth funding on your terms</T.BodySmall>
+
+            {langKey !== "es" && (
+              <T.BodySmall>Growth funding on your terms</T.BodySmall>
+            )}
+            {langKey === "es" && (
+              <T.BodySmall>
+                Financiación del crecimiento en sus términos
+              </T.BodySmall>
+            )}
           </LogoWrapper>
           <CountryLinksWrapper>
             <LinksWrapper>
               <LinksColumn>
-                <ColumntTitle>Company</ColumntTitle>
+                {langKey === "es" && <ColumntTitle>Compañía</ColumntTitle>}
+                {langKey !== "es" && <ColumntTitle>Company</ColumntTitle>}
                 <Button
                   to={links.aboutUs.url}
                   variant="footerLink"
@@ -84,7 +93,8 @@ const Footer = ({ lang }) => {
                 )}
               </LinksColumn>
               <LinksColumn>
-                <ColumntTitle>Funding</ColumntTitle>
+                {langKey === "es" && <ColumntTitle>Fondos</ColumntTitle>}
+                {langKey !== "es" && <ColumntTitle>Funding</ColumntTitle>}
                 <Button to={links.howItWorks.url} variant="footerLink">
                   {links.howItWorks.text[lang]}
                 </Button>
@@ -102,27 +112,29 @@ const Footer = ({ lang }) => {
                 >
                   {links.partners.text[lang]}
                 </Button>
-                <Button to={links.b2b.url} variant="footerLink" color="white">
+                {/* <Button to={links.b2b.url} variant="footerLink" color="white">
                   {links.b2b.text[lang]}
-                </Button>
+                </Button> */}
               </LinksColumn>
 
               <LinksColumn>
-                <ColumntTitle>Support</ColumntTitle>
+                {langKey === "es" && <ColumntTitle>Apoyo</ColumntTitle>}
+                {langKey !== "es" && <ColumntTitle>Support</ColumntTitle>}
                 <Button to={links.faq.url} variant="footerLink" color="white">
                   {links.faq.text[lang]}
                 </Button>
-                <Button
+                {/* <Button
                   to={links.contactUs.url}
                   variant="footerLink"
                   color="white"
                 >
                   {links.contactUs.text[lang]}
-                </Button>
+                </Button> */}
               </LinksColumn>
             </LinksWrapper>
             <CountryWrapper>
-              <ColumntTitle>Country</ColumntTitle>
+              {langKey === "es" && <ColumntTitle>País</ColumntTitle>}
+              {langKey !== "es" && <ColumntTitle>Country</ColumntTitle>}
               <CuntryButtonWrapper ref={countryButtonRef}>
                 <Button
                   variant="countrySelector"
@@ -175,22 +187,42 @@ const Footer = ({ lang }) => {
           </CountryLinksWrapper>
         </Top>
         <Statement>
-          <T.BodySmall>
-            Outfund is the trading name of MTL Financial LTD, which is a Lender.
-            MTL Financial LTD is also authorised and regulated by the Financial
-            Conduct Authority (FCA) as an e-money institution.
-          </T.BodySmall>
+          {langKey !== "es" && (
+            <T.BodySmall>
+              Outfund is the trading name of MTL Financial LTD, which is a
+              Lender. MTL Financial LTD is also authorised and regulated by the
+              Financial Conduct Authority (FCA) as an e-money institution.
+            </T.BodySmall>
+          )}
+          {langKey === "es" && (
+            <T.BodySmall>
+              Outfund es el nombre comercial de MTL Financial LTD, que es un
+              prestamista. MTL Financial LTD también está autorizada y regulada
+              por la Autoridad de Conducta Financiera (FCA) como institución de
+              dinero electrónico.
+            </T.BodySmall>
+          )}
         </Statement>
         <Bottom>
-          <T.BodySmaller>
-            Copyright © 2022 Outfund. All rights reserved.
-          </T.BodySmaller>
+          {langKey !== "es" && (
+            <T.BodySmaller>
+              Copyright © 2022 Outfund. All rights reserved.
+            </T.BodySmaller>
+          )}
+
+          {langKey === "es" && (
+            <T.BodySmaller>
+              Copyright © 2022 Outfund. Todos los derechos reservados.
+            </T.BodySmaller>
+          )}
           <div>
             <T.BodySmaller as={Link} to="/legal/privacy-policy/">
-              Privacy policy
+              {langKey !== "es" && <>Privacy policy</>}
+              {langKey === "es" && <>Política de privacidad</>}
             </T.BodySmaller>
             <T.BodySmaller as={Link} to="/legal/cookie-policy/">
-              Cookie policy
+              {langKey !== "es" && <>Cookie policy</>}
+              {langKey === "es" && <>Política de cookies</>}
             </T.BodySmaller>
           </div>
         </Bottom>

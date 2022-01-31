@@ -78,11 +78,12 @@ const FAQ = (props) => {
             ))}
             <CantFindWrapper>
               <PositionTitle as="h5">
-                Can’t find an answer to your question?
+                ¿No encuentras respuesta a tus preguntas?
               </PositionTitle>
               <OpenApplication>
-                Don’t stress. Feel free to chat to us via the icon in the bottom
-                left corner of this page, or just drop us a line here -{" "}
+                No te preocupes. Puedes escribirnos directamente por el chat a
+                través del icono de la esquina inferior de esta página, o
+                simplemente escríbenos a -{" "}
                 <a href={`mailto:contact@out.fund?subject='Outfund-Question'`}>
                   contact@out.fund
                 </a>

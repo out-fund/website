@@ -29,11 +29,11 @@ const GetFunded = (props) => {
                 </Link>
               </LogoWhiteWrapper>
               <LeftTextWrapper>
-                <PageTitle>Growth capital for founders like You</PageTitle>
+                <PageTitle>Growth Capital Para Fundadores Como tú</PageTitle>
               </LeftTextWrapper>
               <LogoSection>
                 <LogoSectionTitle>
-                  We’ve funded 100s of brands like yours
+                  Hemos financiado miles de marcas como la tuya
                 </LogoSectionTitle>
                 <LogoStripWrapper>
                   <LogoStrip />

@@ -3,25 +3,25 @@
   "seoTitle": "Get funded",
   "seoKeywords": ["test", "keywors"],
   "content": {
-    "title": "Get funded ES",
-    "description": "Tell us about you and your company.",
+    "title": "¡Solicita Financiación!",
+    "description": "Háblanos de ti y de tu empresa...",
     "form": {
-      "name": "Name",
+      "name": "Nombre",
       "email": "Email",
-      "phone": "Phone number",
-      "website": "Company Website",
+      "phone": "Número de teléfono",
+      "website": "Página web",
       "select": {
-        "title": "Average Monthly Revenue",
-        "default": "Select",
+        "title": "Ingresos medios mensuales",
+        "default": "Facturación",
         "options": [
-          "Less than 10k €",
+          "Menos de 10k €",
           "10k - 50k €",
           "50k - 100k €",
           "100k - 500k €",
-          "More than 500k €"
+          "Más de 500k €"
         ]
       },
-      "btn": "Get started"
+      "btn": "¡Empecemos!"
     }
   }
 }

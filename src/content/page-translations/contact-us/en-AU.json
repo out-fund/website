@@ -1,9 +1,9 @@
 {
-  "language": "en-GB",
+  "language": "en-AU",
   "seoTitle": "seo title",
   "seoKeywords": ["test", "keywors"],
   "hero": {
-    "title": "Want to know more?<br/> Get in touch AU"
+    "title": "Want to know more?<br/> Get in touch"
   },
   "liveChat": {
     "title": "How can we help?",

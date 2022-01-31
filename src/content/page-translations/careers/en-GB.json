@@ -62,12 +62,12 @@
       },
       {
         "name": "Jack",
-        "role": "Investment Associate",
+        "role": "Team Lead",
         "image": {
           "src": "./../../../images/Outfund-Jack.jpg",
           "alt": "Jack - Investment Associate"
         },
-        "description": "Jack is one of our star investment managers and is passionate about exploring and helping businesses reach their full potential. He comes from great companies like EatWith and Sonnovate, he is a born winner, and enjoys the camaraderie between everyone in the company, especially when he discovers hidden gems to invest in."
+        "description": "Jack is one of our star Team Leads and is passionate about exploring and helping businesses reach their full potential. He comes from great companies like EatWith and Sonnovate, he is a born winner, and enjoys the camaraderie between everyone in the company, especially when he discovers hidden gems to invest in."
       },
       {
         "name": "Bertil",
@@ -95,9 +95,9 @@
 
     "blocks": [
       {
-        "title": "Receive £300",
+        "title": "You get your birthday off!",
         "icon": "<svg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path opacity='.15' d='M8 33.998h32v4H8v-4Zm26-12.34-3.24 2.34-6.76-9.2-6.76 9.2-3.24-2.34 4.16-5.66H8v12h32v-12H29.84l4.16 5.66Z' fill='#2D65BF'/><path d='M40 12h-4.36c.22-.62.36-1.3.36-2 0-3.32-2.68-6-6-6-2.1 0-3.92 1.08-5 2.7l-1 1.34-1-1.36C21.92 5.08 20.1 4 18 4c-3.32 0-6 2.68-6 6 0 .7.14 1.38.36 2H8c-2.22 0-3.98 1.78-3.98 4L4 38c0 2.22 1.78 4 4 4h32c2.22 0 4-1.78 4-4V16c0-2.22-1.78-4-4-4ZM30 8c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2ZM18 8c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2Zm22 30H8v-4h32v4Zm0-10H8V16h10.16L14 21.66 17.24 24 24 14.8l6.76 9.2L34 21.66 29.84 16H40v12Z' fill='#2D65BF'/></svg>",
-        "text": "All new employees receive £300 to make their home offices comfortable and productive while we wait to head back to the office."
+        "text": "Every employee gets their birthday off. There’s more to life here than just work, so you can spend your big day doing what you want."
       },
       {
         "title": "Fast paced",
@@ -116,7 +116,7 @@
     }
   },
   "weValue": {
-    "title": "Values & behaviours",
+    "title": "What We Value",
     "blocks": [
       {
         "title": "🚀 Entrepreneurship",

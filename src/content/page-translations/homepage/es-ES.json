@@ -128,24 +128,24 @@
     "title": "FAQ",
     "questions": [
       {
-        "question": "How much funding do you offer?",
-        "answer": "We can deploy between £10,000 and £2,000,000 at a time."
+        "question": "¿Qué financiación ofrecéis?",
+        "answer": "Podemos proporcionar entre 10.000€ y 2.000.000€ al mismo tiempo."
       },
       {
-        "question": "How do you calculate my offer?",
-        "answer": "Outfund securely connects to your existing banking, payment processing, and accounting platforms. Using predictive models, we assess key metrics from your revenue, ad performance and other third party data to create bespoke funding offers. <br/><br/> Our funding is based on your performance. We don't take any equity, meaning we don't dilute you or your investors. Instead, funding is repaid through a simple revenue share."
+        "question": "¿Cómo se calcula mi oferta?",
+        "answer": "Outfund se conecta de forma segura a tus plataformas bancarias, pasarelas de pago y la contabilidad existente. Mediante modelos predictivos, evaluamos las métricas clave de tus ingresos, el rendimiento publicitario y otros datos de terceros para crear ofertas de financiación a medida. Nuestra financiación se basa en vuestro rendimiento. No entramos en Equity, lo que significa que no diluimos ni a ti ni a tus inversores. En su lugar, la financiación se devuelve a través de un porcentaje de ingresos."
       },
       {
-        "question": "How long does the whole process take?",
-        "answer": "The entire process (application, offer, approval, sending funds) can be completed in as little as two business days. Large advances and applications requiring special considerations or analysis may take slightly longer."
+        "question": "¿Cúanto dura el proceso?",
+        "answer": "El proceso completo (solicitud, oferta, aprobación, envío de fondos) puede completarse en tan sólo dos días laborables. Para grandes cantidades y/o las solicitudes que requieren medidas o análisis especiales pueden tardar algo más."
       },
       {
-        "question": "How do I apply?",
-        "answer": "You can apply in minutes here. You'll need to be a director of the company you're applying for. <br/><br/> You'll need to connect your business bank account, payment processor and company financial accounts. This data will allow us to build your funding offer."
+        "question": "¿Cómo aplico?",
+        "answer": "Puedes presentar tu solicitud en cuestión de minutos aquí. Deberás ser uno de los directores de la empresa para la que se solicita. <br/><br/> Tendrás que conectar las cuentas bancarias de tu empresa, las pasarelas de pago y las cuentas financieras de la empresa. Estos datos nos permitirán elaborar tu oferta de financiación."
       }
     ],
     "btn": {
-      "text": "Más FAQS",
+      "text": "Más FAQs",
       "url": "/support/faq/"
     }
   },

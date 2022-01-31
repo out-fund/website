@@ -11,10 +11,10 @@
     }
   },
   "stats": [
-    { "stat": "£200M", "text": "To invest in 2022" },
-    { "stat": "4", "text": "Operating countries " },
-    { "stat": "53+", "text": "Growing team" },
-    { "stat": "£37M", "text": "Raised so far" }
+    { "stat": "200 M€", "text": "Para invertir en 2022" },
+    { "stat": "4", "text": "Países en los que operamos" },
+    { "stat": "56+", "text": "Equipo en crecimiento" },
+    { "stat": "37 M€", "text": "Financiados hasta el momento" }
   ],
   "weInvesting": {
     "title": "We invest in more than just numbers",
