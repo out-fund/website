@@ -17,7 +17,7 @@ const Quote = ({ text, by, role }) => {
     <QuoteWrapper>
       <figure>
         <q>
-          <T.H3>“ {text}</T.H3>
+          <T.H3>“{text}”</T.H3>
         </q>
         <figcaption>
           <T.Body>
