@@ -1,6 +1,9 @@
 {
   "language": "en-GB",
-  "seoTitle": "Growth capital",
+  "seo": {
+    "title": "Growth Capital for your Online Businesses",
+    "description": "Supercharged funding from £10K to £2M for your marketing & inventory."
+  },
   "hero": {
     "title": "Growth capital for founders like You",
     "description": "Supercharged funding from £10K to £2M for your marketing & inventory.",

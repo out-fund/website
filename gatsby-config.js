@@ -4,8 +4,11 @@
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.out.fund",
-    title: "Outfund website",
+    title: "Growth Capital for your Online Businesses",
+    titleTemplate: "%s | Outfund",
+    description: "Growth Capital for your Online Businesses",
+    url: "https://www.out.fund",
+    image: "/Outfund.png",
   },
   plugins: [
     "gatsby-plugin-root-import",
