@@ -13,7 +13,7 @@ import {
   SectionAboutUs,
   SectionRegulated,
   HeroHomepage,
-  Seo,
+  SeoComponent,
 } from "./../components"
 
 const HomePage = (props) => {
@@ -23,7 +23,7 @@ const HomePage = (props) => {
 
   return (
     <LangLayout>
-      <Seo title={data.seo.title} description={data.seo.description} />
+      <SeoComponent title={data.seo.title} description={data.seo.description} />
       <HeroHomepage data={data.hero} />
       <Main>
         <SectionWeFunded data={data.weFunded} />

@@ -50,7 +50,7 @@ import SectionSteps from "./sections/SectionSteps"
 import GetFundedForm from "./elements/GetFundedForm"
 import ContactUsForm from "./elements/ContactUsForm"
 import PartnerForm from "./elements/PartnerForm"
-import Seo from "./elements/Seo"
+import SeoComponent from "./elements/SeoComponent"
 
 export {
   SectionWeAreInvesting,
@@ -101,5 +101,5 @@ export {
   ThreeColumnIcons,
   CardBlog,
   SectionSteps,
-  Seo,
+  SeoComponent,
 }
