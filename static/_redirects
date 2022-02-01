@@ -1,31 +1,34 @@
-# Redirect users in Australia to /au
-/  /au/     302  Country=au
-
-# Redirect users in Spain to /es
-/  /es/     302  Country=es
-
-# Redirect users in US to /us
-/  /us/     302  Country=us
-
-/about               /about-us/
+# From the webflow days
 /about/us            /us/about-us/
 /about/es            /es/about-us/
 /about/au            /au/about-us/
+/about               /about-us/
 /stories/es          /es/success-stories/
 /stories/au          /au/success-stories/
 /stories/us          /us/success-stories/
-/faqs                /support/faq/
 /faqs/us             /us/support/faq/
 /faqs/au             /au/support/faq/
 /faqs/es             /es/support/faq/
+/faqs                /support/faq/
 /career/es           /es/careers/
 /career/us           /us/careers/
-/usa                 /us/
-/contact-2           /get-funded/
+/contact/contact-au  /au/get-funded/
 /contact/us          /us/get-funded/
 /contact/es          /es/get-funded/
-/contact/contact-au  /au/get-funded/
+/contact-2           /get-funded/
+/usa                 /us/
 
+# Temp prestashop
 /prestashop          https://outfund-2021.webflow.io/prestashop
 
+# Temp lateest blogpost
 /blog/2022-outlook-5-key-ecommerce-trends-to-follow   https://outfund-2021.webflow.io/blog/2022-outlook-5-key-ecommerce-trends-to-follow
+
+# Redirect users in Spain to /es
+/  /es     302!  Country=es
+
+# Redirect users in Australia to /au
+/  /au     302!  Country=au
+
+# Redirect users in US to /us
+/  /us     302!  Country=us
