@@ -170,6 +170,7 @@ const GetFundedForm = ({ data, language }) => {
                 type="submit"
                 variant="primary"
                 size="large"
+                id="form-get-funded-submit"
               >
                 {data.form.btn}
               </Button>

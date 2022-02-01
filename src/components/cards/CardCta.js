@@ -12,7 +12,12 @@ const CardCta = ({ title, btn, bgc }) => {
       <TextWrapper>
         <Title as="h2">{parse(title)}</Title>
         <BtnWrapper>
-          <Button to={btn.url} variant="primary" size="large">
+          <Button
+            to={btn.url}
+            variant="primary"
+            size="large"
+            id="cta-get-started-card-click"
+          >
             {btn.text}
           </Button>
         </BtnWrapper>

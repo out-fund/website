@@ -61,7 +61,12 @@ const HowFundingWorks = (props) => {
               <InnerWrapper>
                 <CtaBlockTextWrapper>
                   <T.H2>¡Acelera tu crecimiento!</T.H2>
-                  <Button to="/get-funded/" variant="primary" size="large">
+                  <Button
+                    to="/get-funded/"
+                    variant="primary"
+                    size="large"
+                    id="cta-get-funded-hiw-click"
+                  >
                     Solicita financiación
                   </Button>
                 </CtaBlockTextWrapper>

@@ -55,7 +55,12 @@ const CtaBlock = () => {
             Start Supercharging <br />
             Your Growth!
           </T.H2>
-          <Button to="/get-funded/" variant="primary" size="large">
+          <Button
+            to="/get-funded/"
+            variant="primary"
+            size="large"
+            id="cta-get-funded-ss-click"
+          >
             Get funded
           </Button>
         </CtaBlockTextWrapper>

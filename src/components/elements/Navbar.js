@@ -68,6 +68,7 @@ const MobileLinks = ({ lang }) => {
           to={links.getFunded.url}
           variant="primary"
           className="getFunded"
+          id="cta-get-funded-navbar-click"
         >
           {links.getFunded.text[lang]}
         </Button>
@@ -247,7 +248,11 @@ function DesktopLinks({ lang }) {
         </Button>
       </li> */}
       <li className="getFunded">
-        <Button to={links.getFunded.url} variant="primary">
+        <Button
+          to={links.getFunded.url}
+          variant="primary"
+          id="cta-get-funded-navbar-click"
+        >
           {links.getFunded.text[lang]}
         </Button>
       </li>
