@@ -26,5 +26,3 @@
 # Redirect users in US to /us/.
 /  /us/     302  Country=us
 
-# Redirect users in UK to /.
-/  /        302  Country=gb
