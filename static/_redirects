@@ -21,9 +21,6 @@
 # Temp prestashop
 /prestashop          https://outfund-2021.webflow.io/prestashop
 
-# Temp lateest blogpost
-/blog/2022-outlook-5-key-ecommerce-trends-to-follow   https://outfund-2021.webflow.io/blog/2022-outlook-5-key-ecommerce-trends-to-follow
-
 # Redirect users in Spain to /es
 /  /es     302!  Country=es
 

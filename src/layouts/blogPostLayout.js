@@ -27,7 +27,7 @@ const BlogPostLayout = ({ data: { mdx } }) => {
           figcaption: (props) => <T.BodySmall as="figcaption" {...props} />,
           li: (props) => <ListElement as="li" {...props} />,
           blockquote: T.Blockquote,
-          a: Link,
+          a: (props) => <Link target="_blank" {...props} />,
           Button,
           StaticImage,
         }}
