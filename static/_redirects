@@ -17,11 +17,11 @@
 /contact/es          /es/get-funded/
 /contact/contact-au  /au/get-funded/
 
-# Redirect users in Australia to /au/.
-/  /au/     302  Country=au
+# Redirect users in Australia to /au
+/  /au     302  Country=au
 
-# Redirect users in Spain to /es/.
-/  /es/     302  Country=es
+# Redirect users in Spain to /es
+/  /es     302  Country=es
 
-# Redirect users in US to /us/.
-/  /us/     302  Country=us
+# Redirect users in US to /us
+/  /us     302  Country=us
