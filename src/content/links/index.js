@@ -99,28 +99,28 @@ const links = {
         en: "United Kingdom",
         es: "Reino Unido",
       },
-      url: "https://new.out.fund/",
+      url: "https://out.fund/",
     },
     us: {
       text: {
         en: "United States",
         es: "Estados Unidos",
       },
-      url: "https://new.out.fund/us/",
+      url: "https://out.fund/us/",
     },
     au: {
       text: {
         en: "Australia",
         es: "Australia",
       },
-      url: "https://new.out.fund/au/",
+      url: "https://out.fund/au/",
     },
     es: {
       text: {
         en: "Spain",
         es: "España",
       },
-      url: "https://new.out.fund/es/",
+      url: "https://out.fund/es/",
     },
   },
 }
