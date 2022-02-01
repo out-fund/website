@@ -21,11 +21,11 @@
 # Temp prestashop
 /prestashop          https://outfund-2021.webflow.io/prestashop
 
-# Redirect users in Spain to /es
+# Redirect users in Spain to /es/
 /  /es/     302!  Country=es
 
-# Redirect users in Australia to /au
+# Redirect users in Australia to /au/
 /  /au/     302!  Country=au
 
-# Redirect users in US to /us
-/  /us/     302!  Country=us
+# Redirect users in US and CA to /us/
+/  /us/     302!  Country=us,ca
