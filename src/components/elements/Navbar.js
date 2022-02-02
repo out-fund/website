@@ -73,7 +73,7 @@ const MobileLinks = ({ lang }) => {
           {links.getFunded.text[lang]}
         </Button>
 
-        <div ref={mobileButtonRef}>
+        <div ref={mobileButtonRef} style={{ alignSelf: "center" }}>
           <Menue
             onClick={(event) => handleMobileMenueClick(event)}
             isOpen={mobileMenueIsOpen}

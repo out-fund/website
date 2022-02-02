@@ -53,7 +53,7 @@ const Eligibility = ({ location }) => {
                 <b>{values[selected - 1]}</b> de financiación.
               </Description>
               <ButtonWrapper>
-                <Button to="get-funded/" variant="primary" size="large">
+                <Button to="/get-funded/" variant="primary" size="large">
                   Aplica ya
                 </Button>
               </ButtonWrapper>
