@@ -12,16 +12,16 @@ const ThankYou = () => {
     <LangLayout simpleNavbar>
       <Wrapper>
         <ContentWrapper>
-          <Title>Almost there ES</Title>
+          <Title>Casi llegamos</Title>
           <Description>
-            We need to know more about you and your UK registered company.
+            Necesitamos saber más sobre usted y su empresa registrada.
           </Description>
           <Button
-            href="https://app.out.fund/enquire?"
+            href="https://app.out.fund/enquire"
             variant="primary"
             size="large"
           >
-            Proceed with application
+            Proceder con la aplicación
           </Button>
         </ContentWrapper>
       </Wrapper>
