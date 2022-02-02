@@ -318,6 +318,9 @@ const LogoWrapper = styled.div`
   }
   svg {
     height: 24px;
+    @media (max-width: 360px) {
+      height: 20px;
+    }
   }
 `
 const Wrapper = styled.div`
