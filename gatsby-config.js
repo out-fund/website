@@ -35,7 +35,18 @@ module.exports = {
     },
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        excludes: [
+          "**/eligibility/",
+          "**/b2b/",
+          "**/thank-you/",
+          "**/legal/privacy-policy/",
+          "**/legal/cookie-policy/",
+        ],
+      },
+    },
     "gatsby-plugin-mdx",
     {
       resolve: `gatsby-plugin-mdx`,
