@@ -31,20 +31,6 @@ const Eligibility = ({ location }) => {
     <LangLayout simpleNavbar>
       <Wrapper>
         <ContentWrapper>
-          {/* {selected > 9 ? (
-            <>
-              <Title>Please contact us for tailored offer</Title>
-              <ButtonWrapper>
-                <Button
-                  href="https://app.out.fund/enquire?"
-                  variant="primary"
-                  size="large"
-                >
-                  Contact Us
-                </Button>
-              </ButtonWrapper>
-            </>
-          ) :} */}
           {selected > 0 ? (
             <>
               <Title>Great!</Title>
@@ -53,7 +39,12 @@ const Eligibility = ({ location }) => {
                 <b>{values[selected - 1]}</b> of funding.
               </Description>
               <ButtonWrapper>
-                <Button to="/get-funded/" variant="primary" size="large">
+                <Button
+                  to="/get-funded/"
+                  variant="primary"
+                  size="large"
+                  id="cta-get-funded-eligibility-click"
+                >
                   Apply now
                 </Button>
               </ButtonWrapper>

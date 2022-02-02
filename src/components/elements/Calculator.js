@@ -96,6 +96,7 @@ const Calculator = ({ data }) => {
                 state={{ selected: value }}
                 variant="primary"
                 size="large"
+                id="cta-check-eligibility"
               >
                 {data.btn.text}
               </Button>
