@@ -390,6 +390,10 @@ const MobileDropdownWrapper = styled.div`
       : css`
           visibility: hidden;
         `}
+
+  a {
+    white-space: nowrap;
+  }
 `
 
 const Menue = styled.button`
