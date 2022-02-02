@@ -26,8 +26,57 @@ const SeoComponent = ({ title, description, image, article }) => {
     url: `${siteUrl}${pathname}`,
   }
 
+  let htmlLang = `en-` + langKey
+  if (langKey === "es") {
+    htmlLang = "es-es"
+  }
+  if (langKey === "en") {
+    htmlLang = "en-gb"
+  }
+
+  let hreflangPathname
+  if (langKey === "en") {
+    hreflangPathname = pathname
+  }
+  if (langKey !== "en") {
+    hreflangPathname = `/` + pathname.split("/").slice(2).join("/")
+  }
+
+  console.log(hreflangPathname)
+
   return (
-    <Helmet title={seo.title} titleTemplate={titleTemplate}>
+    <Helmet
+      title={seo.title}
+      titleTemplate={titleTemplate}
+      htmlAttributes={{ lang: `${htmlLang}` }}
+    >
+      <link
+        rel="alternate"
+        hreflang="en-gb"
+        href={`${siteUrl}${hreflangPathname}`}
+      />
+      <link
+        rel="alternate"
+        hreflang="en-us"
+        href={`${siteUrl}/us${hreflangPathname}`}
+      />
+      <link
+        rel="alternate"
+        hreflang="en-au"
+        href={`${siteUrl}/au${hreflangPathname}`}
+      />
+      <link
+        rel="alternate"
+        hreflang="es-es"
+        href={`${siteUrl}/es${hreflangPathname}`}
+      />
+
+      <link
+        rel="alternate"
+        hreflang="x-default"
+        href={`${siteUrl}${hreflangPathname}`}
+      />
+
       <meta name="description" content={seo.description} />
 
       {seo.image && langKey !== "es" && (
