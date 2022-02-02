@@ -1,24 +1,16 @@
 {
   "language": "es-ES",
   "hero": {
-    "title": "Cómo funciona la financiación",
-    "description": "Outfund ofrece financiación a medida y sin dilución. Combinamos los mejores aspectos de la financiación de la deuda y del equity, y evitamos lo peor de cada una de ellas."
-  },
-  "humanCapital": {
-    "title": "Capital humano",
-    "description": "Ofrecemos apoyo más allá de la financiación. Nuestro equipo está aquí para comprobar regularmente, asesorar sobre tu crecimiento y hacer presentaciones a nuestra amplia red de socios de confianza. Damos a todos los fundadores acceso a servicios que suelen estar ocultos tras los muros del capital riesgo.",
-    "image": {
-      "src": "./../../../images/human-capital.jpg",
-      "alt": "Payment made ont the phone"
-    }
+    "title": "Cómo funcionamos",
+    "description": "Outfund ofrece financiación no dilutiva y a medida. Combinamos los mejor de la financiación de la deuda y del equity, y evitamos lo peor de cada una de ellas."
   },
   "process": {
-    "title": "El Proceso",
-    "description": "Empieza a crecer ahora - Sin papeleo, sólo financiación tú alcance.",
+    "title": "Nuestro proceso, paso a paso",
+    "description": "Empieza a crecer ahora - Sin papeleo. Capital de crecimiento a tú alcance.",
     "steps": [
       {
-        "title": "1. Solicita la financiación",
-        "description": "Conecta tus cuentas de forma segura: nos sincronizamos con tus sistemas bancarios y pasarelas de pago existentes para analizar los datos de tus ingresos en tiempo real. Recibe una oferta a medida desde 10.000€ hasta 2 millones de€ en 48 horas."
+        "title": "1. Solicita financiación",
+        "description": "Conecta tus cuentas de forma segura: nos sincronizamos con tus sistemas bancarios y pasarelas de pago existentes para analizar tus ingresos en tiempo real. Recibe una oferta a medida desde 10k€ hasta 2M€ en 48 horas."
       },
       {
         "title": "2. Selecciona una oferta",
@@ -26,17 +18,25 @@
       },
       {
         "title": "3. Devuelve el capital según tus condiciones",
-        "description": "Devuelve el capital con una pequeña parte de tus nuevas ventas. Los reembolsos suben y bajan en función de tus ingresos. ¿Un mes tranquilo? Se reducen los pagos."
+        "description": "Devuelve el capital con una pequeña parte de tus futuras ventas. Los reembolsos varían en función de tus ingresos. ¿Un mes flojo en ventas? Se reducen los pagos."
       },
       {
         "title": "4. Escala más rapido",
         "description": "Descubre nuestra red: te ponemos en contacto con socios de crecimiento, agencias especializadas y fondos de capital riesgo para que puedas alcanzar tus objetivos a largo plazo."
       },
       {
-        "title": "5. Top Up",
-        "description": "Accede a capital de seguimiento: tu gestor de crecimiento dedicado apoya tus necesidades continuas de capital para que puedas seguir escalando sin límites."
+        "title": "5. Recargas",
+        "description": "Accede a capital de seguimiento: tu Growth Manager apoyará tus necesidades de capital en todo momento para que puedas seguir creciendo sin límites."
       }
     ]
+  },
+  "humanCapital": {
+    "title": "Capital humano",
+    "description": "Ofrecemos apoyo más allá de la financiación. Nuestro equipo está aquí para ayudarte, asesorarte en tu crecimiento y presentarte a nuestra amplia red de partners de confianza. Damos a todos los fundadores acceso a servicios que no suelen ofrecer los fondos de capital riesgo.",
+    "image": {
+      "src": "./../../../images/human-capital.jpg",
+      "alt": "Payment made ont the phone"
+    }
   },
   "faq": {
     "title": "Preguntas frecuentes",

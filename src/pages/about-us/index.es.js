@@ -20,7 +20,7 @@ const AboutUs = (props) => {
     <LangLayout>
       <SeoComponent
         title="Nosotros"
-        description="Somos el mayor inversor de Ecommerce del Reino Unido y de España"
+        description="Somos el mayor inversor de Ecommerce de España y del Reino Unido"
       />
       <HeroSimple data={props.data.aboutUsJson.hero} />
       <Main>
@@ -79,26 +79,7 @@ export const query = graphql`
         description
         title
       }
-      companies {
-        title
-        btn {
-          text
-          url
-        }
-        cards {
-          company
-          logo
-          image {
-            src {
-              childImageSharp {
-                gatsbyImageData
-              }
-            }
-            alt
-          }
-        }
-        logos
-      }
+
       joinUs {
         description
         title

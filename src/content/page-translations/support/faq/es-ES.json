@@ -10,27 +10,27 @@
       "qa": [
         {
           "question": "¿Qué financiación ofrecéis?",
-          "answer": "Podemos proporcionar entre 10.000€ y 2.000.000€ al mismo tiempo."
+          "answer": "Podemos proporcionar tickets entre 10K€ y 2M€ al momento."
         },
         {
           "question": "¿Cómo se calcula mi oferta?",
-          "answer": "Outfund se conecta de forma segura a tus plataformas bancarias, pasarelas de pago y la contabilidad existente. Mediante modelos predictivos, evaluamos las métricas clave de tus ingresos, el rendimiento publicitario y otros datos de terceros para crear ofertas de financiación a medida. <br/><br/> Nuestra financiación se basa en vuestro rendimiento. No entramos en Equity, lo que significa que no diluimos ni a ti ni a tus inversores. En su lugar, la financiación se devuelve a través de un porcentaje de ingresos."
+          "answer": "Outfund se conecta de forma segura a tus pasarelas de pago y plataformas bancarias. Mediante modelos predictivos, evaluamos las métricas clave de tus ingresos, el rendimiento publicitario y otra información de terceros para crear ofertas de financiación a medida. <br/><br/> Nuestra financiación se basa en vuestro rendimiento. No entramos en Equity, lo que significa que no te diluimos ni a ti ni a tus inversores. En su lugar, la financiación se devuelve a través de un pequeño porcentaje preacordado de tus futuras ventas."
         },
         {
           "question": "¿Qué tengo que cumplir para obtener la financiación?",
-          "answer": "TPara financiar su empresa, necesitamos que tenga lo siguiente: <ul><li>Banco respaldado</li><li>Pasarelas de pago online</li><li>Llevar al menos 6 meses operando</li><li>Volumen de facturación superior a 10.000€ al mes</li></ul>"
+          "answer": "Para financiar su empresa, necesitamos que tenga lo siguiente: <ul><li>Pasarelas de pago online</li><li>Open Banking</li><li>Llevar al menos 6 meses operando</li><li>Volumen de facturación superior a 15k€ al mes</li></ul>"
         },
         {
-          "question": "¿Puedo recibir más de un préstamo a la vez?",
-          "answer": "Sí, puedes recibir un préstamo adicional si reúnes los requisitos para obtener mayor capital. <br/><br/> Puede optar a más capital si: <ul><li>No has elegido el importe máximo de capital en el primer anticipo</li><li>Los ingresos de tu empresa han aumentado considerablemente desde el último anticipo</li><li>Tienes una nueva fuente de ingresos que aumenta significativamente tus ventas</li><li>Has reembolsado más del 80% de su anterior préstamo</li></ul><br/> Todas las ofertas están sujetas a Due Diligence"
+          "question": "¿Puedo recibir capital más de una vez?",
+          "answer": "Sí, puedes recibir capital adicional si reúnes los siguientes requisitos: <ul><li>No has elegido el importe máximo de capital en el primer anticipo</li><li>Los ingresos de tu empresa han aumentado considerablemente desde el último anticipo.</li><li>Tienes una nueva fuente de ingresos que aumenta significativamente tus ventas.</li><li>Has reembolsado más del 80% del capital.</li></ul><br/> Todas las ofertas están sujetas a Due Diligence"
         },
         {
           "question": "¿Cómo funciona?",
-          "answer": "<ol><li>Solicita financiación con Outfund.</li><li>Nuestro modelo utiliza tus ingresos, el rendimiento de los anuncios y datos de terceros para elaborar una oferta exclusiva de capital al que se le aplica una tarifa fija.</li> <li>Utiliza la financiación para aumentar tus ingresos.</li> <li>Devuelves la inversión original y la cuota fija con pequeñas cantidades de tus ingresos a lo largo del proceso.</li> <li>Nosotros calculamos automáticamente cuánto más te podemos adelantar la próxima vez.</li></ol><br/> No renuncias a ninguna participación de tu negocio y, a diferencia de un préstamo, tu reembolso total está limitado desde el principio."
+          "answer": "<ol><li>Solicita el capital.</li><li>Nuestro modelo utiliza tus ingresos y datos de terceros para elaborar una oferta exclusiva de capital al que se le aplica una tarifa fija.</li><li>Utiliza la financiación para aumentar tus ingresos.</li><li>Devuelves el capital más la cuota fija con pequeñas cantidades de tus futuras ventas.</li><li>Nosotros, automáticamente, calculamos cuánto más te podemos adelantar la próxima vez.</li></ol><br/> No te diluyas si realmente no es necesario. A diferencia de un préstamo, tu reembolso total está limitado desde el principio."
         },
         {
           "question": "¿Cómo aplico?",
-          "answer": "Puedes presentar tu solicitud en cuestión de minutos <a href='https://www.out.fund/get-funded/'>aquí</a>. Deberás ser uno de los directores de la empresa para la que se solicita. <br/><br/> Tendrás que conectar las cuentas bancarias de tu empresa, las pasarelas de pago y las cuentas financieras de la empresa. Estos datos nos permitirán elaborar tu oferta de financiación."
+          "answer": "Puedes presentar tu solicitud en cuestión de minutos <a href='https://www.out.fund/get-funded/'>aquí</a>. DDeberás ser uno de los directores de la empresa para la que se solicita.<br/><br/> Tendrás que conectar las pasarelas de pago, las cuentas bancarias y adjuntas los estados financieros de tu empresa. Estos datos nos permitirán elaborarte una oferta de financiación totalmente personalizada."
         }
       ]
     },
@@ -39,11 +39,11 @@
       "qa": [
         {
           "question": "¿Cómo se fija mi tarifa?",
-          "answer": "La tarifa se basa en los datos analizados por nuestra plataforma. Tenemos en cuenta sus datos de ingresos, métricas de negocio y datos de mercado a la hora de determinar tu oferta y la tarifa asociada a ella."
+          "answer": "La tarifa se calcula en base a los datos analizados por nuestra plataforma. Tenemos en cuenta tus ingresos, tus métricas de negocio y los datos de mercado a la hora de determinar tu oferta y la tarifa fija asociada a ella."
         },
         {
           "question": "¿Hay alguna comisión de apertura?",
-          "answer": "No hay ninguna comisión para solicitar la financiación"
+          "answer": "No hay ninguna comisión."
         }
       ]
     },
@@ -52,22 +52,22 @@
       "qa": [
         {
           "question": "¿Cuándo empieza el reembolso?",
-          "answer": "Comenzaremos a cobrar el porcentaje de devolución acordado sobre sus ingresos futuros en curso, hasta que el saldo sea 0. <br/><br/> Los pagos automáticos suelen iniciarse 5 días hábiles después de acordar la financiación."
+          "answer": "Comenzaremos a cobrar el porcentaje de devolución acordado sobre tus futuras ventas, hasta que el saldo sea 0.<br/><br/> Los pagos automáticos suelen iniciarse 5 días hábiles después de acordar la financiación."
         },
         {
-          "question": "¿Cambia en algun caso el porcentaje de devolución?",
-          "answer": "Nuestro objetivo es ceñirnos al porcentaje de ingresos estimado inicialmente. Sin embargo, es posible que tengamos que variar el porcentaje de devolución en función de sus ingresos durante el periodo de reembolso. Puede ponerse en contacto con nuestro growth manager para cualquier consulta sobre tu cuenta."
+          "question": "¿En algún caso cambia el porcentaje de devolución?",
+          "answer": "Nuestro objetivo es ceñirnos al porcentaje de ingresos estimado inicialmente. Sin embargo, es posible que tengamos que variar el porcentaje de devolución en función de tus ingresos durante el periodo de reembolso. Puede ponerse en contacto con nuestro Growth Manager para cualquier consulta sobre tu cuenta."
         },
         {
           "question": "¿Cuánto tiempo dura el repago?",
-          "answer": "El pago se basa en tus ingresos futuros, por lo que el tiempo de devolución varía en función de tu negocio y del porcentaje de ingresos acordado.  Por lo general, nuestro objetivo es conseguir un periodo de devolución de 6 meses, pero te asesoraremos sobre el tiempo de devolución previsto una vez completada la oferta."
+          "answer": "El pago se basa en tus ingresos futuros, por lo que el tiempo de devolución varía en función de tu negocio y del porcentaje de ingresos acordado. Por lo general, nuestro objetivo es conseguir un periodo de devolución de 6 meses, pero te asesoraremos sobre el tiempo de devolución previsto una vez completada la oferta."
         },
         {
           "question": "¿Cuál es mi porcentaje de devolución?",
-          "answer": "El porcentaje de devolución es el porcentaje de los ingresos que tomamos mientras devuelves tu financiación. Normalmente lo fijamos en torno al 1-20% de los ingresos futuros a lo largo del proceso de devolución, para mantener un flujo de caja adecuado en tus operaciones diarias. Trabajaremos contigo para encontrar un porcentaje que se adapte a tu negocio."
+          "answer": "El porcentaje de devolución es el porcentaje de los ingresos que tomamos mientras devuelves tu financiación. Normalmente lo fijamos en torno al 1-20% de tus futuras ventas a lo largo del proceso de devolución, para mantener un flujo de caja adecuado en tus operaciones diarias. Trabajaremos contigo para encontrar un porcentaje que se adapte a tu negocio."
         },
         {
-          "question": "¿Cuánto tiempo dura todo el proceso?",
+          "question": "¿Cada cuanto se hacen los repagos?",
           "answer": "Cobramos automáticamente el porcentaje preacordado de los ingresos mediante un adeudo directo diario en tu cuenta bancaria. El adeudo suele realizarse con dos días hábiles de retraso respecto a los ingresos."
         }
       ]
@@ -77,40 +77,40 @@
       "qa": [
         {
           "question": "¿Qué otra información necesitáis?",
-          "answer": "Para poder presentarte una oferta, tenemos que verificar tanto tu identidad como la de tu empresa. El primer paso es conectar las cuentas que utilizas para gestionar tu negocio: Utilizamos esta información para analizar los datos de tus ingresos."
+          "answer": "Para poder presentarte una oferta, tenemos que verificar tanto tu identidad como la de tu empresa. El primer paso es conectar las cuentas que utilizas para gestionar tu negocio: Utilizamos esta información para analizar tus ingresos."
         },
         {
-          "question": "¿Por qué necesitan la información de mi cuenta bancaria?",
-          "answer": "Podemos desplegar entre £10,000 y £1,000,000 a la vez. Usamos su información financiera para determinar su elegibilidad para financiamiento de crecimiento. Le pedimos que conecte esta información a nuestra plataforma para que podamos evaluar el rendimiento de su negocio rápidamente. La cuenta bancaria que conecte a Outfund también es la cuenta bancaria de la que debitaremos sus reembolsos."
+          "question": "¿Por qué necesitáis mi información bancaria?",
+          "answer": "Podemos invertir entre 10k€ y 2M€ al momento. Utilizamos tu información financiera para determinar tu capacidad de recibir financiación extra. Te pedimos que conectes esta información a nuestra plataforma para que podamos evaluar rápidamente el rendimiento de tu negocio. La cuenta bancaria que conectes a Outfund es también la cuenta bancaria en la que cargaremos tus reembolsos."
         },
         {
-          "question": "¿Cómo protegen la información de mi empresa?",
-          "answer": "Sus datos se utilizan de forma segura para mejorar su experiencia en Outfund y ofrecernos información sobre cómo crear más productos financieros para el empresario moderno. Nunca compartiremos sus datos con un tercero sin su consentimiento expreso. Consulte nuestra <a href='https://out.fund/legal/privacy-policy/'>política de privacidad</a> para obtener más detalles."
+          "question": "¿Cómo protegéis mis datos bancarios?",
+          "answer": "Tus datos se utilizan de forma segura. Nunca compartiremos sus datos con un tercero sin el consentimiento expreso. Consulta nuestra <a href='https://out.fund/legal/privacy-policy/'>política de privacidad</a> para más detalles."
         },
         {
-          "question": "¿Puedo solicitar financiación si tengo un socio comercial?",
-          "answer": "¡Por supuesto! Es posible que solicitemos que varios socios comerciales pasen por el proceso de verificación y firmen."
+          "question": "¿Puedo solicitar financiación si ya tengo un VC en el accionariado?",
+          "answer": "Por supuesto. Podemos pedir que varios socios pasen por el proceso de verificación."
         }
       ]
     },
     {
-      "title": "Uso de fondos",
+      "title": "Cómo usar los fondos",
       "qa": [
         {
-          "question": "¿Cómo puedo usar mis fondos?",
-          "answer": "Puede utilizar los fondos con su tarjeta de marketing de Outfund o cargando facturas en su cuenta de Outfund. No enviamos fondos directamente a su cuenta comercial."
+          "question": "¿Cómo puedo utilizar mis fondos?",
+          "answer": "Puedes utilizar los fondos con la tarjeta virtual de Outfund o adjuntando las facturas en nuestra plataforma. No enviamos los fondos directamente a tu cuenta bancaria."
         },
         {
-          "question": "¿Qué tan pronto puedo usar los fondos?",
-          "answer": "Una vez que se haya refrendado su contrato por adelantado, los fondos deberían llegar dentro de las 24 horas. A veces, grandes cantidades pueden tardar un día más. <br/><br/> Si tiene una tarjeta de marketing de Outfund, debería estar disponible en su tablero el mismo día."
+          "question": "¿Cúando puedo utilizar mis fondos?",
+          "answer": "Una vez que el contrato esté firmado, los fondos deberían llegar en un plazo de 24 horas. A veces, para cantidades grandes pueden tardar un día más. <br/><br/> Si tienes una tarjeta virtual de Outfund, debería estar disponible en tu dashboard el mismo día."
         },
         {
-          "question": "¿Cómo puedo ver mi historial de pagos?",
-          "answer": "Su historial de pagos se encuentra en la pestaña de pagos de su cuenta de Outfund."
+          "question": "¿Cómo puedo acceder al historial de mis repagos?",
+          "answer": "Su historial de repagos se encuentra en la sección de pagos de su cuenta de Outfund"
         },
         {
-          "question": "¿Cómo gestiono mi acuerdo de financiación?",
-          "answer": "Una vez que se haya completado su trato, puede usar su tablero para administrar su trato y verificar sus reembolsos. <br/><br/> Puede gastar los fondos mediante transferencia bancaria desde el panel de control de Outfund o su tarjeta de marketing de Outfund."
+          "question": "¿Cómo puedo gestionar mi acuerdo de financiación?",
+          "answer": "Una vez que se haya completado su trato, puede usar su tablero para administrar su trato y verificar sus reembolsos. <br/><br/> Una vez completada la operación, puedes utilizar tu panel de control para gestionar tus fondos y revisar los reembolsos."
         }
       ]
     },
@@ -118,20 +118,20 @@
       "title": "Márketing",
       "qa": [
         {
-          "question": "¿Dónde puedo encontrar los detalles de mi tarjeta de marketing?",
-          "answer": "Los detalles de su tarjeta de marketing de Outfund están disponibles en la pestaña de su cuenta en su tablero de Outfund."
+          "question": "¿Dónde puedo encontrar los datos de mi tarjeta virtual?",
+          "answer": "Los datos de tu tarjeta virtual están disponibles en la sección de \"tu cuenta\" en el panel de control de nuestra plataforma."
         },
         {
           "question": "Mi tarjeta de marketing ha sido rechazada. ¿Qué debo hacer?",
-          "answer": "Si esto sucede, recibirá un correo electrónico informándole por qué se rechazó la tarjeta. <br/><br/> Vale la pena comprobar la fecha de caducidad del CVC y el número de tarjeta en el panel de control de Outfund para asegurarse de que los ha introducido correctamente. <br/><br/> Tenga en cuenta que las transacciones grandes pueden bloquearse para prevenir el fraude. Si necesita realizar una transacción grande, infórmenos con anticipación para que podamos asegurarnos de que sea exitosa."
+          "answer": "Si esto ocurre, recibirás un correo electrónico en el que se te informará de por qué se ha rechazado la tarjeta. <br/><br/> Conviene que compruebes la fecha de caducidad y el número de tarjeta en tu panel de control de Outfund para asegurarte de que lo has introducido correctamente. <br/><br/> Ten en cuenta que las transacciones grandes pueden ser bloqueadas para prevenir el fraude. Si necesitas realizar una transacción de gran tamaño, infórmenos con antelación para que podamos asegurarnos de que se realiza correctamente."
         },
         {
-          "question": "¿Cómo obtengo una tarjeta de marketing de Outfund?",
-          "answer": "Si lo solicita, le enviaremos una tarjeta de marketing una vez que se haya confirmado su inversión."
+          "question": "¿Cómo puedo obtener la tarjeta virtual de Outfund?",
+          "answer": "Una vez confirmada la financiación, activaremos una tarjeta virtual si la solicitas."
         },
         {
-          "question": "¿Qué es una tarjeta de marketing de Outfund?",
-          "answer": "Una tarjeta de marketing de Outfund es una tarjeta virtual precargada que puede utilizar para financiar su inversión en marketing. Puede gastarlo en anuncios digitales u otros artículos en su presupuesto de marketing."
+          "question": "¿Qué es la tarjeta virtual de Outfund?",
+          "answer": "La tarjeta de Outfund es una tarjeta virtual precargada que puede utilizarse para financiar tus gastos de marketing. Puedes utilizarla para financiar marketing online u otras partidas de tu presupuesto de marketing."
         }
       ]
     }

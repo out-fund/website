@@ -12,7 +12,7 @@
       "url": "/get-funded/"
     },
     "secondaryBtn": {
-      "text": "Aprende cómo funciona",
+      "text": "Cómo funciona",
       "url": "/how-funding-works/"
     },
     "image": {
@@ -22,7 +22,7 @@
   },
   "weFunded": {
     "title": "Financiamos marcas como la tuya",
-    "description": "Queremos que empresas en crecimiento alcancen antes el éxito. Te ayudamos a hacer realidad tu visión con un capital rápido, justo y accesible.",
+    "description": "Queremos ayudar a empresas a crecer lo más rápido posible ofreciendo un capital rápido, justo y accesible.",
     "cards": {
       "feel": {
         "tag": {
@@ -32,7 +32,7 @@
         "company": "Feel",
         "logo": "<svg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 55 30'><path fill-rule='evenodd' clip-rule='evenodd' d='M0 0v30h5.28V17.648h5.318a11.16 11.16 0 0 0-.247 2.36c0 1.85.447 3.541 1.342 5.075a9.61 9.61 0 0 0 3.694 3.608c1.566.872 3.297 1.308 5.194 1.308 1.645 0 3.186-.35 4.62-1.05 1.436-.701 2.588-1.666 3.457-2.895l-3.397-2.716a4.991 4.991 0 0 1-2.074 1.606 6.715 6.715 0 0 1-2.646.535c-1.396 0-2.564-.363-3.506-1.09-.94-.727-1.556-1.699-1.846-2.915h11.6a9.706 9.706 0 0 0 1.245 3.608 9.61 9.61 0 0 0 3.693 3.609c1.567.872 3.298 1.308 5.194 1.308 1.646 0 3.186-.35 4.621-1.05 1.436-.701 2.588-1.666 3.456-2.895l-3.396-2.716a4.992 4.992 0 0 1-2.074 1.606 6.716 6.716 0 0 1-2.646.535c-1.396 0-2.564-.363-3.506-1.09-.941-.727-1.556-1.699-1.846-2.915h13.139v1.204c0 2.343.59 4.154 1.822 5.432 1.232 1.278 2.92 1.89 5.09 1.89.804 0 1.768-.133 2.893-.4v-4.579c-.321.053-.777.053-1.313.053-1.259 0-2.116-.293-2.571-.932-.456-.612-.67-1.65-.67-3.088V0h-5.251v14.187a9.595 9.595 0 0 0-3.047-2.982c-1.488-.925-3.154-1.388-4.997-1.388-1.488 0-2.86.275-4.118.823-1.257.549-2.307 1.289-3.15 2.22a9.802 9.802 0 0 0-1.018 1.343 9.595 9.595 0 0 0-3.058-2.998c-1.488-.925-3.154-1.388-4.997-1.388-1.488 0-2.86.275-4.117.823-1.258.549-2.308 1.289-3.15 2.22a9.8 9.8 0 0 0-.947 1.23v-1.548H5.28V5.125h13.241V0H0Zm15.367 17.807h9.578c-.145-.978-.665-1.797-1.56-2.458-.895-.66-1.942-.991-3.14-.991-1.146 0-2.153.314-3.022.941-.869.628-1.487 1.464-1.856 2.508Zm25.919 0h-9.578c.369-1.044.987-1.88 1.856-2.508.87-.627 1.876-.941 3.022-.941 1.198 0 2.245.33 3.14.99.895.662 1.415 1.481 1.56 2.46Z' fill='#111'/></svg>",
         "quote": {
-          "title": "Invertí en el crecimiento repetido y aumenté las suscripciones en x4",
+          "title": "Invirtiendo más en marketing, conseguimos aumentar nuestras suscripciones en x4",
           "by": "Boris Hodakel, Fundadora de Feel"
         },
         "image": {
@@ -63,14 +63,14 @@
     }
   },
   "weInvesting": {
-    "title": "Convertimos tus futuros ingresos en capital inmediato",
-    "description": "Te proporcionamos el capital que necesitas, cuando lo necesites. Sin dilución, sin garantías personales, sin tipos de interés. Es la financiación, más justa. <br/><br/> Simplemente conecta tus pasarelas de pago online a nuestra plataforma, y generaremos ofertas de financiación a medida basadas en tus datos de ingresos en menos de 48 horas. Invierte en el crecimiento y devuelve el capital a medida que vas vendiendo.",
+    "title": "Convertimos tus ingresos futuros en capital de manera inmediata",
+    "description": "Te proporcionamos el capital que necesitas, cuando lo necesites. Sin dilución, sin pedir garantías personales, sin aplicar tipos de interés y sin ir al notario. <br/><br/> Conecta tus pasarelas de pago online a nuestra plataforma y te pondremos encima de la mesa distintas ofertas de financiación, a medida, en menos de 48 horas. Potencia tu crecimiento y devuelve el capital con un porcentaje de tus futuras ventas.",
     "image": {
       "src": "./../../../images/PaymentCounterPhone.jpg",
       "alt": "Payment made ont the phone"
     },
     "btn": {
-      "text": "Más información sobre el funcionamiento de la financiación",
+      "text": "Más información",
       "url": "/how-funding-works/"
     }
   },
@@ -83,7 +83,7 @@
     "card": {
       "company": "Onto",
       "quote": {
-        "title": "Hemos duplicado nuestro tamaño el último trimestre y está previsto que volvamos hacerlo el próximo",
+        "title": "Hemos duplicado nuestra facturación en el último trimestre y está previsto que volvamos hacerlo el próximo",
         "by": "Rob Jolly, Fundadora de ONTO"
       },
       "tag": {
@@ -99,12 +99,12 @@
     }
   },
   "findOut": {
-    "title": "Averigua cuánto podemos ofrecerte",
-    "description": "Las ofertas de financiación se basan en tus ingresos medios mensuales. Obtén una rápida orientación sobre tu capacidad de financiación con nuestra calculadora de fácil uso.",
+    "title": "Descubre cuánto podemos ofrecerte",
+    "description": "Nuestras ofertas de financiación se basan en tus ingresos medios mensuales. Obtén una orientación sobre el capital que podemos dejarte en 48h.",
     "calculator": {
-      "title": "Tus ingresos medios mensuales",
+      "title": "Ingresos medios mensuales",
       "range": [
-        "Por debajo de 10 000 €",
+        "Menos de 10.000 €",
         "10 000 €",
         "20 000 €",
         "50 000 €",
@@ -114,12 +114,12 @@
         "500 000 €",
         "700 000 €",
         "1 000 000 €",
-        "Por encima de 1 000 000 €"
+        "Más de 2.000.000 €"
       ],
       "select": {
-        "title": "Necesitas financiación para",
+        "title": "Financiación destinada a",
         "default": "Selecciona",
-        "dropdown": ["Inventory purchuses", "Marketing spend", "Something else"]
+        "dropdown": ["Stock / Inventario", "Marketing", "Otros"]
       },
       "btn": {
         "text": "Verificar elegibilidad",
@@ -153,8 +153,8 @@
     }
   },
   "aboutUs": {
-    "title": "Nosotros",
-    "description": "Outfund se dedica a hacer crecer las empresas. Nuestro equipo es una mezcla de fundadores, desarrolladores, consultores, amantes del café y escaladores. Nos movemos rápido y buscamos el impacto en todo lo que hacemos. Porque las finanzas deben hacer realidad las ideas.",
+    "title": "Sobre nosotros",
+    "description": "Outfund se focaliza en hacer crecer a las empresas. Nuestro equipo es una combinación de fundadores, desarrolladores, consultores y amantes del café. Nos movemos rápido y buscamos el impacto en todo lo que hacemos. Porque con nuestro capital las ideas se convierten en realidad.",
     "teamImages": [
       {
         "src": "./../../../images/team/Outfund-team-Abanoub.jpg",
@@ -245,16 +245,16 @@
       { "stat": "200 M€", "text": "Para invertir en 2022" },
       { "stat": "4", "text": "Países en los que operamos" },
       { "stat": "56+", "text": "Equipo en crecimiento" },
-      { "stat": "37 M€", "text": "Financiados hasta el momento" }
+      { "stat": "37 M€", "text": "Levantados hasta el momento" }
     ],
     "buttons": {
       "primary": {
-        "text": "Conoce más acerca de nosotros",
+        "text": "Conócenos",
         "url": "/about-us/"
       },
 
       "secondary": {
-        "text": "Ofertas de empleo",
+        "text": "Únete al equipo",
         "url": "/careers/"
       }
     }

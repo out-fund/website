@@ -49,7 +49,7 @@ const QuestionSection = (props) => {
 const Menue = ({ data }) => {
   return (
     <MenueWrapper>
-      <Title>Faq</Title>
+      <Title>FAQs</Title>
       <LinksWrapper>
         {data.map((item, index) => (
           <li key={index}>
@@ -82,12 +82,12 @@ const FAQ = (props) => {
             ))}
             <CantFindWrapper>
               <PositionTitle as="h5">
-                ¿No encuentras respuesta a tus preguntas?
+                ¿No encuentras la respuesta que estás buscando?
               </PositionTitle>
               <OpenApplication>
-                No te preocupes. Puedes escribirnos directamente por el chat a
-                través del icono de la esquina inferior de esta página, o
-                simplemente escríbenos a -{" "}
+                No te preocupes. No dudes en contactar con nosotros a través del
+                icono que aparece en la esquina inferior derecha de esta página,
+                o simplemente escríbenos aquí -{" "}
                 <a href={`mailto:contact@out.fund?subject='Outfund-Question'`}>
                   contact@out.fund
                 </a>

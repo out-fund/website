@@ -57,26 +57,7 @@ export const query = graphql`
         description
         title
       }
-      companies {
-        title
-        btn {
-          text
-          url
-        }
-        cards {
-          company
-          logo
-          image {
-            src {
-              childImageSharp {
-                gatsbyImageData
-              }
-            }
-            alt
-          }
-        }
-        logos
-      }
+
       joinUs {
         description
         title
