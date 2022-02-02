@@ -67,7 +67,7 @@ const FAQ = (props) => {
   return (
     <LangLayout>
       <SeoComponent
-        title="FAQs"
+        title="Preguntas frecuentes"
         description="Siempre estamos aquí para ayudar a responder sus preguntas"
       />
       <HeroSimple data={props.data.faqJson.hero} />
@@ -128,6 +128,7 @@ const LinksWrapper = styled.ul`
   }
   a {
     color: ${theme.color.button.primary.backgroundColor};
+    white-space: nowrap;
     text-decoration: none;
   }
 `
@@ -144,7 +145,7 @@ const ContentWrapper = styled.div`
     margin-bottom: 24px;
   }
   ${theme.above.l.m} {
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 240px 1fr;
     gap: 100px;
   }
 `

@@ -49,7 +49,7 @@ const QuestionSection = (props) => {
 const Menue = ({ data }) => {
   return (
     <MenueWrapper>
-      <Title>Faq</Title>
+      <Title>FAQs</Title>
       <LinksWrapper>
         {data.map((item, index) => (
           <li key={index}>
@@ -127,6 +127,7 @@ const LinksWrapper = styled.ul`
   }
   a {
     color: ${theme.color.button.primary.backgroundColor};
+    white-space: nowrap;
     text-decoration: none;
   }
 `
