@@ -19,7 +19,7 @@ const AboutUs = (props) => {
   return (
     <LangLayout>
       <SeoComponent
-        title="Sobre nosotras"
+        title="Nosotros"
         description="Somos el mayor inversor de Ecommerce del Reino Unido y de España"
       />
       <HeroSimple data={props.data.aboutUsJson.hero} />

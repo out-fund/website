@@ -54,7 +54,7 @@ const links = {
   aboutUs: {
     text: {
       en: "About us",
-      es: "Sobre nosotras",
+      es: "Nosotros",
     },
     url: "/about-us/",
   },
