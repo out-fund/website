@@ -19,7 +19,7 @@
 /usa                 /us/
 
 # Temp prestashop
-/prestashop          https://outfund-2021.webflow.io/prestashop
+/prestashop          https://old.out.fund/prestashop
 
 # Redirect users in Spain to /es/
 /  /es/     302!  Country=es
