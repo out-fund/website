@@ -110,7 +110,7 @@ const CtaBlockWrapper = styled.aside`
 `
 const InnerWrapper = styled.aside`
   display: grid;
-  grid-template-columns: 1;
+  grid-template-columns: 1fr;
   max-width: 970px;
   gap: 64px;
   align-items: center;
