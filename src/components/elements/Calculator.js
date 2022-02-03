@@ -31,12 +31,6 @@ const Calculator = ({ data }) => {
         <Selected as="div">{selectedAmount}</Selected>
       </TextWrapper>
       <FormWrapper>
-        <input
-          type="hidden"
-          name="form-name"
-          value="calculator"
-          maxLength="256"
-        />
         <RangeWrapper>
           <div className="top">
             {/* <div>{data.min}</div> */}
@@ -52,25 +46,21 @@ const Calculator = ({ data }) => {
               max="10"
               step="1"
               defaultValue={intialRangeValue}
-              // onChange={handleRangeChange}
               onChange={(event) => handleRangeChange(event)}
             />
           </InputWrapper>
         </RangeWrapper>
         <SelectWrapper>
-          {/* <T.Body as="label" className="label" htmlFor="reasons">
-            {data.select.title}
-          </T.Body> */}
           <F.Label htmlFor="reasons">{data.select.title}</F.Label>
           <div className="dropdown">
             <F.Select
               name="reasons"
               id="reasons"
-              defaultValue={"DEFAULT"}
+              defaultValue={""}
               onChange={() => handleButton()}
               required
             >
-              <option value="DEFAULT" disabled>
+              <option value="" disabled>
                 {data.select.default}
               </option>
               {data.select.dropdown.map((item) => (

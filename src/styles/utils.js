@@ -2,7 +2,7 @@ import styled, { css } from "styled-components"
 // import { theme } from "styles"
 import { theme } from "./new/theme"
 
-export const VisuallyHidden = styled.div`
+export const VisuallyHidden = styled.span`
   position: absolute;
   width: 1px;
   height: 1px;

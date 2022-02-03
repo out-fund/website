@@ -27,7 +27,7 @@ const Button = ({
     <ButtonWrap
       variant={variant}
       size={size}
-      color={color}
+      colorVersion={color}
       className={`ButtonWrap ${className ? className : ""}`}
       isOpen={isOpen}
     >
@@ -103,20 +103,20 @@ const ButtonWrap = styled.div`
         : variant === "secondary"
         ? css`
             box-shadow: ${(props) =>
-              props.color === "white"
+              props.colorVersion === "white"
                 ? `inset 0px 0px 0px 1px ${theme.color.white}`
                 : `inset 0px 0px 0px 1px ${theme.color.button.secondary.color}`};
 
             background-color: ${theme.color.button.secondary.backgroundColor};
             color: ${(props) =>
-              props.color === "white"
+              props.colorVersion === "white"
                 ? theme.color.white
                 : theme.color.button.secondary.color};
             transition: background-color 0.1s ease-in-out;
             :hover,
             :focus {
               background-color: ${(props) =>
-                props.color === "white"
+                props.colorVersion === "white"
                   ? "rgba(255,255,255, 0.2)"
                   : theme.color.button.secondary.hover};
             }

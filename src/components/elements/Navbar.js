@@ -68,7 +68,7 @@ const MobileLinks = ({ lang }) => {
           to={links.getFunded.url}
           variant="primary"
           className="getFunded"
-          id="cta-get-funded-navbar-click"
+          id="cta-get-funded-mobile-navbar-click"
         >
           {links.getFunded.text[lang]}
         </Button>
