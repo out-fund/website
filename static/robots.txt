@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: */eligibility/
+Disallow: */thank-you/
