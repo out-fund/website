@@ -1,3 +1,5 @@
 User-agent: *
 Disallow: */eligibility/
 Disallow: */thank-you/
+
+Sitemap: https://out.fund/sitemap/sitemap-index.xml
