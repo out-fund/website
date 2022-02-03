@@ -54,6 +54,10 @@ export const query = graphql`
 const Partners = (props) => {
   return (
     <LangLayout>
+      <SeoComponent
+        title="Partners"
+        description="We're the US's largest eCommerce investor"
+      />
       <HeroSimple data={props.data.partnersJson.hero} />
       <Main>
         <SectionPartners

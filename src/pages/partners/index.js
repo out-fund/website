@@ -13,6 +13,10 @@ import {
 const Partners = (props) => {
   return (
     <LangLayout>
+      <SeoComponent
+        title="Partners"
+        description="We're the UK's Largest eCommerce Investor"
+      />
       <HeroSimple data={props.data.partnersJson.hero} />
       <Main>
         <SectionPartners
