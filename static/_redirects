@@ -29,6 +29,10 @@
 /founder-referral-program    https://old.out.fund/founder-referral-program
 /xero    https://old.out.fund/xero
 
+# Sitemaps
+/sitemap_index.xml    /sitemap/sitemap-index.xml
+/sitemap.xml    /sitemap/sitemap-index.xml
+
 # Temp prestashop
 /prestashop          https://old.out.fund/prestashop
 
