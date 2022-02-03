@@ -25,7 +25,6 @@ export const query = graphql`
         title
         btn {
           text
-          url
         }
       }
       ourPartners {
