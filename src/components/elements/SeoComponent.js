@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
+import parse from "html-react-parser"
 
 import { useLangProvider } from "./../../utils/LangProvider"
 
@@ -16,22 +17,21 @@ const SeoComponent = ({ title, description, image, article }) => {
     defaultDescription,
     siteUrl,
     defaultImage,
-    // twitterUsername,
   } = site.siteMetadata
 
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
     image: `${siteUrl}${image || defaultImage}`,
-    url: `${siteUrl}${pathname}`,
+    url: `https://out.fund${pathname}`,
   }
 
-  let htmlLang = `en-` + langKey
+  let htmlLang = `en-` + langKey.toUpperCase()
   if (langKey === "es") {
-    htmlLang = "es-es"
+    htmlLang = "es-ES"
   }
   if (langKey === "en") {
-    htmlLang = "en-gb"
+    htmlLang = "en-GB"
   }
 
   let hreflangPathname
@@ -42,7 +42,30 @@ const SeoComponent = ({ title, description, image, article }) => {
     hreflangPathname = `/` + pathname.split("/").slice(2).join("/")
   }
 
-  console.log(hreflangPathname)
+  const gb = `
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="en_AU" />
+    <meta property="og:locale:alternate" content="es_ES" />
+  `
+  const us = `
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="en_GB" />
+    <meta property="og:locale:alternate" content="en_AU" />
+    <meta property="og:locale:alternate" content="es_ES" />
+  `
+  const au = `
+    <meta property="og:locale" content="en_AU" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="en_GB" />
+    <meta property="og:locale:alternate" content="es_ES" />
+  `
+  const es = `
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="en_AU" />
+    <meta property="og:locale:alternate" content="en_GB" />
+  `
 
   return (
     <Helmet
@@ -50,24 +73,25 @@ const SeoComponent = ({ title, description, image, article }) => {
       titleTemplate={titleTemplate}
       htmlAttributes={{ lang: `${htmlLang}` }}
     >
+      <link rel="canonical" href={seo.url} />
       <link
         rel="alternate"
-        hreflang="en-gb"
+        hreflang="en-GB"
         href={`${siteUrl}${hreflangPathname}`}
       />
       <link
         rel="alternate"
-        hreflang="en-us"
+        hreflang="en-US"
         href={`${siteUrl}/us${hreflangPathname}`}
       />
       <link
         rel="alternate"
-        hreflang="en-au"
+        hreflang="en-AU"
         href={`${siteUrl}/au${hreflangPathname}`}
       />
       <link
         rel="alternate"
-        hreflang="es-es"
+        hreflang="es-ES"
         href={`${siteUrl}/es${hreflangPathname}`}
       />
 
@@ -87,6 +111,10 @@ const SeoComponent = ({ title, description, image, article }) => {
       )}
 
       {seo.url && <meta property="og:url" content={seo.url} />}
+      {langKey === "en" && parse(gb)}
+      {langKey === "au" && parse(au)}
+      {langKey === "us" && parse(us)}
+      {langKey === "es" && parse(es)}
 
       {(article ? true : null) && <meta property="og:type" content="article" />}
 
@@ -96,6 +124,8 @@ const SeoComponent = ({ title, description, image, article }) => {
       {seo.description && (
         <meta property="og:description" content={seo.description} />
       )}
+
+      <meta property="og:site_name" content="Outfund" />
 
       {seo.image && langKey !== "es" && (
         <meta property="og:image" content={seo.image} />
@@ -108,9 +138,6 @@ const SeoComponent = ({ title, description, image, article }) => {
       )}
 
       <meta name="twitter:card" content="summary_large_image" />
-      {/* {twitterUsername && (
-        <meta name="twitter:creator" content={twitterUsername} />
-      )} */}
       {seo.title && <meta name="twitter:title" content={seo.title} />}
       {seo.description && (
         <meta name="twitter:description" content={seo.description} />
