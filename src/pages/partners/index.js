@@ -8,6 +8,7 @@ import {
   Main,
   SectionPartners,
   SectionWhy,
+  SeoComponent,
 } from "./../../components"
 
 const Partners = (props) => {
