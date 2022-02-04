@@ -1,15 +1,32 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
 import LangLayout from "./../../layouts/en"
 
-import { HeroSimple, Main, CardBlog } from "./../../components"
+import { HeroSimple, Main, CardBlog, SeoComponent } from "./../../components"
 import { theme } from "./../../styles/new/theme"
 
 const Blog = (props) => {
   return (
     <LangLayout>
+      <Helmet
+        title="Blog"
+        titleTemplate="%s | Outfund"
+        htmlAttributes={{ lang: `en-GB` }}
+      >
+        <meta name="description" content="Latest from our blog" />
+        <link rel="canonical" href={`https://out.fund/blog/}`} />
+        <meta property="og:url" content={`https://www.out.fund/blog/`} />
+        <meta property="og:title" content="Blog | Outfund" />
+        <meta property="og:description" content="Latest from our blog" />
+        <meta property="og:site_name" content="Outfund" />
+        <meta property="og:image" content="https://www.out.fund/Outfund.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Blog | Outfund" />
+        <meta name="twitter:description" content="Latest from our blog" />
+      </Helmet>
       <HeroSimple data={props.data.blogJson.hero} />
       <Main>
         <Wrapper>
@@ -85,7 +102,6 @@ export const query = graphql`
     }
     blogJson(language: { regex: "/en-GB/" }) {
       hero {
-        description
         title
       }
     }

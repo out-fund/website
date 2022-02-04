@@ -4,15 +4,17 @@ import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
+import { Helmet } from "react-helmet"
 
 import LangLayout from "./../layouts/en"
 
-import { HeroSimple, Main, Link, Button } from "./../components"
+import { HeroSimple, Main, Link, Button, SeoComponent } from "./../components"
 import T from "./../styles/new/typography"
 import { theme } from "./../styles/new/theme"
 
 const BlogPostLayout = ({ data: { mdx } }) => {
-  // console.log(mdx)
+  const calcSlug = `/blog/${mdx.slug.split("-").slice(3).join("-")}`
+
   return (
     <LangLayout>
       <MDXProvider
@@ -32,6 +34,29 @@ const BlogPostLayout = ({ data: { mdx } }) => {
           StaticImage,
         }}
       >
+        <Helmet
+          title={mdx.frontmatter.title}
+          titleTemplate="%s | Outfund"
+          htmlAttributes={{ lang: `en-GB` }}
+        >
+          <meta name="description" content={mdx.excerpt} />
+          <link rel="canonical" href={`https://out.fund${calcSlug}`} />
+          <meta property="og:url" content={`https://www.out.fund${calcSlug}`} />
+          <meta property="og:type" content="article" />
+          <meta
+            property="og:title"
+            content={mdx.frontmatter.title + " | Outfund"}
+          />
+          <meta property="og:description" content={mdx.excerpt} />
+          <meta property="og:site_name" content="Outfund" />
+          <meta
+            property="og:image"
+            content="https://www.out.fund/Outfund.png"
+          />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={mdx.frontmatter.title} />
+          <meta name="twitter:description" content={mdx.excerpt} />
+        </Helmet>
         <HeroSimple data={mdx.frontmatter} />
         <Main>
           {mdx.frontmatter.heroImage && (
@@ -121,6 +146,8 @@ export const query = graphql`
     mdx(id: { eq: $postId }) {
       id
       body
+      slug
+      excerpt(pruneLength: 155)
       frontmatter {
         title
         heroImage {

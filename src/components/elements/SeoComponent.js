@@ -74,6 +74,7 @@ const SeoComponent = ({ title, description, image, article }) => {
       htmlAttributes={{ lang: `${htmlLang}` }}
     >
       <link rel="canonical" href={seo.url} />
+
       <link
         rel="alternate"
         hreflang="en-GB"
