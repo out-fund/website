@@ -8,13 +8,12 @@ import { Helmet } from "react-helmet"
 
 import LangLayout from "./../layouts/en"
 
-import { HeroSimple, Main, Link, Button, SeoComponent } from "./../components"
+import { HeroSimple, Main, Link, Button } from "./../components"
 import T from "./../styles/new/typography"
 import { theme } from "./../styles/new/theme"
 
 const BlogPostLayout = ({ data: { mdx } }) => {
-  const calcSlug = `/blog/${mdx.slug.split("-").slice(3).join("-")}`
-
+  const calcSlug = `/blog/${mdx.slug.split("-").slice(3).join("-")}/`
   return (
     <LangLayout>
       <MDXProvider

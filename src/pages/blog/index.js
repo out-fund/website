@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet"
 
 import LangLayout from "./../../layouts/en"
 
-import { HeroSimple, Main, CardBlog, SeoComponent } from "./../../components"
+import { HeroSimple, Main, CardBlog } from "./../../components"
 import { theme } from "./../../styles/new/theme"
 
 const Blog = (props) => {

@@ -1,16 +1,13 @@
 import React from "react"
 import styled from "styled-components"
-// import { Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-// import parse from "html-react-parser"
 
 import T from "./../../styles/new/typography"
 import { Button } from "./../../components"
 import { theme } from "./../../styles/new/theme"
 
 const CardBlog = ({ data }) => {
-  // const { image, title, btn } = data
-  // console.log("cardBlog", data)
+  const blogLink = `/blog/${data.slug.split("-").slice(3).join("-")}/`
   return (
     <Wrapper>
       <ImageWrapper>
@@ -22,10 +19,7 @@ const CardBlog = ({ data }) => {
       <TextWrapper>
         <Title as="h2">{data.frontmatter.title}</Title>
         <BtnWrapper>
-          <Button
-            to={data.slug.split("-").slice(3).join("-")}
-            variant="secondary"
-          >
+          <Button to={blogLink} variant="secondary">
             Read More
           </Button>
         </BtnWrapper>
