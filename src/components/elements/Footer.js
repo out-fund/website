@@ -123,13 +123,13 @@ const Footer = ({ lang }) => {
                 <Button to={links.faq.url} variant="footerLink" color="white">
                   {links.faq.text[lang]}
                 </Button>
-                {/* <Button
+                <Button
                   to={links.contactUs.url}
                   variant="footerLink"
                   color="white"
                 >
                   {links.contactUs.text[lang]}
-                </Button> */}
+                </Button>
               </LinksColumn>
             </LinksWrapper>
             <CountryWrapper>
