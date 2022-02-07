@@ -1,15 +1,16 @@
 import React from "react"
 import styled from "styled-components"
+import { StaticImage } from "gatsby-plugin-image"
 
 import { Section, SectionHeader } from "./../../components"
 import { theme } from "./../../styles/new/theme"
 import T from "./../../styles/new/typography"
 
-import Step1 from "./../../images/svg/how-it-works/step-1.svg"
-import Step2 from "./../../images/svg/how-it-works/step-2.svg"
-import Step3 from "./../../images/svg/how-it-works/step-3.svg"
-import Step4 from "./../../images/svg/how-it-works/step-4.svg"
-import Step5 from "./../../images/svg/how-it-works/step-5.svg"
+// import Step1 from "./../../images/svg/how-it-works/step-1.svg"
+// import Step2 from "./../../images/svg/how-it-works/step-2.svg"
+// import Step3 from "./../../images/svg/how-it-works/step-3.svg"
+// import Step4 from "./../../images/svg/how-it-works/step-4.svg"
+// import Step5 from "./../../images/svg/how-it-works/step-5.svg"
 
 const SectionSteps = ({ data }) => {
   // console.log("hfw", data)
@@ -23,7 +24,11 @@ const SectionSteps = ({ data }) => {
         <ContentWrapper>
           <Step>
             <ImageWrapper>
-              <Step1 />
+              {/* <Step1 /> */}
+              <StaticImage
+                src="./../../images/how-funding-works/Step1.png"
+                alt="Step one to get funding"
+              />
             </ImageWrapper>
             <TextWrapper>
               <StepTitle>{data.steps[0].title}</StepTitle>
@@ -32,7 +37,11 @@ const SectionSteps = ({ data }) => {
           </Step>
           <Step>
             <ImageWrapper>
-              <Step2 />
+              {/* <Step2 /> */}
+              <StaticImage
+                src="./../../images/how-funding-works/Step2.png"
+                alt="Step one to get funding"
+              />
             </ImageWrapper>
             <TextWrapper>
               <StepTitle>{data.steps[1].title}</StepTitle>
@@ -41,7 +50,11 @@ const SectionSteps = ({ data }) => {
           </Step>
           <Step>
             <ImageWrapper>
-              <Step3 />
+              {/* <Step3 /> */}
+              <StaticImage
+                src="./../../images/how-funding-works/Step3.png"
+                alt="Step one to get funding"
+              />
             </ImageWrapper>
             <TextWrapper>
               <StepTitle>{data.steps[2].title}</StepTitle>
@@ -50,7 +63,11 @@ const SectionSteps = ({ data }) => {
           </Step>
           <Step>
             <ImageWrapper>
-              <Step4 />
+              {/* <Step4 /> */}
+              <StaticImage
+                src="./../../images/how-funding-works/Step4.png"
+                alt="Step one to get funding"
+              />
             </ImageWrapper>
             <TextWrapper>
               <StepTitle>{data.steps[3].title}</StepTitle>
@@ -59,7 +76,11 @@ const SectionSteps = ({ data }) => {
           </Step>
           <Step>
             <ImageWrapper>
-              <Step5 />
+              {/* <Step5 /> */}
+              <StaticImage
+                src="./../../images/how-funding-works/Step5.png"
+                alt="Step one to get funding"
+              />
             </ImageWrapper>
             <TextWrapper>
               <StepTitle>{data.steps[4].title}</StepTitle>
@@ -94,7 +115,7 @@ const TextWrapper = styled.div``
 const ImageWrapper = styled.div`
   display: flex;
   justify-content: center;
-  svg {
+  /* svg {
     width: 100%;
     height: 100%;
     max-height: 240px;
@@ -105,7 +126,7 @@ const ImageWrapper = styled.div`
       height: 240px;
       max-height: unset;
     }
-  }
+  } */
 `
 
 const Step = styled.div`

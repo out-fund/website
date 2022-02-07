@@ -24,7 +24,7 @@ const ContactUs = (props) => {
   const support = props.data.contactUsJson.support
   const feedback = props.data.contactUsJson.feedback
   const emailForm = props.data.contactUsJson.emailForm
-  const demoCall = props.data.contactUsJson.demoCall
+  // const demoCall = props.data.contactUsJson.demoCall
   const offices = props.data.officesJson
 
   return (
@@ -36,21 +36,6 @@ const ContactUs = (props) => {
       <HeroSimple data={props.data.contactUsJson.hero} />
       <Main>
         <ContentWrapper>
-          {/* <Box style={{ gridArea: "liveChat" }}>
-            <T.H4 as="h2" style={{ maxWidth: 300 }}>
-              {liveChat.title}
-            </T.H4>
-            <T.Body>{liveChat.description}</T.Body>
-            <LiveChat>
-              <GatsbyImage
-                image={getImage(liveChat.image)}
-                alt={liveChat.imageAlt}
-              />
-              <Button href={liveChat.btnUrl} variant="secondary">
-                {liveChat.btn}
-              </Button>
-            </LiveChat>
-          </Box> */}
           <Box style={{ gridArea: "support" }}>
             <T.H4 as="h2">{support.title}</T.H4>
             <T.Body>{support.description}</T.Body>
@@ -61,19 +46,14 @@ const ContactUs = (props) => {
           <Box style={{ gridArea: "feedback" }}>
             <T.H4 as="h2">{feedback.title}</T.H4>
             <T.Body>{feedback.description}</T.Body>
-            <Button href={feedback.btnUrl} variant="secondary">
+            <Button
+              href="https://surveys.hotjar.com/64b9728d-9db5-4b0d-9196-23f807bcde21"
+              variant="secondary"
+            >
               {feedback.btn}
             </Button>
           </Box>
-          {/* TODO Add html parser to the title props everywhere https://www.npmjs.com/package/html-react-parser */}
           <ContactUsForm data={emailForm} language="au" />
-          <Box style={{ gridArea: "demoCall" }}>
-            <T.H4 as="h2">{demoCall.title}</T.H4>
-            <T.Body>{demoCall.description}</T.Body>
-            <Button href={demoCall.btnUrl} variant="secondary">
-              {demoCall.btn}
-            </Button>
-          </Box>
         </ContentWrapper>
 
         <Section>
@@ -105,9 +85,7 @@ const ContentWrapper = styled.div`
   margin-top: 64px;
   display: grid;
   grid-template-areas:
-    "liveChat"
     "emailForm"
-    "demoCall"
     "support"
     "feedback";
   grid-template-rows: auto;
@@ -117,7 +95,6 @@ const ContentWrapper = styled.div`
 
   ${theme.above.t.l} {
     grid-template-areas:
-      "demoCall emailForm"
       "support emailForm"
       "feedback emailForm";
     grid-template-rows: auto;

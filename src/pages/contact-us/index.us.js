@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+// import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import LangLayout from "./../../layouts/us"
 
@@ -109,11 +109,11 @@ export const query = graphql`
 `
 
 const ContactUs = (props) => {
-  const liveChat = props.data.contactUsJson.liveChat
+  // const liveChat = props.data.contactUsJson.liveChat
   const support = props.data.contactUsJson.support
   const feedback = props.data.contactUsJson.feedback
   const emailForm = props.data.contactUsJson.emailForm
-  const demoCall = props.data.contactUsJson.demoCall
+  // const demoCall = props.data.contactUsJson.demoCall
   const offices = props.data.officesJson
 
   return (
@@ -125,21 +125,6 @@ const ContactUs = (props) => {
       <HeroSimple data={props.data.contactUsJson.hero} />
       <Main>
         <ContentWrapper>
-          <Box style={{ gridArea: "liveChat" }}>
-            <T.H4 as="h2" style={{ maxWidth: 300 }}>
-              {liveChat.title}
-            </T.H4>
-            <T.Body>{liveChat.description}</T.Body>
-            <LiveChat>
-              <GatsbyImage
-                image={getImage(liveChat.image)}
-                alt={liveChat.imageAlt}
-              />
-              <Button href={liveChat.btnUrl} variant="secondary">
-                {liveChat.btn}
-              </Button>
-            </LiveChat>
-          </Box>
           <Box style={{ gridArea: "support" }}>
             <T.H4 as="h2">{support.title}</T.H4>
             <T.Body>{support.description}</T.Body>
@@ -150,19 +135,14 @@ const ContactUs = (props) => {
           <Box style={{ gridArea: "feedback" }}>
             <T.H4 as="h2">{feedback.title}</T.H4>
             <T.Body>{feedback.description}</T.Body>
-            <Button href={feedback.btnUrl} variant="secondary">
+            <Button
+              href="https://surveys.hotjar.com/64b9728d-9db5-4b0d-9196-23f807bcde21"
+              variant="secondary"
+            >
               {feedback.btn}
             </Button>
           </Box>
-          {/* TODO Add html parser to the title props everywhere https://www.npmjs.com/package/html-react-parser */}
           <ContactUsForm data={emailForm} language="us" />
-          <Box style={{ gridArea: "demoCall" }}>
-            <T.H4 as="h2">{demoCall.title}</T.H4>
-            <T.Body>{demoCall.description}</T.Body>
-            <Button href={demoCall.btnUrl} variant="secondary">
-              {demoCall.btn}
-            </Button>
-          </Box>
         </ContentWrapper>
 
         <Section>
@@ -194,9 +174,7 @@ const ContentWrapper = styled.div`
   margin-top: 64px;
   display: grid;
   grid-template-areas:
-    "liveChat"
     "emailForm"
-    "demoCall"
     "support"
     "feedback";
   grid-template-rows: auto;
@@ -206,9 +184,8 @@ const ContentWrapper = styled.div`
 
   ${theme.above.t.l} {
     grid-template-areas:
-      "liveChat emailForm"
       "support emailForm"
-      "feedback demoCall";
+      "feedback emailForm";
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
     column-gap: 100px;
@@ -222,22 +199,22 @@ const ContentWrapper = styled.div`
   }
 `
 const Box = styled.div``
-const LiveChat = styled.div`
-  display: grid;
-  grid-template-rows: auto auto;
-  row-gap: 24px;
-  .gatsby-image-wrapper {
-    max-width: 284px;
-    filter: drop-shadow(0px 100px 80px rgba(1, 14, 25, 0.07))
-      drop-shadow(0px 41.7776px 33.1139px rgba(1, 14, 25, 0.0503198))
-      drop-shadow(0px 22.3363px 16.2366px rgba(1, 14, 25, 0.0417275))
-      drop-shadow(0px 12.5216px 7.80488px rgba(1, 14, 25, 0.035))
-      drop-shadow(0px 6.6501px 3.28033px rgba(1, 14, 25, 0.0282725))
-      drop-shadow(0px 2.76726px 0.952807px rgba(1, 14, 25, 0.0196802));
-  }
-  ${theme.above.l.m} {
-    grid-template-columns: 284px auto;
-    align-items: center;
-    column-gap: 16px;
-  }
-`
+// const LiveChat = styled.div`
+//   display: grid;
+//   grid-template-rows: auto auto;
+//   row-gap: 24px;
+//   .gatsby-image-wrapper {
+//     max-width: 284px;
+//     filter: drop-shadow(0px 100px 80px rgba(1, 14, 25, 0.07))
+//       drop-shadow(0px 41.7776px 33.1139px rgba(1, 14, 25, 0.0503198))
+//       drop-shadow(0px 22.3363px 16.2366px rgba(1, 14, 25, 0.0417275))
+//       drop-shadow(0px 12.5216px 7.80488px rgba(1, 14, 25, 0.035))
+//       drop-shadow(0px 6.6501px 3.28033px rgba(1, 14, 25, 0.0282725))
+//       drop-shadow(0px 2.76726px 0.952807px rgba(1, 14, 25, 0.0196802));
+//   }
+//   ${theme.above.l.m} {
+//     grid-template-columns: 284px auto;
+//     align-items: center;
+//     column-gap: 16px;
+//   }
+// `
