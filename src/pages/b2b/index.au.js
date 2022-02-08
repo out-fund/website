@@ -81,7 +81,7 @@ const B2B = () => {
               {
                 question: "How do you calculate my offer?",
                 answer:
-                  "Outfund securely connects to your existing banking, payment processing, and accounting platforms. Using predictive models, we assess key metrics from your revenue, ad performance and other third party data to create bespoke funding offers. <br/><br/> Our funding is based on your performance. We don't take any equity, meaning we don't dilute you or your investors. Instead, funding is repaid through a simple revenue share.",
+                  "Outfund securely connects to your existing banking, payment processing, and accounting platforms. Using predictive models, we assess key metrics from your revenue, advertising performance and other third party data to create bespoke funding offers. <br/><br/> Our funding is based on your performance. We don't take any equity, meaning we don't dilute you or your investors. Instead, funding is repaid through a simple revenue share.",
               },
               {
                 question: "How long does the whole process take?",

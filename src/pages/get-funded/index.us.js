@@ -60,7 +60,7 @@ const GetFunded = (props) => {
               </LeftTextWrapper>
               <LogoSection>
                 <LogoSectionTitle>
-                  We've funded 100s of brands like yours
+                  We've funded 1000's of brands like yours
                 </LogoSectionTitle>
                 <LogoStripWrapper>
                   <LogoStrip />

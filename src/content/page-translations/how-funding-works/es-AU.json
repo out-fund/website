@@ -10,7 +10,7 @@
     "steps": [
       {
         "title": "1. Apply for funding",
-        "description": "Securely connect your accounts: we sync with your existing banking and payments systems to analyse your revenue data in realtime. Receive a tailored offer from £10K to £2M within 48 hours."
+        "description": "Securely connect your accounts: we sync with your existing banking and payments systems to analyse your revenue data in realtime. Receive a tailored offer from and  $10K to $3M within 48 hours."
       },
       {
         "title": "2. Select an offer",
@@ -43,11 +43,11 @@
     "questions": [
       {
         "question": "How much funding do you offer?",
-        "answer": "We can deploy between £10,000 and £2,000,000 at a time."
+        "answer": "We can deploy between $10,000 and $3,000,000 at a time."
       },
       {
         "question": "How do you calculate my offer?",
-        "answer": "Outfund securely connects to your existing banking, payment processing, and accounting platforms. Using predictive models, we assess key metrics from your revenue, ad performance and other third party data to create bespoke funding offers. <br/><br/> Our funding is based on your performance. We don't take any equity, meaning we don't dilute you or your investors. Instead, funding is repaid through a simple revenue share."
+        "answer": "Outfund securely connects to your existing banking, payment processing, and accounting platforms. Using predictive models, we assess key metrics from your revenue, advertising performance and other third party data to create bespoke funding offers. <br/><br/> Our funding is based on your performance. We don't take any equity, meaning we don't dilute you or your investors. Instead, funding is repaid through a simple revenue share."
       },
       {
         "question": "How long does the whole process take?",

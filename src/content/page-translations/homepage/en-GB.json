@@ -119,7 +119,7 @@
       "select": {
         "title": "You need funding for",
         "default": "Select",
-        "dropdown": ["Inventory purchuses", "Marketing spend", "Something else"]
+        "dropdown": ["Inventory", "Marketing Spend", "Something else"]
       },
       "btn": {
         "text": "Check eligibility",
@@ -136,7 +136,7 @@
       },
       {
         "question": "How do you calculate my offer?",
-        "answer": "Outfund securely connects to your existing banking, payment processing, and accounting platforms. Using predictive models, we assess key metrics from your revenue, ad performance and other third party data to create bespoke funding offers. <br/><br/> Our funding is based on your performance. We don't take any equity, meaning we don't dilute you or your investors. Instead, funding is repaid through a simple revenue share."
+        "answer": "Outfund securely connects to your existing banking, payment processing, and accounting platforms. Using predictive models, we assess key metrics from your revenue, advertising performance and other third party data to create bespoke funding offers. <br/><br/> Our funding is based on your performance. We don't take any equity, meaning we don't dilute you or your investors. Instead, funding is repaid through a simple revenue share."
       },
       {
         "question": "How long does the whole process take?",
@@ -244,7 +244,7 @@
     "stats": [
       { "stat": "£200M", "text": "To invest in 2022" },
       { "stat": "4", "text": "Operating countries" },
-      { "stat": "53+", "text": "Growing team" },
+      { "stat": "56+", "text": "Growing team" },
       { "stat": "£37M", "text": "Raised so far" }
     ],
     "buttons": {
