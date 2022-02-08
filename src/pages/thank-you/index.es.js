@@ -17,7 +17,7 @@ const ThankYou = () => {
             Necesitamos saber más sobre usted y su empresa registrada.
           </Description>
           <Button
-            href="https://app.out.fund/enquire"
+            href="https://app.out.fund/esp/enquire"
             variant="primary"
             size="large"
           >

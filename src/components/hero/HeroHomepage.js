@@ -69,7 +69,7 @@ const LeftImage = styled.div`
   ${Triangle}
   &:after {
     bottom: -35px;
-    left: 27px;
+    left: 72px;
     z-index: 3;
   }
 

@@ -67,7 +67,7 @@ const MobileLinks = ({ lang }) => {
         <Button
           to={links.getFunded.url}
           variant="primary"
-          className="getFunded"
+          className="getFunded getFunded-mobile"
           id="cta-get-funded-mobile-navbar-click"
         >
           {links.getFunded.text[lang]}
@@ -355,6 +355,13 @@ const MobileLinksWrapper = styled.div`
   position: relative;
   ${theme.above.t.l} {
     display: none;
+  }
+  .getFunded-mobile a {
+    white-space: nowrap;
+    @media (max-width: 330px) {
+      padding: 8px 8px;
+      font-size: 14px;
+    }
   }
 `
 const ButtonWrapper = styled.div`
