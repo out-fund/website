@@ -186,23 +186,15 @@ const Footer = ({ lang }) => {
             </CountryWrapper>
           </CountryLinksWrapper>
         </Top>
-        <Statement>
-          {langKey !== "es" && (
+        {langKey === "en" && (
+          <Statement>
             <T.BodySmall>
               Outfund is the trading name of MTL Financial LTD, which is a
               Lender. MTL Financial LTD is also authorised and regulated by the
               Financial Conduct Authority (FCA) as an e-money institution.
             </T.BodySmall>
-          )}
-          {langKey === "es" && (
-            <T.BodySmall>
-              Outfund es el nombre comercial de MTL Financial LTD, que es un
-              prestamista. MTL Financial LTD también está autorizada y regulada
-              por la Autoridad de Conducta Financiera (FCA) como institución de
-              dinero electrónico.
-            </T.BodySmall>
-          )}
-        </Statement>
+          </Statement>
+        )}
         <Bottom>
           {langKey !== "es" && (
             <T.BodySmaller>
@@ -234,14 +226,14 @@ const Footer = ({ lang }) => {
 export default Footer
 
 const Statement = styled.div`
-  margin-bottom: 24px;
-  margin-top: 40px;
+  /* margin-bottom: 24px;
+  margin-top: 40px; */
   background-color: #183454;
   padding: 12px 16px;
   border-radius: 10px;
   ${theme.above.t.l} {
-    margin-top: 80px;
-    margin-bottom: 48px;
+    /* margin-top: 80px;
+    margin-bottom: 48px; */
   }
   ${T.BodySmall} {
     color: #aad2ff;
@@ -317,14 +309,16 @@ const Top = styled.div`
   display: flex;
   flex-direction: column;
   gap: 40px;
+  margin-bottom: 40px;
   ${theme.above.t.l} {
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 80px;
   }
 `
 const Bottom = styled.div`
   display: flex;
-
+  margin-top: 24px;
   border-top: 1px solid #28425f;
   padding-top: 16px;
   flex-direction: column;

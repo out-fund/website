@@ -20,7 +20,7 @@ const GetFunded = (props) => {
   return (
     <LangLayout noNavbar pt noFooter>
       <SeoComponent
-        title="Get Funded"
+        title="Get funded"
         description="We've funded 1000s of brands like yours"
       />
       <Wrapper>

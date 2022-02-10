@@ -87,7 +87,7 @@ const B2B = (props) => {
               {
                 question: "How long does the whole process take?",
                 answer:
-                  "The entire process (application, offer, approval, sending funds) can be completed in as little as two business days. Large advances and applications requiring special considerations or analysis may take slightly longer.",
+                  "The entire process (application, offer, approval, sending funds) can be completed in as little as 48 hours.",
               },
               {
                 question: "How do I apply?",

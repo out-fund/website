@@ -2,17 +2,17 @@
   "language": "en-GB",
   "seo": {
     "title": "Growth Capital for your Online Businesses",
-    "description": "Supercharged funding from £10K to £2M for your marketing & inventory."
+    "description": "Supercharged funding from £10K to £2M for your marketing and inventory."
   },
   "hero": {
-    "title": "Growth capital for founders like You",
-    "description": "Supercharged funding from £10K to £2M for your marketing & inventory.",
+    "title": "Growth capital for founders like you",
+    "description": "Supercharged funding from £10K to £2M for your marketing and inventory.",
     "primaryBtn": {
       "text": "Get funded",
       "url": "/get-funded/"
     },
     "secondaryBtn": {
-      "text": "Learn How It Works",
+      "text": "Learn how it works",
       "url": "/how-funding-works/"
     },
     "image": {
@@ -22,7 +22,7 @@
   },
   "weFunded": {
     "title": "We fund brands like yours",
-    "description": "We want growing businesses to succeed sooner. We help you build your vision with capital that's fast, fair, and more human.",
+    "description": "We want growing businesses to succeed sooner. We help you build your vision with capital that's fast, fair, and more affordable.",
     "cards": {
       "feel": {
         "tag": {
@@ -70,7 +70,7 @@
       "alt": "Payment made ont the phone"
     },
     "btn": {
-      "text": "Learn more about how the funding works",
+      "text": "Learn more about how funding works",
       "url": "/how-funding-works/"
     }
   },
@@ -119,7 +119,7 @@
       "select": {
         "title": "You need funding for",
         "default": "Select",
-        "dropdown": ["Inventory", "Marketing Spend", "Something else"]
+        "dropdown": ["Inventory", "Marketing", "Something else"]
       },
       "btn": {
         "text": "Check eligibility",
@@ -140,7 +140,7 @@
       },
       {
         "question": "How long does the whole process take?",
-        "answer": "The entire process (application, offer, approval, sending funds) can be completed in as little as two business days. Large advances and applications requiring special considerations or analysis may take slightly longer."
+        "answer": "The entire process (application, offer, approval, sending funds) can be completed in as little as 48 hours."
       },
       {
         "question": "How do I apply?",
@@ -154,7 +154,7 @@
   },
   "aboutUs": {
     "title": "About us",
-    "description": "Outfund is all about growing businesses. Our team is a mix of founders, developers, consultants, coffee lovers, and climbers. We move fast and seek impact in everything we do. Because finance should make ideas happen.",
+    "description": "Outfund is focused on growing businesses. Our team is a mix of founders, developers, consultants, and coffee lovers. We move fast and seek impact in everything we do. Learn more about us today.",
     "teamImages": [
       {
         "src": "./../../../images/team/Outfund-team-Abanoub.jpg",
@@ -244,7 +244,7 @@
     "stats": [
       { "stat": "£200M", "text": "To invest in 2022" },
       { "stat": "4", "text": "Operating countries" },
-      { "stat": "56+", "text": "Growing team" },
+      { "stat": "75+", "text": "Growing team" },
       { "stat": "£37M", "text": "Raised so far" }
     ],
     "buttons": {

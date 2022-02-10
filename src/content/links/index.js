@@ -88,7 +88,7 @@ const links = {
   },
   getFunded: {
     text: {
-      en: "Get Funded",
+      en: "Get funded",
       es: "Solicitar Financiación",
     },
     url: "/get-funded/",

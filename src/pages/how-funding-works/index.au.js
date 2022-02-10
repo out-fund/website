@@ -43,12 +43,12 @@ const HowFundingWorks = (props) => {
                   {
                     title: "No personal guarantees",
                     icon: "<svg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path opacity='.3' d='m32 15.16-11-4.8-11 4.8v7.2c0 7 4.66 13.48 11 15.48.5-.16.98-.4 1.46-.6-.3-1.02-.46-2.12-.46-3.24 0-5.94 4.32-10.86 10-11.82v-7.02Z' fill='#1A65BA'/><path opacity='.3' d='M34 26c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8Zm0 2.76A2.25 2.25 0 0 1 36.24 31c0 1.22-1.02 2.24-2.24 2.24-1.22 0-2.24-1.02-2.24-2.24 0-1.22 1-2.24 2.24-2.24Zm0 10.74c-1.86 0-3.48-.92-4.48-2.34.1-1.44 3.02-2.16 4.48-2.16 1.46 0 4.38.72 4.48 2.16-1 1.42-2.62 2.34-4.48 2.34Z' fill='#1A65BA'/><path d='M34 33.24a2.24 2.24 0 1 0 0-4.48 2.24 2.24 0 0 0 0 4.48Z' fill='#1A65BA'/><path d='M36 22.18v-9.64L21 6 6 12.54v9.82C6 31.44 12.4 39.94 21 42c1.1-.26 2.16-.64 3.2-1.1 2.16 3.08 5.74 5.1 9.8 5.1 6.62 0 12-5.38 12-12 0-5.94-4.32-10.86-10-11.82ZM22 34c0 1.12.16 2.22.46 3.24-.48.22-.96.44-1.46.6-6.34-2-11-8.48-11-15.48v-7.2l11-4.8 11 4.8v7.02c-5.68.96-10 5.88-10 11.82Zm12 8c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8Z' fill='#1A65BA'/><path d='M34 35c-1.46 0-4.38.72-4.48 2.16 1 1.42 2.64 2.34 4.48 2.34 1.84 0 3.48-.92 4.48-2.34C38.38 35.72 35.46 35 34 35Z' fill='#1A65BA'/></svg>",
-                    text: "Breathe easier without restrictive collateral. Access to capital has never been simpler: don't let raising finance stop you scaling.",
+                    text: "Breathe easier without restrictive collateral. Access to capital has never been easier.",
                   },
                   {
                     title: "No interest rates",
                     icon: "<svg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path opacity='.3' d='M24 8C15.16 8 8 15.16 8 24s7.16 16 16 16 16-7.16 16-16S32.84 8 24 8Zm7 8c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3Zm-14 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3Zm7 19c-4.66 0-8.64-2.9-10.24-7h3.34c1.4 2.38 3.94 4 6.9 4 2.96 0 5.5-1.62 6.9-4h3.34c-1.6 4.1-5.58 7-10.24 7Z' fill='#1A65BA'/><path d='M31 22a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM17 22a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z' fill='#1A65BA'/><path d='M24 32c-2.96 0-5.5-1.62-6.9-4h-3.34c1.6 4.1 5.58 7 10.24 7s8.64-2.9 10.24-7H30.9c-1.4 2.38-3.94 4-6.9 4Zm-.02-28C12.94 4 4 12.96 4 24s8.94 20 19.98 20C35.04 44 44 35.04 44 24S35.04 4 23.98 4ZM24 40c-8.84 0-16-7.16-16-16S15.16 8 24 8s16 7.16 16 16-7.16 16-16 16Z' fill='#1A65BA'/></svg>",
-                    text: "A one-off fixed fee, agreed up-front. The cost of capital is always transparent, and repaid fairly from the pre-agreed revenue share.",
+                    text: "A one-time flat fee. The cost of capital is always transparent and repaid fairly from future revenue.",
                   },
                 ],
               }}

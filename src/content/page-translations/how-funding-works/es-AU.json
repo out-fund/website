@@ -10,7 +10,7 @@
     "steps": [
       {
         "title": "1. Apply for funding",
-        "description": "Securely connect your accounts: we sync with your existing banking and payments systems to analyse your revenue data in realtime. Receive a tailored offer from and  $10K to $3M within 48 hours."
+        "description": "Securely connect your accounts: we connect with your existing banking and payments systems to analyse your revenue data in realtime. Receive a tailored offer from $10K to $3M within 48 hours"
       },
       {
         "title": "2. Select an offer",
@@ -26,13 +26,13 @@
       },
       {
         "title": "5. Top up",
-        "description": "Access follow-on capital: your dedicated Growth Manager supports your ongoing capital needs so you can keep scaling without limits."
+        "description": "Access to additional capital: your dedicated Growth Manager supports your ongoing capital needs so you can keep scaling without limits."
       }
     ]
   },
   "humanCapital": {
     "title": "Human capital",
-    "description": "We provide support beyond funding. Our portfolio team are here to regularly check in, advise on your growth, and make introductions to our extensive network of trusted partners. We give every founder access to services which are usually hidden behind the walls of venture capital. <br/><br/> Your Growth Manager is an advisor, sparring partner, troubleshooter, and follow-on funding manager, all rolled into one. At Outfund, we prioritise long-term relationships over short-term gains",
+    "description": "We provide support beyond funding. Our portfolio team are here to regularly check in, advise on your growth, and make introductions to our extensive network of trusted partners. We give every founder access to services which are usually hidden behind the walls of venture capital. <br/><br/> Your Growth Manager is an advisor, partner, troubleshooter, and follow-up funding manager. At Outfund, we prioritise long-term relationships over short-term gains",
     "image": {
       "src": "./../../../images/human-capital.jpg",
       "alt": "Payment made ont the phone"
@@ -51,7 +51,7 @@
       },
       {
         "question": "How long does the whole process take?",
-        "answer": "The entire process (application, offer, approval, sending funds) can be completed in as little as two business days. Large advances and applications requiring special considerations or analysis may take slightly longer."
+        "answer": "The entire process (application, offer, approval, sending funds) can be completed in as little as 48 hours."
       },
       {
         "question": "How do I apply?",
