@@ -144,7 +144,9 @@ const GetFundedForm = ({ data, language }) => {
             </F.Group>
             <F.Group>
               <SelectWrapper>
-                <F.Label htmlFor="amr">{data.form.select.title}</F.Label>
+                <F.Label htmlFor="amr" as="label">
+                  {data.form.select.title}
+                </F.Label>
                 <F.Select
                   name="amr"
                   id="amr"
@@ -183,17 +185,13 @@ const GetFundedForm = ({ data, language }) => {
 }
 
 const FormWrapper = styled.div`
-  margin-top: 24px;
+  margin-top: 16px;
 
   .ButtonWrap button {
     width: 100%;
-    margin: 16px 0 0 0;
   }
 `
 
-const SelectWrapper = styled(F.Group)`
-  margin-top: 16px;
-  /* margin-bottom: 40px; */
-`
+const SelectWrapper = styled(F.Group)``
 
 export default GetFundedForm

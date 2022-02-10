@@ -18,7 +18,7 @@ const GetFunded = (props) => {
   const data = props.data.getFundedJson.content
 
   return (
-    <LangLayout noNavbar pt>
+    <LangLayout noNavbar pt noFooter>
       <SeoComponent
         title="Solicita Financiación"
         description="Hemos financiado miles de marcas como la tuya"
@@ -152,9 +152,7 @@ const PageTitle = styled(T.H1)`
   max-width: 540px;
 `
 
-const Title = styled(T.H2)`
-  margin-bottom: 8px;
-`
+const Title = styled(T.H2)``
 const Description = styled(T.Body)``
 
 const TextWrapper = styled.div`

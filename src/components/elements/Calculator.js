@@ -51,7 +51,9 @@ const Calculator = ({ data }) => {
           </InputWrapper>
         </RangeWrapper>
         <SelectWrapper>
-          <F.Label htmlFor="reasons">{data.select.title}</F.Label>
+          <F.Label as="label" htmlFor="reasons">
+            {data.select.title}
+          </F.Label>
           <div className="dropdown">
             <F.Select
               name="reasons"

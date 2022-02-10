@@ -5,6 +5,7 @@ import {
   ErrorMessage as FormikErrors,
 } from "formik"
 import { theme } from "./../../new/theme"
+import T from "./../../new/typography"
 
 const sharedInput = css`
   background: #fff;
@@ -31,8 +32,7 @@ const sharedInput = css`
   &:focus-visible {
     outline: 2px solid ${theme.color.input.focus.border};
   }
-  /* line-height: 1.5; */
-  /* color: ${theme.color.text.body}; */
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -40,9 +40,7 @@ const sharedInput = css`
     font-size: 18px;
   }
 `
-export const Form = styled.form`
-  /*background: yellow;*/
-`
+export const Form = styled.form``
 
 export const FormikField = styled(FormikFields)`
   ${sharedInput}
@@ -52,31 +50,30 @@ export const FormikField = styled(FormikFields)`
 export const FormikForm = styled(FormikForms)`
   display: flex;
   flex-direction: column;
+  gap: 16px;
 `
-export const FormikError = styled(FormikErrors)`
-  position: absolute;
-  top: -13px;
-`
+export const FormikError = styled(FormikErrors)``
 
 export const ErrorWrapper = styled.div`
   font-size: 11px;
-  margin: 3px 0;
-  position: relative;
+  position: absolute;
+  width: 100%;
   color: #d52e2e;
+  right: 0;
+  bottom: 0;
+  text-align: right;
+  padding-right: 6px;
+  padding-bottom: 4px;
 `
 
 export const Group = styled.div`
-  /* background-color: #afa; */
-  /* label {
-    padding-bottom: 16px;
-  } */
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
 `
-export const Label = styled.label`
-  color: ${theme.color.text.body};
-`
+
+export const Label = styled(T.BodySmall)``
 
 export const Input = styled.input`
   ${sharedInput}

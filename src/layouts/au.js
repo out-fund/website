@@ -7,14 +7,14 @@ import "./../styles/new/typography/font.css"
 
 import { LangProvider } from "./../utils/LangProvider"
 
-const AU = ({ children, simpleNavbar, pt, noNavbar }) => {
+const AU = ({ children, simpleNavbar, pt, noNavbar, noFooter }) => {
   return (
     <GlobalLayout pt={pt}>
       <LangProvider langKey="au">
         {!simpleNavbar && !noNavbar && <Navbar lang="en" />}
         {simpleNavbar && !noNavbar && <SimpleNavbar lang="en" />}
         {children}
-        <Footer lang="en" />
+        {!noFooter && <Footer lang="en" />}
       </LangProvider>
     </GlobalLayout>
   )
