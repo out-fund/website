@@ -25,7 +25,7 @@ const links = {
   },
   howItWorks: {
     text: {
-      en: "How Funding Works",
+      en: "How funding works",
       es: "Cómo funciona",
     },
     url: "/how-funding-works/",
@@ -68,7 +68,7 @@ const links = {
 
   successStories: {
     text: {
-      en: "Success Stories",
+      en: "Success stories",
       es: "Casos de éxito",
     },
     url: "/success-stories/",
@@ -89,7 +89,7 @@ const links = {
   getFunded: {
     text: {
       en: "Get funded",
-      es: "Solicitar Financiación",
+      es: "Solicitar financiación",
     },
     url: "/get-funded/",
   },
