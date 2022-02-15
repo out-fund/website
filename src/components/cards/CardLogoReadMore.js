@@ -53,7 +53,6 @@ const LogoWrapper = styled.div`
 `
 
 const Wrapper = styled.div`
-  /* max-width: 570px; */
   width: 100%;
   position: relative;
   min-height: 370px;
@@ -65,7 +64,7 @@ const Wrapper = styled.div`
   }
 
   ${theme.above.d.l} {
-    min-height: 570px;
+    min-height: 530px;
   }
   &.thevegankind {
     ${LogoWrapper} {
