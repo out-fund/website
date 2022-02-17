@@ -75,7 +75,7 @@ const PartnerForm = ({ form, language }) => {
         }) => (
           <F.FormikForm
             name={`partner-contact${language ? "-" + language : ""}`}
-            data-netlify={true}
+            data-netlify="true"
             netlify-honeypot="bot-field"
           >
             <VisuallyHidden>

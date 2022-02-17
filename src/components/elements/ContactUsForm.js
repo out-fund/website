@@ -82,7 +82,7 @@ const ContactUsForm = ({ data, language }) => {
           }) => (
             <F.FormikForm
               name={`contact-us${language ? "-" + language : ""}`}
-              data-netlify={true}
+              data-netlify="true"
               netlify-honeypot="bot-field"
             >
               <VisuallyHidden>
