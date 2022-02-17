@@ -107,10 +107,10 @@ const SeoComponent = ({ title, description, image, article }) => {
 
       <meta name="description" content={seo.description} />
 
-      {seo.image && langKey !== "es" && (
+      {langKey !== "es" && (
         <meta name="image" content="https://www.out.fund/Outfund.png" />
       )}
-      {seo.image && langKey === "es" && (
+      {langKey === "es" && (
         <meta name="image" content="https://www.out.fund/Outfund-es.png" />
       )}
 
@@ -134,10 +134,10 @@ const SeoComponent = ({ title, description, image, article }) => {
 
       <meta property="og:site_name" content="Outfund" />
 
-      {seo.image && langKey !== "es" && (
+      {langKey !== "es" && (
         <meta property="og:image" content="https://www.out.fund/Outfund.png" />
       )}
-      {seo.image && langKey === "es" && (
+      {langKey === "es" && (
         <meta
           property="og:image"
           content="https://www.out.fund/Outfund-es.png"
@@ -154,10 +154,10 @@ const SeoComponent = ({ title, description, image, article }) => {
       {seo.description && (
         <meta name="twitter:description" content={seo.description} />
       )}
-      {seo.image && langKey !== "es" && (
+      {langKey !== "es" && (
         <meta name="twitter:image" content="https://www.out.fund/Outfund.png" />
       )}
-      {seo.image && langKey === "es" && (
+      {langKey === "es" && (
         <meta
           name="twitter:image"
           content="https://www.out.fund/Outfund-es.png"
