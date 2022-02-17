@@ -36,7 +36,7 @@ const CookiePolicy = (props) => {
       >
         <Helmet
           title={parse(data.frontmatter.title)}
-          titleTemplate="%s | Outfund"
+          titleTemplate="%s | Outfund | Australia"
           htmlAttributes={{ lang: `en-AU` }}
         />
         <Main>

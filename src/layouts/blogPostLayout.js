@@ -35,7 +35,7 @@ const BlogPostLayout = ({ data: { mdx } }) => {
       >
         <Helmet
           title={mdx.frontmatter.title}
-          titleTemplate="%s | Outfund"
+          titleTemplate="%s | Outfund | UK"
           htmlAttributes={{ lang: `en-GB` }}
         >
           <meta name="description" content={mdx.excerpt} />

@@ -13,7 +13,7 @@ const Blog = (props) => {
     <LangLayout>
       <Helmet
         title="Blog"
-        titleTemplate="%s | Outfund"
+        titleTemplate="%s | Outfund | UK"
         htmlAttributes={{ lang: `en-GB` }}
       >
         <meta name="description" content="Latest from our blog" />

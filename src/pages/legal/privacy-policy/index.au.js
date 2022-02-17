@@ -32,6 +32,11 @@ const PrivacyPolicy = (props) => {
           // StaticImage,
         }}
       >
+        <Helmet
+          title={parse(data.frontmatter.title)}
+          titleTemplate="%s | Outfund | Australia"
+          htmlAttributes={{ lang: `en-AU` }}
+        />
         <Main>
           <Article as="">
             <Heading as="h1">{parse(data.frontmatter.title)}</Heading>
