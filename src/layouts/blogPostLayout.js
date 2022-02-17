@@ -44,7 +44,7 @@ const BlogPostLayout = ({ data: { mdx } }) => {
           <meta property="og:type" content="article" />
           <meta
             property="og:title"
-            content={mdx.frontmatter.title + " | Outfund"}
+            content={mdx.frontmatter.title + " | Outfund | UK"}
           />
           <meta property="og:description" content={mdx.excerpt} />
           <meta property="og:site_name" content="Outfund" />
@@ -53,7 +53,10 @@ const BlogPostLayout = ({ data: { mdx } }) => {
             content="https://www.out.fund/Outfund.png"
           />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content={mdx.frontmatter.title} />
+          <meta
+            name="twitter:title"
+            content={mdx.frontmatter.title + " | Outfund | UK"}
+          />
           <meta name="twitter:description" content={mdx.excerpt} />
         </Helmet>
         <HeroSimple data={mdx.frontmatter} />

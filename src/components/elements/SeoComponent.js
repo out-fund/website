@@ -11,13 +11,11 @@ const SeoComponent = ({ title, description, image, article }) => {
   const langKey = useLangProvider()
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
-  const { defaultTitle, defaultDescription, siteUrl, defaultImage } =
-    site.siteMetadata
+  const { defaultTitle, defaultDescription, siteUrl } = site.siteMetadata
 
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
-    image: `${siteUrl}${image || defaultImage}`,
     url: `https://out.fund${pathname}`,
   }
 
@@ -110,7 +108,7 @@ const SeoComponent = ({ title, description, image, article }) => {
       <meta name="description" content={seo.description} />
 
       {seo.image && langKey !== "es" && (
-        <meta name="image" content={seo.image} />
+        <meta name="image" content="https://www.out.fund/Outfund.png" />
       )}
       {seo.image && langKey === "es" && (
         <meta name="image" content="https://www.out.fund/Outfund-es.png" />
@@ -125,7 +123,10 @@ const SeoComponent = ({ title, description, image, article }) => {
       {(article ? true : null) && <meta property="og:type" content="article" />}
 
       {seo.title && (
-        <meta property="og:title" content={seo.title + " | Outfund"} />
+        <meta
+          property="og:title"
+          content={seo.title + ` | Outfund | ${countryName}`}
+        />
       )}
       {seo.description && (
         <meta property="og:description" content={seo.description} />
@@ -134,7 +135,7 @@ const SeoComponent = ({ title, description, image, article }) => {
       <meta property="og:site_name" content="Outfund" />
 
       {seo.image && langKey !== "es" && (
-        <meta property="og:image" content={seo.image} />
+        <meta property="og:image" content="https://www.out.fund/Outfund.png" />
       )}
       {seo.image && langKey === "es" && (
         <meta
@@ -144,12 +145,17 @@ const SeoComponent = ({ title, description, image, article }) => {
       )}
 
       <meta name="twitter:card" content="summary_large_image" />
-      {seo.title && <meta name="twitter:title" content={seo.title} />}
+      {seo.title && (
+        <meta
+          name="twitter:title"
+          content={seo.title + ` | Outfund | ${countryName}`}
+        />
+      )}
       {seo.description && (
         <meta name="twitter:description" content={seo.description} />
       )}
       {seo.image && langKey !== "es" && (
-        <meta name="twitter:image" content={seo.image} />
+        <meta name="twitter:image" content="https://www.out.fund/Outfund.png" />
       )}
       {seo.image && langKey === "es" && (
         <meta
@@ -182,7 +188,6 @@ const query = graphql`
         defaultTitle: title
         defaultDescription: description
         siteUrl: siteUrl
-        defaultImage: image
       }
     }
   }
