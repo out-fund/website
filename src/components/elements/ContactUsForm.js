@@ -32,7 +32,7 @@ const ContactUsForm = ({ data, language }) => {
             message: "",
           }}
           onSubmit={(values, actions) => {
-            fetch("/", {
+            fetch(`${language ? "/" + language + "/" : "/"}`, {
               method: "POST",
               headers: {
                 "Content-Type": "application/x-www-form-urlencoded",
@@ -80,11 +80,7 @@ const ContactUsForm = ({ data, language }) => {
             isValid,
             dirty,
           }) => (
-            <F.FormikForm
-              name={`contact-us${language ? "-" + language : ""}`}
-              data-netlify="true"
-              netlify-honeypot="bot-field"
-            >
+            <F.FormikForm name={`contact-us${language ? "-" + language : ""}`}>
               <VisuallyHidden>
                 <label>
                   Don't fill this out if you're human:

@@ -25,7 +25,7 @@ const PartnerForm = ({ form, language }) => {
           email: "",
         }}
         onSubmit={(values, actions) => {
-          fetch("/", {
+          fetch(`${language ? "/" + language + "/" : "/"}`, {
             method: "POST",
             headers: {
               "Content-Type": "application/x-www-form-urlencoded",
@@ -75,8 +75,6 @@ const PartnerForm = ({ form, language }) => {
         }) => (
           <F.FormikForm
             name={`partner-contact${language ? "-" + language : ""}`}
-            data-netlify="true"
-            netlify-honeypot="bot-field"
           >
             <VisuallyHidden>
               <label>
