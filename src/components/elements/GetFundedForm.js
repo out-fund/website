@@ -79,11 +79,7 @@ const GetFundedForm = ({ data, language }) => {
           isValid,
           dirty,
         }) => (
-          <F.FormikForm
-            name={`get-funded${language ? "-" + language : ""}`}
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-          >
+          <F.FormikForm name={`get-funded${language ? "-" + language : ""}`}>
             <VisuallyHidden>
               <label>
                 Don't fill this out if you're human:

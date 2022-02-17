@@ -47,7 +47,10 @@ export const FormikField = styled(FormikFields)`
   border: ${(props) => (props.$valid ? "1px solid red" : "")};
 `
 
-export const FormikForm = styled(FormikForms)`
+export const FormikForm = styled(FormikForms).attrs((props) => ({
+  "data-netlify": "true",
+  "netlify-honeypot": "bot-field",
+}))`
   display: flex;
   flex-direction: column;
   gap: 16px;
