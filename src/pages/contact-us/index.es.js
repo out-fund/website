@@ -30,8 +30,8 @@ const ContactUs = (props) => {
   return (
     <LangLayout>
       <SeoComponent
-        title="Contact us"
-        description="Want to know more? Get in touch"
+        title="Contacta con nosotras"
+        description="¿Quieres saber más? Ponerse en contacto."
       />
       <HeroSimple data={props.data.contactUsJson.hero} />
       <Main>

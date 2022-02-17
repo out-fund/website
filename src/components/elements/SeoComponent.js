@@ -11,13 +11,8 @@ const SeoComponent = ({ title, description, image, article }) => {
   const langKey = useLangProvider()
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
-  const {
-    defaultTitle,
-    titleTemplate,
-    defaultDescription,
-    siteUrl,
-    defaultImage,
-  } = site.siteMetadata
+  const { defaultTitle, defaultDescription, siteUrl, defaultImage } =
+    site.siteMetadata
 
   const seo = {
     title: title || defaultTitle,
@@ -27,11 +22,21 @@ const SeoComponent = ({ title, description, image, article }) => {
   }
 
   let htmlLang = `en-` + langKey.toUpperCase()
+  let countryName = ""
+
   if (langKey === "es") {
     htmlLang = "es-ES"
+    countryName = "España"
   }
   if (langKey === "en") {
     htmlLang = "en-GB"
+    countryName = "UK"
+  }
+  if (langKey === "au") {
+    countryName = "Australia"
+  }
+  if (langKey === "us") {
+    countryName = "USA"
   }
 
   let hreflangPathname
@@ -70,7 +75,7 @@ const SeoComponent = ({ title, description, image, article }) => {
   return (
     <Helmet
       title={seo.title}
-      titleTemplate={titleTemplate}
+      titleTemplate={`%s | Outfund | ${countryName}`}
       htmlAttributes={{ lang: `${htmlLang}` }}
     >
       <link rel="canonical" href={seo.url} />
@@ -175,7 +180,6 @@ const query = graphql`
     site {
       siteMetadata {
         defaultTitle: title
-        titleTemplate
         defaultDescription: description
         siteUrl: siteUrl
         defaultImage: image

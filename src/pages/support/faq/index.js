@@ -67,7 +67,7 @@ const FAQ = (props) => {
   return (
     <LangLayout>
       <SeoComponent
-        title="FAQs"
+        title="FAQ"
         description="We're always here to help answer your questions"
       />
       <HeroSimple data={props.data.faqJson.hero} />

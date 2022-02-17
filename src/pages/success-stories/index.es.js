@@ -15,8 +15,8 @@ const SuccessStories = ({ data }) => {
   return (
     <LangLayout>
       <SeoComponent
-        title="Success Stories"
-        description="Founders and how Outfund helped them succeed"
+        title="Casos de éxito"
+        description="Los fundadores y cómo Outfund les ayudó a triunfar"
       />
       <HeroSimple data={data.successStoriesJson.hero} />
       <Main>

@@ -5,7 +5,6 @@
 module.exports = {
   siteMetadata: {
     title: "Growth Capital for your Online Businesses",
-    titleTemplate: "%s | Outfund",
     description: "Growth Capital for your Online Businesses",
     siteUrl: "https://www.out.fund",
     image: "/Outfund.png",
