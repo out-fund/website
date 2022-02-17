@@ -47,7 +47,7 @@
 # /  /es/     302!  Country=es
 
 # Redirect users in Australia to /au/
-# /  /au/     302!  Country=au
+/  /au/     302!  Country=au
 
 # Redirect users in US and CA to /us/
 # /  /us/     302!  Country=us,ca
