@@ -42,6 +42,7 @@
 
 # Temp prestashop
 /prestashop          https://old.out.fund/prestashop
+/es/prestashop       https://old.out.fund/es/prestashop
 
 # Redirect users in Spain to /es/
 /  /es/     302!  Country=es
