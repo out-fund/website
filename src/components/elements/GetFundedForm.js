@@ -26,7 +26,7 @@ const GetFundedForm = ({ data, language }) => {
           amr: "",
         }}
         onSubmit={(values, actions) => {
-          fetch("/", {
+          fetch(`${language ? "/" + language + "/" : "/"}`, {
             method: "POST",
             headers: {
               "Content-Type": "application/x-www-form-urlencoded",
