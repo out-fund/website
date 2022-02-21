@@ -126,6 +126,12 @@ export default function HTML(props) {
         {/* <Hotjar /> */}
         <GoogleTagManager />
         {props.headComponents}
+        {/* Google AdSense from Ian */}
+        <script
+          data-ad-client="ca-pub-2841085140770528"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        ></script>
       </head>
       <body {...props.bodyAttributes}>
         <GoogleTagManagerNoScript />
