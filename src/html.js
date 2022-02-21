@@ -132,6 +132,7 @@ export default function HTML(props) {
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
         ></script>
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
       <body {...props.bodyAttributes}>
         <GoogleTagManagerNoScript />

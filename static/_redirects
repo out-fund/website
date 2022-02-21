@@ -23,6 +23,7 @@
 /privacy-policy      /legal/privacy-policy/
 /cookie-policy       /legal/cookie-policy/
 /es/robots.txt       /robots.txt
+/index.php           /
 
 /blog/jcdecaux-nurture-partners-with-outfund    https://old.out.fund/blog/jcdecaux-nurture-partners-with-outfund
 /blog/knowing-is-growing-customer-insights-will-be-key-in-the-new-normal    https://old.out.fund/blog/knowing-is-growing-customer-insights-will-be-key-in-the-new-normal
@@ -41,6 +42,7 @@
 # Sitemaps
 /sitemap_index.xml    /sitemap/sitemap-index.xml
 /sitemap.xml    /sitemap/sitemap-index.xml
+/sitemaps.xml    /sitemap/sitemap-index.xml
 
 # Temp prestashop
 /prestashop          https://old.out.fund/prestashop
