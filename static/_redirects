@@ -54,15 +54,23 @@
 /es/prestashop       https://old.out.fund/es/prestashop
 
 # Redirect users in Spain to /es/
-/  /es/     302!  Country=es
+/                         /es/                   302!  Country=es
 
 # Redirect users in Australia to /au/
-/  /au/     302!  Country=au
+/                         /au/                   302!  Country=au
 
 # Redirect users in US and CA to /us/
-/  /us/     302!  Country=us,ca
+/                         /us/                   302!  Country=us,ca
 
-# Redirect users in UK /
-/us/  /     302!  Country=gb,ie
-/au/  /     302!  Country=gb,ie
-/es/  /     302!  Country=gb,ie
+# Redirect users in UK to /
+/us/                      /                      302!  Country=gb,ie
+/us/about-us/             /about-us/             302!  Country=gb,ie
+/us/how-funding-works/    /how-funding-works/    302!  Country=gb,ie
+/us/success-stories/      /success-stories/      302!  Country=gb,ie
+/us/support/faq/          /support/faq/          302!  Country=gb,ie
+/us/get-funded/           /get-funded/           302!  Country=gb,ie
+/us/partners/             /partners/             302!  Country=gb,ie
+/us/contact-us/           /contact-us/           302!  Country=gb,ie
+
+/au/                      /                      302!  Country=gb,ie
+/es/                      /                      302!  Country=gb,ie

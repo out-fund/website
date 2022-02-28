@@ -95,6 +95,9 @@ const MobileLinks = ({ lang }) => {
         <Button to={links.faq.url} variant="navLink">
           {links.faq.text[lang]}
         </Button>
+        <Button href={links.login.url} variant="navLink">
+          {links.login.text[lang]}
+        </Button>
       </MobileDropdownWrapper>
     </MobileLinksWrapper>
   )
