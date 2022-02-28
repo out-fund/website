@@ -154,8 +154,8 @@ const GetFundedForm = ({ data, language }) => {
                   <option value="DEFAULT" disabled>
                     {data.form.select.default}
                   </option>
-                  {data.form.select.options.map((item) => (
-                    <option key={item} value={item}>
+                  {data.form.select.options.map((item, index) => (
+                    <option key={item} value={data.form.select.values[index]}>
                       {item}
                     </option>
                   ))}

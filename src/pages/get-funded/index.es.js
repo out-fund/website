@@ -214,6 +214,7 @@ export const query = graphql`
             title
             default
             options
+            values
           }
           btn
         }

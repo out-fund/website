@@ -34,7 +34,7 @@ const SeoComponent = ({ title, description, image, article }) => {
     countryName = "Australia"
   }
   if (langKey === "us") {
-    countryName = "USA"
+    countryName = "US"
   }
 
   let hreflangPathname
