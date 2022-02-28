@@ -73,4 +73,19 @@
 /us/contact-us/           /contact-us/           302!  Country=gb,ie
 
 /au/                      /                      302!  Country=gb,ie
+/au/about-us/             /about-us/             302!  Country=gb,ie
+/au/how-funding-works/    /how-funding-works/    302!  Country=gb,ie
+/au/success-stories/      /success-stories/      302!  Country=gb,ie
+/au/support/faq/          /support/faq/          302!  Country=gb,ie
+/au/get-funded/           /get-funded/           302!  Country=gb,ie
+/au/partners/             /partners/             302!  Country=gb,ie
+/au/contact-us/           /contact-us/           302!  Country=gb,ie
+
 /es/                      /                      302!  Country=gb,ie
+/es/about-us/             /about-us/             302!  Country=gb,ie
+/es/how-funding-works/    /how-funding-works/    302!  Country=gb,ie
+/es/success-stories/      /success-stories/      302!  Country=gb,ie
+/es/support/faq/          /support/faq/          302!  Country=gb,ie
+/es/get-funded/           /get-funded/           302!  Country=gb,ie
+/es/partners/             /partners/             302!  Country=gb,ie
+/es/contact-us/           /contact-us/           302!  Country=gb,ie
