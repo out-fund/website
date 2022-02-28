@@ -61,3 +61,8 @@
 
 # Redirect users in US and CA to /us/
 /  /us/     302!  Country=us,ca
+
+# Redirect users in UK /
+/us/  /     302!  Country=gb,ie
+/au/  /     302!  Country=gb,ie
+/es/  /     302!  Country=gb,ie
