@@ -56,11 +56,6 @@
 # Redirect users in Spain to /es/
 /                         /es/                   302!  Country=es
 
-# Redirect users in Australia to /au/
-/                         /au/                   302!  Country=au
-
-# Redirect users in US and CA to /us/
-/                         /us/                   302!  Country=us,ca
 
 # Redirect users in UK to /
 /us/                      /                      302!  Country=gb,ie
@@ -89,3 +84,60 @@
 /es/get-funded/           /get-funded/           302!  Country=gb,ie
 /es/partners/             /partners/             302!  Country=gb,ie
 /es/contact-us/           /contact-us/           302!  Country=gb,ie
+
+# Redirect users in AU to /au/
+/us/                      /                      302!  Country=au
+/us/about-us/             /about-us/             302!  Country=au
+/us/how-funding-works/    /how-funding-works/    302!  Country=au
+/us/success-stories/      /success-stories/      302!  Country=au
+/us/support/faq/          /support/faq/          302!  Country=au
+/us/get-funded/           /get-funded/           302!  Country=au
+/us/partners/             /partners/             302!  Country=au
+/us/contact-us/           /contact-us/           302!  Country=au
+
+/                         /au/                   302!  Country=au
+/about-us/                /about-us/             302!  Country=au
+/how-funding-works/       /how-funding-works/    302!  Country=au
+/success-stories/         /success-stories/      302!  Country=au
+/support/faq/             /support/faq/          302!  Country=au
+/get-funded/              /get-funded/           302!  Country=au
+/partners/                /partners/             302!  Country=au
+/contact-us/              /contact-us/           302!  Country=au
+
+/es/                      /                      302!  Country=au
+/es/about-us/             /about-us/             302!  Country=au
+/es/how-funding-works/    /how-funding-works/    302!  Country=au
+/es/success-stories/      /success-stories/      302!  Country=au
+/es/support/faq/          /support/faq/          302!  Country=au
+/es/get-funded/           /get-funded/           302!  Country=au
+/es/partners/             /partners/             302!  Country=au
+/es/contact-us/           /contact-us/           302!  Country=au
+
+
+# Redirect users in US and CA to /us/
+/                         /us/                   302!  Country=us,ca
+/about-us/             /about-us/             302!  Country=us,ca
+/how-funding-works/    /how-funding-works/    302!  Country=us,ca
+/success-stories/      /success-stories/      302!  Country=us,ca
+/support/faq/          /support/faq/          302!  Country=us,ca
+/get-funded/           /get-funded/           302!  Country=us,ca
+/partners/             /partners/             302!  Country=us,ca
+/contact-us/           /contact-us/           302!  Country=us,ca
+
+/au/                      /                      302!  Country=us,ca
+/au/about-us/             /about-us/             302!  Country=us,ca
+/au/how-funding-works/    /how-funding-works/    302!  Country=us,ca
+/au/success-stories/      /success-stories/      302!  Country=us,ca
+/au/support/faq/          /support/faq/          302!  Country=us,ca
+/au/get-funded/           /get-funded/           302!  Country=us,ca
+/au/partners/             /partners/             302!  Country=us,ca
+/au/contact-us/           /contact-us/           302!  Country=us,ca
+
+/es/                      /                      302!  Country=us,ca
+/es/about-us/             /about-us/             302!  Country=us,ca
+/es/how-funding-works/    /how-funding-works/    302!  Country=us,ca
+/es/success-stories/      /success-stories/      302!  Country=us,ca
+/es/support/faq/          /support/faq/          302!  Country=us,ca
+/es/get-funded/           /get-funded/           302!  Country=us,ca
+/es/partners/             /partners/             302!  Country=us,ca
+/es/contact-us/           /contact-us/           302!  Country=us,ca
