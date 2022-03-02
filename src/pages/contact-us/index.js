@@ -134,18 +134,6 @@ export const query = graphql`
   query {
     contactUsJson(language: { regex: "/en-GB/" }) {
       language
-      liveChat {
-        btn
-        btnUrl
-        description
-        title
-        image {
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
-        imageAlt
-      }
       hero {
         title
       }

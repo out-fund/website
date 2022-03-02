@@ -19,7 +19,7 @@ const SeoComponent = ({ title, description, image, article }) => {
     url: `https://out.fund${pathname}`,
   }
 
-  let htmlLang = `en-` + langKey.toUpperCase()
+  let htmlLang = ""
   let countryName = ""
 
   if (langKey === "es") {
@@ -31,9 +31,11 @@ const SeoComponent = ({ title, description, image, article }) => {
     countryName = "UK"
   }
   if (langKey === "au") {
+    htmlLang = "en-AU"
     countryName = "Australia"
   }
   if (langKey === "us") {
+    htmlLang = "en-US"
     countryName = "US"
   }
 
@@ -80,22 +82,22 @@ const SeoComponent = ({ title, description, image, article }) => {
 
       <link
         rel="alternate"
-        hreflang="en-GB"
+        hreflang="en-gb"
         href={`${siteUrl}${hreflangPathname}`}
       />
       <link
         rel="alternate"
-        hreflang="en-US"
+        hreflang="en-us"
         href={`${siteUrl}/us${hreflangPathname}`}
       />
       <link
         rel="alternate"
-        hreflang="en-AU"
+        hreflang="en-au"
         href={`${siteUrl}/au${hreflangPathname}`}
       />
       <link
         rel="alternate"
-        hreflang="es-ES"
+        hreflang="es-es"
         href={`${siteUrl}/es${hreflangPathname}`}
       />
 

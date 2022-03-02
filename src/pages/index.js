@@ -107,14 +107,6 @@ export const query = graphql`
         title
       }
       hero {
-        image {
-          alt
-          src {
-            childImageSharp {
-              gatsbyImageData
-            }
-          }
-        }
         primaryBtn {
           text
           url

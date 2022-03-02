@@ -16,6 +16,29 @@ import {
   SeoComponent,
 } from "./../components"
 
+const HomePage = (props) => {
+  const {
+    data: { homepageJson: data },
+  } = props
+
+  return (
+    <LangLayout>
+      <SeoComponent title={data.seo.title} description={data.seo.description} />
+      <HeroHomepage data={data.hero} />
+      <Main>
+        <SectionWeFunded data={data.weFunded} />
+        <SectionWeAreInvesting data={data.weInvesting} />
+        <SectionSupercharging data={data.startSupercharging} />
+        <SectionFindOut data={props.data.homepageJson.findOut} />
+        <SectionFaq data={props.data.homepageJson.faq} />
+        <SectionAboutUs data={props.data.homepageJson.aboutUs} />
+        <SectionRegulated data={props.data.trustJson} />
+      </Main>
+    </LangLayout>
+  )
+}
+export default HomePage
+
 export const query = graphql`
   query usHomePage {
     homepageJson(language: { regex: "/en-US/" }) {
@@ -84,14 +107,6 @@ export const query = graphql`
         title
       }
       hero {
-        image {
-          alt
-          src {
-            childImageSharp {
-              gatsbyImageData
-            }
-          }
-        }
         primaryBtn {
           text
           url
@@ -209,26 +224,3 @@ export const query = graphql`
     }
   }
 `
-
-const HomePage = (props) => {
-  const {
-    data: { homepageJson: data },
-  } = props
-
-  return (
-    <LangLayout>
-      <SeoComponent title={data.seo.title} description={data.seo.description} />
-      <HeroHomepage data={data.hero} />
-      <Main>
-        <SectionWeFunded data={data.weFunded} />
-        <SectionWeAreInvesting data={data.weInvesting} />
-        <SectionSupercharging data={data.startSupercharging} />
-        <SectionFindOut data={props.data.homepageJson.findOut} />
-        <SectionFaq data={props.data.homepageJson.faq} />
-        <SectionAboutUs data={props.data.homepageJson.aboutUs} />
-        <SectionRegulated data={props.data.trustJson} />
-      </Main>
-    </LangLayout>
-  )
-}
-export default HomePage
