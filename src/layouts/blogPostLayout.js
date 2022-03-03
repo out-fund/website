@@ -90,13 +90,16 @@ const ImageWrapper = styled.div`
   justify-content: center;
   margin: 40px 0;
 
-  img {
-    border-radius: 10px;
-  }
   ${theme.above.t.m} {
     position: relative;
     top: -64px;
     margin-bottom: 0;
+  }
+  .gatsby-image-wrapper {
+    border-radius: 10px;
+    box-shadow: 0px 17px 33px rgba(5, 24, 64, 0.07),
+      0px 3.8002px 13.45px rgba(5, 24, 64, 0.0522616),
+      0px 1.07885px 7.14579px rgba(5, 24, 64, 0.0377807);
   }
 `
 const Article = styled.article`
