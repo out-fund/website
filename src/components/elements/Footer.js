@@ -82,7 +82,7 @@ const Footer = ({ lang }) => {
                 >
                   {links.careers.text[lang]}
                 </Button>
-                {langKey === "en" && (
+                {langKey !== "es" && (
                   <Button
                     to={links.blog.url}
                     variant="footerLink"
