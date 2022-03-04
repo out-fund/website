@@ -19,7 +19,7 @@ const Button = ({
   ...props
 }) => {
   const langKey = useLangProvider()
-  if (to && langKey !== "en" && to !== "/blog/") {
+  if (to && langKey !== "en") {
     to = "/" + langKey + to
   }
 
