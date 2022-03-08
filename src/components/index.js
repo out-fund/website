@@ -51,6 +51,7 @@ import GetFundedForm from "./elements/GetFundedForm"
 import ContactUsForm from "./elements/ContactUsForm"
 import PartnerForm from "./elements/PartnerForm"
 import SeoComponent from "./elements/SeoComponent"
+import ReferralForm from "./elements/ReferralForm"
 
 export {
   SectionWeAreInvesting,
@@ -102,4 +103,5 @@ export {
   CardBlog,
   SectionSteps,
   SeoComponent,
+  ReferralForm,
 }

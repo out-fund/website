@@ -7,5 +7,7 @@ Disallow: /thank-you*
 Disallow: /us/thank-you*
 Disallow: /es/thank-you*
 Disallow: /au/thank-you*
+Disallow: /referral-program*
+Disallow: /es/referral-program*
 
 Sitemap: https://out.fund/sitemap/sitemap-index.xml

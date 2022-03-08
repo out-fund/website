@@ -13,16 +13,15 @@ const encode = (data) => {
     .join("&")
 }
 
-const PartnerForm = ({ form, language }) => {
+const ReferralForm = ({ form, language }) => {
   const [buttonSent, setButtonSent] = useState(form.btn.text)
 
   return (
     <FormWrapper>
       <Formik
         initialValues={{
-          businessName: "",
-          fullName: "",
-          email: "",
+          workEmail: "",
+          friendEmail: "",
         }}
         onSubmit={(values, actions) => {
           fetch(`${language ? "/" + language + "/" : "/"}`, {
@@ -31,7 +30,7 @@ const PartnerForm = ({ form, language }) => {
               "Content-Type": "application/x-www-form-urlencoded",
             },
             body: encode({
-              "form-name": `partner-contact${language ? "-" + language : ""}`,
+              "form-name": `referral-program${language ? "-" + language : ""}`,
               ...values,
             }),
           })
@@ -50,14 +49,11 @@ const PartnerForm = ({ form, language }) => {
         validate={(values) => {
           const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
           const errors = {}
-          if (!values.businessName) {
-            errors.businessName = "Business name required"
+          if (!values.workEmail || !emailRegex.test(values.workEmail)) {
+            errors.workEmail = "Valid email required"
           }
-          if (!values.fullName) {
-            errors.fullName = "Name required"
-          }
-          if (!values.email || !emailRegex.test(values.email)) {
-            errors.email = "Valid email required"
+          if (!values.friendEmail || !emailRegex.test(values.friendEmail)) {
+            errors.friendEmail = "Valid email required"
           }
           return errors
         }}
@@ -74,7 +70,7 @@ const PartnerForm = ({ form, language }) => {
           dirty,
         }) => (
           <F.FormikForm
-            name={`partner-contact${language ? "-" + language : ""}`}
+            name={`referral-program${language ? "-" + language : ""}`}
           >
             <VisuallyHidden>
               <label>
@@ -84,42 +80,28 @@ const PartnerForm = ({ form, language }) => {
             </VisuallyHidden>
             <F.Group>
               <VisuallyHidden>
-                <label htmlFor="businessName">{form.company}</label>
+                <label htmlFor="workEmail">{form.workEmail}</label>
               </VisuallyHidden>
               <F.FormikField
-                $valid={errors.businessName && touched.businessName}
-                name="businessName"
-                placeholder={form.company}
+                $valid={errors.workEmail && touched.workEmail}
+                name="workEmail"
+                placeholder={form.workEmail}
               />
               <F.ErrorWrapper>
-                <F.FormikError component="div" name="businessName" />
+                <F.FormikError component="div" name="workEmail" />
               </F.ErrorWrapper>
             </F.Group>
             <F.Group>
               <VisuallyHidden>
-                <label htmlFor="fullName">{form.name}</label>
+                <label htmlFor="friendEmail">{form.friendEmail}</label>
               </VisuallyHidden>
               <F.FormikField
-                $valid={errors.fullName && touched.fullName}
-                name="fullName"
-                placeholder={form.name}
+                $valid={errors.friendEmail && touched.friendEmail}
+                name="friendEmail"
+                placeholder={form.friendEmail}
               />
               <F.ErrorWrapper>
-                <F.FormikError component="div" name="fullName" />
-              </F.ErrorWrapper>
-            </F.Group>
-            <F.Group>
-              <VisuallyHidden>
-                <label htmlFor="email">{form.email}</label>
-              </VisuallyHidden>
-              <F.FormikField
-                $valid={errors.email && touched.email}
-                name="email"
-                rows="4"
-                placeholder={form.email}
-              />
-              <F.ErrorWrapper>
-                <F.FormikError component="div" name="email" />
+                <F.FormikError component="div" name="friendEmail" />
               </F.ErrorWrapper>
             </F.Group>
             <F.Group>
@@ -139,7 +121,7 @@ const PartnerForm = ({ form, language }) => {
   )
 }
 
-export default PartnerForm
+export default ReferralForm
 
 const FormWrapper = styled.div`
   margin-top: 24px;
