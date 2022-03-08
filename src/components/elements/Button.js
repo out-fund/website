@@ -74,6 +74,7 @@ const ButtonWrap = styled.div`
     -moz-osx-font-smoothing: grayscale;
 
     :disabled {
+      cursor: not-allowed;
       opacity: 0.5;
     }
     &:focus-visible {
@@ -95,8 +96,8 @@ const ButtonWrap = styled.div`
             color: ${theme.color.white};
             transition: background-color 0.1s ease-in-out;
             font-weight: 600;
-            :hover,
-            :focus {
+            :hover:enabled,
+            :focus:enabled {
               background-color: ${theme.color.button.primary.hover};
             }
           `
@@ -113,8 +114,8 @@ const ButtonWrap = styled.div`
                 ? theme.color.white
                 : theme.color.button.secondary.color};
             transition: background-color 0.1s ease-in-out;
-            :hover,
-            :focus {
+            :hover:enabled,
+            :focus:enabled {
               background-color: ${(props) =>
                 props.colorVersion === "white"
                   ? "rgba(255,255,255, 0.2)"
@@ -127,8 +128,8 @@ const ButtonWrap = styled.div`
             background-color: transparent;
             color: ${theme.color.text.headings};
             transition: all 0.1s ease-in-out;
-            :hover,
-            :focus {
+            :hover:enabled,
+            :focus:enabled {
               color: ${theme.color.button.primary.backgroundColor};
               box-shadow: inset 0px 0px 0px 1px
                 ${theme.color.button.primary.backgroundColor};
@@ -145,8 +146,8 @@ const ButtonWrap = styled.div`
             /* color: ${theme.color.text.headings}; */
             color: #deeeff;
             transition: all 0.1s ease-in-out;
-            :hover,
-            :focus {
+            :hover:enabled,
+            :focus:enabled {
               /* color: ${theme.color.button.primary.backgroundColor}; */
               color: #fff;
               /* box-shadow: inset 0px 0px 0px 1px
@@ -185,8 +186,8 @@ const ButtonWrap = styled.div`
               content: "";
             }
 
-            :hover,
-            :focus {
+            :hover:enabled,
+            :focus:enabled {
               color: #fff;
               box-shadow: inset 0px 0px 0px 1px #fff;
               &:after {
@@ -225,8 +226,8 @@ const ButtonWrap = styled.div`
               transition: all 0.1s ease-in-out;
               content: ""; */
             }
-            :hover,
-            :focus {
+            :hover:enabled,
+            :focus:enabled {
               /* background-color: #deeeff; */
               box-shadow: inset 0px 0px 0px 1px ${theme.color.text.headings};
               /* &:after {
