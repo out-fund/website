@@ -66,6 +66,7 @@
 /us/get-funded/           /get-funded/           302!  Country=gb,ie
 /us/partners/             /partners/             302!  Country=gb,ie
 /us/contact-us/           /contact-us/           302!  Country=gb,ie
+/us/referral-program/     /referral-program/     302!  Country=gb,ie
 
 /au/                      /                      302!  Country=gb,ie
 /au/about-us/             /about-us/             302!  Country=gb,ie
@@ -75,6 +76,7 @@
 /au/get-funded/           /get-funded/           302!  Country=gb,ie
 /au/partners/             /partners/             302!  Country=gb,ie
 /au/contact-us/           /contact-us/           302!  Country=gb,ie
+/au/referral-program/     /referral-program/     302!  Country=gb,ie
 
 /es/                      /                      302!  Country=gb,ie
 /es/about-us/             /about-us/             302!  Country=gb,ie
@@ -84,6 +86,7 @@
 /es/get-funded/           /get-funded/           302!  Country=gb,ie
 /es/partners/             /partners/             302!  Country=gb,ie
 /es/contact-us/           /contact-us/           302!  Country=gb,ie
+/es/referral-program/     /referral-program/     302!  Country=gb,ie
 
 
 # Redirect users in AU to /au/
@@ -95,6 +98,7 @@
 /us/get-funded/           /au/get-funded/        302!  Country=au
 /us/partners/             /au/partners/          302!  Country=au
 /us/contact-us/           /au/contact-us/        302!  Country=au
+/us/referral-program/     /au/referral-program/  302!  Country=au
 
 /                         /au/                   302!  Country=au
 /about-us/                /au/about-us/          302!  Country=au
@@ -104,6 +108,7 @@
 /get-funded/              /au/get-funded/        302!  Country=au
 /partners/                /au/partners/          302!  Country=au
 /contact-us/              /au/contact-us/        302!  Country=au
+/referral-program/        /au/referral-program/  302!  Country=au
 
 /es/                      /au/                   302!  Country=au
 /es/about-us/             /au/about-us/          302!  Country=au
@@ -113,6 +118,7 @@
 /es/get-funded/           /au/get-funded/        302!  Country=au
 /es/partners/             /au/partners/          302!  Country=au
 /es/contact-us/           /au/contact-us/        302!  Country=au
+/es/referral-program/     /au/referral-program/  302!  Country=au
 
 
 # Redirect users in US and CA to /us/
@@ -124,6 +130,7 @@
 /get-funded/              /us/get-funded/        302!  Country=us,ca
 /partners/                /us/partners/          302!  Country=us,ca
 /contact-us/              /us/contact-us/        302!  Country=us,ca
+/referral-program/        /us/referral-program/  302!  Country=us,ca
 
 /au/                      /us/                   302!  Country=us,ca
 /au/about-us/             /us/about-us/          302!  Country=us,ca
@@ -133,6 +140,7 @@
 /au/get-funded/           /us/get-funded/        302!  Country=us,ca
 /au/partners/             /us/partners/          302!  Country=us,ca
 /au/contact-us/           /us/contact-us/        302!  Country=us,ca
+/au/referral-program/     /us/referral-program/  302!  Country=us,ca
 
 /es/                      /us/                   302!  Country=us,ca
 /es/about-us/             /us/about-us/          302!  Country=us,ca
@@ -142,3 +150,4 @@
 /es/get-funded/           /us/get-funded/        302!  Country=us,ca
 /es/partners/             /us/partners/          302!  Country=us,ca
 /es/contact-us/           /us/contact-us/        302!  Country=us,ca
+/es/referral-program/     /us/referral-program/  302!  Country=us,ca
