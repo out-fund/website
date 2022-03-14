@@ -38,6 +38,8 @@ const GoogleTagManagerNoScript = () => {
   )
 }
 
+const ZenDesk = () => {}
+
 const LiveChat = () => {
   return (
     <>
@@ -144,7 +146,13 @@ export default function HTML(props) {
         />
         {props.postBodyComponents}
         {/* <DecorateUrls /> */}
-        <LiveChat />
+        {/* <LiveChat /> */}
+
+        {/* ZenDesk test */}
+        <script
+          id="ze-snippet"
+          src="https://static.zdassets.com/ekr/snippet.js?key=aa39c95d-dc3f-41f3-8526-1a05c2bdffca"
+        />
       </body>
     </html>
   )
