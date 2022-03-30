@@ -38,6 +38,23 @@ const GoogleTagManagerNoScript = () => {
   )
 }
 
+const GoogleAdsLatest = () => {
+  return (
+    <>
+      {/* Global site tag (gtag.js) - Google Ads */}
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=AW-378374946"
+      ></script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'AW-378374946');`,
+        }}
+      />
+    </>
+  )
+}
+
 export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
@@ -49,6 +66,7 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         {/* <Hotjar /> */}
+        <GoogleAdsLatest />
         <GoogleTagManager />
         {props.headComponents}
         {/* Google AdSense from Ian */}
