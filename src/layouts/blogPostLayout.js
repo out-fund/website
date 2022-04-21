@@ -126,7 +126,7 @@ const Article = styled.article`
     margin-left: 16px;
   }
 
-  a {
+  p a {
     :hover {
       text-decoration: underline;
     }
