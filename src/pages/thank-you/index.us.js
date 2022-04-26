@@ -3,13 +3,14 @@ import styled from "styled-components"
 
 import LangLayout from "../../layouts/us"
 
-import { Button } from "../../components"
+import { Button, SeoComponent } from "../../components"
 import T from "../../styles/new/typography"
 import { theme } from "../../styles/new/theme"
 
 const ThankYou = () => {
   return (
     <LangLayout simpleNavbar>
+      <SeoComponent title="Almost there" description="Almost there" />
       <Wrapper>
         <ContentWrapper>
           <Title>Almost there</Title>
