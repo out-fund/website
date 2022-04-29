@@ -52,6 +52,7 @@ import ContactUsForm from "./elements/ContactUsForm"
 import PartnerForm from "./elements/PartnerForm"
 import SeoComponent from "./elements/SeoComponent"
 import ReferralForm from "./elements/ReferralForm"
+import NewsBar from "./elements/NewsBar"
 
 export {
   SectionWeAreInvesting,
@@ -104,4 +105,5 @@ export {
   SectionSteps,
   SeoComponent,
   ReferralForm,
+  NewsBar,
 }
