@@ -4,11 +4,7 @@ import styled from "styled-components"
 
 // const GlobalLayout = ({ children, location }) => {
 const GlobalLayout = ({ children, pt }) => {
-  return (
-    <>
-      <GlobalWrapper pt={pt}>{children}</GlobalWrapper>
-    </>
-  )
+  return <GlobalWrapper pt={pt}>{children}</GlobalWrapper>
 }
 
 export default GlobalLayout
