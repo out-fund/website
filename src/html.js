@@ -1,17 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-// const Hotjar = () => {
-//   return (
-//     <>
-//       <script
-//         dangerouslySetInnerHTML={{
-//           __html: `(function(h,o,t,j,a,r){h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};h._hjSettings={hjid:2676815,hjsv:6};a=o.getElementsByTagName('head')[0];r=o.createElement('script');r.async=1;r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;a.appendChild(r);})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`,
-//         }}
-//       />
-//     </>
-//   )
-// }
 const GoogleTagManager = () => {
   return (
     <>
@@ -87,12 +76,17 @@ export default function HTML(props) {
         />
         {props.postBodyComponents}
         {/* Website Chat */}
-        <script
+        {/* <script
           type="text/javascript"
           id="hs-script-loader"
           async
           defer
           src="//js-na1.hs-scripts.com/4522529.js"
+        /> */}
+        {/* Zendesk */}
+        <scrip
+          id="ze-snippet"
+          src="https://static.zdassets.com/ekr/snippet.js?key=e13fcb82-d8da-49cd-8eed-c944751d36ee"
         />
       </body>
     </html>
