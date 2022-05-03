@@ -85,6 +85,9 @@ export default function HTML(props) {
         />  */}
         {/* Zendesk */}
         <scrip
+          type="text/javascript"
+          async
+          defer
           id="ze-snippet"
           src="https://static.zdassets.com/ekr/snippet.js?key=e13fcb82-d8da-49cd-8eed-c944751d36ee"
         />
