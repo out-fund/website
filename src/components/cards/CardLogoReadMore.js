@@ -28,9 +28,11 @@ const CardLogoReadMore = (props) => {
         <LogoWrapper>{parse(logo)}</LogoWrapper>
         {btn && (
           <BtnWrapper>
-            <Button to={btn.url} variant="secondary" color="white">
-              {btn.text}
-            </Button>
+            {btn.url && (
+              <Button to={btn.url} variant="secondary" color="white">
+                {btn.text}
+              </Button>
+            )}
           </BtnWrapper>
         )}
       </TextWrapper>

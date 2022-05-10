@@ -16,17 +16,21 @@ const HeroHomepage = ({ data }) => {
           <Title>{title}</Title>
           <Description>{description}</Description>
           <ButtonWrapper>
-            <Button
-              to={primaryBtn.url}
-              variant="primary"
-              size="large"
-              id="cta-get-funded-hero-click"
-            >
-              {primaryBtn.text}
-            </Button>
-            <Button to={secondaryBtn.url} variant="secondary" size="large">
-              {secondaryBtn.text}
-            </Button>
+            {primaryBtn.url && (
+              <Button
+                to={primaryBtn.url}
+                variant="primary"
+                size="large"
+                id="cta-get-funded-hero-click"
+              >
+                {primaryBtn.text}
+              </Button>
+            )}
+            {secondaryBtn.url && (
+              <Button to={secondaryBtn.url} variant="secondary" size="large">
+                {secondaryBtn.text}
+              </Button>
+            )}
           </ButtonWrapper>
         </TextWrapper>
         <ImageWrapper>

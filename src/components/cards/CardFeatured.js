@@ -26,9 +26,11 @@ const CardFeatured = (props) => {
         <By>{quote.by}</By>
         {btn && (
           <BtnWrapper>
-            <Button to={btn.url} variant="secondary" color="white">
-              {btn.text}
-            </Button>
+            {btn.url && (
+              <Button to={btn.url} variant="secondary" color="white">
+                {btn.text}
+              </Button>
+            )}
           </BtnWrapper>
         )}
       </TextWrapper>

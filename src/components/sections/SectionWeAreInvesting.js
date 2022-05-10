@@ -22,9 +22,11 @@ const SectionWeAreInvesting = ({ data }) => {
 
           {btn && (
             <BtnWrapper>
-              <Button to={btn.url} variant="secondary">
-                {btn.text}
-              </Button>
+              {btn.url && (
+                <Button to={btn.url} variant="secondary">
+                  {btn.text}
+                </Button>
+              )}
             </BtnWrapper>
           )}
         </TextWrapper>
