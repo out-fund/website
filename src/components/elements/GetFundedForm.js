@@ -49,6 +49,9 @@ const GetFundedForm = ({ data, language }) => {
         }}
         validate={(values) => {
           const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+          const websiteRegex =
+            /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/gi
+
           const errors = {}
           if (!values.name) {
             errors.name = "Name Required"
@@ -59,7 +62,7 @@ const GetFundedForm = ({ data, language }) => {
           if (!values.phone) {
             errors.phone = "Phone Number Required"
           }
-          if (!values.website) {
+          if (!values.website || !websiteRegex.test(values.website)) {
             errors.website = "Company Website Required"
           }
           if (!values.amr) {
