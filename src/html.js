@@ -1,6 +1,18 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+const SegmentTest = () => {
+  return (
+    <>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `!function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey="MjzmGl2VWEv9T9iKxHUtiPB2z4rTfEyg";;analytics.SNIPPET_VERSION="4.15.3"; analytics.load("MjzmGl2VWEv9T9iKxHUtiPB2z4rTfEyg");analytics.page();}}();`,
+        }}
+      />
+    </>
+  )
+}
+
 const GoogleTagManager = () => {
   return (
     <>
@@ -12,6 +24,7 @@ const GoogleTagManager = () => {
     </>
   )
 }
+
 const GoogleTagManagerNoScript = () => {
   return (
     <>
@@ -54,6 +67,8 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        {/* Segment */}
+        <SegmentTest />
         {/* <Hotjar /> */}
         <GoogleAdsLatest />
         <GoogleTagManager />
