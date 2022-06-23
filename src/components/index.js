@@ -53,6 +53,9 @@ import PartnerForm from "./elements/PartnerForm"
 import SeoComponent from "./elements/SeoComponent"
 import ReferralForm from "./elements/ReferralForm"
 import NewsBar from "./elements/NewsBar"
+import FooterSimple from "./elements/FooterSimple"
+
+import GetFundedFormEU from "./elements/GetFundedFormEU"
 
 export {
   SectionWeAreInvesting,
@@ -106,4 +109,6 @@ export {
   SeoComponent,
   ReferralForm,
   NewsBar,
+  FooterSimple,
+  GetFundedFormEU,
 }

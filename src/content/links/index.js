@@ -90,6 +90,7 @@ const links = {
     text: {
       en: "Get funded",
       es: "Solicitar financiación",
+      dk: "Opnå finansiering",
     },
     url: "/get-funded/",
   },

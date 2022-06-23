@@ -1,19 +1,19 @@
 {
   "language": "dk-DK",
   "seo": {
-    "title": "Growth Capital for your Online Businesses",
-    "description": "Supercharged funding from $10K to $3M for your marketing and inventory."
+    "title": "Vækstkapital til virksomhedsstiftere som dig",
+    "description": "Boost din virksomheds markedsføring og beholdning via et finanseringstilbud på 10.000-2 millioner £."
   },
   "hero": {
-    "title": "Vækstkapital for stiftere som dig",
-    "description": "Supercharged finansiering fra kr.10K til kr.3M til din markedsføring og beholdning.",
+    "title": "Vækstkapital til virksomhedsstiftere som dig",
+    "description": "Boost din virksomheds markedsføring og beholdning via et finanseringstilbud på 10.000-2 millioner £.",
     "primaryBtn": {
-      "text": "Get funded",
-      "url": "/get-funded/"
+      "text": "Opnå finansiering",
+      "url": "/get-funded-3/"
     },
     "secondaryBtn": {
-      "text": "Learn how it works",
-      "url": "/how-funding-works/"
+      "text": "",
+      "url": ""
     },
     "image": {
       "src": "./../../../images/Outfund-hero-UK.png",
@@ -21,32 +21,32 @@
     }
   },
   "weFunded": {
-    "title": "We fund brands like yours",
-    "description": "We want growing businesses to succeed sooner. We help you build your vision with capital that's fast, fair, and more affordable.",
+    "title": "Vi finansierer brands der minder om dit",
+    "description": "Vi ønsker at vækstvirksomheder opnår succes hurtigere. Vi hjælper dig med at opbygge din vision via tilført kapital der er hurtig, fair og prismæssig overkommelig.",
     "cards": {
       "feel": {
         "tag": {
-          "text": "Funded $400K+",
+          "text": "Tilført over 400.000£",
           "color": "#FFF4E9"
         },
         "company": "Feel",
         "logo": "<svg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 55 30'><path fill-rule='evenodd' clip-rule='evenodd' d='M0 0v30h5.28V17.648h5.318a11.16 11.16 0 0 0-.247 2.36c0 1.85.447 3.541 1.342 5.075a9.61 9.61 0 0 0 3.694 3.608c1.566.872 3.297 1.308 5.194 1.308 1.645 0 3.186-.35 4.62-1.05 1.436-.701 2.588-1.666 3.457-2.895l-3.397-2.716a4.991 4.991 0 0 1-2.074 1.606 6.715 6.715 0 0 1-2.646.535c-1.396 0-2.564-.363-3.506-1.09-.94-.727-1.556-1.699-1.846-2.915h11.6a9.706 9.706 0 0 0 1.245 3.608 9.61 9.61 0 0 0 3.693 3.609c1.567.872 3.298 1.308 5.194 1.308 1.646 0 3.186-.35 4.621-1.05 1.436-.701 2.588-1.666 3.456-2.895l-3.396-2.716a4.992 4.992 0 0 1-2.074 1.606 6.716 6.716 0 0 1-2.646.535c-1.396 0-2.564-.363-3.506-1.09-.941-.727-1.556-1.699-1.846-2.915h13.139v1.204c0 2.343.59 4.154 1.822 5.432 1.232 1.278 2.92 1.89 5.09 1.89.804 0 1.768-.133 2.893-.4v-4.579c-.321.053-.777.053-1.313.053-1.259 0-2.116-.293-2.571-.932-.456-.612-.67-1.65-.67-3.088V0h-5.251v14.187a9.595 9.595 0 0 0-3.047-2.982c-1.488-.925-3.154-1.388-4.997-1.388-1.488 0-2.86.275-4.118.823-1.257.549-2.307 1.289-3.15 2.22a9.802 9.802 0 0 0-1.018 1.343 9.595 9.595 0 0 0-3.058-2.998c-1.488-.925-3.154-1.388-4.997-1.388-1.488 0-2.86.275-4.117.823-1.258.549-2.308 1.289-3.15 2.22a9.8 9.8 0 0 0-.947 1.23v-1.548H5.28V5.125h13.241V0H0Zm15.367 17.807h9.578c-.145-.978-.665-1.797-1.56-2.458-.895-.66-1.942-.991-3.14-.991-1.146 0-2.153.314-3.022.941-.869.628-1.487 1.464-1.856 2.508Zm25.919 0h-9.578c.369-1.044.987-1.88 1.856-2.508.87-.627 1.876-.941 3.022-.941 1.198 0 2.245.33 3.14.99.895.662 1.415 1.481 1.56 2.46Z' fill='#111'/></svg>",
         "quote": {
-          "title": "I invested in repeatable growth and grew subscriptions by 4x.",
-          "by": "Boris Hodakel, Founder of Feel"
+          "title": "Jeg har investeret i gentagne vækstinitiativer, og det har ført til en firedoblet vækst i tilmeldinger",
+          "by": "Boris Hodakel, Stifter af Feel"
         },
         "image": {
           "src": "./../../../images/Boris-Cheryl.png",
           "alt": "Boris Hodakel and Cheryl holidin Feel package"
         },
         "btn": {
-          "text": "Success stories",
-          "url": "/success-stories/"
+          "text": "",
+          "url": ""
         }
       },
       "lemonadeDolls": {
         "tag": {
-          "text": "Funded $50K+",
+          "text": "Tilført 50.000£",
           "color": "#F6C34E"
         },
         "company": "Lemonade Dolls",
@@ -56,38 +56,38 @@
           "alt": "Lemonade dolls models wearing underwear"
         },
         "btn": {
-          "text": "Read More",
-          "url": "/success-stories/lemonade-dolls/"
+          "text": "",
+          "url": ""
         }
       }
     }
   },
   "weInvesting": {
-    "title": "We convert future revenue streams into up-front capital",
-    "description": "We provide the capital you need, when you need it. No dilution, no interest rates. It's funding, made fairer. <br/><br/> Simply connect your digital payment providers with Outfund, and we will generate bespoke funding offers based on your revenue data within 48 hours. Invest in growth, and repay as you make sales.",
+    "title": "Vi konverterer fremtidige indkomststrømme til up-front kapital",
+    "description": "Vi tilbyder dig den kapital du har behov for, lige når det passer dig. Konceptet er ikke udvandet, vi opererer ikke med personlige garantier, og ej heller med renter. Vi tilbyder i stedet midler på en mere fair måde. <br/><br/> Forbind ganske enkelt dine digitale betalingsudbydere med Outfund, hvorefter vi baseret på dine indtægtsdata tilbyder dig skræddersyet finansiering inden for 48 timer. Investér i vækst, og tilbagebetal i takt med at du generer salg.",
     "image": {
       "src": "./../../../images/PaymentCounterPhone.jpg",
       "alt": "Payment made ont the phone"
     },
     "btn": {
-      "text": "Learn more about how funding works",
-      "url": "/how-funding-works/"
+      "text": "Lær mere om hvordan finansering virker",
+      "url": ""
     }
   },
   "startSupercharging": {
-    "title": "Start Supercharging Your Growth",
+    "title": "Boost din vækst",
     "btn": {
-      "text": "Get started",
+      "text": "Kom i gang",
       "url": "/get-funded/"
     },
     "card": {
       "company": "Onto",
       "quote": {
-        "title": "We have doubled in size in the last quarter and are due to double in size again this quarter",
-        "by": "Rob Jolly, Founder of ONTO"
+        "title": "Vi er fordoblet i størrelse i det seneste kvartal, og vi forventer at succesen gentager sig i dette kvartal",
+        "by": "Rob Jolly, Stifter af ONTO"
       },
       "tag": {
-        "text": "We funded",
+        "text": "Tilført 340.000£",
         "color": "#72B4F0"
       },
 
@@ -99,62 +99,62 @@
     }
   },
   "findOut": {
-    "title": "Find out how much you can get",
-    "description": "Funding offers are based on your average monthly revenue. Get a quick indication of your eligibility with our easy-to-use calculator.",
+    "title": "Find ud af hvor meget du kan få",
+    "description": "Finansieringstilbud er baserede på din virksomheds månedlige indtægter. Få et hurtigt overblik over dine muligheder, ved at benytte dig af vores nemme og intuitive lommeregner",
     "calculator": {
-      "title": "Your average monthly revenue",
+      "title": "Din gennemsnitlige månedlige indtægt range",
       "range": [
-        "Under $10 000",
-        "$10 000",
-        "$20 000",
-        "$50 000",
-        "$70 000",
-        "$100 000",
-        "$200 000",
-        "$500 000",
-        "$700 000",
-        "$1 000 000",
-        "Over $1 000 000"
+        "Mindre end kr.70 000",
+        "kr. 70 000",
+        "kr. 140 000",
+        "kr. 350 000",
+        "kr. 500 000",
+        "kr. 700 000",
+        "kr. 1 400 000",
+        "kr. 3 500 000",
+        "kr.  5 000 000",
+        "kr. 7 000 000",
+        "Mere end kr. 7 000 000"
       ],
       "select": {
-        "title": "You need funding for",
-        "default": "Select",
-        "dropdown": ["Inventory", "Marketing", "Something else"]
+        "title": "Du har brug for finansering til",
+        "default": "Vælg",
+        "dropdown": ["Beholdning", "Marketing", "Noget andet"]
       },
       "btn": {
-        "text": "Check eligibility",
+        "text": "Se dine muligheder",
         "url": "/eligibility/"
       }
     }
   },
   "faq": {
-    "title": "Frequently asked questions",
+    "title": "Ofte stillede spørgsmål",
     "questions": [
       {
-        "question": "How much funding do you offer?",
-        "answer": "We can deploy between $10,000 and $3,000,000 at a time."
+        "question": "Hvor mange penge kan vi få finansieret fra jer?",
+        "answer": "Vi kan indsætte mellem 10.000 og 2.000.000£ ad gangen."
       },
       {
-        "question": "How do you calculate my offer?",
-        "answer": "Outfund securely connects to your existing banking, payment processing, and accounting platforms. Using predictive models, we assess key metrics from your revenue, advertising performance and other third party data to create bespoke funding offers. <br/><br/> Our funding is based on your performance. We don't take any equity, meaning we don't dilute you or your investors. Instead, funding is repaid through a simple revenue share."
+        "question": "Hvordan udregner i mit tilbud?",
+        "answer": "Outfund forbinder sikkert med din eksisterende bank, betalingsformidler og dine regnskabsplatforme. Via prædiktive modeller er vi i stand til at vurdere nøgletal fra din virksomheds indtægter, markedsføringsindsats og andre former for tredjepartsdata, og ud fra det skræddersyer vi dine finansieringstilbud.  <br/><br/> Vores finansiering er baseret direkte på din virksomheds indsats. Vi gør ingen krav på egenkapital, og vi udvander dermed intet for dig eller dine investorer. I stedet tilbagebetales den ydede finansiering via en simpel deling af virksomhedens fremtidige indtægter."
       },
       {
-        "question": "How long does the whole process take?",
-        "answer": "The entire process (application, offer, approval, sending funds) can be completed in as little as 48 hours."
+        "question": "Hvor længe tager hele processen?",
+        "answer": " Den samlede proces (ansøgning, tilbud, godkendelse, deponering af de finansierede midler) kan ordnes på så kort tid som 48 timer."
       },
       {
-        "question": "How do I apply?",
-        "answer": "You can apply in minutes here. You'll need to be a director of the company you're applying for. <br/><br/> You'll need to connect your business bank account, payment processor and company financial accounts. This data will allow us to build your funding offer."
+        "question": "Hvordan ansøger jeg?",
+        "answer": "Du kan ansøge på få minutter her. Det er et krav at du er direktør for den virksomhed du ansøger for. <br/><br/> Du skal forbinde din virksomheds bankkonto, betalingsformidler og din virksomheds andre finansielle konti med os. Det gør os i stand til at indhente de fornødne data, så vi kan sammensætte et tilbud til dig."
       }
     ],
     "btn": {
-      "text": "More FAQs",
-      "url": "/support/faq/"
+      "text": "",
+      "url": ""
     }
   },
   "aboutUs": {
-    "title": "About us",
-    "description": "Outfund is focused on growing businesses. Our team is a mix of founders, developers, consultants, and coffee lovers. We move fast and seek impact in everything we do. Learn more about us today.",
+    "title": "Om os",
+    "description": "Outfund hjælper virksomheder med at vækste. Vores team består af et mix af virksomhedsstiftere, udviklere, konsulenter samt ikke mindst fans af kaffe. Vi har konstant fart over feltet, og vi ønsker at gøre en forskel med alt vi er i berøring med. Lær mere om os i dag.",
     "teamImages": [
       {
         "src": "./../../../images/team/Outfund-team-Abanoub.jpg",
@@ -242,20 +242,20 @@
       }
     ],
     "stats": [
-      { "stat": "$200M", "text": "To invest in 2022" },
-      { "stat": "4", "text": "Operating countries" },
-      { "stat": "75+", "text": "Growing team" },
-      { "stat": "$37M", "text": "Raised so far" }
+      { "stat": "200 mill. £", "text": "Til investering i 2022" },
+      { "stat": "10", "text": "Lande hvor vi opererer" },
+      { "stat": "75+", "text": "I vores voksende team" },
+      { "stat": "$37M", "text": "Rejste midler indtil videre" }
     ],
     "buttons": {
       "primary": {
-        "text": "Read more about us",
-        "url": "/about-us/"
+        "text": "",
+        "url": ""
       },
 
       "secondary": {
-        "text": "Careers",
-        "url": "/careers/"
+        "text": "",
+        "url": ""
       }
     }
   },

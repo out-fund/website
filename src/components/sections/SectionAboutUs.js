@@ -30,26 +30,28 @@ const SectionAboutUs = ({ data, white }) => {
             <ImageSwiper data={data.teamImages} />
           </ImagesWrapper>
 
-          <ButtonWrapper>
-            {Object.keys(data.buttons).length === 1 ? (
-              <Button
-                to={data.buttons.primary.url}
-                variant="primary"
-                size="large"
-              >
-                {data.buttons.primary.text}
-              </Button>
-            ) : (
-              <>
-                <Button to={data.buttons.primary.url} variant="secondary">
+          {data.buttons.primary.url && (
+            <ButtonWrapper>
+              {Object.keys(data.buttons).length === 1 ? (
+                <Button
+                  to={data.buttons.primary.url}
+                  variant="primary"
+                  size="large"
+                >
                   {data.buttons.primary.text}
                 </Button>
-                <Button to={data.buttons.secondary.url} variant="secondary">
-                  {data.buttons.secondary.text}
-                </Button>
-              </>
-            )}
-          </ButtonWrapper>
+              ) : (
+                <>
+                  <Button to={data.buttons.primary.url} variant="secondary">
+                    {data.buttons.primary.text}
+                  </Button>
+                  <Button to={data.buttons.secondary.url} variant="secondary">
+                    {data.buttons.secondary.text}
+                  </Button>
+                </>
+              )}
+            </ButtonWrapper>
+          )}
         </ContentWrapper>
       </Wrapper>
     </Section>

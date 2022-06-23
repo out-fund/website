@@ -22,14 +22,13 @@ export const SimpleNavbar = ({ lang }) => {
   )
 }
 
-// const MenueGroup = ({ title, children }) => {
-//   return (
-//     <MenueGroupWrapper>
-//       <GroupTitle>{title}</GroupTitle>
-//       <LinkGroup>{children}</LinkGroup>
-//     </MenueGroupWrapper>
-//   )
-// }
+const getFundeURL = (inputLang) => {
+  let getFundedURL = links.getFunded.url
+  if (inputLang !== "en" && inputLang !== "es") {
+    getFundedURL = "/get-funded-eu/"
+  }
+  return getFundedURL
+}
 
 const MobileLinks = ({ lang }) => {
   const [mobileMenueIsOpen, setMobileMenueIsOpen] = useState(false)
@@ -61,11 +60,15 @@ const MobileLinks = ({ lang }) => {
     }
   }, [])
 
+  // let getFundedURL = links.getFunded.url
+  // if (lang !== "en" || lang !== "es") {
+  //   getFundedURL = "/get-funded-eu/"
+  // }
   return (
     <MobileLinksWrapper>
       <ButtonWrapper>
         <Button
-          to={links.getFunded.url}
+          to={getFundeURL(lang)}
           variant="primary"
           className="getFunded getFunded-mobile"
           id="cta-get-funded-mobile-navbar-click"
@@ -73,206 +76,100 @@ const MobileLinks = ({ lang }) => {
           {links.getFunded.text[lang]}
         </Button>
 
-        <div ref={mobileButtonRef} style={{ alignSelf: "center" }}>
-          <Menue
-            onClick={(event) => handleMobileMenueClick(event)}
-            isOpen={mobileMenueIsOpen}
-          >
-            <MenueIconSvg />
-          </Menue>
-        </div>
+        {(lang == "en" || lang == "es") && (
+          <div ref={mobileButtonRef} style={{ alignSelf: "center" }}>
+            <Menue
+              onClick={(event) => handleMobileMenueClick(event)}
+              isOpen={mobileMenueIsOpen}
+            >
+              <MenueIconSvg />
+            </Menue>
+          </div>
+        )}
       </ButtonWrapper>
       <MobileDropdownWrapper isOpen={mobileMenueIsOpen} ref={mobileDropdownRef}>
-        <Button to={links.howItWorks.url} variant="navLink">
-          {links.howItWorks.text[lang]}
-        </Button>
-        <Button to={links.aboutUs.url} variant="navLink">
-          {links.aboutUs.text[lang]}
-        </Button>
-        <Button to={links.successStories.url} variant="navLink">
-          {links.successStories.text[lang]}
-        </Button>
-        <Button to={links.faq.url} variant="navLink">
-          {links.faq.text[lang]}
-        </Button>
-        <Button href={links.login.url} variant="navLink">
-          {links.login.text[lang]}
-        </Button>
+        {links.howItWorks.text[lang] && (
+          <Button to={links.howItWorks.url} variant="navLink">
+            {links.howItWorks.text[lang]}
+          </Button>
+        )}
+        {links.aboutUs.text[lang] && (
+          <Button to={links.aboutUs.url} variant="navLink">
+            {links.aboutUs.text[lang]}
+          </Button>
+        )}
+        {links.successStories.text[lang] && (
+          <Button to={links.successStories.url} variant="navLink">
+            {links.successStories.text[lang]}
+          </Button>
+        )}
+        {links.faq.text[lang] && (
+          <Button to={links.faq.url} variant="navLink">
+            {links.faq.text[lang]}
+          </Button>
+        )}
+        {links.login.text[lang] && (
+          <Button href={links.login.url} variant="navLink">
+            {links.login.text[lang]}
+          </Button>
+        )}
       </MobileDropdownWrapper>
     </MobileLinksWrapper>
   )
 }
 
-// const CompanyDropdown = ({ lang, isOpen }) => {
-//   return (
-//     <DesktopDropdownWrappepr isOpen={isOpen}>
-//       <li>
-//         <Button to={links.aboutUs.url} variant="navLink">
-//           {links.aboutUs.text[lang]}
-//         </Button>
-//       </li>
-//       <li>
-//         <Button to={links.careers.url} variant="navLink">
-//           {links.careers.text[lang]}
-//         </Button>
-//       </li>
-//       <li>
-//         <Button to={links.blog.url} variant="navLink">
-//           {links.blog.text[lang]}
-//         </Button>
-//       </li>
-//     </DesktopDropdownWrappepr>
-//   )
-// }
-// const FundingDropdown = ({ lang, isOpen }) => {
-//   return (
-//     <DesktopDropdownWrappepr isOpen={isOpen}>
-//       <li>
-//         <Button to={links.howItWorks.url} variant="navLink">
-//           {links.howItWorks.text[lang]}
-//         </Button>
-//       </li>
-//       <li>
-//         <Button to={links.successStories.url} variant="navLink">
-//           {links.successStories.text[lang]}
-//         </Button>
-//       </li>
-//       <li>
-//         <Button to={links.b2b.url} variant="navLink">
-//           {links.b2b.text[lang]}
-//         </Button>
-//       </li>
-//     </DesktopDropdownWrappepr>
-//   )
-// }
-
 function DesktopLinks({ lang }) {
-  // const [companyIsOpen, setCompanyIsOpen] = useState(false)
-  // const [fundingIsOpen, setFundingIsOpen] = useState(false)
-
-  // const companyRef = useRef()
-  // const fundingRef = useRef()
-
-  // const handleCompanyMouseEnter = (event) => {
-  //   // console.log("test", event)
-  //   setCompanyIsOpen(true)
-  // }
-  // const handleCompanyMouseLeave = (event) => {
-  //   // console.log("test", event)
-  //   setCompanyIsOpen(false)
-  // }
-
-  // const handleCompanyClick = (event) => {
-  //   event.preventDefault()
-  //   setCompanyIsOpen(!companyIsOpen)
-  //   setFundingIsOpen(false)
-  //   // console.log("event", event)
-  // }
-
-  // const handleFundingClick = (event) => {
-  //   event.preventDefault()
-  //   setFundingIsOpen(!fundingIsOpen)
-  //   setCompanyIsOpen(false)
-  // }
-
-  // const handleClickOutside = (event) => {
-  //   if (
-  //     companyRef.current &&
-  //     !companyRef.current.contains(event.target) &&
-  //     fundingRef.current &&
-  //     !fundingRef.current.contains(event.target)
-  //   ) {
-  //     setFundingIsOpen(false)
-  //     setCompanyIsOpen(false)
-  //     // console.log("doc is clicked")
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   document.addEventListener("mousedown", handleClickOutside)
-  //   return () => {
-  //     document.removeEventListener("mousedown", handleClickOutside)
-  //   }
-  // }, [])
-
   return (
     <DesktopLinksWrapper>
-      {/* <li ref={companyRef}>
-        <Button
-          variant="navDropDown"
-          onClick={(event) => handleCompanyClick(event)}
-          // onMouseEnter={(event) => handleCompanyMouseEnter(event)}
-          // onMouseLeave={(event) => handleCompanyMouseLeave(event)}
-          isOpen={companyIsOpen}
-        >
-          {links.company.text[lang]}
-        </Button>
-        <CompanyDropdown lang={lang} isOpen={companyIsOpen} />
-      </li>
-      <li ref={fundingRef}>
-        <Button
-          variant="navDropDown"
-          onClick={(event) => handleFundingClick(event)}
-          isOpen={fundingIsOpen}
-        >
-          {links.funding.text[lang]}
-        </Button>
-        <FundingDropdown lang={lang} isOpen={fundingIsOpen} />
-      </li> */}
-
-      <li>
-        <Button to={links.howItWorks.url} variant="navLink">
-          {links.howItWorks.text[lang]}
-        </Button>
-      </li>
-      <li>
-        <Button to={links.aboutUs.url} variant="navLink">
-          {links.aboutUs.text[lang]}
-        </Button>
-      </li>
-      <li>
-        <Button to={links.successStories.url} variant="navLink">
-          {links.successStories.text[lang]}
-        </Button>
-      </li>
-      <li>
-        <Button to={links.faq.url} variant="navLink">
-          {links.faq.text[lang]}
-        </Button>
-      </li>
-      {/* <li>
-        <Button to={links.partners.url} variant="navLink">
-          {links.partners.text[lang]}
-        </Button>
-      </li>
-      <li>
-        <Button to={links.contactUs.url} variant="navLink">
-          {links.contactUs.text[lang]}
-        </Button>
-      </li> */}
-      <li className="getFunded">
-        <Button
-          to={links.getFunded.url}
-          variant="primary"
-          id="cta-get-funded-navbar-click"
-        >
-          {links.getFunded.text[lang]}
-        </Button>
-      </li>
-      <li>
-        <Button href={links.login.url} variant="navLink">
-          {links.login.text[lang]}
-        </Button>
-      </li>
-      {/* <li>
-        <Button variant="navDropDown">flag</Button>
-        <FlagDropdown />
-      </li> */}
+      {links.howItWorks.text[lang] && (
+        <li>
+          <Button to={links.howItWorks.url} variant="navLink">
+            {links.howItWorks.text[lang]}
+          </Button>
+        </li>
+      )}
+      {links.aboutUs.text[lang] && (
+        <li>
+          <Button to={links.aboutUs.url} variant="navLink">
+            {links.aboutUs.text[lang]}
+          </Button>
+        </li>
+      )}
+      {links.successStories.text[lang] && (
+        <li>
+          <Button to={links.successStories.url} variant="navLink">
+            {links.successStories.text[lang]}
+          </Button>
+        </li>
+      )}
+      {links.faq.text[lang] && (
+        <li>
+          <Button to={links.faq.url} variant="navLink">
+            {links.faq.text[lang]}
+          </Button>
+        </li>
+      )}
+      {links.getFunded.text[lang] && (
+        <li className="getFunded">
+          <Button
+            to={getFundeURL(lang)}
+            variant="primary"
+            id="cta-get-funded-navbar-click"
+          >
+            {links.getFunded.text[lang]}
+          </Button>
+        </li>
+      )}
+      {links.login.text[lang] && (
+        <li>
+          <Button href={links.login.url} variant="navLink">
+            {links.login.text[lang]}
+          </Button>
+        </li>
+      )}
     </DesktopLinksWrapper>
   )
 }
-
-// const tx = "text"
 
 const Navbar = ({ lang }) => {
   return (
@@ -296,18 +193,12 @@ const Nav = styled.nav`
   background-color: #fff;
   position: fixed;
   width: 100%;
-  /* width: calc(100% - 48px); */
-  /* top: 24px; */
   top: 0;
   right: 0;
-  /* right: 24px; */
   left: 0;
-  /* left: 24px; */
   z-index: 100;
-  /* padding: 0 24px; */
   background: rgba(242, 246, 250, 0.9);
   backdrop-filter: blur(20px);
-  /* border-radius: 10px; */
 `
 const LogoWrapper = styled.div`
   height: 100%;

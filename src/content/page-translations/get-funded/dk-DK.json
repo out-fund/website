@@ -1,0 +1,27 @@
+{
+  "language": "dk-DK",
+  "content": {
+    "sideTitle": "Vækstkapital til virksomhedsstiftere som dig",
+    "title": "Opnå finansiering",
+    "description": "Fortæl os om dig og din virksomhed.",
+    "form": {
+      "name": "Navn",
+      "email": "E-mail",
+      "phone": "Telefonnummer",
+      "website": "Firmaets hjemmeside",
+      "select": {
+        "title": "Din gennemsnitlige månedlige indtægt",
+        "default": "Vælg",
+        "options": [
+          "Mindre end kr.70 000",
+          "kr. 70 000 - kr. 350 000",
+          "kr. 350 000 - kr. 500 000",
+          "kr. 500 000 - kr.  5 000 000",
+          "Mere end kr.  5 000 000"
+        ],
+        "values": ["0", "10000", "50000", "100000", "500000"]
+      },
+      "btn": "Kom i gang"
+    }
+  }
+}

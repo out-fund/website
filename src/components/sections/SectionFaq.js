@@ -44,7 +44,7 @@ const SectionFaq = ({ data }) => {
           <AccordionWrapper>
             <Accordions data={data.questions} />
           </AccordionWrapper>
-          {data.btn && (
+          {data.btn.text && (
             <BtnWrapper>
               <Button to={data.btn.url} variant="secondary">
                 {data.btn.text}
