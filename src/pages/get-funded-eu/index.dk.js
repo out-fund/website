@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 // import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-import LangLayout from "./../../layouts/au"
+import LangLayout from "./../../layouts/dk"
 
 import LogoWhite from "./../../images/svg/Outfund-logo-white.svg"
 import LogoDark from "./../../images/svg/Outfund-logo.svg"
@@ -19,10 +19,7 @@ const GetFunded = (props) => {
 
   return (
     <LangLayout noNavbar pt noFooter>
-      <SeoComponent
-        title="Get funded"
-        description="We've funded 1000s of brands like yours"
-      />
+      <SeoComponent title={data.title} description={data.description} />
       <Wrapper>
         <ContentWrapper>
           <LeftWrapper>
