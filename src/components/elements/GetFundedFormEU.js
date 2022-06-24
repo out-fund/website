@@ -24,6 +24,7 @@ const GetFundedForm = ({ data, language }) => {
           phone: "",
           website: "",
           amr: "",
+          country: language,
         }}
         onSubmit={(values, actions) => {
           fetch(`${language ? "/" + language + "/" : "/"}`, {
