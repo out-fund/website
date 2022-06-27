@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 // import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-import LangLayout from "./../../layouts/dk"
+import LangLayout from "./../../layouts/fr"
 
 import LogoWhite from "./../../images/svg/Outfund-logo-white.svg"
 import LogoDark from "./../../images/svg/Outfund-logo.svg"
@@ -53,7 +53,7 @@ const GetFunded = (props) => {
                 <Title>{data.title}</Title>
                 <Description>{data.description}</Description>
               </TextWrapper>
-              <GetFundedFormEU data={data} language="dk" currency="DKK" />
+              <GetFundedFormEU data={data} language="fr" currency="EUR" />
             </RightContentWrapper>
           </RightWrapper>
         </ContentWrapper>
@@ -198,8 +198,8 @@ const ContentWrapper = styled.div`
 `
 
 export const query = graphql`
-  query dkGetFundedPage {
-    getFundedJson(language: { regex: "/dk-DK/" }) {
+  query frGetFundedPage {
+    getFundedJson(language: { regex: "/fr-FR/" }) {
       content {
         sideTitle
         title

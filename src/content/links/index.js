@@ -91,6 +91,7 @@ const links = {
       en: "Get funded",
       es: "Solicitar financiación",
       dk: "Opnå finansiering",
+      fr: "Obtenir des fonds",
     },
     url: "/get-funded/",
   },

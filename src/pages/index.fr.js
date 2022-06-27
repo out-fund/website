@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import LangLayout from "./../layouts/dk"
+import LangLayout from "./../layouts/fr"
 
 import {
   Main,
@@ -38,8 +38,8 @@ const HomePage = (props) => {
 export default HomePage
 
 export const query = graphql`
-  query dkHomePage {
-    homepageJson(language: { regex: "/dk-DK/" }) {
+  query frHomePage {
+    homepageJson(language: { regex: "/fr-FR/" }) {
       seo {
         title
         description
@@ -194,7 +194,7 @@ export const query = graphql`
         title
       }
     }
-    trustJson(language: { regex: "/dk-DK/" }) {
+    trustJson(language: { regex: "/fr-FR/" }) {
       title
       description
       blocks {

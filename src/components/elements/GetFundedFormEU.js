@@ -14,7 +14,7 @@ const encode = (data) => {
     .join("&")
 }
 
-const GetFundedForm = ({ data, language }) => {
+const GetFundedForm = ({ data, language, currency }) => {
   return (
     <FormWrapper>
       <Formik
@@ -25,6 +25,7 @@ const GetFundedForm = ({ data, language }) => {
           website: "",
           amr: "",
           country: language,
+          currency: currency,
         }}
         onSubmit={(values, actions) => {
           fetch(`${language ? "/" + language + "/" : "/"}`, {
@@ -88,17 +89,6 @@ const GetFundedForm = ({ data, language }) => {
               <label>
                 Don't fill this out if you're human:
                 <input name="bot-field" tabIndex="-1" />
-              </label>
-            </VisuallyHidden>
-            <VisuallyHidden>
-              <label htmlFor="country">
-                Country
-                <input
-                  tabIndex="-1"
-                  id="country"
-                  name="country"
-                  value={language}
-                />
               </label>
             </VisuallyHidden>
             <F.Group>
@@ -177,6 +167,32 @@ const GetFundedForm = ({ data, language }) => {
                 </F.Select>
               </SelectWrapper>
             </F.Group>
+            <VisuallyHidden>
+              <F.Group>
+                <label htmlFor="country">
+                  Country
+                  <input
+                    tabIndex="-1"
+                    id="country"
+                    name="country"
+                    value={language}
+                  />
+                </label>
+              </F.Group>
+            </VisuallyHidden>
+            <VisuallyHidden>
+              <F.Group>
+                <label htmlFor="currency">
+                  Currency
+                  <input
+                    tabIndex="-1"
+                    id="currency"
+                    name="currency"
+                    value={currency}
+                  />
+                </label>
+              </F.Group>
+            </VisuallyHidden>
             <F.Group>
               <Button
                 disabled={isSubmitting || !isValid || !dirty}
