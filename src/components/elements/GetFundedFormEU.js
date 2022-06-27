@@ -173,6 +173,7 @@ const GetFundedForm = ({ data, language, currency }) => {
                     tabIndex="-1"
                     id="country"
                     name="country"
+                    readOnly
                     value={language}
                   />
                 </label>
@@ -186,6 +187,7 @@ const GetFundedForm = ({ data, language, currency }) => {
                     tabIndex="-1"
                     id="currency"
                     name="currency"
+                    readOnly
                     value={currency}
                   />
                 </label>

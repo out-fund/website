@@ -92,6 +92,7 @@ const links = {
       es: "Solicitar financiación",
       dk: "Opnå finansiering",
       fr: "Obtenir des fonds",
+      ro: "Obține finanțare",
     },
     url: "/get-funded/",
   },

@@ -1,0 +1,27 @@
+{
+  "language": "ro-RO",
+  "content": {
+    "sideTitle": "Capital de creștere pentru fondatori că tine",
+    "title": "Obține finanțare",
+    "description": "Povestește-ne despre tine și despre compania ta.",
+    "form": {
+      "name": "Nume",
+      "email": "E-mail",
+      "phone": "Număr de telefon",
+      "website": "Site-ul companiei",
+      "select": {
+        "title": "Venitul mediu lunar",
+        "default": "Selectați",
+        "options": [
+          "Mai putin de 50 000 lei",
+          "50 000 lei - 250 000 lei",
+          "250 000 lei - 500 000 lei",
+          "500 000 lei - 2 500 000 lei",
+          "Mai mult de 2 500 000 lei"
+        ],
+        "values": ["0", "50000", "250000", "500000", "2500000"]
+      },
+      "btn": "Începe"
+    }
+  }
+}
