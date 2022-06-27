@@ -11,13 +11,13 @@ const ThankYou = () => {
   return (
     <LangLayout simpleNavbar>
       <SeoComponent
-        title="Tak for din indsendelse"
-        description="Vi vender snart tilbage til dig."
+        title="Merci pour votre soumission"
+        description="Nous reviendrons vers vous bientôt."
       />
       <Wrapper>
         <ContentWrapper>
-          <Title>Tak for din indsendelse</Title>
-          <Description>Vi vender snart tilbage til dig.</Description>
+          <Title>Merci pour votre soumission</Title>
+          <Description>Nous reviendrons vers vous bientôt.</Description>
         </ContentWrapper>
       </Wrapper>
     </LangLayout>

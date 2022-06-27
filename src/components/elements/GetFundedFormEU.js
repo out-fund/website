@@ -85,12 +85,6 @@ const GetFundedForm = ({ data, language, currency }) => {
           dirty,
         }) => (
           <F.FormikForm name={`get-funded-eu`}>
-            <VisuallyHidden>
-              <label>
-                Don't fill this out if you're human:
-                <input name="bot-field" tabIndex="-1" />
-              </label>
-            </VisuallyHidden>
             <F.Group>
               <VisuallyHidden>
                 <label htmlFor="name">{data.form.name}</label>
@@ -98,6 +92,7 @@ const GetFundedForm = ({ data, language, currency }) => {
               <F.FormikField
                 $valid={errors.name && touched.name}
                 name="name"
+                id="name"
                 placeholder={data.form.name}
               />
               <F.ErrorWrapper>
@@ -111,6 +106,7 @@ const GetFundedForm = ({ data, language, currency }) => {
               <F.FormikField
                 $valid={errors.email && touched.email}
                 name="email"
+                id="email"
                 placeholder={data.form.email}
               />
               <F.ErrorWrapper>
@@ -119,11 +115,12 @@ const GetFundedForm = ({ data, language, currency }) => {
             </F.Group>
             <F.Group>
               <VisuallyHidden>
-                <label htmlFor="message">{data.form.phone}</label>
+                <label htmlFor="phone">{data.form.phone}</label>
               </VisuallyHidden>
               <F.FormikField
                 $valid={errors.phone && touched.phone}
                 name="phone"
+                id="phone"
                 placeholder={data.form.phone}
               />
               <F.ErrorWrapper>
@@ -132,11 +129,12 @@ const GetFundedForm = ({ data, language, currency }) => {
             </F.Group>
             <F.Group>
               <VisuallyHidden>
-                <label htmlFor="message">{data.form.website}</label>
+                <label htmlFor="website">{data.form.website}</label>
               </VisuallyHidden>
               <F.FormikField
                 $valid={errors.website && touched.website}
                 name="website"
+                id="website"
                 placeholder={data.form.website}
               />
               <F.ErrorWrapper>
@@ -190,6 +188,14 @@ const GetFundedForm = ({ data, language, currency }) => {
                     name="currency"
                     value={currency}
                   />
+                </label>
+              </F.Group>
+            </VisuallyHidden>
+            <VisuallyHidden>
+              <F.Group>
+                <label>
+                  Don't fill this out if you're human:
+                  <input name="bot-field" tabIndex="-1" />
                 </label>
               </F.Group>
             </VisuallyHidden>
