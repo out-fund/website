@@ -93,6 +93,7 @@ const links = {
       dk: "Opnå finansiering",
       fr: "Obtenir des fonds",
       ro: "Obține finanțare",
+      de: "Finanziert werden",
     },
     url: "/get-funded/",
   },

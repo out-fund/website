@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import LangLayout from "../../layouts/fr"
+import LangLayout from "../../layouts/ro"
 
 import { SeoComponent } from "../../components"
 import T from "../../styles/new/typography"

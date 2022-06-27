@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import LangLayout from "../../layouts/dk"
+import LangLayout from "../../layouts/de"
 
 import { SeoComponent } from "../../components"
 import T from "../../styles/new/typography"
@@ -11,13 +11,13 @@ const ThankYou = () => {
   return (
     <LangLayout simpleNavbar>
       <SeoComponent
-        title="Tak for din indsendelse"
-        description="Vi vender snart tilbage til dig."
+        title="Vielen Dank für Ihre Einreichung"
+        description="Wir werden uns bald bei Ihnen melden."
       />
       <Wrapper>
         <ContentWrapper>
-          <Title>Tak for din indsendelse</Title>
-          <Description>Vi vender snart tilbage til dig.</Description>
+          <Title>Vielen Dank für Ihre Einreichung</Title>
+          <Description>Wir werden uns bald bei Ihnen melden.</Description>
         </ContentWrapper>
       </Wrapper>
     </LangLayout>

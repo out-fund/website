@@ -1,14 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import LangLayout from "./../layouts/au"
+import LangLayout from "./../layouts/de"
 
 import {
   Main,
   SectionWeFunded,
   SectionWeAreInvesting,
   SectionSupercharging,
-  SectionFindOut,
   SectionFaq,
   SectionAboutUs,
   SectionRegulated,
@@ -29,7 +28,6 @@ const HomePage = (props) => {
         <SectionWeFunded data={data.weFunded} />
         <SectionWeAreInvesting data={data.weInvesting} />
         <SectionSupercharging data={data.startSupercharging} />
-        {/* <SectionFindOut data={props.data.homepageJson.findOut} /> */}
         <SectionFaq data={props.data.homepageJson.faq} />
         <SectionAboutUs data={props.data.homepageJson.aboutUs} />
         <SectionRegulated data={props.data.trustJson} />
@@ -77,24 +75,7 @@ export const query = graphql`
         btnUrl
         title
       }
-      findOut {
-        calculator {
-          btn {
-            text
-            url
-          }
-          range
-          select {
-            default
-            dropdown
-            title
-          }
-          title
-        }
 
-        description
-        title
-      }
       faq {
         btn {
           text
@@ -213,7 +194,7 @@ export const query = graphql`
         title
       }
     }
-    trustJson(language: { regex: "/en-AU/" }) {
+    trustJson(language: { regex: "/dk-DK/" }) {
       title
       description
       blocks {
