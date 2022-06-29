@@ -1,0 +1,27 @@
+{
+  "language": "pt-PT",
+  "content": {
+    "sideTitle": "Capital para que os fundadores de empresas como a sua possam crescer",
+    "title": "Obtenha financiamento",
+    "description": "Conte-nos sobre você e sua empresa.",
+    "form": {
+      "name": "Nome",
+      "email": "E-mail",
+      "phone": "Número de telefone",
+      "website": "Site de negócios",
+      "select": {
+        "title": "Receita Mensal Média",
+        "default": "Selecionar",
+        "options": [
+          "Menos do que 10 000€",
+          "10k € - 50k €",
+          "50k € - 100k €",
+          "100k € - 500k €",
+          "Mais do que €"
+        ],
+        "values": ["0", "10000", "50000", "100000", "500000"]
+      },
+      "btn": "Dê os primeiros passos"
+    }
+  }
+}

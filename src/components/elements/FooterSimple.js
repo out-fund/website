@@ -1,10 +1,9 @@
-import React, { useEffect, useRef, useState } from "react"
-import styled, { css } from "styled-components"
+import React from "react"
+import styled from "styled-components"
 
-import { Button, Link } from "./../../components"
+import { Link } from "./../../components"
 import LogoSvg from "./../../images//svg/Outfund-logo-white.svg"
 import { theme } from "./../../styles/new/theme"
-import links from "./../../content/links"
 
 import T from "./../../styles/new/typography"
 import { useLangProvider } from "./../../utils/LangProvider"
@@ -31,7 +30,6 @@ const Footer = ({ lang }) => {
             )}
           </LogoWrapper>
         </Top>
-
         <Bottom>
           {langKey !== "es" && (
             <T.BodySmaller>
@@ -39,6 +37,13 @@ const Footer = ({ lang }) => {
             </T.BodySmaller>
           )}
         </Bottom>
+        <Statement>
+          <T.BodySmall>
+            Outfund is the trading name of MTL Financial LTD, which is a Lender.
+            MTL Financial LTD is also authorised and regulated by the Financial
+            Conduct Authority (FCA) as an e-money institution.
+          </T.BodySmall>
+        </Statement>
       </ContentWrapper>
     </Wrapper>
   )
@@ -108,4 +113,19 @@ const LogoWrapper = styled.div`
 const Wrapper = styled.div`
   background-color: #0a213b;
   padding: 0 40px;
+`
+
+const Statement = styled.div`
+  background-color: #183454;
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-top: 16px;
+
+  ${theme.above.t.l} {
+    /* margin-top: 80px;
+    margin-bottom: 48px; */
+  }
+  ${T.BodySmall} {
+    color: #aad2ff;
+  }
 `

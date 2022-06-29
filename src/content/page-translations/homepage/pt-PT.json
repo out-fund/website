@@ -1,0 +1,267 @@
+{
+  "language": "pt-PT",
+  "seo": {
+    "title": "Capital para que os fundadores de empresas como a sua possam crescer",
+    "description": " Financiamento de  excelência, entre 10 mil e 2 milhões de GBP, para as suas necessidades de marketing e inventário."
+  },
+  "hero": {
+    "title": "Capital para que os fundadores de empresas como a sua possam crescer",
+    "description": " Financiamento de  excelência, entre 10 mil e 2 milhões de GBP, para as suas necessidades de marketing e inventário.",
+    "primaryBtn": {
+      "text": "Obtenha financiamento",
+      "url": "/get-funded-eu/"
+    },
+    "secondaryBtn": {
+      "text": "",
+      "url": ""
+    },
+    "image": {
+      "src": "./../../../images/Outfund-hero-UK.png",
+      "alt": "Photo of two founders"
+    }
+  },
+  "weFunded": {
+    "title": "Financiamos marcas como a sua",
+    "description": "Queremos que as empresas que estão a crescer acelerem o seu percurso de sucesso. Ajudamo-lo a transformar as suas ideias em realidade com capital rápido, justo e mais acessível.",
+    "cards": {
+      "feel": {
+        "tag": {
+          "text": "Financiámos mais de 400 000 £",
+          "color": "#FFF4E9"
+        },
+        "company": "Feel",
+        "logo": "<svg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 55 30'><path fill-rule='evenodd' clip-rule='evenodd' d='M0 0v30h5.28V17.648h5.318a11.16 11.16 0 0 0-.247 2.36c0 1.85.447 3.541 1.342 5.075a9.61 9.61 0 0 0 3.694 3.608c1.566.872 3.297 1.308 5.194 1.308 1.645 0 3.186-.35 4.62-1.05 1.436-.701 2.588-1.666 3.457-2.895l-3.397-2.716a4.991 4.991 0 0 1-2.074 1.606 6.715 6.715 0 0 1-2.646.535c-1.396 0-2.564-.363-3.506-1.09-.94-.727-1.556-1.699-1.846-2.915h11.6a9.706 9.706 0 0 0 1.245 3.608 9.61 9.61 0 0 0 3.693 3.609c1.567.872 3.298 1.308 5.194 1.308 1.646 0 3.186-.35 4.621-1.05 1.436-.701 2.588-1.666 3.456-2.895l-3.396-2.716a4.992 4.992 0 0 1-2.074 1.606 6.716 6.716 0 0 1-2.646.535c-1.396 0-2.564-.363-3.506-1.09-.941-.727-1.556-1.699-1.846-2.915h13.139v1.204c0 2.343.59 4.154 1.822 5.432 1.232 1.278 2.92 1.89 5.09 1.89.804 0 1.768-.133 2.893-.4v-4.579c-.321.053-.777.053-1.313.053-1.259 0-2.116-.293-2.571-.932-.456-.612-.67-1.65-.67-3.088V0h-5.251v14.187a9.595 9.595 0 0 0-3.047-2.982c-1.488-.925-3.154-1.388-4.997-1.388-1.488 0-2.86.275-4.118.823-1.257.549-2.307 1.289-3.15 2.22a9.802 9.802 0 0 0-1.018 1.343 9.595 9.595 0 0 0-3.058-2.998c-1.488-.925-3.154-1.388-4.997-1.388-1.488 0-2.86.275-4.117.823-1.258.549-2.308 1.289-3.15 2.22a9.8 9.8 0 0 0-.947 1.23v-1.548H5.28V5.125h13.241V0H0Zm15.367 17.807h9.578c-.145-.978-.665-1.797-1.56-2.458-.895-.66-1.942-.991-3.14-.991-1.146 0-2.153.314-3.022.941-.869.628-1.487 1.464-1.856 2.508Zm25.919 0h-9.578c.369-1.044.987-1.88 1.856-2.508.87-.627 1.876-.941 3.022-.941 1.198 0 2.245.33 3.14.99.895.662 1.415 1.481 1.56 2.46Z' fill='#111'/></svg>",
+        "quote": {
+          "title": "Investi em crescimento repetível e quadrupliquei as subscrições."
+        },
+        "image": {
+          "src": "./../../../images/Boris-Cheryl.png",
+          "alt": "Boris Hodakel, fundador da Feel"
+        },
+        "btn": {
+          "text": "",
+          "url": ""
+        }
+      },
+      "lemonadeDolls": {
+        "tag": {
+          "text": "Financiámos 50 000 £",
+          "color": "#F6C34E"
+        },
+        "company": "Lemonade Dolls",
+        "logo": "<svg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 189 16'><path d='M0 .277h3.848v12.567h3.567v2.934H0V.277Zm15.251 12.567h3.877v2.934h-7.725V.277h7.612v2.906h-3.764v3.045h3.174v2.935h-3.174v3.681ZM31.15 4.927l.983-4.65h5.337v15.502h-3.764V9.91c0-1.938.084-3.266.197-5.232-.338 1.938-.562 3.267-.956 5.232l-1.263 5.868H28.79L27.497 9.91c-.393-1.965-.617-3.266-.954-5.204a64.67 64.67 0 0 1 .196 5.232v5.84h-3.174V.277h5.421l.955 4.65c.225 1.135.478 2.602.618 3.876.112-1.274.365-2.768.59-3.876Zm10.926-.443c0-3.045 1.77-4.484 5-4.484s4.97 1.467 4.97 4.484v7.032c0 3.045-1.74 4.484-4.97 4.484-3.23 0-5-1.467-5-4.484V4.484Zm5 8.637c.786 0 1.123-.387 1.123-1.135V4.042c0-.748-.337-1.135-1.123-1.135-.787 0-1.152.387-1.152 1.135v7.972c.028.747.365 1.107 1.151 1.107ZM67.352.277v15.502h-4.69l-1.994-6.533c-.31-1.08-.702-2.575-.983-3.599.084 1.024.168 2.547.168 3.599v6.532h-3.202V.277h5.028l1.657 5.26c.337 1.107.702 2.49.955 3.598-.056-1.08-.168-2.574-.168-3.626V.277h3.23ZM78.251 13.73h-2.949l-.393 2.048H71.37L74.432.277h5l3.089 15.502h-3.876l-.394-2.049Zm-2.415-2.768h1.91l-.197-1.218a97.9 97.9 0 0 1-.73-5.536c-.225 2.214-.534 4.124-.758 5.536l-.225 1.218ZM87.689.277h4.887c2.472 0 5.028.72 5.028 4.152v7.17c0 3.46-2.556 4.152-5.028 4.152h-4.887V.277Zm3.876 2.906v9.661h.899c.927 0 1.292-.276 1.292-1.107V4.291c0-.83-.394-1.108-1.292-1.108h-.9Zm15.616 9.661h3.877v2.934h-7.725V.277h7.612v2.906h-3.764v3.045h3.174v2.935h-3.174v3.681ZM123.978.277h4.887c2.472 0 5.028.72 5.028 4.152v7.17c0 3.46-2.556 4.152-5.028 4.152h-4.887V.277Zm3.848 2.934v9.633h.898c.927 0 1.292-.276 1.292-1.107V4.291c0-.83-.393-1.108-1.292-1.108l-.898.028Zm11.487 1.273c0-3.045 1.742-4.484 5-4.484 3.23 0 4.971 1.467 4.971 4.484v7.032c0 3.045-1.741 4.484-4.971 4.484s-5-1.44-5-4.457V4.484Zm5 8.637c.786 0 1.123-.387 1.123-1.135V4.042c0-.748-.337-1.135-1.123-1.135s-1.152.387-1.152 1.135v7.972c0 .747.366 1.107 1.152 1.107ZM154.93.277h3.848v12.567h3.567v2.934h-7.415V.277Zm12.415 0h3.848v12.567h3.567v2.934h-7.415V.277Zm15.588 11.737c0 .747.309 1.135 1.096 1.135.786 0 1.095-.388 1.095-1.135v-.36c0-2.907-5.73-2.215-5.73-7.474v-.083c0-2.63 1.545-4.097 4.803-4.097C187.343 0 189 1.467 189 4.484v.886h-3.567V4.014c0-.748-.309-1.135-1.067-1.135-.815 0-1.096.387-1.096 1.135v.138c0 2.88 5.73 2.215 5.73 7.474v.333c0 2.602-1.573 4.041-4.831 4.041-3.146 0-4.775-1.467-4.775-4.484V10.27h3.539v1.744Z' fill='#fff'/></svg>",
+        "image": {
+          "src": "./../../../images/LemonadeDolls.jpg",
+          "alt": "Lemonade dolls models wearing underwear"
+        },
+        "btn": {
+          "text": "",
+          "url": ""
+        }
+      }
+    }
+  },
+  "weInvesting": {
+    "title": "Convertemos fluxos de receita futuros em capital imediato",
+    "description": " Fornecemos o capital de que precisa, quando precisa. Sem perdas de valor, sem garantias pessoais, sem taxas de juro. É financiamento, mas mais justo. <br/><br/> Basta associar os seus fornecedores de pagamento digital à Outfund e, no prazo de 48 horas, geraremos ofertas personalizadas de financiamento, calculadas de acordo com a sua receita. Invista no seu crescimento e pague à medida que vai vendendo.",
+    "image": {
+      "src": "./../../../images/PaymentCounterPhone.jpg",
+      "alt": "Payment made ont the phone"
+    },
+    "btn": {
+      "text": "",
+      "url": ""
+    }
+  },
+  "startSupercharging": {
+    "title": "Comece a exponenciar o seu crescimento",
+    "btn": {
+      "text": "Dê os primeiros passos",
+      "url": "/get-funded-eu/"
+    },
+    "card": {
+      "company": "Onto",
+      "quote": {
+        "title": "Duplicámos o nosso tamanho no último trimestre e deveremos duplicá-lo novamente neste trimestre",
+        "by": "Rob Jolly, fundador da ONTO"
+      },
+      "tag": {
+        "text": "Financiámos 340 000 £",
+        "color": "#72B4F0"
+      },
+
+      "image": {
+        "src": "./../../../images/Onto.jpg",
+        "alt": "ONTO's customer"
+      },
+      "logo": "<svg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 98 24'><path d='M26.352.646v22.396h6.755v-9.805l14.478 10.756V1.597h-6.757v9.608L26.352.646Z' fill='#fff'/><path fill-rule='evenodd' clip-rule='evenodd' d='M72.77 12.32c0-6.27 5.278-11.08 12.264-11.08 6.985 0 12.263 4.81 12.263 11.08 0 6.27-5.278 11.08-12.263 11.08-6.986 0-12.265-4.81-12.265-11.08Zm6.952-.001a5.311 5.311 0 1 0 10.623 0 5.31 5.31 0 0 0-5.311-5.312 5.31 5.31 0 0 0-5.312 5.312Z' fill='#fff'/><path d='M49.754 1.598h22.75V7.76h-7.898v15.281h-6.954V7.761h-7.898V1.598Z' fill='#fff'/><path fill-rule='evenodd' clip-rule='evenodd' d='M0 12.32C0 6.05 5.28 1.24 12.264 1.24c6.985 0 12.265 4.81 12.265 11.08 0 6.27-5.28 11.08-12.265 11.08S0 18.59 0 12.32Zm6.953-.001a5.311 5.311 0 1 0 10.623 0 5.31 5.31 0 0 0-5.312-5.312 5.31 5.31 0 0 0-5.311 5.312Z' fill='#fff'/></svg>"
+    }
+  },
+  "findOut": {
+    "title": "Find ud af hvor meget du kan få",
+    "description": "Finansieringstilbud er baserede på din virksomheds månedlige indtægter. Få et hurtigt overblik over dine muligheder, ved at benytte dig af vores nemme og intuitive lommeregner",
+    "calculator": {
+      "title": "Din gennemsnitlige månedlige indtægt range",
+      "range": [
+        "Mindre end kr.70 000",
+        "kr. 70 000",
+        "kr. 140 000",
+        "kr. 350 000",
+        "kr. 500 000",
+        "kr. 700 000",
+        "kr. 1 400 000",
+        "kr. 3 500 000",
+        "kr.  5 000 000",
+        "kr. 7 000 000",
+        "Mere end kr. 7 000 000"
+      ],
+      "select": {
+        "title": "Du har brug for finansering til",
+        "default": "Vælg",
+        "dropdown": ["Beholdning", "Marketing", "Noget andet"]
+      },
+      "btn": {
+        "text": "Se dine muligheder",
+        "url": "/eligibility/"
+      }
+    }
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "questions": [
+      {
+        "question": " Quanto financiamento oferecem?",
+        "answer": "Podemos disponibilizar entre 10 000 £ e 2 000 000 £ de cada vez."
+      },
+      {
+        "question": "Como é que a minha oferta é calculada?",
+        "answer": "A Outfund liga-se de forma segura às suas plataformas bancárias, de pagamento e de contabilidade. Recorrendo a modelos preditivos, avaliamos as principais métricas da sua receita, o desempenho da sua publicidade e outros dados externos para assim criar ofertas de financiamento personalizadas. <br/><br/> O nosso financiamento é calculado de acordo com o seu desempenho. Não ficamos com nenhuma participação, o que significa que nem a sua empresa nem os investidores perderão valor real. Em vez disso, o financiamento é pago através de uma simples partilha de receitas."
+      },
+      {
+        "question": "Quanto tempo demora todo o processo?",
+        "answer": "Todo o processo (candidatura, oferta, aprovação, envio de fundos) pode ser concluído em menos de 48 horas."
+      },
+      {
+        "question": " Como me candidato?",
+        "answer": "Pode candidatar-se, em apenas alguns minutos, aqui. Terá de ser um dos diretores da empresa para a qual está a apresentar a candidatura. <br/><br/> Terá de associar a sua conta bancária comercial, o seu processador de pagamentos e a contabilidade financeira da sua empresa. Esses dados permitir-nos-ão construir a sua oferta de financiamento."
+      }
+    ],
+    "btn": {
+      "text": "",
+      "url": ""
+    }
+  },
+  "aboutUs": {
+    "title": "Sobre nós",
+    "description": "A Outfund aposta em empresas em crescimento. A nossa equipa reúne fundadores de empresas, programadores, consultores e pessoas apaixonadas por café. Somos rápidos e procuramos ter impacto em tudo o que fazemos. Conheça-nos melhor ainda hoje.",
+    "teamImages": [
+      {
+        "src": "./../../../images/team/Outfund-team-Abanoub.jpg",
+        "name": "Abanoub"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Adam.jpg",
+        "name": "Adam"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Alan.jpg",
+        "name": "Alan"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Alejandro.jpg",
+        "name": "Alejandro"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Alex.jpg",
+        "name": "Alex"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Alexandra.jpg",
+        "name": "Alexandra"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Alexi.jpg",
+        "name": "Alexi"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Andrew.jpg",
+        "name": "Andrew"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Brad.jpg",
+        "name": "Brad"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Emmeline.jpg",
+        "name": "Emmeline"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Ian.jpg",
+        "name": "Ian"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Jack-R.jpg",
+        "name": "Jack"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Jack.jpg",
+        "name": "Jack"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Jackson.jpg",
+        "name": "Jackson"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Jake.jpg",
+        "name": "Jake"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-James.jpg",
+        "name": "James"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Jolanda.jpg",
+        "name": "Jolanda"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Rob.jpg",
+        "name": "Rob"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Senam.jpg",
+        "name": "Senam"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Stjepan.jpg",
+        "name": "Steven"
+      },
+      {
+        "src": "./../../../images/team/Outfund-team-Thomas.jpg",
+        "name": "Thomas"
+      }
+    ],
+    "stats": [
+      {
+        "stat": "200 milhões de GBP",
+        "text": "Para investir em 2022"
+      },
+      { "stat": "10", "text": "Países em que estamos presentes" },
+      { "stat": "Mais de 75 pessoas", "text": "Uma equipa em crescimento" },
+      {
+        "stat": "37 milhões de GBP",
+        "text": "Angariados até hoje"
+      }
+    ],
+    "buttons": {
+      "primary": {
+        "text": "",
+        "url": ""
+      },
+
+      "secondary": {
+        "text": "",
+        "url": ""
+      }
+    }
+  }
+}
