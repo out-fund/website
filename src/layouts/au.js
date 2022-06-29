@@ -10,7 +10,7 @@ import { LangProvider } from "./../utils/LangProvider"
 
 const AU = ({ children, simpleNavbar, pt, noNavbar, noFooter }) => {
   useEffect(() => {
-    Cookies.set("language-get-funded", "au")
+    Cookies.set("languageGetFunded", "au")
   }, [])
 
   return (
