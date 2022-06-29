@@ -53,7 +53,7 @@ const GetFunded = (props) => {
                 <Title>{data.title}</Title>
                 <Description>{data.description}</Description>
               </TextWrapper>
-              <GetFundedFormEU data={data} language="cs" currency="CZK" />
+              <GetFundedFormEU data={data} language="cz" currency="CZK" />
             </RightContentWrapper>
           </RightWrapper>
         </ContentWrapper>

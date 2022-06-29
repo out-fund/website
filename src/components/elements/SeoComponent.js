@@ -38,6 +38,50 @@ const SeoComponent = ({ title, description, image, article }) => {
     htmlLang = "en-US"
     countryName = "US"
   }
+  if (langKey === "de") {
+    htmlLang = "de-DE"
+    countryName = "DE"
+  }
+  if (langKey === "cz") {
+    htmlLang = "cs-CZ"
+    countryName = "CZ"
+  }
+  if (langKey === "dk") {
+    htmlLang = "dk-DK"
+    countryName = "DK"
+  }
+  if (langKey === "fr") {
+    htmlLang = "fr-FR"
+    countryName = "FR"
+  }
+  if (langKey === "hu") {
+    htmlLang = "hu-HU"
+    countryName = "HU"
+  }
+  if (langKey === "it") {
+    htmlLang = "it-IT"
+    countryName = "IT"
+  }
+  if (langKey === "nl") {
+    htmlLang = "nl-NL"
+    countryName = "NL"
+  }
+  if (langKey === "pl") {
+    htmlLang = "pl-PL"
+    countryName = "PL"
+  }
+  if (langKey === "pt") {
+    htmlLang = "pt-PT"
+    countryName = "PT"
+  }
+  if (langKey === "ro") {
+    htmlLang = "ro-RO"
+    countryName = "RO"
+  }
+  if (langKey === "se") {
+    htmlLang = "sv-SE"
+    countryName = "SE"
+  }
 
   let hreflangPathname
   if (langKey === "en") {
