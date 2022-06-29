@@ -1,0 +1,27 @@
+{
+  "language": "hu-HU",
+  "content": {
+    "sideTitle": "Növekedési tőke az Önhöz hasonló alapítóknak",
+    "title": "Tegyen szert finanszírozásra",
+    "description": "Meséljen Önről és cégéről.",
+    "form": {
+      "name": "Név",
+      "email": "Email",
+      "phone": "Telefonszám",
+      "website": "Cég honlapja",
+      "select": {
+        "title": "Átlagos havi bevétel",
+        "default": "Válassza ki",
+        "options": [
+          "Kevesebb mint Ft 4 500 000",
+          "Ft 4 500 000 - Ft 22 500 000",
+          "Ft 22 500 000 - Ft 45 000 000",
+          "Ft 45 000 000 - Ft 225 000 000",
+          "Több mint Ft 225 000 000"
+        ],
+        "values": ["0", "4500000", "22500000", "45000000", "225000000"]
+      },
+      "btn": "Lásson hozzá"
+    }
+  }
+}
