@@ -10,7 +10,7 @@ import { LangProvider } from "./../utils/LangProvider"
 
 const EN = ({ children, simpleNavbar, pt, noNavbar, noFooter }) => {
   useEffect(() => {
-    Cookies.set("language-get-funded", "en")
+    Cookies.set("languageGetFunded", "en")
   }, [])
 
   return (
