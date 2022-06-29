@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import GlobalLayout from "./../layouts/GlobalLayout"
 import { Navbar, Footer, NewsBar } from "./../components"
 import { SimpleNavbar } from "./../components/elements/Navbar"
@@ -8,6 +8,10 @@ import "./../styles/new/typography/font.css"
 import { LangProvider } from "./../utils/LangProvider"
 
 const EN = ({ children, simpleNavbar, pt, noNavbar, noFooter }) => {
+  useEffect(() => {
+    sessionStorage.setItem("language-get-funded", "en")
+  }, [])
+
   return (
     <GlobalLayout pt={pt}>
       {!noNavbar && (

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { graphql } from "gatsby"
 
 import LangLayout from "./../layouts/es"
@@ -20,10 +20,6 @@ const HomePage = (props) => {
   const {
     data: { homepageJson: data },
   } = props
-
-  useEffect(() => {
-    sessionStorage.setItem("language-get-funded", "es")
-  }, [])
 
   return (
     <LangLayout>
