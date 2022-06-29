@@ -2,6 +2,7 @@ import React, { useEffect } from "react"
 import GlobalLayout from "./../layouts/GlobalLayout"
 import { Navbar, Footer, NewsBar } from "./../components"
 import { SimpleNavbar } from "./../components/elements/Navbar"
+import Cookies from "js-cookie"
 
 import "./../styles/new/typography/font.css"
 
@@ -9,7 +10,7 @@ import { LangProvider } from "./../utils/LangProvider"
 
 const EN = ({ children, simpleNavbar, pt, noNavbar, noFooter }) => {
   useEffect(() => {
-    sessionStorage.setItem("language-get-funded", "en")
+    Cookies.set("language-get-funded", "en")
   }, [])
 
   return (
