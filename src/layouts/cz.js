@@ -7,7 +7,7 @@ import "./../styles/new/typography/font.css"
 
 import { LangProvider } from "./../utils/LangProvider"
 
-const CS = ({ children, simpleNavbar, pt, noNavbar, noFooter }) => {
+const CZ = ({ children, simpleNavbar, pt, noNavbar, noFooter }) => {
   return (
     <GlobalLayout pt={pt}>
       {!noNavbar && (
@@ -18,14 +18,14 @@ const CS = ({ children, simpleNavbar, pt, noNavbar, noFooter }) => {
         />
       )}
 
-      <LangProvider langKey="cs">
-        {!simpleNavbar && !noNavbar && <Navbar lang="cs" />}
-        {simpleNavbar && !noNavbar && <SimpleNavbar lang="cs" />}
+      <LangProvider langKey="cz">
+        {!simpleNavbar && !noNavbar && <Navbar lang="cz" />}
+        {simpleNavbar && !noNavbar && <SimpleNavbar lang="cz" />}
         {children}
-        {!noFooter && <FooterSimple lang="cs" />}
+        {!noFooter && <FooterSimple lang="cz" />}
       </LangProvider>
     </GlobalLayout>
   )
 }
 
-export default CS
+export default CZ

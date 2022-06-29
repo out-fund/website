@@ -94,7 +94,7 @@ const links = {
       fr: "Obtenir des fonds",
       ro: "Obține finanțare",
       de: "Finanziert werden",
-      cs: "Získejte financování",
+      cz: "Získejte financování",
       nl: "Krijg financiering",
       hu: "Tegyen szert finanszírozásra",
       it: "Ricevi un finanziamento",

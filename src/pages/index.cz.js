@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import LangLayout from "./../layouts/cs"
+import LangLayout from "./../layouts/cz"
 
 import {
   Main,
