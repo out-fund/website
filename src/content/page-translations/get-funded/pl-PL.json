@@ -1,0 +1,27 @@
+{
+  "language": "pl-PL",
+  "content": {
+    "sideTitle": "Kapitał na wzrost dla założycieli takich, jak Ty",
+    "title": "Uzyskaj finansowanie",
+    "description": "Opowiedz nam o sobie i swojej firmie.",
+    "form": {
+      "name": "Nazwa",
+      "email": "E-mail",
+      "phone": "Numer telefonu",
+      "website": "Strona internetowa firmy",
+      "select": {
+        "title": "Średni miesięczny przychód",
+        "default": "Wybierz",
+        "options": [
+          "Mniej niż 55k zł",
+          "55k zł - 275k zł",
+          "275k zł - 550k zł",
+          "550k zł - 2,750k zł",
+          "Więcej niż 2,750k zł"
+        ],
+        "values": ["0", "55000", "275000", "550000", "2750000"]
+      },
+      "btn": "Rozpocznij"
+    }
+  }
+}
