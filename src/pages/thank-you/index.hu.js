@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import LangLayout from "../../layouts/cz"
+import LangLayout from "../../layouts/hu"
 
 import { SeoComponent } from "../../components"
 import T from "../../styles/new/typography"
@@ -11,13 +11,13 @@ const ThankYou = () => {
   return (
     <LangLayout simpleNavbar>
       <SeoComponent
-        title="Děkujeme za váš příspěvek"
-        description="Brzy se vám ozveme."
+        title="Köszönjük beküldését"
+        description="Hamarosan jelentkezünk."
       />
       <Wrapper>
         <ContentWrapper>
-          <Title>Děkujeme za váš příspěvek</Title>
-          <Description>Brzy se vám ozveme.</Description>
+          <Title>Köszönjük beküldését</Title>
+          <Description>Hamarosan jelentkezünk.</Description>
         </ContentWrapper>
       </Wrapper>
     </LangLayout>
