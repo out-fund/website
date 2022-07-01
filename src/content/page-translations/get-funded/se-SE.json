@@ -1,0 +1,27 @@
+{
+  "language": "se-SE",
+  "content": {
+    "sideTitle": "Tillväxtkapital för grundare som du",
+    "title": "Få finansiering",
+    "description": "Berätta om dig och ditt företag.",
+    "form": {
+      "name": "Namn",
+      "email": "E-mail",
+      "phone": "Telefonnummer",
+      "website": "Företagshemsida",
+      "select": {
+        "title": "Genomsnittlig månadsinkomst",
+        "default": "Välj",
+        "options": [
+          "Mer än 125k kr",
+          "125k kr - 625k kr",
+          "625k kr - 1,250k kr",
+          "1,250k kr - 6,250k kr",
+          "Mindre än 6,250k kr"
+        ],
+        "values": ["0", "125000", "625000", "1250000", "6250000"]
+      },
+      "btn": "Kom igång"
+    }
+  }
+}
