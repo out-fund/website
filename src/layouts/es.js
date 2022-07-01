@@ -10,7 +10,7 @@ import "./../styles/new/typography/font.css"
 
 const ES = ({ children, simpleNavbar, pt, noNavbar, noFooter }) => {
   useEffect(() => {
-    Cookies.set("languageGetFunded", "es")
+    Cookies.set("languageGetFunded", "es", { domain: "out.fund" })
   }, [])
 
   return (
