@@ -199,7 +199,7 @@ const ContentWrapper = styled.div`
 
 export const query = graphql`
   query seGetFundedPage {
-    getFundedJson(language: { regex: "/se-SE/" }) {
+    getFundedJson(language: { regex: "/sv-SE/" }) {
       content {
         sideTitle
         title

@@ -7,7 +7,7 @@ import "./../styles/new/typography/font.css"
 
 import { LangProvider } from "./../utils/LangProvider"
 
-const SV = ({ children, simpleNavbar, pt, noNavbar, noFooter }) => {
+const SE = ({ children, simpleNavbar, pt, noNavbar, noFooter }) => {
   return (
     <GlobalLayout pt={pt}>
       {!noNavbar && (
@@ -18,14 +18,14 @@ const SV = ({ children, simpleNavbar, pt, noNavbar, noFooter }) => {
         />
       )}
 
-      <LangProvider langKey="sv">
-        {!simpleNavbar && !noNavbar && <Navbar lang="sv" />}
-        {simpleNavbar && !noNavbar && <SimpleNavbar lang="sv" />}
+      <LangProvider langKey="se">
+        {!simpleNavbar && !noNavbar && <Navbar lang="se" />}
+        {simpleNavbar && !noNavbar && <SimpleNavbar lang="se" />}
         {children}
-        {!noFooter && <FooterSimple lang="sv" />}
+        {!noFooter && <FooterSimple lang="se" />}
       </LangProvider>
     </GlobalLayout>
   )
 }
 
-export default SV
+export default SE

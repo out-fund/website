@@ -100,7 +100,7 @@ const links = {
       it: "Ricevi un finanziamento",
       pt: "Obtenha financiamento",
       pl: "Uzyskaj finansowanie",
-      sv: "Få finansiering",
+      se: "Få finansiering",
     },
     url: "/get-funded/",
   },
