@@ -90,7 +90,7 @@ const links = {
     text: {
       en: "Get funded",
       es: "Solicitar financiación",
-      dk: "Opnå finansiering",
+      dk: "Kom i gang",
       fr: "Obtenir des fonds",
       ro: "Obține finanțare",
       de: "Finanziert werden",

@@ -1,12 +1,12 @@
 {
   "language": "pl-PL",
   "seo": {
-    "title": "Kapitał na wzrost dla założycieli takich, jak Ty",
-    "description": " Superwzmacniające finansowanie, od 10 000 do 2 000 000 £, na marketing i stany magazynowe."
+    "title": "Kapitał na wzrost dla przedsiębiorców takich jak Ty",
+    "description": "Turbodoładowane finansowanie, od 10 000 do 2 000 000 GBP na marketing i stany magazynowe.."
   },
   "hero": {
-    "title": "Kapitał na wzrost dla założycieli takich, jak Ty",
-    "description": " Superwzmacniające finansowanie, od 10 000 do 2 000 000 £, na marketing i stany magazynowe.",
+    "title": "Kapitał na wzrost dla przedsiębiorców takich jak Ty",
+    "description": "Turbodoładowane finansowanie, od 10 000 do 2 000 000 GBP na marketing i stany magazynowe.",
     "primaryBtn": {
       "text": "Uzyskaj finansowanie",
       "url": "/get-funded-eu/"
@@ -21,8 +21,8 @@
     }
   },
   "weFunded": {
-    "title": "Zapewniamy finansowanie markom takim, jak Twoja",
-    "description": "Chcemy, by rozwijające się biznesy szybciej osiągały sukces. Pomagamy Ci rozwijać Twoją wizję z szybciej i sprawiedliwiej dostępnym kapitałem w bardziej przystępnej cenie.",
+    "title": "Zapewniamy finansowanie firmom takim jak Twoja",
+    "description": "Chcemy, by rozwijające się firmy szybciej osiągały sukces. Pomagamy Ci rozwijać Twoją wizję dzięki szybciej i sprawiedliwiej dostępnemu kapitałowi, na bardziej przystępnych warunkach.",
     "cards": {
       "feel": {
         "tag": {
@@ -32,7 +32,7 @@
         "company": "Feel",
         "logo": "<svg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 55 30'><path fill-rule='evenodd' clip-rule='evenodd' d='M0 0v30h5.28V17.648h5.318a11.16 11.16 0 0 0-.247 2.36c0 1.85.447 3.541 1.342 5.075a9.61 9.61 0 0 0 3.694 3.608c1.566.872 3.297 1.308 5.194 1.308 1.645 0 3.186-.35 4.62-1.05 1.436-.701 2.588-1.666 3.457-2.895l-3.397-2.716a4.991 4.991 0 0 1-2.074 1.606 6.715 6.715 0 0 1-2.646.535c-1.396 0-2.564-.363-3.506-1.09-.94-.727-1.556-1.699-1.846-2.915h11.6a9.706 9.706 0 0 0 1.245 3.608 9.61 9.61 0 0 0 3.693 3.609c1.567.872 3.298 1.308 5.194 1.308 1.646 0 3.186-.35 4.621-1.05 1.436-.701 2.588-1.666 3.456-2.895l-3.396-2.716a4.992 4.992 0 0 1-2.074 1.606 6.716 6.716 0 0 1-2.646.535c-1.396 0-2.564-.363-3.506-1.09-.941-.727-1.556-1.699-1.846-2.915h13.139v1.204c0 2.343.59 4.154 1.822 5.432 1.232 1.278 2.92 1.89 5.09 1.89.804 0 1.768-.133 2.893-.4v-4.579c-.321.053-.777.053-1.313.053-1.259 0-2.116-.293-2.571-.932-.456-.612-.67-1.65-.67-3.088V0h-5.251v14.187a9.595 9.595 0 0 0-3.047-2.982c-1.488-.925-3.154-1.388-4.997-1.388-1.488 0-2.86.275-4.118.823-1.257.549-2.307 1.289-3.15 2.22a9.802 9.802 0 0 0-1.018 1.343 9.595 9.595 0 0 0-3.058-2.998c-1.488-.925-3.154-1.388-4.997-1.388-1.488 0-2.86.275-4.117.823-1.258.549-2.308 1.289-3.15 2.22a9.8 9.8 0 0 0-.947 1.23v-1.548H5.28V5.125h13.241V0H0Zm15.367 17.807h9.578c-.145-.978-.665-1.797-1.56-2.458-.895-.66-1.942-.991-3.14-.991-1.146 0-2.153.314-3.022.941-.869.628-1.487 1.464-1.856 2.508Zm25.919 0h-9.578c.369-1.044.987-1.88 1.856-2.508.87-.627 1.876-.941 3.022-.941 1.198 0 2.245.33 3.14.99.895.662 1.415 1.481 1.56 2.46Z' fill='#111'/></svg>",
         "quote": {
-          "title": "Zainwestowałem w powtarzalny wzrost i rozwinąłem subskrypcje o 4 x."
+          "title": "Zainwestowałem w regularny rozwój i czterokrotnie zwiększyłem ilość subskrypcji."
         },
         "image": {
           "src": "./../../../images/Boris-Cheryl.png",
@@ -62,8 +62,8 @@
     }
   },
   "weInvesting": {
-    "title": "Przekształcamy przyszłe strumienie przychodów w kapitał dostępny z góry",
-    "description": "Zapewniamy potrzebny Ci kapitał wtedy, gdy go potrzebujesz. Żadnego zmniejszania wartości udziałów, żadnych gwarancji osobistych czy stawek procentowych. To bardziej sprawiedliwe finansowanie. <br/><br/> Wystarczy połączyć dostawców płatności cyfrowych z usługą Outfund, a wygenerujemy oferty finansowania na zamówienie w oparciu o Twoje dane o przychodach, w ciągu 48 godzin. Zainwestuj we wzrost i dokonuj spłat w miarę sprzedaży.",
+    "title": "Przekształcamy przyszłe strumienie przychodów w finansowanie dostępne natychmiast.",
+    "description": "Zapewniamy kapitał wtedy, kiedy go potrzebujesz. Nie zmniejszania wartości udziałów, żyrantów, czy oprocentowania. To bardziej sprawiedliwe finansowanie. <br/><br/> Wystarczy podłączyć Twoje konta u dostawców płatności cyfrowych z usługą Outfund, a w ciągu 48 godzin wygenerujemy indywidualne oferty finansowania w oparciu o Twoje dane o przychodach. Zainwestuj we wzrost i spłacaj wraz ze sprzedażą.",
     "image": {
       "src": "./../../../images/PaymentCounterPhone.jpg",
       "alt": "Payment made ont the phone"
@@ -74,7 +74,7 @@
     }
   },
   "startSupercharging": {
-    "title": "Rozpocznij superwzmacnianie wzrostu",
+    "title": "Rozpocznij turbodoładowany rozwój",
     "btn": {
       "text": "Rozpocznij",
       "url": "/get-funded-eu/"
@@ -118,7 +118,7 @@
       "select": {
         "title": "Du har brug for finansering til",
         "default": "Vælg",
-        "dropdown": ["Beholdning", "Marketing", "Noget andet"]
+        "dropdown": ["Inventar", "Marketing", "Noget andet"]
       },
       "btn": {
         "text": "Se dine muligheder",
@@ -153,7 +153,7 @@
   },
   "aboutUs": {
     "title": "O nas",
-    "description": " Firma Outfund skupia się na rosnących biznesach. W naszym zespole znajdują się założyciele, deweloperzy, konsultanci i miłośnicy kawy. Działamy szybko i zawsze chcemy być skuteczni. Dowiedz się o nas więcej dzisiaj.",
+    "description": " Firma Outfund skupia się na rozwijających się biznesach. W naszym zespole znajdują się przedsiębiorcy, programiści, konsultanci i miłośnicy kawy. Działamy szybko i chcemy być zawsze skuteczni. Dowiedz się o nas więcej.",
     "teamImages": [
       {
         "src": "./../../../images/team/Outfund-team-Abanoub.jpg",
@@ -243,13 +243,13 @@
     "stats": [
       {
         "stat": "200 000 000 £",
-        "text": "Żeby zainwestować w 2022"
+        "text": "Plan inwestycyjny na 2022"
       },
       { "stat": "10", "text": "Kraje, w których działamy" },
-      { "stat": "75+", "text": "Rosnący zespół" },
+      { "stat": "75+", "text": "Rozwijający się zespół" },
       {
         "stat": "37 000 000 £",
-        "text": "Zebrane dotychczas"
+        "text": "Dotychczasowe finansowanie"
       }
     ],
     "buttons": {
