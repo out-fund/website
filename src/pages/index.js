@@ -14,6 +14,7 @@ import {
   SectionRegulated,
   HeroHomepage,
   SeoComponent,
+  CookiesBanner
 } from "./../components"
 
 const HomePage = (props) => {
@@ -34,6 +35,7 @@ const HomePage = (props) => {
         <SectionAboutUs data={props.data.homepageJson.aboutUs} />
         <SectionRegulated data={props.data.trustJson} />
       </Main>
+      <CookiesBanner />
     </LangLayout>
   )
 }

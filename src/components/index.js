@@ -9,6 +9,7 @@ import SectionFeaturedCards from "./sections/SectionFeaturedCards"
 import CardLogoReadMore from "./cards/CardLogoReadMore"
 import SectionOtherBrands from "./sections/SectionOtherBrands"
 import CardCta from "./cards/CardCta"
+import CookiesBanner from "./cookies/CookiesBanner"
 import SectionFindOut from "./sections/SectionFindOut"
 import Offices from "./sections/Offices"
 
@@ -65,6 +66,7 @@ export {
   SectionFeaturedCards,
   SectionOtherBrands,
   CardCta,
+  CookiesBanner,
   SectionFindOut,
   GetFundedForm,
   ContactUsForm,
