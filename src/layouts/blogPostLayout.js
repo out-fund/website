@@ -156,8 +156,8 @@ export const query = graphql`
       frontmatter {
         title
         heroImage {
-          alt
           src
+          alt
         }
       }
     }
