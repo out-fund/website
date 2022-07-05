@@ -157,15 +157,7 @@ export const query = graphql`
         title
         heroImage {
           alt
-          src {
-            childImageSharp {
-              gatsbyImageData(
-                height: 600
-                jpgOptions: { progressive: true, quality: 90 }
-                transformOptions: { cropFocus: CENTER, fit: COVER }
-              )
-            }
-          }
+          src
         }
       }
     }
