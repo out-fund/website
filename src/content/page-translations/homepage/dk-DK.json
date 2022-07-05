@@ -2,11 +2,11 @@
   "language": "dk-DK",
   "seo": {
     "title": "Vækstkapital til virksomhedsstiftere som dig",
-    "description": "Boost din virksomheds markedsføring og inventar via et finanseringstilbud på £10.000-2 millioner."
+    "description": "Boost din virksomheds markedsføring og inventar via et finanseringstilbud på £10.000-2.000.000."
   },
   "hero": {
     "title": "Vækstkapital til virksomhedsstiftere som dig",
-    "description": "Boost din virksomheds markedsføring og inventar via et finanseringstilbud på £10.000-2 millioner.",
+    "description": "Boost din virksomheds markedsføring og inventar via et finanseringstilbud på £10.000-2.000.000.",
     "primaryBtn": {
       "text": "Kom i gang",
       "url": "/get-funded-eu/"
@@ -139,7 +139,7 @@
         "answer": "Outfund forbinder sikkert med din eksisterende bank, betalingsformidler og dine regnskabsplatforme. Via prædiktive modeller er vi i stand til at vurdere nøgletal fra din virksomheds indtægter, markedsføringsindsats og andre former for tredjepartsdata, og ud fra det skræddersyer vi dine finansieringstilbud.  <br/><br/> Vores finansiering er baseret direkte på din virksomheds indsats. Vi gør ingen krav på egenkapital, og vi udvander dermed intet for dig eller dine investorer. I stedet tilbagebetales den ydede finansiering via en simpel deling af virksomhedens fremtidige indtægter."
       },
       {
-        "question": "Hvor længe tager hele processen?",
+        "question": "Hvor lang tid tager hele processen?",
         "answer": " Den samlede proces (ansøgning, tilbud, godkendelse, deponering af de finansierede midler) kan ordnes på så kort tid som 48 timer."
       },
       {
@@ -242,7 +242,7 @@
       }
     ],
     "stats": [
-      { "stat": "£200 mill.", "text": "Til investering i 2022" },
+      { "stat": "£200 millioner", "text": "Til investering i 2022" },
       { "stat": "10", "text": "Lande" },
       { "stat": "75+", "text": "i vores team" },
       { "stat": "£37 millioner", "text": "indsamlet" }
