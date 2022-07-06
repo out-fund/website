@@ -12,12 +12,12 @@ const ThankYou = () => {
     <LangLayout simpleNavbar>
       <SeoComponent
         title="Vă mulțumim pentru contribuție"
-        description="Vă vom reveni în curând."
+        description="Vom reveni în curând."
       />
       <Wrapper>
         <ContentWrapper>
-          <Title>Va multumim pentru contributie</Title>
-          <Description>Vă vom reveni în curând.</Description>
+          <Title>Vă mulțumim pentru contribuție</Title>
+          <Description>Vom reveni în curând.</Description>
         </ContentWrapper>
       </Wrapper>
     </LangLayout>
