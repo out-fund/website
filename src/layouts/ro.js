@@ -12,7 +12,7 @@ const RO = ({ children, simpleNavbar, pt, noNavbar, noFooter }) => {
     <GlobalLayout pt={pt}>
       {!noNavbar && (
         <NewsBar
-          text="🎉 Outfund a ridicat 115 de milioane de lire sterline în investiții în seria A. Anul acesta se angajează să împrumute 500 de milioane de lire sterline firmelor de comerț electronic!"
+          text="🎉 Outfund a ridicat 115 milioane de lire sterline în investiții în seria A. Anul acesta se angajează să împrumute 500 de milioane de lire sterline firmelor de comerț electronic!"
           url="https://tech.eu/2022/04/27/going-all-out-to-change-the-way-online-businesses-raise-funds-lands-ps115-million-in-outfunds-kitty/"
           urlText="Află mai mult"
         />

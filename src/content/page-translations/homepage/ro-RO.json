@@ -1,11 +1,11 @@
 {
   "language": "ro-RO",
   "seo": {
-    "title": "Capital de creștere pentru fondatori că tine",
+    "title": "Capital de creștere pentru fondatori ca tine",
     "description": "UFinanțare de la 10.000 la 2M lire sterline pentru marketing și inventar."
   },
   "hero": {
-    "title": "Capital de creștere pentru fondatori că tine",
+    "title": "Capital de creștere pentru fondatori ca tine",
     "description": "Finanțare de la 10.000 la 2M lire sterline pentru marketing și inventar.",
     "primaryBtn": {
       "text": "Obține finanțare",
@@ -21,7 +21,7 @@
     }
   },
   "weFunded": {
-    "title": "Finantăm companii ca a ta",
+    "title": "finanțăm companii ca a ta",
     "description": "Ne dorim ca afacerile în creștere să reușească mai repede. Vă ajutăm să vă concretizați viziunea cu obținere de capital rapid, corect și accesibil.",
     "cards": {
       "feel": {
@@ -136,7 +136,7 @@
       },
       {
         "question": "Cum se calculează oferta mea?",
-        "answer": "Oferta va fi calculată cu ajutor datelor financiare obținute prin conectarea la open banking și la instrumentele de procesare a plăților precum Stripe, Shopify sau Paypal. Folosind modele predictive, evaluăm performanța dvs. financiară pentru a putea crea oferte de finanțare personalizate. <br/><br/> Finanțarea noastră se bazează pe performanța dvs. Capitalul propriu nu va fi afectat, ceea ce înseamnă că atât dumneavoastră cât și investitorii dumneavoastră nu va trebuie să se dilueze. În schimb, finanțare este rambursată printr-o simplă cotă-parte din venit."
+        "answer": "Oferta va fi calculată cu ajutor datelor financiare obținute prin conectarea la open banking și la instrumentele de procesare a plăților precum Stripe, Shopify sau Paypal. Folosind modele predictive, evaluăm performanța dvs. financiară pentru a putea crea oferte de finanțare personalizate. <br/><br/> Finanțarea noastră se bazează pe performanța dvs. Capitalul propriu nu va fi afectat, ceea ce înseamnă că atât dvs. cât și investitorii dvs. nu va trebuie să se dilueze. În schimb, finanțarea este rambursată printr-o simplă cotă-parte din venit."
       },
       {
         "question": "Cât durează întregul proces?",

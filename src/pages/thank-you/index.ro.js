@@ -11,7 +11,7 @@ const ThankYou = () => {
   return (
     <LangLayout simpleNavbar>
       <SeoComponent
-        title="Va multumim pentru contributie"
+        title="Vă mulțumim pentru contribuție"
         description="Vă vom reveni în curând."
       />
       <Wrapper>
