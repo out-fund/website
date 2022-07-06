@@ -2,11 +2,11 @@
   "language": "fr-FR",
   "seo": {
     "title": "Capital de croissance pour les fondateurs comme vous",
-    "description": "Un financement surchargé de 10 000 à 2 millions de livres sterling pour votre marketing et vos stocks."
+    "description": "Un financement adapté à vos besoin de Euro 10,000 à 2 million pour votre marketing et vos stocks."
   },
   "hero": {
     "title": "Capital de croissance pour les fondateurs comme vous",
-    "description": "Un financement surchargé de 10 000 à 2 millions de livres sterling pour votre marketing et vos stocks.",
+    "description": "Un financement adapté à vos besoin de Euro 10,000 à 2 million pour votre marketing et vos stocks.",
     "primaryBtn": {
       "text": "Obtenir des fonds",
       "url": "/get-funded-eu/"
@@ -22,7 +22,7 @@
   },
   "weFunded": {
     "title": "Nous finançons des marques comme la vôtre",
-    "description": "Nous voulons que les entreprises en croissance réussissent plus rapidement. Nous vous aidons à concrétiser votre vision avec des capitaux rapides, équitables et plus abordables.",
+    "description": "Nous voulons que les entreprises en croissance réussissent plus rapidement. Nous vous aidons à concrétiser votre vision avec des capitaux disponibles rapidement, équitables et plus abordables.",
     "cards": {
       "feel": {
         "tag": {
@@ -63,7 +63,8 @@
     }
   },
   "weInvesting": {
-    "title": "Nous convertissons les sources de revenus futurs en capital initial",
+    "title": "Nous convertissons vos revenus futurs en capitaux disponibles aujourd’hui.
+    ",
     "description": "Nous fournissons le capital dont vous avez besoin, quand vous en avez besoin. Pas de dilution, pas de garanties personnelles, pas de taux d'intérêt. C'est le financement, rendu plus équitable. <br/><br/> Il suffit de connecter vos fournisseurs de paiement numérique avec Outfund, et nous générerons des offres de financement sur mesure basées sur vos données de revenus dans les 48 heures. Investissez dans la croissance, et remboursez au fur et à mesure que vous faites des ventes",
     "image": {
       "src": "./../../../images/PaymentCounterPhone.jpg",
