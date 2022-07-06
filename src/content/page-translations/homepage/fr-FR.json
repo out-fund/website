@@ -63,8 +63,7 @@
     }
   },
   "weInvesting": {
-    "title": "Nous convertissons vos revenus futurs en capitaux disponibles aujourd’hui.
-    ",
+    "title": "Nous convertissons vos revenus futurs en capitaux disponibles aujourd’hui.",
     "description": "Nous fournissons le capital dont vous avez besoin, quand vous en avez besoin. Pas de dilution, pas de garanties personnelles, pas de taux d'intérêt. C'est le financement, rendu plus équitable. <br/><br/> Il suffit de connecter vos fournisseurs de paiement numérique avec Outfund, et nous générerons des offres de financement sur mesure basées sur vos données de revenus dans les 48 heures. Investissez dans la croissance, et remboursez au fur et à mesure que vous faites des ventes",
     "image": {
       "src": "./../../../images/PaymentCounterPhone.jpg",
