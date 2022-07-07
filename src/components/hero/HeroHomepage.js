@@ -18,7 +18,8 @@ const HeroHomepage = ({ data }) => {
           <ButtonWrapper>
             {primaryBtn.url && (
               <Button
-                to={primaryBtn.url}
+                // to={primaryBtn.url}
+                href="https://client.out.fund/signup"
                 variant="primary"
                 size="large"
                 id="cta-get-funded-hero-click"

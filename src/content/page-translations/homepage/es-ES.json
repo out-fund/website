@@ -9,7 +9,7 @@
     "description": "Financiación para tu marketing & inventario. De 10k€ a 2M€.",
     "primaryBtn": {
       "text": "Solicitar financiación",
-      "url": "/get-funded/"
+      "url": "https://client.out.fund/signup"
     },
     "secondaryBtn": {
       "text": "Cómo funciona",
@@ -78,7 +78,7 @@
     "title": "¡Acelera tu crecimiento!",
     "btn": {
       "text": "Empieza ya",
-      "url": "/get-funded/"
+      "url": "https://client.out.fund/signup"
     },
     "card": {
       "company": "Onto",

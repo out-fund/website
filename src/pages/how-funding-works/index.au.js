@@ -65,7 +65,8 @@ const HowFundingWorks = (props) => {
                     Your Growth!
                   </T.H2>
                   <Button
-                    to="/get-funded/"
+                    // to="/get-funded/"
+                    href="https://client.out.fund/signup"
                     variant="primary"
                     size="large"
                     id="cta-get-funded-hiw-click"

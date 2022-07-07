@@ -10,7 +10,7 @@
       "title": "Join us",
       "btn": {
         "text": "Get funded",
-        "url": "/get-funded/"
+        "url": "https://client.out.fund/signup"
       }
     }
   }

@@ -68,7 +68,9 @@ const MobileLinks = ({ lang }) => {
     <MobileLinksWrapper data-surface-type="Header">
       <ButtonWrapper>
         <Button
-          to={getFundeURL(lang)}
+          // to={getFundeURL(lang)}
+          // to={links.getFunded.url}
+          href="https://client.out.fund/signup"
           variant="primary"
           className="getFunded getFunded-mobile"
           id="cta-get-funded-mobile-navbar-click"
@@ -152,7 +154,8 @@ function DesktopLinks({ lang }) {
       {links.getFunded.text[lang] && (
         <li className="getFunded">
           <Button
-            to={getFundeURL(lang)}
+            // to={getFundeURL(lang)}
+            href="https://client.out.fund/signup"
             variant="primary"
             id="cta-get-funded-navbar-click"
           >

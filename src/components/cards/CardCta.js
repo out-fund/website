@@ -13,7 +13,8 @@ const CardCta = ({ title, btn, bgc }) => {
         <Title as="h2">{parse(title)}</Title>
         <BtnWrapper>
           <Button
-            to={btn.url}
+            // to={btn.url}
+            href="https://client.out.fund/signup"
             variant="primary"
             size="large"
             id="cta-get-started-card-click"

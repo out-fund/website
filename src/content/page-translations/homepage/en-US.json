@@ -9,7 +9,7 @@
     "description": "Supercharged funding from $10K to $3M for your marketing & inventory.",
     "primaryBtn": {
       "text": "Get funded",
-      "url": "/get-funded/"
+      "url": "https://client.out.fund/signup"
     },
     "secondaryBtn": {
       "text": "Learn how it works",
@@ -78,7 +78,7 @@
     "title": "Start Supercharging Your Growth",
     "btn": {
       "text": "Get started",
-      "url": "/get-funded/"
+      "url": "https://client.out.fund/signup"
     },
     "card": {
       "company": "Onto",

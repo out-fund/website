@@ -84,7 +84,7 @@ const links = {
       en: "Login",
       es: "Acceso",
     },
-    url: "https://app.out.fund/users/sign_in",
+    url: "https://client.out.fund/",
   },
   getFunded: {
     text: {
@@ -104,7 +104,7 @@ const links = {
       pl: "Uzyskaj finansowanie",
       se: "Få finansiering",
     },
-    url: "/get-funded/",
+    url: "https://client.out.fund/signup",
   },
   countries: {
     en: {
