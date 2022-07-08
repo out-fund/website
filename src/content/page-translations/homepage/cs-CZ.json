@@ -6,7 +6,7 @@
   },
   "hero": {
     "title": "Růstový kapitál pro zakladatele, jako jste vy",
-    "description": "Supervýkonné financování od 10 000£ po 2 mil. £ pro váš marketing a inventář.",
+    "description": "Supervýkonné financování od £10 000 po £2 mil. pro váš marketing a inventář.",
     "primaryBtn": {
       "text": "Získejte financování",
       "url": "/get-funded-eu/"
@@ -21,23 +21,23 @@
     }
   },
   "weFunded": {
-    "title": "Nous finançons des marques comme la vôtre",
-    "description": "Nous voulons que les entreprises en croissance réussissent plus rapidement. Nous vous aidons à concrétiser votre vision avec des capitaux disponibles rapidement, équitables et plus abordables.",
+    "title": "Financujeme značky, jako jste vy",
+    "description": "Chceme, aby rostoucí podniky rostly rychleji. Pomůžeme vám realizovat vaši vizi s kapitálem, který je rychlý, férový a dostupnější.",
     "cards": {
       "feel": {
         "tag": {
-          "text": "Financement de plus de 400 000 £",
+          "text": "Financování více než £400 000",
           "color": "#FFF4E9"
         },
         "company": "Feel",
         "logo": "<svg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 55 30'><path fill-rule='evenodd' clip-rule='evenodd' d='M0 0v30h5.28V17.648h5.318a11.16 11.16 0 0 0-.247 2.36c0 1.85.447 3.541 1.342 5.075a9.61 9.61 0 0 0 3.694 3.608c1.566.872 3.297 1.308 5.194 1.308 1.645 0 3.186-.35 4.62-1.05 1.436-.701 2.588-1.666 3.457-2.895l-3.397-2.716a4.991 4.991 0 0 1-2.074 1.606 6.715 6.715 0 0 1-2.646.535c-1.396 0-2.564-.363-3.506-1.09-.94-.727-1.556-1.699-1.846-2.915h11.6a9.706 9.706 0 0 0 1.245 3.608 9.61 9.61 0 0 0 3.693 3.609c1.567.872 3.298 1.308 5.194 1.308 1.646 0 3.186-.35 4.621-1.05 1.436-.701 2.588-1.666 3.456-2.895l-3.396-2.716a4.992 4.992 0 0 1-2.074 1.606 6.716 6.716 0 0 1-2.646.535c-1.396 0-2.564-.363-3.506-1.09-.941-.727-1.556-1.699-1.846-2.915h13.139v1.204c0 2.343.59 4.154 1.822 5.432 1.232 1.278 2.92 1.89 5.09 1.89.804 0 1.768-.133 2.893-.4v-4.579c-.321.053-.777.053-1.313.053-1.259 0-2.116-.293-2.571-.932-.456-.612-.67-1.65-.67-3.088V0h-5.251v14.187a9.595 9.595 0 0 0-3.047-2.982c-1.488-.925-3.154-1.388-4.997-1.388-1.488 0-2.86.275-4.118.823-1.257.549-2.307 1.289-3.15 2.22a9.802 9.802 0 0 0-1.018 1.343 9.595 9.595 0 0 0-3.058-2.998c-1.488-.925-3.154-1.388-4.997-1.388-1.488 0-2.86.275-4.117.823-1.258.549-2.308 1.289-3.15 2.22a9.8 9.8 0 0 0-.947 1.23v-1.548H5.28V5.125h13.241V0H0Zm15.367 17.807h9.578c-.145-.978-.665-1.797-1.56-2.458-.895-.66-1.942-.991-3.14-.991-1.146 0-2.153.314-3.022.941-.869.628-1.487 1.464-1.856 2.508Zm25.919 0h-9.578c.369-1.044.987-1.88 1.856-2.508.87-.627 1.876-.941 3.022-.941 1.198 0 2.245.33 3.14.99.895.662 1.415 1.481 1.56 2.46Z' fill='#111'/></svg>",
         "quote": {
-          "title": "J'ai investi dans une croissance reproductible et j'ai multiplié les abonnements par 4.",
-          "by": "Boris Hodakel, fondateur de Feel"
+          "title": "Investoval jsem do opakovatelného růstu a mé podíly vzrostly čtyřnásobně.",
+          "by": "Boris Hodakel, zakladatel Feel"
         },
         "image": {
           "src": "./../../../images/Boris-Cheryl.png",
-          "alt": "Boris Hodakel, fondateur de Feel"
+          "alt": "Boris Hodakel, zakladatel Feel"
         },
         "btn": {
           "text": "",
@@ -46,7 +46,7 @@
       },
       "lemonadeDolls": {
         "tag": {
-          "text": "Financement de plus de 50 000 £",
+          "text": "Financovali jsme £50 000",
           "color": "#F6C34E"
         },
         "company": "Lemonade Dolls",
@@ -63,31 +63,31 @@
     }
   },
   "weInvesting": {
-    "title": "Nous convertissons les sources de revenus futurs en capital initial",
-    "description": "Nous fournissons le capital dont vous avez besoin, quand vous en avez besoin. Pas de dilution, pas de garanties personnelles, pas de taux d'intérêt. C'est le financement, rendu plus équitable. <br/><br/> Il suffit de connecter vos fournisseurs de paiement numérique avec Outfund, et nous générerons des offres de financement sur mesure basées sur vos données de revenus dans les 48 heures. Investissez dans la croissance, et remboursez au fur et à mesure que vous faites des ventes",
+    "title": "Převádíme tok budoucích zisků na přímočarý kapitál",
+    "description": "Poskytneme vám kapitál, jaký budete potřebovat a kdy ho budete potřebovat. Žádná snížení, žádné osobní ručení, žádné úroky. Financujeme férověji. <br/><br/> Jednoduše si propojte svého zprostředkovatele digitálních plateb s Outfund a my vám vygenerujeme financování na míru na základě vašich dat o ziscích za 48 hodin. Investujte do růstu a splácejte investici svými prodeji.",
     "image": {
       "src": "./../../../images/PaymentCounterPhone.jpg",
       "alt": "Payment made ont the phone"
     },
     "btn": {
-      "text": "En savoir plus sur le fonctionnement du financement",
+      "text": "Zjistěte více o tom, jak financování funguje",
       "url": ""
     }
   },
   "startSupercharging": {
-    "title": "Commencez à dynamiser votre croissance",
+    "title": "Nakopněte svůj růst",
     "btn": {
-      "text": "Commencez",
+      "text": "Pusťte se do toho",
       "url": "/get-funded-eu/"
     },
     "card": {
       "company": "Onto",
       "quote": {
-        "title": "Notre taille a doublé au cours du dernier trimestre et devrait encore doubler ce trimestre",
-        "by": "Rob Jolly, fondateur de ONTO"
+        "title": "Za poslední čtvrtletí jsme zdvojnásobili svůj obrat a v tomto nás čeká další zdvojnásobení",
+        "by": "Rob Jolly, zakladatel ONTO"
       },
       "tag": {
-        "text": "Financement de plus de 340 000 £",
+        "text": "Financováno £340 000",
         "color": "#72B4F0"
       },
 
@@ -99,12 +99,12 @@
     }
   },
   "findOut": {
-    "title": "Find ud af hvor meget du kan få",
-    "description": "Finansieringstilbud er baserede på din virksomheds månedlige indtægter. Få et hurtigt overblik over dine muligheder, ved at benytte dig af vores nemme og intuitive lommeregner",
+    "title": "Zjistěte, kolik můžete dostat vy",
+    "description": "Nabídky financování se odvíjejí od vašeho průměrného měsíčního zisku. Získejte rychlý odhad své způsobilosti s naší jednoduchou kalkulačkou.",
     "calculator": {
-      "title": "Din gennemsnitlige månedlige indtægt range",
+      "title": "Váš průměrný měsíční zisk",
       "range": [
-        "Mindre end kr.70 000",
+        "Pod £10 000",
         "kr. 70 000",
         "kr. 140 000",
         "kr. 350 000",
@@ -117,44 +117,45 @@
         "Mere end kr. 7 000 000"
       ],
       "select": {
-        "title": "Du har brug for finansering til",
-        "default": "Vælg",
-        "dropdown": ["Beholdning", "Marketing", "Noget andet"]
+        "title": "Financování potřebujete na",
+        "default": "Zvolte",
+        "dropdown": ["Inventář", "Marketing", "Něco jiného"]
       },
       "btn": {
-        "text": "Se dine muligheder",
+        "text": "věřit způsobilost",
         "url": "/eligibility/"
       }
     }
   },
   "faq": {
-    "title": "Questions fréquemment posées",
+    "title": "Často kladené dotazy",
     "questions": [
       {
-        "question": "Quel est le financement que vous offrez?",
-        "answer": "Nous pouvons déployer entre 10 000 £ et 2 000 000 £ à la fois."
+        "question": "Jak vysoké financování nabízíte?",
+        "answer": "Naráz můžeme uvolnit od £10 000 po £2000 000."
       },
       {
-        "question": "Comment calculez-vous mon offre?",
-        "answer": "Outfund se connecte en toute sécurité à vos plates-formes bancaires, de traitement des paiements et de comptabilité existantes. À l'aide de modèles prédictifs, nous évaluons les paramètres clés de vos revenus, de vos performances publicitaires et d'autres données tierces pour créer des offres de financement sur mesure. <br/><br/> Notre financement est basé sur vos performances. Nous ne prenons aucune par, ce qui signifie que nous ne diluons ni vous ni vos investisseurs. Au contraire, le financement est remboursé par un simple partage des revenus."
+        "question": "Podle čeho počítáte moji nabídku?",
+        "answer": "Outfund se bezpečně připojí k vašemu dosavadnímu bankovnictví, zpracovávání plateb a účetním platformám. Pomocí prediktivních modelů vypočítáme klíčovou metriku vašich zisků, reklamní efektivitu a další data třetích stran, na jejichž základě vytváříme finanční nabídky na míru. <br/><br/> Naše financování se odvíjí od vaší produktivity. Nic z kapitálu si nenecháváme, takže nic nestrhneme vám ani vašim investorům. Namísto toho se financování splácí skrze jednoduchý podíl ze zisku."
       },
       {
-        "question": "Combien de temps dure l'ensemble du processus?",
-        "answer": "L'ensemble du processus (demande, offre, approbation, envoi des fonds) peut être réalisé en 48 heures seulement."
+        "question": "Jak dlouho celý proces trvá?",
+        "answer": "Celý proces (podání přihlášky, nabídka, schválení, zaslání financí) lze dokončit již za 48 hodin."
       },
       {
-        "question": "Comment puis-je postuler?",
-        "answer": "Vous pouvez vous inscrire en quelques minutes ici. Vous devez être un administrateur de l'entreprise pour laquelle vous postulez. <br/><br/> Vous devrez connecter votre compte bancaire professionnel, votre processeur de paiement et les comptes financiers de votre entreprise. Ces données nous permettront de définir votre offre de financement."
+        "question": "Jak se mohu přihlásit?",
+        "answer": "Přihlášení zabere jen pár minut a provádí se zde. Musíte být ředitelem firmy, za kterou přihlášku podáváte. <br/><br/> Je vyžadováno propojení s vaším firemním bankovním účtem, zpracovatelem plateb a finančními účty firmy. Na základě těchto dat vám bude vytvořena vaše nabídka financování."
       }
     ],
     "btn": {
-      "text": "",
+      "text": "Další dotazy",
       "url": ""
     }
   },
   "aboutUs": {
-    "title": "À propos de nous",
-    "description": "Outfund se concentre sur la croissance des entreprises. Notre équipe est composée de fondateurs, de développeurs, de consultants et de passionnés. Nous agissons rapidement et cherchons à avoir une influence dans tout ce que nous faisons. Apprenez-en davantage sur nous aujourd'hui.",
+    "title": "O nás",
+    "description": "Outfund se zaměřuje na rostoucí podniky. Náš tým se skládá ze zakladatelů, developerů, konzultantů a milovníků kávy. Jednáme rychle a chceme vidět výsledky za vším, co děláme. Více se o nás můžete dozvědět ještě dnes."
+    .",
     "teamImages": [
       {
         "src": "./../../../images/team/Outfund-team-Abanoub.jpg",
@@ -243,14 +244,14 @@
     ],
     "stats": [
       {
-        "stat": "200 M Euro",
-        "text": "Pour investir en 2022"
+        "stat": "£200 M",
+        "text": "K investici v roce 2022"
       },
-      { "stat": "10", "text": "Pays d'exploitation" },
-      { "stat": "Plus de 75", "text": "Équipe en pleine expansion" },
+      { "stat": "10", "text": "Země, kde působíme" },
+      { "stat": "Více než 75", "text": "Rostoucí tým" },
       {
-        "stat": "37 M Euro",
-        "text": "Levés jusqu'à présent"
+        "stat": "£37 M",
+        "text": "Dosavadní navýšení"
       }
     ],
     "buttons": {
