@@ -26,7 +26,7 @@
     "cards": {
       "feel": {
         "tag": {
-          "text": "Financiámos mais de 400 000 £",
+          "text": "Financiámos mais de £400 000",
           "color": "#FFF4E9"
         },
         "company": "Feel",
@@ -45,7 +45,7 @@
       },
       "lemonadeDolls": {
         "tag": {
-          "text": "Financiámos 50 000 £",
+          "text": "Financiámos £50 000",
           "color": "#F6C34E"
         },
         "company": "Lemonade Dolls",
@@ -86,7 +86,7 @@
         "by": "Rob Jolly, fundador da ONTO"
       },
       "tag": {
-        "text": "Financiámos 340 000 £",
+        "text": "Financiámos £340 000",
         "color": "#72B4F0"
       },
 
@@ -131,7 +131,7 @@
     "questions": [
       {
         "question": " Quanto financiamento oferecem?",
-        "answer": "Podemos disponibilizar entre 10 000 £ e 2 000 000 £ de cada vez."
+        "answer": "Podemos disponibilizar entre £10 000 e £2 000 000 de cada vez."
       },
       {
         "question": "Como é que a minha oferta é calculada?",
