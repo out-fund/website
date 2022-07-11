@@ -37,7 +37,7 @@
         },
         "image": {
           "src": "./../../../images/Boris-Cheryl.png",
-          "alt": "Boris Hodakel, fondateur de Feel"
+          "alt": "Boris Hodakel, grundare av Feel"
         },
         "btn": {
           "text": "",
@@ -67,7 +67,7 @@
     "description": "Vi tillhandahåller det kapital du behöver, när du behöver det. Ingen utspädning, inga personliga garantier, inga räntor. Det är finansiering som är mer rättvis.<br/><br/> Det är bara att ansluta dina digitala betalningsleverantörer till Outfund, så genererar vi skräddarsydda finansieringserbjudanden utifrån dina intäktsdata inom 48 timmar. Investera i tillväxt och betala tillbaka när du gör försäljning. ",
     "image": {
       "src": "./../../../images/PaymentCounterPhone.jpg",
-      "alt": "Payment made ont the phone"
+      "alt": "Payment made on the phone"
     },
     "btn": {
       "text": "",
