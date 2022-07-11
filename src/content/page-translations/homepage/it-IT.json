@@ -46,7 +46,7 @@
       },
       "lemonadeDolls": {
         "tag": {
-          "text": "Finanziamento di 50K £",
+          "text": "Finanziamento di £50K",
           "color": "#F6C34E"
         },
         "company": "Lemonade Dolls",
@@ -70,7 +70,7 @@
       "alt": "Payment made ont the phone"
     },
     "btn": {
-      "text": "En savoir plus sur le fonctionnement du financement",
+      "text": "Scopri di più su come funzionano i finanziamenti",
       "url": ""
     }
   },
@@ -87,7 +87,7 @@
         "by": "Rob Jolly, fondatore di ONTO"
       },
       "tag": {
-        "text": "Finanziamento di 340K £",
+        "text": "Finanziamento di £340K",
         "color": "#72B4F0"
       },
 
