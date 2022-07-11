@@ -98,10 +98,10 @@
     }
   },
   "findOut": {
-    "title": "Find ud af hvor meget du kan få",
-    "description": "Finansieringstilbud er baserede på din virksomheds månedlige indtægter. Få et hurtigt overblik over dine muligheder, ved at benytte dig af vores nemme og intuitive lommeregner",
+    "title": "Tudja meg, mennyit kaphat",
+    "description": "A finanszírozási ajánlatok az átlagos havi bevételen alapulnak. Gyorsan könnyen használható kalkulátorunkkal jelezze alkalmasságát.",
     "calculator": {
-      "title": "Din gennemsnitlige månedlige indtægt range",
+      "title": "Az Ön átlagos havi bevétele",
       "range": [
         "Mindre end kr.70 000",
         "kr. 70 000",
@@ -135,7 +135,7 @@
       },
       {
         "question": "Hogyan számítják ki az ajánlatomat?",
-        "answer": "Az Outfund biztonságosan csatlakozik meglévő banki, fizetési feldolgozási és számviteli platformokhoz. Prediktív modellek segítségével a kulcsfontosságú mutatókat a következőből értékeljük: az Ön bevétele, hirdetési teljesítménye és egyéb harmadik fél adatai, amelyek segítségével személyre szabottan készíthetünk finanszírozási ajánlatot. <br/><br/> Finanszírozásunk az Ön teljesítményén alapul. Mi nem veszünk részvény részesedést, ami azt jelenti, hogy nem hígítjuk fel a cégét, sem a befektetőit. Ehelyett a finanszírozást egyszerű bevételmegosztáson keresztül fizetik vissza."
+        "answer": "Az Outfund biztonságosan csatlakozik meglévő banki, fizetési feldolgozási és számviteli platformokhoz. Prediktív modellek segítségével a kulcsfontosságú mutatókat a következőből értékeljük: az Ön bevétele, hirdetési teljesítménye és egyéb harmadik fél adatai, amelyek segítségével személyre szabottan készíthetünk finanszírozási ajánlatot. <br/><br/> Finanszírozásunk az Ön teljesítményén alapul. Mi nemveszünk részvény részesedést, ami azt jelenti, hogy nem hígítjuk fel a cégét, sem a befektetőit. Ehelyett a finanszírozást egyszerű bevételmegosztáson keresztül fizetik vissza."
       },
       {
         "question": "Mennyi ideig tart az egész folyamat?",
