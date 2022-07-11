@@ -26,7 +26,7 @@
     "cards": {
       "feel": {
         "tag": {
-          "text": "Finansowanie: 400 000 £+",
+          "text": "Finansowanie: £400 000 +",
           "color": "#FFF4E9"
         },
         "company": "Feel",
@@ -45,7 +45,7 @@
       },
       "lemonadeDolls": {
         "tag": {
-          "text": "Finansowanie: 50 000 £",
+          "text": "Finansowanie: £50 000",
           "color": "#F6C34E"
         },
         "company": "Lemonade Dolls",
@@ -86,7 +86,7 @@
         "by": "Rob Jolly, założyciel ONTO"
       },
       "tag": {
-        "text": "Finansowanie: 340 000 £",
+        "text": "Finansowanie: £340 000",
         "color": "#72B4F0"
       },
 
