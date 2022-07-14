@@ -15,6 +15,11 @@ const encode = (data) => {
 }
 
 const GetFundedForm = ({ data, language, currency }) => {
+  let country = language
+
+  if (language === "nl-be" || language === "fr-be") {
+    country = "be"
+  }
   return (
     <FormWrapper>
       <Formik
@@ -24,7 +29,7 @@ const GetFundedForm = ({ data, language, currency }) => {
           phone: "",
           website: "",
           amr: "",
-          country: language,
+          country: country,
           currency: currency,
         }}
         onSubmit={(values, actions) => {

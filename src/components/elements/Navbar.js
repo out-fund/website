@@ -76,7 +76,7 @@ const MobileLinks = ({ lang }) => {
           {links.getFunded.text[lang]}
         </Button>
 
-        {(lang == "en" || lang == "es") && (
+        {(lang === "en" || lang === "es") && (
           <div ref={mobileButtonRef} style={{ alignSelf: "center" }}>
             <Menue
               onClick={(event) => handleMobileMenueClick(event)}
