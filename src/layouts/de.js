@@ -12,7 +12,7 @@ const DE = ({ children, simpleNavbar, pt, noNavbar, noFooter }) => {
     <GlobalLayout pt={pt}>
       {!noNavbar && (
         <NewsBar
-          text="🎉 Outfund sammelt 115 Millionen Pfund inA Serien Investitionen ein und verpflichtet sich, in diesem Jahr weitere 500 Millionen Pfund an E-Commerce-Unternehmen zu verleihen!"
+          text="🎉 Outfund sammelt 115 Millionen Pfund in A Serien Investitionen ein und verpflichtet sich, in diesem Jahr weitere 500 Millionen Pfund an E-Commerce-Unternehmen zu verleihen!"
           url="https://tech.eu/2022/04/27/going-all-out-to-change-the-way-online-businesses-raise-funds-lands-ps115-million-in-outfunds-kitty/"
           urlText="Mehr lesen"
         />

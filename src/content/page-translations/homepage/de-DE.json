@@ -64,7 +64,7 @@
   },
   "weInvesting": {
     "title": "Wir wandeln zukünftige Einkommensströme in Vorabkapital um",
-    "description": "Wir stellen das Kapital bereit, das Sie brauchen, wenn Sie es brauchen. Keine Streuung, keine persönlichen Garantien, keine Zinssätze. Das ist gerechtere Finanzierung.<br/><br/> Verbinden Sie einfach Ihre digitalen Zahlungsanbieter mit Outfund, und wir erstellen maßgeschneiderte Finanzierungsangebote auf der Grundlage Ihrer Umsatzdaten innerhalb von 48 Stunden. In Wachstum investieren, und erstatten, wenn Sie Umsatz machen.",
+    "description": "Wir stellen das Kapital bereit, das Sie brauchen, wenn Sie es brauchen. Keine Streuung, keine persönlichen Garantien, keine Zinssätze. Das ist gerechtere Finanzierung.<br/><br/> Verbinden Sie einfach Ihre digitalen Zahlungsanbieter mit Outfund, und wir erstellen maßgeschneiderte Finanzierungsangebote auf der Grundlage Ihrer Umsatzdaten innerhalb von 48 Stunden. Wir investieren in Wachstum, Sie zahlen zurück, wenn Sie Umsatz machen.",
     "image": {
       "src": "./../../../images/PaymentCounterPhone.jpg",
       "alt": "Payment made ont the phone"
@@ -136,7 +136,7 @@
       },
       {
         "question": "Wie berechnen Sie mein Angebot?",
-        "answer": "Outfund stellt eine sichere Verbindung zu Ihren bestehenden Bank-, Zahlungsverarbeitungs-, und Buchhaltungsplattformen auf. Mithilfe von Vorhersagemodellen bewerten wir Schlüsselkennzahlen aus Ihrer Einnahmen, Ihrer Werbeleistung und anderer Daten von Dritten, um maßgeschneiderte Finanzierungsangebote zu erstellen. <br/><br/> Unsere Finanzierung basiert auf Ihrer Leistung. Wir nehmen kein Eigenkapital, das heißt, wir verwässern weder Sie noch Ihre Investoren. Stattdessen wird die Finanzierung durch eine einfache Umsatzbeteiligung zurückgezahlt."
+        "answer": "Outfund stellt eine sichere Verbindung zu Ihren bestehenden Bank-, Zahlungsverarbeitungs-, und Buchhaltungsplattformen her. Mithilfe von Vorhersagemodellen bewerten wir Schlüsselkennzahlen aus Ihren Einnahmen, Ihrer Werbeleistung und anderen Daten von Dritten, um maßgeschneiderte Finanzierungsangebote zu erstellen. <br/><br/> Unsere Finanzierung basiert auf Ihrer Leistung. Wir nehmen kein Eigenkapital, das heißt, wir verwässern weder Sie noch Ihre Investoren. Stattdessen wird die Finanzierung durch eine einfache Umsatzbeteiligung zurückgezahlt."
       },
       {
         "question": "Wie lange dauert der gesamte Prozess?",
