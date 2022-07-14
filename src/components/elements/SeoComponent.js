@@ -82,6 +82,14 @@ const SeoComponent = ({ title, description, image, article }) => {
     htmlLang = "sv-SE"
     countryName = "SE"
   }
+  if (langKey === "nl-be") {
+    htmlLang = "nl-BE"
+    countryName = "BE"
+  }
+  if (langKey === "fr-be") {
+    htmlLang = "fr-BE"
+    countryName = "BE"
+  }
 
   let hreflangPathname
   if (langKey === "en") {

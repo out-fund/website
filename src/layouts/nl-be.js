@@ -1,0 +1,31 @@
+import React from "react"
+import GlobalLayout from "./../layouts/GlobalLayout"
+import { Navbar, FooterSimple, NewsBar } from "./../components"
+import { SimpleNavbar } from "./../components/elements/Navbar"
+
+import "./../styles/new/typography/font.css"
+
+import { LangProvider } from "./../utils/LangProvider"
+
+const NlBe = ({ children, simpleNavbar, pt, noNavbar, noFooter }) => {
+  return (
+    <GlobalLayout pt={pt}>
+      {!noNavbar && (
+        <NewsBar
+          text="🎉 Outfund haalt £ 115 miljoen in serie A-investeringen op en committeert zich dit jaar voor nog eens £ 500 miljoen aan leningen aan e-commercebedrijven!"
+          url="https://tech.eu/2022/04/27/going-all-out-to-change-the-way-online-businesses-raise-funds-lands-ps115-million-in-outfunds-kitty/"
+          urlText="Lees verder"
+        />
+      )}
+
+      <LangProvider langKey="nl-be">
+        {!simpleNavbar && !noNavbar && <Navbar lang="nl-be" />}
+        {simpleNavbar && !noNavbar && <SimpleNavbar lang="nl-be" />}
+        {children}
+        {!noFooter && <FooterSimple lang="nl-be" />}
+      </LangProvider>
+    </GlobalLayout>
+  )
+}
+
+export default NlBe
