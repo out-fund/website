@@ -1,18 +1,22 @@
 {
-  "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "lib": [
-      "es2017",
-      "es7",
-      "es6",
-      "dom"
-    ],
-    "declaration": true,
-    "outDir": "dist",
-    "strict": true,
-    "esModuleInterop": true
-  },
+ "compilerOptions": {
+  "target": "esnext",
+  "module": "esnext", // Alternatively you can use "commonjs"
+  "lib": [
+    "dom",
+    "es2017"
+  ],
+  "declaration": true,
+  "outDir": "dist",
+  "strict": true,
+  "esModuleInterop": true,
+  "jsx": "react",
+  "experimentalDecorators": true,
+  "emitDecoratorMetadata": true,
+  "noEmit": true,
+  "skipLibCheck": true,
+  "moduleResolution": "node",
+},
   "exclude": [
     "node_modules",
   ]
