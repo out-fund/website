@@ -155,8 +155,8 @@ function optionSelected(selector: string, regions: string[], platform: string) {
       if (elementType === "select") {
         const select = el as HTMLSelectElement
         const optionIndex = select.options[select.selectedIndex]
-        optionValue = "peter?"
-        // lib.getDataAttribute("option-value", optionIndex) || optionIndex.value
+        optionValue =
+          lib.getDataAttribute("option-value", optionIndex) || optionIndex.value
       }
 
       if (elementType === "input") {
@@ -180,12 +180,6 @@ function optionSelected(selector: string, regions: string[], platform: string) {
       const pageData = lib.getPageInfo()
       const input = lib.getInputProperties(el)
       const value = optionValue || input.value
-      console.log({
-        name: optionName,
-        option,
-        filed_name: input.field_name,
-        value,
-      })
       const data: Partial<ITrackInputs> = {
         name: optionName || input.name,
         option,

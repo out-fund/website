@@ -65,7 +65,7 @@ const MobileLinks = ({ lang }) => {
   //   getFundedURL = "/get-funded-eu/"
   // }
   return (
-    <MobileLinksWrapper>
+    <MobileLinksWrapper data-surface-type="Header">
       <ButtonWrapper>
         <Button
           to={getFundeURL(lang)}
@@ -120,7 +120,7 @@ const MobileLinks = ({ lang }) => {
 
 function DesktopLinks({ lang }) {
   return (
-    <DesktopLinksWrapper>
+    <DesktopLinksWrapper data-surface-type="Header">
       {links.howItWorks.text[lang] && (
         <li>
           <Button to={links.howItWorks.url} variant="navLink">

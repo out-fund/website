@@ -122,12 +122,13 @@ function getSurfaceData(element: HTMLElement, surface: "type" | "title") {
   const parent = element?.parentNode || false
   const parent2 = (parent && parent?.parentNode) || false
   const parent3 = (parent2 && parent2?.parentNode) || false
-  const tree = [parent, parent2, parent3]
+  const parent4 = (parent3 && parent3?.parentNode) || false
+  const tree = [parent, parent2, parent3, parent4]
 
   for (let i = 0; i < tree.length; i++) {
     if (tree[i]) {
       const el = tree[i] as HTMLElement
-      const hasSurfaceData = el.getAttribute("data-surface-type")
+      const hasSurfaceData = el.getAttribute(`data-surface-${surface}`)
       if (hasSurfaceData) surfaceData = hasSurfaceData
       if (surfaceData) break
     }
@@ -166,12 +167,11 @@ function getElementProperties(element: HTMLElement) {
   const href = element.getAttribute("href") || ""
   const title = element.getAttribute("title") || ""
   const text = element.textContent || element.innerText || ""
-  // const classList = element.classList.toString() || []
   let innerText = ""
-  if (text.length > 0 && text.length > 40) {
-    innerText = text.substring(0, 20)
+  if (text.length > 0 && text.length > 0) {
+    innerText = text
   }
-  if (!text && title) {
+  if (!innerText && title) {
     innerText = title
   }
   return {
