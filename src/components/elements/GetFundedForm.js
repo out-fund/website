@@ -8,7 +8,7 @@ import F from "./../../styles/new/form"
 
 import { VisuallyHidden } from "./../../styles/utils"
 
-import { customEvent } from "../../tracking/track"
+import { track } from "../../tracking"
 
 
 const encode = (data) => {
@@ -40,19 +40,19 @@ const GetFundedForm = ({ data, language }) => {
             }),
           })
             .then(() => {
-              customEvent("Get Funded Form Submitted", {
+              track.customEvent("Get Funded Form Submitted", {
                 name: values.name,
                 email: values.email,
                 phone: values.phone,
                 website: values.website,
                 amr: values.amr,
                 platform: "website",
-                country: language || "",
+                country: language || "uk",
               });
-              // navigate(
-              //   `${language ? "/" + language + "/thank-you/" : "/thank-you/"}`
-              // )
-              // actions.resetForm()
+              navigate(
+                `${language ? "/" + language + "/thank-you/" : "/thank-you/"}`
+              )
+              actions.resetForm()
             })
             .catch(() => {
               alert("Error")
@@ -206,7 +206,7 @@ const GetFundedForm = ({ data, language }) => {
           </F.FormikForm>
         )}
       </Formik>
-    </FormWrapper>
+    </FormWrapper >
   )
 }
 
