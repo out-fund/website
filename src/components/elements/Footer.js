@@ -50,7 +50,7 @@ const Footer = ({ lang }) => {
       <ContentWrapper>
         <Top>
           <LogoWrapper>
-            <Link to={`/`}>
+            <Link to={`/`} >
               <LogoSvg />
             </Link>
 
@@ -64,7 +64,7 @@ const Footer = ({ lang }) => {
             )}
           </LogoWrapper>
           <CountryLinksWrapper>
-            <LinksWrapper>
+            <LinksWrapper data-surface-type="Footer">
               <LinksColumn>
                 {langKey === "es" && <ColumntTitle>Compañía</ColumntTitle>}
                 {langKey !== "es" && <ColumntTitle>Company</ColumntTitle>}

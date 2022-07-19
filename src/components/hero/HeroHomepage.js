@@ -12,7 +12,7 @@ const HeroHomepage = ({ data }) => {
   return (
     <HeroWrapper>
       <Wrapper>
-        <TextWrapper>
+        <TextWrapper data-surface-type="Hero" data-surface-title={title}>
           <Title>{title}</Title>
           <Description>{description}</Description>
           <ButtonWrapper>

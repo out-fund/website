@@ -16,12 +16,15 @@ const Button = ({
   color,
   className,
   isOpen,
+  title,
   ...props
 }) => {
   const langKey = useLangProvider()
   if (to && langKey !== "en") {
     to = "/" + langKey + to
   }
+
+  const elementType = variant === ('navLink' || 'footerLink') ? 'Hyperlink' : 'Button'
 
   return (
     <ButtonWrap
@@ -32,11 +35,11 @@ const Button = ({
       isOpen={isOpen}
     >
       {to ? (
-        <GatsbyLink to={to} activeClassName="currentPage" {...props}>
+        <GatsbyLink to={to} activeClassName="currentPage" {...props} data-segment="click" element-type={elementType}>
           {children}
         </GatsbyLink>
       ) : href ? (
-        <a href={href} {...props}>
+        <a href={href} {...props} data-segment="click" element-type={elementType}>
           {children}
         </a>
       ) : (
@@ -90,8 +93,8 @@ const ButtonWrap = styled.div`
     }
 
     ${({ variant }) =>
-      variant === "primary"
-        ? css`
+    variant === "primary"
+      ? css`
             background-color: ${theme.color.button.primary.backgroundColor};
             color: ${theme.color.white};
             transition: background-color 0.1s ease-in-out;
@@ -101,29 +104,29 @@ const ButtonWrap = styled.div`
               background-color: ${theme.color.button.primary.hover};
             }
           `
-        : variant === "secondary"
+      : variant === "secondary"
         ? css`
             box-shadow: ${(props) =>
-              props.colorVersion === "white"
-                ? `inset 0px 0px 0px 1px ${theme.color.white}`
-                : `inset 0px 0px 0px 1px ${theme.color.button.secondary.color}`};
+            props.colorVersion === "white"
+              ? `inset 0px 0px 0px 1px ${theme.color.white}`
+              : `inset 0px 0px 0px 1px ${theme.color.button.secondary.color}`};
 
             background-color: ${theme.color.button.secondary.backgroundColor};
             color: ${(props) =>
-              props.colorVersion === "white"
-                ? theme.color.white
-                : theme.color.button.secondary.color};
+            props.colorVersion === "white"
+              ? theme.color.white
+              : theme.color.button.secondary.color};
             transition: background-color 0.1s ease-in-out;
             :hover:enabled,
             :focus:enabled {
               background-color: ${(props) =>
-                props.colorVersion === "white"
-                  ? "rgba(255,255,255, 0.2)"
-                  : theme.color.button.secondary.hover};
+            props.colorVersion === "white"
+              ? "rgba(255,255,255, 0.2)"
+              : theme.color.button.secondary.hover};
             }
           `
         : variant === "navLink"
-        ? css`
+          ? css`
             box-shadow: inset 0px 0px 0px 1px transparent;
             background-color: transparent;
             color: ${theme.color.text.headings};
@@ -138,8 +141,8 @@ const ButtonWrap = styled.div`
               background-color: #deeeff;
             }
           `
-        : variant === "footerLink"
-        ? css`
+          : variant === "footerLink"
+            ? css`
             box-shadow: inset 0px 0px 0px 1px transparent;
             background-color: transparent;
             margin-left: -24px;
@@ -158,8 +161,8 @@ const ButtonWrap = styled.div`
               background-color: #deeeff;
             } */
           `
-        : variant === "countrySelector"
-        ? css`
+            : variant === "countrySelector"
+              ? css`
             box-shadow: inset 0px 0px 0px 1px #4f6781;
             background-color: transparent;
             /* margin-left: -24px; */
@@ -195,14 +198,14 @@ const ButtonWrap = styled.div`
               }
             }
           `
-        : variant === "navDropDown"
-        ? css`
+              : variant === "navDropDown"
+                ? css`
             box-shadow: inset 0px 0px 0px 1px transparent;
             /* box-shadow: inset 0px 0px 0px 1px
               ${({ isOpen }) =>
-              isOpen
-                ? theme.color.button.primary.backgroundColor
-                : "transparent"}; */
+                    isOpen
+                      ? theme.color.button.primary.backgroundColor
+                      : "transparent"}; */
 
             background-color: transparent;
             /* color: ${theme.color.button.primary.backgroundColor}; */
@@ -235,20 +238,20 @@ const ButtonWrap = styled.div`
               } */
             }
             ${(props) =>
-              props.isOpen
-                ? css`
+                    props.isOpen
+                      ? css`
                     background-color: #fff;
                     &:after {
                       opacity: 1;
                     }
                   `
-                : ""}
+                      : ""}
           `
-        : ""};
+                : ""};
 
     ${({ size }) =>
-      size === "large"
-        ? css`
+    size === "large"
+      ? css`
             font-size: 16px;
             padding: 0.66666667em 1.77777778em;
             border-radius: 26px;
@@ -263,7 +266,7 @@ const ButtonWrap = styled.div`
               line-height: 24px;
             }
           `
-        : size === "small"
+      : size === "small"
         ? css`
             font-size: 12px;
             padding: 0.57142857em 1.14285714em;

@@ -8,6 +8,9 @@ import F from "./../../styles/new/form"
 
 import { VisuallyHidden } from "./../../styles/utils"
 
+import { track } from "../../tracking"
+
+
 const encode = (data) => {
   return Object.keys(data)
     .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -37,6 +40,15 @@ const GetFundedForm = ({ data, language }) => {
             }),
           })
             .then(() => {
+              track.customEvent("Get Funded Form Submitted", {
+                name: values.name,
+                email: values.email,
+                phone: values.phone,
+                website: values.website,
+                amr: values.amr,
+                platform: "website",
+                country: language || "uk",
+              });
               navigate(
                 `${language ? "/" + language + "/thank-you/" : "/thank-you/"}`
               )
@@ -97,6 +109,9 @@ const GetFundedForm = ({ data, language }) => {
                 $valid={errors.name && touched.name}
                 name="name"
                 placeholder={data.form.name}
+                data-segment="textInput"
+                element-name="full_name"
+                data-trait="full_name"
               />
               <F.ErrorWrapper>
                 <F.FormikError component="div" name="name" />
@@ -110,6 +125,9 @@ const GetFundedForm = ({ data, language }) => {
                 $valid={errors.email && touched.email}
                 name="email"
                 placeholder={data.form.email}
+                data-segment="textInput"
+                element-name="email"
+                data-trait="email"
               />
               <F.ErrorWrapper>
                 <F.FormikError component="div" name="email" />
@@ -123,6 +141,9 @@ const GetFundedForm = ({ data, language }) => {
                 $valid={errors.phone && touched.phone}
                 name="phone"
                 placeholder={data.form.phone}
+                data-segment="textInput"
+                element-name="phone"
+                data-trait="phone"
               />
               <F.ErrorWrapper>
                 <F.FormikError component="div" name="phone" />
@@ -136,6 +157,9 @@ const GetFundedForm = ({ data, language }) => {
                 $valid={errors.website && touched.website}
                 name="website"
                 placeholder={data.form.website}
+                data-segment="textInput"
+                element-name="website"
+                data-trait="website"
               />
               <F.ErrorWrapper>
                 <F.FormikError component="div" name="website" />
@@ -153,6 +177,9 @@ const GetFundedForm = ({ data, language }) => {
                   onChange={handleChange}
                   onBlur={handleBlur}
                   required
+                  data-segment="option"
+                  element-name="amr"
+                  data-trait="amr"
                 >
                   <option value="DEFAULT" disabled>
                     {data.form.select.default}
@@ -179,7 +206,7 @@ const GetFundedForm = ({ data, language }) => {
           </F.FormikForm>
         )}
       </Formik>
-    </FormWrapper>
+    </FormWrapper >
   )
 }
 
