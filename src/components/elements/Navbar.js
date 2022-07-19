@@ -22,13 +22,13 @@ export const SimpleNavbar = ({ lang }) => {
   )
 }
 
-const getFundeURL = (inputLang) => {
-  let getFundedURL = links.getFunded.url
-  if (inputLang !== "en" && inputLang !== "es") {
-    getFundedURL = "/get-funded-eu/"
-  }
-  return getFundedURL
-}
+// const getFundeURL = (inputLang) => {
+//   let getFundedURL = links.getFunded.url
+//   if (inputLang !== "en" && inputLang !== "es") {
+//     getFundedURL = "/get-funded-eu/"
+//   }
+//   return getFundedURL
+// }
 
 const MobileLinks = ({ lang }) => {
   const [mobileMenueIsOpen, setMobileMenueIsOpen] = useState(false)

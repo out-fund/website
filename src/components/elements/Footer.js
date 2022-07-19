@@ -50,7 +50,7 @@ const Footer = ({ lang }) => {
       <ContentWrapper>
         <Top>
           <LogoWrapper>
-            <Link to={`/`} >
+            <Link to={`/`}>
               <LogoSvg />
             </Link>
 
@@ -132,7 +132,7 @@ const Footer = ({ lang }) => {
                 </Button>
               </LinksColumn>
             </LinksWrapper>
-            {/* <CountryWrapper>
+            <CountryWrapper>
               {langKey === "es" && <ColumntTitle>País</ColumntTitle>}
               {langKey !== "es" && <ColumntTitle>Country</ColumntTitle>}
               <CuntryButtonWrapper ref={countryButtonRef}>
@@ -183,7 +183,7 @@ const Footer = ({ lang }) => {
                   </Button>
                 </CuntryButtonWrapper>
               </CountryDropdownWrapper>
-            </CountryWrapper> */}
+            </CountryWrapper>
           </CountryLinksWrapper>
         </Top>
         {langKey === "en" && (
