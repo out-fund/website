@@ -4,7 +4,7 @@ import GlobalStyle from "./src/styles/new/utils/GlobalStyle"
 import initSegment, { track } from "./src/tracking"
 
 const segmentKey = 'SbUYctfcULJBDClnkbSPOkPmfEPwexBU'
-const regions = ['uk', 'us', 'es', 'fr', 'dk', 'ro', 'cz', 'nl', 'hu', 'it', 'pt', 'de', 'pl', 'se', 'fr-be', 'nl-be']
+const regions = ['uk', 'au', 'us', 'es', 'fr', 'dk', 'ro', 'cz', 'nl', 'hu', 'it', 'pt', 'de', 'pl', 'se', 'fr-be', 'nl-be']
 
 export const onClientEntry = () => {
   initSegment(segmentKey)
