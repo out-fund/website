@@ -8,7 +8,7 @@ import F from "./../../styles/new/form"
 
 import { VisuallyHidden } from "./../../styles/utils"
 
-import { track } from "../../tracking"
+import { track } from "@shiggydoodah/segment-events"
 
 
 const encode = (data) => {
