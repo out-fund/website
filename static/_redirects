@@ -63,7 +63,7 @@
 # /us/how-funding-works/    /how-funding-works/    302!  Country=gb,ie
 # /us/success-stories/      /success-stories/      302!  Country=gb,ie
 # /us/support/faq/          /support/faq/          302!  Country=gb,ie
-/us/get-funded/           /get-funded/           302!  Country=gb,ie
+# /us/get-funded/           /get-funded/           302!  Country=gb,ie
 # /us/partners/             /partners/             302!  Country=gb,ie
 # /us/contact-us/           /contact-us/           302!  Country=gb,ie
 # /us/referral-program/     /referral-program/     302!  Country=gb,ie
@@ -73,7 +73,7 @@
 # /au/how-funding-works/    /how-funding-works/    302!  Country=gb,ie
 # /au/success-stories/      /success-stories/      302!  Country=gb,ie
 # /au/support/faq/          /support/faq/          302!  Country=gb,ie
-/au/get-funded/           /get-funded/           302!  Country=gb,ie
+# /au/get-funded/           /get-funded/           302!  Country=gb,ie
 # /au/partners/             /partners/             302!  Country=gb,ie
 # /au/contact-us/           /contact-us/           302!  Country=gb,ie
 # /au/referral-program/     /referral-program/     302!  Country=gb,ie
@@ -83,7 +83,7 @@
 # /es/how-funding-works/    /how-funding-works/    302!  Country=gb,ie
 # /es/success-stories/      /success-stories/      302!  Country=gb,ie
 # /es/support/faq/          /support/faq/          302!  Country=gb,ie
-/es/get-funded/           /get-funded/           302!  Country=gb,ie
+# /es/get-funded/           /get-funded/           302!  Country=gb,ie
 # /es/partners/             /partners/             302!  Country=gb,ie
 # /es/contact-us/           /contact-us/           302!  Country=gb,ie
 # /es/referral-program/     /referral-program/     302!  Country=gb,ie
@@ -95,7 +95,7 @@
 # /us/how-funding-works/    /au/how-funding-works  302!  Country=au
 # /us/success-stories/      /au/success-stories/   302!  Country=au
 # /us/support/faq/          /au/support/faq/       302!  Country=au
-/us/get-funded/           /au/get-funded/        302!  Country=au
+# /us/get-funded/           /au/get-funded/        302!  Country=au
 # /us/partners/             /au/partners/          302!  Country=au
 # /us/contact-us/           /au/contact-us/        302!  Country=au
 # /us/referral-program/     /au/referral-program/  302!  Country=au
@@ -105,7 +105,7 @@
 # /how-funding-works/       /au/how-funding-works  302!  Country=au
 # /success-stories/         /au/success-stories/   302!  Country=au
 # /support/faq/             /au/support/faq/       302!  Country=au
-/get-funded/              /au/get-funded/        302!  Country=au
+# /get-funded/              /au/get-funded/        302!  Country=au
 # /partners/                /au/partners/          302!  Country=au
 # /contact-us/              /au/contact-us/        302!  Country=au
 # /referral-program/        /au/referral-program/  302!  Country=au
@@ -115,7 +115,7 @@
 # /es/how-funding-works/    /au/how-funding-works  302!  Country=au
 # /es/success-stories/      /au/success-stories/   302!  Country=au
 # /es/support/faq/          /au/support/faq/       302!  Country=au
-/es/get-funded/           /au/get-funded/        302!  Country=au
+# /es/get-funded/           /au/get-funded/        302!  Country=au
 # /es/partners/             /au/partners/          302!  Country=au
 # /es/contact-us/           /au/contact-us/        302!  Country=au
 # /es/referral-program/     /au/referral-program/  302!  Country=au
@@ -127,7 +127,7 @@
 # /how-funding-works/       /us/how-funding-works  302!  Country=us,ca
 # /success-stories/         /us/success-stories/   302!  Country=us,ca
 # /support/faq/             /us/support/faq/       302!  Country=us,ca
-/get-funded/              /us/get-funded/        302!  Country=us,ca
+# /get-funded/              /us/get-funded/        302!  Country=us,ca
 # /partners/                /us/partners/          302!  Country=us,ca
 # /contact-us/              /us/contact-us/        302!  Country=us,ca
 # /referral-program/        /us/referral-program/  302!  Country=us,ca
@@ -137,7 +137,7 @@
 # /au/how-funding-works/    /us/how-funding-works/ 302!  Country=us,ca
 # /au/success-stories/      /us/success-stories/   302!  Country=us,ca
 # /au/support/faq/          /us/support/faq/       302!  Country=us,ca
-/au/get-funded/           /us/get-funded/        302!  Country=us,ca
+# /au/get-funded/           /us/get-funded/        302!  Country=us,ca
 # /au/partners/             /us/partners/          302!  Country=us,ca
 # /au/contact-us/           /us/contact-us/        302!  Country=us,ca
 # /au/referral-program/     /us/referral-program/  302!  Country=us,ca
@@ -147,7 +147,7 @@
 # /es/how-funding-works/    /us/how-funding-works/ 302!  Country=us,ca
 # /es/success-stories/      /us/success-stories/   302!  Country=us,ca
 # /es/support/faq/          /us/support/faq/       302!  Country=us,ca
-/es/get-funded/           /us/get-funded/        302!  Country=us,ca
+# /es/get-funded/           /us/get-funded/        302!  Country=us,ca
 # /es/partners/             /us/partners/          302!  Country=us,ca
 # /es/contact-us/           /us/contact-us/        302!  Country=us,ca
 # /es/referral-program/     /us/referral-program/  302!  Country=us,ca
