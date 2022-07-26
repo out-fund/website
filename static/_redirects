@@ -168,6 +168,7 @@
 # /se/      /     302!
 # /fr-be/   /     302!
 # /nl-be/   /     302!
+# /lt/   /     302!
 
 # /fr/get-funded-eu/      /     302!
 # /dk/get-funded-eu/      /     302!
@@ -182,6 +183,7 @@
 # /se/get-funded-eu/      /     302!
 # /fr-be/get-funded-eu/   /     302!
 # /nl-be/get-funded-eu/   /     302!
+# /lt/get-funded-eu/   /     302!
 
 # /fr/thank-you/       /      302!
 # /dk/thank-you/       /      302!
@@ -196,3 +198,4 @@
 # /se/thank-you/       /      302!
 # /fr-be/thank-you/    /      302!
 # /nl-be/thank-you/    /      302!
+# /lt/thank-you/    /      302!

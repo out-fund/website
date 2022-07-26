@@ -103,6 +103,7 @@ const links = {
       pt: "Obtenha financiamento",
       pl: "Uzyskaj finansowanie",
       se: "Få finansiering",
+      lt: "Gaukite finansavimą",
     },
     url: "https://client.out.fund/signup",
   },
