@@ -1,8 +1,9 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import styled, { css } from "styled-components"
 import { Link as GatsbyLink } from "gatsby"
 import PropTypes from "prop-types"
 import { theme } from "./../../styles/new/theme"
+import Cookie from "js-cookie"
 // import T from "./../../styles/new/typography"
 
 import { useLangProvider } from "./../../utils/LangProvider"
@@ -19,11 +20,26 @@ const Button = ({
   title,
   ...props
 }) => {
+  const [utms, setUtms] = useState({});
+  // TEMPORARY - remove this when we have cross-domain utm tracking in segment working!
+  useEffect(() => {
+    if (Cookie.get("outfund_analytics")) {
+      setUtms(JSON.parse(Cookie.get("outfund_analytics")));
+    }
+  }, [])
+
+  let url = href;
+  const hasUtms = Object.keys(utms).length > 0;
+  if (href && hasUtms) {
+    url = href + "?" + Object.keys(utms).map(key => key + "=" + utms[key]).join("&");
+  }
+  // TEMPORARY -
+
   const langKey = useLangProvider()
+
   if (to && langKey !== "en") {
     to = "/" + langKey + to
   }
-
   const elementType = variant === ('navLink' || 'footerLink') ? 'Hyperlink' : 'Button'
 
   return (
@@ -39,7 +55,7 @@ const Button = ({
           {children}
         </GatsbyLink>
       ) : href ? (
-        <a href={href} {...props} data-segment="click" element-type={elementType}>
+        <a href={url} {...props} data-segment="click" element-type={elementType}>
           {children}
         </a>
       ) : (
