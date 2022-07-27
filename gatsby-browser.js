@@ -7,7 +7,7 @@ const segmentKey = 'SbUYctfcULJBDClnkbSPOkPmfEPwexBU'
 const regions = ['uk', 'au', 'us', 'es', 'fr', 'dk', 'ro', 'cz', 'nl', 'hu', 'it', 'pt', 'de', 'pl', 'se', 'fr-be', 'nl-be']
 
 export const onClientEntry = () => {
-  initSegment(segmentKey)
+  initSegment(segmentKey, {})
 }
 
 export const onRouteUpdate = () => {
