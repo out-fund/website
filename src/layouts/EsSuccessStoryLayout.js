@@ -61,6 +61,7 @@ const CtaBlock = () => {
             variant="primary"
             size="large"
             id="cta-get-funded-ss-click"
+            data-element-category="Signup CTA"
           >
             Get funded
           </Button>

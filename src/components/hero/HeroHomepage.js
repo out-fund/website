@@ -23,6 +23,7 @@ const HeroHomepage = ({ data }) => {
                 variant="primary"
                 size="large"
                 id="cta-get-funded-hero-click"
+                data-element-category="Signup CTA"
               >
                 {primaryBtn.text}
               </Button>

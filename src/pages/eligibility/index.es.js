@@ -45,6 +45,7 @@ const Eligibility = ({ location }) => {
                   variant="primary"
                   size="large"
                   id="cta-get-funded-eligibility-click"
+                  data-element-category="Signup CTA"
                 >
                   Aplica ya
                 </Button>

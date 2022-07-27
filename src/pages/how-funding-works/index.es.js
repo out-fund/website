@@ -67,6 +67,7 @@ const HowFundingWorks = (props) => {
                     variant="primary"
                     size="large"
                     id="cta-get-funded-hiw-click"
+                    data-element-category="Signup CTA"
                   >
                     Solicita financiación
                   </Button>

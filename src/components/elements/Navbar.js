@@ -74,6 +74,7 @@ const MobileLinks = ({ lang }) => {
           variant="primary"
           className="getFunded getFunded-mobile"
           id="cta-get-funded-mobile-navbar-click"
+          data-element-category="Signup CTA"
         >
           {links.getFunded.text[lang]}
         </Button>
@@ -158,6 +159,7 @@ function DesktopLinks({ lang }) {
             href="https://client.out.fund/signup"
             variant="primary"
             id="cta-get-funded-navbar-click"
+            data-element-category="Signup CTA"
           >
             {links.getFunded.text[lang]}
           </Button>

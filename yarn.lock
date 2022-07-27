@@ -2295,10 +2295,10 @@
     schema-utils "^2.6.5"
     source-map "^0.7.3"
 
-"@shiggydoodah/segment-events@^1.1.8":
-  version "1.1.8"
-  resolved "https://registry.yarnpkg.com/@shiggydoodah/segment-events/-/segment-events-1.1.8.tgz#4c3a60ccf44d906090159d3ad0de5e3072ea01ea"
-  integrity sha512-MxLqW+4Ux1+ionNtVn8lAYFP87YxaUDaXthQ9aRWeyXFphuFTbJm2kJojzdPl7/dbV255umIa0PzHBCGPLU/Fw==
+"@shiggydoodah/segment-events@^1.1.11":
+  version "1.1.11"
+  resolved "https://registry.yarnpkg.com/@shiggydoodah/segment-events/-/segment-events-1.1.11.tgz#d8c840fe87678b255f9e9f735c40e8e91153c041"
+  integrity sha512-8U47tW8q5vf3XJvuXOEEHllJ2Lv7AshA97Bqi9AoN3QwGplVco4ZzcnvT6DDG4Cc8HngF3VlOVmLvqsBaKuxaw==
 
 "@sideway/address@^4.1.3":
   version "4.1.4"

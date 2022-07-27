@@ -18,6 +18,7 @@ const CardCta = ({ title, btn, bgc }) => {
             variant="primary"
             size="large"
             id="cta-get-started-card-click"
+            data-element-category="Signup CTA"
           >
             {btn.text}
           </Button>
