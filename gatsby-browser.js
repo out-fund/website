@@ -1,7 +1,7 @@
 import React from "react"
 import GlobalStyle from "./src/styles/new/utils/GlobalStyle"
 
-import { initSegment, track, utmCookie } from "@shiggydoodah/segment-events"
+import { initSegment, track } from "@shiggydoodah/segment-events"
 
 const segmentKey = 'SbUYctfcULJBDClnkbSPOkPmfEPwexBU'
 const regions = ['uk', 'au', 'us', 'es', 'fr', 'dk', 'ro', 'cz', 'nl', 'hu', 'it', 'pt', 'de', 'pl', 'se', 'fr-be', 'nl-be']

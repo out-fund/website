@@ -1,8 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
-
 import LangLayout from "./../layouts/en"
-
+import CookieConsentModal from "../components/CookieConsentModal"
 import {
   Main,
   SectionWeFunded,
@@ -34,6 +33,7 @@ const HomePage = (props) => {
         <SectionAboutUs data={props.data.homepageJson.aboutUs} />
         <SectionRegulated data={props.data.trustJson} />
       </Main>
+      <CookieConsentModal />
     </LangLayout>
   )
 }
