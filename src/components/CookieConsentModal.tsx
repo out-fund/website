@@ -1,7 +1,8 @@
 import React from 'react'
-import { ConsentManager, openConsentManager } from '@segment/consent-manager'
+import { ConsentManagerBuilder } from '@segment/consent-manager'
 import inEU from '@segment/in-eu'
 import { Link } from 'gatsby'
+import styled from "styled-components"
 
 export default function () {
   const bannerContent = (
@@ -12,30 +13,35 @@ export default function () {
       .
     </span>
   )
-  const bannerSubContent = 'You can change your preferences at any time.'
-  const preferencesDialogTitle = 'Website Data Collection Preferences'
-  const preferencesDialogContent =
-    'We use data collected by cookies and JavaScript libraries to improve your browsing experience, analyze site traffic, deliver personalized advertisements, and increase the overall performance of our site.'
-  const cancelDialogTitle = 'Are you sure you want to cancel?'
-  const cancelDialogContent =
-    'Your preferences have not been saved. By continuing to use our website, you՚re agreeing to our Website Data Collection Policy.'
 
   return (
-    <div>
-      <ConsentManager
-        writeKey="SbUYctfcULJBDClnkbSPOkPmfEPwexBU"
-        shouldRequireConsent={inEU}
-        bannerContent={bannerContent}
-        bannerSubContent={bannerSubContent}
-        preferencesDialogTitle={preferencesDialogTitle}
-        preferencesDialogContent={preferencesDialogContent}
-        cancelDialogTitle={cancelDialogTitle}
-        cancelDialogContent={cancelDialogContent}
-        bannerAsModal={true}
-      />
-      <button type="button" onClick={openConsentManager}>
-        Website Data Collection Preferences
-      </button>
-    </div>
+    <Modal data-surface-type="Cookie Consent Banner">
+      <ModalHeading>Cookie Policy</ModalHeading>
+
+
+    </Modal>
   )
 }
+
+export const Modal = styled.div`
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* max-width: calc(100% - 5rem); */
+  /* background-color: #fff; */
+  background-color: var(--gray100);
+  padding: 2rem;
+  z-index: 99999;
+  -webkit-box-shadow: -1px -1px 4px 4px rgba(0,0,0,0.18); 
+  box-shadow: -1px -1px 4px 4px rgba(0,0,0,0.10);
+`
+
+export const ModalHeading = styled.h3`
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: inherit;
+
+
+`
