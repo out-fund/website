@@ -154,8 +154,7 @@
   },
   "aboutUs": {
     "title": "O nás",
-    "description": "Outfund se zaměřuje na rostoucí podniky. Náš tým se skládá ze zakladatelů, developerů, konzultantů a milovníků kávy. Jednáme rychle a chceme vidět výsledky za vším, co děláme. Více se o nás můžete dozvědět ještě dnes."
-    ,
+    "description": "Outfund se zaměřuje na rostoucí podniky. Náš tým se skládá ze zakladatelů, developerů, konzultantů a milovníků kávy. Jednáme rychle a chceme vidět výsledky za vším, co děláme. Více se o nás můžete dozvědět ještě dnes.",
     "teamImages": [
       {
         "src": "./../../../images/team/Outfund-team-Abanoub.jpg",

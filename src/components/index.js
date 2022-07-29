@@ -56,6 +56,7 @@ import NewsBar from "./elements/NewsBar"
 import FooterSimple from "./elements/FooterSimple"
 
 import GetFundedFormEU from "./elements/GetFundedFormEU"
+import Switch from "./elements/Swtich"
 
 export {
   SectionWeAreInvesting,
@@ -111,4 +112,5 @@ export {
   NewsBar,
   FooterSimple,
   GetFundedFormEU,
+  Switch,
 }

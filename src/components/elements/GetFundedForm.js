@@ -10,7 +10,6 @@ import { VisuallyHidden } from "./../../styles/utils"
 
 import { track } from "@shiggydoodah/segment-events"
 
-
 const encode = (data) => {
   return Object.keys(data)
     .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -48,7 +47,7 @@ const GetFundedForm = ({ data, language }) => {
                 amr: values.amr,
                 platform: "website",
                 country: language || "uk",
-              });
+              })
               navigate(
                 `${language ? "/" + language + "/thank-you/" : "/thank-you/"}`
               )
@@ -206,7 +205,7 @@ const GetFundedForm = ({ data, language }) => {
           </F.FormikForm>
         )}
       </Formik>
-    </FormWrapper >
+    </FormWrapper>
   )
 }
 

@@ -53,7 +53,10 @@ const pageNames = [
 ]
 
 export const onClientEntry = () => {
-  initSegment(segmentKey, {})
+  initSegment(segmentKey, {
+    methods: ['addSourceMiddleware'],
+    cookieBanner: true // WARNING: We're using a cookie banner, so we need this enable it. disabling it will cause the site to break!!! 
+  })
 }
 
 export const onRouteUpdate = () => {
