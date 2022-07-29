@@ -5,7 +5,6 @@ import { Switch } from "./index"
 import Cookies from "js-cookie"
 import { cookiesSettings as defaultCookiesSetting } from "../config/cookies"
 import CookieModal from "./CookieModal"
-import useBrowser from "../hooks/useBrowser"
 
 export default function CookieManager(props: {
   force?: boolean
@@ -14,7 +13,6 @@ export default function CookieManager(props: {
   body?: string
 }) {
   const [openPreferences, setOpenPreferences] = useState(false)
-  let disabled = false
   const cookiesSettings = props.cookiesSettings || defaultCookiesSetting
   const segmentID = "SbUYctfcULJBDClnkbSPOkPmfEPwexBU"
   const categoryMapping: Record<string, string> = {
@@ -24,12 +22,11 @@ export default function CookieManager(props: {
   }
   const categories = Object.keys(categoryMapping)
 
-  if (useBrowser()) {
-    disabled =
-      window.location.pathname.indexOf("cookie-policy") > -1 ? true : false
-  } else {
-    return <></>
-  }
+  useEffect(() => {
+    if (props.force && !openPreferences) {
+      setOpenPreferences(true)
+    }
+  }, [props.force, openPreferences])
 
   return (
     <ConsentManagerBuilder
@@ -44,9 +41,11 @@ export default function CookieManager(props: {
           Object.keys(preferences).length === 0
         ) {
           destinations.forEach((d: any) => {
+            console.log(destinations)
             setPreferences({ [d.id]: true })
           })
           categories.forEach((c: any) => {
+            console.log(c)
             setPreferences({ [c]: true })
           })
         }
@@ -113,7 +112,7 @@ export default function CookieManager(props: {
         } else {
           return (
             <>
-              {!openPreferences && (
+              {!openPreferences && showModal && (
                 <CookieModal>
                   <Button onClick={() => acceptAll()} data-segment="click">
                     Accept
@@ -123,6 +122,7 @@ export default function CookieManager(props: {
                   </ButtonSecondary>
                 </CookieModal>
               )}
+              {!openPreferences && !showModal && <></>}
               {openPreferences && (
                 <ModalOverlay>
                   <SettingsModal>
@@ -164,16 +164,18 @@ export default function CookieManager(props: {
                       })}
                       <div className="button-wrapper">
                         <FormButton
-                          onClick={() => acceptAll()}
+                          onClick={() => {
+                            if (props.force) {
+                              setOpenPreferences(false)
+                              window.location.reload()
+                            }
+                          }}
                           data-segment="click"
                         >
                           Cancel
                         </FormButton>
-                        <FormButton
-                          onClick={() => acceptAll()}
-                          type="submit"
-                          data-segment="click"
-                        >
+
+                        <FormButton type="submit" data-segment="click">
                           Accept
                         </FormButton>
                       </div>
@@ -186,6 +188,22 @@ export default function CookieManager(props: {
         }
       }}
     </ConsentManagerBuilder>
+  )
+}
+
+export const OpenCookiePreferences = (props: { children: any }) => {
+  const [isOpen, setIsOpen] = useState(false)
+  return (
+    <>
+      <span
+        className="cookie-modal-"
+        aria-modal
+        onClick={() => setIsOpen(true)}
+      >
+        {props.children}
+      </span>
+      {isOpen && <CookieManager force={true} />}
+    </>
   )
 }
 
@@ -292,9 +310,9 @@ const SettingsModal = styled.div`
 
   .cookie-table-row {
     display: flex;
-    border-top: 1px solid;
     margin-bottom: 30px;
     padding: 20px 0px 10px;
+    border-top: 1px solid;
     border-top: 1px solid var(--gray100);
     .cookie-table-toggle {
       min-width: 120px;
@@ -303,7 +321,7 @@ const SettingsModal = styled.div`
       width: 80%;
       color: var(--gray500);
       h5 {
-        margin-bottom: 5px;
+        margin: 0 0 5px; 
         font-weight: bold;
         font-size: 18px;
       }

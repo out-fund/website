@@ -28,38 +28,6 @@ export default function (props: CookieModalProps) {
   )
 }
 
-const Button = styled.a`
-  display: block;
-  transition: background-color 0.1s ease-in-out;
-  font-weight: 600;
-  font-size: 16px;
-  padding: 0.9em 1.9em;
-  border-radius: 26px;
-  text-align: center;
-  color: #fff;
-  background-color: var(--actiton-primary);
-  max-width: 400px;
-  width: 100%;
-  cursor: pointer;
-  margin-bottom: 10px;
-`
-
-const ButtonSecondary = styled.a`
-  display: block;
-  transition: background-color 0.1s ease-in-out;
-  font-weight: 600;
-  font-size: 16px;
-  padding: 0.9em 1.9em;
-  border-radius: 26px;
-  text-align: center;
-  color: var(--gray500);
-  background-color: transparent;
-  max-width: 400px;
-  width: 100%;
-  cursor: pointer;
-  margin-bottom: 0px;
-`
-
 const Modal = styled.div`
   position: fixed;
   bottom: 0;
