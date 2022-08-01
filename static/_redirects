@@ -155,43 +155,43 @@
 
 # New countries landing pages
 
-/fr/      /     302!
+# /fr/      /     302!
 # /dk/      /     302!
-/ro/      /     302!
+# /ro/      /     302!
 # /cz/      /     302!
-/nl/      /     302!
-/hu/      /     302!
-/it/      /     302!
-/pt/      /     302!
-/de/      /     302!
+# /nl/      /     302!
+# /hu/      /     302!
+# /it/      /     302!
+# /pt/      /     302!
+# /de/      /     302!
 # /pl/      /     302!
 # /se/      /     302!
 # /fr-be/   /     302!
 # /nl-be/   /     302!
 
-/fr/get-funded-eu/      /     302!
+# /fr/get-funded-eu/      /     302!
 # /dk/get-funded-eu/      /     302!
-/ro/get-funded-eu/      /     302!
+# /ro/get-funded-eu/      /     302!
 # /cz/get-funded-eu/      /     302!
-/nl/get-funded-eu/      /     302!
-/hu/get-funded-eu/      /     302!
-/it/get-funded-eu/      /     302!
-/pt/get-funded-eu/      /     302!
-/de/get-funded-eu/      /     302!
+# /nl/get-funded-eu/      /     302!
+# /hu/get-funded-eu/      /     302!
+# /it/get-funded-eu/      /     302!
+# /pt/get-funded-eu/      /     302!
+# /de/get-funded-eu/      /     302!
 # /pl/get-funded-eu/      /     302!
 # /se/get-funded-eu/      /     302!
 # /fr-be/get-funded-eu/   /     302!
 # /nl-be/get-funded-eu/   /     302!
 
-/fr/thank-you/       /      302!
+# /fr/thank-you/       /      302!
 # /dk/thank-you/       /      302!
-/ro/thank-you/       /      302!
+# /ro/thank-you/       /      302!
 # /cz/thank-you/       /      302!
-/nl/thank-you/       /      302!
-/hu/thank-you/       /      302!
-/it/thank-you/       /      302!
-/pt/thank-you/       /      302!
-/de/thank-you/       /      302!
+# /nl/thank-you/       /      302!
+# /hu/thank-you/       /      302!
+# /it/thank-you/       /      302!
+# /pt/thank-you/       /      302!
+# /de/thank-you/       /      302!
 # /pl/thank-you/       /      302!
 # /se/thank-you/       /      302!
 # /fr-be/thank-you/    /      302!
