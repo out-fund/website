@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react"
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 import { ConsentManagerBuilder } from "@segment/consent-manager"
 import { Switch } from "./index"
 import Cookies from "js-cookie"
 import { cookiesSettings as defaultCookiesSetting } from "../config/cookies"
 import CookieModal from "./CookieModal"
+
 
 export default function CookieManager(props: {
   force?: boolean
@@ -13,6 +14,7 @@ export default function CookieManager(props: {
   body?: string
 }) {
   const [openPreferences, setOpenPreferences] = useState(false)
+  const [showModal, setShowModal] = useState(true)
   const cookiesSettings = props.cookiesSettings || defaultCookiesSetting
   const segmentID = "SbUYctfcULJBDClnkbSPOkPmfEPwexBU"
   const categoryMapping: Record<string, string> = {
@@ -23,11 +25,17 @@ export default function CookieManager(props: {
   const categories = Object.keys(categoryMapping)
 
   useEffect(() => {
-    if (props.force && !openPreferences) {
+    const hasCookie = Cookies.get("tracking-preferences") ? false : true
+    setShowModal(hasCookie)
+  }, [])
+
+  useEffect(() => {
+    if (props.force) {
       setOpenPreferences(true)
     }
-  }, [props.force, openPreferences])
+  }, [props.force])
 
+  console.log(openPreferences)
   return (
     <ConsentManagerBuilder
       onError={(e) => console.error("Error Handling", e)}
@@ -36,31 +44,18 @@ export default function CookieManager(props: {
     >
       {({ destinations, preferences, setPreferences, saveConsent }) => {
         // set initial preferences
-        if (
-          !Cookies.get("tracking-preferences") &&
-          Object.keys(preferences).length === 0
-        ) {
+        if (!Cookies.get("tracking-preferences") && Object.keys(preferences).length === 0) {
           destinations.forEach((d: any) => {
-            console.log(destinations)
             setPreferences({ [d.id]: true })
           })
           categories.forEach((c: any) => {
-            console.log(c)
             setPreferences({ [c]: true })
           })
         }
 
         function checkCookiesDeclined() {
-          if (
-            typeof window === "undefined" ||
-            !("marketingAndAnalytics" in preferences)
-          ) {
-            return
-          }
-          if (typeof window.analytics || !("load" in window.analytics)) {
-            return
-          }
-
+          if (typeof window === "undefined" || !("marketingAndAnalytics" in preferences)) return
+          if (typeof window.analytics || !("load" in window.analytics)) return
           const { marketingAndAnalytics, functional, advertising } = preferences
           if (!marketingAndAnalytics) {
             window.analytics?.load(segmentID)
@@ -105,104 +100,106 @@ export default function CookieManager(props: {
           }
         }
 
-        const showModal = Cookies.get("tracking-preferences") ? false : true
-
         if (!showModal && !props.force) {
           return <></>
-        } else {
-          return (
-            <>
-              {!openPreferences && showModal && (
-                <CookieModal>
-                  <Button onClick={() => acceptAll()} data-segment="click">
-                    Accept
-                  </Button>
-                  <ButtonSecondary onClick={() => setOpenPreferences(true)}>
-                    Manage settings
-                  </ButtonSecondary>
-                </CookieModal>
-              )}
-              {!openPreferences && !showModal && <></>}
-              {openPreferences && (
-                <ModalOverlay>
-                  <SettingsModal>
-                    {props.heading && <h2>{props.heading}</h2>}
-                    {props.body && <p>{props.body}</p>}
-                    <form className="cookie-table" onSubmit={savePreferences}>
-                      {
+        }
+
+        return (
+          <>
+            {!openPreferences && showModal && (
+              <CookieModal>
+                <Button onClick={() => acceptAll()} data-segment="click">
+                  Accept
+                </Button>
+                <ButtonSecondary onClick={() => setOpenPreferences(true)}>
+                  Manage settings
+                </ButtonSecondary>
+              </CookieModal>
+            )}
+
+            {openPreferences && (
+              <ModalOverlay>
+                <SettingsModal>
+                  <h2>{props.heading || defaultCookiesSetting.modal.heading}</h2>
+                  <p>{props.body && defaultCookiesSetting.modal.body}</p>
+                  <form className="cookie-table" onSubmit={savePreferences}>
+                    {
+                      <div className="cookie-table-row">
+                        <div className="cookie-table-toggle">
+                          <Switch value={true} alwaysOn={true} />
+                          <span className="small">Always on</span>
+                        </div>
+                        <div className="cookie-table-cell">
+                          <h5>{cookiesSettings.outfund.name}</h5>
+                          <p>{cookiesSettings.outfund.body}</p>
+                        </div>
+                      </div>
+                    }
+                    {categories.map((cat) => {
+                      if (!cookiesSettings[cat])
+                        return (
+                          <span key={cat} style={{ display: "none" }}></span>
+                        )
+                      let cookie = cookiesSettings[cat]
+                      return (
                         <div className="cookie-table-row">
                           <div className="cookie-table-toggle">
-                            <Switch value={true} alwaysOn={true} />
-                            <span className="small">Always on</span>
+                            <Switch
+                              value={!!preferences[cat]}
+                              onChange={() => toggleCategory(cat)}
+                            />
                           </div>
                           <div className="cookie-table-cell">
-                            <h5>{cookiesSettings.outfund.name}</h5>
-                            <p>{cookiesSettings.outfund.body}</p>
+                            <h5>{cookie.name}</h5>
+                            <p>{cookie.body}</p>
                           </div>
                         </div>
-                      }
-                      {categories.map((cat) => {
-                        if (!cookiesSettings[cat])
-                          return (
-                            <span key={cat} style={{ display: "none" }}></span>
-                          )
-                        let cookie = cookiesSettings[cat]
-                        return (
-                          <div className="cookie-table-row">
-                            <div className="cookie-table-toggle">
-                              <Switch
-                                value={!!preferences[cat]}
-                                onChange={() => toggleCategory(cat)}
-                              />
-                            </div>
-                            <div className="cookie-table-cell">
-                              <h5>{cookie.name}</h5>
-                              <p>{cookie.body}</p>
-                            </div>
-                          </div>
-                        )
-                      })}
-                      <div className="button-wrapper">
-                        <FormButton
-                          onClick={() => {
-                            if (props.force) {
-                              setOpenPreferences(false)
-                              window.location.reload()
-                            }
-                          }}
-                          data-segment="click"
-                        >
-                          Cancel
-                        </FormButton>
+                      )
+                    })}
+                    <div className="button-wrapper">
 
-                        <FormButton type="submit" data-segment="click">
-                          Accept
-                        </FormButton>
-                      </div>
-                    </form>
-                  </SettingsModal>
-                </ModalOverlay>
-              )}
-            </>
-          )
-        }
-      }}
+                      <FormButton
+                        type="button"
+                        onClick={() => {
+                          setOpenPreferences(false)
+                          if (props.force) {
+                            window.location.reload();
+                          }
+                        }}
+                        data-segment="click"
+                      >
+                        Cancel
+                      </FormButton>
+
+                      <FormButton type="submit" data-segment="click">
+                        Accept
+                      </FormButton>
+                    </div>
+                  </form>
+                </SettingsModal>
+              </ModalOverlay>
+            )}
+          </>
+        )
+      }
+      }
     </ConsentManagerBuilder>
   )
 }
 
 export const OpenCookiePreferences = (props: { children: any }) => {
   const [isOpen, setIsOpen] = useState(false)
+
   return (
     <>
       <span
         className="cookie-modal-"
         aria-modal
-        onClick={() => setIsOpen(true)}
+        onClick={() => setIsOpen(!isOpen)}
       >
         {props.children}
       </span>
-      {isOpen && <CookieManager force={true} />}
+      <CookieManager force={isOpen} />
     </>
   )
 }
@@ -218,7 +215,8 @@ const FormButton = styled.button`
   color: ${(props) => (props.type === "submit" ? "white" : "black")};
   background-color: ${(props) =>
     props.type === "submit" ? "var(--actiton-primary)" : "var(--gray100)"};
-  max-width: 120px;
+  max-width: 220px;
+  width: 100%;
   cursor: pointer;
   margin-bottom: 10px;
   outline: none;
@@ -236,7 +234,7 @@ const Button = styled.a`
   text-align: center;
   color: #fff;
   background-color: var(--actiton-primary);
-  max-width: 400px;
+  max-width: 360px;
   width: 100%;
   cursor: pointer;
   margin-bottom: 10px;
@@ -252,10 +250,10 @@ const ButtonSecondary = styled.a`
   text-align: center;
   color: var(--gray500);
   background-color: transparent;
-  max-width: 400px;
+  max-width: 360px;
   width: 100%;
   cursor: pointer;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 `
 
 const ModalOverlay = styled.div`

@@ -11,7 +11,8 @@ import LangLayout from "./../../../layouts/en"
 
 import T from "./../../../styles/new/typography"
 import { Main, Section } from "./../../../components"
-import { OpenCookiePreferences } from "../../../components/CookieConsentManager"
+// import { OpenCookiePreferences } from "../../../components/CookieConsentManager"
+import { CookieSettingsButton } from "../../../components/index"
 
 const CookiePolicy = (props) => {
   const data = props.data.allMdx.edges[0].node
@@ -48,9 +49,7 @@ const CookiePolicy = (props) => {
             </MDXRenderer>
             <br />
             <br />
-            <OpenCookiePreferences>
-              <u>Open cookie preferences</u>
-            </OpenCookiePreferences>
+            <CookieSettingsButton />
           </Article>
         </Main>
       </MDXProvider>

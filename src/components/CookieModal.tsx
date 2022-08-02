@@ -20,7 +20,6 @@ export default function (props: CookieModalProps) {
             <ModalHeading>{props.heading || defaultProps.heading}</ModalHeading>
             <ModalText>{props.body || defaultProps.body}</ModalText>
           </ModalContent>
-
           <ModalButtons>{props.children}</ModalButtons>
         </ModalContainer>
       </Modal>
@@ -30,14 +29,29 @@ export default function (props: CookieModalProps) {
 
 const Modal = styled.div`
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--gray100);
-  padding: 2.4rem 2rem 1.4rem 2rem;
+  height: 100vh;
+  background-color: #bbc7d654;
   z-index: 99999;
   -webkit-box-shadow: -1px -1px 4px 4px rgba(0, 0, 0, 0.18);
   box-shadow: -1px -1px 4px 4px rgba(0, 0, 0, 0.1);
+`
+
+const ModalContainer = styled.div`
+  display: block;
+  width: 790px;
+  max-width: calc(100% - 20px);
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: var(--gray100);
+  padding: 2.4rem 2rem 1.4rem 2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
 `
 
 const ModalContent = styled.div`
@@ -47,22 +61,18 @@ const ModalContent = styled.div`
 `
 
 const ModalButtons = styled.div`
-  width: 400px;
-  max-width: 100%;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  padding-right: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  @media (min-width: 768px) {
+    flex-direction: row-reverse;
+  }
+
 `
 
-const ModalContainer = styled.div`
-  display: flex;
-  max-width: 1180px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-`
+
 
 const ModalHeading = styled.h3`
   font-size: 25px;

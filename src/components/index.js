@@ -58,6 +58,8 @@ import FooterSimple from "./elements/FooterSimple"
 import GetFundedFormEU from "./elements/GetFundedFormEU"
 import Switch from "./elements/Swtich"
 
+import CookieSettingsButton from './elements/CookieSettingsButton'
+
 export {
   SectionWeAreInvesting,
   SectionContainer,
@@ -73,6 +75,7 @@ export {
   GetFundedForm,
   ContactUsForm,
   PartnerForm,
+  CookieSettingsButton,
   //
   Main,
   Navbar,
