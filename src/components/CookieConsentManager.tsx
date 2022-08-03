@@ -5,7 +5,7 @@ import { Switch } from "./index"
 import Cookies from "js-cookie"
 import { cookiesSettings as defaultCookiesSetting } from "../config/cookies"
 import CookieModal from "./CookieModal"
-
+import GatsbyLink from "gatsby-link"
 
 export default function CookieManager(props: {
   force?: boolean
@@ -15,6 +15,7 @@ export default function CookieManager(props: {
 }) {
   const [openPreferences, setOpenPreferences] = useState(false)
   const [showModal, setShowModal] = useState(true)
+  const [forceClose, setForceClose] = useState(false)
   const cookiesSettings = props.cookiesSettings || defaultCookiesSetting
   const segmentID = "SbUYctfcULJBDClnkbSPOkPmfEPwexBU"
   const categoryMapping: Record<string, string> = {
@@ -27,6 +28,11 @@ export default function CookieManager(props: {
   useEffect(() => {
     const hasCookie = Cookies.get("tracking-preferences") ? false : true
     setShowModal(hasCookie)
+
+    if (window.location && window.location.pathname.indexOf("/legal/cookie-policy/") > -1) {
+      setForceClose(true)
+    }
+
   }, [])
 
   useEffect(() => {
@@ -100,7 +106,7 @@ export default function CookieManager(props: {
           }
         }
 
-        if (!showModal && !props.force) {
+        if (!showModal && !props.force || (forceClose && !props.force)) {
           return <></>
         }
 
@@ -120,8 +126,9 @@ export default function CookieManager(props: {
             {openPreferences && (
               <ModalOverlay>
                 <SettingsModal>
-                  <h2>{props.heading || defaultCookiesSetting.modal.heading}</h2>
-                  <p>{props.body && defaultCookiesSetting.modal.body}</p>
+
+                  {props.heading || defaultCookiesSetting.modal.heading && (<h2>{props.heading || defaultCookiesSetting.modal.heading}</h2>)}
+                  {props.body || defaultCookiesSetting.modal.body && (<p>{props.body && defaultCookiesSetting.modal.body}</p>)}
                   <form className="cookie-table" onSubmit={savePreferences}>
                     {
                       <div className="cookie-table-row">
@@ -174,7 +181,11 @@ export default function CookieManager(props: {
                       <FormButton type="submit" data-segment="click">
                         Accept
                       </FormButton>
+                      <div style={{ paddingTop: 16, fontSize: 15 }}>
+                        <GatsbyLink to="/legal/cookie-policy/">More about the cookies we use</GatsbyLink>
+                      </div>
                     </div>
+
                   </form>
                 </SettingsModal>
               </ModalOverlay>
@@ -299,7 +310,7 @@ const SettingsModal = styled.div`
     line-height: 1.4;
   }
   .cookie-table {
-    margin-top: 40px;
+    margin-top: 20px;
   }
 
   .small {

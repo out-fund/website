@@ -11,7 +11,6 @@ import LangLayout from "./../../../layouts/en"
 
 import T from "./../../../styles/new/typography"
 import { Main, Section } from "./../../../components"
-// import { OpenCookiePreferences } from "../../../components/CookieConsentManager"
 import { CookieSettingsButton } from "../../../components/index"
 
 const CookiePolicy = (props) => {

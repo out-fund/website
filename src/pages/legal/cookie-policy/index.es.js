@@ -11,6 +11,7 @@ import LangLayout from "./../../../layouts/au"
 
 import T from "./../../../styles/new/typography"
 import { Main, Section } from "./../../../components"
+import { CookieSettingsButton } from "../../../components/index"
 
 const CookiePolicy = (props) => {
   const data = props.data.allMdx.edges[0].node
@@ -45,6 +46,9 @@ const CookiePolicy = (props) => {
             <MDXRenderer frontmatter={data.frontmatter}>
               {data.body}
             </MDXRenderer>
+            <br />
+            <br />
+            <CookieSettingsButton />
           </Article>
         </Main>
       </MDXProvider>
