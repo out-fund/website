@@ -1,10 +1,17 @@
 import React from "react"
 import { theme } from "./../styles/new/theme"
 import styled from "styled-components"
+import CookieConsentManager from "../components/CookieConsentManager"
 
 // const GlobalLayout = ({ children, location }) => {
 const GlobalLayout = ({ children, pt }) => {
-  return <GlobalWrapper pt={pt}>{children}</GlobalWrapper>
+  return (
+    <GlobalWrapper pt={pt}>
+      {children}
+      <CookieConsentManager />
+    </GlobalWrapper>
+  )
+
 }
 
 export default GlobalLayout

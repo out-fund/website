@@ -11,6 +11,7 @@ import LangLayout from "./../../../layouts/us"
 
 import T from "./../../../styles/new/typography"
 import { Main, Section } from "./../../../components"
+import { CookieSettingsButton } from "../../../components/index"
 
 export const query = graphql`
   query usCookiePolicy {
@@ -68,6 +69,9 @@ const CookiePolicy = (props) => {
               {data.body}
             </MDXRenderer>
           </Article>
+          <br />
+          <br />
+          <CookieSettingsButton />
         </Main>
       </MDXProvider>
     </LangLayout>
