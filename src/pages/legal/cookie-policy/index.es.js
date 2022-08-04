@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-import LangLayout from "./../../../layouts/au"
+import LangLayout from "./../../../layouts/es"
 
 import T from "./../../../styles/new/typography"
 import { Main, Section } from "./../../../components"
@@ -27,12 +27,6 @@ const CookiePolicy = (props) => {
           li: (props) => <ListElement as="li" {...props} />,
           th: (props) => <T.BodySmall as="th" {...props} />,
           td: (props) => <T.BodySmall as="td" {...props} />,
-          // Quote,
-
-          // PhotoStrip,
-          // ChalangeSolution,
-          // Text,
-          // StaticImage,
         }}
       >
         <Helmet
