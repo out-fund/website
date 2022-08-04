@@ -53,6 +53,9 @@
 /prestashop          https://old.out.fund/prestashop
 /es/prestashop       https://old.out.fund/es/prestashop
 
+# Privacy Policy
+/legal/privacy-policy/    /Outfund-Privacy-Policy.pdf
+
 # Redirect users in Spain to /es/
 # /                         /es/                   302!  Country=es
 
