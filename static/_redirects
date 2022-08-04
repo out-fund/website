@@ -55,6 +55,9 @@
 
 # Privacy Policy
 /legal/privacy-policy/    /Outfund-Privacy-Policy.pdf
+/es/legal/privacy-policy/    /Outfund-Privacy-Policy.pdf
+/au/legal/privacy-policy/    /Outfund-Privacy-Policy.pdf
+/us/legal/privacy-policy/    /Outfund-Privacy-Policy.pdf
 
 # Redirect users in Spain to /es/
 # /                         /es/                   302!  Country=es
