@@ -16,6 +16,8 @@ const encode = (data) => {
 const ReferralForm = ({ form, language }) => {
   const [buttonSent, setButtonSent] = useState(form.btn.text)
 
+  language ? "" : (language = "uk")
+
   return (
     <FormWrapper>
       <Formik
