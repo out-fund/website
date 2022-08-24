@@ -45,7 +45,7 @@ const ReferralProgram = (props) => {
                     friendEmail: "Friend's email",
                     btn: { text: "Submit Referral" },
                   }}
-                  language={""}
+                  language={"au"}
                 />
               </FormWrapper>
             </ContentWrapper>

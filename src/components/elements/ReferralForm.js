@@ -31,7 +31,7 @@ const ReferralForm = ({ form, language }) => {
               "Content-Type": "application/x-www-form-urlencoded",
             },
             body: encode({
-              "form-name": `referral-program${language ? "-" + language : ""}`,
+              "form-name": `referral-program`,
               ...values,
             }),
           })
@@ -73,14 +73,16 @@ const ReferralForm = ({ form, language }) => {
           isValid,
           dirty,
         }) => (
-          <F.FormikForm
-            name={`referral-program${language ? "-" + language : ""}`}
-          >
+          <F.FormikForm name={`referral-program`}>
             <VisuallyHidden>
               <label>
                 Don't fill this out if you're human:
                 <input name="bot-field" tabIndex="-1" />
               </label>
+            </VisuallyHidden>
+
+            <VisuallyHidden>
+              <input name="country" tabIndex="-1" value={language} />
             </VisuallyHidden>
 
             <F.Group>
@@ -123,6 +125,16 @@ const ReferralForm = ({ form, language }) => {
               <F.ErrorWrapper>
                 <F.FormikError component="div" name="friendEmail" />
               </F.ErrorWrapper>
+            </F.Group>
+            <F.Group>
+              <VisuallyHidden>
+                <label htmlFor="company">{form.company}</label>
+                <F.FormikField
+                  $valid={errors.company && touched.company}
+                  name="company"
+                  placeholder={form.company}
+                />
+              </VisuallyHidden>
             </F.Group>
 
             <F.Group>
