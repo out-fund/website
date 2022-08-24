@@ -23,6 +23,7 @@ const ReferralForm = ({ form, language }) => {
           workEmail: "",
           company: "",
           friendEmail: "",
+          country: language,
         }}
         onSubmit={(values, actions) => {
           fetch(`${language ? "/" + language + "/" : "/"}`, {
@@ -82,7 +83,7 @@ const ReferralForm = ({ form, language }) => {
             </VisuallyHidden>
 
             <VisuallyHidden>
-              <input name="country" tabIndex="-1" value={language} />
+              <input name="country" tabIndex="-1" value={form.country} />
             </VisuallyHidden>
 
             <F.Group>
