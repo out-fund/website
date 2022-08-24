@@ -16,7 +16,11 @@ const encode = (data) => {
 const ReferralForm = ({ form, language }) => {
   const [buttonSent, setButtonSent] = useState(form.btn.text)
 
-  if (language == "") language = "uk"
+  if (language == "") {
+    country = "uk"
+  } else {
+    country = language
+  }
 
   return (
     <FormWrapper>
@@ -25,7 +29,7 @@ const ReferralForm = ({ form, language }) => {
           workEmail: "",
           company: "",
           friendEmail: "",
-          country: language,
+          country,
         }}
         onSubmit={(values, actions) => {
           fetch(`${language ? "/" + language + "/" : "/"}`, {
