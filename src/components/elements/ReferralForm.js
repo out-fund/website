@@ -16,10 +16,9 @@ const encode = (data) => {
 const ReferralForm = ({ form, language }) => {
   const [buttonSent, setButtonSent] = useState(form.btn.text)
 
-  if (language == "") {
+  let country = language
+  if (country === "") {
     country = "uk"
-  } else {
-    country = language
   }
 
   return (
