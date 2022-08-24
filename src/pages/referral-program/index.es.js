@@ -29,13 +29,24 @@ const ReferralProgram = (props) => {
         <Section>
           <Wrapper>
             <ContentWrapper>
-              <TextWrapper>
+              {/* <TextWrapper>
                 <SectionHeader
                   title={
                     "Te hemos ayudado, ahora ayudemos también a tus amigos fundadores."
                   }
                   description={
                     "Por cada fundador que financiemos, <b>recibirás 500€</b> en crédito para tu próxima “Outfund Facility”"
+                  }
+                />
+              </TextWrapper> */}
+
+              <TextWrapper>
+                <SectionHeader
+                  title={
+                    "We’ve helped you, now let's help your founder friends too!"
+                  }
+                  description={
+                    "Por cada fundador que financiamos, recibirás hasta 1.000€* en cheques regalo. <br/><br/> <small>* Para instalaciones de 100k€+. Para instalaciones por debajo de 100k €, recibirá vales de regalo por valor de 500 €.</small>."
                   }
                 />
               </TextWrapper>
@@ -45,6 +56,7 @@ const ReferralProgram = (props) => {
                 <ReferralForm
                   form={{
                     workEmail: "Tu correo electrónico",
+                    company: "El nombre de tu compañía",
                     friendEmail: "Correo electrónico de amigos",
                     btn: { text: "Enviar" },
                   }}

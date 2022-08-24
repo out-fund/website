@@ -21,6 +21,7 @@ const ReferralForm = ({ form, language }) => {
       <Formik
         initialValues={{
           workEmail: "",
+          company: "",
           friendEmail: "",
         }}
         onSubmit={(values, actions) => {
@@ -52,6 +53,9 @@ const ReferralForm = ({ form, language }) => {
           if (!values.workEmail || !emailRegex.test(values.workEmail)) {
             errors.workEmail = "Valid email required"
           }
+          if (!values.company) {
+            errors.company = "Company name required"
+          }
           if (!values.friendEmail || !emailRegex.test(values.friendEmail)) {
             errors.friendEmail = "Valid email required"
           }
@@ -78,6 +82,21 @@ const ReferralForm = ({ form, language }) => {
                 <input name="bot-field" tabIndex="-1" />
               </label>
             </VisuallyHidden>
+
+            <F.Group>
+              <VisuallyHidden>
+                <label htmlFor="company">{form.company}</label>
+              </VisuallyHidden>
+              <F.FormikField
+                $valid={errors.company && touched.company}
+                name="company"
+                placeholder={form.company}
+              />
+              <F.ErrorWrapper>
+                <F.FormikError component="div" name="company" />
+              </F.ErrorWrapper>
+            </F.Group>
+
             <F.Group>
               <VisuallyHidden>
                 <label htmlFor="workEmail">{form.workEmail}</label>
@@ -91,6 +110,7 @@ const ReferralForm = ({ form, language }) => {
                 <F.FormikError component="div" name="workEmail" />
               </F.ErrorWrapper>
             </F.Group>
+
             <F.Group>
               <VisuallyHidden>
                 <label htmlFor="friendEmail">{form.friendEmail}</label>
@@ -104,6 +124,7 @@ const ReferralForm = ({ form, language }) => {
                 <F.FormikError component="div" name="friendEmail" />
               </F.ErrorWrapper>
             </F.Group>
+
             <F.Group>
               <Button
                 disabled={isSubmitting || !isValid || !dirty}
