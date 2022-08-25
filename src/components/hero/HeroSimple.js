@@ -50,6 +50,13 @@ const HeroWrapper = styled.header`
   padding: 48px 0 24px;
   /* margin: 0 8px; */
 
+  background-image: url("/gradient.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: visible;
+  padding: 48px 24px 48px;
+  background-position: center top;
+
   ${theme.above.p.m} {
     /* margin: 0 16px; */
     padding: 64px 0 48px;
