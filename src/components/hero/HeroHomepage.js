@@ -13,6 +13,10 @@ const HeroHomepage = ({ data }) => {
     <HeroWrapper>
       <Wrapper>
         <TextWrapper data-surface-type="Hero" data-surface-title={title}>
+          {/* <StaticImage
+            src=""
+            alt="Person smiling"
+          /> */}
           <Title>{title}</Title>
           <Description>{description}</Description>
           <ButtonWrapper>
@@ -158,8 +162,12 @@ const Wrapper = styled.div`
 
 const HeroWrapper = styled.header`
   background-color: #f2f6fa;
+  background-image: url("/gradient.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   overflow: visible;
   padding: 48px 24px 48px;
+  background-position: center top;
 
   ${theme.above.t.s} {
     padding: 64px 40px 64px;

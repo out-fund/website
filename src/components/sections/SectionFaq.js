@@ -122,7 +122,7 @@ const AccordionWrapper = styled.div`
 
     &:before {
       margin-left: auto;
-      color: #1a65ba;
+      color: #003edb;
     }
   }
   .accordion__panel {

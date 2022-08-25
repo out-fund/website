@@ -5,7 +5,7 @@ export const cssVariables = css`
   :root {
     --background: #f2f6fa;
     --darkblue: #051734;
-    --blue: #1a65ba;
+    --blue: #003edb;
     --white: #fff;
     --bodyText: #1c3654;
   }

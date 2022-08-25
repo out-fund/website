@@ -17,7 +17,7 @@ const EN = ({ children, simpleNavbar, pt, noNavbar, noFooter }) => {
     <GlobalLayout pt={pt}>
       {!noNavbar && (
         <NewsBar
-          text="🎉 Outfund raises £115 million in series A investment and commits to a further £500 million of lending to e-commerce firms this year!"
+          text="🎉 <b>Outfund raises £115</b> million in series A investment and commits to a further <b>£500 million of lending to e-commerce firms this year!</b>"
           url="https://tech.eu/2022/04/27/going-all-out-to-change-the-way-online-businesses-raise-funds-lands-ps115-million-in-outfunds-kitty/"
           urlText="Read More"
         />

@@ -10,7 +10,11 @@ export const colorVariables = css`
     --gray400: #1c3654;
     --gray500: #051734;
 
-    --actiton-primary: #1a65ba;
+    --body: #1c3654;
+    --headings: #0c2542;
+
+    /* --actiton-primary: #003EDB; */
+    --actiton-primary: #003edb;
     --actiton-secondary: #00a3d7;
   }
 
@@ -33,9 +37,9 @@ export const color = {
   },
   text: {
     // body: "var(--gray400)",
-    body: "var(--gray500)",
+    body: "var(--body)",
     placeholder: "var(--gray300)",
-    headings: "var(--gray500)",
+    headings: "var(--headings)",
   },
   button: {
     primary: {

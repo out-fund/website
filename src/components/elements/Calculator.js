@@ -170,7 +170,7 @@ const RangeWrapper = styled.div`
     width: 32px;
     height: 32px;
     margin-top: -10px;
-    background: #1a65ba;
+    background: #003edb;
     border-radius: 20px;
     cursor: pointer;
     -webkit-appearance: none;
@@ -190,8 +190,8 @@ const RangeWrapper = styled.div`
   .slider::-moz-range-thumb {
     width: 32px;
     height: 32px;
-    background: #1a65ba;
-    border: 1px solid #1a65ba;
+    background: #003edb;
+    border: 1px solid #003edb;
     border-radius: 32px;
     cursor: pointer;
   }
@@ -218,7 +218,7 @@ const RangeWrapper = styled.div`
     width: 32px;
     height: 32px;
     margin-top: 0px;
-    background: #1a65ba;
+    background: #003edb;
     border-radius: 16px;
     cursor: pointer;
   }

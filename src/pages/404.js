@@ -34,10 +34,10 @@ const Main = styled.main`
   a {
     display: inline-block;
     padding: 8px 16px;
-    color: #1a65ba;
+    color: #003edb;
     line-height: 1;
     text-decoration: none;
-    border: 1px solid #1a65ba;
+    border: 1px solid #003edb;
     border-radius: 100px;
   }
 `

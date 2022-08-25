@@ -217,7 +217,7 @@ const FaqWrapper = styled.section`
 
     &::before {
       margin-left: auto;
-      color: #1a65ba;
+      color: #003edb;
       transform: rotate(45deg);
       transition: transform 0.5s ease;
     }
