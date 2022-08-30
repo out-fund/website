@@ -21,12 +21,12 @@ const OfPartnershipWithClearco = (props) => {
   return (
     <LangLayout>
       <SeoComponent
-        title="Clearco Partnership"
-        description="We're the UK's Largest eCommerce Investor"
+        title="Strategic Partnership"
+        description="Clearco has partnered with Outfund to offer revenue-based funding to its UK, Australian and European customers."
       />
       <HeroSimple
         data={{
-          title: "Clearco and Outfund Strategic Partnership",
+          title: "Outfund and Clearco Strategic Partnership",
           description:
             "Clearco has partnered with Outfund to offer revenue-based funding to its UK, Australian and European customers.",
         }}

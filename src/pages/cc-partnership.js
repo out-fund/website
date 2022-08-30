@@ -23,10 +23,7 @@ import {
 const CcPartnership = (props) => {
   return (
     <LangLayout>
-      <SeoComponent
-        title="Clearco and Outfund Strategic Partnership"
-        description="We're the UK's Largest eCommerce Investor"
-      />
+      <SeoComponent title="Outfund" description="" />
       <HeroSimple
         data={{
           title: "Switch your funding provider to Outfund",
