@@ -59,6 +59,8 @@ import SectionInfoStrip from "./sections/SectionInfoStrip"
 import SectionLoanDescriptions from "./sections/SectionLoanDescriptions"
 import SectionComparison from "./sections/SectionComparison"
 import SectionWhoCanApply from "./sections/SectionWhoCanApply"
+import SectionBenefits from "./sections/SectionBenefits"
+import SectionRepay from "./sections/SectionRepay"
 
 import GetFundedFormEU from "./elements/GetFundedFormEU"
 import Switch from "./elements/Swtich"
@@ -126,4 +128,6 @@ export {
   SectionLoanDescriptions,
   SectionComparison,
   SectionWhoCanApply,
+  SectionBenefits,
+  SectionRepay,
 }

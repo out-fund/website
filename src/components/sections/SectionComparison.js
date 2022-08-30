@@ -11,7 +11,7 @@ const SectionComparison = ({ data }) => {
           <SectionHeader title={data.title} description={data.description} />
         </HeaderWrapper>
         <ContentWrapper>
-          <table class="tg">
+          <table className="tg">
             <thead>
               <tr>
                 <th className="tg-0lax desc"></th>
@@ -60,7 +60,6 @@ const SectionComparison = ({ data }) => {
             </tbody>
           </table>
           <div className="ButtonWrapper">
-            {" "}
             <Button
               href="https://client.out.fund/signup"
               variant="primary"

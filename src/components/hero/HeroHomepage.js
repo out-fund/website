@@ -4,7 +4,6 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import { Button } from "./../../components/"
 import T from "./../../styles/new/typography"
-import { Triangle } from "./../../styles/utils"
 import { theme } from "./../../styles/new/theme"
 
 const HeroHomepage = ({ data }) => {
@@ -76,12 +75,6 @@ const LeftImage = styled.div`
     0px 12.5216px 7.80488px rgba(1, 14, 25, 0.035),
     0px 6.6501px 3.28033px rgba(1, 14, 25, 0.0282725),
     0px 2.76726px 0.952807px rgba(1, 14, 25, 0.0196802);
-  ${Triangle}
-  &:after {
-    bottom: -35px;
-    left: 72px;
-    z-index: 3;
-  }
 
   .gatsby-image-wrapper {
     position: relative;
@@ -168,6 +161,21 @@ const HeroWrapper = styled.header`
   overflow: visible;
   padding: 48px 24px 48px;
   background-position: center top;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    height: 50px;
+    /* background-color: #afa; */
+    box-shadow: inset 0px 10px 10px #ffffff;
+    content: "";
+  }
 
   ${theme.above.t.s} {
     padding: 64px 40px 64px;

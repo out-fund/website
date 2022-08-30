@@ -1,86 +1,80 @@
 import React from "react"
 import styled from "styled-components"
 // import { GatsbyImage, getImage } from "gatsby-plugin-image"
-// import parse from "html-react-parser"
+import parse from "html-react-parser"
 
 import { Button, Section, SectionHeader } from "./../../components"
 import { theme } from "./../../styles/new/theme"
 import T from "./../../styles/new/typography"
-// import { Triangle } from "./../../styles/utils"
 import { StaticImage } from "gatsby-plugin-image"
 
-const SectionWhoCanApply = ({ data }) => {
+const SectionRepay = ({ data }) => {
   const { title, description, btn, image } = data
   return (
     <StyledSection>
       <Wrapper>
-        <ImageWrapper>
-          {/* <GatsbyImage image={getImage(image.src)} alt={image.alt} /> */}
-          <StaticImage
-            src="./../../images/WhoCanApply.png"
-            alt="Who can apply"
-            // width={80}
-            // height={80}
-            layout={"constrained"}
-          />
-        </ImageWrapper>
         <TextWrapper>
           {/* <MobileImageWrapper>
             <GatsbyImage image={getImage(image.src)} alt={image.alt} />
           </MobileImageWrapper> */}
 
           <SectionHeader title="Who can apply" />
-          {/* <Description>{parse(description)}</Description> */}
-          <List>
-            <Element as="li">
-              An online model such as SaaS, Subscription, Ecommerce, Mobile App,
-              B2B
-            </Element>
-            <Element as="li">6+ months in business</Element>
-            <Element as="li">£10k+ Monthly revenue</Element>
-          </List>
+          <Description>{parse(description)}</Description>
 
           {btn && (
             <BtnWrapper>
               {btn.url && (
-                <Button
-                  to="https://client.out.fund/signup"
-                  variant="primary"
-                  size="large"
-                >
+                <Button to={btn.url} variant="primary" size="large">
                   Apply now
                 </Button>
               )}
             </BtnWrapper>
           )}
         </TextWrapper>
+        <ImageWrapper>
+          {/* <GatsbyImage image={getImage(image.src)} alt={image.alt} /> */}
+          <StaticImage
+            src="./../../images/UIxCard.png"
+            alt="Outfhund UI"
+            // width={80}
+            // height={80}
+            layout="constrained"
+          />
+        </ImageWrapper>
       </Wrapper>
     </StyledSection>
   )
 }
-export default SectionWhoCanApply
+export default SectionRepay
 
-const List = styled.ul``
-const Element = styled(T.Body)`
-  margin: 16px 0;
-  padding-left: 20px;
-  position: relative;
-  &:before {
-    position: absolute;
-    top: 10px;
-    left: 0;
-    display: block;
-    width: 8px;
-    height: 8px;
-    background-color: #79dcf2;
-    border-radius: 16px;
-    content: "";
-  }
+const Description = styled(T.Body)`
+  /* max-width: 970px;
+  margin: 0 auto; */
+  margin-top: 16px;
 `
+// const List = styled.ul``
+// const Element = styled(T.Body)`
+//   margin: 16px 0;
+//   padding-left: 20px;
+//   position: relative;
+//   &:before {
+//     position: absolute;
+//     top: 10px;
+//     left: 0;
+//     display: block;
+//     width: 8px;
+//     height: 8px;
+//     background-color: #79dcf2;
+//     border-radius: 16px;
+//     content: "";
+//   }
+// `
+
 const StyledSection = styled(Section)`
   background-color: #f2f6fa;
   position: relative;
   border-radius: 10px;
+  margin-bottom: 200px;
 `
 
 const Wrapper = styled.div`
@@ -94,15 +88,14 @@ const Wrapper = styled.div`
   padding: 32px;
 
   ${theme.above.t.m} {
-    grid-template-columns: 690fr 880fr;
+    grid-template-columns: 470fr 700fr;
     gap: 80px;
-    padding: 40px;
+    padding: 40px 40px 40px;
   }
 
   ${theme.above.d.m} {
-    grid-template-columns: 690fr 880fr;
     gap: 80px;
-    padding: 80px;
+    padding: 120px 80px 120px;
   }
 `
 
@@ -131,7 +124,7 @@ const ImageWrapper = styled.div`
     top: 0;
     z-index: 10;
     border-radius: 10px;
-    transform: translateY(-50%);
+    transform: translateY(-30%);
     img {
       border-radius: 10px;
     }

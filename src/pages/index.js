@@ -16,6 +16,8 @@ import {
   SectionLoanDescriptions,
   SectionComparison,
   SectionWhoCanApply,
+  SectionBenefits,
+  SectionRepay,
 } from "./../components"
 
 const HomePage = (props) => {
@@ -61,6 +63,22 @@ const HomePage = (props) => {
           }}
         />
         <SectionWhoCanApply data={data.weInvesting} />
+        <SectionBenefits
+          data={{
+            title: "Benefits to your business",
+          }}
+        />
+        <SectionRepay
+          data={{
+            title: "Repay on your terms. ",
+            description:
+              "Pay back your balance with a small share of your new sales. Quiet month? Lower repayments.",
+            btn: {
+              text: "Apply now",
+              url: "https://client.out.fund/signup",
+            },
+          }}
+        />
 
         <SectionFindOut data={props.data.homepageJson.findOut} />
         <SectionWeFunded data={data.weFunded} />
