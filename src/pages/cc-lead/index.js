@@ -15,14 +15,23 @@ const GetFunded = (props) => {
   const data = props.data.getFundedJson.content
 
   const incorporationCountry = [
-    "Australia",
-    "Spain",
-    "New Zealand",
     "United Kingdom",
     "United States",
+    "Chezch Republic",
+    "Australia",
+    "Spain",
+    "France",
+    "Germany",
+    "Italy",
+    "Netherlands",
+    "Portugal",
+    "Romania",
+    "Sweden",
+    "Poland",
+    "Denmark",
+    "New Zealand",
     "Other",
   ]
-  const businessType = ["eCommerce", "Mobile App", "SaaS", "Other"]
 
   return (
     <LangLayout noNavbar pt noFooter>
@@ -40,13 +49,12 @@ const GetFunded = (props) => {
           <RightWrapper>
             <RightContentWrapper>
               <TextWrapper>
-                <Title>{data.title}</Title>
-                <Description>{data.description}</Description>
+                <Title>Send lead</Title>
+                <Description>Tell us about the company.</Description>
               </TextWrapper>
               <CCLeadForm
                 data={data}
                 incorporationCountry={incorporationCountry}
-                businessType={businessType}
                 language=""
               />
             </RightContentWrapper>
@@ -66,11 +74,13 @@ const LogoWhiteWrapper = styled.div`
   align-self: center;
   text-align: center;
   padding: 24px 0px;
+  position: absolute;
+  top: 0;
+  width: 100%;
   background-color: rgb(255, 255, 255);
   display: flex;
   -webkit-box-pack: center;
   justify-content: center;
-  margin-bottom: 40px;
   box-shadow: rgb(5 24 64 / 7%) 0px 17px 33px,
     rgb(5 24 64 / 5%) 0px 3.8002px 13.45px,
     rgb(5 24 64 / 4%) 0px 1.07885px 7.14579px;
@@ -105,7 +115,7 @@ const Wrapper = styled.div`
 `
 
 const RightContentWrapper = styled.div`
-  max-width: 400px;
+  max-width: 500px;
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -114,6 +124,7 @@ const RightContentWrapper = styled.div`
 const RightWrapper = styled.div`
   display: flex;
   width: 100%;
+  margin-top: 110px;
   align-items: center;
   justify-content: center;
   padding-left: 40px;
