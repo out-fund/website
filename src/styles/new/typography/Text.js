@@ -31,6 +31,9 @@ export const Body = styled.p`
   ${theme.above.d.m} {
     font-size: 18px;
   }
+  ${theme.above.d.l} {
+    font-size: 20px;
+  }
 `
 export const BodySmall = styled.p`
   font-weight: normal;

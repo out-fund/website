@@ -31,8 +31,8 @@ const NewsBarWrapper = styled.div`
   border-radius: 24px;
   background-color: transparent;
   width: calc(100% - 40px);
-  margin-left: 20px;
-  margin-right: 20px;
+  /* margin-left: 20px;
+  margin-right: 20px; */
   /* margin-bottom: -100%; */
   a {
     margin-left: 24px;

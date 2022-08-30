@@ -69,10 +69,7 @@ const ModalButtons = styled.div`
   @media (min-width: 768px) {
     flex-direction: row-reverse;
   }
-
 `
-
-
 
 const ModalHeading = styled.h3`
   font-size: 25px;

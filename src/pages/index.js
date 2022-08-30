@@ -12,6 +12,8 @@ import {
   SectionRegulated,
   HeroHomepage,
   SeoComponent,
+  SectionInfoStrip,
+  SectionLoanDescriptions,
 } from "./../components"
 
 const HomePage = (props) => {
@@ -24,10 +26,34 @@ const HomePage = (props) => {
       <SeoComponent title={data.seo.title} description={data.seo.description} />
       <HeroHomepage data={data.hero} />
       <Main>
+        <SectionInfoStrip
+          data={[
+            { up: "Apply in just", down: "5 minutes" },
+            { up: "Business loans from", down: "£10k - £10m" },
+            { up: "Offers as fast as", down: "24h" },
+            { up: "Fees as low as", down: "2%" },
+            { up: "Additional top-ups", down: "Continuous" },
+          ]}
+        />
+        <SectionLoanDescriptions
+          data={{
+            title: "Fast, flexible funding for you",
+            rbs: {
+              title: "Revenue-based financing",
+              description:
+                "We use your monthly revenue as a guide and provide up-front capital within 24 hours in exchange for a small percentage of future earnings. <br/>You repay us as sales come in which means we only succeed when you succeed if revenues slow, so do repayments.",
+            },
+            fixed: {
+              title: "Fixed-term loans",
+              description:
+                "We use your monthly revenue as a guide and provide up-front capital within 24 hours in exchange for a fixed repayment amount. <br/> You control how you repay us by deciding whether you would like daily or weekly fixed repayments. Know exactly what you will repay from the start.",
+            },
+          }}
+        />
+        <SectionFindOut data={props.data.homepageJson.findOut} />
         <SectionWeFunded data={data.weFunded} />
         <SectionWeAreInvesting data={data.weInvesting} />
         <SectionSupercharging data={data.startSupercharging} />
-        <SectionFindOut data={props.data.homepageJson.findOut} />
         <SectionFaq data={props.data.homepageJson.faq} />
         <SectionAboutUs data={props.data.homepageJson.aboutUs} />
         <SectionRegulated data={props.data.trustJson} />

@@ -29,10 +29,12 @@ export default function CookieManager(props: {
     const hasCookie = Cookies.get("tracking-preferences") ? false : true
     setShowModal(hasCookie)
 
-    if (window.location && window.location.pathname.indexOf("/legal/cookie-policy/") > -1) {
+    if (
+      window.location &&
+      window.location.pathname.indexOf("/legal/cookie-policy/") > -1
+    ) {
       setForceClose(true)
     }
-
   }, [])
 
   useEffect(() => {
@@ -50,7 +52,10 @@ export default function CookieManager(props: {
     >
       {({ destinations, preferences, setPreferences, saveConsent }) => {
         // set initial preferences
-        if (!Cookies.get("tracking-preferences") && Object.keys(preferences).length === 0) {
+        if (
+          !Cookies.get("tracking-preferences") &&
+          Object.keys(preferences).length === 0
+        ) {
           destinations.forEach((d: any) => {
             setPreferences({ [d.id]: true })
           })
@@ -60,7 +65,11 @@ export default function CookieManager(props: {
         }
 
         function checkCookiesDeclined() {
-          if (typeof window === "undefined" || !("marketingAndAnalytics" in preferences)) return
+          if (
+            typeof window === "undefined" ||
+            !("marketingAndAnalytics" in preferences)
+          )
+            return
           if (typeof window.analytics || !("load" in window.analytics)) return
           const { marketingAndAnalytics, functional, advertising } = preferences
           if (!marketingAndAnalytics) {
@@ -106,7 +115,7 @@ export default function CookieManager(props: {
           }
         }
 
-        if (!showModal && !props.force || (forceClose && !props.force)) {
+        if ((!showModal && !props.force) || (forceClose && !props.force)) {
           return <></>
         }
 
@@ -126,9 +135,16 @@ export default function CookieManager(props: {
             {openPreferences && (
               <ModalOverlay>
                 <SettingsModal>
-
-                  {props.heading || defaultCookiesSetting.modal.heading && (<h2>{props.heading || defaultCookiesSetting.modal.heading}</h2>)}
-                  {props.body || defaultCookiesSetting.modal.body && (<p>{props.body && defaultCookiesSetting.modal.body}</p>)}
+                  {props.heading ||
+                    (defaultCookiesSetting.modal.heading && (
+                      <h2>
+                        {props.heading || defaultCookiesSetting.modal.heading}
+                      </h2>
+                    ))}
+                  {props.body ||
+                    (defaultCookiesSetting.modal.body && (
+                      <p>{props.body && defaultCookiesSetting.modal.body}</p>
+                    ))}
                   <form className="cookie-table" onSubmit={savePreferences}>
                     {
                       <div className="cookie-table-row">
@@ -164,13 +180,12 @@ export default function CookieManager(props: {
                       )
                     })}
                     <div className="button-wrapper">
-
                       <FormButton
                         type="button"
                         onClick={() => {
                           setOpenPreferences(false)
                           if (props.force) {
-                            window.location.reload();
+                            window.location.reload()
                           }
                         }}
                         data-segment="click"
@@ -182,18 +197,18 @@ export default function CookieManager(props: {
                         Accept
                       </FormButton>
                       <div style={{ paddingTop: 16, fontSize: 15 }}>
-                        <GatsbyLink to="/legal/cookie-policy/">More about the cookies we use</GatsbyLink>
+                        <GatsbyLink to="/legal/cookie-policy/">
+                          More about the cookies we use
+                        </GatsbyLink>
                       </div>
                     </div>
-
                   </form>
                 </SettingsModal>
               </ModalOverlay>
             )}
           </>
         )
-      }
-      }
+      }}
     </ConsentManagerBuilder>
   )
 }
@@ -330,7 +345,7 @@ const SettingsModal = styled.div`
       width: 80%;
       color: var(--gray500);
       h5 {
-        margin: 0 0 5px; 
+        margin: 0 0 5px;
         font-weight: bold;
         font-size: 18px;
       }

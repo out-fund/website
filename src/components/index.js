@@ -55,6 +55,8 @@ import SeoComponent from "./elements/SeoComponent"
 import ReferralForm from "./elements/ReferralForm"
 import NewsBar from "./elements/NewsBar"
 import FooterSimple from "./elements/FooterSimple"
+import SectionInfoStrip from "./sections/SectionInfoStrip"
+import SectionLoanDescriptions from "./sections/SectionLoanDescriptions"
 
 import GetFundedFormEU from "./elements/GetFundedFormEU"
 import Switch from "./elements/Swtich"
@@ -118,4 +120,6 @@ export {
   FooterSimple,
   GetFundedFormEU,
   Switch,
+  SectionInfoStrip,
+  SectionLoanDescriptions,
 }
