@@ -16,7 +16,7 @@ const encode = (data) => {
     .join("&")
 }
 
-const CCLeadForm = ({ data, incorporationCountry, businessType, language }) => {
+const CCLeadForm = ({ data, incorporationCountry, language }) => {
   return (
     <FormWrapper>
       <Formik
@@ -27,7 +27,6 @@ const CCLeadForm = ({ data, incorporationCountry, businessType, language }) => {
           website: "",
           amr: "",
           incorporationCountry: "",
-          businessType: "",
           ccrefname: "",
         }}
         onSubmit={(values, actions) => {
@@ -50,7 +49,6 @@ const CCLeadForm = ({ data, incorporationCountry, businessType, language }) => {
                 amr: values.amr,
                 ccrefname: values.ccrefname,
                 incorporationCountry: values.incorporationCountry,
-                businessType: values.businessType,
                 platform: "website",
                 country: language || "uk",
               })
@@ -91,9 +89,6 @@ const CCLeadForm = ({ data, incorporationCountry, businessType, language }) => {
           if (!values.incorporationCountry) {
             errors.incorporationCountry = "Country Required"
           }
-          if (!values.businessType) {
-            errors.businessType = "Business Type Required"
-          }
           return errors
         }}
       >
@@ -133,12 +128,12 @@ const CCLeadForm = ({ data, incorporationCountry, businessType, language }) => {
             </F.Group>
             <F.Group>
               <VisuallyHidden>
-                <label htmlFor="email">{data.form.email}</label>
+                <label htmlFor="email">Director Email</label>
               </VisuallyHidden>
               <F.FormikField
                 $valid={errors.email && touched.email}
                 name="email"
-                placeholder={data.form.email}
+                placeholder="Director email"
                 data-segment="textInput"
                 element-name="email"
                 data-trait="email"
@@ -226,58 +221,19 @@ const CCLeadForm = ({ data, incorporationCountry, businessType, language }) => {
               </SelectWrapper>
             </F.Group>
             <F.Group>
-              <SelectWrapper>
-                <F.Label htmlFor="businessType" as="label">
-                  Business Type
-                </F.Label>
-                <F.Select
-                  name="businessType"
-                  id="businessType"
-                  defaultValue={"DEFAULT"}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  required
-                  data-segment="option"
-                  element-name="businessType"
-                  data-trait="businessType"
-                >
-                  <option value="DEFAULT" disabled>
-                    Select
-                  </option>
-                  {businessType.map((item, index) => (
-                    <option key={item} value={businessType.values[index]}>
-                      {item}
-                    </option>
-                  ))}
-                </F.Select>
-              </SelectWrapper>
-            </F.Group>
-            <F.Group>
-              <SelectWrapper>
-                <F.Label htmlFor="amr" as="label">
-                  {data.form.select.title}
-                </F.Label>
-                <F.Select
-                  name="amr"
-                  id="amr"
-                  defaultValue={"DEFAULT"}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  required
-                  data-segment="option"
-                  element-name="amr"
-                  data-trait="amr"
-                >
-                  <option value="DEFAULT" disabled>
-                    {data.form.select.default}
-                  </option>
-                  {data.form.select.options.map((item, index) => (
-                    <option key={item} value={data.form.select.values[index]}>
-                      {item}
-                    </option>
-                  ))}
-                </F.Select>
-              </SelectWrapper>
+              <F.Label htmlFor="amr" as="label">
+                Monthly Revenue
+              </F.Label>
+              <F.FormikField
+                $valid={errors.amr && touched.amr}
+                name="amr"
+                placeholder="Average Monthly Revenue"
+                data-segment="textInput"
+                element-name="amr"
+                data-trait="amr"
+                attribute
+                type="number"
+              />
             </F.Group>
             <F.Group>
               <Button
