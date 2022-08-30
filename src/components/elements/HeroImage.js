@@ -43,14 +43,4 @@ const ImageWrapper = styled.div`
   max-width: 1570px;
   border-radius: 10px;
   overflow: hidden;
-  /* position: absolute; */
-  /* position: relative;
-
-
-  .gatsby-image-wrapper {
-    z-index: 1;
-    overflow: hidden;
-    border-radius: 10px;
-  }
-  Triangle */
 `
