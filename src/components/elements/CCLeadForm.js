@@ -243,7 +243,7 @@ const CCLeadForm = ({ data, incorporationCountry, language }) => {
                 size="large"
                 id="cc-lead-submit"
               >
-                {data.form.btn}
+                Send lead
               </Button>
             </F.Group>
           </F.FormikForm>
