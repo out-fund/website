@@ -48,6 +48,7 @@ import ThreeColumnIcons from "./sections/ThreeColumnIcons"
 import CardBlog from "./cards/CardBlog"
 import SectionSteps from "./sections/SectionSteps"
 import GetFundedForm from "./elements/GetFundedForm"
+import CCLeadForm from "./elements/CCLeadForm"
 import ContactUsForm from "./elements/ContactUsForm"
 import PartnerForm from "./elements/PartnerForm"
 import SeoComponent from "./elements/SeoComponent"
@@ -58,7 +59,7 @@ import FooterSimple from "./elements/FooterSimple"
 import GetFundedFormEU from "./elements/GetFundedFormEU"
 import Switch from "./elements/Swtich"
 
-import CookieSettingsButton from './elements/CookieSettingsButton'
+import CookieSettingsButton from "./elements/CookieSettingsButton"
 
 export {
   SectionWeAreInvesting,
@@ -73,6 +74,7 @@ export {
   CardCta,
   SectionFindOut,
   GetFundedForm,
+  CCLeadForm,
   ContactUsForm,
   PartnerForm,
   CookieSettingsButton,

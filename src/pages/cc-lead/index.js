@@ -7,7 +7,7 @@ import LangLayout from "./../../layouts/en"
 
 import LogoDark from "./../../images/svg/Outfund-logo.svg"
 
-import { GetFundedForm, Link, SeoComponent } from "./../../components"
+import { CCLeadForm, Link, SeoComponent } from "./../../components"
 import T from "../../styles/new/typography"
 import { theme } from "./../../styles/new/theme"
 
@@ -33,7 +33,7 @@ const GetFunded = (props) => {
                 <Title>{data.title}</Title>
                 <Description>{data.description}</Description>
               </TextWrapper>
-              <GetFundedForm data={data} language="" />
+              <CCLeadForm data={data} language="" />
             </RightContentWrapper>
           </RightWrapper>
         </ContentWrapper>
