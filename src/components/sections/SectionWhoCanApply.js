@@ -60,14 +60,15 @@ const List = styled.ul``
 const Element = styled(T.Body)`
   margin: 16px 0;
   padding-left: 20px;
+  position: relative;
   &:before {
     position: absolute;
-    top: 0;
+    top: 10px;
     left: 0;
     display: block;
-    width: 16px;
-    height: 16px;
-    background-color: #faf;
+    width: 8px;
+    height: 8px;
+    background-color: #79dcf2;
     border-radius: 16px;
     content: "";
   }
