@@ -16,7 +16,7 @@ const encode = (data) => {
     .join("&")
 }
 
-const CCLeadForm = ({ data, language }) => {
+const CCLeadForm = ({ data, incorporationCountry, businessType, language }) => {
   return (
     <FormWrapper>
       <Formik
@@ -26,6 +26,8 @@ const CCLeadForm = ({ data, language }) => {
           phone: "",
           website: "",
           amr: "",
+          incorporationCountry: "",
+          businessType: "",
           ccrefname: "",
         }}
         onSubmit={(values, actions) => {
@@ -47,6 +49,8 @@ const CCLeadForm = ({ data, language }) => {
                 website: values.website,
                 amr: values.amr,
                 ccrefname: values.ccrefname,
+                incorporationCountry: values.incorporationCountry,
+                businessType: values.businessType,
                 platform: "website",
                 country: language || "uk",
               })
@@ -83,6 +87,12 @@ const CCLeadForm = ({ data, language }) => {
           }
           if (!values.ccrefname) {
             errors.ccrefname = "Referral Name Required"
+          }
+          if (!values.incorporationCountry) {
+            errors.incorporationCountry = "Country Required"
+          }
+          if (!values.businessType) {
+            errors.businessType = "Business Type Required"
           }
           return errors
         }}
@@ -184,6 +194,63 @@ const CCLeadForm = ({ data, language }) => {
               <F.ErrorWrapper>
                 <F.FormikError component="div" name="ccrefname" />
               </F.ErrorWrapper>
+            </F.Group>
+            <F.Group>
+              <SelectWrapper>
+                <F.Label htmlFor="incorporationCountry" as="label">
+                  Incorporation Country
+                </F.Label>
+                <F.Select
+                  name="incorporationCountry"
+                  id="incorporationCountry"
+                  defaultValue={"DEFAULT"}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  required
+                  data-segment="option"
+                  element-name="incorporationCountry"
+                  data-trait="incorporationCountry"
+                >
+                  <option value="DEFAULT" disabled>
+                    Select
+                  </option>
+                  {incorporationCountry.map((item, index) => (
+                    <option
+                      key={item}
+                      value={incorporationCountry.values[index]}
+                    >
+                      {item}
+                    </option>
+                  ))}
+                </F.Select>
+              </SelectWrapper>
+            </F.Group>
+            <F.Group>
+              <SelectWrapper>
+                <F.Label htmlFor="businessType" as="label">
+                  Business Type
+                </F.Label>
+                <F.Select
+                  name="businessType"
+                  id="businessType"
+                  defaultValue={"DEFAULT"}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  required
+                  data-segment="option"
+                  element-name="businessType"
+                  data-trait="businessType"
+                >
+                  <option value="DEFAULT" disabled>
+                    Select
+                  </option>
+                  {businessType.map((item, index) => (
+                    <option key={item} value={businessType.values[index]}>
+                      {item}
+                    </option>
+                  ))}
+                </F.Select>
+              </SelectWrapper>
             </F.Group>
             <F.Group>
               <SelectWrapper>
