@@ -4,7 +4,7 @@ import LangLayout from "./../layouts/en"
 import {
   Main,
   SectionWeFunded,
-  SectionWeAreInvesting,
+  // SectionWeAreInvesting,
   SectionSupercharging,
   SectionFindOut,
   SectionFaq,
@@ -15,6 +15,7 @@ import {
   SectionInfoStrip,
   SectionLoanDescriptions,
   SectionComparison,
+  SectionWhoCanApply,
 } from "./../components"
 
 const HomePage = (props) => {
@@ -59,9 +60,11 @@ const HomePage = (props) => {
               "Founders typically have two ways to fund business growth. Raising equity or getting a bank loan. Both can be valuable options but can mean giving up a piece of your company or agreeing to a personal guarantee.",
           }}
         />
+        <SectionWhoCanApply data={data.weInvesting} />
+
         <SectionFindOut data={props.data.homepageJson.findOut} />
         <SectionWeFunded data={data.weFunded} />
-        <SectionWeAreInvesting data={data.weInvesting} />
+        {/* <SectionWeAreInvesting data={data.weInvesting} /> */}
         <SectionSupercharging data={data.startSupercharging} />
         <SectionFaq data={props.data.homepageJson.faq} />
         <SectionAboutUs data={props.data.homepageJson.aboutUs} />

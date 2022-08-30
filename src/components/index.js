@@ -58,6 +58,7 @@ import FooterSimple from "./elements/FooterSimple"
 import SectionInfoStrip from "./sections/SectionInfoStrip"
 import SectionLoanDescriptions from "./sections/SectionLoanDescriptions"
 import SectionComparison from "./sections/SectionComparison"
+import SectionWhoCanApply from "./sections/SectionWhoCanApply"
 
 import GetFundedFormEU from "./elements/GetFundedFormEU"
 import Switch from "./elements/Swtich"
@@ -124,4 +125,5 @@ export {
   SectionInfoStrip,
   SectionLoanDescriptions,
   SectionComparison,
+  SectionWhoCanApply,
 }
