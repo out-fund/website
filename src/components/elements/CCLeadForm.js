@@ -222,7 +222,7 @@ const CCLeadForm = ({ data, incorporationCountry, language }) => {
             </F.Group>
             <F.Group>
               <F.Label htmlFor="amr" as="label">
-                Monthly Revenue
+                Monthly Revenue (in USD)
               </F.Label>
               <F.FormikField
                 $valid={errors.amr && touched.amr}
