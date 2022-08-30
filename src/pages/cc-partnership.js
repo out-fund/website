@@ -67,7 +67,7 @@ const CcPartnership = (props) => {
               refinance out your old facility or a combination of the both.
             </T.Body>
             <Button
-              href="https://client.out.fund/signup"
+              href="https://client.out.fund/signup?utm_source=cc-landingpage"
               variant="primary"
               data-element-category="Signup CTA"
               size="large"
@@ -159,6 +159,7 @@ const TextWrapper = styled.div`
 const StyledSection = styled(Section)`
   max-width: 770px;
   margin: 0 auto;
+  padding: 0 16px;
   p {
     margin-top: 16px;
     margin-bottom: 40px;
