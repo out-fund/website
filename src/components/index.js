@@ -57,6 +57,7 @@ import NewsBar from "./elements/NewsBar"
 import FooterSimple from "./elements/FooterSimple"
 import SectionInfoStrip from "./sections/SectionInfoStrip"
 import SectionLoanDescriptions from "./sections/SectionLoanDescriptions"
+import SectionComparison from "./sections/SectionComparison"
 
 import GetFundedFormEU from "./elements/GetFundedFormEU"
 import Switch from "./elements/Swtich"
@@ -122,4 +123,5 @@ export {
   Switch,
   SectionInfoStrip,
   SectionLoanDescriptions,
+  SectionComparison,
 }

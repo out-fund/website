@@ -14,6 +14,7 @@ import {
   SeoComponent,
   SectionInfoStrip,
   SectionLoanDescriptions,
+  SectionComparison,
 } from "./../components"
 
 const HomePage = (props) => {
@@ -48,6 +49,14 @@ const HomePage = (props) => {
               description:
                 "We use your monthly revenue as a guide and provide up-front capital within 24 hours in exchange for a fixed repayment amount. <br/> You control how you repay us by deciding whether you would like daily or weekly fixed repayments. Know exactly what you will repay from the start.",
             },
+          }}
+        />
+
+        <SectionComparison
+          data={{
+            title: "Find the perfect fit for your business",
+            description:
+              "Founders typically have two ways to fund business growth. Raising equity or getting a bank loan. Both can be valuable options but can mean giving up a piece of your company or agreeing to a personal guarantee.",
           }}
         />
         <SectionFindOut data={props.data.homepageJson.findOut} />
