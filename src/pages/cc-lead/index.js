@@ -14,6 +14,16 @@ import { theme } from "./../../styles/new/theme"
 const GetFunded = (props) => {
   const data = props.data.getFundedJson.content
 
+  const incorporationCountry = [
+    "Australia",
+    "Spain",
+    "New Zealand",
+    "United Kingdom",
+    "United States",
+    "Other",
+  ]
+  const businessType = ["eCommerce", "Mobile App", "SaaS", "Other"]
+
   return (
     <LangLayout noNavbar pt noFooter>
       <SeoComponent
@@ -33,7 +43,12 @@ const GetFunded = (props) => {
                 <Title>{data.title}</Title>
                 <Description>{data.description}</Description>
               </TextWrapper>
-              <CCLeadForm data={data} language="" />
+              <CCLeadForm
+                data={data}
+                incorporationCountry={incorporationCountry}
+                businessType={businessType}
+                language=""
+              />
             </RightContentWrapper>
           </RightWrapper>
         </ContentWrapper>
@@ -55,7 +70,7 @@ const LogoWhiteWrapper = styled.div`
   display: flex;
   -webkit-box-pack: center;
   justify-content: center;
-  margin-top: -40px;
+  margin-bottom: 40px;
   box-shadow: rgb(5 24 64 / 7%) 0px 17px 33px,
     rgb(5 24 64 / 5%) 0px 3.8002px 13.45px,
     rgb(5 24 64 / 4%) 0px 1.07885px 7.14579px;
