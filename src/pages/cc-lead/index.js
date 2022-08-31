@@ -15,22 +15,22 @@ const GetFunded = (props) => {
   const data = props.data.getFundedJson.content
 
   const incorporationCountry = [
-    "United Kingdom",
-    "United States",
-    "Chezch Republic",
-    "Australia",
-    "Spain",
-    "France",
-    "Germany",
-    "Italy",
-    "Netherlands",
-    "Portugal",
-    "Romania",
-    "Sweden",
-    "Poland",
-    "Denmark",
-    "New Zealand",
-    "Other",
+    { code: "UK", value: "United Kingdom" },
+    { code: "US", value: "United States" },
+    { code: "AU", value: "Australia" },
+    { code: "CA", value: "Canada" },
+    { code: "NZ", value: "New Zealand" },
+    { code: "GR", value: "Germany" },
+    { code: "FR", value: "France" },
+    { code: "IT", value: "Italy" },
+    { code: "ES", value: "Spain" },
+    { code: "NL", value: "Netherlands" },
+    { code: "BE", value: "Belgium" },
+    { code: "DK", value: "Denmark" },
+    { code: "PO", value: "Poland" },
+    { code: "PT", value: "Portugal" },
+    { code: "SE", value: "Sweden" },
+    { code: "CH", value: "Chech Republic" },
   ]
 
   return (
