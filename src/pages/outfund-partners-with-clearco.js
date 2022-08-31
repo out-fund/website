@@ -102,7 +102,7 @@ const OfPartnershipWithClearco = (props) => {
               refinance out your old facility or a combination of the both.
             </T.Body> */}
               <Button
-                href="https://client.out.fund/signup?utm_source=cc-landingpage"
+                href="https://client.out.fund/signup?utm_source=cc-statementpage"
                 variant="primary"
                 data-element-category="Signup CTA"
                 size="large"
