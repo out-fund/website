@@ -86,7 +86,7 @@ const CcPartnership = (props) => {
               {
                 question: "How do I apply?",
                 answer:
-                  "Applying is easy. Simply click on “Apply now”, complete the application form, securely connect your accounts and we will get in touch with an offer within 48 hours.  ",
+                  "Applying is easy. Simply click on “Switch now”, complete the application form, securely connect your accounts and we will get in touch with an offer within 48 hours.  ",
               },
               {
                 question: "Can I refinance my Clearco funding?",
