@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Section, SectionHeader, Button } from "./../../components"
-// import { theme } from "./../../styles/new/theme"
+import { theme } from "./../../styles/new/theme"
 
 const SectionComparison = ({ data }) => {
   return (
@@ -35,13 +35,13 @@ const SectionComparison = ({ data }) => {
               </tr>
               <tr>
                 <td className="tg-0lax desc">Amount</td>
-                <td className="tg-0lax of">£10K—£10M</td>
-                <td className="tg-0lax">£20K—£1M</td>
-                <td className="tg-0lax">£100K—£1M+</td>
+                <td className="tg-0lax of">£10K - £10M</td>
+                <td className="tg-0lax">£20K - £1M</td>
+                <td className="tg-0lax">£100K - £1M+</td>
               </tr>
               <tr>
                 <td className="tg-0lax desc">Repayments</td>
-                <td className="tg-0lax of">Flexible/Fixed</td>
+                <td className="tg-0lax of">Flexible / Fixed</td>
                 <td className="tg-0lax">Fixed</td>
                 <td className="tg-0lax">n/a</td>
               </tr>
@@ -102,34 +102,65 @@ const ContentWrapper = styled.div`
 
   td,
   th {
-    padding: 10px 5px;
-    padding: 16px;
-    /* overflow: hidden; */
-
+    /* padding: 10px 5px; */
+    padding: 8px;
     color: #1c3654;
-    line-height: 32px;
-
-    /* word-break: normal; */
+    line-height: 1.5;
     border-bottom: 1px solid #bfd5ee;
+
+    ${theme.above.t.s} {
+      padding: 12px;
+    }
+
+    ${theme.above.d.m} {
+      padding: 16px;
+    }
   }
 
   td {
     font-weight: 400;
-    font-size: 20px;
 
+    font-size: 16px;
     text-align: center;
+
+    ${theme.above.t.s} {
+      font-size: 18px;
+    }
+
+    ${theme.above.d.m} {
+      font-size: 20px;
+    }
   }
   th {
     font-weight: bold;
-    font-size: 24px;
+
+    font-size: 18px;
+
+    ${theme.above.t.s} {
+      font-size: 20px;
+    }
+
+    ${theme.above.d.m} {
+      font-size: 24px;
+    }
   }
   .tg-0lax {
     vertical-align: top;
   }
   .desc {
     width: 270px;
-    padding-right: 40px;
+    padding-right: 20px;
+
     text-align: right;
+    ${theme.above.t.s} {
+      padding-right: 30px;
+      font-size: 20px;
+    }
+
+    ${theme.above.d.m} {
+      padding-right: 40px;
+      font-size: 24px;
+    }
   }
   td.of {
     font-weight: 600;

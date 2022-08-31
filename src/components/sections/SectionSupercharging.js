@@ -6,7 +6,7 @@ import { theme } from "./../../styles/new/theme"
 const SectionSupercharging = ({ data }) => {
   // console.log(data)
   return (
-    <Section>
+    <StyledSection>
       <Wrapper>
         <ContentWrapper>
           <CardFeatured
@@ -21,11 +21,14 @@ const SectionSupercharging = ({ data }) => {
           <CardCta title={data.title} btn={data.btn} bgc="#F2F6FA" />
         </ContentWrapper>
       </Wrapper>
-    </Section>
+    </StyledSection>
   )
 }
 export default SectionSupercharging
 
+const StyledSection = styled(Section)`
+  margin-top: 24px;
+`
 const Wrapper = styled.div``
 const ContentWrapper = styled.div`
   display: grid;

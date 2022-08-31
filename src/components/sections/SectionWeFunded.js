@@ -10,7 +10,7 @@ import { theme } from "./../../styles/new/theme"
 
 const SectionWeFunded = ({ data }) => {
   return (
-    <Section>
+    <StyledSection>
       <Wrapper>
         <HeaderWrapper>
           <SectionHeader title={data.title} description={data.description} />
@@ -35,10 +35,14 @@ const SectionWeFunded = ({ data }) => {
           />
         </ContentWrapper>
       </Wrapper>
-    </Section>
+    </StyledSection>
   )
 }
 export default SectionWeFunded
+
+const StyledSection = styled(Section)`
+  margin-bottom: 24px;
+`
 
 const HeaderWrapper = styled.div`
   text-align: center;
