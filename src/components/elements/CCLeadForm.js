@@ -22,6 +22,7 @@ const CCLeadForm = ({ data, incorporationCountry, language }) => {
       <Formik
         initialValues={{
           name: "",
+          companyName: "",
           email: "",
           phone: "",
           website: "",
@@ -43,6 +44,7 @@ const CCLeadForm = ({ data, incorporationCountry, language }) => {
             .then(() => {
               track.customEvent("CC Lead Form Submitted", {
                 name: values.name,
+                companyName: values.companyName,
                 email: values.email,
                 phone: values.phone,
                 website: values.website,
@@ -89,6 +91,9 @@ const CCLeadForm = ({ data, incorporationCountry, language }) => {
           if (!values.incorporationCountry) {
             errors.incorporationCountry = "Country Required"
           }
+          if (!values.companyName) {
+            errors.companyName = "Company Name Required"
+          }
           return errors
         }}
       >
@@ -124,6 +129,22 @@ const CCLeadForm = ({ data, incorporationCountry, language }) => {
               />
               <F.ErrorWrapper>
                 <F.FormikError component="div" name="name" />
+              </F.ErrorWrapper>
+            </F.Group>
+            <F.Group>
+              <VisuallyHidden>
+                <label htmlFor="companyName">Company name</label>
+              </VisuallyHidden>
+              <F.FormikField
+                $valid={errors.companyName && touched.companyName}
+                name="companyName"
+                placeholder="Company name"
+                data-segment="textInput"
+                element-name="company_name"
+                data-trait="company_name"
+              />
+              <F.ErrorWrapper>
+                <F.FormikError component="div" name="companyName" />
               </F.ErrorWrapper>
             </F.Group>
             <F.Group>
@@ -222,7 +243,7 @@ const CCLeadForm = ({ data, incorporationCountry, language }) => {
             </F.Group>
             <F.Group>
               <F.Label htmlFor="amr" as="label">
-                Monthly Revenue (in $)
+                Monthly Revenue (in USD)
               </F.Label>
               <F.FormikField
                 $valid={errors.amr && touched.amr}
