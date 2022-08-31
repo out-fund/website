@@ -57,7 +57,7 @@ const CcPartnership = (props) => {
                 marginRight: "auto",
               }}
             >
-              Switching is easy, click on “Apply now” below and follow the
+              Switching is easy, click on “Switch now” below and follow the
               application steps.
               <br /> <br />
               One of our team members will then reach out to help Top you up,
