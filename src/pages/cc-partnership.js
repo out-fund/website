@@ -168,6 +168,7 @@ const SwitchWrapper = styled.div`
   text-align: center;
   max-width: 970px;
   margin: 0 auto;
+  margin-top: 40px;
 
   ${theme.above.t.m} {
     padding: 100px 0;
