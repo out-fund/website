@@ -234,12 +234,9 @@ const CCLeadForm = ({ data, incorporationCountry, language }) => {
                   <option value="DEFAULT" disabled>
                     Select
                   </option>
-                  {incorporationCountry.map((item, index) => (
-                    <option
-                      key={item}
-                      value={incorporationCountry.values[index]}
-                    >
-                      {item}
+                  {incorporationCountry.map(({ code, value }) => (
+                    <option key={code} value={code}>
+                      {value}
                     </option>
                   ))}
                 </F.Select>
