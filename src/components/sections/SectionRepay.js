@@ -81,7 +81,6 @@ const StyledSection = styled(Section)`
   background-size: cover;
   /* overflow: hidden; */
   background-position: center center;
-  background-size: 150%;
 `
 
 const Wrapper = styled.div`
