@@ -7,7 +7,7 @@ import T from "./../../styles/new/typography"
 
 const SectionBenefits = ({ data }) => {
   return (
-    <Section>
+    <StyledSection>
       <Wrapper>
         <HeaderWrapper>
           <SectionHeader title={data.title} description={data.description} />
@@ -112,10 +112,23 @@ const SectionBenefits = ({ data }) => {
           </Grid>
         </ContentWrapper>
       </Wrapper>
-    </Section>
+    </StyledSection>
   )
 }
 export default SectionBenefits
+
+const StyledSection = styled(Section)`
+  margin-bottom: 100px;
+  margin-top: 100px;
+  ${theme.above.t.m} {
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+  ${theme.above.d.m} {
+    margin-top: 180px;
+    margin-bottom: 180px;
+  }
+`
 
 const HeaderWrapper = styled.div`
   text-align: center;
@@ -136,7 +149,7 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   row-gap: 24px;
-  max-width: 1770px;
+  max-width: 1270px;
   margin: 0 auto;
 
   ${theme.above.t.l} {
@@ -145,6 +158,7 @@ const Grid = styled.div`
   }
   ${theme.above.l.m} {
     grid-template-columns: repeat(3, 1fr);
+    max-width: 1570px;
     column-gap: 24px;
   }
 `

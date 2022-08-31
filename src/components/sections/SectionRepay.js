@@ -96,12 +96,12 @@ const Wrapper = styled.div`
   ${theme.above.t.m} {
     grid-template-columns: 470fr 700fr;
     gap: 80px;
-    padding: 40px 40px 40px;
+    padding: 120px 40px 120px;
   }
 
   ${theme.above.d.m} {
     gap: 80px;
-    padding: 120px 80px 120px;
+    padding: 160px 80px 160px;
   }
 `
 
@@ -130,9 +130,16 @@ const ImageWrapper = styled.div`
     top: 0;
     z-index: 10;
     border-radius: 10px;
-    transform: translateY(-30%);
+
+    transform: translateY(-20%);
     img {
       border-radius: 10px;
+    }
+    ${theme.above.t.m} {
+      transform: translateY(-28%);
+    }
+    ${theme.above.d.m} {
+      transform: translateY(-30%);
     }
   }
   ${theme.above.t.m} {

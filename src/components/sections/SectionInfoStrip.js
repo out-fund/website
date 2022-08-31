@@ -81,6 +81,6 @@ const TextWrapper = styled.h3`
 `
 
 const Wrapper = styled.section`
-  max-width: 1470px;
+  max-width: 1170px;
   margin: 0 auto;
 `

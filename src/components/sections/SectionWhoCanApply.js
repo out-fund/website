@@ -77,6 +77,7 @@ const StyledSection = styled(Section)`
   background-color: #f2f6fa;
   position: relative;
   border-radius: 10px;
+  margin: 160px auto;
 `
 
 const Wrapper = styled.div`
@@ -87,18 +88,19 @@ const Wrapper = styled.div`
   margin: 0 auto;
   align-items: center;
   position: relative;
-  padding: 32px;
+
+  padding: 40px;
 
   ${theme.above.t.m} {
-    grid-template-columns: 690fr 880fr;
+    grid-template-columns: 590fr 880fr;
     gap: 80px;
-    padding: 40px;
+    padding: 100px;
   }
 
   ${theme.above.d.m} {
     grid-template-columns: 690fr 880fr;
     gap: 80px;
-    padding: 80px;
+    padding: 120px;
   }
 `
 
@@ -126,8 +128,9 @@ const ImageWrapper = styled.div`
     position: absolute;
     top: 0;
     z-index: 10;
+    width: 110%;
     border-radius: 10px;
-    transform: translateY(-50%);
+    transform: translateY(-50%) translateX(-5%);
     img {
       border-radius: 10px;
     }
