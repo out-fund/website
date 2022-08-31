@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 // import { graphql } from "gatsby"
 
-import LangLayout from "../../layouts/en"
+import LangLayout from "../../layouts/au"
 
 import { Button } from "../../components"
 import T from "../../styles/new/typography"
@@ -40,7 +40,6 @@ const Eligibility = ({ location }) => {
               </Description>
               <ButtonWrapper>
                 <Button
-                  // to="/get-funded/"
                   href="https://client.out.fund/signup"
                   variant="primary"
                   size="large"

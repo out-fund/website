@@ -39,11 +39,20 @@ const Eligibility = ({ location }) => {
                 <b>{values[selected - 1]}</b> of funding.
               </Description>
               <ButtonWrapper>
-                <Button
+                {/* <Button
                   to="/get-funded/"
                   variant="primary"
                   size="large"
                   id="cta-get-funded-eligibility-click"
+                >
+                  Apply now
+                </Button> */}
+                <Button
+                  href="https://client.out.fund/signup"
+                  variant="primary"
+                  size="large"
+                  id="cta-get-funded-eligibility-click"
+                  data-element-category="Signup CTA"
                 >
                   Apply now
                 </Button>
