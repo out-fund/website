@@ -81,7 +81,7 @@ const CcPartnership = (props) => {
                 question:
                   "I am a Clearco customer - what does this partnership mean for my business?",
                 answer:
-                  "Because Clearco is ceasing coverage for customers outside of the US and Canada, existing customers will need to apply and refinance with Outfund to maintain access to funding.",
+                  "If you have existing Clearco funding this partnership will not impact that; you can still access it via your Clearco account. However, because Clearco is ceasing coverage for customers outside of the US and Canada, if you wish to access additional funding you will need to apply to Outfund to refinance or top up your funding",
               },
               {
                 question: "How do I apply?",
@@ -91,7 +91,7 @@ const CcPartnership = (props) => {
               {
                 question: "Can I refinance my Clearco funding?",
                 answer:
-                  "Outfund is connected to Clearco’s system, so we’ll know about your existing funding arrangement. Provided that your business fits our funding criteria, we will be able to refinance your Clearco funding. ",
+                  "Outfund’s approval criteria may differ from that of Clearco’s so you’ll need to submit an application to allow Outfund to evaluate whether refinancing is possible. In most cases, we will be able to refinance your Clearco funding. ",
               },
               {
                 question:
