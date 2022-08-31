@@ -16,7 +16,7 @@ const GetFunded = (props) => {
 
   const incorporationCountry = [
     { code: "UK", value: "United Kingdom" },
-    { code: "US", value: "United States" },
+    { code: "USA", value: "United States" },
     { code: "AU", value: "Australia" },
     { code: "CA", value: "Canada" },
     { code: "NZ", value: "New Zealand" },
