@@ -8,7 +8,13 @@ import T from "./../styles/new/typography"
 
 import LangLayout from "./../layouts/en"
 
-import { HeroSimple, Main, SeoComponent } from "./../components"
+import {
+  HeroSimple,
+  Main,
+  SeoComponent,
+  Button,
+  Section,
+} from "./../components"
 
 const OfPartnershipWithClearco = (props) => {
   return (
@@ -79,6 +85,32 @@ const OfPartnershipWithClearco = (props) => {
             & Australia based teams. The partnership represents continued growth
             for Outfund internationally.”
           </T.Body>
+          <SwitchWrapper>
+            <StyledSection>
+              <T.H3>Start Supercharging Your Growth</T.H3>
+              {/* <T.Body
+              style={{
+                maxWidth: "570px",
+                marginLeft: "auto",
+                marginRight: "auto",
+              }}
+            >
+              Switching is easy, click on “Apply now” below and follow the
+              application steps.
+              <br /> <br />
+              One of our team members will then reach out to help Top you up,
+              refinance out your old facility or a combination of the both.
+            </T.Body> */}
+              <Button
+                href="https://client.out.fund/signup?utm_source=cc-landingpage"
+                variant="primary"
+                data-element-category="Signup CTA"
+                size="large"
+              >
+                Apply for funding now
+              </Button>
+            </StyledSection>
+          </SwitchWrapper>
         </TextWrapper>
       </Main>
     </LangLayout>
@@ -86,6 +118,18 @@ const OfPartnershipWithClearco = (props) => {
 }
 
 export default OfPartnershipWithClearco
+
+const StyledSection = styled(Section)`
+  /* max-width: 770px;
+  margin: 0 auto;
+  padding: 0 16px; */
+  /* p {
+    margin-top: 16px;
+    margin-bottom: 40px;
+  } */
+  margin-top: 80px;
+  margin-bottom: 80px;
+`
 
 const Wrapper = styled.div`
   position: relative;
@@ -117,8 +161,31 @@ const TextWrapper = styled.div`
   max-width: 970px;
   margin: 0 auto;
   padding-bottom: 100px;
-  p {
+  /* p {
     margin: 0;
     margin-bottom: 24px;
+  } */
+`
+
+const SwitchWrapper = styled.div`
+  background-color: #f2f6fa;
+  padding: 1px;
+  /* padding: 64px 0; */
+  text-align: center;
+  max-width: 970px;
+  margin: 0 auto;
+
+  margin-top: 48px;
+  /* ${theme.above.t.m} {
+    padding: 64px 0;
   }
+  ${theme.above.d.m} {
+    padding: 80px 0;
+  } */
+
+  h3 {
+    margin-bottom: 16px;
+  }
+
+  border-radius: 10px;
 `
