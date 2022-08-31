@@ -69,7 +69,7 @@ const CcPartnership = (props) => {
               data-element-category="Signup CTA"
               size="large"
             >
-              Apply now
+              Switch now
             </Button>
           </StyledSection>
         </SwitchWrapper>
