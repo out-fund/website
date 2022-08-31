@@ -70,7 +70,7 @@ const HomePage = (props) => {
         />
         <SectionRepay
           data={{
-            title: "Repay on your terms. ",
+            title: "Repay on your terms.",
             description:
               "Pay back your balance with a small share of your new sales. Quiet month? Lower repayments.",
             btn: {

@@ -1,12 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
-import {
-  Section,
-  SectionHeader,
-  CardLogoReadMore,
-  CardFeatured,
-} from "./../../components"
+import { Section, SectionHeader } from "./../../components"
 
 import T from "./../../styles/new/typography"
 import { theme } from "./../../styles/new/theme"

@@ -6,11 +6,11 @@ import styled from "styled-components"
 import { Button, Section, SectionHeader } from "./../../components"
 import { theme } from "./../../styles/new/theme"
 import T from "./../../styles/new/typography"
-// import { Triangle } from "./../../styles/utils"
+
 import { StaticImage } from "gatsby-plugin-image"
 
-const SectionWhoCanApply = ({ data }) => {
-  const { title, description, btn, image } = data
+const SectionWhoCanApply = () => {
+  // const { title, description, btn, image } = data
   return (
     <StyledSection>
       <Wrapper>
@@ -40,19 +40,15 @@ const SectionWhoCanApply = ({ data }) => {
             <Element as="li">£10k+ Monthly revenue</Element>
           </List>
 
-          {btn && (
-            <BtnWrapper>
-              {btn.url && (
-                <Button
-                  to="https://client.out.fund/signup"
-                  variant="primary"
-                  size="large"
-                >
-                  Apply now
-                </Button>
-              )}
-            </BtnWrapper>
-          )}
+          <BtnWrapper>
+            <Button
+              to="https://client.out.fund/signup"
+              variant="primary"
+              size="large"
+            >
+              Apply now
+            </Button>
+          </BtnWrapper>
         </TextWrapper>
       </Wrapper>
     </StyledSection>

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Section, SectionHeader, Button } from "./../../components"
+import { Section, SectionHeader } from "./../../components"
 import { theme } from "./../../styles/new/theme"
 
 import T from "./../../styles/new/typography"

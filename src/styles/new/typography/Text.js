@@ -3,7 +3,7 @@ import { theme } from "./../../new/theme"
 
 export const BodyLarge = styled.p`
   font-size: 18px;
-  line-height: 1.4;
+  line-height: 1.6;
   color: ${theme.color.text.body};
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -19,7 +19,7 @@ export const BodyLarge = styled.p`
 export const Body = styled.p`
   font-weight: normal;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.6;
   color: ${theme.color.text.body};
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -38,7 +38,7 @@ export const Body = styled.p`
 export const BodySmall = styled.p`
   font-weight: normal;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.6;
   color: ${theme.color.text.body};
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -54,7 +54,7 @@ export const BodySmall = styled.p`
 export const BodySmaller = styled.p`
   font-weight: normal;
   font-size: 12px;
-  line-height: 1.5;
+  line-height: 1.6;
   color: ${theme.color.text.body};
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

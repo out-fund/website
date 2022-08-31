@@ -9,7 +9,7 @@ import T from "./../../styles/new/typography"
 import { StaticImage } from "gatsby-plugin-image"
 
 const SectionRepay = ({ data }) => {
-  const { title, description, btn, image } = data
+  const { title, description, btn } = data
   return (
     <StyledSection>
       <Wrapper>
@@ -18,7 +18,7 @@ const SectionRepay = ({ data }) => {
             <GatsbyImage image={getImage(image.src)} alt={image.alt} />
           </MobileImageWrapper> */}
 
-          <SectionHeader title="Who can apply" />
+          <SectionHeader title={title} />
           <Description>{parse(description)}</Description>
 
           {btn && (
@@ -75,6 +75,13 @@ const StyledSection = styled(Section)`
   position: relative;
   border-radius: 10px;
   margin-bottom: 200px;
+
+  background-image: url("/gradient.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* overflow: hidden; */
+  background-position: center center;
+  background-size: 150%;
 `
 
 const Wrapper = styled.div`

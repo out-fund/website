@@ -11,10 +11,7 @@ import LangLayout from "./../layouts/en"
 import {
   HeroSimple,
   Main,
-  SectionPartners,
-  SectionWhy,
   SeoComponent,
-  HeroImage,
   SectionFaq,
   Section,
   Button,

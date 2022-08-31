@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Section, SectionHeader, Button } from "./../../components"
-import { theme } from "./../../styles/new/theme"
+// import { theme } from "./../../styles/new/theme"
 
 const SectionComparison = ({ data }) => {
   return (
@@ -14,7 +14,7 @@ const SectionComparison = ({ data }) => {
           <table className="tg">
             <thead>
               <tr>
-                <th className="tg-0lax desc"></th>
+                <th className="tg-0lax desc">{""}</th>
                 <th className="tg-0lax of first">Outfund</th>
                 <th className="tg-0lax">Bank loan</th>
                 <th className="tg-0lax">Venture capital</th>

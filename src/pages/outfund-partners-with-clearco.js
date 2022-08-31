@@ -8,14 +8,7 @@ import T from "./../styles/new/typography"
 
 import LangLayout from "./../layouts/en"
 
-import {
-  HeroSimple,
-  Main,
-  SectionPartners,
-  SectionWhy,
-  SeoComponent,
-  HeroImage,
-} from "./../components"
+import { HeroSimple, Main, SeoComponent } from "./../components"
 
 const OfPartnershipWithClearco = (props) => {
   return (
