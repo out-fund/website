@@ -161,10 +161,10 @@ const TextWrapper = styled.div`
   max-width: 970px;
   margin: 0 auto;
   padding-bottom: 100px;
-  /* p {
+  p {
     margin: 0;
     margin-bottom: 24px;
-  } */
+  }
 `
 
 const SwitchWrapper = styled.div`
