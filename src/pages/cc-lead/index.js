@@ -20,7 +20,7 @@ const GetFunded = (props) => {
     { code: "AU", value: "Australia" },
     { code: "CA", value: "Canada" },
     { code: "NZ", value: "New Zealand" },
-    { code: "GR", value: "Germany" },
+    { code: "DE", value: "Germany" },
     { code: "FR", value: "France" },
     { code: "IT", value: "Italy" },
     { code: "ES", value: "Spain" },
