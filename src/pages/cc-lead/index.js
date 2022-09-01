@@ -34,6 +34,7 @@ const GetFunded = (props) => {
     { code: "HU", value: "Hungary" },
     { code: "LT", value: "Lithuania" },
     { code: "NO", value: "Norway" },
+    { code: "IE", value: "Ireland" },
   ]
 
   return (
