@@ -32,7 +32,7 @@ const ReferralProgram = (props) => {
                     "We’ve helped you, now let's help your founder friends too!"
                   }
                   description={
-                    "For every founder we fund, you'll receive up to £1,000* in gift vouchers. <br/><br/> <small>* For facilities of £100k+. For facilities belove £100k you will receive £500 worth of gift vouchers</small>."
+                    "For every founder we fund, you'll receive up to £1,000* in gift vouchers. <br/><br/> <small>* For facilities of £100k+. For facilities below £100k you will receive £500 worth of gift vouchers</small>."
                   }
                 />
               </TextWrapper>
