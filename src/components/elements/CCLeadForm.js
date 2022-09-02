@@ -100,9 +100,6 @@ const CCLeadForm = ({ data, incorporationCountry, language }) => {
           if (!values.companyName) {
             errors.companyName = "Company Name Required"
           }
-          if (!values.notes) {
-            errors.notes = "Notes Required"
-          }
           return errors
         }}
       >
@@ -225,7 +222,6 @@ const CCLeadForm = ({ data, incorporationCountry, language }) => {
                 <label htmlFor="notes">Notes</label>
               </VisuallyHidden>
               <F.TextArea
-                $valid={errors.notes && touched.notes}
                 name="notes"
                 placeholder="Notes"
                 data-segment="textInput"
