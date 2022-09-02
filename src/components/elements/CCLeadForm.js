@@ -29,6 +29,7 @@ const CCLeadForm = ({ data, incorporationCountry, language }) => {
           amr: "",
           incorporationCountry: "",
           ccrefname: "",
+          notes: "",
         }}
         onSubmit={(values, actions) => {
           fetch(`${language ? "/" + language + "/" : "/"}`, {
@@ -51,6 +52,7 @@ const CCLeadForm = ({ data, incorporationCountry, language }) => {
                 amr: values.amr,
                 ccrefname: values.ccrefname,
                 incorporationCountry: values.incorporationCountry,
+                notes: values.notes,
                 platform: "website",
                 country: language || "uk",
               })
@@ -97,6 +99,9 @@ const CCLeadForm = ({ data, incorporationCountry, language }) => {
           }
           if (!values.companyName) {
             errors.companyName = "Company Name Required"
+          }
+          if (!values.notes) {
+            errors.notes = "Notes Required"
           }
           return errors
         }}
@@ -210,6 +215,22 @@ const CCLeadForm = ({ data, incorporationCountry, language }) => {
                 data-segment="textInput"
                 element-name="clearco_rep_name"
                 data-trait="clearco_rep_name"
+              />
+              <F.ErrorWrapper>
+                <F.FormikError component="div" name="ccrefname" />
+              </F.ErrorWrapper>
+            </F.Group>
+            <F.Group>
+              <VisuallyHidden>
+                <label htmlFor="notes">Notes</label>
+              </VisuallyHidden>
+              <F.FormikField
+                $valid={errors.notes && touched.notes}
+                name="notes"
+                placeholder="Notes"
+                data-segment="textInput"
+                element-name="notes"
+                data-trait="notes"
               />
               <F.ErrorWrapper>
                 <F.FormikError component="div" name="ccrefname" />
