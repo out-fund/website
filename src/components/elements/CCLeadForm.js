@@ -233,7 +233,7 @@ const CCLeadForm = ({ data, incorporationCountry, language }) => {
                 data-trait="notes"
               />
               <F.ErrorWrapper>
-                <F.FormikError component="div" name="ccrefname" />
+                <F.FormikError component="div" name="notes" />
               </F.ErrorWrapper>
             </F.Group>
             <F.Group>
