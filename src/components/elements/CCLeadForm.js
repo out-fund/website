@@ -224,7 +224,7 @@ const CCLeadForm = ({ data, incorporationCountry, language }) => {
               <VisuallyHidden>
                 <label htmlFor="notes">Notes</label>
               </VisuallyHidden>
-              <F.FormikField
+              <F.TextArea
                 $valid={errors.notes && touched.notes}
                 name="notes"
                 placeholder="Notes"
