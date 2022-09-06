@@ -15,26 +15,86 @@ const GetFunded = (props) => {
   const data = props.data.getFundedJson.content
 
   const incorporationCountry = [
-    { code: "UK", value: "United Kingdom" },
-    { code: "USA", value: "United States" },
-    { code: "AU", value: "Australia" },
-    { code: "CA", value: "Canada" },
-    { code: "NZ", value: "New Zealand" },
-    { code: "DE", value: "Germany" },
-    { code: "FR", value: "France" },
-    { code: "IT", value: "Italy" },
-    { code: "ES", value: "Spain" },
-    { code: "NL", value: "Netherlands" },
-    { code: "BE", value: "Belgium" },
-    { code: "DK", value: "Denmark" },
-    { code: "PL", value: "Poland" },
-    { code: "PT", value: "Portugal" },
-    { code: "SE", value: "Sweden" },
-    { code: "CZ", value: "Chech Republic" },
-    { code: "HU", value: "Hungary" },
-    { code: "LT", value: "Lithuania" },
-    { code: "NO", value: "Norway" },
-    { code: "IE", value: "Ireland" },
+    {
+      code: "AU",
+      value: "Australia",
+    },
+    {
+      code: "BE",
+      value: "Belgium",
+    },
+    {
+      code: "CA",
+      value: "Canada",
+    },
+    {
+      code: "CZ",
+      value: "Chech Republic",
+    },
+    {
+      code: "DK",
+      value: "Denmark",
+    },
+    {
+      code: "FR",
+      value: "France",
+    },
+    {
+      code: "DE",
+      value: "Germany",
+    },
+    {
+      code: "HU",
+      value: "Hungary",
+    },
+    {
+      code: "IE",
+      value: "Ireland",
+    },
+    {
+      code: "IT",
+      value: "Italy",
+    },
+    {
+      code: "LT",
+      value: "Lithuania",
+    },
+    {
+      code: "NL",
+      value: "Netherlands",
+    },
+    {
+      code: "NZ",
+      value: "New Zealand",
+    },
+    {
+      code: "NO",
+      value: "Norway",
+    },
+    {
+      code: "PL",
+      value: "Poland",
+    },
+    {
+      code: "PT",
+      value: "Portugal",
+    },
+    {
+      code: "ES",
+      value: "Spain",
+    },
+    {
+      code: "SE",
+      value: "Sweden",
+    },
+    {
+      code: "UK",
+      value: "United Kingdom",
+    },
+    {
+      code: "USA",
+      value: "United States",
+    },
   ]
 
   return (
