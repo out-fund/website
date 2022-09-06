@@ -24,10 +24,6 @@ const GetFunded = (props) => {
       value: "Belgium",
     },
     {
-      code: "CA",
-      value: "Canada",
-    },
-    {
       code: "CZ",
       value: "Chech Republic",
     },
