@@ -15,7 +15,7 @@ import { CookieSettingsButton } from "../../../components/index"
 
 const CookiePolicy = (props) => {
   const data = props.data.allMdx.edges[0].node
-  console.log(data)
+  // console.log(data)
   return (
     <LangLayout>
       <MDXProvider

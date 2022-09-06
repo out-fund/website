@@ -88,19 +88,6 @@ const OfPartnershipWithClearco = (props) => {
           <SwitchWrapper>
             <StyledSection>
               <T.H3>Start Supercharging Your Growth</T.H3>
-              {/* <T.Body
-              style={{
-                maxWidth: "570px",
-                marginLeft: "auto",
-                marginRight: "auto",
-              }}
-            >
-              Switching is easy, click on “Apply now” below and follow the
-              application steps.
-              <br /> <br />
-              One of our team members will then reach out to help Top you up,
-              refinance out your old facility or a combination of the both.
-            </T.Body> */}
               <Button
                 href="https://client.out.fund/signup?utm_source=cc-statementpage"
                 variant="primary"

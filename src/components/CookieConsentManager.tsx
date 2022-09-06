@@ -43,7 +43,7 @@ export default function CookieManager(props: {
     }
   }, [props.force])
 
-  console.log(openPreferences)
+  // console.log(openPreferences)
   return (
     <ConsentManagerBuilder
       onError={(e) => console.error("Error Handling", e)}
