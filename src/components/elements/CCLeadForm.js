@@ -242,7 +242,6 @@ const CCLeadForm = ({ data, incorporationCountry, language }) => {
                 <label htmlFor="notes">Notes</label>
               </VisuallyHidden>
               <F.FormikField
-                as="textarea"
                 name="notes"
                 placeholder="Notes"
                 data-segment="textInput"
