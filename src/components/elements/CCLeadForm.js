@@ -30,7 +30,6 @@ const CCLeadForm = ({ data, incorporationCountry, language }) => {
           incorporationCountry: "",
           ccrefname: "",
           notes: "",
-          bid: "",
         }}
         onSubmit={(values, actions) => {
           fetch(`${language ? "/" + language + "/" : "/"}`, {
@@ -54,7 +53,6 @@ const CCLeadForm = ({ data, incorporationCountry, language }) => {
                 ccrefname: values.ccrefname,
                 incorporationCountry: values.incorporationCountry,
                 notes: values.notes,
-                bid: values.bid,
                 platform: "website",
                 country: language || "uk",
               })
@@ -217,23 +215,6 @@ const CCLeadForm = ({ data, incorporationCountry, language }) => {
               />
               <F.ErrorWrapper>
                 <F.FormikError component="div" name="ccrefname" />
-              </F.ErrorWrapper>
-            </F.Group>
-
-            <F.Group>
-              <VisuallyHidden>
-                <label htmlFor="bid">BID</label>
-              </VisuallyHidden>
-              <F.FormikField
-                name="bid"
-                placeholder="BID"
-                data-segment="textInput"
-                element-name="bid"
-                data-trait="bid"
-                type="number"
-              />
-              <F.ErrorWrapper>
-                <F.FormikError component="div" name="bid" />
               </F.ErrorWrapper>
             </F.Group>
 
