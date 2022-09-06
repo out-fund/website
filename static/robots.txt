@@ -12,5 +12,6 @@ Disallow: /es/referral-program*
 Disallow: /au/referral-program*
 Disallow: /us/referral-program*
 Disallow: /signatures*
+Disallow: /cc-lead*
 
 Sitemap: https://out.fund/sitemap/sitemap-index.xml
