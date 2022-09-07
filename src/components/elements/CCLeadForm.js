@@ -3,8 +3,9 @@ import styled from "styled-components"
 import { Formik } from "formik"
 import { navigate } from "gatsby"
 
-import { Button } from ".."
-import F from "../../styles/new/form"
+import { Button } from "./.."
+import F from "./../../styles/new/form"
+import T from "./../../styles/new/typography"
 
 import { VisuallyHidden } from "../../styles/utils"
 
@@ -29,6 +30,7 @@ const CCLeadForm = ({ data, incorporationCountry, language }) => {
           amr: "",
           incorporationCountry: "",
           ccrefname: "",
+          priority: false,
           notes: "",
         }}
         onSubmit={(values, actions) => {
@@ -53,6 +55,7 @@ const CCLeadForm = ({ data, incorporationCountry, language }) => {
                 ccrefname: values.ccrefname,
                 incorporationCountry: values.incorporationCountry,
                 notes: values.notes,
+                priority: values.priority,
                 platform: "website",
                 country: language || "uk",
               })
@@ -233,6 +236,22 @@ const CCLeadForm = ({ data, incorporationCountry, language }) => {
                 <F.FormikError component="div" name="notes" />
               </F.ErrorWrapper>
             </F.Group>
+
+            <Checkbox>
+              <CheckboxLabel as="label" htmlFor="priority">
+                Priority
+              </CheckboxLabel>
+              <F.FormikField
+                type="checkbox"
+                id="priority"
+                name="priority"
+                data-segment="textInput"
+                element-name="priority"
+                data-trait="priority"
+                onChange={handleChange}
+              />
+            </Checkbox>
+
             <F.Group>
               <SelectWrapper>
                 <F.Label htmlFor="incorporationCountry" as="label">
@@ -302,5 +321,20 @@ const FormWrapper = styled.div`
 `
 
 const SelectWrapper = styled(F.Group)``
+
+const Checkbox = styled(F.Group)`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  input {
+    width: 20px;
+    height: 20px;
+  }
+`
+
+const CheckboxLabel = styled(T.Body)`
+  /* margin-bottom: 24px; */
+`
 
 export default CCLeadForm
