@@ -57,13 +57,12 @@ const CCLeadForm = ({ data, incorporationCountry, language }) => {
                 notes: values.notes,
                 priority: values.priority,
                 platform: "website",
-                country: language || "uk",
+                locale: language || "uk",
               })
               navigate(
-                `${
-                  language
-                    ? "/" + language + "/cc-lead-submitted/"
-                    : "/cc-lead-submitted/"
+                `${language
+                  ? "/" + language + "/cc-lead-submitted/"
+                  : "/cc-lead-submitted/"
                 }`
               )
               actions.resetForm()

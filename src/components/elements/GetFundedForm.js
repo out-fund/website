@@ -46,7 +46,7 @@ const GetFundedForm = ({ data, language }) => {
                 website: values.website,
                 amr: values.amr,
                 platform: "website",
-                country: language || "uk",
+                locale: language || "uk",
               })
               navigate(
                 `${language ? "/" + language + "/thank-you/" : "/thank-you/"}`
