@@ -68,6 +68,7 @@ export const onRouteUpdate = () => {
   track.clicks('[data-segment="click"]', regions, 'website');
   track.textEntered('[data-segment="textInput"]', regions, 'website')
   track.optionSelected('[data-segment="option"]', regions, 'website')
+  console.log('hello?')
 }
 
 export const wrapPageElement = ({ element }) => (
