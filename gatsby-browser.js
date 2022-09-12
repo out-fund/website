@@ -52,7 +52,7 @@ const pageNames = [
   },
   {
     path: "/cc-lead/",
-    name: "Clear Co Leads"
+    name: "ClearCo Leads"
   }
 ]
 

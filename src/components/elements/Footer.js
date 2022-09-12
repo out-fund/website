@@ -21,7 +21,6 @@ const Footer = ({ lang }) => {
   const countryDropdownRef = useRef()
 
   const handleCountryClick = (event) => {
-    console.log("test", event)
     event.preventDefault()
     setCountryIsOpen(!countryIsOpen)
   }
