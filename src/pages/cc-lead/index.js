@@ -11,20 +11,7 @@ import { CCLeadForm, Link, SeoComponent } from "./../../components"
 import T from "../../styles/new/typography"
 import { theme } from "./../../styles/new/theme"
 
-const GetFunded = (props) => {
-  // const data = props.data.getFundedJson.content
-
-  // data = {
-  //   title: "Get funded",
-  //   description: "Tell us about you and your company.",
-  //   form: {
-  //     name: "Name",
-  //     email: "Email",
-  //     phone: "Phone number",
-  //     website: "Company Website",
-  //   },
-  // }
-
+const CCLead = () => {
   const incorporationCountry = [
     {
       code: "AU",
@@ -135,7 +122,7 @@ const GetFunded = (props) => {
   )
 }
 
-export default GetFunded
+export default CCLead
 
 const LogoWhiteWrapper = styled.div`
   display: flex;
@@ -165,11 +152,6 @@ const LogoWhiteWrapper = styled.div`
   }
 `
 
-// const PageTitle = styled(T.H1)`
-//   color: #deeeff;
-//   max-width: 540px;
-// `
-
 const Title = styled(T.H2)``
 const Description = styled(T.Body)``
 
@@ -178,10 +160,6 @@ const TextWrapper = styled.div`
 `
 const Wrapper = styled.div`
   background-color: ${theme.color.background.emphesized};
-
-  /* padding-top: 10vh;
-  padding-left: 24px;
-  padding-right: 24px; */
 `
 
 const RightContentWrapper = styled.div`
@@ -195,11 +173,11 @@ const RightWrapper = styled.div`
   display: flex;
   width: 100%;
   margin-top: 110px;
-  /* align-items: center; */
+
   justify-content: center;
   padding-left: 40px;
   padding-right: 40px;
-  /* padding-top: 40px; */
+
   padding-bottom: 120px;
   @media (max-width: 800px) {
     align-items: flex-start;
@@ -217,26 +195,3 @@ const ContentWrapper = styled.div`
     grid-template-columns: 1fr;
   }
 `
-// export const query = graphql`
-//   query CCLeadPage {
-//     getFundedJson(language: { regex: "/en-GB/" }) {
-//       content {
-//         title
-//         description
-//         form {
-//           name
-//           email
-//           phone
-//           website
-//           select {
-//             title
-//             default
-//             options
-//             values
-//           }
-//           btn
-//         }
-//       }
-//     }
-//   }
-// `
