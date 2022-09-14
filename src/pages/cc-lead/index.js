@@ -194,13 +194,13 @@ const RightContentWrapper = styled.div`
 const RightWrapper = styled.div`
   display: flex;
   width: 100%;
-  /* margin-top: 110px; */
+  margin-top: 110px;
   /* align-items: center; */
-  /* justify-content: center; */
+  justify-content: center;
   padding-left: 40px;
   padding-right: 40px;
   /* padding-top: 40px; */
-  padding-bottom: 40px;
+  padding-bottom: 120px;
   @media (max-width: 800px) {
     align-items: flex-start;
     padding-top: 24px;
