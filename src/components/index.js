@@ -47,7 +47,6 @@ import CardFounderName from "./cards/CardFounderName"
 import ThreeColumnIcons from "./sections/ThreeColumnIcons"
 import CardBlog from "./cards/CardBlog"
 import SectionSteps from "./sections/SectionSteps"
-import GetFundedForm from "./elements/GetFundedForm"
 import CCLeadForm from "./elements/CCLeadForm"
 import ContactUsForm from "./elements/ContactUsForm"
 import PartnerForm from "./elements/PartnerForm"
@@ -62,7 +61,6 @@ import SectionWhoCanApply from "./sections/SectionWhoCanApply"
 import SectionBenefits from "./sections/SectionBenefits"
 import SectionRepay from "./sections/SectionRepay"
 
-import GetFundedFormEU from "./elements/GetFundedFormEU"
 import Switch from "./elements/Swtich"
 
 import CookieSettingsButton from "./elements/CookieSettingsButton"
@@ -79,7 +77,6 @@ export {
   SectionOtherBrands,
   CardCta,
   SectionFindOut,
-  GetFundedForm,
   CCLeadForm,
   ContactUsForm,
   PartnerForm,
@@ -122,7 +119,6 @@ export {
   ReferralForm,
   NewsBar,
   FooterSimple,
-  GetFundedFormEU,
   Switch,
   SectionInfoStrip,
   SectionLoanDescriptions,

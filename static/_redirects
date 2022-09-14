@@ -58,3 +58,9 @@
 /es/legal/privacy-policy/    /Outfund-Privacy-Policy.pdf
 /au/legal/privacy-policy/    /Outfund-Privacy-Policy.pdf
 /us/legal/privacy-policy/    /Outfund-Privacy-Policy.pdf
+
+# Get funded removed
+/get-funded/  https://client.out.fund/signup
+/us/get-funded/  https://client.out.fund/signup
+/au/get-funded/  https://client.out.fund/signup
+/es/get-funded/  https://client.out.fund/signup

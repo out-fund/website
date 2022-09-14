@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { graphql } from "gatsby"
+// import { graphql } from "gatsby"
 // import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import LangLayout from "./../../layouts/en"
@@ -12,7 +12,18 @@ import T from "../../styles/new/typography"
 import { theme } from "./../../styles/new/theme"
 
 const GetFunded = (props) => {
-  const data = props.data.getFundedJson.content
+  // const data = props.data.getFundedJson.content
+
+  // data = {
+  //   title: "Get funded",
+  //   description: "Tell us about you and your company.",
+  //   form: {
+  //     name: "Name",
+  //     email: "Email",
+  //     phone: "Phone number",
+  //     website: "Company Website",
+  //   },
+  // }
 
   const incorporationCountry = [
     {
@@ -113,7 +124,6 @@ const GetFunded = (props) => {
                 <Description>Tell us about the company.</Description>
               </TextWrapper>
               <CCLeadForm
-                data={data}
                 incorporationCountry={incorporationCountry}
                 language=""
               />
@@ -184,9 +194,9 @@ const RightContentWrapper = styled.div`
 const RightWrapper = styled.div`
   display: flex;
   width: 100%;
-  margin-top: 110px;
-  align-items: center;
-  justify-content: center;
+  /* margin-top: 110px; */
+  /* align-items: center; */
+  /* justify-content: center; */
   padding-left: 40px;
   padding-right: 40px;
   /* padding-top: 40px; */
@@ -207,26 +217,26 @@ const ContentWrapper = styled.div`
     grid-template-columns: 1fr;
   }
 `
-export const query = graphql`
-  query CCLeadPage {
-    getFundedJson(language: { regex: "/en-GB/" }) {
-      content {
-        title
-        description
-        form {
-          name
-          email
-          phone
-          website
-          select {
-            title
-            default
-            options
-            values
-          }
-          btn
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query CCLeadPage {
+//     getFundedJson(language: { regex: "/en-GB/" }) {
+//       content {
+//         title
+//         description
+//         form {
+//           name
+//           email
+//           phone
+//           website
+//           select {
+//             title
+//             default
+//             options
+//             values
+//           }
+//           btn
+//         }
+//       }
+//     }
+//   }
+// `

@@ -17,7 +17,7 @@ const encode = (data) => {
     .join("&")
 }
 
-const CCLeadForm = ({ data, incorporationCountry, language }) => {
+const CCLeadForm = ({ incorporationCountry, language }) => {
   return (
     <FormWrapper>
       <Formik
@@ -60,9 +60,10 @@ const CCLeadForm = ({ data, incorporationCountry, language }) => {
                 locale: language || "uk",
               })
               navigate(
-                `${language
-                  ? "/" + language + "/cc-lead-submitted/"
-                  : "/cc-lead-submitted/"
+                `${
+                  language
+                    ? "/" + language + "/cc-lead-submitted/"
+                    : "/cc-lead-submitted/"
                 }`
               )
               actions.resetForm()
@@ -173,12 +174,12 @@ const CCLeadForm = ({ data, incorporationCountry, language }) => {
             </F.Group>
             <F.Group>
               <VisuallyHidden>
-                <label htmlFor="message">{data.form.phone}</label>
+                <label htmlFor="message">Phone number</label>
               </VisuallyHidden>
               <F.FormikField
                 $valid={errors.phone && touched.phone}
                 name="phone"
-                placeholder={data.form.phone}
+                placeholder="Phone number"
                 data-segment="textInput"
                 element-name="phone"
                 data-trait="phone"
@@ -189,12 +190,12 @@ const CCLeadForm = ({ data, incorporationCountry, language }) => {
             </F.Group>
             <F.Group>
               <VisuallyHidden>
-                <label htmlFor="message">{data.form.website}</label>
+                <label htmlFor="message">Company Website</label>
               </VisuallyHidden>
               <F.FormikField
                 $valid={errors.website && touched.website}
                 name="website"
-                placeholder={data.form.website}
+                placeholder="Company Website"
                 data-segment="textInput"
                 element-name="website"
                 data-trait="website"

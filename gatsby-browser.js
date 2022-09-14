@@ -3,75 +3,91 @@ import GlobalStyle from "./src/styles/new/utils/GlobalStyle"
 
 import { initSegment, track } from "@shiggydoodah/segment-events"
 
-const segmentKey = 'SbUYctfcULJBDClnkbSPOkPmfEPwexBU'
-const regions = ['uk', 'au', 'us', 'es', 'fr', 'dk', 'ro', 'cz', 'nl', 'hu', 'it', 'pt', 'de', 'pl', 'se', 'fr-be', 'nl-be', 'ie']
+const segmentKey = "SbUYctfcULJBDClnkbSPOkPmfEPwexBU"
+const regions = [
+  "uk",
+  "au",
+  "us",
+  "es",
+  "fr",
+  "dk",
+  "ro",
+  "cz",
+  "nl",
+  "hu",
+  "it",
+  "pt",
+  "de",
+  "pl",
+  "se",
+  "fr-be",
+  "nl-be",
+  "ie",
+]
 const pageNames = [
   {
-    path: '/',
-    name: 'Homepage'
+    path: "/",
+    name: "Homepage",
   },
   {
-    path: '/how-funding-works/',
-    name: 'How funding works'
+    path: "/how-funding-works/",
+    name: "How funding works",
   },
   {
-    path: '/how-funding-works/',
-    name: 'How funding works'
+    path: "/how-funding-works/",
+    name: "How funding works",
   },
   {
-    path: '/about-us/',
-    name: 'About us'
+    path: "/about-us/",
+    name: "About us",
   },
   {
     path: "/success-stories/",
-    name: "Success stories"
+    name: "Success stories",
   },
   {
     path: "/support/faq/",
-    name: "FAQ"
+    name: "FAQ",
   },
-  {
-    path: "/get-funded/",
-    name: "Get funded"
-  },
+
   {
     path: "/partners/",
-    name: "Partners"
+    name: "Partners",
   },
   {
     path: "/careers/",
-    name: "Careers"
+    name: "Careers",
   },
   {
     path: "/legal/cookie-policy/",
-    name: "Cookie policy"
+    name: "Cookie policy",
   },
   {
     path: "/legal/privacy-policy/",
-    name: "Privacy policy"
+    name: "Privacy policy",
   },
   {
     path: "/cc-lead/",
-    name: "ClearCo Leads"
-  }
+    name: "ClearCo Leads",
+  },
 ]
 
 export const onClientEntry = () => {
   initSegment(segmentKey, {
-    methods: ['addSourceMiddleware'],
-    cookieBanner: true // WARNING: We're using a cookie banner, so we need this enable it. disabling it will cause the site to break!!! 
+    methods: ["addSourceMiddleware"],
+    cookieBanner: true, // WARNING: We're using a cookie banner, so we need this enable it. disabling it will cause the site to break!!!
   })
 }
 
 export const onRouteUpdate = () => {
   track.page({
     regions,
-    platform: 'website',
+    platform: "website",
     pageNames,
-  });
-  track.clicks('[data-segment="click"]', regions, 'website');
-  track.textEntered('[data-segment="textInput"]', regions, 'website')
-  track.optionSelected('[data-segment="option"]', regions, 'website')
+  })
+  track.clicks('[data-segment="click"]', regions, "website")
+  track.textEntered('[data-segment="textInput"]', regions, "website")
+  track.optionSelected('[data-segment="option"]', regions, "website")
 }
 
 export const wrapPageElement = ({ element }) => (
