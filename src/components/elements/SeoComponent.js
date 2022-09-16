@@ -131,7 +131,7 @@ const SeoComponent = ({ title, description, image, article }) => {
   return (
     <Helmet
       title={seo.title}
-      titleTemplate={`%s | Outfund | ${countryName}`}
+      titleTemplate={`%s | Outfund`}
       htmlAttributes={{ lang: `${htmlLang}` }}
     >
       <link rel="canonical" href={seo.url} />
@@ -181,10 +181,7 @@ const SeoComponent = ({ title, description, image, article }) => {
       {(article ? true : null) && <meta property="og:type" content="article" />}
 
       {seo.title && (
-        <meta
-          property="og:title"
-          content={seo.title + ` | Outfund | ${countryName}`}
-        />
+        <meta property="og:title" content={seo.title + ` | Outfund`} />
       )}
       {seo.description && (
         <meta property="og:description" content={seo.description} />
@@ -204,10 +201,7 @@ const SeoComponent = ({ title, description, image, article }) => {
 
       <meta name="twitter:card" content="summary_large_image" />
       {seo.title && (
-        <meta
-          name="twitter:title"
-          content={seo.title + ` | Outfund | ${countryName}`}
-        />
+        <meta name="twitter:title" content={seo.title + ` | Outfund`} />
       )}
       {seo.description && (
         <meta name="twitter:description" content={seo.description} />
