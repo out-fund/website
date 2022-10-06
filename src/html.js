@@ -1,41 +1,41 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const WebStightsHeader = () => {
-  return (
-    <>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `(function () {
-          var zi = document.createElement('script');
-          zi.type = 'text/javascript';
-          zi.async = true;
-          zi.referrerPolicy = 'unsafe-url';
-          zi.src = 'https://ws.zoominfo.com/pixel/633d64ff0eb882d67dd1dbbd';
-          var s = document.getElementsByTagName('script')[0];
-          s.parentNode.insertBefore(zi, s);
-        })();`,
-        }}
-      />
-    </>
-  )
-}
+// const WebStightsHeader = () => {
+//   return (
+//     <>
+//       <script
+//         dangerouslySetInnerHTML={{
+//           __html: `(function () {
+//           var zi = document.createElement('script');
+//           zi.type = 'text/javascript';
+//           zi.async = true;
+//           zi.referrerPolicy = 'unsafe-url';
+//           zi.src = 'https://ws.zoominfo.com/pixel/633d64ff0eb882d67dd1dbbd';
+//           var s = document.getElementsByTagName('script')[0];
+//           s.parentNode.insertBefore(zi, s);
+//         })();`,
+//         }}
+//       />
+//     </>
+//   )
+// }
 
-const WebStightsFooter = () => {
-  return (
-    <>
-      <noscript>
-        <img
-          src="https://ws.zoominfo.com/pixel/633d64ff0eb882d67dd1dbbd"
-          width="1"
-          height="1"
-          style="display: none;"
-          alt="websights"
-        />
-      </noscript>
-    </>
-  )
-}
+// const WebStightsFooter = () => {
+//   return (
+//     <>
+//       <noscript>
+//         <img
+//           src="https://ws.zoominfo.com/pixel/633d64ff0eb882d67dd1dbbd"
+//           width="1"
+//           height="1"
+//           style="display: none;"
+//           alt="websights"
+//         />
+//       </noscript>
+//     </>
+//   )
+// }
 
 const GoogleTagManager = () => {
   return (
@@ -101,7 +101,7 @@ export default function HTML(props) {
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
         ></script>
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <WebStightsHeader />
+        {/* <WebStightsHeader /> */}
       </head>
       <body {...props.bodyAttributes}>
         <GoogleTagManagerNoScript />
@@ -112,7 +112,7 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        <WebStightsFooter />
+        {/* <WebStightsFooter /> */}
       </body>
     </html>
   )
