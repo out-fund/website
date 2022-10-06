@@ -1,17 +1,41 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-// const SegmentTest = () => {
-//   return (
-//     <>
-//       <script
-//         dangerouslySetInnerHTML={{
-//           __html: `!function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey="MjzmGl2VWEv9T9iKxHUtiPB2z4rTfEyg";;analytics.SNIPPET_VERSION="4.15.3"; analytics.load("MjzmGl2VWEv9T9iKxHUtiPB2z4rTfEyg");analytics.page();}}();`,
-//         }}
-//       />
-//     </>
-//   )
-// }
+const WebStightsHeader = () => {
+  return (
+    <>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `(function () {
+          var zi = document.createElement('script');
+          zi.type = 'text/javascript';
+          zi.async = true;
+          zi.referrerPolicy = 'unsafe-url';
+          zi.src = 'https://ws.zoominfo.com/pixel/633d64ff0eb882d67dd1dbbd';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(zi, s);
+        })();`,
+        }}
+      />
+    </>
+  )
+}
+
+const WebStightsFooter = () => {
+  return (
+    <>
+      <noscript>
+        <img
+          src="https://ws.zoominfo.com/pixel/633d64ff0eb882d67dd1dbbd"
+          width="1"
+          height="1"
+          style="display: none;"
+          alt="websights"
+        />
+      </noscript>
+    </>
+  )
+}
 
 const GoogleTagManager = () => {
   return (
@@ -67,9 +91,9 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        {/* Segment */}
-        {/* <SegmentTest /> */}
-        {/* <Hotjar /> */}
+
+        <WebStightsHeader />
+
         <GoogleAdsLatest />
         <GoogleTagManager />
         {props.headComponents}
@@ -90,14 +114,7 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        {/* Website Chat */}
-        {/* <script
-          type="text/javascript"
-          id="hs-script-loader"
-          async
-          defer
-          src="//js-na1.hs-scripts.com/4522529.js"
-        />  */}
+        <WebStightsFooter />
       </body>
     </html>
   )
