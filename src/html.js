@@ -91,9 +91,6 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-
-        <WebStightsHeader />
-
         <GoogleAdsLatest />
         <GoogleTagManager />
         {props.headComponents}
@@ -104,6 +101,7 @@ export default function HTML(props) {
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
         ></script>
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <WebStightsHeader />
       </head>
       <body {...props.bodyAttributes}>
         <GoogleTagManagerNoScript />
