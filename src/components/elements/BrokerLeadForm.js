@@ -140,7 +140,7 @@ const BrokerLeadForm = ({ incorporationCountry, language }) => {
           isValid,
           dirty,
         }) => (
-          <BrokerForm name={`cc-lead${language ? "-" + language : ""}`}>
+          <BrokerForm name={`broker-lead${language ? "-" + language : ""}`}>
             <VisuallyHidden>
               <label>
                 Don't fill this out if you're human:
