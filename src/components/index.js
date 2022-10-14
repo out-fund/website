@@ -48,6 +48,7 @@ import ThreeColumnIcons from "./sections/ThreeColumnIcons"
 import CardBlog from "./cards/CardBlog"
 import SectionSteps from "./sections/SectionSteps"
 import CCLeadForm from "./elements/CCLeadForm"
+import BrokerLeadForm from "./elements/BrokerLeadForm"
 import ContactUsForm from "./elements/ContactUsForm"
 import PartnerForm from "./elements/PartnerForm"
 import SeoComponent from "./elements/SeoComponent"
@@ -126,4 +127,5 @@ export {
   SectionWhoCanApply,
   SectionBenefits,
   SectionRepay,
+  BrokerLeadForm,
 }
