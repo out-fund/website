@@ -93,11 +93,11 @@ const BrokerLeadForm = ({ incorporationCountry, language }) => {
           }
 
           if (!values.clientEmail || !emailRegex.test(values.clientEmail)) {
-            errors.clientEmail = "Valid email required"
+            errors.clientEmail = "Valid client email required"
           }
 
           if (!values.clientPhone) {
-            errors.clientPhone = "Phone number required"
+            errors.clientPhone = "Client phone number required"
           }
           if (
             !values.clientWebsite ||
@@ -107,7 +107,7 @@ const BrokerLeadForm = ({ incorporationCountry, language }) => {
           }
 
           if (!values.monthlyTurnover) {
-            errors.monthlyTurnover = "Monthly turnover required"
+            errors.monthlyTurnover = "Client monthly turnover required"
           }
 
           if (!values.brokerageName) {
