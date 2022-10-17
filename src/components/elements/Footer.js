@@ -218,16 +218,6 @@ const Footer = ({ lang }) => {
           </div>
         </Bottom>
       </ContentWrapper>
-      {/* <WebStightsFooter /> */}
-      <noscript>
-        <img
-          src="https://ws.zoominfo.com/pixel/633d64ff0eb882d67dd1dbbd"
-          width="1"
-          height="1"
-          style="display: none;"
-          alt="websights"
-        />
-      </noscript>
     </Wrapper>
   )
 }
