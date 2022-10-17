@@ -75,16 +75,6 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        {/* <WebStightsFooter /> */}
-        <noscript>
-          <img
-            src="https://ws.zoominfo.com/pixel/633d64ff0eb882d67dd1dbbd"
-            width="1"
-            height="1"
-            style="display: none;"
-            alt="websights"
-          />
-        </noscript>
       </body>
     </html>
   )
