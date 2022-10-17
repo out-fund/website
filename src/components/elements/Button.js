@@ -23,15 +23,23 @@ const Button = ({
   const [utms, setUtms] = useState({})
 
   useEffect(() => {
-    if (Cookie.get("outfund_utm")) {
+    const disable = Cookie.get('disableAnalytics') || false;
+    const utmsCookie = Cookie.get("outfund_utm") || false;
+    if (utmsCookie && !disable) {
       const cookieUtms = JSON.parse(Cookie.get("outfund_utm"))
+      let utms = {};
+      if (cookieUtms.most_recent) {
+        utms = cookieUtms.most_recent
+      }
       let utmsToSet = {}
-      Object.keys(cookieUtms).forEach((key) => {
-        if (cookieUtms[key] != null && cookieUtms[key] !== "") {
-          utmsToSet[key] = cookieUtms[key]
+      Object.keys(utms).forEach((key) => {
+        if (utms[key] != null && utms[key] !== "") {
+          utmsToSet[key] = utms[key]
         }
       })
       setUtms(utmsToSet)
+    } else if (disable) {
+      setUtms({ disableAnalytics: true })
     }
   }, [])
 
@@ -45,7 +53,7 @@ const Button = ({
         .map((key) => key + "=" + utms[key])
         .join("&")
   }
-  // TEMPORARY -
+
   const langKey = useLangProvider()
   if (to && langKey !== "en") {
     to = "/" + langKey + to

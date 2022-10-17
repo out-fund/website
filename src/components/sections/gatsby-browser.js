@@ -4,6 +4,7 @@ import Cookies from "js-cookie"
 
 import { initSegment, track } from "@shiggydoodah/segment-events"
 
+const segmentKey = "SbUYctfcULJBDClnkbSPOkPmfEPwexBU"
 const regions = [
   "uk",
   "au",
@@ -73,19 +74,22 @@ const pageNames = [
 ]
 
 export const onClientEntry = () => {
-  let disabled = false;
+  const disabled = false;
   const params = new URLSearchParams(window.location.search)
-  disabled = Cookies.get("disableAnalytics") ? true : false
+  const disableCookie = Cookies.get("disableAnalytics") || false
+
   if (params.has("disableAnalytics")) {
-    Cookies.set("disableAnalytics", true)
     disabled = true
+    Cookies.set("disableAnalytics", true)
   }
-  if (!disabled) {
-    initSegment("qBIPy9jY9yndY4CeQyJzvwCzYlAzFxPK", {
+
+  if (!disabled || disableCookie) {
+    initSegment(segmentKey, {
       methods: ["addSourceMiddleware"],
       cookieBanner: true, // WARNING: We're using a cookie banner, so we need this enable it. disabling it will cause the site to break!!!
     })
   }
+
 }
 
 export const onRouteUpdate = () => {
