@@ -81,7 +81,7 @@ export const onClientEntry = () => {
     disabled = true
   }
   if (!disabled) {
-    initSegment("qBIPy9jY9yndY4CeQyJzvwCzYlAzFxPK", {
+    initSegment("SbUYctfcULJBDClnkbSPOkPmfEPwexBU", {
       methods: ["addSourceMiddleware"],
       cookieBanner: true, // WARNING: We're using a cookie banner, so we need this enable it. disabling it will cause the site to break!!!
     })
