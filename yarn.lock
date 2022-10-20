@@ -2101,10 +2101,10 @@
     component-cookie "^1.1.5"
     component-url "^0.2.1"
 
-"@shiggydoodah/segment-events@^1.4.3":
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/@shiggydoodah/segment-events/-/segment-events-1.4.3.tgz#d20cb03ae1925c6ba6a6d7100143d0a6168be5b2"
-  integrity sha512-bjktPCLLeLbWEypP+ILMCsaPkGdSbsFQMZK32Yk0M0CENv4v6x0MdJLq+0moxgoheS2KXoUUrxYrxExGWI2M9w==
+"@shiggydoodah/segment-events@^1.4.4":
+  version "1.4.4"
+  resolved "https://registry.yarnpkg.com/@shiggydoodah/segment-events/-/segment-events-1.4.4.tgz#d90e978a1400ea141fd1ca56e01ff4b809008db7"
+  integrity sha512-QYkGZyKrlQxoTTM4uAtpmCqYr9Tf7L+4bg+Vi6r99lp8CEqHa1hXpwAx/2nmxGT+Ufl9GccL2OwhY3AOmi/e4Q==
 
 "@sideway/address@^4.1.3":
   version "4.1.4"
