@@ -73,7 +73,7 @@ const pageNames = [
 ]
 
 export const onClientEntry = () => {
-  let disabled = false;
+  let disabled = false
   const params = new URLSearchParams(window.location.search)
   disabled = Cookies.get("disableAnalytics") ? true : false
   if (params.has("disableAnalytics")) {
@@ -93,6 +93,9 @@ export const onRouteUpdate = () => {
     regions,
     platform: "website",
     pageNames,
+    properties: {
+      branch: `${process.env.NODE_ENV}`,
+    },
   })
   track.clicks('[data-segment="click"]', regions, "website")
   track.textEntered('[data-segment="textInput"]', regions, "website")
