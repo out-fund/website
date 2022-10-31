@@ -94,7 +94,7 @@ export const onRouteUpdate = () => {
     platform: "website",
     pageNames,
     properties: {
-      branch: `${process.env.NODE_ENV}`,
+      branch: `${process.env.BRANCH}`,
     },
   })
   track.clicks('[data-segment="click"]', regions, "website")
