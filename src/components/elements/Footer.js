@@ -83,7 +83,7 @@ const Footer = ({ lang }) => {
                 </Button>
                 {langKey !== "es" && (
                   <Button
-                    to={links.blog.url}
+                    href="https://out.fund/blog/"
                     variant="footerLink"
                     color="white"
                   >
