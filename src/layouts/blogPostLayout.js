@@ -35,7 +35,7 @@ const BlogPostLayout = ({ data: { mdx } }) => {
       >
         <Helmet
           title={mdx.frontmatter.title}
-          titleTemplate="%s | Outfund | UK"
+          titleTemplate="%s | Outfund"
           htmlAttributes={{ lang: `en-GB` }}
         >
           <meta name="description" content={mdx.excerpt} />
@@ -44,7 +44,7 @@ const BlogPostLayout = ({ data: { mdx } }) => {
           <meta property="og:type" content="article" />
           <meta
             property="og:title"
-            content={mdx.frontmatter.title + " | Outfund | UK"}
+            content={mdx.frontmatter.title + " | Outfund"}
           />
           <meta property="og:description" content={mdx.excerpt} />
           <meta property="og:site_name" content="Outfund" />
@@ -55,7 +55,7 @@ const BlogPostLayout = ({ data: { mdx } }) => {
           <meta name="twitter:card" content="summary_large_image" />
           <meta
             name="twitter:title"
-            content={mdx.frontmatter.title + " | Outfund | UK"}
+            content={mdx.frontmatter.title + " | Outfund"}
           />
           <meta name="twitter:description" content={mdx.excerpt} />
         </Helmet>

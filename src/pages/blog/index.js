@@ -13,18 +13,18 @@ const Blog = (props) => {
     <LangLayout>
       <Helmet
         title="Blog"
-        titleTemplate="%s | Outfund | UK"
+        titleTemplate="%s | Outfund"
         htmlAttributes={{ lang: `en-GB` }}
       >
         <meta name="description" content="Latest from our blog" />
         <link rel="canonical" href={`https://out.fund/blog/}`} />
         <meta property="og:url" content={`https://www.out.fund/blog/`} />
-        <meta property="og:title" content="Blog | Outfund | UK" />
+        <meta property="og:title" content="Blog | Outfund" />
         <meta property="og:description" content="Latest from our blog" />
         <meta property="og:site_name" content="Outfund" />
         <meta property="og:image" content="https://www.out.fund/Outfund.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Blog | Outfund | UK" />
+        <meta name="twitter:title" content="Blog | Outfund" />
         <meta name="twitter:description" content="Latest from our blog" />
       </Helmet>
       <HeroSimple data={props.data.blogJson.hero} />
