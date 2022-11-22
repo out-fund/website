@@ -2,11 +2,11 @@
   "language": "es-ES",
   "seo": {
     "title": "Growth Capital Para Fundadores Como tú",
-    "description": "Financiación para tu marketing & inventario. De 10k€ a 2M€."
+    "description": "Financiación para tu marketing & inventario. De 15k€ a 10M€."
   },
   "hero": {
     "title": "Growth Capital Para Fundadores Como tú",
-    "description": "Financiación para tu marketing & inventario. De 10k€ a 2M€.",
+    "description": "Financiación para tu marketing & inventario. De 15k€ a 10M€.",
     "primaryBtn": {
       "text": "Solicitar financiación",
       "url": "https://client.out.fund/signup"
@@ -21,8 +21,8 @@
     }
   },
   "weFunded": {
-    "title": "Financiamos marcas como la tuya",
-    "description": "Queremos ayudar a empresas a crecer lo más rápido posible ofreciendo un capital rápido, justo y accesible.",
+    "title": "Financiamos negocios como el tuyo",
+    "description": "Buscamos negocios en fases de crecimiento. Te ayudamos a construir tu visión con capital rápido, justo y flexible.",
     "cards": {
       "feel": {
         "tag": {
@@ -75,9 +75,9 @@
     }
   },
   "startSupercharging": {
-    "title": "¡Acelera tu crecimiento!",
+    "title": "¡Solicitar financiación!",
     "btn": {
-      "text": "Empieza ya",
+      "text": "Empezar proceso",
       "url": "https://client.out.fund/signup"
     },
     "card": {
