@@ -6,13 +6,13 @@
   },
   "hero": {
     "title": "Growth capital for founders like you",
-    "description": "Supercharged funding from $10K to $10M for your marketing and inventory.",
+    "description": "Scale your business faster with funding from $10K to $10M.",
     "primaryBtn": {
       "text": "Get funded",
       "url": "https://client.out.fund/signup"
     },
     "secondaryBtn": {
-      "text": "Learn how it works",
+      "text": "How it works",
       "url": "/how-funding-works/"
     },
     "image": {
