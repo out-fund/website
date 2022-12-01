@@ -33,7 +33,7 @@ const HowFundingWorks = (props) => {
               data={{
                 title: "Revenue based financing",
                 description:
-                  "The model is simple. Using your monthly revenue as a guide, we provide up-front capital for growth in exchange for a small percentage of future earnings. You repay us via a flexible revenue share as daily sales come in, which means we only succeed when you succeed. If revenues slow, so do repayments. ",
+                  "The model is simple. Using your monthly revenue as a guide, you get quick access to up-front capital for growth in exchange for a small percentage of your future earnings. Make your repayments via a flexible revenue share as your daily sales come in. If revenues slow, so do repayments. Easier on your cash flow and better for your business. ",
                 blocks: [
                   {
                     title: "No dilution",
