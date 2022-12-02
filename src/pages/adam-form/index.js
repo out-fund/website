@@ -41,7 +41,7 @@ const ReferralProgram = (props) => {
               </TextWrapper>
 
               <FormWrapper>
-                <T.H4>Have someone in mind?</T.H4>
+                <T.H4>Apply here</T.H4>
                 <GenericForm
                   form={{
                     name: "adamForm",
