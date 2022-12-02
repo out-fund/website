@@ -61,6 +61,7 @@ import SectionComparison from "./sections/SectionComparison"
 import SectionWhoCanApply from "./sections/SectionWhoCanApply"
 import SectionBenefits from "./sections/SectionBenefits"
 import SectionRepay from "./sections/SectionRepay"
+import GenericForm from "./elements/GenericForm"
 
 import Switch from "./elements/Swtich"
 
@@ -128,4 +129,5 @@ export {
   SectionBenefits,
   SectionRepay,
   BrokerLeadForm,
+  GenericForm,
 }
