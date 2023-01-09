@@ -31,6 +31,7 @@ const GenericForm = ({ form, language }) => {
           lastName: "",
           businessName: "",
           businessEmail: "",
+          amr: "",
           country,
         }}
         onSubmit={(values, actions) => {
@@ -40,7 +41,7 @@ const GenericForm = ({ form, language }) => {
               "Content-Type": "application/x-www-form-urlencoded",
             },
             body: encode({
-              "form-name": `adamForm`,
+              "form-name": `QuickQuote`,
               ...values,
             }),
           })
@@ -77,7 +78,7 @@ const GenericForm = ({ form, language }) => {
           isValid,
           dirty,
         }) => (
-          <F.FormikForm name={`adamForm`}>
+          <F.FormikForm name={`QuickQuote`}>
             <F.Group>
               <VisuallyHidden>
                 <label htmlFor="firstName">{form.firstName}</label>
@@ -134,6 +135,22 @@ const GenericForm = ({ form, language }) => {
               <F.ErrorWrapper>
                 <F.FormikError component="div" name="businessEmail" />
               </F.ErrorWrapper>
+            </F.Group>
+
+            <F.Group>
+              <F.Label htmlFor="amr" as="label">
+                {form.amr}
+              </F.Label>
+              <F.FormikField
+                $valid={errors.amr && touched.amr}
+                name="amr"
+                placeholder="Average Monthly Revenue"
+                data-segment="textInput"
+                element-name="amr"
+                data-trait="amr"
+                attribute
+                type="number"
+              />
             </F.Group>
 
             <VisuallyHidden>
