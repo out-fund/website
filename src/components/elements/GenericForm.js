@@ -138,13 +138,15 @@ const GenericForm = ({ form, language }) => {
             </F.Group>
 
             <F.Group>
-              <F.Label htmlFor="amr" as="label">
-                {form.amr}
-              </F.Label>
+              <VisuallyHidden>
+                <label htmlFor="amr" as="label">
+                  {form.amr}
+                </label>
+              </VisuallyHidden>
               <F.FormikField
                 $valid={errors.amr && touched.amr}
                 name="amr"
-                placeholder="Average Monthly Revenue"
+                placeholder={form.amr}
                 data-segment="textInput"
                 element-name="amr"
                 data-trait="amr"
