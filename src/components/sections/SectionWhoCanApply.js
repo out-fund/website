@@ -9,7 +9,7 @@ import T from "./../../styles/new/typography"
 
 import { StaticImage } from "gatsby-plugin-image"
 
-const SectionWhoCanApply = () => {
+const SectionWhoCanApply = (props) => {
   // const { title, description, btn, image } = data
   return (
     <StyledSection>
@@ -29,15 +29,15 @@ const SectionWhoCanApply = () => {
             <GatsbyImage image={getImage(image.src)} alt={image.alt} />
           </MobileImageWrapper> */}
 
-          <SectionHeader title="Who can apply" />
+          <SectionHeader title={props.data.title} />
           {/* <Description>{parse(description)}</Description> */}
+
           <List>
-            <Element as="li">
-              An online model such as SaaS, Subscription, Ecommerce, Mobile App,
-              B2B
-            </Element>
-            <Element as="li">6+ months in business</Element>
-            <Element as="li">£10k+ Monthly revenue</Element>
+            {props.data.list.map((value, index) => (
+              <Element as="li" key={index}>
+                {value}
+              </Element>
+            ))}
           </List>
 
           <BtnWrapper>
@@ -46,7 +46,7 @@ const SectionWhoCanApply = () => {
               variant="primary"
               size="large"
             >
-              Apply now
+              {props.data.btn}
             </Button>
           </BtnWrapper>
         </TextWrapper>

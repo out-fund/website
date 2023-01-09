@@ -16,7 +16,7 @@ import {
   SeoComponent,
   SectionInfoStrip,
   SectionLoanDescriptions,
-  SectionComparison,
+  SectionComparisonES,
   SectionBenefits,
   SectionRepay,
   SectionWhoCanApply,
@@ -34,49 +34,75 @@ const HomePage = (props) => {
       <Main>
         <SectionInfoStrip
           data={[
-            { up: "Apply in just", down: "5 minutes" },
-            { up: "Business loans from", down: "£10k - £10m" },
-            { up: "Offers as fast as", down: "24h" },
-            // { up: "Fees as low as", down: "2%" },
-            { up: "Additional top-ups", down: "Continuous" },
+            { up: "Aplica en solo", down: "5 minutos" },
+            { up: "Tickets desde", down: "15k€ a 10M€" },
+            { up: "Ofertas en tan solo", down: "24h" },
+            { up: "Top-ups y acompañamiento", down: "de capital contínuo" },
           ]}
         />
         <SectionLoanDescriptions
           data={{
-            title: "Fast, flexible funding for you",
+            title: "Financiación rápida y flexible",
             rbs: {
-              title: "Revenue-based financing",
+              title: "Financiación Revenue Based",
               description:
-                "We use your monthly revenue as a guide and provide up-front capital within 24 hours in exchange for a small percentage of future earnings. <br/>You repay us as sales come in which means we only succeed when you succeed if revenues slow, so do repayments.",
+                "Analizamos tus ingresos mensuales y proporcionamos capital en un plazo de 24 horas a cambio de un porcentaje pre-acordado de tus ventas futuras.  <br/><br/> La devolución depende de tus ventas futuras, lo que significa que la amortización irá de la mano de la performance de tu compañía. Si los ingresos disminuyen, también lo hacen los reembolsos. Desde un principio sabrás cuánto repaga tu empresa.",
             },
             fixed: {
-              title: "Fixed-term loans",
+              title: "Créditos de amortización fija",
               description:
-                "We use your monthly revenue as a guide and provide up-front capital within 24 hours in exchange for a fixed repayment amount. <br/> You control how you repay us by deciding whether you would like daily or weekly fixed repayments. Know exactly what you will repay from the start.",
+                "Analizamos tus ingresos mensuales y proporcionamos capital en un plazo de 24 horas, con un plan de amortización fijo. <br/><br/> A través de un plan de amortización fijo controlas mejor tu cash flow. Sabrás desde el principio el total a pagar, y el plazo asociado.",
             },
           }}
         />
 
-        <SectionComparison
+        <SectionComparisonES
           data={{
-            title: "Find the perfect fit for your business",
+            title: "Encuentra la mejor solución para tu negocio.",
             description:
-              "Founders typically have two ways to fund business growth. Raising equity or getting a bank loan. Both can be valuable options but can mean giving up a piece of your company or agreeing to a personal guarantee.",
+              "Somos complementarios a todas las alternativas de financiación tradicionales. Queremos democratizar el acceso a la financiación flexible, con el fin de mitigar el riesgo financiero para los emprendedores.",
           }}
         />
 
-        <SectionWhoCanApply data={data.weInvesting} />
+        <SectionWhoCanApply
+          data={{
+            title: "¿Quién puede aplicar?",
+            list: [
+              "Negocios digitales tipo SaaS, Ecommerce, Suscripciones, App Móvil, B2B",
+              "6+ meses operando bajo una sociedad",
+              "+15k€ en ingresos mensuales",
+            ],
+            btn: "Aplica ya",
+          }}
+        />
 
         <SectionBenefits
           data={{
-            title: "Benefits to your business",
+            title: "Beneficios para tu negocio",
+            list: [
+              {
+                title: "Obtiene financiación rápida",
+                description:
+                  "Accede a financiación para el circulante con el fin de evitar tensiones de tesorería y potenciar el crecimiento de tu negocio.",
+              },
+              {
+                title: "Soporte personalizado",
+                description:
+                  "Accede a nuestra red de partnerships con expertos en márketing incluyendo Google, Amazon y Facebook.",
+              },
+              {
+                title: "Capital no dilutivo y sin garantías personales",
+                description:
+                  "¿Por qué ceder parte de la compañía para financiar aspectos medibles y repetibles en el tiempo? Mantén el control de tu negocio",
+              },
+            ],
           }}
         />
         <SectionRepay
           data={{
-            title: "Repay on your terms.",
+            title: "Repagos flexibles",
             description:
-              "Pay back your balance with a small share of your new sales. Quiet month? Lower repayments.",
+              "Repaga según tus ventas futuras. ¿Se han visto reducidos los ingresos de tu negocio? Nuestros repagos también.",
             btn: {
               text: "Apply now",
               url: "https://client.out.fund/signup",

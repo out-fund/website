@@ -58,6 +58,7 @@ import FooterSimple from "./elements/FooterSimple"
 import SectionInfoStrip from "./sections/SectionInfoStrip"
 import SectionLoanDescriptions from "./sections/SectionLoanDescriptions"
 import SectionComparison from "./sections/SectionComparison"
+import SectionComparisonES from "./sections/SectionComparisonES"
 import SectionWhoCanApply from "./sections/SectionWhoCanApply"
 import SectionBenefits from "./sections/SectionBenefits"
 import SectionRepay from "./sections/SectionRepay"
@@ -130,4 +131,5 @@ export {
   SectionRepay,
   BrokerLeadForm,
   GenericForm,
+  SectionComparisonES,
 }

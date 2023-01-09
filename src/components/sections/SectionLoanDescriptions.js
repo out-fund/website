@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 import { Section, SectionHeader } from "./../../components"
+import parse from "html-react-parser"
 
 import T from "./../../styles/new/typography"
 import { theme } from "./../../styles/new/theme"
@@ -22,17 +23,8 @@ const SectionLoanDescriptions = ({ data }) => {
               height={80}
               layout={"constrained"}
             />
-            <Title>
-              Revenue-based
-              <span>financing</span>
-            </Title>
-            <Description>
-              We use your monthly revenue as a guide and provide up-front
-              capital within 24 hours in exchange for a small percentage of
-              future earnings. <br />
-              <br /> You repay us as sales come in which means we only succeed
-              when you succeed if revenues slow, so do repayments.
-            </Description>
+            <Title>{parse(data.rbs.title)}</Title>
+            <Description>{parse(data.rbs.description)}</Description>
           </LoanBox>
           <LoanBox>
             <StaticImage
@@ -42,18 +34,8 @@ const SectionLoanDescriptions = ({ data }) => {
               height={80}
               layout={"constrained"}
             />
-            <Title>
-              Fixed-term
-              <span>loans</span>
-            </Title>
-            <Description>
-              We use your monthly revenue as a guide and provide up-front
-              capital within 24 hours in exchange for a fixed repayment amount.
-              <br />
-              <br /> You control how you repay us by deciding whether you would
-              like daily or weekly fixed repayments. Know exactly what you will
-              repay from the start.
-            </Description>
+            <Title>{parse(data.fixed.title)}</Title>
+            <Description>{parse(data.fixed.description)}</Description>
           </LoanBox>
         </ContentWrapper>
       </Wrapper>

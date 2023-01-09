@@ -38,22 +38,24 @@ const ReferralProgram = (props) => {
                 <SectionHeader
                   title={"Hey!"}
                   description={
-                    "Estamos seguros que estás buscando todas las fórmulas para cerrar el grifo de tu caja y extender tu runway al máximo en esta época de incertidumbre. El mundo del capital riesgo se ha deconstruido y aunque todos aconsejan asegurar la caja hasta el 2024, esto nos queda un poco lejos. <br/><br/> En Outfund acaba de lanzar un nuevo producto de 'Runway extension'destinado a ayudaros a superar la recesión inminente. Nuestra inversión se basa en el performance de la empresa, no diluye el captable y no exige garantías personales.  <br/><br/> Si tener más capital para invertir en márketing o en stock, sea cuál sea tu negocio, te ayudará a superar esta época con mayor tranquilidad, déjanos tu contacto en este formulario y buscaremos cómo ayudarte."
+                    "Estamos seguros que estás buscando todas las fórmulas para cerrar el grifo de tu caja y extender tu runway al máximo en esta época de incertidumbre. El mundo del capital riesgo se ha deconstruido y aunque todos aconsejan asegurar la caja hasta el 2024, esto nos queda un poco lejos. <br/><br/> EEn Outfund acaba de lanzar una nueva solución de 'Runway extension', destinado a ayudaros a superar la recesión inminente. Nuestra inversión se basa en el performance de la empresa, no diluye el captable y no exige garantías personales.  <br/><br/> Si tener más capital para invertir en márketing o en stock, sea cuál sea tu negocio, te ayudará a superar esta época con mayor tranquilidad, déjanos tu contacto en este formulario y buscaremos cómo ayudarte."
                   }
                 />
               </TextWrapper>
 
               <FormWrapper>
                 <T.H4>Apply here</T.H4>
+                {/* Nombre, Apellidos, Razón Social, Correo corporativo, Ingresos
+                mensuales medios (MRR) */}
                 <GenericForm
                   form={{
                     name: "QuickQuote",
-                    firstName: "First Name",
-                    lastName: "Last name",
-                    businessName: "Business name",
-                    businessEmail: "Business email",
-                    amr: "Monthly Revenue in EUR",
-                    btn: { text: "Submit" },
+                    firstName: "Nombre",
+                    lastName: "Apellidos",
+                    businessName: "Razón Social",
+                    businessEmail: "Correo corporativo",
+                    amr: " Ingresos mensuales medios (MRR)",
+                    btn: { text: "Entregar" },
                   }}
                   language={"es"}
                 />

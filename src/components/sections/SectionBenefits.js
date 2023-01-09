@@ -6,6 +6,7 @@ import { theme } from "./../../styles/new/theme"
 import T from "./../../styles/new/typography"
 
 const SectionBenefits = ({ data }) => {
+  console.log(data)
   return (
     <StyledSection>
       <Wrapper>
@@ -40,11 +41,8 @@ const SectionBenefits = ({ data }) => {
                   </defs>
                 </svg>
               </Icon>
-              <Title>Get funded quicker for less</Title>
-              <Description>
-                Easy access to cost effective funding with more flexibility than
-                ever before.
-              </Description>
+              <Title>{data.list[0].title}</Title>
+              <Description>{data.list[0].description}</Description>
             </Benefit>
             <Benefit>
               <Icon>
@@ -71,11 +69,8 @@ const SectionBenefits = ({ data }) => {
                   </defs>
                 </svg>
               </Icon>
-              <Title>Dedicated support</Title>
-              <Description>
-                Leverage our partnerships with marketing experts including
-                Google, Amazon and Facebook to supercharge your growth.
-              </Description>
+              <Title>{data.list[1].title}</Title>
+              <Description>{data.list[1].description}</Description>
             </Benefit>
             <Benefit>
               <Icon>
@@ -103,11 +98,8 @@ const SectionBenefits = ({ data }) => {
                   </defs>
                 </svg>
               </Icon>
-              <Title>No dilution or personal guarantees</Title>
-              <Description>
-                Why give up equity to fund repeatable aspects of your business?
-                It's your business. Stay in control.
-              </Description>
+              <Title>{data.list[2].title}</Title>
+              <Description>{data.list[2].description}</Description>
             </Benefit>
           </Grid>
         </ContentWrapper>
