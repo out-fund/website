@@ -26,10 +26,10 @@ const ReferralProgram = (props) => {
   return (
     <LangLayout>
       <SeoComponent
-        title="Formulario para que dejen el contacto"
-        description="Formulario para que dejen el contacto"
+        title="Ponte en contacto con nuestro equipo"
+        description="Ponte en contacto con nuestro equipo"
       />
-      <HeroSimple data={{ title: "Formulario para que dejen el contacto" }} />
+      <HeroSimple data={{ title: "Ponte en contacto con nuestro equipo" }} />
       <Main>
         <Section>
           <Wrapper>
@@ -38,7 +38,7 @@ const ReferralProgram = (props) => {
                 <SectionHeader
                   title={"Hey!"}
                   description={
-                    "Estamos seguros que estás buscando todas las fórmulas para cerrar el grifo de tu caja y extender tu runway al máximo en esta época de incertidumbre. El mundo del capital riesgo se ha deconstruido y aunque todos aconsejan asegurar la caja hasta el 2024, esto nos queda un poco lejos. <br/><br/> EEn Outfund acaba de lanzar una nueva solución de 'Runway extension', destinado a ayudaros a superar la recesión inminente. Nuestra inversión se basa en el performance de la empresa, no diluye el captable y no exige garantías personales.  <br/><br/> Si tener más capital para invertir en márketing o en stock, sea cuál sea tu negocio, te ayudará a superar esta época con mayor tranquilidad, déjanos tu contacto en este formulario y buscaremos cómo ayudarte."
+                    "Estamos seguros que estás buscando todas las fórmulas para cerrar el grifo de tu caja y extender tu runway al máximo en esta época de incertidumbre. El mundo del capital riesgo se ha deconstruido y aunque todos aconsejan asegurar la caja hasta el 2024, esto nos queda un poco lejos. <br/><br/> En Outfund acaba de lanzar una nueva solución de 'Runway extension', destinado a ayudaros a superar la recesión inminente. Nuestra inversión se basa en el performance de la empresa, no diluye el captable y no exige garantías personales.  <br/><br/> Si tener más capital para invertir en márketing o en stock, sea cuál sea tu negocio, te ayudará a superar esta época con mayor tranquilidad, déjanos tu contacto en este formulario y buscaremos cómo ayudarte."
                   }
                 />
               </TextWrapper>
