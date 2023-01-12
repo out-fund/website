@@ -17,14 +17,41 @@ import {
   SeoComponent,
 } from "./../../components"
 
+const Careers = (props) => {
+  return (
+    <LangLayout>
+      <SeoComponent
+        title="Careers"
+        description="Join the fastest growing eCommerce investor in the US"
+      />
+      <HeroSimple data={props.data.careersJson.hero} />
+      <Main>
+        <HeroImage data={props.data.careersJson.hero.image} />
+        <Stats data={props.data.careersJson.stats} />
+        <SectionWeGrow data={props.data.careersJson.weGrow} />
+        <SectionCoolPeople data={props.data.careersJson.coolPeople} />
+        <SectionInOfficeRemote
+          data={props.data.careersJson.inOffice}
+          officeData={props.data.officesJson}
+        />
+        <SectionWeValue data={props.data.careersJson.weValue} />
+        {/* <SectionOpenings data={props.data.careersJson.currentOpenings} /> */}
+        <SectionRegulated data={props.data.trustJson} bg={"transparent"} />
+      </Main>
+    </LangLayout>
+  )
+}
+
+export default Careers
+
 export const query = graphql`
   query usCareersPage {
     careersJson(language: { regex: "/en-US/" }) {
       hero {
-        btn {
-          text
-          url
-        }
+        # btn {
+        #   text
+        #   url
+        # }
         description
         title
         image {
@@ -154,30 +181,3 @@ export const query = graphql`
     }
   }
 `
-
-const Careers = (props) => {
-  return (
-    <LangLayout>
-      <SeoComponent
-        title="Careers"
-        description="Join the fastest growing eCommerce investor in the US"
-      />
-      <HeroSimple data={props.data.careersJson.hero} />
-      <Main>
-        <HeroImage data={props.data.careersJson.hero.image} />
-        <Stats data={props.data.careersJson.stats} />
-        <SectionWeGrow data={props.data.careersJson.weGrow} />
-        <SectionCoolPeople data={props.data.careersJson.coolPeople} />
-        <SectionInOfficeRemote
-          data={props.data.careersJson.inOffice}
-          officeData={props.data.officesJson}
-        />
-        <SectionWeValue data={props.data.careersJson.weValue} />
-        <SectionOpenings data={props.data.careersJson.currentOpenings} />
-        <SectionRegulated data={props.data.trustJson} bg={"transparent"} />
-      </Main>
-    </LangLayout>
-  )
-}
-
-export default Careers

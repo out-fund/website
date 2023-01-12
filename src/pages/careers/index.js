@@ -35,7 +35,7 @@ const Careers = (props) => {
           officeData={props.data.officesJson}
         />
         <SectionWeValue data={props.data.careersJson.weValue} />
-        <SectionOpenings data={props.data.careersJson.currentOpenings} />
+        {/* <SectionOpenings data={props.data.careersJson.currentOpenings} /> */}
         <SectionRegulated data={props.data.trustJson} bg={"transparent"} />
       </Main>
     </LangLayout>
@@ -47,10 +47,10 @@ export const query = graphql`
   query CareersPage {
     careersJson(language: { regex: "/en-GB/" }) {
       hero {
-        btn {
-          text
-          url
-        }
+        # btn {
+        #   text
+        #   url
+        # }
         description
         title
         image {
