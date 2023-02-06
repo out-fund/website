@@ -1,7 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-// import { graphql } from "gatsby"
-
 import LangLayout from "../../layouts/us"
 
 import { Button } from "../../components"
@@ -39,14 +37,6 @@ const Eligibility = ({ location }) => {
                 <b>{values[selected - 1]}</b> of funding.
               </Description>
               <ButtonWrapper>
-                {/* <Button
-                  to="/get-funded/"
-                  variant="primary"
-                  size="large"
-                  id="cta-get-funded-eligibility-click"
-                >
-                  Apply now
-                </Button> */}
                 <Button
                   href="https://client.out.fund/signup"
                   variant="primary"
@@ -67,11 +57,6 @@ const Eligibility = ({ location }) => {
                 Please keep in touch and check back with us in a few months,
                 once your monthly revenue has increased.
               </Description>
-              <ButtonWrapper>
-                <Button to="/" variant="primary" size="large">
-                  Go back
-                </Button>
-              </ButtonWrapper>
             </>
           )}
         </ContentWrapper>

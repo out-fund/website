@@ -1,7 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-// import { graphql } from "gatsby"
-
 import LangLayout from "../../layouts/au"
 
 import { Button } from "../../components"
@@ -59,11 +57,6 @@ const Eligibility = ({ location }) => {
                 Please keep in touch and check back with us in a few months,
                 once your monthly revenue has increased.
               </Description>
-              <ButtonWrapper>
-                <Button to="/" variant="primary" size="large">
-                  Go back
-                </Button>
-              </ButtonWrapper>
             </>
           )}
         </ContentWrapper>

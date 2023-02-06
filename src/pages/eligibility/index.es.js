@@ -1,7 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-// import { graphql } from "gatsby"
-
 import LangLayout from "../../layouts/es"
 
 import { Button } from "../../components"
