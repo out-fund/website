@@ -59,11 +59,6 @@ const Eligibility = ({ location }) => {
                 Please keep in touch and check back with us in a few months,
                 once your monthly revenue has increased.
               </Description>
-              <ButtonWrapper>
-                <Button to="/" variant="primary" size="large">
-                  Go back
-                </Button>
-              </ButtonWrapper>
             </>
           )}
         </ContentWrapper>
