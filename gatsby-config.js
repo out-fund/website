@@ -139,12 +139,12 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: "gatsby-plugin-zendesk-chat",
-      options: {
-        zendeskKey: "e13fcb82-d8da-49cd-8eed-c944751d36ee",
-        enableDuringDevelop: false, // Optional. Disables Zendesk chat widget when running Gatsby dev server. Defaults to true.
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-zendesk-chat",
+    //   options: {
+    //     zendeskKey: "e13fcb82-d8da-49cd-8eed-c944751d36ee",
+    //     enableDuringDevelop: false, // Optional. Disables Zendesk chat widget when running Gatsby dev server. Defaults to true.
+    //   },
+    // },
   ],
 }
