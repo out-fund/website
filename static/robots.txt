@@ -14,5 +14,6 @@ Disallow: /us/referral-program*
 Disallow: /signatures*
 Disallow: /cc-lead*
 Disallow: /lead*
+Disallow: /flexible-finance*
 
 Sitemap: https://out.fund/sitemap/sitemap-index.xml

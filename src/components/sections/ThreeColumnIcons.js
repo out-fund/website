@@ -8,6 +8,8 @@ import { theme } from "./../../styles/new/theme"
 
 const ThreeColumnIcons = ({ blocks }) => {
   // console.log(data)
+  if (!blocks) return null
+
   return (
     <Wrapper>
       {blocks.map((block, index) => (
