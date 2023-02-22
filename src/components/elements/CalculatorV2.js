@@ -21,11 +21,7 @@ const CalculatorV2 = ({ data }) => {
   let selectedTerm = termLengths[requestedTerm]
 
   const handleRangeChange = (event) => {
-    // setRequestedLoan(data.range[event.target.requestedLoan])
     setRequestedLoan(event.target.value)
-    // selectedLoanAmount = data.range[requestedLoan]
-    // console.log("selectedLoanAmount", selectedLoanAmount)
-    // console.log("requestedLoan", requestedLoan)
   }
   const handleTermChange = (event) => {
     setRequestedTerm(event.target.value)
@@ -96,7 +92,7 @@ const CalculatorV2 = ({ data }) => {
 
         <BtnWrapper>
           <Button
-            to={`https://client.out.fund/signup&utm_content=term${selectedTerm}amount${selectedLoanAmountClean}`}
+            to={`https://client.out.fund/signup?utm_content=term${selectedTerm}amount${selectedLoanAmountClean}`}
             variant="primary"
             size="large"
             id="cta-check-eligibility"
