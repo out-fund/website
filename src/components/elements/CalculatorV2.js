@@ -64,6 +64,7 @@ const CalculatorV2 = ({ data }) => {
             />
           </InputWrapper>
         </RangeWrapper>
+        <Title>Term</Title>
         <Selected as="div">{selectedTerm} months</Selected>
         <RangeWrapper>
           <div className="top">
