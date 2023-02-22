@@ -15,7 +15,7 @@ const EN = ({ children, simpleNavbar, pt, noNavbar, noFooter }) => {
 
   return (
     <GlobalLayout pt={pt}>
-      {!noNavbar && (
+      {!noNavbar && !simpleNavbar && (
         <NewsBar
           text="🆕 <b>Outfund partners with Clearco</b>"
           url="https://out.fund/outfund-partners-with-clearco/"
