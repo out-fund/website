@@ -81,7 +81,7 @@ const CalculatorV2 = ({ data }) => {
         </RangeWrapper>
 
         <Calculated as="div">
-          Flat fee to pay <span>{fees[requestedTerm]}</span>
+          Flat fee to pay <span>{fees[requestedTerm]}%</span>
         </Calculated>
         <Calculated as="div">
           Total repayable
