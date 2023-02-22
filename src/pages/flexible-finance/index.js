@@ -21,7 +21,7 @@ import {
   SectionComparison,
   SectionSupercharging,
   SectionWeFunded,
-  SectionFindOut,
+  SectionFindOutFlexible,
 } from "./../../components"
 // import { theme } from "./../../styles/new/theme"
 // import T from "./../../styles/new/typography"
@@ -65,7 +65,36 @@ const HowFundingWorks = (props) => {
               }}
             />
 
-            <SectionFindOut data={props.data.homepageJson.findOut} />
+            <SectionFindOutFlexible
+              data={{
+                title: "Find out how much you can get",
+                description:
+                  "Funding offers are based on your average monthly revenue. Get a quick indication of your eligibility with our easy-to-use calculator.",
+                calculator: {
+                  title: "How much do you need?",
+                  range: [
+                    "£10 000",
+                    "£20 000",
+                    "£50 000",
+                    "£70 000",
+                    "£100 000",
+                    "£200 000",
+                    "£500 000",
+                    "£700 000",
+                    "£1 000 000",
+                  ],
+                  select: {
+                    title: "You need funding for",
+                    default: "Select",
+                    dropdown: ["Inventory", "Marketing", "Something else"],
+                  },
+                  btn: {
+                    text: "Check eligibility",
+                    url: "/eligibility/",
+                  },
+                },
+              }}
+            />
 
             <SectionWeValueTemp
               white

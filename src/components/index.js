@@ -65,6 +65,8 @@ import SectionRepay from "./sections/SectionRepay"
 import GenericForm from "./elements/GenericForm"
 import SectionFlexibleTemp from "./sections/SectionFlexibleTemp"
 import SectionWeValueTemp from "./sections/SectionWeValueTemp"
+import CalculatorV2 from "./elements/CalculatorV2"
+import SectionFindOutFlexible from "./sections/SectionFindOutFlexible"
 
 import Switch from "./elements/Swtich"
 
@@ -136,4 +138,6 @@ export {
   SectionComparisonES,
   SectionFlexibleTemp,
   SectionWeValueTemp,
+  CalculatorV2,
+  SectionFindOutFlexible,
 }
