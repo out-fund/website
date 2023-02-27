@@ -1,5 +1,6 @@
 import { Button } from "./../../components"
 import React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 import T from "./../../styles/new/typography"
 import parse from "html-react-parser"
 import styled from "styled-components"
@@ -19,11 +20,20 @@ const HeroSimpleFf = ({ data }) => {
           </Button>
         </BtnWrapper>
       )}
+      {/* <ImageWrapper>
+        <StaticImage
+          src="./../../images/UIxCard.png"
+          alt="Outfhund UI"
+          layout="constrained"
+        />
+      </ImageWrapper> */}
     </HeroWrapper>
   )
 }
 
 export default HeroSimpleFf
+
+const ImageWrapper = styled.div``
 
 const Title = styled(T.H1)`
   max-width: 1270px;
