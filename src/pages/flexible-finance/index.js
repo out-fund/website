@@ -184,7 +184,7 @@ const IWrapper = styled.div`
   }
 `
 const ImageWrapper = styled.div`
-  max-width: 1570px;
+  max-width: 670px;
   border-radius: 10px;
   overflow: hidden;
 `

@@ -91,7 +91,7 @@ const CalculatorV2 = ({ data }) => {
 
         <BtnWrapper>
           <Button
-            to={`https://client.out.fund/signup?utm_content=term${selectedTerm}amount${selectedLoanAmountClean}`}
+            href={`https://client.out.fund/signup?utm_content=term${selectedTerm}amount${selectedLoanAmountClean}`}
             variant="primary"
             size="large"
             id="cta-check-eligibility"

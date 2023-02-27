@@ -1,14 +1,13 @@
 import React from "react"
-import styled from "styled-components"
-import parse from "html-react-parser"
-
 import T from "../../styles/new/typography"
+import parse from "html-react-parser"
+import styled from "styled-components"
 
 const SectionHeader = ({ title, description }) => {
   return (
     <Header>
       <Title>{parse(title)}</Title>
-      {description && <Description>{parse(description)}</Description>}
+      {description && <Description as="div">{parse(description)}</Description>}
     </Header>
   )
 }
