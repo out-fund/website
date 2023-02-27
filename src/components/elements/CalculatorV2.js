@@ -1,10 +1,9 @@
-import React from "react"
-import styled from "styled-components"
-
 import { Button } from "./../../components"
+// import F from "./../../styles/new/form"
+import React from "react"
 import T from "./../../styles/new/typography"
+import styled from "styled-components"
 import { theme } from "./../../styles/new/theme"
-import F from "./../../styles/new/form"
 
 const CalculatorV2 = ({ data }) => {
   const termLengths = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
@@ -13,7 +12,7 @@ const CalculatorV2 = ({ data }) => {
   let intialTerm = 0
   const [requestedLoan, setRequestedLoan] = React.useState(intialRangeValue)
   const [requestedTerm, setRequestedTerm] = React.useState(intialTerm)
-  const [isDisabled, setDisabled] = React.useState(true)
+  // const [isDisabled, setDisabled] = React.useState(true)
   let selectedLoanAmount = data.range[requestedLoan]
   const selectedLoanAmountClean = selectedLoanAmount
     .replace(/£/g, "")
@@ -28,9 +27,9 @@ const CalculatorV2 = ({ data }) => {
     console.log("requestedTerm", termLengths[requestedTerm])
   }
 
-  const handleButton = () => {
-    setDisabled(false)
-  }
+  // const handleButton = () => {
+  //   setDisabled(false)
+  // }
 
   const totalPayable =
     Number(selectedLoanAmountClean) +
@@ -99,7 +98,9 @@ const CalculatorV2 = ({ data }) => {
           >
             Apply for {selectedLoanAmount}
           </Button>
-          <div className="note">Applying will not affect your credit score</div>
+          <div className="note">
+            *Applying will not affect your credit score
+          </div>
         </BtnWrapper>
       </FormWrapper>
     </Wrapper>
@@ -250,18 +251,18 @@ const RangeWrapper = styled.div`
   }
 `
 
-const SelectWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 40px;
-  select {
-    width: 100%;
-  }
-  label {
-  }
-`
+// const SelectWrapper = styled.div`
+//   width: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 8px;
+//   margin-bottom: 40px;
+//   select {
+//     width: 100%;
+//   }
+//   label {
+//   }
+// `
 
 const TextWrapper = styled.div``
 

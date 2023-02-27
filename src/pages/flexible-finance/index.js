@@ -1,30 +1,19 @@
-import React from "react"
-import styled from "styled-components"
-import { graphql } from "gatsby"
-// import { StaticImage } from "gatsby-plugin-image"
-
-import LangLayout from "./../../layouts/en"
-
 import {
-  HeroSimple,
+  HeroSimpleFf,
   Main,
-  // SectionRegulated,
-  // SectionSteps,
-  // SectionWeAreInvesting,
-  // SectionFaq,
-  // Button,
-  SeoComponent,
-  SectionFlexibleTemp,
-  SectionWhoCanApply,
-  // SectionWeValue,
-  SectionWeValueTemp,
   SectionComparison,
+  SectionFindOutFlexible,
+  SectionFlexibleTemp,
   SectionSupercharging,
   SectionWeFunded,
-  SectionFindOutFlexible,
+  SectionWeValueTemp,
+  SeoComponent,
 } from "./../../components"
-// import { theme } from "./../../styles/new/theme"
-// import T from "./../../styles/new/typography"
+
+import LangLayout from "./../../layouts/en-ff"
+import React from "react"
+import { graphql } from "gatsby"
+import styled from "styled-components"
 
 const HowFundingWorks = (props) => {
   const {
@@ -33,13 +22,16 @@ const HowFundingWorks = (props) => {
   return (
     <LangLayout>
       <SeoComponent
-        title="Fast cashflow funding for your business"
-        description=""
+        title="The sustainable growth platform"
+        description="Don't let a lack of working capital stop you from achieving your business goals. Tap into your future succes"
       />
-      <HeroSimple
+      <HeroSimpleFf
         data={{
-          title: "Fast cashflow funding for your business",
-          description: "",
+          title: "The sustainable growth platform",
+          subtitle: "Business financing on your terms",
+          description:
+            "Don't let a lack of working capital stop you from achieving your business goals. Tap into your future success",
+          btn: { text: "Get funded", url: "https://client.out.fund/signup" },
         }}
       />
       <Main>
@@ -47,13 +39,14 @@ const HowFundingWorks = (props) => {
           <ContentWrapper>
             <SectionFlexibleTemp
               data={{
-                title: "Flexible finance to help you growth your business",
+                title:
+                  "Maximise your business growth with our innovative funding solution",
                 description:
-                  "We understand that no two businesses are the same. Outfund provides start ups, scale ups and enterprise businesses with access to flexible and affordable working capital, helping them to unlock the financial resources they need to grow and succeed. <br/><br/> Outfund offers finance ranging from £10,000 to £10,000,000, making it a suitable option for a variety of needs, such as purchasing stock, marketing, renovating your business space, payroll, improving cash flow, or buying new equipment. <br/><br/> Don't let a lack of working capital stop you from achieving your business goals. Apply in 5 minutes for funding from Outfund and receive an instant online decision with no impact on your credit score.",
+                  "We understand that no two businesses are the same. That's why our funding can be used for any expense that drives your business forward.",
               }}
             />
-            {/* calculator  */}
-            <SectionWhoCanApply
+
+            {/* <SectionWhoCanApply
               data={{
                 title: "Who can apply",
                 list: [
@@ -63,13 +56,19 @@ const HowFundingWorks = (props) => {
                 ],
                 btn: "Apply now",
               }}
-            />
+            /> */}
 
+            {/* calculator  */}
+            {/* <ul>
+              <li>Create account and connect your accounts</li>
+              <li>Select your offers</li>
+              <li>Get funded</li>
+            </ul> */}
             <SectionFindOutFlexible
               data={{
                 title: "Find out how much you can get",
                 description:
-                  "Funding offers are based on your average monthly revenue. Get a quick indication of your eligibility with our easy-to-use calculator.",
+                  "Funding offers are based on your average monthly revenue. Get a quick indication of your eligibility with our easy-to-use calculator. Get funded in 24 hours with 3 simple steps: <br/><br/> <ul><li>Create account and connect your accounts</li><li>Select your offers</li><li>Get funded</li></ul>",
                 calculator: {
                   title: "How much do you need?",
                   range: [
@@ -104,7 +103,7 @@ const HowFundingWorks = (props) => {
                 blocks: [
                   {
                     title: "Enjoy financial security",
-                    text: "Take control of your cash flow and ensure you never miss a payment – no matter how unpredictably your business ebbs and flows. With our fast and straightforward funding, you can pay your bills and supplier with ease, staying ahead of the game OR Enjoy financial security and peace of mind, knowing you will have the cash you need for success.",
+                    text: "Take control of your cash flow and ensure you never miss a payment - No matter how unpredictably your business performs, our fast and straightforward funding ensures you can enjoy financial security and peace of mind. Stay ahead of the game.",
                   },
                   {
                     title: "Unlock your potential",

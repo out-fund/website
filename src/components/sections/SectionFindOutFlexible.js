@@ -1,9 +1,9 @@
-import React from "react"
-import styled from "styled-components"
+import { CalculatorV2, Section, SectionHeader } from "./../../components"
 
-import { Section, SectionHeader, CalculatorV2 } from "./../../components"
-import { theme } from "./../../styles/new/theme"
+import React from "react"
 import { Triangle } from "./../../styles/utils"
+import styled from "styled-components"
+import { theme } from "./../../styles/new/theme"
 
 const SectionFindOutFlexible = ({ data }) => {
   return (
@@ -43,6 +43,10 @@ const TextWrapper = styled.div`
   max-width: 470px;
   h2 {
     max-width: 410px;
+  }
+  ul {
+    list-style-position: inside;
+    list-style-type: disc;
   }
 `
 const CalculatorWrapper = styled.div`
