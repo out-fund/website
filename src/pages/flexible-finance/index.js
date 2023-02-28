@@ -8,6 +8,7 @@ import {
   SectionWeFunded,
   SectionWeValueTemp,
   SeoComponent,
+  HeroHomepageFf,
 } from "./../../components"
 
 import LangLayout from "./../../layouts/en-ff"
@@ -27,7 +28,7 @@ const HowFundingWorks = (props) => {
         title="The sustainable growth platform"
         description="Don't let a lack of working capital stop you from achieving your business goals. Tap into your future succes"
       />
-      <HeroSimpleFf
+      {/* <HeroSimpleFf
         data={{
           title: "The sustainable growth platform",
           subtitle: "Business financing on your terms",
@@ -35,9 +36,23 @@ const HowFundingWorks = (props) => {
             "Don't let a lack of working capital stop you from achieving your business goals. Tap into your future success",
           btn: { text: "Get funded", url: "https://client.out.fund/signup" },
         }}
+      /> */}
+      <HeroHomepageFf
+        data={{
+          title: "The sustainable growth platform",
+          description: "Business financing on your terms",
+          primaryBtn: {
+            text: "Get funded",
+            url: "https://client.out.fund/signup",
+          },
+          secondaryBtn: {
+            text: "How it works",
+            url: "",
+          },
+        }}
       />
       <Main>
-        <IWrapper>
+        {/* <IWrapper>
           <ImageWrapper>
             <StaticImage
               src="./../../images/UIxCard.png"
@@ -45,7 +60,7 @@ const HowFundingWorks = (props) => {
               layout="constrained"
             />
           </ImageWrapper>
-        </IWrapper>
+        </IWrapper> */}
         <Wrapper>
           <ContentWrapper>
             <SectionFlexibleTemp
@@ -113,23 +128,23 @@ const HowFundingWorks = (props) => {
                   "Capital to improve, <br/> grow and manage your business",
                 blocks: [
                   {
-                    title: "Enjoy financial security",
+                    title: "🔐 Enjoy financial security",
                     text: "Take control of your cash flow and ensure you never miss a payment - No matter how unpredictably your business performs, our fast and straightforward funding ensures you can enjoy financial security and peace of mind. Stay ahead of the game.",
                   },
                   {
-                    title: "Unlock your potential",
+                    title: "🚀 Unlock your potential",
                     text: "Scale your business with ease and reach your growth goals faster. Whether you are looking to grow your team or invest in marketing, we can help you unlock the growth potential of your business.",
                   },
                   {
-                    title: "Take your business to the next level",
+                    title: "📈 Take your business to the next level",
                     text: "Upgrade your equipment, invest in your team and optimise your processes – Outfund gives you the edge to surpass your competition, and maximise your success.",
                   },
                   {
-                    title: "Purchase stock",
+                    title: "💰 Purchase stock",
                     text: "With our fast funding, you can purchase the necessary stock quickly and easily, allowing you to focus on your projects and drive the growth of your business.",
                   },
                   {
-                    title: "Make your next project a realityt",
+                    title: "🏭 Make your next project a realityt",
                     text: "Get the capital you need to make your next business project a reality. Get your working capital, staffing, and insurance all sorted in no time, so you can confidently move forward with your vision.",
                   },
                   // {

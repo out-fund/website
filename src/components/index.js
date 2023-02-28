@@ -17,6 +17,7 @@ import FooterSimple from "./elements/FooterSimple"
 import GenericForm from "./elements/GenericForm"
 import HeroAbout from "./hero/HeroAbout"
 import HeroHomepage from "./hero/HeroHomepage"
+import HeroHomepageFf from "./hero/HeroHomepageFf"
 import HeroImage from "./elements/HeroImage"
 import HeroSimple from "./hero/HeroSimple"
 import HeroSimpleFf from "./hero/HeroSimpleFf"
@@ -140,4 +141,5 @@ export {
   SectionWeValueTemp,
   CalculatorV2,
   SectionFindOutFlexible,
+  HeroHomepageFf,
 }
