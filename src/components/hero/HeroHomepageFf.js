@@ -54,7 +54,8 @@ export default HeroHomepageFf
 const Title = styled(T.H1)`
   /* font-size: 2.5rem; */
 `
-const SubTitle = styled(T.H2)`
+const SubTitle = styled(T.H3)`
+  margin-top: 16px;
   font-weight: 600;
 `
 
