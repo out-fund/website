@@ -13,6 +13,7 @@ const HeroHomepageFf = ({ data }) => {
       <Wrapper>
         <TextWrapper data-surface-type="Hero" data-surface-title={title}>
           <Title>{title}</Title>
+          <SubTitle>Business financing on your terms.</SubTitle>
           <Description>{description}</Description>
           <ButtonWrapper>
             {primaryBtn.url && (
@@ -53,86 +54,42 @@ export default HeroHomepageFf
 const Title = styled(T.H1)`
   /* font-size: 2.5rem; */
 `
+const SubTitle = styled(T.H2)`
+  font-weight: 600;
+`
+
 const Description = styled(T.BodyLarge)``
 
-const LeftImage = styled.div`
-  position: relative;
-  /* width: 56.875%; */
-  /* border-radius: 10px; */
-  /* overflow: hidden; */
-  /* box-shadow: 0px 100px 80px rgba(1, 14, 25, 0.07),
-    0px 41.7776px 33.1139px rgba(1, 14, 25, 0.0503198),
-    0px 22.3363px 16.2366px rgba(1, 14, 25, 0.0417275),
-    0px 12.5216px 7.80488px rgba(1, 14, 25, 0.035),
-    0px 6.6501px 3.28033px rgba(1, 14, 25, 0.0282725),
-    0px 2.76726px 0.952807px rgba(1, 14, 25, 0.0196802); */
-
-  .gatsby-image-wrapper {
-    position: relative;
-    z-index: 1;
-    /* overflow: hidden; */
-    /* border-radius: 10px; */
-  }
-  ${theme.above.t.s} {
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* width: 56.875%; */
-  }
-`
-// const RightImage = styled.div`
-//   border-radius: 10px;
-//   overflow: hidden;
-//   width: 56.875%;
-//   position: relative;
-//   position: absolute;
-//   top: 0;
-//   top: 20px;
-//   left: 43%;
-
-//   box-shadow: 0px 100px 80px rgba(1, 14, 25, 0.07),
-//     0px 41.7776px 33.1139px rgba(1, 14, 25, 0.0503198),
-//     0px 22.3363px 16.2366px rgba(1, 14, 25, 0.0417275),
-//     0px 12.5216px 7.80488px rgba(1, 14, 25, 0.035),
-//     0px 6.6501px 3.28033px rgba(1, 14, 25, 0.0282725),
-//     0px 2.76726px 0.952807px rgba(1, 14, 25, 0.0196802);
-//   .gatsby-image-wrapper {
-//     position: relative;
-//     z-index: 1;
-//     overflow: hidden;
-//     border-radius: 10px;
-//   }
-//   ${theme.above.t.s} {
-//     position: absolute;
-//     top: 112px;
-//     top: 20%;
-//     left: 276px;
-//     left: 43%;
-//     width: 56.875%;
-//   }
-// `
+const LeftImage = styled.div``
 
 const ImageWrapper = styled.div`
-  height: 100%;
   position: relative;
-  top: 0;
+  top: 40px;
+  left: 20px;
   ${theme.above.t.s} {
-    top: -16px;
+    top: 80px;
+    left: 0;
+  }
+  ${theme.above.t.l} {
+    top: 0px;
+    left: 0;
   }
 `
 
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  gap: 40px;
-  align-items: center;
+  /* gap: 12px; */
+  /* align-items: center; */
+  align-items: baseline;
   max-width: 1170px;
   margin: 0 auto;
+
   /* overflow: hidden; */
 
   ${theme.above.t.s} {
     grid-template-columns: 345px 400px;
-    gap: 32px;
+    gap: 12px;
   }
 
   @media (min-width: 880px) {
@@ -140,8 +97,8 @@ const Wrapper = styled.div`
   }
 
   ${theme.above.t.l} {
-    grid-template-columns: 470fr 640fr;
-    gap: 60px;
+    grid-template-columns: 670fr 440fr;
+    gap: 40px;
   }
 `
 

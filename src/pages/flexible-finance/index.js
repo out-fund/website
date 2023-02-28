@@ -40,7 +40,8 @@ const HowFundingWorks = (props) => {
       <HeroHomepageFf
         data={{
           title: "The sustainable growth platform",
-          description: "Business financing on your terms",
+          description:
+            "Don't let a lack of working capital stop you from achieving your business goals. Tap into your future success",
           primaryBtn: {
             text: "Get funded",
             url: "https://client.out.fund/signup",
