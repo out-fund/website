@@ -1,14 +1,16 @@
 import {
+  HeroHomepageFf,
   HeroSimpleFf,
   Main,
   SectionComparison,
+  SectionFaq,
   SectionFindOutFlexible,
   SectionFlexibleTemp,
+  SectionRepayFf,
   SectionSupercharging,
   SectionWeFunded,
   SectionWeValueTemp,
   SeoComponent,
-  HeroHomepageFf,
 } from "./../../components"
 
 import LangLayout from "./../../layouts/en-ff"
@@ -28,7 +30,7 @@ const HowFundingWorks = (props) => {
         title="The sustainable growth platform"
         description="Don't let a lack of working capital stop you from achieving your business goals. Tap into your future succes"
       />
-      {/* <HeroSimpleFf
+      <HeroSimpleFf
         data={{
           title: "The sustainable growth platform",
           subtitle: "Business financing on your terms",
@@ -36,8 +38,8 @@ const HowFundingWorks = (props) => {
             "Don't let a lack of working capital stop you from achieving your business goals. Tap into your future success",
           btn: { text: "Get funded", url: "https://client.out.fund/signup" },
         }}
-      /> */}
-      <HeroHomepageFf
+      />
+      {/* <HeroHomepageFf
         data={{
           title: "The sustainable growth platform",
           description:
@@ -51,7 +53,7 @@ const HowFundingWorks = (props) => {
             url: "",
           },
         }}
-      />
+      /> */}
       <Main>
         {/* <IWrapper>
           <ImageWrapper>
@@ -64,12 +66,24 @@ const HowFundingWorks = (props) => {
         </IWrapper> */}
         <Wrapper>
           <ContentWrapper>
-            <SectionFlexibleTemp
+            {/* <SectionFlexibleTemp
               data={{
                 title:
                   "Maximise your business growth with our innovative funding solution",
                 description:
                   "We understand that no two businesses are the same. That's why our funding can be used for any expense that drives your business forward.",
+              }}
+            /> */}
+            <SectionRepayFf
+              data={{
+                title:
+                  "Maximise your business growth with our innovative funding solution",
+                description:
+                  "We understand that no two businesses are the same. That's why our funding can be used for any expense that drives your business forward.",
+                // btn: {
+                //   text: "Apply now",
+                //   url: "https://client.out.fund/signup",
+                // },
               }}
             />
 
@@ -164,6 +178,7 @@ const HowFundingWorks = (props) => {
             />
             <SectionWeFunded data={data.weFunded} />
             <SectionSupercharging data={data.startSupercharging} />
+            <SectionFaq data={props.data.homepageJson.faq} />
           </ContentWrapper>
 
           {/* <SectionRegulated data={props.data.trustJson} /> */}

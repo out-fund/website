@@ -75,20 +75,6 @@ const HeroWrapper = styled.header`
 
   position: relative;
 
-  &::before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 2;
-    display: block;
-    width: 100%;
-    height: 50px;
-    /* background-color: #afa; */
-    box-shadow: inset 0px 10px 10px #ffffff;
-    content: "";
-  }
-
   ${theme.above.p.m} {
     /* margin: 0 16px; */
     padding: 64px 0 48px;

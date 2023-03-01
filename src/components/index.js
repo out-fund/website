@@ -55,6 +55,7 @@ import SectionOtherBrands from "./sections/SectionOtherBrands"
 import SectionPartners from "./sections/SectionPartners"
 import SectionRegulated from "./sections/SectionRegulated"
 import SectionRepay from "./sections/SectionRepay"
+import SectionRepayFf from "./sections/SectionRepayFf"
 import SectionSteps from "./sections/SectionSteps"
 import SectionSupercharging from "./sections/SectionSupercharging"
 import SectionWeAreInvesting from "./sections/SectionWeAreInvesting"
@@ -142,4 +143,5 @@ export {
   CalculatorV2,
   SectionFindOutFlexible,
   HeroHomepageFf,
+  SectionRepayFf,
 }
