@@ -159,7 +159,7 @@ const HowFundingWorks = (props) => {
                     text: "With our fast funding, you can purchase the necessary stock quickly and easily, allowing you to focus on your projects and drive the growth of your business.",
                   },
                   {
-                    title: "🏭 Make your next project a realityt",
+                    title: "🏭 Make your next project a reality",
                     text: "Get the capital you need to make your next business project a reality. Get your working capital, staffing, and insurance all sorted in no time, so you can confidently move forward with your vision.",
                   },
                   // {
