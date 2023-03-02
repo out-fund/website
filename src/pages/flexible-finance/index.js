@@ -1,16 +1,17 @@
 import {
-  HeroHomepageFf,
+  // HeroHomepageFf,
   HeroSimpleFf,
   Main,
   SectionComparison,
   SectionFaq,
   SectionFindOutFlexible,
-  SectionFlexibleTemp,
+  // SectionFlexibleTemp,
   SectionRepayFf,
   SectionSupercharging,
   SectionWeFunded,
   SectionWeValueTemp,
   SeoComponent,
+  SectionInfoStrip,
 } from "./../../components"
 
 import LangLayout from "./../../layouts/en-ff"
@@ -64,6 +65,15 @@ const HowFundingWorks = (props) => {
             />
           </ImageWrapper>
         </IWrapper> */}
+        <SectionInfoStrip
+          data={[
+            { up: "Apply in just", down: "5 minutes" },
+            { up: "Business loans from", down: "£10k - £10m" },
+            { up: "Offers as fast as", down: "24h" },
+            // { up: "Fees as low as", down: "2%" },
+            { up: "Additional top-ups", down: "Continuous" },
+          ]}
+        />
         <Wrapper>
           <ContentWrapper>
             {/* <SectionFlexibleTemp

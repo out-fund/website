@@ -86,12 +86,12 @@ const Wrapper = styled.div`
   ${theme.above.t.m} {
     grid-template-columns: 570fr 600fr;
     gap: 80px;
-    padding: 120px 40px 0px;
+    padding: 0px 40px 0px;
   }
 
   ${theme.above.d.m} {
     gap: 80px;
-    padding: 160px 80px 0px;
+    padding: 0px 80px 0px;
   }
 `
 
