@@ -37,7 +37,7 @@ const HowFundingWorks = (props) => {
           subtitle: "Business financing on your terms",
           description:
             "Don't let a lack of working capital stop you from achieving your business goals. Tap into your future success",
-          btn: { text: "Get funded", url: "https://client.out.fund/signup" },
+          // btn: { text: "Get funded", url: "https://client.out.fund/signup" },
         }}
       />
       {/* <HeroHomepageFf

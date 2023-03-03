@@ -13,19 +13,19 @@ const HeroSimpleFf = ({ data }) => {
       <Title>{parse(title)}</Title>
       <Subtitle>{parse(subtitle)}</Subtitle>
       {description && <Description>{parse(description)}</Description>}
-      {btn && (
-        <BtnWrapper>
-          <Button
-            to={btn.url}
-            variant="primary"
-            size="large"
-            data-element-category="Signup CTA"
-            id="cta-hero-simple-ff-click"
-          >
-            {btn.text}
-          </Button>
-        </BtnWrapper>
-      )}
+
+      <BtnWrapper>
+        <Button
+          href="https://client.out.fund/signup"
+          variant="primary"
+          size="large"
+          id="cta-hero-simple-ff-click"
+          data-element-category="Signup CTA"
+        >
+          Get funded
+        </Button>
+      </BtnWrapper>
+
       {/* <ImageWrapper>
         <StaticImage
           src="./../../images/UIxCard.png"
