@@ -9,7 +9,7 @@ import { theme } from "./../../styles/new/theme"
 const HeroSimpleFf = ({ data }) => {
   const { title, subtitle, description, btn } = data
   return (
-    <HeroWrapper>
+    <HeroWrapper data-surface-type="Hero" data-surface-title={parse(title)}>
       <Title>{parse(title)}</Title>
       <Subtitle>{parse(subtitle)}</Subtitle>
       {description && <Description>{parse(description)}</Description>}
@@ -20,6 +20,7 @@ const HeroSimpleFf = ({ data }) => {
             variant="primary"
             size="large"
             data-element-category="Signup CTA"
+            id="cta-hero-simple-ff-click"
           >
             {btn.text}
           </Button>
