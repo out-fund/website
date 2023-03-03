@@ -15,7 +15,12 @@ const HeroSimpleFf = ({ data }) => {
       {description && <Description>{parse(description)}</Description>}
       {btn && (
         <BtnWrapper>
-          <Button to={btn.url} variant="primary" size="large">
+          <Button
+            to={btn.url}
+            variant="primary"
+            size="large"
+            data-element-category="Signup CTA"
+          >
             {btn.text}
           </Button>
         </BtnWrapper>
