@@ -1,17 +1,16 @@
 import {
-  // HeroHomepageFf,
   HeroSimpleFf,
   Main,
   SectionComparison,
   SectionFaq,
   SectionFindOutFlexible,
-  // SectionFlexibleTemp,
   SectionRepayFf,
   SectionSupercharging,
   SectionWeFunded,
   SectionWeValueTemp,
   SeoComponent,
   SectionInfoStrip,
+  SectionWhoCanApply,
 } from "./../../components"
 
 import LangLayout from "./../../layouts/en-ff"
@@ -97,18 +96,6 @@ const HowFundingWorks = (props) => {
               }}
             />
 
-            {/* <SectionWhoCanApply
-              data={{
-                title: "Who can apply",
-                list: [
-                  "An online model such as SaaS, Subscription, Ecommerce, Mobile App, B2B",
-                  "6+ months in business",
-                  "£10k+ Monthly revenue",
-                ],
-                btn: "Apply now",
-              }}
-            /> */}
-
             {/* calculator  */}
             {/* <ul>
               <li>Create account and connect your accounts</li>
@@ -119,7 +106,7 @@ const HowFundingWorks = (props) => {
               data={{
                 title: "Find out how much you can get",
                 description:
-                  "Funding offers are based on your average monthly revenue. Get a quick indication of your eligibility with our easy-to-use calculator. <br/><br/> <ul><li>6+ months in business</li><li>£10k+ monthly revenue</li><li>Business registered in Europe, North America or Australia</li></ul>",
+                  "Funding offers are based on your average monthly revenue. Get a quick indication of your eligibility with our easy-to-use calculator. Get funded in 24 hours with 3 simple steps: <br/><br/> <ul><li>Create account and connect your accounts</li><li>Select your offers</li><li>Get funded</li></ul>",
                 calculator: {
                   title: "How much do you need?",
                   range: [
@@ -145,7 +132,17 @@ const HowFundingWorks = (props) => {
                 },
               }}
             />
-
+            <SectionWhoCanApply
+              data={{
+                title: "Who can apply",
+                list: [
+                  "6+ months in business",
+                  "£10k+ monthly revenue",
+                  "Business registered in Europe, North America or Australia",
+                ],
+                btn: "Apply now",
+              }}
+            />
             <SectionWeValueTemp
               white
               data={{
