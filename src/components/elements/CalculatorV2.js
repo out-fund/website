@@ -36,7 +36,7 @@ const CalculatorV2 = ({ data }) => {
     Number(selectedLoanAmountClean * fees[requestedTerm]) / 100
 
   return (
-    <Wrapper>
+    <Wrapper data-surface-type="calculator" data-surface-title="calc2ff">
       <TextWrapper>
         <Title>{data.title}</Title>
         <Selected as="div">{selectedLoanAmount}</Selected>
@@ -95,6 +95,7 @@ const CalculatorV2 = ({ data }) => {
             variant="primary"
             size="large"
             id="cta-check-eligibility"
+            data-element-category="Signup CTA"
           >
             Apply for {selectedLoanAmount}
           </Button>

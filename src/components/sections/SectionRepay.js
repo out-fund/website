@@ -12,7 +12,7 @@ const SectionRepay = ({ data }) => {
   const { title, description, btn } = data
   return (
     <StyledSection>
-      <Wrapper>
+      <Wrapper data-surface-type="section" data-surface-title="repay">
         <TextWrapper>
           {/* <MobileImageWrapper>
             <GatsbyImage image={getImage(image.src)} alt={image.alt} />
@@ -24,7 +24,13 @@ const SectionRepay = ({ data }) => {
           {btn && (
             <BtnWrapper>
               {btn.url && (
-                <Button to={btn.url} variant="primary" size="large">
+                <Button
+                  href="https://client.out.fund/signup"
+                  variant="primary"
+                  size="large"
+                  id="cta-section-repay"
+                  data-element-category="Signup CTA"
+                >
                   Apply now
                 </Button>
               )}

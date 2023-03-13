@@ -13,7 +13,7 @@ const SectionWhoCanApply = (props) => {
   // const { title, description, btn, image } = data
   return (
     <StyledSection>
-      <Wrapper>
+      <Wrapper data-surface-type="section" data-surface-title="WhoCanApply">
         <ImageWrapper>
           {/* <GatsbyImage image={getImage(image.src)} alt={image.alt} /> */}
           <StaticImage
@@ -42,9 +42,11 @@ const SectionWhoCanApply = (props) => {
 
           <BtnWrapper>
             <Button
-              to="https://client.out.fund/signup"
+              href="https://client.out.fund/signup"
               variant="primary"
               size="large"
+              id="cta-who-can-apply-click"
+              data-element-category="Signup CTA"
             >
               {props.data.btn}
             </Button>
