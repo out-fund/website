@@ -15,13 +15,13 @@ const CZ = ({ children, simpleNavbar, pt, noNavbar, noFooter }) => {
 
   return (
     <GlobalLayout pt={pt}>
-      {!noNavbar && (
+      {/* {!noNavbar && (
         <NewsBar
           text="🎉 Outfund vyplatil 115 milionů liber v investici série A a zavazuje se k půjčce dalších 500 milionům liber pro letošní firmy v e-podnikání!"
           url="https://tech.eu/2022/04/27/going-all-out-to-change-the-way-online-businesses-raise-funds-lands-ps115-million-in-outfunds-kitty/"
           urlText="Dočtěte se více"
         />
-      )}
+      )} */}
 
       <LangProvider langKey="cz">
         {!simpleNavbar && !noNavbar && <Navbar lang="cz" />}

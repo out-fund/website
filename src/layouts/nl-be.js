@@ -15,13 +15,13 @@ const NlBe = ({ children, simpleNavbar, pt, noNavbar, noFooter }) => {
 
   return (
     <GlobalLayout pt={pt}>
-      {!noNavbar && (
+      {/* {!noNavbar && (
         <NewsBar
           text="🎉 Outfund haalt £ 115 miljoen in serie A-investeringen op en committeert zich dit jaar voor nog eens £ 500 miljoen aan leningen aan e-commercebedrijven!"
           url="https://tech.eu/2022/04/27/going-all-out-to-change-the-way-online-businesses-raise-funds-lands-ps115-million-in-outfunds-kitty/"
           urlText="Lees verder"
         />
-      )}
+      )} */}
 
       <LangProvider langKey="nl-be">
         {!simpleNavbar && !noNavbar && <Navbar lang="nl-be" />}

@@ -15,13 +15,13 @@ const LT = ({ children, simpleNavbar, pt, noNavbar, noFooter }) => {
 
   return (
     <GlobalLayout pt={pt}>
-      {!noNavbar && (
+      {/* {!noNavbar && (
         <NewsBar
           text="🎉 Outfund pritraukia 115 mln. svarų sterlingų A serijos investicijų ir įsipareigoja šiais metais paskolinti dar 500 mln. svarų sterlingų e. prekybos įmonėms!"
           url="https://tech.eu/2022/04/27/going-all-out-to-change-the-way-online-businesses-raise-funds-lands-ps115-million-in-outfunds-kitty/"
           urlText="Skaityti daugiau"
         />
-      )}
+      )} */}
 
       <LangProvider langKey="lt">
         {!simpleNavbar && !noNavbar && <Navbar lang="lt" />}

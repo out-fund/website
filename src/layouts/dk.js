@@ -15,13 +15,13 @@ const DK = ({ children, simpleNavbar, pt, noNavbar, noFooter }) => {
 
   return (
     <GlobalLayout pt={pt}>
-      {!noNavbar && (
+      {/* {!noNavbar && (
         <NewsBar
           text="🎉Outfund lukker 115m pund Serie-A runde og forpligter sig til lån på yderligere 500 millioner til e-commerce virksomheder i år."
           url="https://tech.eu/2022/04/27/going-all-out-to-change-the-way-online-businesses-raise-funds-lands-ps115-million-in-outfunds-kitty/"
           urlText="Læs mere"
         />
-      )}
+      )} */}
 
       <LangProvider langKey="dk">
         {!simpleNavbar && !noNavbar && <Navbar lang="dk" />}

@@ -15,7 +15,7 @@ const AU = ({ children, simpleNavbar, pt, noNavbar, noFooter }) => {
 
   return (
     <GlobalLayout pt={pt}>
-      {!noNavbar && (
+      {/* {!noNavbar && (
         <NewsBar
           text="🆕 <b>Outfund partners with Clearco</b>"
           url="https://out.fund/outfund-partners-with-clearco/"
@@ -26,7 +26,7 @@ const AU = ({ children, simpleNavbar, pt, noNavbar, noFooter }) => {
         //   url="https://tech.eu/2022/04/27/going-all-out-to-change-the-way-online-businesses-raise-funds-lands-ps115-million-in-outfunds-kitty/"
         //   urlText="Read More"
         // />
-      )}
+      )} */}
       <LangProvider langKey="au">
         {!simpleNavbar && !noNavbar && <Navbar lang="en" />}
         {simpleNavbar && !noNavbar && <SimpleNavbar lang="en" />}

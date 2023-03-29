@@ -15,13 +15,13 @@ const EN = ({ children, simpleNavbar, pt, noNavbar, noFooter }) => {
 
   return (
     <GlobalLayout pt={pt}>
-      {!noNavbar && !simpleNavbar && (
+      {/* {!noNavbar && !simpleNavbar && (
         <NewsBar
           text="🆕 <b>Outfund partners with Clearco</b>"
           url="https://out.fund/outfund-partners-with-clearco/"
           urlText="Read More"
         />
-      )}
+      )} */}
       {/* {!noNavbar && (
         <NewsBar
           text="🎉 Outfund raises £115 million in series A investment and commits to a further £500 million of lending to e-commerce firms this year!"

@@ -15,13 +15,13 @@ const HU = ({ children, simpleNavbar, pt, noNavbar, noFooter }) => {
 
   return (
     <GlobalLayout pt={pt}>
-      {!noNavbar && (
+      {/* {!noNavbar && (
         <NewsBar
           text="🎉 Az Outfund 115 millió fontot gyűjt az A sorozatú befektetésből, és idén további 500 millió GBP kölcsönt vállal e-kereskedelmi cégeknek!"
           url="https://tech.eu/2022/04/27/going-all-out-to-change-the-way-online-businesses-raise-funds-lands-ps115-million-in-outfunds-kitty/"
           urlText="Bővebben"
         />
-      )}
+      )} */}
 
       <LangProvider langKey="hu">
         {!simpleNavbar && !noNavbar && <Navbar lang="hu" />}
