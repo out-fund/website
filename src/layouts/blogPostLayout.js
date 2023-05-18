@@ -144,6 +144,17 @@ const Article = styled.article`
       text-align: center;
     }
   }
+  table {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 5px;
+      margin-bottom: 24px;
+      text-align: left;
+  }
+  th, td{
+    padding: 8px 4px;
+    border: 1px solid;
+  }
 `
 
 export const query = graphql`
