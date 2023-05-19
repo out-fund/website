@@ -39,6 +39,7 @@ const HomePage = (props) => {
             { up: "Additional top-ups", down: "Continuous" },
           ]}
         />
+        <SectionFindOut data={props.data.homepageJson.findOut} />
         <SectionLoanDescriptions
           data={{
             title: "Fast, flexible funding for you",
@@ -108,7 +109,6 @@ const HomePage = (props) => {
           }}
         />
 
-        <SectionFindOut data={props.data.homepageJson.findOut} />
         <SectionWeFunded data={data.weFunded} />
         {/* <SectionWeAreInvesting data={data.weInvesting} /> */}
         <SectionSupercharging data={data.startSupercharging} />

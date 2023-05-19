@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Section, SectionHeader, Calculator } from "./../../components"
+import { Section, SectionHeader, CalculatorV3 } from "./../../components"
 import { theme } from "./../../styles/new/theme"
 import { Triangle } from "./../../styles/utils"
 
@@ -14,7 +14,7 @@ const SectionFindOut = ({ data }) => {
             <SectionHeader title={data.title} description={data.description} />
           </TextWrapper>
           <CalculatorWrapper>
-            <Calculator data={data.calculator} />
+            <CalculatorV3 data={data.calculator} />
           </CalculatorWrapper>
         </ContentWrapper>
       </Wrapper>

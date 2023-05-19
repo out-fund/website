@@ -69,6 +69,7 @@ import SeoComponent from "./elements/SeoComponent"
 import Stats from "./elements/Stats"
 import Switch from "./elements/Swtich"
 import ThreeColumnIcons from "./sections/ThreeColumnIcons"
+import CalculatorV3 from "./elements/CalculatorV3"
 
 // --------------------
 
@@ -144,4 +145,5 @@ export {
   SectionFindOutFlexible,
   HeroHomepageFf,
   SectionRepayFf,
+  CalculatorV3,
 }

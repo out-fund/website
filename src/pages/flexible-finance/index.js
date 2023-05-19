@@ -97,11 +97,6 @@ const HowFundingWorks = (props) => {
             />
 
             {/* calculator  */}
-            {/* <ul>
-              <li>Create account and connect your accounts</li>
-              <li>Select your offers</li>
-              <li>Get funded</li>
-            </ul> */}
             <SectionFindOutFlexible
               data={{
                 title: "Find out how much you can get",
