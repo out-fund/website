@@ -44,6 +44,10 @@ const TextWrapper = styled.div`
   h2 {
     max-width: 410px;
   }
+  ul {
+    list-style-position: inside;
+    list-style-type: disc;
+  }
 `
 const CalculatorWrapper = styled.div`
   position: relative;
