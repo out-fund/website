@@ -64,3 +64,7 @@
 /us/get-funded/  https://client.out.fund/signup
 /au/get-funded/  https://client.out.fund/signup
 /es/get-funded/  https://client.out.fund/signup
+
+
+# Custom marketing redirects
+/business-finance /flexible-finance/?utm_source=linkedin&utm_medium=message&utm_campaign=dtc
