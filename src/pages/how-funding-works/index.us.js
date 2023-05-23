@@ -124,7 +124,7 @@ const HowFundingWorks = (props) => {
                     id="cta-get-funded-hiw-click"
                     data-element-category="Signup CTA"
                   >
-                    Get funded
+                    Apply now
                   </Button>
                 </CtaBlockTextWrapper>
                 <ImageWrapper>

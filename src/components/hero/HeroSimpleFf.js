@@ -22,7 +22,7 @@ const HeroSimpleFf = ({ data }) => {
           id="cta-hero-simple-ff-click"
           data-element-category="Signup CTA"
         >
-          Get funded
+          Apply now
         </Button>
       </BtnWrapper>
 

@@ -8,7 +8,7 @@
     "title": "Growth capital for founders like you",
     "description": "Scale your business faster with funding from $10K to $10M.",
     "primaryBtn": {
-      "text": "Get funded",
+      "text": "Apply now",
       "url": "https://client.out.fund/signup"
     },
     "secondaryBtn": {
@@ -77,7 +77,7 @@
   "startSupercharging": {
     "title": "Start Supercharging Your Growth",
     "btn": {
-      "text": "Get funded",
+      "text": "Apply now",
       "url": "https://client.out.fund/signup"
     },
     "card": {
