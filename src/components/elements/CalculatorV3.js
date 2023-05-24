@@ -17,14 +17,22 @@ const CalculatorV2 = ({ data }) => {
   const selectedLoanAmountClean = selectedLoanAmount
     .replace(/£/g, "")
     .replace(/\s/g, "")
+    .replace("€", "")
+    .replace("$", "")
   let selectedTerm = termLengths[requestedTerm]
+
+  let currency = selectedLoanAmount.charAt(0)
+
+  if (!isNaN(currency + 0)) {
+    currency = "€"
+  }
 
   const handleRangeChange = (event) => {
     setRequestedLoan(event.target.value)
   }
   const handleTermChange = (event) => {
     setRequestedTerm(event.target.value)
-    console.log("requestedTerm", termLengths[requestedTerm])
+    // console.log("requestedTerm", termLengths[requestedTerm])
   }
 
   // const handleButton = () => {
@@ -34,6 +42,11 @@ const CalculatorV2 = ({ data }) => {
   const totalPayable =
     Number(selectedLoanAmountClean) +
     Number(selectedLoanAmountClean * fees[requestedTerm]) / 100
+
+  // console.log("selectedLoanAmountClean", selectedLoanAmountClean)
+  // console.log("fees", fees)
+  // console.log("requestedTerm", requestedTerm)
+  // console.log("totalPayable", totalPayable)
 
   return (
     <Wrapper data-surface-type="calculator" data-surface-title="calc2ff">
@@ -82,7 +95,9 @@ const CalculatorV2 = ({ data }) => {
         <Calculated as="div">
           Total repayable
           <span>
-            £{totalPayable.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")}
+            {currency !== "€" ? currency : ""}
+            {totalPayable.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")}
+            {currency === "€" ? " " + currency : ""}
           </span>
         </Calculated>
 

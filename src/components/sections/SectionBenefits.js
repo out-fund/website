@@ -6,7 +6,7 @@ import { theme } from "./../../styles/new/theme"
 import T from "./../../styles/new/typography"
 
 const SectionBenefits = ({ data }) => {
-  console.log(data)
+  // console.log(data)
   return (
     <StyledSection>
       <Wrapper>
