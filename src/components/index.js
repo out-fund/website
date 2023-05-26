@@ -70,6 +70,7 @@ import Stats from "./elements/Stats"
 import Switch from "./elements/Swtich"
 import ThreeColumnIcons from "./sections/ThreeColumnIcons"
 import CalculatorV3 from "./elements/CalculatorV3"
+import SectionComparisonDolar from "./sections/SectionComparisonDolar"
 
 // --------------------
 
@@ -146,4 +147,5 @@ export {
   HeroHomepageFf,
   SectionRepayFf,
   CalculatorV3,
+  SectionComparisonDolar,
 }
