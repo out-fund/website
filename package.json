@@ -1,0 +1,12 @@
+{
+  "name": "outfund-website",
+  "version": "1.0.0",
+  "description": "Built with 11ty",
+  "scripts": {
+    "run": ""
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
