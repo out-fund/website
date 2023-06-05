@@ -6,7 +6,7 @@ seo:
 layout: "global-layout.pug"
 ---
 
-include /partials/navigation.pug
+include /partials/_navigation.pug
 
 
 - var quotes = [{logo: 'test', quote: 'It was refreshing to work with the Outfund team who understood our needs and were practical in their assessment of our growing business.', src: '#',name: 'Dushyant Baravkar'}, {logo: 'test', quote: 'It was refreshing to work with the Outfund team who understood our needs and were practical in their assessment of our growing business.', src: '#',name: 'Dushyant Baravkar'}]
@@ -29,7 +29,7 @@ header.header
         img(src="/images/homepage-hero.png" alt="Homepage hero image")
 
 //- Partners strip
-include /partials/partner-strip.pug
+include /partials/_partner-strip.pug
 
 section.section#findOut
   .section__wrapper
@@ -46,6 +46,7 @@ section.section#findOut
     .section__right
       .section__calculator__wrapper
         //- calculator
+        //- include /partials/_calculator.pug
 
 section.section#othersay 
   .section__wrapper 
