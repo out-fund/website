@@ -10,60 +10,88 @@ include /partials/_navigation.pug
 
 
 - var quotes = [{logo: 'test', quote: 'It was refreshing to work with the Outfund team who understood our needs and were practical in their assessment of our growing business.', src: '#',name: 'Dushyant Baravkar'}, {logo: 'test', quote: 'It was refreshing to work with the Outfund team who understood our needs and were practical in their assessment of our growing business.', src: '#',name: 'Dushyant Baravkar'}]
+
+- var brands = [{logo: 'lemonade', quote: 'Great way to get the funding you need without parting with any more equity!', src: '#', name: 'Lemon Fuller',  position: 'Founder of Lemonade Dolls'}, {logo: 'feel', quote: 'I invested in repeatable growth and grew subscriptions by 4x.', src: '#', name: 'Boris Hodakel',  position: 'Founder of Feel'},  ]
   
 
 header.header
   .header__wrapper
-    .header__left
-      .header__text__wrapper
-        h1 <span>The most</span> Sustainable Funding
-        p Outfund gives you everything you need to fuel your business growth with funding from £10k to £10m.
+    .header__text__wrapper
+      h1 <span>The most</span> Sustainable Funding
+      p Outfund gives you everything you need to fuel your business growth with funding from £10k to £10m.
       .header__cta__wrapper
         .cta__wrapper--main
           a.cta--primary(href="/apply") Check eligibility
           .note It won't affect your credit score
         span or
         a.cta--primary(href="/call") Speak to an expert
-    .header__right
-      .header__image__wrapper
-        img(src="/images/homepage-hero.png" alt="Homepage hero image")
+    .header__image__wrapper
+      img(src="/images/homepage-hero.png" alt="Homepage hero image")
 
 //- Partners strip
 include /partials/_partner-strip.pug
 
 section.section#findOut
   .section__wrapper
-    .section__left
-      .section__text__wrapper
-        h2.section__title Find out how much you can get
-        p.section__description Funding offers are based on your average monthly revenue. Get a quick indication of your eligibility with our easy-to-use calculator.
-        h3.section__subtitle Who can apply
-        ul.list
-          li.list__element 6+ months in business
-          li.list__element £10k+ monthly revenue
-          li.list__element Business registered in Europe, US or AU
+    .section__text__wrapper
+      h2.section__title Find out how much you can get
+      p.section__description Funding offers are based on your average monthly revenue. Get a quick indication of your eligibility with our easy-to-use calculator.
+      h3.section__subtitle Who can apply
+      ul.list
+        li.list__element 6+ months in business
+        li.list__element £10k+ monthly revenue
+        li.list__element Business registered in Europe, US or AU
 
-    .section__right
-      .section__calculator__wrapper
-        //- calculator
-        //- include /partials/_calculator.pug
+    .section__calculator__wrapper
+      //- calculator
+      //- include /partials/_calculator.pug
 
 section.section#othersay 
   .section__wrapper 
-    .section__grid
-      each quote in quotes
-        div.quote__logo= quote.logo
-        div.quote__text= quote.quote
-        div.quote__src= quote.src
-        div.quote__name= quote.name
+    .section__header
+      h2.section__title What other say
+    .section__content
+      .section__grid
+        each quote in quotes
+          .quote
+            div.quote__logo= quote.logo
+            div.quote__text= quote.quote
+            div.quote__src= quote.src
+            div.quote__name= quote.name
 
 section.section#notSure
   .section__wrapper
-    .section__left
-      .section__text__wrapper
-        h2.section__title Still not sure how our funding works?
-        h3.section__subtitle--light Speak with our experts today.
+    .section__text__wrapper
+      h2.section__title Still not sure how our funding works?
+      h3.section__subtitle--light Speak with our experts today.
+    .section__image__wrapper
+      img(src="" alt="Call center")
 
-    .section__right
-      .section__image__wrapper
-        img(src="" alt="Call center")
+section.section#howWeCompare
+  .section__wrapper 
+    .section__header
+      h2.section__title What other say
+      p.section__description Founders typically have two ways to fund business growth. Raising equity or getting a bank loan. Both can be valuable options but can mean giving up a piece of your company or agreeing to a personal guarantee.
+    .section__content
+      //- .comparison-table
+
+
+section.section#howWeCompare
+  .section__wrapper 
+    .section__header
+      h2.section__title What other say
+    .section__content
+      .section__grid
+        each brand in brands
+          .brand
+            div.brand__logo= brand.logo
+            div.brand__text= brand.quote
+            div.brand__src= brand.src
+            div.brand__name= brand.name
+            div.brand__name= brand.position
+
+//- Unmatched service
+include /partials/_unmatched-service.pug
+
+//- Global footer
+include /partials/_global-footer.pug
