@@ -1,0 +1,41 @@
+.navbar
+  // background-color #afa
+  padding 40px 0
+  &__inner
+    wrapper-nav()
+  &__logo
+    height 26px
+  
+  .nav
+    // background-color #aaf
+    display flex
+    align-items baseline
+    
+    &__brand
+      // background-color #fff
+      display inline-flex
+      margin-right 64px
+      position relative
+      top 1px
+
+    &__list
+      display flex
+      gap 48px
+      &:last-of-type
+        margin-left auto
+
+
+      &__item 
+        // background-color #aaf
+
+        &.country
+          display flex
+          align-items center
+          gap 8px
+          svg
+            width 18px
+            height 18px
+
+
+    &__link
+      nav-link()

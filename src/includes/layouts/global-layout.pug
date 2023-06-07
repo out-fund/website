@@ -7,6 +7,10 @@ head
   link(rel="stylesheet" href="/main.css")
 
 body
-  .global-wrapper !{content}
-  //- footer Footer links
+  div.hfeed.layout(role="document")
+
+    include /partials/_navbar.pug
+    main.main.container(role="main" id="main" tabindex="-1") !{content}
+
             
+

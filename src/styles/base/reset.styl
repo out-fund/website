@@ -1,0 +1,91 @@
+// ---------------------------------
+// Mix of a lot of sources of css
+// ---------------------------------
+
+html {
+    -webkit-tap-highlight-color: rgba(0,0,0, 0);
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+    line-height: 1;
+    overflow-y: scroll;
+    scrollbar-gutter: stable;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding 0
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  line-height: 1;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+a {
+  text-decoration-skip-ink: auto;
+  text-decoration none
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+select,
+textarea {
+    border-radius: 0;
+    line-height: inherit;
+    margin: 0;
+}
+
+a,
+area,
+button,
+[role='button'],
+input,
+label,
+select,
+summary,
+textarea {
+    touch-action: manipulation;
+}
+
+::selection {
+    background: #faf;
+    color: #fff;
+}
+::-moz-selection {
+    background: #faf;
+    color: #fff;
+}
