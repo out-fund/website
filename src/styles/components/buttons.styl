@@ -1,0 +1,26 @@
+
+cta()
+  background-color #fff
+  border 0
+  padding 8px 24px
+  display inline-block
+
+
+.cta
+  &--primary
+    cta()
+    color #fff
+    background-color var(--color-light-cobalt-100)
+    border-radius 20px
+    font-size 16px
+    font-weight 700
+    line-height 1.5
+    transition background-color 0.1s
+    text-rendering: geometricPrecision;
+    &:hover,
+    &:active
+      background-color var(--color-light-cobalt-200)
+
+    &:focus
+      outline 0
+      box-shadow 0 0 0 3px rgba(30, 167, 253, 0.5)

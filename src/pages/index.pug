@@ -16,19 +16,16 @@ seo:
 header.header
   .header__wrapper
     .header__text__wrapper
-      h1 <span>The most</span> Sustainable Funding
-      p Outfund gives you everything you need to fuel your business growth with funding from £10k to £10m.
+      h1.header__title <span>The most</span> Sustainable Funding
+      p.header__description Outfund gives you everything you need to fuel your business growth with funding from £10k to £10m.
       .header__cta__wrapper
         .cta__wrapper--main
           a.cta--primary(href="/apply") Check eligibility
-          .note It won't affect your credit score
-        span or
-        a.cta--primary(href="/call") Speak to an expert
+          .small-text It won't affect your credit score
+        //- span or
+        //- a.cta--primary(href="/call") Speak to an expert
     .header__image__wrapper
-      img(src="/images/homepage-hero.png" alt="Homepage hero image")
-
-//- Partners strip
-include /partials/_partner-strip.pug
+      img(src="homepage-hero.jpg" alt="Homepage hero image" width="421" height="378" loading="lazy")
 
 section.section#findOut
   .section__wrapper
@@ -44,6 +41,9 @@ section.section#findOut
     .section__calculator__wrapper
       //- calculator
       //- include /partials/_calculator.pug
+
+//- Partners strip
+include /partials/_partner-strip.pug
 
 section.section#othersay 
   .section__wrapper 

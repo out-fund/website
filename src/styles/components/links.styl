@@ -2,7 +2,21 @@
 
 nav-link()
   font-size 20px
+  line-height 1.2
   color var(--black)
   text-rendering: geometricPrecision;
-  &:hover
-    text-decoration underline
+  position relative
+  &::after
+    content: ''
+    display block
+    width 100%
+    height 3px
+    background-color var(--color-light-sky-100)
+    position absolute
+    left 0
+    bottom -1px
+    z-index -1
+    opacity 0
+    transition: opacity 0.1s
+  &:hover::after
+    opacity 1
