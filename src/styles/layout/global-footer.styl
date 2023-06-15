@@ -1,0 +1,77 @@
+
+.footer
+  background-color var(--color-light-air-100)
+  padding-top 80px
+  padding-bottom 80px
+  &__wrapper 
+    wrapper-wide()
+
+  &__grid
+
+    display flex
+    justify-content space-between
+
+  &__brand
+    display flex
+    width 142px
+    svg
+      height 26px
+
+  
+  &__links
+    // background-color #ccc
+    display flex
+    flex-direction: column
+    gap 24px
+  
+    &__element
+      // background-color #ffa
+
+    &--social
+      margin-top 5px
+      li:nth-child(2)
+        margin-top 5px
+
+    &:not(.footer__links--social)
+      margin-top 12px
+            
+      li:first-of-type
+        font-size 16px
+        font-weight 700
+        line-height 1.5
+        color #8796A7
+
+  &__link 
+    nav-link()
+
+  
+  &__notice
+    margin-top 16px
+    font-size 14px
+    line-height 24px
+    color #4B6686
+    max-width 700px
+    margin-bottom 24px
+
+  &__bottom
+    // background-color #faf
+    display flex
+    align-items center
+    gap 24px
+    border-top 1px solid rgba(#28425F, 0.1)
+    padding-top 24px
+
+    &__copyright
+      font-size 14px
+      line-height 24px
+      color #4B6686
+
+    &__links
+      display flex
+      align-items center
+      gap 24px
+      a 
+        font-size 14px
+        line-height 24px
+        color #4B6686 
+        

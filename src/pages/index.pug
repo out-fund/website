@@ -4,15 +4,47 @@ layout: "global-layout.pug"
 seo:
   title: "My Rad Homepage"
   description: "Homepage description"
+content:
+  quotes:
+    - brand: bhumi
+      quote: It was refreshing to work with the Outfund team who understood our needs and were practical in their assessment of our growing business.
+      name: Dushyant Baravkar
+    - brand: bhumi
+      quote: It was refreshing to work with the Outfund team who understood our needs and were practical in their assessment of our growing business.
+      name: Dushyant Baravkar
+    - brand: bhumi
+      quote: It was refreshing to work with the Outfund team who understood our needs and were practical in their assessment of our growing business.
+      name: Dushyant Baravkar
+    - brand: bhumi
+      quote: It was refreshing to work with the Outfund team who understood our needs and were practical in their assessment of our growing business.
+      name: Dushyant Baravkar
+    - brand: bhumi
+      quote: It was refreshing to work with the Outfund team who understood our needs and were practical in their assessment of our growing business.
+      name: Dushyant Baravkar
+    - brand: bhumi
+      quote: It was refreshing to work with the Outfund team who understood our needs and were practical in their assessment of our growing business.
+      name: Dushyant Baravkar
 
+  brands: 
+    - brand: lemonade
+      quote: Great way to get the funding you need without parting with any more equity!
+      name: Lemon Fuller
+      position: Founder of Lemonade Dolls
+    - brand: feel
+      quote: I invested in repeatable growth and grew subscriptions by 4x.
+      name: Boris Hodakel
+      position: Founder of Feel
+    - brand: onto
+      quote: We have doubled in size in the last quarter and are due to double in size again this quarter!
+      name: Rob Jolly
+      position: Founder of ONTO
+
+  faq:
+    - question: How much funding do you offer?
+      answer: We can deploy between £10,000 and £10,000,000 at a time.
 ---
 
-
-- var quotes = [{logo: 'test', quote: 'It was refreshing to work with the Outfund team who understood our needs and were practical in their assessment of our growing business.', src: '#',name: 'Dushyant Baravkar'}, {logo: 'test', quote: 'It was refreshing to work with the Outfund team who understood our needs and were practical in their assessment of our growing business.', src: '#',name: 'Dushyant Baravkar'}]
-
-- var brands = [{logo: 'lemonade', quote: 'Great way to get the funding you need without parting with any more equity!', src: '#', name: 'Lemon Fuller',  position: 'Founder of Lemonade Dolls'}, {logo: 'feel', quote: 'I invested in repeatable growth and grew subscriptions by 4x.', src: '#', name: 'Boris Hodakel',  position: 'Founder of Feel'},  ]
   
-
 header.header
   .header__wrapper
     .header__text__wrapper
@@ -30,7 +62,7 @@ header.header
 section.section#findOut
   .section__wrapper
     .section__text__wrapper
-      h2.section__title Find out how much you can get
+      h2.section__title Find out <br/> how much you can get
       p.section__description Funding offers are based on your average monthly revenue. Get a quick indication of your eligibility with our easy-to-use calculator.
       h3.section__subtitle Who can apply
       ul.list
@@ -50,44 +82,57 @@ section.section#othersay
     .section__header
       h2.section__title What other say
     .section__content
-      .section__grid
-        each quote in quotes
+        each quote in content.quotes
           .quote
-            div.quote__logo= quote.logo
-            div.quote__text= quote.quote
-            div.quote__src= quote.src
-            div.quote__name= quote.name
+            .quote__logo
+              img(src=("logo-" + quote.brand + ".png") alt=(quote.brand + " logo") height="40" loading="lazy")
+            .quote__text=quote.quote
+            .quote__profile
+              .quote__avatar
+                img(src=(quote.brand + "-avatar.png") alt=(quote.logo + " founder profile image") height="40" loading="lazy")
+              .quote__name=quote.name
 
 section.section#notSure
   .section__wrapper
     .section__text__wrapper
-      h2.section__title Still not sure how our funding works?
+      h2.section__title Still not sure <br/> how our funding works?
       h3.section__subtitle--light Speak with our experts today.
+      .cta__wrapper
+        a.cta--primary(href="/") Schedule a call
     .section__image__wrapper
-      img(src="" alt="Call center")
+      img(src="not-sure.jpg" alt="Call center" width="290" height="282")
 
 section.section#howWeCompare
   .section__wrapper 
     .section__header
-      h2.section__title What other say
+      h2.section__title How we compare
       p.section__description Founders typically have two ways to fund business growth. Raising equity or getting a bank loan. Both can be valuable options but can mean giving up a piece of your company or agreeing to a personal guarantee.
-    .section__content
-      //- .comparison-table
+    .section__table
+      include /partials/_comparison-table.pug
 
 
-section.section#howWeCompare
+section.section#weFund
   .section__wrapper 
     .section__header
-      h2.section__title What other say
+      h2.section__title We fund brands like yours
     .section__content
-      .section__grid
-        each brand in brands
-          .brand
-            div.brand__logo= brand.logo
-            div.brand__text= brand.quote
-            div.brand__src= brand.src
-            div.brand__name= brand.name
-            div.brand__name= brand.position
+        each brand in content.brands
+          div.brand(class="brand__" + brand.brand)
+            div.brand__logo logo
+            div.brand__text=brand.quote
+            div.brand__src=brand.src
+            div.brand__name=brand.name
+            div.brand__name=brand.position
+        .brand.brand__supercharging
+          p Start supercharging your growth
+          a.cta--primary(href="/apply") Check eligibility
+
+//- section.section#weFund
+//-   .section__wrapper 
+//-     .section__header
+//-       h2.section__title Frequently asked questions
+//-     .section__content
+//-       each question in content.faq
 
 //- Unmatched service
 include /partials/_unmatched-service.pug
