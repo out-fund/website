@@ -1,23 +1,30 @@
 #unmatchedservice
   .section__wrapper
     wrapper-wide()
-
-  .section__title 
-    font-size 24px
-    margin-bottom 8px
-  .section__description
-    font-size 14px
-    line-height 20px
+  .section__header
     margin-bottom 32px
-    margin-top 0
+
+  .section__subtitle
+    margin-bottom 8px
+
+  .section__description
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px
+
   .section__content
     display grid
     grid-template-columns 1fr 1fr 1fr
     gap 24px
     .service
+      &__icon
+        width 48px
+        height 48px
+        margin-bottom 16px
       &__title
         margin-bottom 8px
       &__text
-        // background-color #afa
-        font-size 14px
-        line-height 20px
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px
+        letter-spacing 0.02em

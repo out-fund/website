@@ -1,4 +1,9 @@
+const pluginWebc = require("@11ty/eleventy-plugin-webc");
+
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(pluginWebc, {
+    components: "./src/includes/components/**/*.webc",
+  });
   
   // Ignores styles folder
   eleventyConfig.ignores.add("src/styles/**/*");

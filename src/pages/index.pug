@@ -6,42 +6,48 @@ seo:
   description: "Homepage description"
 content:
   quotes:
-    - brand: bhumi
-      quote: It was refreshing to work with the Outfund team who understood our needs and were practical in their assessment of our growing business.
-      name: Dushyant Baravkar
-    - brand: bhumi
-      quote: It was refreshing to work with the Outfund team who understood our needs and were practical in their assessment of our growing business.
-      name: Dushyant Baravkar
-    - brand: bhumi
-      quote: It was refreshing to work with the Outfund team who understood our needs and were practical in their assessment of our growing business.
-      name: Dushyant Baravkar
-    - brand: bhumi
-      quote: It was refreshing to work with the Outfund team who understood our needs and were practical in their assessment of our growing business.
-      name: Dushyant Baravkar
-    - brand: bhumi
-      quote: It was refreshing to work with the Outfund team who understood our needs and were practical in their assessment of our growing business.
-      name: Dushyant Baravkar
-    - brand: bhumi
-      quote: It was refreshing to work with the Outfund team who understood our needs and were practical in their assessment of our growing business.
-      name: Dushyant Baravkar
+    - brand: "bhumi"
+      quote: "It was refreshing to work with the Outfund team who understood our needs and were practical in their assessment of our growing business."
+      name: "Dushyant Baravkar"
+    - brand: "bhumi"
+      quote: "It was refreshing to work with the Outfund team who understood our needs and were practical in their assessment of our growing business."
+      name: "Dushyant Baravkar"
+    - brand: "bhumi"
+      quote: "It was refreshing to work with the Outfund team who understood our needs and were practical in their assessment of our growing business."
+      name: "Dushyant Baravkar"
+    - brand: "bhumi"
+      quote: "It was refreshing to work with the Outfund team who understood our needs and were practical in their assessment of our growing business."
+      name: "Dushyant Baravkar"
+    - brand: "bhumi"
+      quote: "It was refreshing to work with the Outfund team who understood our needs and were practical in their assessment of our growing business."
+      name: "Dushyant Baravkar"
+    - brand: "bhumi"
+      quote: "It was refreshing to work with the Outfund team who understood our needs and were practical in their assessment of our growing business."
+      name: "Dushyant Baravkar"
 
   brands: 
-    - brand: lemonade
+    - brand: "lemonade"
       quote: Great way to get the funding you need without parting with any more equity!
-      name: Lemon Fuller
+      founderName: Lemon Fuller
       position: Founder of Lemonade Dolls
-    - brand: feel
+    - brand: "feel"
       quote: I invested in repeatable growth and grew subscriptions by 4x.
-      name: Boris Hodakel
+      founderName: Boris Hodakel
       position: Founder of Feel
-    - brand: onto
+    - brand: "onto"
       quote: We have doubled in size in the last quarter and are due to double in size again this quarter!
-      name: Rob Jolly
+      founderName: Rob Jolly
       position: Founder of ONTO
 
   faq:
-    - question: How much funding do you offer?
-      answer: We can deploy between £10,000 and £10,000,000 at a time.
+    - question: "How much funding do you offer?"
+      answer: "We can deploy between £10,000 and £10,000,000 at a time."
+    - question: "How do you calculate my offer?"
+      answer: "Outfund securely connects to your existing banking, payment processing, and accounting platforms. Using predictive models, we assess key metrics from your revenue, advertising performance and other third party data to create bespoke funding offers. <br> Our funding is based on your performance. We don't take any equity, meaning we don't dilute you or your investors. Instead, funding is repaid through a simple revenue share."
+    - question: "How long does the whole process take?"
+      answer: "The entire process (application, offer, approval, sending funds) can be completed in as little as 48 hours."
+    - question: "How do I apply?"
+      answer: "You can apply in minutes by clicking 'Apply now'. You'll need to be a director of the company you're applying for. You'll need to connect your business bank account, payment processor and company financial accounts. This data will allow us to build your funding offer."
 ---
 
   
@@ -57,7 +63,7 @@ header.header
         //- span or
         //- a.cta--primary(href="/call") Speak to an expert
     .header__image__wrapper
-      img(src="homepage-hero.jpg" alt="Homepage hero image" width="421" height="378" loading="lazy")
+      img(src="homepage-hero.jpg" alt="Homepage hero image" width="421" height="378")
 
 section.section#findOut
   .section__wrapper
@@ -72,7 +78,7 @@ section.section#findOut
 
     .section__calculator__wrapper
       //- calculator
-      //- include /partials/_calculator.pug
+      include /partials/_calculator.pug
 
 //- Partners strip
 include /partials/_partner-strip.pug
@@ -89,7 +95,7 @@ section.section#othersay
             .quote__text=quote.quote
             .quote__profile
               .quote__avatar
-                img(src=(quote.brand + "-avatar.png") alt=(quote.logo + " founder profile image") height="40" loading="lazy")
+                img(src=(quote.brand + "-avatar.png") alt=(quote.logo + " founder profile image") height="40" width="40" loading="lazy")
               .quote__name=quote.name
 
 section.section#notSure
@@ -114,25 +120,33 @@ section.section#howWeCompare
 section.section#weFund
   .section__wrapper 
     .section__header
-      h2.section__title We fund brands like yours
+      h2.section__title We fund <br> brands like yours
     .section__content
         each brand in content.brands
           div.brand(class="brand__" + brand.brand)
-            div.brand__logo logo
+            div.brand__logo
+              .sr-only=brand.brand
             div.brand__text=brand.quote
             div.brand__src=brand.src
-            div.brand__name=brand.name
-            div.brand__name=brand.position
+            div.brand__founderName=brand.founderName
+            div.brand__position=brand.position
         .brand.brand__supercharging
-          p Start supercharging your growth
-          a.cta--primary(href="/apply") Check eligibility
+          .brand__supercharging__wrapper
+            h3 Start supercharging your growth
+            a.cta--primary(href="/apply") Check eligibility
 
-//- section.section#weFund
-//-   .section__wrapper 
-//-     .section__header
-//-       h2.section__title Frequently asked questions
-//-     .section__content
-//-       each question in content.faq
+section.section#faq
+  .section__wrapper 
+    .section__header
+      h2.section__title Frequently asked questions
+    .section__content
+      each question in content.faq
+        .question-answer
+          h3.question-answer__question
+            != question.question
+          p.question-answer__answer
+            != question.answer
+      a(href="/faq") Read more FAQs
 
 //- Unmatched service
 include /partials/_unmatched-service.pug

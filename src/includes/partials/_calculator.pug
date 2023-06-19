@@ -1,17 +1,23 @@
 .calculator 
-  .calculator__wrapper 
-    .calculator__slider__section
-      h4.calculator__title How much funding do you need?
-      p.calculator__requested__ammount £500 000
-      .calculator__slider
-    .calculator__slider__section 
-      h4.calculator__title Repayment length
-      p.calculator__term 6 months
-      .calculator__slider
-    .calculator__slider__section
-      h4.calculator__total__repayable
-      p.calculator__total__repayable__amount £530,000
-    p.calculator__note * This calculator is only an example, your actual total repayable will vary based on your circumstances.
-    .calculator__cta__wrapper
-      a.cta--primary(href="/apply") Apply now
-      .note Applying will not affect your credit score
+  .calculator__wrapper
+    .calculator__slider__wrapper
+      .calculator__slider__section
+        .calculator__slider__section__header
+          .calculator__slider__section__header__title How much funding do you need?
+          .calculator__slider__section__header__requested__ammount £500 000
+        .calculator__slider__section__slider
+          <input type="range" class="slider" min="0" max="8" step="1" value="3">
+      .calculator__slider__section 
+        .calculator__slider__section__header
+          .calculator__slider__section__header__title Repayment length
+          .calculator__slider__section__header__term 6 months
+        .calculator__slider__section__slider
+          <input type="range" class="slider" min="0" max="9" step="1" value="0">
+    .calculator__slider__section__bottom
+      .calculator__slider__section__header
+        .calculator__total__repayable Total repayable*
+        .calculator__total__repayable__amount £530,000
+      .small-text * This calculator is only an example, your actual total repayable will vary based on your circumstances.
+      .calculator__cta__wrapper
+        a.cta--primary(href="/apply") Apply now
+        .small-text Applying will not affect your credit score
