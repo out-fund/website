@@ -1,0 +1,93 @@
+# From the webflow days
+/about/us            /us/about-us/
+/about/es            /es/about-us/
+/about/au            /au/about-us/
+/about               /about-us/
+/stories/es          /es/success-stories/
+/stories/au          /au/success-stories/
+/stories/us          /us/success-stories/
+/faqs/us             /us/support/faq/
+/faqs/au             /au/support/faq/
+/faqs/es             /es/support/faq/
+/faqs                /support/faq/
+/career/es           /es/careers/
+/career/us           /us/careers/
+/contact/contact-au  /au/get-funded/
+/contact/us          /us/get-funded/
+/contact/es          /es/get-funded/
+/contact-2           /get-funded/
+/usa                 /us/
+/ca                  /us/
+/uk                  /
+/career              /careers/
+/privacy-policy      /legal/privacy-policy/
+/cookie-policy       /legal/cookie-policy/
+/es/robots.txt       /robots.txt
+/index.php           /
+/faqs-2              /support/faq/
+/get-funded-2        /get-funded/
+/contact             /contact-us/
+
+/blog/jcdecaux-nurture-partners-with-outfund    https://old.out.fund/blog/jcdecaux-nurture-partners-with-outfund
+/blog/knowing-is-growing-customer-insights-will-be-key-in-the-new-normal    https://old.out.fund/blog/knowing-is-growing-customer-insights-will-be-key-in-the-new-normal
+/blog/the-e-commerce-winners-and-losers-during-lockdown    https://old.out.fund/blog/the-e-commerce-winners-and-losers-during-lockdown
+/blog/introducing-outfund    https://old.out.fund/blog/introducing-outfund
+/post/introducing-outfund    https://old.out.fund/blog/introducing-outfund
+/blog/the-best-ad-platforms-for-e-commerce    https://old.out.fund/blog/the-best-ad-platforms-for-e-commerce
+/blog/what-kind-of-companies-do-we-fund    https://old.out.fund/blog/what-kind-of-companies-do-we-fund
+/blog/bounce-back-loans    https://old.out.fund/blog/bounce-back-loans
+/blog/the-future-fund    https://old.out.fund/blog/the-future-fund
+/2021-black-friday-toolkit    /blog/2021-black-friday-toolkit/
+
+/founder-referral-program    /referral-program/
+/xero    https://old.out.fund/xero
+/success-stori/our-subscriptions-are-now-at-an-all-time-high    /success-stories/lemonade-dolls/
+/success-stori/onto    /success-stories/onto/
+
+# Sitemaps
+/sitemap_index.xml    /sitemap/sitemap-index.xml
+/sitemap.xml    /sitemap/sitemap-index.xml
+/sitemaps.xml    /sitemap/sitemap-index.xml
+
+# Temp prestashop
+/prestashop          https://old.out.fund/prestashop
+/es/prestashop       https://old.out.fund/es/prestashop
+
+# Privacy Policy
+/legal/privacy-policy/    /Outfund-Privacy-Policy.pdf
+/es/legal/privacy-policy/    /Outfund-Privacy-Policy.pdf
+/au/legal/privacy-policy/    /Outfund-Privacy-Policy.pdf
+/us/legal/privacy-policy/    /Outfund-Privacy-Policy.pdf
+
+# Get funded removed
+/get-funded/  https://client.out.fund/signup
+/us/get-funded/  https://client.out.fund/signup
+/au/get-funded/  https://client.out.fund/signup
+/es/get-funded/  https://client.out.fund/signup
+
+
+# Custom marketing redirects
+/business-finance/ /flexible-finance/?utm_source=linkedin&utm_medium=message&utm_campaign=dtc
+
+# Redirects from Callbox AU
+/weblink/ /?utm_medium=weblink&utm_source=callbox&utm_content=au
+/applink/ http://client.out.fund/signup?utm_medium=applink&utm_source=callbox&utm_content=au
+
+# Redirects from Callbox UK
+/webjoin/ /?utm_medium=weblink&utm_source=callbox&utm_content=uk
+/appjoin/ http://client.out.fund/signup?utm_medium=applink&utm_source=callbox&utm_content=uk
+
+# Redirects from LinkedIn
+/flex/go/      /?utm_medium=linkedinmsg&utm_source=linkedin
+/flex/apply/   /?utm_medium=linkedinprofile&utm_source=linkedin
+
+/rbf/go/       /?utm_medium=linkedinmsg&utm_source=linkedin&utm_content=lelagrzybowska
+/rbf/apply/    /?utm_medium=linkedinprofile&utm_source=linkedin&utm_content=lelagrzybowska
+
+/drive/go/     /?utm_medium=linkedinmsg&utm_source=linkedin&utm_content=dominicstevens
+/drive/apply/  /?utm_medium=linkedinprofile&utm_source=linkedin&utm_content=dominicstevens
+
+/boost/go/     /?utm_medium=linkedinmsg&utm_source=linkedin&utm_content=jenniferaddo
+/boost/apply/  /?utm_medium=linkedinprofile&utm_source=linkedin&utm_content=jenniferaddo
+
+/growth/       /?utm_medium=linkedinprofile&utm_source=linkedin
