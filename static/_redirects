@@ -70,24 +70,24 @@
 /business-finance/ /flexible-finance/?utm_source=linkedin&utm_medium=message&utm_campaign=dtc
 
 # Redirects from Callbox AU
-/weblink/ http://out.fund/?utm_medium=weblink&utm_source=callbox&utm_content=au
+/weblink/ /?utm_medium=weblink&utm_source=callbox&utm_content=au
 /applink/ http://client.out.fund/signup?utm_medium=applink&utm_source=callbox&utm_content=au
 
 # Redirects from Callbox UK
-/webjoin/ http://out.fund/?utm_medium=weblink&utm_source=callbox&utm_content=uk
+/webjoin/ /?utm_medium=weblink&utm_source=callbox&utm_content=uk
 /appjoin/ http://client.out.fund/signup?utm_medium=applink&utm_source=callbox&utm_content=uk
 
 # Redirects from LinkedIn
-/flex/go/      http://out.fund/?utm_medium=linkedinmsg&utm_source=linkedin
-/flex/apply/   http://out.fund/?utm_medium=linkedinprofile&utm_source=linkedin
+/flex/go/      /?utm_medium=linkedinmsg&utm_source=linkedin
+/flex/apply/   /?utm_medium=linkedinprofile&utm_source=linkedin
 
-/rbf/go/       http://out.fund/?utm_medium=linkedinmsg&utm_source=linkedin&utm_content=lelagrzybowska
-/rbf/apply/    http://out.fund/?utm_medium=linkedinprofile&utm_source=linkedin&utm_content=lelagrzybowska
+/rbf/go/       /?utm_medium=linkedinmsg&utm_source=linkedin&utm_content=lelagrzybowska
+/rbf/apply/    /?utm_medium=linkedinprofile&utm_source=linkedin&utm_content=lelagrzybowska
 
-/drive/go/     http://out.fund/?utm_medium=linkedinmsg&utm_source=linkedin&utm_content=dominicstevens
-/drive/apply/  http://out.fund/drive/apply?utm_medium=linkedinprofile&utm_source=linkedin&utm_content=dominicstevens
+/drive/go/     /?utm_medium=linkedinmsg&utm_source=linkedin&utm_content=dominicstevens
+/drive/apply/  /?utm_medium=linkedinprofile&utm_source=linkedin&utm_content=dominicstevens
 
-/boost/go/    http://out.fund/?utm_medium=linkedinmsg&utm_source=linkedin&utm_content=jenniferaddo
-/boost/apply/  http://out.fund/?utm_medium=linkedinprofile&utm_source=linkedin&utm_content=jenniferaddo
+/boost/go/     /?utm_medium=linkedinmsg&utm_source=linkedin&utm_content=jenniferaddo
+/boost/apply/  /?utm_medium=linkedinprofile&utm_source=linkedin&utm_content=jenniferaddo
 
-/growth/       http://out.fund/?utm_medium=linkedinprofile&utm_source=linkedin
+/growth/       /?utm_medium=linkedinprofile&utm_source=linkedin
