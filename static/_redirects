@@ -74,20 +74,20 @@ www.out.fund/weblink http://out.fund/?utm_medium=weblink&utm_source=callbox&utm_
 www.out.fund/applink http://client.out.fund/signup?utm_medium=applink&utm_source=callbox&utm_content=au
 
 # Redirects from Callbox UK
-www.out.fund/webjoin http://out.fund/?utm_medium=weblink&utm_source=callbox&utm_content=uk
-www.out.fund/appjoin http://client.out.fund/signup?utm_medium=applink&utm_source=callbox&utm_content=uk
+/webjoin http://out.fund/?utm_medium=weblink&utm_source=callbox&utm_content=uk
+/appjoin http://client.out.fund/signup?utm_medium=applink&utm_source=callbox&utm_content=uk
 
 # Redirects from LinkedIn
-http://out.fund/flex/go      http://out.fund/?utm_medium=linkedinmsg&utm_source=linkedin
-http://out.fund/flex/apply   http://out.fund/?utm_medium=linkedinprofile&utm_source=linkedin
+/flex/go      http://out.fund/?utm_medium=linkedinmsg&utm_source=linkedin
+/flex/apply   http://out.fund/?utm_medium=linkedinprofile&utm_source=linkedin
 
-http://out.fund/rbf/go       http://out.fund/?utm_medium=linkedinmsg&utm_source=linkedin&utm_content=lelagrzybowska
-http://out.fund/rbf/apply    http://out.fund/?utm_medium=linkedinprofile&utm_source=linkedin&utm_content=lelagrzybowska
+/rbf/go       http://out.fund/?utm_medium=linkedinmsg&utm_source=linkedin&utm_content=lelagrzybowska
+/rbf/apply    http://out.fund/?utm_medium=linkedinprofile&utm_source=linkedin&utm_content=lelagrzybowska
 
-http://out.fund/drive/go     http://out.fund/?utm_medium=linkedinmsg&utm_source=linkedin&utm_content=dominicstevens
-http://out.fund/drive/apply  http://out.fund/drive/apply?utm_medium=linkedinprofile&utm_source=linkedin&utm_content=dominicstevens
+/drive/go     http://out.fund/?utm_medium=linkedinmsg&utm_source=linkedin&utm_content=dominicstevens
+/drive/apply  http://out.fund/drive/apply?utm_medium=linkedinprofile&utm_source=linkedin&utm_content=dominicstevens
 
-http://out.fund/boost/go     http://out.fund/?utm_medium=linkedinmsg&utm_source=linkedin&utm_content=jenniferaddo
-http://out.fund/boost/apply  http://out.fund/?utm_medium=linkedinprofile&utm_source=linkedin&utm_content=jenniferaddo
+/boost/go     http://out.fund/?utm_medium=linkedinmsg&utm_source=linkedin&utm_content=jenniferaddo
+/boost/apply  http://out.fund/?utm_medium=linkedinprofile&utm_source=linkedin&utm_content=jenniferaddo
 
-http://out.fund/growth       http://out.fund/?utm_medium=linkedinprofile&utm_source=linkedin
+/growth       http://out.fund/?utm_medium=linkedinprofile&utm_source=linkedin
