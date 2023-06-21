@@ -68,3 +68,26 @@
 
 # Custom marketing redirects
 /business-finance /flexible-finance/?utm_source=linkedin&utm_medium=message&utm_campaign=dtc
+
+# Redirects from Callbox AU
+www.out.fund/weblink http://out.fund/?utm_medium=weblink&utm_source=callbox&utm_content=au
+www.out.fund/applink http://client.out.fund/signup?utm_medium=applink&utm_source=callbox&utm_content=au
+
+# Redirects from Callbox UK
+www.out.fund/webjoin http://out.fund/?utm_medium=weblink&utm_source=callbox&utm_content=uk
+www.out.fund/appjoin http://client.out.fund/signup?utm_medium=applink&utm_source=callbox&utm_content=uk
+
+# Redirects from LinkedIn
+http://out.fund/flex/go      http://out.fund/?utm_medium=linkedinmsg&utm_source=linkedin
+http://out.fund/flex/apply   http://out.fund/?utm_medium=linkedinprofile&utm_source=linkedin
+
+http://out.fund/rbf/go       http://out.fund/?utm_medium=linkedinmsg&utm_source=linkedin&utm_content=lelagrzybowska
+http://out.fund/rbf/apply    http://out.fund/?utm_medium=linkedinprofile&utm_source=linkedin&utm_content=lelagrzybowska
+
+http://out.fund/drive/go     http://out.fund/?utm_medium=linkedinmsg&utm_source=linkedin&utm_content=dominicstevens
+http://out.fund/drive/apply  http://out.fund/drive/apply?utm_medium=linkedinprofile&utm_source=linkedin&utm_content=dominicstevens
+
+http://out.fund/boost/go     http://out.fund/?utm_medium=linkedinmsg&utm_source=linkedin&utm_content=jenniferaddo
+http://out.fund/boost/apply  http://out.fund/?utm_medium=linkedinprofile&utm_source=linkedin&utm_content=jenniferaddo
+
+http://out.fund/growth       http://out.fund/?utm_medium=linkedinprofile&utm_source=linkedin
