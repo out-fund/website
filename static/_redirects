@@ -78,8 +78,8 @@
 /appjoin        http://client.out.fund/signup?utm_medium=applink&utm_source=callbox&utm_content=uk
 
 # Redirects from LinkedIn
-/flex/go       /flexible-finance/?utm_medium=linkedinmsg&utm_source=linkedin
-/flex/apply    /flexible-finance/?utm_medium=linkedinprofile&utm_source=linkedin
+/flex/go       /flexible-finance/?utm_medium=linkedinmsg&utm_source=linkedin&utm_content=jackstevens
+/flex/apply    /flexible-finance/?utm_medium=linkedinprofile&utm_source=linkedin&utm_content=jackstevens
 
 /rbf/go        /flexible-finance/?utm_medium=linkedinmsg&utm_source=linkedin&utm_content=lelagrzybowska
 /rbf/apply     /flexible-finance/?utm_medium=linkedinprofile&utm_source=linkedin&utm_content=lelagrzybowska
@@ -90,4 +90,4 @@
 /boost/go      /flexible-finance/?utm_medium=linkedinmsg&utm_source=linkedin&utm_content=jenniferaddo
 /boost/apply   /flexible-finance/?utm_medium=linkedinprofile&utm_source=linkedin&utm_content=jenniferaddo
 
-/growth        /flexible-finance/?utm_medium=linkedinprofile&utm_source=linkedin
+/growth        /flexible-finance/?utm_medium=linkedinprofile&utm_source=linkedin&utm_content=outfundpage
