@@ -104,13 +104,16 @@ const Footer = ({ lang }) => {
                 >
                   {links.successStories.text[lang]}
                 </Button>
-                <Button
+                {/* Remove comment lager */}
+                {/* <Button
                   to={links.partners.url}
                   variant="footerLink"
                   color="white"
                 >
                   {links.partners.text[lang]}
-                </Button>
+                </Button> */}
+                {/* Remove comment lager - END */}
+
                 {/* <Button to={links.b2b.url} variant="footerLink" color="white">
                   {links.b2b.text[lang]}
                 </Button> */}
