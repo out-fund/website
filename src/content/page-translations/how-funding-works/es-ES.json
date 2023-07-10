@@ -17,15 +17,19 @@
         "description": "Empieza a gastar tus fondos: El 100% del capital está disponible para ser utilizado una vez seleccionada nuestra oferta. Aumenta tu inversión en marketing y stock para impulsar tu crecimiento."
       },
       {
-        "title": "3. Devuelve el capital según tus condiciones",
+        "title": "3. Usar fondos",
+        "description": "El capital se acredita a su cuenta Outfund y usted decide cómo gastarlo.<br/> <ul> <li> <strong>Tarjeta virtual</strong> - Configure su tarjeta de marketing digital e invierta en sus anuncios.</li><li> <strong>Pagos de facturas</strong> - Cargue sus facturas en nuestra plataforma y financiaremos los gastos de su negocio, como inventario, logística y tarifas de agencia.</li><li> <strong>Recibe fondos en tu cuenta bancaria</strong> - Obtenga la flexibilidad para gastar en lo que necesita.</li></ul>"
+      },
+      {
+        "title": "4. Devuelve el capital según tus condiciones",
         "description": "Devuelve el capital con una pequeña parte de tus futuras ventas. Los reembolsos varían en función de tus ingresos. ¿Un mes flojo en ventas? Se reducen los pagos."
       },
       {
-        "title": "4. Escala más rapido",
+        "title": "5. Escala más rapido",
         "description": "Descubre nuestra red: te ponemos en contacto con socios de crecimiento, agencias especializadas y fondos de capital riesgo para que puedas alcanzar tus objetivos a largo plazo."
       },
       {
-        "title": "5. Recargas",
+        "title": "6. Recargas",
         "description": "Accede a capital de seguimiento: tu Growth Manager apoyará tus necesidades de capital en todo momento para que puedas seguir creciendo sin límites."
       }
     ]
