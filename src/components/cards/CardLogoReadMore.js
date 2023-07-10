@@ -21,7 +21,7 @@ const CardLogoReadMore = (props) => {
             {(langKey === "au" || langKey === "us") && (
               <span>{tag.text.replace("£", "$")}</span>
             )}
-            {langKey !== "es" && langKey !== "en" && <span>{tag.text}</span>}
+            {/* {langKey !== "es" && langKey !== "en" && <span>{tag.text}</span>} */}
             <VisuallyHidden>{company}</VisuallyHidden>
           </Tag>
         )}
