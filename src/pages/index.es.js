@@ -70,7 +70,7 @@ const HomePage = (props) => {
             list: [
               "Negocios digitales tipo SaaS, Ecommerce, Suscripciones, App Móvil, B2B",
               "6+ meses operando bajo una sociedad",
-              "+15k€ en ingresos mensuales",
+              "+30k€ en ingresos mensuales",
             ],
             btn: "Aplica ya",
           }}

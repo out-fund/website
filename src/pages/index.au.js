@@ -33,7 +33,7 @@ const HomePage = (props) => {
         <SectionInfoStrip
           data={[
             { up: "Apply in just", down: "5 minutes" },
-            { up: "Business loans from", down: "$10k - $10m" },
+            { up: "Business loans from", down: "$10k - $10M" },
             { up: "Offers as fast as", down: "24h" },
             { up: "Additional top-ups", down: "Continuous" },
           ]}
@@ -69,7 +69,7 @@ const HomePage = (props) => {
             list: [
               "An online model such as SaaS, Subscription, Ecommerce, Mobile App, B2B",
               "6+ months in business",
-              "$10k+ Monthly revenue",
+              "$50k+ Monthly revenue",
             ],
             btn: "Apply now",
           }}

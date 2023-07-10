@@ -132,7 +132,7 @@ const HowFundingWorks = (props) => {
                 title: "Who can apply",
                 list: [
                   "6+ months in business",
-                  "£10k+ monthly revenue",
+                  "£25k+ monthly revenue",
                   "Business registered in Europe, North America or Australia",
                 ],
                 btn: "Apply now",
