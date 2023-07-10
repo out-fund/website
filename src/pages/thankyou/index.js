@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import LangLayout from "../../layouts/en"
 
-import { Button, SeoComponent } from "../../components"
+import { SeoComponent } from "../../components"
 import T from "../../styles/new/typography"
 import { theme } from "../../styles/new/theme"
 

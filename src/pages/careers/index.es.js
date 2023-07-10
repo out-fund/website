@@ -13,7 +13,7 @@ import {
   SectionCoolPeople,
   SectionInOfficeRemote,
   SectionWeValue,
-  SectionOpenings,
+  // SectionOpenings,
   SeoComponent,
 } from "./../../components"
 

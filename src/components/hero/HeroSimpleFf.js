@@ -1,13 +1,13 @@
 import { Button } from "./../../components"
 import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
+// import { StaticImage } from "gatsby-plugin-image"
 import T from "./../../styles/new/typography"
 import parse from "html-react-parser"
 import styled from "styled-components"
 import { theme } from "./../../styles/new/theme"
 
 const HeroSimpleFf = ({ data }) => {
-  const { title, subtitle, description, btn } = data
+  const { title, subtitle, description } = data
   return (
     <HeroWrapper data-surface-type="Hero" data-surface-title={parse(title)}>
       <Title>{parse(title)}</Title>
@@ -39,7 +39,7 @@ const HeroSimpleFf = ({ data }) => {
 
 export default HeroSimpleFf
 
-const ImageWrapper = styled.div``
+// const ImageWrapper = styled.div``
 
 const Title = styled(T.H1)`
   max-width: 1270px;

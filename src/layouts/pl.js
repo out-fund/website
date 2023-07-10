@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import GlobalLayout from "./../layouts/GlobalLayout"
-import { Navbar, FooterSimple, NewsBar } from "./../components"
+import { Navbar, FooterSimple } from "./../components"
 import { SimpleNavbar } from "./../components/elements/Navbar"
 import Cookies from "js-cookie"
 

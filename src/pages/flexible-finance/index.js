@@ -15,10 +15,10 @@ import {
 
 import LangLayout from "./../../layouts/en-ff"
 import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
+// import { StaticImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 import styled from "styled-components"
-import { theme } from "./../../styles/new/theme"
+// import { theme } from "./../../styles/new/theme"
 
 const HowFundingWorks = (props) => {
   const {
@@ -195,32 +195,32 @@ export default HowFundingWorks
 const Wrapper = styled.div``
 const ContentWrapper = styled.div``
 
-const IWrapper = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  top: -8px;
+// const IWrapper = styled.div`
+//   position: relative;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   width: 100%;
+//   top: -8px;
 
-  ${theme.above.p.m} {
-    top: -16px;
-  }
-  ${theme.above.t.s} {
-    top: -24px;
-  }
-  ${theme.above.l.m} {
-    top: -56px;
-  }
-  ${theme.above.d.m} {
-    top: -80px;
-  }
-`
-const ImageWrapper = styled.div`
-  max-width: 670px;
-  border-radius: 10px;
-  overflow: hidden;
-`
+//   ${theme.above.p.m} {
+//     top: -16px;
+//   }
+//   ${theme.above.t.s} {
+//     top: -24px;
+//   }
+//   ${theme.above.l.m} {
+//     top: -56px;
+//   }
+//   ${theme.above.d.m} {
+//     top: -80px;
+//   }
+// `
+// const ImageWrapper = styled.div`
+//   max-width: 670px;
+//   border-radius: 10px;
+//   overflow: hidden;
+// `
 
 export const query = graphql`
   query HomePageFlexFunding {

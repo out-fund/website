@@ -17,15 +17,19 @@
         "description": "Start spending your funds: 100% of the capital is available to use after selecting our offer. Ramp your investment in your business to fuel your growth."
       },
       {
-        "title": "3. Repay on your terms",
+        "title": "3. Use funds",
+        "description": "Capital is credited to your Outfund account, and you decide how to spend. <br/> <ul> <li> <strong>Virtual card</strong> - Set up your digital marketing card and invest in your ads.</li><li> <strong>Invoice payments</strong> - Upload your invoices to our platform and we’ll fund your business expenses like inventory, logistics, and agency fees. </li><li> <strong>Receive funds in your bank account</strong> - Get the flexibility to spend on what you need.</li></ul>"
+      },
+      {
+        "title": "4. Repay on your terms",
         "description": "Pay back your balance with a small share of your new sales. Payments flex up and down in line with your incoming revenue. Quiet month? Lower repayments."
       },
       {
-        "title": "4. Scale faster",
+        "title": "5. Scale faster",
         "description": "Meet our network: we connect you with growth partners, specialist agencies and VCs so you can hit your long-term milestones."
       },
       {
-        "title": "5. Top up",
+        "title": "6. Top up",
         "description": "Access to additional capital: your dedicated Growth Manager supports your ongoing capital needs so you can keep scaling without limits."
       }
     ]

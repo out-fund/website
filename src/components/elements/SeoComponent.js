@@ -20,79 +20,79 @@ const SeoComponent = ({ title, description, image, article }) => {
   }
 
   let htmlLang = ""
-  let countryName = ""
+  // let countryName = ""
 
   if (langKey === "es") {
     htmlLang = "es-ES"
-    countryName = "España"
+    // countryName = "España"
   }
   if (langKey === "en") {
     htmlLang = "en-GB"
-    countryName = "UK"
+    // countryName = "UK"
   }
   if (langKey === "au") {
     htmlLang = "en-AU"
-    countryName = "Australia"
+    // countryName = "Australia"
   }
   if (langKey === "us") {
     htmlLang = "en-US"
-    countryName = "US"
+    // countryName = "US"
   }
   if (langKey === "de") {
     htmlLang = "de-DE"
-    countryName = "DE"
+    // countryName = "DE"
   }
   if (langKey === "cz") {
     htmlLang = "cs-CZ"
-    countryName = "CZ"
+    // countryName = "CZ"
   }
   if (langKey === "dk") {
     htmlLang = "dk-DK"
-    countryName = "DK"
+    // countryName = "DK"
   }
   if (langKey === "fr") {
     htmlLang = "fr-FR"
-    countryName = "FR"
+    // countryName = "FR"
   }
   if (langKey === "hu") {
     htmlLang = "hu-HU"
-    countryName = "HU"
+    // countryName = "HU"
   }
   if (langKey === "it") {
     htmlLang = "it-IT"
-    countryName = "IT"
+    // countryName = "IT"
   }
   if (langKey === "nl") {
     htmlLang = "nl-NL"
-    countryName = "NL"
+    // countryName = "NL"
   }
   if (langKey === "pl") {
     htmlLang = "pl-PL"
-    countryName = "PL"
+    // countryName = "PL"
   }
   if (langKey === "pt") {
     htmlLang = "pt-PT"
-    countryName = "PT"
+    // countryName = "PT"
   }
   if (langKey === "ro") {
     htmlLang = "ro-RO"
-    countryName = "RO"
+    // countryName = "RO"
   }
   if (langKey === "se") {
     htmlLang = "sv-SE"
-    countryName = "SE"
+    // countryName = "SE"
   }
   if (langKey === "nl-be") {
     htmlLang = "nl-BE"
-    countryName = "BE"
+    // countryName = "BE"
   }
   if (langKey === "fr-be") {
     htmlLang = "fr-BE"
-    countryName = "BE"
+    // countryName = "BE"
   }
   if (langKey === "lt") {
     htmlLang = "lt-LT"
-    countryName = "LT"
+    // countryName = "LT"
   }
 
   let hreflangPathname

@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
+import parse from "html-react-parser"
 
 import { Section, SectionHeader } from "./../../components"
 import { theme } from "./../../styles/new/theme"
@@ -40,7 +41,7 @@ const SectionSteps = ({ data }) => {
               {/* <Step2 /> */}
               <StaticImage
                 src="./../../images/how-funding-works/Step2.png"
-                alt="Step one to get funding"
+                alt="Step two to get funding"
               />
             </ImageWrapper>
             <TextWrapper>
@@ -48,25 +49,29 @@ const SectionSteps = ({ data }) => {
               <StepDescription>{data.steps[1].description}</StepDescription>
             </TextWrapper>
           </Step>
+
           <Step>
             <ImageWrapper>
               {/* <Step3 /> */}
               <StaticImage
                 src="./../../images/how-funding-works/Step3.png"
-                alt="Step one to get funding"
+                alt="Step three to get funding"
               />
             </ImageWrapper>
             <TextWrapper>
               <StepTitle>{data.steps[2].title}</StepTitle>
-              <StepDescription>{data.steps[2].description}</StepDescription>
+              <StepDescription>
+                {parse(data.steps[2].description)}
+              </StepDescription>
             </TextWrapper>
           </Step>
+
           <Step>
             <ImageWrapper>
               {/* <Step4 /> */}
               <StaticImage
                 src="./../../images/how-funding-works/Step4.png"
-                alt="Step one to get funding"
+                alt="Step four to get funding"
               />
             </ImageWrapper>
             <TextWrapper>
@@ -79,12 +84,25 @@ const SectionSteps = ({ data }) => {
               {/* <Step5 /> */}
               <StaticImage
                 src="./../../images/how-funding-works/Step5.png"
-                alt="Step one to get funding"
+                alt="Step five to get funding"
               />
             </ImageWrapper>
             <TextWrapper>
               <StepTitle>{data.steps[4].title}</StepTitle>
               <StepDescription>{data.steps[4].description}</StepDescription>
+            </TextWrapper>
+          </Step>
+          <Step>
+            <ImageWrapper>
+              {/* <Step6 /> */}
+              <StaticImage
+                src="./../../images/how-funding-works/Step6.png"
+                alt="Step one to get funding"
+              />
+            </ImageWrapper>
+            <TextWrapper>
+              <StepTitle>{data.steps[5].title}</StepTitle>
+              <StepDescription>{data.steps[5].description}</StepDescription>
             </TextWrapper>
           </Step>
         </ContentWrapper>
@@ -149,4 +167,9 @@ const StepTitle = styled(T.H3)`
   }
 `
 
-const StepDescription = styled(T.Body)``
+const StepDescription = styled(T.Body)`
+  li {
+    margin-left: 1.5rem;
+    list-style: disc;
+  }
+`
