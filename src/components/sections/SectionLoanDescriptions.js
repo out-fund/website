@@ -38,6 +38,56 @@ const SectionLoanDescriptions = ({ data }) => {
             <Description>{parse(data.fixed.description)}</Description>
           </LoanBox>
         </ContentWrapper>
+
+        <HeaderWrapper2>
+          <SectionHeader
+            title="Ways to use your funds"
+            description="Capital is credited to your Outfund account, and you decide how to spend."
+          />
+        </HeaderWrapper2>
+        <UseFundingWrapper>
+          <LoanBox>
+            <StaticImage
+              src="./../../images/funds-card.png"
+              alt="Revenue-based financing icon"
+              width={80}
+              height={80}
+              layout={"constrained"}
+            />
+            <Title>Virtual card</Title>
+            <Description>
+              Set up your digital marketing card and invest in your ads.
+            </Description>
+          </LoanBox>
+          <LoanBox>
+            <StaticImage
+              src="./../../images/funds-invoice.png"
+              alt="Fixed-term loans icon"
+              width={80}
+              height={80}
+              layout={"constrained"}
+            />
+            <Title>Invoices</Title>
+            <Description>
+              Upload your invoices to our platform and we’ll fund your business
+              expenses like inventory, logistics, and agency fees.
+            </Description>
+          </LoanBox>
+          <LoanBox>
+            <StaticImage
+              src="./../../images/funds-cash.png"
+              alt="Fixed-term loans icon"
+              width={80}
+              height={80}
+              layout={"constrained"}
+            />
+            <Title>Cash</Title>
+            <Description>
+              Receive funds in your bank account, and have the flexibility to
+              spend on what you need.
+            </Description>
+          </LoanBox>
+        </UseFundingWrapper>
       </Wrapper>
     </StyledSection>
   )
@@ -62,6 +112,13 @@ const HeaderWrapper = styled.div`
   max-width: 770px;
   margin: 0 auto;
   margin-bottom: 40px;
+`
+const HeaderWrapper2 = styled.div`
+  text-align: center;
+  max-width: 770px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  margin-top: 80px;
 `
 const Wrapper = styled.div`
   max-width: 1570px;
@@ -111,6 +168,19 @@ const ContentWrapper = styled.div`
   /* ${theme.above.l.m} {
     grid-template-columns: repeat(4, 1fr);
   } */
+`
+const UseFundingWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+  max-width: 1218px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  ${theme.above.t.l} {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 48px;
+  }
 `
 
 const LoanBox = styled.div`
