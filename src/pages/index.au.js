@@ -69,7 +69,7 @@ const HomePage = (props) => {
             list: [
               "An online model such as SaaS, Subscription, Ecommerce, Mobile App, B2B",
               "6+ months in business",
-              "$50k+ Monthly revenue",
+              "$50k+ monthly revenue",
             ],
             btn: "Apply now",
           }}

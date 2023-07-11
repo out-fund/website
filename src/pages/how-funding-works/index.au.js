@@ -22,7 +22,7 @@ const HowFundingWorks = (props) => {
   return (
     <LangLayout>
       <SeoComponent
-        title="How the funding works"
+        title="How our funding works"
         description="Outfund offers on-demand, non-dilutive funding. We combine the best of debt and equity finance, and avoid the worst of each."
       />
       <HeroSimple data={props.data.howFundingWorksJson.hero} />

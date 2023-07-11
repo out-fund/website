@@ -41,7 +41,7 @@ const SectionLoanDescriptions = ({ data }) => {
 
         <HeaderWrapper2>
           <SectionHeader
-            title="Ways to use your funds"
+            title="How to use your funds"
             description="Capital is credited to your Outfund account, and you decide how to spend."
           />
         </HeaderWrapper2>
