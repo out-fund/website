@@ -129,7 +129,7 @@ const HowFundingWorks = (props) => {
             />
             <SectionWhoCanApply
               data={{
-                title: "Who can apply",
+                title: "You're eligible to apply if you have:",
                 list: [
                   "6+ months in business",
                   "£25k+ monthly revenue",

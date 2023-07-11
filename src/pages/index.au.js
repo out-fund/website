@@ -65,9 +65,9 @@ const HomePage = (props) => {
         {/* <SectionWhoCanApply data={data.weInvesting} /> */}
         <SectionWhoCanApply
           data={{
-            title: "Who can apply",
+            title: "You're eligible to apply if you have:",
             list: [
-              "An online model such as SaaS, Subscription, Ecommerce, Mobile App, B2B",
+              "Revenue visible through an online payment processor or banking provider.",
               "6+ months in business",
               "$50k+ monthly revenue",
             ],

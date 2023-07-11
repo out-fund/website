@@ -18,7 +18,7 @@ const SectionWhoCanApply = (props) => {
           {/* <GatsbyImage image={getImage(image.src)} alt={image.alt} /> */}
           <StaticImage
             src="./../../images/WhoCanApply.png"
-            alt="Who can apply"
+            alt="You're eligible to apply if you have:"
             // width={80}
             // height={80}
             layout={"constrained"}
