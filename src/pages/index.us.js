@@ -14,6 +14,7 @@ import {
   SectionRegulated,
   HeroHomepage,
   SeoComponent,
+  TrustpilotSwiper,
 } from "./../components"
 
 const HomePage = (props) => {
@@ -26,6 +27,7 @@ const HomePage = (props) => {
       <SeoComponent title={data.seo.title} description={data.seo.description} />
       <HeroHomepage data={data.hero} />
       <Main>
+        <TrustpilotSwiper />
         <SectionWeFunded data={data.weFunded} />
         <SectionWeAreInvesting data={data.weInvesting} />
         <SectionSupercharging data={data.startSupercharging} />

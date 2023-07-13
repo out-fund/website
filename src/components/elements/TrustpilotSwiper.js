@@ -47,7 +47,7 @@ const data = [
     title: "The entire experience with Outfund has",
     review:
       "The entire experience with Outfund has been great. The sales people have all the answers and the system is easy to use and understand. We've got the funding we needed, when we needed it and on a good repayment that worked for us - and it was cheaper than our previous lender!",
-    name: "Wissam Chouceir",
+    name: "Michal Szlas",
     date: "30 May 2023",
     url: "https://uk.trustpilot.com/reviews/64762498eac8df8988eda875",
   },
