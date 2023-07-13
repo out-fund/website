@@ -84,8 +84,12 @@ const SectionLoanDescriptions = ({ data }) => {
             <Title>Cash</Title>
             <Description>
               Receive funds in your bank account, and have the flexibility to
-              spend on what you need.
+              spend on what you need *
             </Description>
+            <Small>
+              *Availability is based on your circumstances, and it is subject to
+              review
+            </Small>
           </LoanBox>
         </UseFundingWrapper>
       </Wrapper>
@@ -147,6 +151,11 @@ const Title = styled(T.H3)`
 `
 
 const Description = styled(T.Body)``
+const Small = styled(T.Body)`
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1.5;
+`
 
 const ContentWrapper = styled.div`
   display: grid;

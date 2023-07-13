@@ -60,7 +60,7 @@ const SectionSteps = ({ data }) => {
             </ImageWrapper>
             <TextWrapper>
               <StepTitle>{data.steps[2].title}</StepTitle>
-              <StepDescription>
+              <StepDescription as="div">
                 {parse(data.steps[2].description)}
               </StepDescription>
             </TextWrapper>
@@ -171,5 +171,8 @@ const StepDescription = styled(T.Body)`
   li {
     margin-left: 1.5rem;
     list-style: disc;
+  }
+  span {
+    font-size: 12px;
   }
 `
