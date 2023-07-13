@@ -212,7 +212,7 @@ const Review = styled.a`
   }
   .review {
     display: -webkit-box !important;
-    height: 128px;
+    height: 48px;
     margin-top: 8px;
     overflow: hidden;
     color: #191919;
@@ -221,7 +221,7 @@ const Review = styled.a`
     line-height: 16px;
     white-space: normal;
     text-overflow: ellipsis;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
   }
   .name-date {
