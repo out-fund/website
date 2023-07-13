@@ -24,7 +24,7 @@ const CalculatorV2 = ({ data }) => {
   }
   const handleTermChange = (event) => {
     setRequestedTerm(event.target.value)
-    console.log("requestedTerm", termLengths[requestedTerm])
+    // console.log("requestedTerm", termLengths[requestedTerm])
   }
 
   // const handleButton = () => {
@@ -38,14 +38,15 @@ const CalculatorV2 = ({ data }) => {
   return (
     <Wrapper data-surface-type="calculator" data-surface-title="calc2ff">
       <TextWrapper>
-        <Title>{data.title}</Title>
+        {/* <Title>{data.title}</Title> */}
+        <Title>How much do you need?</Title>
         <Selected as="div">{selectedLoanAmount}</Selected>
       </TextWrapper>
       <FormWrapper>
         <RangeWrapper>
           <div className="top">
             <div>{data.range[0]}</div>
-            <div>{data.range[10]}</div>
+            <div>{data.range[8]}</div>
           </div>
           <InputWrapper>
             <input
@@ -78,9 +79,8 @@ const CalculatorV2 = ({ data }) => {
             />
           </InputWrapper>
         </RangeWrapper>
-
         <Calculated as="div">
-          Flat fee to pay <span>{fees[requestedTerm]}%</span>
+          Flat fee to pay *<span>{fees[requestedTerm]}%</span>
         </Calculated>
         <Calculated as="div">
           Total repayable
@@ -88,7 +88,10 @@ const CalculatorV2 = ({ data }) => {
             £{totalPayable.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")}
           </span>
         </Calculated>
-
+        <Small>
+          * This calculator is only an example, rate for your business will vary
+          based on your circumstances and is subject to change.
+        </Small>
         <BtnWrapper>
           <Button
             href={`https://client.out.fund/signup?utm_term=term${selectedTerm}amount${selectedLoanAmountClean}`}
@@ -100,7 +103,7 @@ const CalculatorV2 = ({ data }) => {
             Apply for {selectedLoanAmount}
           </Button>
           <div className="note">
-            *Applying will not affect your credit score
+            Applying will not affect your credit score.
           </div>
         </BtnWrapper>
       </FormWrapper>
@@ -266,6 +269,10 @@ const RangeWrapper = styled.div`
 // `
 
 const TextWrapper = styled.div``
+const Small = styled.div`
+  font-size: 12px;
+  line-height: 1.5;
+`
 
 const Wrapper = styled.div`
   background-color: ${theme.color.background.emphesized};
