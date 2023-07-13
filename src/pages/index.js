@@ -18,6 +18,7 @@ import {
   SectionWhoCanApply,
   SectionBenefits,
   SectionRepay,
+  TrustpilotSwiper,
 } from "./../components"
 
 const HomePage = (props) => {
@@ -30,6 +31,7 @@ const HomePage = (props) => {
       <SeoComponent title={data.seo.title} description={data.seo.description} />
       <HeroHomepage data={data.hero} />
       <Main>
+        <TrustpilotSwiper />
         <SectionInfoStrip
           data={[
             { up: "Apply in just", down: "5 minutes" },

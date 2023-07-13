@@ -71,6 +71,7 @@ import Switch from "./elements/Swtich"
 import ThreeColumnIcons from "./sections/ThreeColumnIcons"
 import CalculatorV3 from "./elements/CalculatorV3"
 import SectionComparisonDolar from "./sections/SectionComparisonDolar"
+import TrustpilotSwiper from "./elements/TrustpilotSwiper"
 
 // --------------------
 
@@ -148,4 +149,5 @@ export {
   SectionRepayFf,
   CalculatorV3,
   SectionComparisonDolar,
+  TrustpilotSwiper,
 }
