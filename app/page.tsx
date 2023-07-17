@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "next/link"
 
 const HomePage = () => {
   return (
@@ -16,7 +16,7 @@ const HomePage = () => {
       </nav>
       <main>HomePage</main>
     </>
-  );
-};
+  )
+}
 
-export default HomePage;
+export default HomePage

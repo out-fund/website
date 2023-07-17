@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "next/link"
 
 const ChooseYourCountryPage = () => {
   return (
@@ -10,7 +10,7 @@ const ChooseYourCountryPage = () => {
         </li>
       </ul>
     </main>
-  );
-};
+  )
+}
 
-export default ChooseYourCountryPage;
+export default ChooseYourCountryPage

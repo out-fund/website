@@ -1,9 +1,9 @@
 const ChooseYourCountryLayout = ({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) => {
-  return <div>{children}</div>;
-};
+  return <div>{children}</div>
+}
 
-export default ChooseYourCountryLayout;
+export default ChooseYourCountryLayout
