@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   description: "Funding for your business",
 }
 
-const EnGbLayout = ({ children }: { children: React.ReactNode }) => {
+const EnUsLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="en-gb">
+    <html lang="en-us">
       <body>{children}</body>
     </html>
   )
 }
 
-export default EnGbLayout
+export default EnUsLayout

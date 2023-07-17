@@ -5,7 +5,15 @@ const HomePage = () => {
     <>
       <nav>
         <Link href="/choose-country/">Choose Your Country</Link>
-        <Link href={"/about-us/"}>About Us</Link>
+        <Link href="/en-us/about-us/">About Us</Link>
+        {/* <Link
+          href={{
+            pathname: "/en-us/about-us/",
+            query: { name: "test" },
+          }}
+        >
+          About us
+        </Link> */}
       </nav>
       <main>HomePage</main>
     </>
