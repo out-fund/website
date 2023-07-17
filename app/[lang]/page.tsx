@@ -13,25 +13,18 @@ const HomePage = ({ params: { lang } }: { params: { lang: Locale } }) => {
       <button>Check eligibility</button>
       <p>It won’t affect your credit score</p>
 
-      <LocaleSwitcher />
+      {/* <LocaleSwitcher /> */}
 
       <p>Current locale: {lang}</p>
       <nav>
         <Link href="/choose-country/">Choose Your Country</Link>
+        <Link href="/about-us/">About us</Link>
         <Link
           href={{
             pathname: "/about-us/",
-            query: { name: "test" },
           }}
         >
-          About Us
-        </Link>
-        <Link
-          href={{
-            pathname: "/choose-country/",
-          }}
-        >
-          CC
+          About Us pathname
         </Link>
       </nav>
     </div>
