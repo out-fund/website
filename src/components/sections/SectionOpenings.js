@@ -33,14 +33,14 @@ const SectionOpenings = ({ data }) => {
                 </Opening>
               ))}
             </Grid>
-            <BtnWrapper>
+            {/* <BtnWrapper>
               <Button href={btn.url} variant="primary" target="_blank">
                 {btn.text}
               </Button>
-            </BtnWrapper>
+            </BtnWrapper> */}
           </OpeningsWrapper>
 
-          <CantFindWrapper>
+          {/* <CantFindWrapper>
             <PositionTitle as="h5">{openApplication.title}</PositionTitle>
             <OpenApplication>
               {openApplication.description}{" "}
@@ -50,7 +50,7 @@ const SectionOpenings = ({ data }) => {
                 {openApplication.email}
               </a>
             </OpenApplication>
-          </CantFindWrapper>
+          </CantFindWrapper> */}
         </ContentWrapper>
       </Wrapper>
     </Section>
