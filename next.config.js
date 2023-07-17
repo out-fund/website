@@ -4,3 +4,5 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+
+// locales: ["en-GB", "en-US", "es-ES", "en-AU", "en-IE", "en-DE", "en-NL"],
