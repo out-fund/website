@@ -27,11 +27,11 @@ const SectionInOfficeRemote = ({ data, officeData }) => {
               <ThreeColumnIcons blocks={blocks} />
             </GridWrapper>
           </TextWrapper>
-          <Offices
+          {/* <Offices
             showOffices
             offices={officeData.offices}
             image={officeData.image}
-          />
+          /> */}
           {/* <BtnWrapper>
             <Button to={data.btn.url} variant="secondary">
               {data.btn.text}
