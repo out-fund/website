@@ -99,3 +99,10 @@
 /launch/apply  /flexible-finance/?utm_medium=linkedinprofile&utm_source=linkedin&utm_content=olgakamen
 
 /link/go       /flexible-finance/?utm_medium=whatsapp&utm_source=intercom&utm_content=createdfollowup
+
+
+/lm/as/apply   /flexible-finance/?utm_medium=linkedinmsg&utm_source=linkedin&utm_content=andysmith
+/lp/as/apply   /flexible-finance/?utm_medium=linkedinprofile&utm_source=linkedin&utm_content=andysmith
+
+/lm/sj/apply   /flexible-finance/?utm_medium=linkedinmsg&utm_source=linkedin&utm_content=sidj
+/lp/sj/apply   /flexible-finance/?utm_medium=linkedinprofile&utm_source=linkedin&utm_content=sidj
