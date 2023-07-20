@@ -131,7 +131,7 @@ const HowFundingWorks = (props) => {
               data={{
                 title: "You're eligible to apply if you have:",
                 list: [
-                  "6+ months in business",
+                  "12+ months in business",
                   "£25k+ monthly revenue",
                   "Business registered in Europe, North America or Australia",
                 ],

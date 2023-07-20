@@ -69,7 +69,7 @@ const HomePage = (props) => {
             title: "¿Quién puede aplicar?",
             list: [
               "Negocios digitales tipo SaaS, Ecommerce, Suscripciones, App Móvil, B2B",
-              "6+ meses operando bajo una sociedad",
+              "12+ meses operando bajo una sociedad",
               "+30k€ en ingresos mensuales",
             ],
             btn: "Aplica ya",

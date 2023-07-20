@@ -70,7 +70,7 @@ const HomePage = (props) => {
             title: "You're eligible to apply if you have:",
             list: [
               "Revenue visible through an online payment processor or banking provider.",
-              "6+ months in business",
+              "12+ months in business",
               "£25k+ monthly revenue",
             ],
             btn: "Apply now",
