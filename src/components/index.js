@@ -72,6 +72,8 @@ import ThreeColumnIcons from "./sections/ThreeColumnIcons"
 import CalculatorV3 from "./elements/CalculatorV3"
 import SectionComparisonDolar from "./sections/SectionComparisonDolar"
 import TrustpilotSwiper from "./elements/TrustpilotSwiper"
+import SectionTestimonials from "./sections/SectionTestimonials"
+import Testimonial from "./elements/Testimonial"
 
 // --------------------
 
@@ -150,4 +152,6 @@ export {
   CalculatorV3,
   SectionComparisonDolar,
   TrustpilotSwiper,
+  SectionTestimonials,
+  Testimonial,
 }

@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 import LangLayout from "./../layouts/au"
 import {
   Main,
@@ -19,6 +20,8 @@ import {
   SectionBenefits,
   SectionRepay,
   TrustpilotSwiper,
+  SectionTestimonials,
+  Testimonial,
 } from "./../components"
 
 const HomePage = (props) => {
@@ -110,10 +113,91 @@ const HomePage = (props) => {
           }}
         />
 
-        <SectionWeFunded data={data.weFunded} />
-        {/* <SectionWeAreInvesting data={data.weInvesting} /> */}
-        <SectionSupercharging data={data.startSupercharging} />
+        <SectionTestimonials title="What other say" description="">
+          <Testimonial
+            link="https://bhumi.com.au/"
+            logo={
+              <StaticImage
+                src="./../images/testimonials/bhumi.png"
+                alt="bhumi logo"
+                height={40}
+              />
+            }
+            quote="It was refreshing to work with the Outfund team who intimately understood the intricacies of our needs and were practical in their assessment of our growing business"
+            name="Dushyant Baravkar"
+            profile={
+              <StaticImage
+                src="./../images/testimonials/dushyant-baravkar.png"
+                alt="dushyant-baravkar profile photo"
+                width={40}
+                height={40}
+              />
+            }
+          />
+          <Testimonial
+            link="https://www.mermadehair.com.au/"
+            logo={
+              <StaticImage
+                src="./../images/testimonials/mermade.png"
+                alt="mermade logo"
+                height={40}
+              />
+            }
+            quote="Outfund provided positive and supportive feedback as we worked to grow our inventory."
+            name="Steve Simich"
+            profile={
+              <StaticImage
+                src="./../images/testimonials/steve-simich.png"
+                alt="steve-simich profile photo"
+                width={40}
+                height={40}
+              />
+            }
+          />
+          <Testimonial
+            link="https://www.drnks.com/"
+            logo={
+              <StaticImage
+                src="./../images/testimonials/drnks.png"
+                alt="drnks logo"
+                height={40}
+              />
+            }
+            quote="Outfund massively impacted our growth. Rather than relying on cashflow to grow, we were able to access funds immediately."
+            name="Joel Amos"
+            profile={
+              <StaticImage
+                src="./../images/testimonials/joel-amos.png"
+                alt="joel-amos profile photo"
+                width={40}
+                height={40}
+              />
+            }
+          />
+          <Testimonial
+            link="https://www.goodpairdays.com/au/"
+            logo={
+              <StaticImage
+                src="./../images/testimonials/good-pair-days.png"
+                alt="drnks logo"
+                height={40}
+              />
+            }
+            quote="Outfund was great from start to finish. They provided us with the flexibility to invest in growth, making it a truly valuable partnership."
+            name="Tom Walenkamp"
+            profile={
+              <StaticImage
+                src="./../images/testimonials/tom-walenkamp.png"
+                alt="joel-amos profile photo"
+                width={40}
+                height={40}
+              />
+            }
+          />
+        </SectionTestimonials>
         <SectionFaq data={props.data.homepageJson.faq} />
+        <SectionWeFunded data={data.weFunded} />
+        <SectionSupercharging data={data.startSupercharging} />
         <SectionAboutUs data={props.data.homepageJson.aboutUs} />
         <SectionRegulated data={props.data.trustJson} />
       </Main>
