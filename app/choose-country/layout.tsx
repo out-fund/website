@@ -3,7 +3,11 @@ const ChooseYourCountryLayout = ({
 }: {
   children: React.ReactNode
 }) => {
-  return <div>{children}</div>
+  return (
+    <html lang="en-GB">
+      <body>{children}</body>
+    </html>
+  )
 }
 
 export default ChooseYourCountryLayout
