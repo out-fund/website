@@ -113,7 +113,7 @@ const HomePage = (props) => {
           }}
         />
 
-        <SectionTestimonials title="What other say" description="">
+        <SectionTestimonials title="What our Aussie customers say">
           <Testimonial
             link="https://bhumi.com.au/"
             logo={
