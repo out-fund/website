@@ -141,6 +141,7 @@ dist
 
 # Gatsby stuff
 public
+src/
 
 # Enviroment Variables
 .env.*

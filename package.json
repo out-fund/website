@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "clean": "rm -rf .next && rm -rf node_modules && rm -rf .cache && rm -rf public"
+    "clean": "rm -rf .next && rm -rf node_modules && rm -rf .cache && rm -rf public && rm -rf src"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.4.0",
