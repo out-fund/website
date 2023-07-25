@@ -7,6 +7,7 @@ import Negotiator from "negotiator"
 const findBestMatchingLocale = (request: NextRequest): string | undefined => {
   // Negotiator expects plain object so we need to transform headers
   const negotiatorHeaders: Record<string, string> = {}
+  // @ts-ignore complaining about value and key types
   request.headers.forEach((value, key) => (negotiatorHeaders[key] = value))
 
   // @ts-ignore locales are readonly

@@ -5,8 +5,9 @@ export const locales = [
   "es-es",
   "en-au",
   "en-ie",
-  "en-de",
   "de-de",
+  "en-de",
+  "nl-nl",
   "en-nl",
 ] as const
 export type ValidLocale = (typeof locales)[number]
