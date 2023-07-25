@@ -6,12 +6,14 @@ export const locales = [
   "en-au",
   "en-ie",
   "en-de",
+  "de-de",
   "en-nl",
 ] as const
 export type ValidLocale = (typeof locales)[number]
 
-export const getLocale = (pathname: string) => {
-  const locale = pathname.replaceAll("/", "")
+export const getCurrentLocale = (pathname: string) => {
+  // const locale = pathname.replaceAll("/", "")
+  const locale = pathname.split("/")[1]
   return locale
 }
 
