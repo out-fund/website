@@ -47,18 +47,18 @@ export function middleware(request: NextRequest) {
     const localesList: string[] = locales
     return !localesList.includes(curentLocale)
   }
-  console.log("pathnameIsMissingValidLocale", pathnameIsMissingValidLocale())
+  // console.log("pathnameIsMissingValidLocale", pathnameIsMissingValidLocale())
 
   if (pathnameIsMissingValidLocale()) {
     const bestestMatchingLocale = findBestMatchingLocale(request)
 
-    console.log("bestestMatchingLocale", bestestMatchingLocale)
+    // console.log("bestestMatchingLocale", bestestMatchingLocale)
     if (bestestMatchingLocale !== defaultLocale) {
       return NextResponse.redirect(
         new URL(`/${bestestMatchingLocale}${pathname}`, request.url)
       )
     } else {
-      console.log("else")
+      // console.log("else")
       return NextResponse.rewrite(
         new URL(`/${defaultLocale}${pathname}`, request.url)
       )
