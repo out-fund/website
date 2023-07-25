@@ -1,13 +1,27 @@
 import Link from "next/link"
 
-const HomePage = () => {
+// export default function HomePage({
+//   params,
+// }: {
+//   params: { lang: string; country: string }
+// }) {
+//   return <h1>{JSON.stringify(params)}</h1>
+// }
+
+const HomePage = ({
+  params,
+}: {
+  params: { lang: string; country: string }
+}) => {
   return (
     <>
       <nav>
         <Link href="/choose-country/">Choose Your Country</Link>
         <Link href={"/about-us/"}>About Us</Link>
       </nav>
-      <main>HomePage</main>
+      <main>
+        <h1>{JSON.stringify(params)}</h1>
+      </main>
     </>
   )
 }

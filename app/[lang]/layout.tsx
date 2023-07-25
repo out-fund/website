@@ -1,8 +1,8 @@
 import { Metadata } from "next"
-import { i18n } from "@/i18n-config"
+import { locales } from "@/i18n-config"
 
 export async function generateStaticParams() {
-  return i18n.locales.map((locale) => ({ lang: locale }))
+  return locales.map((locale) => ({ lang: `${locale}` }))
 }
 
 export const metadata: Metadata = {
