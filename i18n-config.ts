@@ -13,14 +13,61 @@ export const locales = [
 export type ValidLocale = (typeof locales)[number]
 
 export const getCurrentLocale = (pathname: string) => {
-  // const locale = pathname.replaceAll("/", "")
   const locale = pathname.split("/")[1]
   return locale
 }
 
-// export const i18n = {
-//   defaultLocale: "en-gb",
-//   locales: ["en-gb", "en-us", "es-es", "en-au", "en-ie", "en-de", "en-nl"],
-// } as const
+const translations = {
+  "en-gb": () =>
+    import("./translations/en-GB.json").then((module) => module.default),
+  "es-es": () =>
+    import("./translations/es-es.json").then((module) => module.default),
+  "de-de": () =>
+    import("./translations/de-de.json").then((module) => module.default),
+} as const
 
-// export type locale = (typeof i18n)["locales"][number]
+export const getTranslation = async (locale: ValidLocale) => {
+  // if translation exists, send it
+  // @ts-ignore locales are readonly
+  if (translations[locale]) {
+    // @ts-ignore locales are readonly
+    return await translations[locale]()
+  }
+  // if translation doesn't exist, send default
+  return await translations[defaultLocale]()
+}
+
+export const getTranslationObject = async (locale: ValidLocale) => {
+  const dictionary = await getTranslation(locale)
+  // console.log("dictionary", dictionary)
+  return (key: string, params?: { [key: string]: string | number }) => {
+    let translation = key
+      .split(".")
+      .reduce((obj, key) => obj && obj[key], dictionary)
+    if (!translation) {
+      return key
+    }
+    if (params && Object.entries(params).length) {
+      Object.entries(params).forEach(([key, value]) => {
+        translation = translation!.replace(`{{ ${key} }}`, String(value))
+      })
+    }
+    return translation
+  }
+}
+
+// export const getHtmlLang = (locale: ValidLocale) => {
+//   console.log(locale)
+//   // const htmlLang =
+//   //   locale.split("-")[0] + "-" + locale.split("-")[1].toUpperCase()
+//   // let htmlLang = params.locale
+//   // if (params.locale.split("-")[1]) {
+//   //   htmlLang =
+//   //     params.locale.split("-")[0] +
+//   //     "-" +
+//   //     params.locale.split("-")[1].toUpperCase()
+//   // } else {
+//   //   htmlLang = "en-GB"
+//   // }
+//   return "test"
+// }

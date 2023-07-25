@@ -23,8 +23,20 @@ const findBestMatchingLocale = (request: NextRequest): string | undefined => {
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
+
+  // `/_next/` and `/api/` are ignored by the watcher, but we need to ignore files in `public` manually.
+  // If you have one
+  if (
+    [
+      "manifest.json",
+      "favicon.ico",
+      // Your other files in `public`
+    ].includes(pathname)
+  )
+    return
+
   const curentLocale = getCurrentLocale(pathname)
-  // console.log("----------------------------------")
+  console.log("----------------------------------")
   // console.log("request.url", request.url)
   // console.log("pathname", request.nextUrl.pathname)
   // console.log("curentLocale", curentLocale)
@@ -66,6 +78,22 @@ export function middleware(request: NextRequest) {
     }
   }
 }
+
+// export const getHtmlLang = (locale: ValidLocale) => {
+//   console.log(locale)
+//   // const htmlLang =
+//   //   locale.split("-")[0] + "-" + locale.split("-")[1].toUpperCase()
+//   // let htmlLang = params.locale
+//   // if (params.locale.split("-")[1]) {
+//   //   htmlLang =
+//   //     params.locale.split("-")[0] +
+//   //     "-" +
+//   //     params.locale.split("-")[1].toUpperCase()
+//   // } else {
+//   //   htmlLang = "en-GB"
+//   // }
+//   return "test"
+// }
 
 export const config = {
   // Matcher ignoring

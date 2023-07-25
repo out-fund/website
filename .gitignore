@@ -140,7 +140,6 @@ dist
 .tern-port
 
 # Gatsby stuff
-public
 src/
 
 # Enviroment Variables
