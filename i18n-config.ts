@@ -55,19 +55,3 @@ export const getTranslationObject = async (locale: ValidLocale) => {
     return translation
   }
 }
-
-// export const getHtmlLang = (locale: ValidLocale) => {
-//   console.log(locale)
-//   // const htmlLang =
-//   //   locale.split("-")[0] + "-" + locale.split("-")[1].toUpperCase()
-//   // let htmlLang = params.locale
-//   // if (params.locale.split("-")[1]) {
-//   //   htmlLang =
-//   //     params.locale.split("-")[0] +
-//   //     "-" +
-//   //     params.locale.split("-")[1].toUpperCase()
-//   // } else {
-//   //   htmlLang = "en-GB"
-//   // }
-//   return "test"
-// }

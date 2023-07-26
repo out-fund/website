@@ -30,6 +30,8 @@ export function middleware(request: NextRequest) {
     [
       "manifest.json",
       "favicon.ico",
+      "sitemap.xml", // not sure if this is needed
+      "robots.txt", // not sure if this is needed
       // Your other files in `public`
     ].includes(pathname)
   )
@@ -79,26 +81,14 @@ export function middleware(request: NextRequest) {
   }
 }
 
-// export const getHtmlLang = (locale: ValidLocale) => {
-//   console.log(locale)
-//   // const htmlLang =
-//   //   locale.split("-")[0] + "-" + locale.split("-")[1].toUpperCase()
-//   // let htmlLang = params.locale
-//   // if (params.locale.split("-")[1]) {
-//   //   htmlLang =
-//   //     params.locale.split("-")[0] +
-//   //     "-" +
-//   //     params.locale.split("-")[1].toUpperCase()
-//   // } else {
-//   //   htmlLang = "en-GB"
-//   // }
-//   return "test"
-// }
-
 export const config = {
   // Matcher ignoring
   // `/_next/*`
   // `/api/*`
   // `/choose-country/`
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico|choose-country).*)"],
+  // `/sitemap.xml` not sure why is this needed, but the page does not show if not added
+  // `robots.txt`
+  matcher: [
+    "/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|choose-country).*)",
+  ],
 }

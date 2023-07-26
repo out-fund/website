@@ -1,4 +1,10 @@
+import { Metadata } from "next"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "Contact us",
+  description: "Funding for your business",
+}
 
 const ContactUsPage = () => {
   return (
