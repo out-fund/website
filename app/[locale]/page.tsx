@@ -1,12 +1,23 @@
-import Link from "next/link"
-import { ValidLocale, getTranslationObject, locales } from "@/i18n-config"
-import { Metadata } from "next"
+import {
+  ValidLocale,
+  getTranslationObject,
+  locales,
+  getAlternates,
+} from "@/i18n-config"
+import { Metadata, ResolvingMetadata } from "next"
 
-export const metadata: Metadata = {
-  title: {
-    absolute: "Homepage | Outfund",
-  },
-  description: "Funding for your business",
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string }
+}): Promise<Metadata> {
+  return {
+    title: {
+      absolute: "Homepage | Outfund",
+    },
+    description: "Funding for your business",
+    alternates: getAlternates("contact-us", params.locale),
+  }
 }
 
 export async function generateStaticParams() {

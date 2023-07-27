@@ -1,9 +1,17 @@
+import { getAlternates } from "@/i18n-config"
 import { Metadata } from "next"
 import Link from "next/link"
 
-export const metadata: Metadata = {
-  title: "Contact us",
-  description: "Funding for your business",
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string }
+}): Promise<Metadata> {
+  return {
+    title: "Contact Us",
+    description: "Funding for your business",
+    alternates: getAlternates("contact-us", params.locale),
+  }
 }
 
 const ContactUsPage = () => {

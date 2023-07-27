@@ -1,6 +1,6 @@
 import LocaleSwitcher from "@/components/LocaleSwitcher"
 
-const ChooseYourCountryPage = () => {
+const CountrySelectorPage = () => {
   return (
     <main>
       <h1>Choose Your Country</h1>
@@ -9,4 +9,4 @@ const ChooseYourCountryPage = () => {
   )
 }
 
-export default ChooseYourCountryPage
+export default CountrySelectorPage

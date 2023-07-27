@@ -55,3 +55,24 @@ export const getTranslationObject = async (locale: ValidLocale) => {
     return translation
   }
 }
+
+export const getHtmlLang = (locale: string) => {
+  return locale.split("-")[0] + "-" + locale.split("-")[1].toUpperCase()
+}
+
+export const getAlternates = (pageUrl: string, locale: string) => {
+  const languages: { [key: string]: string } = {}
+
+  locales.forEach((loc) => {
+    if (loc === "en-gb") {
+      languages[getHtmlLang(loc)] = `/${pageUrl}/`
+    } else {
+      languages[getHtmlLang(loc)] = `/${loc}/${pageUrl}/`
+    }
+  })
+
+  return {
+    canonical: `/${locale}/${pageUrl}/`,
+    languages: languages,
+  }
+}

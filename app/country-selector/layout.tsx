@@ -1,8 +1,4 @@
-const ChooseYourCountryLayout = ({
-  children,
-}: {
-  children: React.ReactNode
-}) => {
+const CountrySelectorLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     // has to be en-GB as that the default locale
     <html lang="en-GB">
@@ -14,4 +10,4 @@ const ChooseYourCountryLayout = ({
   )
 }
 
-export default ChooseYourCountryLayout
+export default CountrySelectorLayout
