@@ -19,7 +19,7 @@ export const getCurrentLocale = (pathname: string) => {
 
 const translations = {
   "en-gb": () =>
-    import("./translations/en-GB.json").then((module) => module.default),
+    import("./translations/en-gb.json").then((module) => module.default),
   "es-es": () =>
     import("./translations/es-es.json").then((module) => module.default),
   "de-de": () =>
