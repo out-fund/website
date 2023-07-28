@@ -40,6 +40,7 @@ export function middleware(request: NextRequest) {
   const curentLocale = getCurrentLocale(pathname)
   // console.log("----------------------------------")
   // console.log("request.url", request.url)
+  // console.log("request.nextUrl", request.nextUrl)
   // console.log("pathname", request.nextUrl.pathname)
   // console.log("curentLocale", curentLocale)
   // console.log("findBestMatchingLocale", findBestMatchingLocale(request))
@@ -48,7 +49,7 @@ export function middleware(request: NextRequest) {
 
   if (curentLocale === defaultLocale) {
     return NextResponse.redirect(
-      new URL(pathname.replace(`/${curentLocale}/`, ""), request.url)
+      new URL(pathname.replace(`/${curentLocale}`, ""), request.url)
     )
   }
 

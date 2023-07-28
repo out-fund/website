@@ -7,9 +7,10 @@ import {
 import { Metadata } from "next"
 
 export async function generateStaticParams() {
-  return locales.map((locale) =>
-    locale === "en-gb" ? { locale: `/` } : { locale: `${locale}` }
-  )
+  // return locales.map((locale) =>
+  //   locale === "en-gb" ? { locale: `en-gb` } : { locale: `${locale}` }
+  // )
+  return locales.map((locale) => ({ locale }))
 }
 
 export async function generateMetadata({

@@ -10,13 +10,14 @@ export const metadata: Metadata = {
   },
 }
 
-const EnGbLayout = ({
+const GlobalLayout = ({
   children,
   params,
 }: {
   children: React.ReactNode
   params: { locale: string }
 }) => {
+  // console.log("GlobalLayout", params)
   return (
     <html lang={getHtmlLang(params.locale)}>
       <body>
@@ -41,4 +42,4 @@ const EnGbLayout = ({
   )
 }
 
-export default EnGbLayout
+export default GlobalLayout
