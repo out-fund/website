@@ -57,7 +57,9 @@ export const getTranslationObject = async (locale: ValidLocale) => {
 }
 
 export const getHtmlLang = (locale: string) => {
-  return locale.split("-")[0] + "-" + locale.split("-")[1].toUpperCase()
+  return locale.split("-")
+    ? "en-GB"
+    : locale.split("-")[0] + "-" + locale.split("-")[1].toUpperCase()
 }
 
 export const getHref = (currentLocale: string, page: string) => {
