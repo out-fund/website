@@ -68,11 +68,6 @@ export function middleware(request: NextRequest) {
       return NextResponse.redirect(
         new URL(`/${bestestMatchingLocale}${pathname}`, request.url)
       )
-    } else {
-      // console.log("else")
-      return NextResponse.rewrite(
-        new URL(`/${defaultLocale}${pathname}`, request.url)
-      )
     }
   }
 }
