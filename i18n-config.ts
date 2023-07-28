@@ -58,9 +58,10 @@ export const getTranslationObject = async (locale: ValidLocale) => {
 }
 
 export const getHtmlLang = (locale: string) => {
-  return locale.split("-")
-    ? "en-GB"
-    : locale.split("-")[0] + "-" + locale.split("-")[1].toUpperCase()
+  // console.log("getHtmlLang ", locale.split("-")[0], locale.split("-")[1])
+  return locale.split("-")[1]
+    ? locale.split("-")[0] + "-" + locale.split("-")[1].toUpperCase()
+    : "en-GB"
 }
 
 export const getHref = (currentLocale: string, page: string) => {
@@ -76,7 +77,7 @@ export const getAlternates = (pageUrl: string, locale: string) => {
 
   locales.forEach((loc) => {
     if (loc === "en-gb") {
-      languages[getHtmlLang(loc)] = `/${pageUrl}`
+      languages["en-GB"] = `/${pageUrl}`
     } else {
       languages[getHtmlLang(loc)] = `/${loc}/${pageUrl}`
     }

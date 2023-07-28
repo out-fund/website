@@ -10,7 +10,6 @@ export async function generateStaticParams() {
   return locales.map((locale) =>
     locale === "en-gb" ? { locale: `/` } : { locale: `${locale}` }
   )
-  // return locales.map((locale) => ({ locale }))
 }
 
 export async function generateMetadata({
@@ -23,7 +22,7 @@ export async function generateMetadata({
       absolute: "Homepage | Outfund",
     },
     description: "Funding for your business",
-    alternates: getAlternates("contact-us", params.locale),
+    alternates: getAlternates("", params.locale),
   }
 }
 

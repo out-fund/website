@@ -17,7 +17,6 @@ const GlobalLayout = ({
   children: React.ReactNode
   params: { locale: string }
 }) => {
-  // console.log("GlobalLayout", params)
   return (
     <html lang={getHtmlLang(params.locale)}>
       <body>
