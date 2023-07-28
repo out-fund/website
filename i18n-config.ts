@@ -13,8 +13,9 @@ export const locales = [
 export type ValidLocale = (typeof locales)[number]
 
 export const getCurrentLocale = (pathname: string) => {
-  const locale = pathname.split("/")[1]
-  return locale
+  // const locale = pathname.split("/")[1]
+  // return locale.split("-") ? locale : "en-gb"
+  return pathname.split("/")[1]
 }
 
 const translations = {

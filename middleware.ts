@@ -47,11 +47,11 @@ export function middleware(request: NextRequest) {
   // console.log("defaultLocale", defaultLocale)
   // console.log("pathname stats", pathname.startsWith("/"))
 
-  if (curentLocale === defaultLocale) {
-    return NextResponse.redirect(
-      new URL(pathname.replace(`/${curentLocale}`, ""), request.url)
-    )
-  }
+  // if (curentLocale === defaultLocale) {
+  //   return NextResponse.redirect(
+  //     new URL(pathname.replace(`/${curentLocale}`, ""), request.url)
+  //   )
+  // }
 
   const pathnameIsMissingValidLocale = () => {
     // @ts-ignore locales are readonly
