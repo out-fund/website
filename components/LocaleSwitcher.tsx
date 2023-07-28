@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { locales } from "@/i18n-config"
+import { locales, getHref } from "@/i18n-config"
 
 export default function LocaleSwitcher() {
   return (
@@ -9,7 +9,7 @@ export default function LocaleSwitcher() {
         {locales.map((locale) => {
           return (
             <li key={locale}>
-              <Link href={`/${locale}/`}>{locale}</Link>
+              <Link href={getHref(locale, "")}>{locale}</Link>
             </li>
           )
         })}

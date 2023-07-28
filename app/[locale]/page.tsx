@@ -6,6 +6,12 @@ import {
 } from "@/i18n-config"
 import { Metadata } from "next"
 
+export async function generateStaticParams() {
+  return locales.map((locale) =>
+    locale === "en-gb" ? { locale: `/` } : { locale: `${locale}` }
+  )
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -18,10 +24,6 @@ export async function generateMetadata({
     description: "Funding for your business",
     alternates: getAlternates("contact-us", params.locale),
   }
-}
-
-export async function generateStaticParams() {
-  return locales.map((locale) => ({ locale: `${locale}` }))
 }
 
 const HomePage = async ({ params }: { params: { locale: string } }) => {

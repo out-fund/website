@@ -64,7 +64,8 @@ export const getHref = (currentLocale: string, page: string) => {
   if (currentLocale === defaultLocale) {
     return `/${page}`
   }
-  return `/${currentLocale}/${page}`
+  if (page) return `/${currentLocale}/${page}`
+  return `/${currentLocale}`
 }
 
 export const getAlternates = (pageUrl: string, locale: string) => {
