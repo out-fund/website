@@ -60,19 +60,26 @@ export const getHtmlLang = (locale: string) => {
   return locale.split("-")[0] + "-" + locale.split("-")[1].toUpperCase()
 }
 
+export const getHref = (currentLocale: string, page: string) => {
+  if (currentLocale === defaultLocale) {
+    return `/${page}`
+  }
+  return `/${currentLocale}/${page}`
+}
+
 export const getAlternates = (pageUrl: string, locale: string) => {
   const languages: { [key: string]: string } = {}
 
   locales.forEach((loc) => {
     if (loc === "en-gb") {
-      languages[getHtmlLang(loc)] = `/${pageUrl}/`
+      languages[getHtmlLang(loc)] = `/${pageUrl}`
     } else {
-      languages[getHtmlLang(loc)] = `/${loc}/${pageUrl}/`
+      languages[getHtmlLang(loc)] = `/${loc}/${pageUrl}`
     }
   })
 
   return {
-    canonical: `/${locale}/${pageUrl}/`,
+    canonical: `/${locale}/${pageUrl}`,
     languages: languages,
   }
 }

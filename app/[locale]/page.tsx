@@ -4,7 +4,7 @@ import {
   locales,
   getAlternates,
 } from "@/i18n-config"
-import { Metadata, ResolvingMetadata } from "next"
+import { Metadata } from "next"
 
 export async function generateMetadata({
   params,
@@ -25,7 +25,6 @@ export async function generateStaticParams() {
 }
 
 const HomePage = async ({ params }: { params: { locale: string } }) => {
-  // console.log(params)
   const t = await getTranslationObject(params.locale as ValidLocale)
 
   return (

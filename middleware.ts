@@ -38,22 +38,17 @@ export function middleware(request: NextRequest) {
     return
 
   const curentLocale = getCurrentLocale(pathname)
-  console.log("----------------------------------")
+  // console.log("----------------------------------")
   // console.log("request.url", request.url)
   // console.log("pathname", request.nextUrl.pathname)
   // console.log("curentLocale", curentLocale)
   // console.log("findBestMatchingLocale", findBestMatchingLocale(request))
   // console.log("defaultLocale", defaultLocale)
+  // console.log("pathname stats", pathname.startsWith("/"))
 
   if (curentLocale === defaultLocale) {
     return NextResponse.redirect(
-      new URL(
-        pathname.replace(
-          `/${curentLocale}/`,
-          pathname.startsWith("/") ? "/" : ""
-        ),
-        request.url
-      )
+      new URL(pathname.replace(`/${curentLocale}/`, ""), request.url)
     )
   }
 
