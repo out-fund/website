@@ -38,11 +38,11 @@ export function middleware(request: NextRequest) {
     return
 
   const curentLocale = getCurrentLocale(pathname)
-  // console.log("----------------------------------")
-  // console.log("request.url", request.url)
+  console.log("----------------------------------")
+  console.log("request.url", request.url)
   // console.log("request.nextUrl", request.nextUrl)
-  // console.log("pathname", request.nextUrl.pathname)
-  // console.log("curentLocale", curentLocale)
+  console.log("pathname", request.nextUrl.pathname)
+  console.log("curentLocale", curentLocale)
   // console.log("findBestMatchingLocale", findBestMatchingLocale(request))
   // console.log("defaultLocale", defaultLocale)
   // console.log("pathname stats", pathname.startsWith("/"))
@@ -58,17 +58,23 @@ export function middleware(request: NextRequest) {
     const localesList: string[] = locales
     return !localesList.includes(curentLocale)
   }
-  // console.log("pathnameIsMissingValidLocale", pathnameIsMissingValidLocale())
+  console.log("pathnameIsMissingValidLocale", pathnameIsMissingValidLocale())
 
   if (pathnameIsMissingValidLocale()) {
     const bestestMatchingLocale = findBestMatchingLocale(request)
 
+    return NextResponse.redirect(
+      new URL(`/${bestestMatchingLocale}${pathname}`, request.url)
+    )
+
     // console.log("bestestMatchingLocale", bestestMatchingLocale)
-    if (bestestMatchingLocale !== defaultLocale) {
-      return NextResponse.redirect(
-        new URL(`/${bestestMatchingLocale}${pathname}`, request.url)
-      )
-    }
+    // if (bestestMatchingLocale === defaultLocale) {
+    //   return NextResponse.rewrite(new URL(`${pathname}`, request.url))
+    // } else {
+    //   return NextResponse.redirect(
+    //     new URL(`/${bestestMatchingLocale}${pathname}`, request.url)
+    //   )
+    // }
   }
 }
 

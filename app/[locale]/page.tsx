@@ -7,9 +7,17 @@ import {
 import { Metadata } from "next"
 
 export async function generateStaticParams() {
-  return locales.map((locale) =>
-    locale === "en-gb" ? { locale: `/` } : { locale: `${locale}` }
-  )
+  return [
+    { locale: "en-gb" },
+    { locale: "en-us" },
+    { locale: "es-es" },
+    { locale: "en-au" },
+    { locale: "en-ie" },
+    { locale: "de-de" },
+    { locale: "en-de" },
+    { locale: "nl-nl" },
+    { locale: "en-nl" },
+  ]
 }
 
 export async function generateMetadata({
@@ -31,7 +39,7 @@ const HomePage = async ({ params }: { params: { locale: string } }) => {
 
   return (
     <>
-      <h1>{JSON.stringify(params)}</h1>
+      {/* <h1>{JSON.stringify(params)}</h1> */}
       <h1>{t("welcome.helloWorld")}</h1>
     </>
   )
