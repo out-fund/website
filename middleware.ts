@@ -38,27 +38,11 @@ export function middleware(request: NextRequest) {
     return
 
   const curentLocale = getCurrentLocale(pathname)
-  console.log("----------------------------------")
-  console.log("request.url", request.url)
-  // console.log("request.nextUrl", request.nextUrl)
-  console.log("pathname", request.nextUrl.pathname)
-  console.log("curentLocale", curentLocale)
-  // console.log("findBestMatchingLocale", findBestMatchingLocale(request))
-  // console.log("defaultLocale", defaultLocale)
-  // console.log("pathname stats", pathname.startsWith("/"))
-
-  // if (curentLocale === defaultLocale) {
-  //   return NextResponse.redirect(
-  //     new URL(pathname.replace(`/${curentLocale}`, ""), request.url)
-  //   )
-  // }
 
   const pathnameIsMissingValidLocale = () => {
     // @ts-ignore locales are readonly
-    const localesList: string[] = locales
-    return !localesList.includes(curentLocale)
+    return !locales.includes(curentLocale)
   }
-  console.log("pathnameIsMissingValidLocale", pathnameIsMissingValidLocale())
 
   if (pathnameIsMissingValidLocale()) {
     const bestestMatchingLocale = findBestMatchingLocale(request)
@@ -66,16 +50,15 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(
       new URL(`/${bestestMatchingLocale}${pathname}`, request.url)
     )
-
-    // console.log("bestestMatchingLocale", bestestMatchingLocale)
-    // if (bestestMatchingLocale === defaultLocale) {
-    //   return NextResponse.rewrite(new URL(`${pathname}`, request.url))
-    // } else {
-    //   return NextResponse.redirect(
-    //     new URL(`/${bestestMatchingLocale}${pathname}`, request.url)
-    //   )
-    // }
   }
+
+  // console.log("----------------------------------")
+  // console.log("request.url", request.url)
+  // console.log("pathname", request.nextUrl.pathname)
+  // console.log("curentLocale", curentLocale)
+  // console.log("findBestMatchingLocale", findBestMatchingLocale(request))
+  // console.log("defaultLocale", defaultLocale)
+  // console.log("pathname stats", pathname.startsWith("/"))
 }
 
 export const config = {
