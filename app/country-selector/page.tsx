@@ -1,4 +1,4 @@
-import LocaleSwitcher from "@/components/LocaleSwitcher"
+import CountrySelector from "@/components/CountrySelector"
 import { getAlternates } from "@/i18n-config"
 import { Metadata } from "next"
 
@@ -15,7 +15,7 @@ const CountrySelectorPage = () => {
   return (
     <main>
       <h1>Choose Your Country</h1>
-      <LocaleSwitcher />
+      <CountrySelector />
     </main>
   )
 }

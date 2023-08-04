@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { locales, getHref } from "@/i18n-config"
 
-export default function LocaleSwitcher() {
+export default function CountrySelector() {
   return (
     <div>
       <p>Locale switcher:</p>

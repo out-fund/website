@@ -62,9 +62,6 @@ export const getHtmlLang = (locale: string) => {
 }
 
 export const getHref = (currentLocale: string, page: string) => {
-  if (currentLocale === defaultLocale) {
-    return `/${page}`
-  }
   if (page) return `/${currentLocale}/${page}`
   return `/${currentLocale}`
 }
@@ -73,11 +70,7 @@ export const getAlternates = (pageUrl: string, locale: string) => {
   const languages: { [key: string]: string } = {}
 
   locales.forEach((loc) => {
-    if (loc === "en-gb") {
-      languages["en-GB"] = `/${pageUrl}`
-    } else {
-      languages[getHtmlLang(loc)] = `/${loc}/${pageUrl}`
-    }
+    languages[getHtmlLang(loc)] = `/${loc}/${pageUrl}`
   })
 
   return {
