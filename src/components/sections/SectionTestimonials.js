@@ -3,8 +3,8 @@ import styled from "styled-components"
 import {
   Section,
   SectionHeader,
-  CardLogoReadMore,
-  CardFeatured,
+  // CardLogoReadMore,
+  // CardFeatured,
 } from "./../../components"
 import { theme } from "./../../styles/new/theme"
 

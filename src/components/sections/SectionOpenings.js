@@ -1,14 +1,14 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Section, Button, SectionHeader } from "./../../components"
+import { Section, SectionHeader } from "./../../components"
 import T from "./../../styles/new/typography"
 import { theme } from "./../../styles/new/theme"
 
 import ExpandIcon from "images/svg/expand-right.svg"
 
 const SectionOpenings = ({ data }) => {
-  const { title, description, openings, openApplication, btn } = data
+  const { title, description, openings } = data
   return (
     <Section id="open-positions">
       <Wrapper>
@@ -59,9 +59,9 @@ const SectionOpenings = ({ data }) => {
 export default SectionOpenings
 
 const PositionTitle = styled(T.H5)``
-const OpenApplication = styled(T.Body)`
-  margin-top: 16px;
-`
+// const OpenApplication = styled(T.Body)`
+//   margin-top: 16px;
+// `
 const Details = styled(T.Body)`
   color: #405e80;
   ${theme.above.t.m} {
@@ -88,12 +88,12 @@ const IconWrap = styled.span`
   }
 `
 
-const CantFindWrapper = styled.div`
-  background-color: ${theme.color.background.emphesized};
-  padding: 40px;
-  border-radius: 10px;
-  margin-top: 40px;
-`
+// const CantFindWrapper = styled.div`
+//   background-color: ${theme.color.background.emphesized};
+//   padding: 40px;
+//   border-radius: 10px;
+//   margin-top: 40px;
+// `
 
 const Wrapper = styled.div``
 const ContentWrapper = styled.div`
@@ -134,7 +134,7 @@ const WorkableLink = styled.a`
   }
 `
 
-const BtnWrapper = styled.div`
-  text-align: center;
-  margin-top: 40px;
-`
+// const BtnWrapper = styled.div`
+//   text-align: center;
+//   margin-top: 40px;
+// `

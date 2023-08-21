@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 import {
   Section,
-  Offices,
+  // Offices,
   // Button,
   SectionHeader,
   ThreeColumnIcons,
@@ -13,7 +13,7 @@ import {
 import { theme } from "./../../styles/new/theme"
 import { mapBgImage } from "./../../styles/utils"
 
-const SectionInOfficeRemote = ({ data, officeData }) => {
+const SectionInOfficeRemote = ({ data }) => {
   const { title, description, blocks } = data
   return (
     <Section>

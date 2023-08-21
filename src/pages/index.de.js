@@ -13,6 +13,7 @@ import {
   SectionRegulated,
   HeroHomepage,
   SeoComponent,
+  SectionFindOutFlexible,
 } from "./../components"
 
 const HomePage = (props) => {
@@ -25,6 +26,36 @@ const HomePage = (props) => {
       <SeoComponent title={data.seo.title} description={data.seo.description} />
       <HeroHomepage data={data.hero} />
       <Main>
+        <SectionFindOutFlexible
+          data={{
+            title: "Find out how much you can get",
+            description:
+              "Die Finanzierungsangebote basieren auf Ihrem durchschnittlichen monatlichen Umsatz. Erhalten Sie mit unserem benutzerfreundlichen Rechner einen schnellen Überblick über Ihre Berechtigung. Erhalten Sie innerhalb von 24 Stunden eine Finanzierung mit 3 einfachen Schritten: <br/><br/> <ul><li>Erstellen Sie ein Konto und verbinden Sie Ihre Konten</li><li>Wählen Sie Ihre Angebote aus</li><li>Lassen Sie sich finanzieren</li></ul>",
+            calculator: {
+              title: "Wie viel brauchen Sie?",
+              range: [
+                "10 000€",
+                "20 000€",
+                "50 000€",
+                "70 000€",
+                "100 000€",
+                "200 000€",
+                "500 000€",
+                "700 000€",
+                "1 000 000€",
+              ],
+              select: {
+                title: "You need funding for",
+                default: "Select",
+                dropdown: ["Inventory", "Marketing", "Something else"],
+              },
+              btn: {
+                text: "Check eligibility",
+                url: "/eligibility/",
+              },
+            },
+          }}
+        />
         <SectionWeFunded data={data.weFunded} />
         <SectionWeAreInvesting data={data.weInvesting} />
         <SectionSupercharging data={data.startSupercharging} />

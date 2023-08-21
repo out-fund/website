@@ -6,7 +6,7 @@ import styled from "styled-components"
 const Testimonial = (props) => {
   return (
     <StyledTestimonial>
-      <a href={props.link} target="_blank">
+      <a href={props.link} target="_blank" rel="noreferrer">
         <Logo>{props.logo}</Logo>
       </a>
 
