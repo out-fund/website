@@ -11,6 +11,7 @@ import { useLangProvider } from "./../../utils/LangProvider"
 
 const CardLogoReadMore = (props) => {
   const { tag, company, logo, btn, image, bgc } = props
+  // console.log("CardLogoReadMore -> tag", tag)
   const langKey = useLangProvider()
   return (
     <Wrapper bgc={bgc} {...props}>
@@ -21,7 +22,7 @@ const CardLogoReadMore = (props) => {
             {(langKey === "au" || langKey === "us") && (
               <span>{tag.text.replace("£", "$")}</span>
             )}
-            {/* {langKey !== "es" && langKey !== "en" && <span>{tag.text}</span>} */}
+            {tag.text.includes("finanziert") ? <>{tag.text}</> : ""}
             <VisuallyHidden>{company}</VisuallyHidden>
           </Tag>
         )}
