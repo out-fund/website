@@ -28,7 +28,7 @@ const HomePage = (props) => {
       <Main>
         <SectionFindOutFlexible
           data={{
-            title: "Find out how much you can get",
+            title: "Finden Sie heraus, wie viel Sie bekommen können",
             description:
               "Die Finanzierungsangebote basieren auf Ihrem durchschnittlichen monatlichen Umsatz. Erhalten Sie mit unserem benutzerfreundlichen Rechner einen schnellen Überblick über Ihre Berechtigung. Erhalten Sie innerhalb von 24 Stunden eine Finanzierung mit 3 einfachen Schritten: <br/><br/> <ul><li>Erstellen Sie ein Konto und verbinden Sie Ihre Konten</li><li>Wählen Sie Ihre Angebote aus</li><li>Lassen Sie sich finanzieren</li></ul>",
             calculator: {

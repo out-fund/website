@@ -126,7 +126,9 @@ const CalculatorV2 = ({ data }) => {
             {selectedLoanAmount}
           </Button>
           <div className="note">
-            Applying will not affect your credit score.
+            {currency === "€"
+              ? "Die Bewerbung hat keinen Einfluss auf Ihre Kreditwürdigkeit."
+              : "Applying will not affect your credit score. "}
           </div>
         </BtnWrapper>
       </FormWrapper>
