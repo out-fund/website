@@ -56,7 +56,6 @@ const CalculatorWrapper = styled.div`
     bottom: -36px;
     left: 608px;
     z-index: -1;
-    /* transform: rotate(-180deg); */
   }
 
   ${theme.above.d.m} {

@@ -15,10 +15,9 @@ import {
 
 import LangLayout from "./../../layouts/en-ff"
 import React from "react"
-// import { StaticImage } from "gatsby-plugin-image"
+
 import { graphql } from "gatsby"
 import styled from "styled-components"
-// import { theme } from "./../../styles/new/theme"
 
 const HowFundingWorks = (props) => {
   const {
@@ -36,63 +35,26 @@ const HowFundingWorks = (props) => {
           subtitle: "Business financing on your terms",
           description:
             "Don't let a lack of working capital stop you from achieving your business goals. Tap into your future success",
-          // btn: { text: "Get funded", url: "https://client.out.fund/signup" },
         }}
       />
-      {/* <HeroHomepageFf
-        data={{
-          title: "The sustainable growth platform",
-          description:
-            "Don't let a lack of working capital stop you from achieving your business goals. Tap into your future success",
-          primaryBtn: {
-            text: "Get funded",
-            url: "https://client.out.fund/signup",
-          },
-          secondaryBtn: {
-            text: "How it works",
-            url: "",
-          },
-        }}
-      /> */}
+
       <Main>
-        {/* <IWrapper>
-          <ImageWrapper>
-            <StaticImage
-              src="./../../images/UIxCard.png"
-              alt="Outfhund UI"
-              layout="constrained"
-            />
-          </ImageWrapper>
-        </IWrapper> */}
         <SectionInfoStrip
           data={[
             { up: "Apply in just", down: "5 minutes" },
             { up: "Business loans from", down: "£10k - £10m" },
             { up: "Offers as fast as", down: "24h" },
-            // { up: "Fees as low as", down: "2%" },
             { up: "Additional top-ups", down: "Continuous" },
           ]}
         />
         <Wrapper>
           <ContentWrapper>
-            {/* <SectionFlexibleTemp
-              data={{
-                title:
-                  "Maximise your business growth with our innovative funding solution",
-                description:
-                  "We understand that no two businesses are the same. That's why our funding can be used for any expense that drives your business forward.",
-              }}
-            /> */}
             <SectionRepayFf
               data={{
                 title:
                   "Maximise your business growth with our innovative funding solution",
                 description:
                   "We understand that no two businesses are the same. That's why our funding can be used for any expense that drives your business forward.",
-                // btn: {
-                //   text: "Apply now",
-                //   url: "https://client.out.fund/signup",
-                // },
               }}
             />
 
@@ -163,10 +125,6 @@ const HowFundingWorks = (props) => {
                     title: "🏭 Make your next project a reality",
                     text: "Get the capital you need to make your next business project a reality. Get your working capital, staffing, and insurance all sorted in no time, so you can confidently move forward with your vision.",
                   },
-                  // {
-                  //   title: "🤗 Empathy",
-                  //   text: "The heart of good business is understanding. From our customers to our colleagues, we put people first.",
-                  // },
                 ],
               }}
             />
@@ -181,8 +139,6 @@ const HowFundingWorks = (props) => {
             <SectionSupercharging data={data.startSupercharging} />
             <SectionFaq data={props.data.homepageJson.faq} />
           </ContentWrapper>
-
-          {/* <SectionRegulated data={props.data.trustJson} /> */}
         </Wrapper>
       </Main>
     </LangLayout>
@@ -193,33 +149,6 @@ export default HowFundingWorks
 
 const Wrapper = styled.div``
 const ContentWrapper = styled.div``
-
-// const IWrapper = styled.div`
-//   position: relative;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   width: 100%;
-//   top: -8px;
-
-//   ${theme.above.p.m} {
-//     top: -16px;
-//   }
-//   ${theme.above.t.s} {
-//     top: -24px;
-//   }
-//   ${theme.above.l.m} {
-//     top: -56px;
-//   }
-//   ${theme.above.d.m} {
-//     top: -80px;
-//   }
-// `
-// const ImageWrapper = styled.div`
-//   max-width: 670px;
-//   border-radius: 10px;
-//   overflow: hidden;
-// `
 
 export const query = graphql`
   query HomePageFlexFunding {

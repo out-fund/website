@@ -31,7 +31,6 @@ const HomePage = (props) => {
         <SectionWeFunded data={data.weFunded} />
         <SectionWeAreInvesting data={data.weInvesting} />
         <SectionSupercharging data={data.startSupercharging} />
-        {/* <SectionFindOut data={props.data.homepageJson.findOut} /> */}
         <SectionFindOut
           data={{
             title: "Find out how much you can get",

@@ -12,7 +12,6 @@ const CalculatorV2 = ({ data }) => {
   let intialTerm = 0
   const [requestedLoan, setRequestedLoan] = React.useState(intialRangeValue)
   const [requestedTerm, setRequestedTerm] = React.useState(intialTerm)
-  // const [isDisabled, setDisabled] = React.useState(true)
   let selectedLoanAmount = data.range[requestedLoan]
   const selectedLoanAmountClean = selectedLoanAmount
     .replace(/£/g, "")
@@ -32,18 +31,11 @@ const CalculatorV2 = ({ data }) => {
   }
   const handleTermChange = (event) => {
     setRequestedTerm(event.target.value)
-    // console.log("requestedTerm", termLengths[requestedTerm])
   }
-
-  // const handleButton = () => {
-  //   setDisabled(false)
-  // }
 
   const totalPayable =
     Number(selectedLoanAmountClean) +
     Number(selectedLoanAmountClean * fees[requestedTerm]) / 100
-
-  console.log("currency", currency)
 
   return (
     <Wrapper data-surface-type="calculator" data-surface-title="calc2ff">
@@ -134,7 +126,6 @@ const Calculated = styled(T.H4)`
   display: flex;
   justify-content: space-between;
   span {
-    /* color: #0db6ff; */
     font-weight: 500;
   }
 `
@@ -154,18 +145,6 @@ const InputWrapper = styled.div`
   padding: 1px;
   margin-top: 4px;
   position: relative;
-  /* &:after {
-    position: absolute;
-    top: 7px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 19px;
-    background-color: #bbc7d6;
-    border-radius: 10px;
-    content: "";
-  } */
 `
 const RangeWrapper = styled.div`
   width: 100%;
@@ -264,19 +243,6 @@ const RangeWrapper = styled.div`
   }
 `
 
-// const SelectWrapper = styled.div`
-//   width: 100%;
-//   display: flex;
-//   flex-direction: column;
-//   gap: 8px;
-//   margin-bottom: 40px;
-//   select {
-//     width: 100%;
-//   }
-//   label {
-//   }
-// `
-
 const TextWrapper = styled.div``
 const Small = styled.div`
   font-size: 12px;
@@ -296,8 +262,4 @@ const Wrapper = styled.div`
   ${theme.above.l.m} {
     padding: 64px 64px;
   }
-
-  /* ${theme.above.d.m} {
-    padding: 64px 64px;
-  } */
 `
