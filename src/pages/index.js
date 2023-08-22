@@ -40,7 +40,35 @@ const HomePage = (props) => {
             { up: "Additional top-ups", down: "Continuous" },
           ]}
         />
-        <SectionFindOut data={props.data.homepageJson.findOut} />
+        <SectionFindOut
+          data={{
+            title: "Find out how much you can get",
+            description:
+              "Funding offers are based on your average monthly revenue. Get a quick indication of your eligibility with our easy-to-use calculator. Get funded in 24 hours with 3 simple steps: <br/><br/> <ul><li>Create account and connect your accounts</li><li>Select your offers</li><li>Get funded</li></ul>",
+            calculator: {
+              title: "How much do you need?",
+              termTitle: "Term",
+              months: "months",
+              fee: "Flat fee to pay *",
+              repayable: "Total repayable",
+              rateNote:
+                "* This calculator is only an example, rate for your business will vary based on your circumstances and is subject to change.",
+              buttonText: "Apply for",
+              buttonNote: "Applying will not affect your credit score.",
+              range: [
+                "£10 000",
+                "£20 000",
+                "£50 000",
+                "£70 000",
+                "£100 000",
+                "£200 000",
+                "£500 000",
+                "£700 000",
+                "£1 000 000",
+              ],
+            },
+          }}
+        />
         <SectionLoanDescriptions
           data={{
             title: "Fast, flexible funding for you",
