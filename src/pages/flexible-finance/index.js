@@ -104,6 +104,14 @@ const HowFundingWorks = (props) => {
                   "Funding offers are based on your average monthly revenue. Get a quick indication of your eligibility with our easy-to-use calculator. Get funded in 24 hours with 3 simple steps: <br/><br/> <ul><li>Create account and connect your accounts</li><li>Select your offers</li><li>Get funded</li></ul>",
                 calculator: {
                   title: "How much do you need?",
+                  termTitle: "Term",
+                  months: "months",
+                  fee: "Flat fee to pay *",
+                  repayable: "Total repayable",
+                  rateNote:
+                    "* This calculator is only an example, rate for your business will vary based on your circumstances and is subject to change.",
+                  buttonText: "Apply for",
+                  buttonNote: "Applying will not affect your credit score.",
                   range: [
                     "£10 000",
                     "£20 000",
@@ -115,15 +123,6 @@ const HowFundingWorks = (props) => {
                     "£700 000",
                     "£1 000 000",
                   ],
-                  select: {
-                    title: "You need funding for",
-                    default: "Select",
-                    dropdown: ["Inventory", "Marketing", "Something else"],
-                  },
-                  btn: {
-                    text: "Check eligibility",
-                    url: "/eligibility/",
-                  },
                 },
               }}
             />

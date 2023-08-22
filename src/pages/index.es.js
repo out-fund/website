@@ -110,7 +110,36 @@ const HomePage = (props) => {
           }}
         />
 
-        <SectionFindOut data={props.data.homepageJson.findOut} />
+        {/* <SectionFindOut data={props.data.homepageJson.findOut} /> */}
+        <SectionFindOut
+          data={{
+            title: "Averigüe cuánto se puede conseguir",
+            description:
+              "Las ofertas de financiación se basan en sus ingresos mensuales promedio. Obtenga una indicación rápida de su elegibilidad con nuestra calculadora fácil de usar. Recibe financiación en 24 horas con 3 sencillos pasos: <br/><br/> <ul><li>Crea una cuenta y conecta tus cuentas</li><li>Selecciona tus ofertas</li><li>Obtener financiación</li></ul>",
+            calculator: {
+              title: "¿Cuánto necesitas?",
+              termTitle: "Término",
+              months: "meses",
+              fee: "Tarifa fija a pagar *",
+              repayable: "Total reembolsable",
+              rateNote:
+                "* Esta calculadora es solo un ejemplo, la tarifa para su negocio variará según sus circunstancias y está sujeta a cambios.",
+              buttonText: "Solicitar",
+              buttonNote: "La solicitud no afectará su puntaje crediticio.",
+              range: [
+                "10 000€",
+                "20 000€",
+                "50 000€",
+                "70 000€",
+                "100 000€",
+                "200 000€",
+                "500 000€",
+                "700 000€",
+                "1 000 000€",
+              ],
+            },
+          }}
+        />
         <SectionWeFunded data={data.weFunded} />
         {/* <SectionWeAreInvesting data={data.weInvesting} /> */}
         <SectionSupercharging data={data.startSupercharging} />

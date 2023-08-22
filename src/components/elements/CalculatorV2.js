@@ -43,15 +43,12 @@ const CalculatorV2 = ({ data }) => {
     Number(selectedLoanAmountClean) +
     Number(selectedLoanAmountClean * fees[requestedTerm]) / 100
 
+  console.log("currency", currency)
+
   return (
     <Wrapper data-surface-type="calculator" data-surface-title="calc2ff">
       <TextWrapper>
-        {/* <Title>{data.title}</Title> */}
-        <Title>
-          {currency === "€"
-            ? "Wie viel brauchen Sie?"
-            : "How much do you need?"}
-        </Title>
+        <Title>{data.title}</Title>
         <Selected as="div">{selectedLoanAmount}</Selected>
       </TextWrapper>
       <FormWrapper>
@@ -72,15 +69,14 @@ const CalculatorV2 = ({ data }) => {
             />
           </InputWrapper>
         </RangeWrapper>
-        <Title>{currency === "€" ? "Begriff" : "Term"}</Title>
+        <Title>{data.termTitle}</Title>
         <Selected as="div">
-          {selectedTerm}
-          {currency === "€" ? " Monate" : " months"}
+          {selectedTerm} {data.months}
         </Selected>
         <RangeWrapper>
           <div className="top">
-            <div>{currency === "€" ? "3 Monate" : "3 months"}</div>
-            <div>{currency === "€" ? "12 Monate" : "12 months"}</div>
+            <div>3 {data.months}</div>
+            <div>12 {data.months}</div>
           </div>
           <InputWrapper>
             <input
@@ -95,25 +91,18 @@ const CalculatorV2 = ({ data }) => {
           </InputWrapper>
         </RangeWrapper>
         <Calculated as="div">
-          {currency === "€"
-            ? "Zu zahlende Pauschalgebühr *"
-            : "Flat fee to pay *"}
+          {data.fee}
           <span>{fees[requestedTerm]}%</span>
         </Calculated>
         <Calculated as="div">
-          {currency === "€" ? "Total rückzahlbar" : "Total repayable"}
+          {data.repayable}
           <span>
-            {/* £{totalPayable.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} */}
             {currency !== "€" ? currency : ""}
             {totalPayable.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")}
             {currency === "€" ? " " + currency : ""}
           </span>
         </Calculated>
-        <Small>
-          {currency === "€"
-            ? "Dieser Rechner ist nur ein Beispiel. Der Tarif für Ihr Unternehmen hängt von Ihren Umständen ab und kann sich ändern."
-            : "* This calculator is only an example, rate for your business will vary based on your circumstances and is subject to change."}
-        </Small>
+        <Small>{data.rateNote}</Small>
         <BtnWrapper>
           <Button
             href={`https://client.out.fund/signup?utm_term=term${selectedTerm}amount${selectedLoanAmountClean}`}
@@ -122,14 +111,9 @@ const CalculatorV2 = ({ data }) => {
             id="cta-check-eligibility"
             data-element-category="Signup CTA"
           >
-            {currency === "€" ? "Bewerben Sie sich für " : "Apply for "}
-            {selectedLoanAmount}
+            {data.buttonText} {selectedLoanAmount}
           </Button>
-          <div className="note">
-            {currency === "€"
-              ? "Die Bewerbung hat keinen Einfluss auf Ihre Kreditwürdigkeit."
-              : "Applying will not affect your credit score. "}
-          </div>
+          <div className="note">{data.buttonNote}</div>
         </BtnWrapper>
       </FormWrapper>
     </Wrapper>

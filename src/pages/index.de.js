@@ -36,6 +36,15 @@ const HomePage = (props) => {
               "Die Finanzierungsangebote basieren auf Ihrem durchschnittlichen monatlichen Umsatz. Erhalten Sie mit unserem benutzerfreundlichen Rechner einen schnellen Überblick über Ihre Berechtigung. Erhalten Sie innerhalb von 24 Stunden eine Finanzierung mit 3 einfachen Schritten: <br/><br/> <ul><li>Erstellen Sie ein Konto und verbinden Sie Ihre Konten</li><li>Wählen Sie Ihre Angebote aus</li><li>Lassen Sie sich finanzieren</li></ul>",
             calculator: {
               title: "Wie viel brauchen Sie?",
+              termTitle: "Begriff",
+              months: "Monate",
+              fee: "Zu zahlende Pauschalgebühr *",
+              repayable: "Total rückzahlbar",
+              rateNote:
+                "* Dieser Rechner ist nur ein Beispiel. Der Tarif für Ihr Unternehmen hängt von Ihren Umständen ab und kann sich ändern.",
+              buttonText: "Bewerben Sie sich für",
+              buttonNote:
+                "Die Bewerbung hat keinen Einfluss auf Ihre Kreditwürdigkeit",
               range: [
                 "10 000€",
                 "20 000€",
@@ -47,15 +56,6 @@ const HomePage = (props) => {
                 "700 000€",
                 "1 000 000€",
               ],
-              select: {
-                title: "You need funding for",
-                default: "Select",
-                dropdown: ["Inventory", "Marketing", "Something else"],
-              },
-              btn: {
-                text: "Check eligibility",
-                url: "/eligibility/",
-              },
             },
           }}
         />
