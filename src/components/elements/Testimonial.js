@@ -12,8 +12,11 @@ const Testimonial = (props) => {
 
       <Quote>{parse(props.quote)}</Quote>
       <PhotoNameWrapper>
-        <Profile>{props.profile}</Profile>
-        <Name>{parse(props.name)}</Name>
+        {props.profile && <Profile>{props.profile}</Profile>}
+        <div className="namePosition">
+          <Name>{parse(props.name)}</Name>
+          {props.position && <Position>{parse(props.position)}</Position>}
+        </div>
       </PhotoNameWrapper>
     </StyledTestimonial>
   )
@@ -30,6 +33,7 @@ const StyledTestimonial = styled.div`
 
   a {
     display: flex;
+    margin-bottom: 16px;
   }
 `
 
@@ -45,8 +49,17 @@ const PhotoNameWrapper = styled.div`
   gap: 10px;
   margin-top: 16px;
   margin-top: auto;
+  .namePosition {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: baseline;
+  }
 `
 
 const Profile = styled.div``
 
-const Name = styled(T.Body)``
+const Name = styled(T.Body)`
+  font-weight: bold;
+`
+const Position = styled(T.Body)``

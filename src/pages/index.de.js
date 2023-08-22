@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import { StaticImage } from "gatsby-plugin-image"
 import LangLayout from "./../layouts/de"
 
 import {
@@ -14,6 +15,8 @@ import {
   HeroHomepage,
   SeoComponent,
   SectionFindOutFlexible,
+  SectionTestimonials,
+  Testimonial,
 } from "./../components"
 
 const HomePage = (props) => {
@@ -56,6 +59,61 @@ const HomePage = (props) => {
             },
           }}
         />
+
+        <SectionTestimonials title="Was unsere deutschen Kunden sagen">
+          <Testimonial
+            link="https://www.saltedbeauty.com/"
+            logo={
+              <StaticImage
+                src="./../images/testimonials/salted.png"
+                alt="Salted Beauty logo"
+                height={40}
+              />
+            }
+            quote="Wir haben jetzt mehr Flexibilität, zusätzliche sind die Paid Kampagnen möglich und das Persönlicher Kontakt ist sehr gut."
+            name="Florian Karber"
+            position="COO bei Salted Beauty"
+          />
+          <Testimonial
+            link="https://www.bettenjumbo.de/"
+            logo={
+              <StaticImage
+                src="./../images/testimonials/bettenJumbo.png"
+                alt="bettenJumbo logo"
+                height={40}
+              />
+            }
+            quote="Wir haben eine Empfehlung bekommen und der Ablauf war so schnell und reibungslos! In drei worten ist Outfund schnell, zielorientiert und simpel."
+            name="Fabian Fechner"
+            position="Geschäftsführer"
+          />
+          <Testimonial
+            link="https://kern-energie.com/"
+            logo={
+              <StaticImage
+                src="./../images/testimonials/KERNenergie.png"
+                alt="KERNenergie logo"
+                height={40}
+              />
+            }
+            quote="Schnelle und unkomplizierte Abwicklung. Jedoch ist das Portal leicht verständlich und nutzbar."
+            name="Meinrad Franz"
+            position="Finanzvorstand"
+          />
+          <Testimonial
+            link="https://www.lingoni.com/"
+            logo={
+              <StaticImage
+                src="./../images/testimonials/lingoni.png"
+                alt="lingoni logo"
+                height={40}
+              />
+            }
+            quote="Sehr unkompliziert und angenehm. Wir können mehr Energie in unsere Marketingaktivitäten stecken, was uns auf dem Markt stärker positionieren wird."
+            name="Jennifer Tehraud"
+            position="Geschäftsinhaber"
+          />
+        </SectionTestimonials>
         <SectionWeFunded data={data.weFunded} />
         <SectionWeAreInvesting data={data.weInvesting} />
         <SectionSupercharging data={data.startSupercharging} />
