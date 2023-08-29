@@ -53,6 +53,27 @@ const HomePage = (props) => {
               description:
                 "Analizamos tus ingresos mensuales y proporcionamos capital en un plazo de 24 horas, con un plan de amortización fijo. <br/><br/> A través de un plan de amortización fijo controlas mejor tu cash flow. Sabrás desde el principio el total a pagar, y el plazo asociado.",
             },
+            howToUse: {
+              title: "Cómo usar tus fondos",
+              description:
+                "El capital se acredita en tu cuenta de Outfund, y tú decides cómo gastarlo.",
+              first: {
+                title: "Tarjeta virtual",
+                description:
+                  "Configura tu tarjeta de marketing digital e invierte en marketing digital.",
+              },
+              second: {
+                title: "Facturas",
+                description:
+                  "Carga tus facturas en nuestra plataforma y financiaremos los gastos de tu negocio, como inventario, logística y fees de agencias.",
+              },
+              third: {
+                title: "Efectivo",
+                description:
+                  "Recibe fondos en tu cuenta bancaria y ten la flexibilidad de gastar en lo que necesites *",
+                note: "*La disponibilidad se basa en tus circunstancias y está sujeta a revisión.",
+              },
+            },
           }}
         />
 

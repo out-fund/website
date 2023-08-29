@@ -41,8 +41,8 @@ const SectionLoanDescriptions = ({ data }) => {
 
         <HeaderWrapper2>
           <SectionHeader
-            title="How to use your funds"
-            description="Capital is credited to your Outfund account, and you decide how to spend."
+            title={parse(data.howToUse.title)}
+            description={parse(data.howToUse.description)}
           />
         </HeaderWrapper2>
         <UseFundingWrapper>
@@ -54,10 +54,8 @@ const SectionLoanDescriptions = ({ data }) => {
               height={80}
               layout={"constrained"}
             />
-            <Title>Virtual card</Title>
-            <Description>
-              Set up your digital marketing card and invest in your ads.
-            </Description>
+            <Title>{parse(data.howToUse.first.title)}</Title>
+            <Description>{parse(data.howToUse.first.description)}</Description>
           </LoanBox>
           <LoanBox>
             <StaticImage
@@ -67,11 +65,8 @@ const SectionLoanDescriptions = ({ data }) => {
               height={80}
               layout={"constrained"}
             />
-            <Title>Invoices</Title>
-            <Description>
-              Upload your invoices to our platform and we’ll fund your business
-              expenses like inventory, logistics, and agency fees.
-            </Description>
+            <Title>{parse(data.howToUse.second.title)}</Title>
+            <Description>{parse(data.howToUse.second.description)}</Description>
           </LoanBox>
           <LoanBox>
             <StaticImage
@@ -81,15 +76,9 @@ const SectionLoanDescriptions = ({ data }) => {
               height={80}
               layout={"constrained"}
             />
-            <Title>Cash</Title>
-            <Description>
-              Receive funds in your bank account, and have the flexibility to
-              spend on what you need *
-            </Description>
-            <Small>
-              *Availability is based on your circumstances, and it is subject to
-              review
-            </Small>
+            <Title>{parse(data.howToUse.third.title)}</Title>
+            <Description>{parse(data.howToUse.third.description)}</Description>
+            <Small>{parse(data.howToUse.third.note)}</Small>
           </LoanBox>
         </UseFundingWrapper>
       </Wrapper>

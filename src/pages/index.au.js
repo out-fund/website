@@ -85,6 +85,27 @@ const HomePage = (props) => {
               description:
                 "We use your monthly revenue as a guide and provide up-front capital within 24 hours in exchange for a fixed repayment amount. <br/><br/> You control how you repay us by deciding whether you would like daily or weekly fixed repayments. Know exactly what you will repay from the start.",
             },
+            howToUse: {
+              title: "How to use your funds",
+              description:
+                "Capital is credited to your Outfund account, and you decide how to spend.",
+              first: {
+                title: "Virtual card",
+                description:
+                  "Set up your digital marketing card and invest in your ads.",
+              },
+              second: {
+                title: "Invoices",
+                description:
+                  "Cpload your invoices to our platform and we’ll fund your business expenses like inventory, logistics, and agency fees.",
+              },
+              third: {
+                title: "Cash",
+                description:
+                  "Receive funds in your bank account, and have the flexibility to spend on what you need *",
+                note: "*Availability is based on your circumstances, and it is subject to review",
+              },
+            },
           }}
         />
 
