@@ -1,6 +1,11 @@
 {
-  "welcome": {
-    "helloWorld": "Hallo Welt!",
-    "happyYear": "Alles Gute für {{ year }}!"
+  "pages": {
+    "home": {
+      "title": "Home DE",
+      "description": "This is the home page."
+    }
+  },
+  "footer": {
+    "copyright": "Copyright © {{ year }} Outfund. All rights reserved."
   }
 }

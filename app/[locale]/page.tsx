@@ -26,11 +26,15 @@ export async function generateMetadata({
 
 const HomePage = async ({ params }: { params: { locale: string } }) => {
   const t = await getTranslationObject(params.locale as ValidLocale)
-
+  // console.log(params.locale)
   return (
     <>
-      {/* <h1>{JSON.stringify(params)}</h1> */}
-      <h1>{t("welcome.helloWorld")}</h1>
+      <h1>{t("pages.home.title")}</h1>
+      <footer>
+        {t("footer.copyright", {
+          year: new Date().getFullYear(),
+        })}
+      </footer>
     </>
   )
 }
