@@ -60,7 +60,7 @@ const HomePage = (props) => {
             },
           }}
         />
-        <SectionFaq data={props.data.homepageJson.faq} />
+        {/* <SectionFaq data={props.data.homepageJson.faq} /> */}
         <SectionAboutUs data={props.data.homepageJson.aboutUs} />
         <SectionRegulated data={props.data.trustJson} />
       </Main>

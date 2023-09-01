@@ -80,7 +80,7 @@ const HowFundingWorks = (props) => {
                 </ImageWrapper>
               </InnerWrapper>
             </CtaBlockWrapper>
-            <SectionFaq data={props.data.howFundingWorksJson.faq} />
+            {/* <SectionFaq data={props.data.howFundingWorksJson.faq} /> */}
           </ContentWrapper>
 
           <SectionRegulated data={props.data.trustJson} />

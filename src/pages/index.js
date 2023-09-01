@@ -87,7 +87,7 @@ const HomePage = (props) => {
               description:
                 "Capital is credited to your Outfund account, and you decide how to spend.",
               first: {
-                title: "Virtual card<",
+                title: "Virtual card",
                 description:
                   "Set up your digital marketing card and invest in your ads.",
               },
@@ -162,7 +162,7 @@ const HomePage = (props) => {
         <SectionWeFunded data={data.weFunded} />
         {/* <SectionWeAreInvesting data={data.weInvesting} /> */}
         <SectionSupercharging data={data.startSupercharging} />
-        <SectionFaq data={props.data.homepageJson.faq} />
+        {/* <SectionFaq data={props.data.homepageJson.faq} /> */}
         <SectionAboutUs data={props.data.homepageJson.aboutUs} />
         <SectionRegulated data={props.data.trustJson} />
       </Main>

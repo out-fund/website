@@ -244,7 +244,7 @@ const HomePage = (props) => {
             }
           />
         </SectionTestimonials>
-        <SectionFaq data={props.data.homepageJson.faq} />
+        {/* <SectionFaq data={props.data.homepageJson.faq} /> */}
         <SectionWeFunded data={data.weFunded} />
         <SectionSupercharging data={data.startSupercharging} />
         <SectionAboutUs data={props.data.homepageJson.aboutUs} />

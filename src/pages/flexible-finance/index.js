@@ -137,7 +137,7 @@ const HowFundingWorks = (props) => {
             />
             <SectionWeFunded data={data.weFunded} />
             <SectionSupercharging data={data.startSupercharging} />
-            <SectionFaq data={props.data.homepageJson.faq} />
+            {/* <SectionFaq data={props.data.homepageJson.faq} /> */}
           </ContentWrapper>
         </Wrapper>
       </Main>

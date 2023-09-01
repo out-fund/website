@@ -164,7 +164,7 @@ const HomePage = (props) => {
         <SectionWeFunded data={data.weFunded} />
         {/* <SectionWeAreInvesting data={data.weInvesting} /> */}
         <SectionSupercharging data={data.startSupercharging} />
-        <SectionFaq data={props.data.homepageJson.faq} />
+        {/* <SectionFaq data={props.data.homepageJson.faq} /> */}
         <SectionAboutUs data={props.data.homepageJson.aboutUs} />
         <SectionRegulated data={props.data.trustJson} />
       </Main>
