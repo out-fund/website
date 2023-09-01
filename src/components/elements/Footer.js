@@ -109,7 +109,7 @@ const Footer = ({ lang }) => {
               <LinksColumn>
                 {langKey === "es" && <ColumntTitle>Apoyo</ColumntTitle>}
                 {langKey !== "es" && <ColumntTitle>Support</ColumntTitle>}
-                <Button href="https://help.out.fund/" variant="footerLink" color="white">
+                <Button href="https://help.out.fund/" variant="footerLink" color="white" target="_blank">
                   {links.faq.text[lang]}
                 </Button>
                 <Button
