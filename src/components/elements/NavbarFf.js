@@ -67,7 +67,7 @@ const MobileLinks = ({ lang }) => {
           </Button>
         )}
         {links.faq.text[lang] && (
-          <Button href="https://help.out.fund/" variant="navLink">
+          <Button href="https://help.out.fund/" variant="navLink" target="_blank">
             {links.faq.text[lang]}
           </Button>
         )}
@@ -93,7 +93,7 @@ function DesktopLinks({ lang }) {
       )}
       {links.faq.text[lang] && (
         <li>
-          <Button href="https://help.out.fund/" variant="navLink">
+          <Button href="https://help.out.fund/" variant="navLink" target="_blank">
             {links.faq.text[lang]}
           </Button>
         </li>
