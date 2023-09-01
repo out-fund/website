@@ -104,25 +104,12 @@ const Footer = ({ lang }) => {
                 >
                   {links.successStories.text[lang]}
                 </Button>
-                {/* Remove comment lager */}
-                {/* <Button
-                  to={links.partners.url}
-                  variant="footerLink"
-                  color="white"
-                >
-                  {links.partners.text[lang]}
-                </Button> */}
-                {/* Remove comment lager - END */}
-
-                {/* <Button to={links.b2b.url} variant="footerLink" color="white">
-                  {links.b2b.text[lang]}
-                </Button> */}
               </LinksColumn>
 
               <LinksColumn>
                 {langKey === "es" && <ColumntTitle>Apoyo</ColumntTitle>}
                 {langKey !== "es" && <ColumntTitle>Support</ColumntTitle>}
-                <Button to={links.faq.url} variant="footerLink" color="white">
+                <Button href="https://help.out.fund/" variant="footerLink" color="white">
                   {links.faq.text[lang]}
                 </Button>
                 <Button

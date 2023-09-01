@@ -70,36 +70,6 @@ module.exports = {
       },
       __key: "images",
     },
-    // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     name: "posts",
-    //     path: `${__dirname}/src/content/blog`,
-    //   },
-    // },
-    // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     name: "successStories",
-    //     path: `${__dirname}/src/content/success-stories`,
-    //   },
-    // },
-    // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     name: "translations",
-    //     path: `${__dirname}/src/content/page-translations`,
-    //   },
-    //   __key: "translations",
-    // },
-    // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     name: "faq",
-    //     path: `${__dirname}/src/content/faq`,
-    //   },
-    //  __key: "faqs",
-    // },
     {
       resolve: "gatsby-source-filesystem",
       options: {
