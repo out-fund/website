@@ -1,4 +1,9 @@
 {
+  "navbar": {
+    "howFundingWorks": "ES howFundingWorks",
+    "about": "ES About",
+    "contact": "ES Contact"
+  },
   "pages": {
     "home": {
       "title": "Home ES",

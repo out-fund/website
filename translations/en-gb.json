@@ -1,4 +1,11 @@
 {
+  "navbar": {
+    "howFundingWorks": "How funding works?",
+    "aboutUs": "About Us",
+    "faqs": "FAQs",
+    "login": "Login",
+    "selectCountry": "Choose Your Country"
+  },
   "pages": {
     "home": {
       "title": "Home",

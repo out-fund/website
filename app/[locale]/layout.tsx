@@ -1,6 +1,8 @@
 import { Metadata } from "next"
-import Link from "next/link"
-import { getHtmlLang, getHref } from "@/i18n-config"
+
+import { getHtmlLang, ValidLocale } from "@/i18n-config"
+
+import Navbar from "@/components/Navbar"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://out.fund"),
@@ -15,26 +17,12 @@ const GlobalLayout = ({
   params,
 }: {
   children: React.ReactNode
-  params: { locale: string }
+  params: { locale: ValidLocale }
 }) => {
   return (
     <html lang={getHtmlLang(params.locale)}>
       <body>
-        <nav>
-          <ul>
-            <li>
-              <Link href="/country-selector">Choose Your Country</Link>
-            </li>
-            <li>
-              <Link href={getHref(params.locale, "about-us")}>About us</Link>
-            </li>
-            <li>
-              <Link href={getHref(params.locale, "contact-us")}>
-                Contact us
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <Navbar locale={params.locale} />
         <main>{children}</main>
       </body>
     </html>

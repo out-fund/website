@@ -13,7 +13,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string }
+  params: { locale: ValidLocale }
 }): Promise<Metadata> {
   return {
     title: {
@@ -24,8 +24,8 @@ export async function generateMetadata({
   }
 }
 
-const HomePage = async ({ params }: { params: { locale: string } }) => {
-  const t = await getTranslationObject(params.locale as ValidLocale)
+const HomePage = async ({ params }: { params: { locale: ValidLocale } }) => {
+  const t = await getTranslationObject(params.locale)
   // console.log(params.locale)
   return (
     <>
