@@ -59,6 +59,12 @@
 /au/legal/privacy-policy     /Outfund-Privacy-Policy.pdf
 /us/legal/privacy-policy     /Outfund-Privacy-Policy.pdf
 
+# Complaint Policy
+/legal/complaint-policy        /Outfund-Complaint-Policy.pdf
+/es/legal/complaint-policy     /Outfund-Complaint-Policy.pdf
+/au/legal/complaint-policy     /Outfund-Complaint-Policy.pdf
+/us/legal/complaint-policy     /Outfund-Complaint-Policy.pdf
+
 # Get funded removed
 /get-funded      https://client.out.fund/signup
 /us/get-funded   https://client.out.fund/signup

@@ -59,6 +59,12 @@
 /au/legal/privacy-policy     /Outfund-Privacy-Policy.pdf
 /us/legal/privacy-policy     /Outfund-Privacy-Policy.pdf
 
+# Complaint Policy
+/legal/complaint-policy        /Outfund-Complaint-Policy.pdf
+/es/legal/complaint-policy     /Outfund-Complaint-Policy.pdf
+/au/legal/complaint-policy     /Outfund-Complaint-Policy.pdf
+/us/legal/complaint-policy     /Outfund-Complaint-Policy.pdf
+
 # Get funded removed
 /get-funded      https://client.out.fund/signup
 /us/get-funded   https://client.out.fund/signup
@@ -108,3 +114,9 @@
 /lp/sj/apply   /flexible-finance/?utm_medium=linkedinprofile&utm_source=linkedin&utm_content=sidj
 
 /de/apply   /de/?utm_medium=linkedinmsg&utm_source=linkedin&utm_content=sidj
+
+
+# Redirects for mail campaign
+/mail23   http://client.out.fund/signup?utm_source=outbound&utm_medium=mail&utm_campaign=bluecontrol&utm_content=na
+/mail100   http://client.out.fund/signup?utm_source=outbound&utm_medium=mail&utm_campaign=bluedisc&utm_content=na
+/mail250   http://client.out.fund/signup?utm_source=outbound&utm_medium=mail&utm_campaign=bluecaba&utm_content=na

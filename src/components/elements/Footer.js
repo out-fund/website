@@ -109,7 +109,12 @@ const Footer = ({ lang }) => {
               <LinksColumn>
                 {langKey === "es" && <ColumntTitle>Apoyo</ColumntTitle>}
                 {langKey !== "es" && <ColumntTitle>Support</ColumntTitle>}
-                <Button href="https://help.out.fund/" variant="footerLink" color="white" target="_blank">
+                <Button
+                  href="https://help.out.fund/"
+                  variant="footerLink"
+                  color="white"
+                  target="_blank"
+                >
                   {links.faq.text[lang]}
                 </Button>
                 <Button
@@ -197,6 +202,11 @@ const Footer = ({ lang }) => {
             </T.BodySmaller>
           )}
           <div>
+            {" "}
+            <T.BodySmaller as={Link} to="/legal/complaint-policy/">
+              {langKey !== "es" && <>Complaint Policy</>}
+              {langKey === "es" && <>Política de quejas</>}
+            </T.BodySmaller>
             <T.BodySmaller as={Link} to="/legal/privacy-policy/">
               {langKey !== "es" && <>Privacy policy</>}
               {langKey === "es" && <>Política de privacidad</>}
