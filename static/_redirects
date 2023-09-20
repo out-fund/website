@@ -121,6 +121,6 @@
 /mail100   http://client.out.fund/signup?utm_source=outbound&utm_medium=mail&utm_campaign=bluedisc&utm_content=na
 /mail250   http://client.out.fund/signup?utm_source=outbound&utm_medium=mail&utm_campaign=bluecaba&utm_content=na
 
-/promoAM23   http://client.out.fund/signup?utm_source=outbound&utm_medium=mail&utm_campaign=am23&utm_content=na
-/promoAM100   http://client.out.fund/signup?utm_source=outbound&utm_medium=mail&utm_campaign=am100&utm_content=na
-/PromoAM250   http://client.out.fund/signup?utm_source=outbound&utm_medium=mail&utm_campaign=am250&utm_content=na
+/promo-am23   http://client.out.fund/signup?utm_source=outbound&utm_medium=mail&utm_campaign=am23&utm_content=na
+/promo-am100   http://client.out.fund/signup?utm_source=outbound&utm_medium=mail&utm_campaign=am100&utm_content=na
+/Promo-am250   http://client.out.fund/signup?utm_source=outbound&utm_medium=mail&utm_campaign=am250&utm_content=na
