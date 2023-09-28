@@ -8,10 +8,46 @@
   },
   "pages": {
     "home": {
-      "title": "Funding for everyone",
-      "description": "Outfund provides flexible revenue-based funding for all your needs. No raising interest rates to speak of, just s simple single fee."
+      "heroBox": {
+        "title": "Funding <br/> for everyone",
+        "description": "Outfund provides flexible revenue-based funding for all your needs. No raising interest rates to speak of, just s simple single fee.",
+        "button": "Get Funded",
+        "note": "It won’t affect your credit score"
+      },
+      "findOut": {
+        "title": "Find out how much <br/> you can get",
+        "description": "Funding offers are based on your average monthly revenue. Get a quick indication of your eligibility with our easy-to-use calculator.",
+        "title2": "Who can apply",
+        "list": [
+          "6+ months in business",
+          "£25k+ monthly revenue",
+          "Business registered in the UK, EU, US or AU"
+        ]
+      },
+      "calculator": {
+        "first": "How much funding do you need?",
+        "second": "Term",
+        "third": "Total repayable*",
+        "note": "* This calculator is only an example, your actual total repayable will vary based on your circumstances."
+      },
+      "clientsSay": {
+        "title": "What our clients say",
+        "clients": [
+          {
+            "company": "Bhumi",
+            "quote": "It was refreshing to work with the Outfund team who understood our needs and were practical in their assessment of our growing business.",
+            "name": "Dushyant Baravkar"
+          },
+          {
+            "company": "Mermade Hair",
+            "quote": "Outfund provided positive and supportive feedback as we worked to grow our inventory.",
+            "name": "Steve Simich"
+          }
+        ]
+      }
     }
   },
+
   "footer": {
     "copyright": "Copyright © {{ year }} Outfund. All rights reserved."
   }

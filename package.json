@@ -13,6 +13,7 @@
     "@formatjs/intl-localematcher": "^0.4.2",
     "eslint": "8.50.0",
     "eslint-config-next": "13.5.3",
+    "html-react-parser": "^4.2.2",
     "negotiator": "^0.6.3",
     "next": "13.5.3",
     "react": "18.2.0",

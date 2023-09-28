@@ -1,17 +1,13 @@
 import { locales, getHref } from "@/i18n-config"
 
-export default function HeroBox(props: {
+export default function AboutUs(props: {
   title: string | React.ReactNode
   description: string
-  button: string
-  note: string
 }) {
   return (
     <div>
-      <h1>{props.title}</h1>
+      <h2>{props.title}</h2>
       <p>{props.description}</p>
-      <button>{props.button}</button>
-      <div>{props.note}</div>
     </div>
   )
 }
