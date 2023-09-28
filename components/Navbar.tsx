@@ -12,7 +12,9 @@ const Navbar = async ({ locale }: { locale: ValidLocale }) => {
           <Link href={`/${locale}`}>Logo</Link>
         </li>
         <li>
-          <Link href="/">{t("navbar.howFundingWorks")}</Link>
+          <Link href={getHref(locale, "how-funding-works")}>
+            {t("navbar.howFundingWorks")}
+          </Link>
         </li>
         <li>
           <Link href={getHref(locale, "about-us")}>{t("navbar.aboutUs")}</Link>

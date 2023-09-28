@@ -1,8 +1,10 @@
 {
   "navbar": {
-    "howFundingWorks": "ES howFundingWorks",
-    "about": "ES About",
-    "contact": "ES Contact"
+    "howFundingWorks": "ES How funding works?",
+    "aboutUs": "ES About Us",
+    "faqs": "ES FAQs",
+    "login": "ES Login",
+    "selectCountry": "Espana"
   },
   "pages": {
     "home": {

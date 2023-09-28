@@ -4,12 +4,12 @@
     "aboutUs": "About Us",
     "faqs": "FAQs",
     "login": "Login",
-    "selectCountry": "Choose Your Country"
+    "selectCountry": "United Kingdom"
   },
   "pages": {
     "home": {
-      "title": "Home",
-      "description": "This is the home page."
+      "title": "Funding for everyone",
+      "description": "Outfund provides flexible revenue-based funding for all your needs. No raising interest rates to speak of, just s simple single fee."
     }
   },
   "footer": {

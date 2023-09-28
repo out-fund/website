@@ -1,10 +1,12 @@
+import { Metadata } from "next"
+import HeroBox from "@/components/HeroBox"
+import TrustPilotStrip from "@/components/TrustPilotStrip"
 import {
   ValidLocale,
   getTranslationObject,
   locales,
   getAlternates,
 } from "@/i18n-config"
-import { Metadata } from "next"
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }))
@@ -29,7 +31,11 @@ const HomePage = async ({ params }: { params: { locale: ValidLocale } }) => {
   // console.log(params.locale)
   return (
     <>
-      <h1>{t("pages.home.title")}</h1>
+      <HeroBox
+        title={t("pages.home.title")}
+        description={t("pages.home.description")}
+      />
+      <TrustPilotStrip />
       <footer>
         {t("footer.copyright", {
           year: new Date().getFullYear(),
