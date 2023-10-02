@@ -1,7 +1,9 @@
-import "@/styles/global.css"
+import "@/styles/Normalize.css"
 
-const GlobalLayout = ({ children }: { children: React.ReactNode }) => {
+export default function GlobalLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return <>{children}</>
 }
-
-export default GlobalLayout

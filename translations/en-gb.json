@@ -1,7 +1,7 @@
 {
   "navbar": {
     "howFundingWorks": "How funding works?",
-    "aboutUs": "About Us",
+    "aboutUs": "About us",
     "faqs": "FAQs",
     "login": "Login",
     "selectCountry": "United Kingdom"
@@ -9,9 +9,9 @@
   "pages": {
     "home": {
       "heroBox": {
-        "title": "Funding <br/> for everyone",
-        "description": "Outfund provides flexible revenue-based funding for all your needs. No raising interest rates to speak of, just s simple single fee.",
-        "button": "Get Funded",
+        "title": "Funding for <br/> any business",
+        "description": "Outfund provides flexible revenue-based funding for all your needs. No raising interest rates to speak of, just a simple single fee.",
+        "button": "Check eligibility",
         "note": "It won’t affect your credit score"
       },
       "findOut": {
