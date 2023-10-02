@@ -141,3 +141,7 @@ input,
 select {
   text-rendering: geometricPrecision;
 }
+
+li {
+  list-style: none;
+}

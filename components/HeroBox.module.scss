@@ -1,23 +1,8 @@
 .heroBox {
   background-color: var(--color-bg-dark);
-
   border-radius: 8px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
-
-.title {
-  font-size: 64px;
-  font-weight: 800;
-  line-height: 60px;
-}
-
-.description {
-  font-weight: 500;
-  letter-spacing: -0.03em;
-  font-size: 18px;
-  line-height: 32px;
-  margin-bottom: 40px;
 }
 
 .left {
@@ -28,9 +13,6 @@
   justify-self: center;
   align-self: flex-end;
   display: flex;
-  // img {
-  //   background-color: #fff;
-  // }
 }
 
 .note {

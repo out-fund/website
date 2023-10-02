@@ -2,8 +2,7 @@ import { Metadata } from "next"
 import { Work_Sans } from "next/font/google"
 import { getHtmlLang, ValidLocale } from "@/i18n-config"
 
-import Navbar from "@/components/Navbar"
-import styles from "@/styles/Global.module.scss"
+import classes from "@/styles/Global.module.scss"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://out.fund"),
@@ -28,12 +27,9 @@ const GlobalLayout = ({
   return (
     <html
       lang={getHtmlLang(params.locale)}
-      className={[workSans.className, styles.global].join(" ")}
+      className={[workSans.className, classes.global].join(" ")}
     >
-      <body>
-        <Navbar locale={params.locale} />
-        <main>{children}</main>
-      </body>
+      <body>{children}</body>
     </html>
   )
 }
