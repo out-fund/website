@@ -117,9 +117,9 @@
 
 
 # Redirects for mail campaign
-/promo300   http://client.out.fund/signup?utm_source=outbound&utm_medium=mail&utm_campaign=promo300&utm_content=na
+/promo300   http://client.out.fund/signup?utm_source=outbound&utm_medium=mail&utm_campaign=promo300&utm_content=bluemedia
 /promo101   http://client.out.fund/signup?utm_source=outbound&utm_medium=mail&utm_campaign=promo101&utm_content=na
 
-/promo23   http://client.out.fund/signup?utm_source=outbound&utm_medium=mail&utm_campaign=promo23&utm_content=na
+/promo23   http://client.out.fund/signup?utm_source=outbound&utm_medium=mail&utm_campaign=promo23&utm_content=bluemedia
 /promo100   http://client.out.fund/signup?utm_source=outbound&utm_medium=mail&utm_campaign=promo100&utm_content=na
 
