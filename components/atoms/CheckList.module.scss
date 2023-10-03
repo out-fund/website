@@ -1,0 +1,17 @@
+.checkList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  li {
+    display: flex;
+    align-items: center;
+    line-height: 24px;
+    gap: 16px;
+    font-size: 18px;
+    color: var(--color-body);
+  }
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}

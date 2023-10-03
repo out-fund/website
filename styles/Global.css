@@ -11,7 +11,6 @@ html {
 
 body {
   margin: 0;
-  letter-spacing: -0.02em;
 }
 
 main {
@@ -20,11 +19,19 @@ main {
 
 a {
   background-color: transparent;
+  /* text-decoration: none; */
 }
+
+/* a:focus {
+  text-decoration: underline !important;
+  outline: 2px solid var(--color-cobalt);
+  outline-offset: 2px;
+} */
 
 img {
   border-style: none;
 }
+
 a,
 p,
 div,
@@ -36,6 +43,7 @@ input,
 select {
   margin: 0;
   padding: 0;
+  letter-spacing: -0.02em;
 }
 
 button,
@@ -47,6 +55,7 @@ textarea {
   font-size: 100%;
   font-family: inherit;
   line-height: 1.15;
+  letter-spacing: -0.03em;
 }
 
 button,
@@ -124,11 +133,11 @@ h6 {
   color: var(--color-heading);
   margin: 0 0 1rem;
   text-rendering: geometricPrecision;
+  letter-spacing: -0.02em;
 }
 
 p {
   color: var(--color-body);
-  /* margin-bottom: 1rem; */
 }
 
 a,

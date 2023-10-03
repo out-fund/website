@@ -15,7 +15,7 @@
         "note": "It won’t affect your credit score"
       },
       "findOut": {
-        "title": "Find out how much <br/> you can get",
+        "title": "Find out how <br/> much you can get",
         "description": "Funding offers are based on your average monthly revenue. Get a quick indication of your eligibility with our easy-to-use calculator.",
         "title2": "Who can apply",
         "list": [
@@ -26,9 +26,11 @@
       },
       "calculator": {
         "first": "How much funding do you need?",
-        "second": "Term",
+        "second": "Repayment period",
         "third": "Total repayable*",
-        "note": "* This calculator is only an example, your actual total repayable will vary based on your circumstances."
+        "note": "* This calculator is only an example, your actual total repayable will vary based on your circumstances.",
+        "button": "Apply for",
+        "creditNote": "Will not affect your credit score"
       },
       "clientsSay": {
         "title": "What our clients say",

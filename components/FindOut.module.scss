@@ -1,5 +1,12 @@
 .findOut {
-  background-color: #ffa;
+  margin-top: 64px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 4fr 5fr;
+  gap: 70px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
 }

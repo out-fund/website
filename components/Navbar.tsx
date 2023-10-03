@@ -10,7 +10,7 @@ import utils from "@/styles/Utils.module.scss"
 const Navbar = async ({ locale }: { locale: ValidLocale }) => {
   const t = await getTranslationObject(locale)
   return (
-    <nav id="navbar">
+    <nav>
       <Wide>
         <div className={classes.navbar}>
           <Link href={`/${locale}`} className={classes.logo}>

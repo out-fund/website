@@ -20,5 +20,11 @@
 
   &:hover {
     text-decoration: underline;
+    outline: none;
+  }
+  &:focus {
+    text-decoration: underline !important;
+    outline: 2px solid var(--color-cobalt);
+    outline-offset: 2px;
   }
 }

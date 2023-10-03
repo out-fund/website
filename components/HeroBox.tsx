@@ -3,6 +3,8 @@ import Image from "next/image"
 import pugImage from "@/public/images/pug.png"
 
 import classes from "./HeroBox.module.scss"
+import typography from "@/styles/Typography.module.scss"
+import layout from "@/styles/Layout.module.scss"
 
 import { Wide, Button, Description, Heading1 } from "@/components/atoms"
 
@@ -13,14 +15,18 @@ export default function HeroBox(props: {
   note: string
 }) {
   return (
-    <section id="hero">
+    <section>
       <Wide>
         <div className={classes.heroBox}>
           <div className={classes.left}>
-            <Heading1>{props.title}</Heading1>
-            <Description>{props.description}</Description>
-            <Button>{props.button}</Button>
-            <div className={classes.note}>{props.note}</div>
+            <div className="textWrapper">
+              <Heading1>{props.title}</Heading1>
+              <Description>{props.description}</Description>
+            </div>
+            <div className={layout.buttonWrapper}>
+              <Button>{props.button}</Button>
+              <div className={typography.note}>{props.note}</div>
+            </div>
           </div>
           <div className={classes.right}>
             <Image
@@ -28,6 +34,9 @@ export default function HeroBox(props: {
               width={350}
               height={427}
               alt="Picture of a dog thinking about applying for a loan"
+              priority={true}
+              placeholder="blur"
+              quality={75}
             />
           </div>
         </div>

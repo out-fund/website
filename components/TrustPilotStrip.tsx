@@ -4,7 +4,7 @@ import classes from "./TrustPilotStrip.module.scss"
 
 export default function TrustPilotStrip() {
   return (
-    <section id="trustpilot">
+    <section>
       <Wide>
         <div className={classes.trustPilotStrip}>Trust Pilot Strip</div>
       </Wide>

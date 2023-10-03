@@ -1,4 +1,4 @@
-import "@/styles/Normalize.css"
+import "@/styles/Global.css"
 
 export default function GlobalLayout({
   children,

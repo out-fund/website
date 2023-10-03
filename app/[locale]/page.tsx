@@ -63,6 +63,8 @@ const HomePage = async ({ params }: { params: { locale: ValidLocale } }) => {
             second={t("pages.home.calculator.second")}
             third={t("pages.home.calculator.third")}
             note={t("pages.home.calculator.note")}
+            button={t("pages.home.calculator.button")}
+            creditNote={t("pages.home.calculator.creditNote")}
             currency="£"
           />
         </FindOut>
