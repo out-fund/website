@@ -21,8 +21,8 @@ export default function ClientsSay(props: { title: string; clients: any[] }) {
           </div>
 
           <div className={classes.grid}>
-            {props.clients.map((client) => (
-              <div key={client.company} className={classes.card}>
+            {props.clients.map((client, index) => (
+              <div key={index} className={classes.card}>
                 <div className={classes.clientLogo}>
                   <a href={client.link}>
                     <Image

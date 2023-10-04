@@ -23,7 +23,7 @@ export default function HeroBox(props: {
               <Heading1>{props.title}</Heading1>
               <Description>{props.description}</Description>
             </div>
-            <div className={layout.buttonWrapper}>
+            <div className={classes.buttonWrapper}>
               <Button>{props.button}</Button>
               <div className={typography.note}>{props.note}</div>
             </div>

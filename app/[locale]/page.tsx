@@ -51,7 +51,7 @@ const HomePage = async ({ params }: { params: { locale: ValidLocale } }) => {
         />
       </header>
       <main>
-        <TrustPilotStrip />
+        <TrustPilotStrip reviews={[...t("pages.home.trustPilotData")]} />
         <FindOut
           title={parse(t("pages.home.findOut.title"))}
           description={t("pages.home.findOut.description")}
