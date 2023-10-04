@@ -69,6 +69,6 @@ export const config = {
   // `/sitemap.xml` not sure why is this needed, but the page does not show if not added
   // `robots.txt`
   matcher: [
-    "/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|country-selector).*)",
+    "/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|country-selector|images).*)",
   ],
 }

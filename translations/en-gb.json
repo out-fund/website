@@ -37,11 +37,25 @@
         "clients": [
           {
             "company": "Bhumi",
+            "link": "https://bhumi.com.au/",
+            "quote": "It was refreshing to work with the Outfund team who understood our needs and were practical in their assessment of our growing business.",
+            "name": "Dushyant Baravkar"
+          },
+          {
+            "company": "Bhumi",
+            "link": "https://bhumi.com.au/",
+            "quote": "It was refreshing to work with the Outfund team who understood our needs and were practical in their assessment of our growing business.",
+            "name": "Dushyant Baravkar"
+          },
+          {
+            "company": "Bhumi",
+            "link": "https://bhumi.com.au/",
             "quote": "It was refreshing to work with the Outfund team who understood our needs and were practical in their assessment of our growing business.",
             "name": "Dushyant Baravkar"
           },
           {
             "company": "Mermade Hair",
+            "link": "https://www.mermadehair.com.au/",
             "quote": "Outfund provided positive and supportive feedback as we worked to grow our inventory.",
             "name": "Steve Simich"
           }
