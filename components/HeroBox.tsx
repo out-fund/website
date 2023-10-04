@@ -31,7 +31,7 @@ export default function HeroBox(props: {
           <div className={classes.right}>
             <Image
               src={pugImage}
-              width={350}
+              width={424}
               height={427}
               alt="Picture of a dog thinking about applying for a loan"
               priority={true}
