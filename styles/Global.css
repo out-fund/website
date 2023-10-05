@@ -131,7 +131,7 @@ h4,
 h5,
 h6 {
   color: var(--color-heading);
-  margin: 0 0 1rem;
+  margin: 0;
   text-rendering: geometricPrecision;
   letter-spacing: -0.02em;
 }

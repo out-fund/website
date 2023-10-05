@@ -19,7 +19,7 @@ export default function HeroBox(props: {
       <Wide>
         <div className={classes.heroBox}>
           <div className={classes.left}>
-            <div className="textWrapper">
+            <div className={classes.heroBox__textWrapper}>
               <Heading1>{props.title}</Heading1>
               <Description>{props.description}</Description>
             </div>

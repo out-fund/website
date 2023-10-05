@@ -1,0 +1,21 @@
+.ourPartners {
+  // background-color: #faf;
+  margin-top: 80px;
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 32px;
+  }
+  &__bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+      height: 30px;
+      width: auto;
+    }
+  }
+}

@@ -9,6 +9,7 @@ import {
   Calculator,
   ClientsSay,
   AboutUs,
+  OurPartners,
 } from "@/components"
 
 import {
@@ -71,6 +72,20 @@ const HomePage = async ({ params }: { params: { locale: ValidLocale } }) => {
         <ClientsSay
           title={t("pages.home.clientsSay.title")}
           clients={...t("pages.home.clientsSay.clients")}
+        />
+
+        <OurPartners
+          title={t("pages.home.ourPartners.title")}
+          description={t("pages.home.ourPartners.description")}
+          logos={[
+            "aws",
+            "payfit",
+            "klaviyo",
+            "wise",
+            "triplewhale",
+            "xero",
+            "shipbob",
+          ]}
         />
 
         <AboutUs title="About us" description="desc" />

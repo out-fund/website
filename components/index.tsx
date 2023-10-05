@@ -5,6 +5,7 @@ import Calculator from "./Calculator"
 import ClientsSay from "./ClientsSay"
 import AboutUs from "./AboutUs"
 import Navbar from "./Navbar"
+import OurPartners from "./OurPartners"
 
 export {
   HeroBox,
@@ -14,4 +15,5 @@ export {
   ClientsSay,
   AboutUs,
   Navbar,
+  OurPartners,
 }
