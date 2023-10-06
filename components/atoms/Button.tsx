@@ -1,7 +1,7 @@
-import styles from "./Button.module.scss"
+// import styles from "./Button.module.scss"
 
 const Button = ({ children }: { children: React.ReactNode }) => {
-  return <button className={styles.button}>{children}</button>
+  return <button className="">{children}</button>
 }
 
 export default Button

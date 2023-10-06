@@ -1,13 +1,7 @@
 import Link from "next/link"
-import { getHref } from "@/i18n-config"
 import { ValidLocale, getTranslationObject } from "@/i18n-config"
 
-import { Logo, Wide } from "@/components/atoms"
-
-import PageLink from "./atoms/PageLink"
-
-import classes from "./Navbar.module.scss"
-import utils from "@/styles/Utils.module.scss"
+import { Logo, Wide, PageLink } from "@/components/atoms"
 
 const Navbar = async ({ locale }: { locale: ValidLocale }) => {
   const t = await getTranslationObject(locale)
