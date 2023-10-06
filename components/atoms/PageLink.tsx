@@ -17,7 +17,7 @@ const PageLink = (props: PageLinkProps) => {
       <Link
         href={props.href}
         className={cn(
-          "text-cobalt text-base font-[500] tracking-tight antialiased hover:underline",
+          "text-cobalt text-base font-[500] tracking-tight antialiased hover:underline focus:underline focus:outline-none",
           props.className,
         )}
       >
@@ -28,7 +28,7 @@ const PageLink = (props: PageLinkProps) => {
     <Link
       href={getHref(props.locale!, props.page!)}
       className={cn(
-        "text-cobalt text-base font-[500] tracking-tight antialiased hover:underline",
+        "text-cobalt text-base font-[500] tracking-tight antialiased hover:underline focus:underline focus:outline-none",
         props.className,
       )}
     >

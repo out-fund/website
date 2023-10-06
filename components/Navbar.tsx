@@ -19,7 +19,7 @@ const Navbar = async ({ locale }: { locale: ValidLocale }) => {
             <span className="sr-only">Outfund</span>
             <Logo className="h-[26px] w-[142px]" />
           </Link>
-          <ul className="flex items-center ">
+          <ul className="relative top-[6px] ml-8 flex items-center gap-8">
             <li>
               <PageLink page="how-funding-works" locale={locale}>
                 {t("navbar.howFundingWorks")}
@@ -36,25 +36,24 @@ const Navbar = async ({ locale }: { locale: ValidLocale }) => {
               </PageLink>
             </li>
           </ul>
-          <ul className="ml-auto flex items-center">
+          <ul className="relative top-[6px] ml-auto flex items-center gap-3">
             <li>
-              <Link
+              <PageLink
                 href="https://client.out.fund/signin"
-                className="text-text text-base font-[500] tracking-tight antialiased hover:underline"
+                className="text-text"
               >
                 {t("navbar.login")}
-              </Link>
+              </PageLink>
+            </li>
+            <li>
+              <i className="bg-text block h-2 w-px opacity-50"></i>
             </li>
 
             <li>
-              {/* <PageLink
-                href="/country-selector"
-                className="text-text flex items-center gap-1 "
-              > */}
               <PageLink
                 page="country-selector"
                 locale=""
-                className="text-text flex items-center gap-1 "
+                className="text-text flex items-center gap-1"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
