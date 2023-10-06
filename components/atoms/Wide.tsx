@@ -1,7 +1,5 @@
-import styles from "./Wide.module.scss"
-
 const Wide = ({ children }: { children: React.ReactNode }) => {
-  return <div className={styles.wide}>{children}</div>
+  return <div className="mx-auto max-w-[1200px] px-[15px]">{children}</div>
 }
 
 export default Wide

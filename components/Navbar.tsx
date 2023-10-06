@@ -4,6 +4,8 @@ import { ValidLocale, getTranslationObject } from "@/i18n-config"
 
 import { Logo, Wide } from "@/components/atoms"
 
+import PageLink from "./atoms/PageLink"
+
 import classes from "./Navbar.module.scss"
 import utils from "@/styles/Utils.module.scss"
 
@@ -12,39 +14,53 @@ const Navbar = async ({ locale }: { locale: ValidLocale }) => {
   return (
     <nav>
       <Wide>
-        <div className={classes.navbar}>
-          <Link href={`/${locale}`} className={classes.logo}>
-            <span className={utils.visuallyHidden}>Outfund</span>
-            <Logo />
+        <div className="flex h-15 items-center">
+          <Link href={`/${locale}`} className="grid">
+            <span className="sr-only">Outfund</span>
+            <Logo className="h-[26px] w-[142px]" />
           </Link>
-          <ul className={classes.primaryLinks}>
+          <ul className="flex items-center ">
             <li>
-              <Link href={getHref(locale, "how-funding-works")}>
+              <PageLink page="how-funding-works" locale={locale}>
                 {t("navbar.howFundingWorks")}
-              </Link>
+              </PageLink>
             </li>
             <li>
-              <Link href={getHref(locale, "about-us")}>
+              <PageLink page="about-us" locale={locale}>
                 {t("navbar.aboutUs")}
-              </Link>
+              </PageLink>
             </li>
             <li>
-              <Link href="/">{t("navbar.faqs")}</Link>
+              <PageLink page="faq" locale={locale}>
+                {t("navbar.faqs")}
+              </PageLink>
             </li>
           </ul>
-          <ul className={classes.secondaryLinks}>
+          <ul className="ml-auto flex items-center">
             <li>
-              <Link href="/">{t("navbar.login")}</Link>
+              <Link
+                href="https://client.out.fund/signin"
+                className="text-text text-base font-[500] tracking-tight antialiased hover:underline"
+              >
+                {t("navbar.login")}
+              </Link>
             </li>
+
             <li>
-              <i></i>
-            </li>
-            <li className={classes.countrySelector}>
-              <Link href="/country-selector">
+              {/* <PageLink
+                href="/country-selector"
+                className="text-text flex items-center gap-1 "
+              > */}
+              <PageLink
+                page="country-selector"
+                locale=""
+                className="text-text flex items-center gap-1 "
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 16 16"
+                  className="h-[14px] w-[14px]"
                 >
                   <path
                     stroke="#1C3654"
@@ -67,7 +83,7 @@ const Navbar = async ({ locale }: { locale: ValidLocale }) => {
                 </svg>
 
                 {t("navbar.selectCountry")}
-              </Link>
+              </PageLink>
             </li>
           </ul>
         </div>

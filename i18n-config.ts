@@ -62,7 +62,10 @@ export const getHtmlLang = (locale: string) => {
 }
 
 export const getHref = (currentLocale: string, page: string) => {
-  if (page) return `/${currentLocale}/${page}`
+  if (page) {
+    if (currentLocale) return `/${currentLocale}/${page}`
+    return `/${page}`
+  }
   return `/${currentLocale}`
 }
 
