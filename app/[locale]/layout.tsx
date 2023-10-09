@@ -24,7 +24,9 @@ const GlobalLayout = ({
 }) => {
   return (
     <html lang={getHtmlLang(params.locale)} className={workSans.className}>
-      <body className="box-border bg-white">{children}</body>
+      <body className="box-border bg-white tracking-tighter text-text	">
+        {children}
+      </body>
     </html>
   )
 }

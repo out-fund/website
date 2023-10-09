@@ -40,20 +40,20 @@ const Navbar = async ({ locale }: { locale: ValidLocale }) => {
               </PageLink>
             </li>
             <li>
-              <i className="bg-text block h-2 w-px opacity-50"></i>
+              <i className="block h-2 w-px bg-text opacity-50"></i>
             </li>
 
             <li>
               <PageLink
                 page="country-selector"
                 locale=""
-                className="text-text flex items-center gap-1"
+                className="flex items-center gap-1 text-text"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 16 16"
-                  className="h-[14px] w-[14px]"
+                  className="h-[16px] w-[16px]"
                 >
                   <path
                     stroke="#1C3654"

@@ -17,18 +17,18 @@ export default function HeroBox(props: {
   return (
     <section>
       <Wide>
-        <div className={classes.heroBox}>
-          <div className={classes.left}>
-            <div className={classes.heroBox__textWrapper}>
+        <div className="bg-bgDark grid grid-cols-2 rounded-lg">
+          <div className="flex flex-col gap-6 pb-7 pl-[100px] pt-7">
+            <div className="flex flex-col gap-2 ">
               <Heading1>{props.title}</Heading1>
               <Description>{props.description}</Description>
             </div>
-            <div className={classes.buttonWrapper}>
+            <div className="flex flex-col items-start gap-1	">
               <Button>{props.button}</Button>
-              <div className={typography.note}>{props.note}</div>
+              <div className="text-xs opacity-70">{props.note}</div>
             </div>
           </div>
-          <div className={classes.right}>
+          <div className="self-end justify-self-center">
             <Image
               src={pugImage}
               width={424}
