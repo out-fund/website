@@ -33,6 +33,8 @@ const config: Config = {
       base: ["18px", "28px"],
       lg: ["20px", "28px"],
       xl: ["24px", "32px"],
+      "2xl": ["32px", "32px"],
+      "3xl": ["40px", "40px"],
       "6xl": ["64px", "60px"],
     },
     letterSpacing: {

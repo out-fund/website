@@ -1,7 +1,16 @@
-import styles from "./Heading3.module.scss"
+import { cn } from "@/lib/utils"
 
-const Heading3 = ({ children }: { children: React.ReactNode }) => {
-  return <h1 className={styles.heading3}>{children}</h1>
+type HeadingProps = {
+  className?: string
+  children: React.ReactNode
+}
+
+const Heading3 = (props: HeadingProps) => {
+  return (
+    <h3 className={cn("text-2xl font-extrabold", props.className)}>
+      {props.children}
+    </h3>
+  )
 }
 
 export default Heading3

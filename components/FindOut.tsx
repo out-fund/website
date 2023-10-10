@@ -8,8 +8,6 @@ import {
   CheckList,
 } from "@/components/atoms"
 
-import classes from "./FindOut.module.scss"
-
 export default function FindOut(props: {
   title: string | React.ReactNode
   description: string
@@ -20,18 +18,18 @@ export default function FindOut(props: {
   return (
     <section>
       <Medium>
-        <div className={classes.findOut}>
-          <div className={classes.left}>
-            <div className="top">
-              <Heading2>{props.title}</Heading2>
+        <div className="mt-10 grid grid-cols-[4fr_5fr] gap-9">
+          <div className="flex flex-col gap-6">
+            <div className="">
+              <Heading2 className="mb-2">{props.title}</Heading2>
               <Description>{props.description}</Description>
             </div>
-            <div className="bottom">
-              <Heading3>{props.title2}</Heading3>
+            <div className="">
+              <Heading3 className="mb-2">{props.title2}</Heading3>
               <CheckList items={props.list} />
             </div>
           </div>
-          <div className={classes.right}>{props.children}</div>
+          <div className="">{props.children}</div>
         </div>
       </Medium>
     </section>

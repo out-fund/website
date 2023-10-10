@@ -17,7 +17,7 @@ export default function HeroBox(props: {
   return (
     <section>
       <Wide>
-        <div className="bg-bgDark grid grid-cols-2 rounded-lg">
+        <div className="grid grid-cols-2 rounded-lg bg-bgDark">
           <div className="flex flex-col gap-6 pb-7 pl-[100px] pt-7">
             <div className="flex flex-col gap-2 ">
               <Heading1>{props.title}</Heading1>
@@ -25,7 +25,9 @@ export default function HeroBox(props: {
             </div>
             <div className="flex flex-col items-start gap-1	">
               <Button>{props.button}</Button>
-              <div className="text-xs opacity-70">{props.note}</div>
+              <div className="text-xs tracking-tight opacity-70">
+                {props.note}
+              </div>
             </div>
           </div>
           <div className="self-end justify-self-center">
