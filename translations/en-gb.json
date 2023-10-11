@@ -151,6 +151,11 @@
         "title": "Our portfolio of partners",
         "description": "Helping you grow"
       }
+    },
+    "howItWorks": {
+      "heroBox": {
+        "title": "How our funding works"
+      }
     }
   },
 

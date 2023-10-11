@@ -1,7 +1,6 @@
 import Link from "next/link"
 import { getHref } from "@/i18n-config"
 import { cn } from "@/lib/utils"
-// import type { ValidLocale } from "@/i18n-config"
 
 type PageLinkProps = {
   className?: string

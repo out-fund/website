@@ -8,12 +8,15 @@ import layout from "@/styles/Layout.module.scss"
 
 import { Wide, Button, Description, Heading1 } from "@/components/atoms"
 
-export default function HeroBox(props: {
-  title: string | React.ReactNode
+type HeroBoxProps = {
+  title: string
   description: string
   button: string
   note: string
-}) {
+  image: JSX.Element
+}
+
+export default function HeroBox(props: HeroBoxProps) {
   return (
     <section>
       <Wide>
@@ -31,7 +34,8 @@ export default function HeroBox(props: {
             </div>
           </div>
           <div className="self-end justify-self-center">
-            <Image
+            {props.image}
+            {/* <Image
               src={pugImage}
               width={424}
               height={427}
@@ -39,7 +43,7 @@ export default function HeroBox(props: {
               priority={true}
               placeholder="blur"
               quality={75}
-            />
+            /> */}
           </div>
         </div>
       </Wide>

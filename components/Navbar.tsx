@@ -1,9 +1,14 @@
+// "use client"
+
+// import { usePathname } from "next/navigation"
 import Link from "next/link"
 import { ValidLocale, getTranslationObject } from "@/i18n-config"
 
 import { Logo, Wide, PageLink } from "@/components/atoms"
 
 const Navbar = async ({ locale }: { locale: ValidLocale }) => {
+  // const pathname = usePathname()
+  // console.log(pathname)
   const t = await getTranslationObject(locale)
   return (
     <nav>
