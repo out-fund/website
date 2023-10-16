@@ -65,7 +65,7 @@ type HomePageDocumentDataSlicesSlice = never
  */
 interface HomePageDocumentData {
   /**
-   * Title field in *Home Page*
+   * Title (Browser Tab Title) field in *Home Page*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -85,6 +85,17 @@ interface HomePageDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
   slices: prismic.SliceZone<HomePageDocumentDataSlicesSlice>
+  /**
+   * Meta Title (Social Share) field in *Home Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: home_page.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_title: prismic.KeyTextField
+
   /**
    * Meta Description field in *Home Page*
    *
@@ -106,17 +117,6 @@ interface HomePageDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   meta_image: prismic.ImageField<never>
-
-  /**
-   * Meta Title field in *Home Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: home_page.meta_title
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  meta_title: prismic.KeyTextField
 }
 
 /**
