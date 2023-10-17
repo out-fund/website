@@ -5,6 +5,8 @@ import { worksans } from "@/utils/font"
 import cn from "@/utils/cn"
 import "@/styles/globals.css"
 
+import Header from "@/components/Header"
+
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient()
   const globalSEO = await client.getSingle("global_seo")
@@ -27,7 +29,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={cn(worksans.className)}>
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
