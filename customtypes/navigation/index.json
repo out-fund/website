@@ -5,7 +5,7 @@
   "repeatable": false,
   "status": true,
   "json": {
-    "Main": {
+    "Navbar": {
       "navbar_links": {
         "type": "Group",
         "config": {
@@ -15,6 +15,77 @@
               "type": "Text",
               "config": {
                 "label": "Label",
+                "placeholder": ""
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "select": null
+              }
+            }
+          }
+        }
+      }
+    },
+    "Footer": {
+      "company_links": {
+        "type": "Group",
+        "config": {
+          "label": "Company Links",
+          "fields": {
+            "label": {
+              "type": "Text",
+              "config": {
+                "label": "Label",
+                "placeholder": ""
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "select": null
+              }
+            }
+          }
+        }
+      },
+      "funding_links": {
+        "type": "Group",
+        "config": {
+          "label": "Funding Links",
+          "fields": {
+            "label": {
+              "type": "Text",
+              "config": {
+                "label": "label",
+                "placeholder": ""
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "select": null
+              }
+            }
+          }
+        }
+      },
+      "support_links": {
+        "type": "Group",
+        "config": {
+          "label": "Support Links",
+          "fields": {
+            "label": {
+              "type": "Text",
+              "config": {
+                "label": "label",
                 "placeholder": ""
               }
             },

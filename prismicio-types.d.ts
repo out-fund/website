@@ -161,6 +161,81 @@ export interface NavigationDocumentDataNavbarLinksItem {
 }
 
 /**
+ * Item in *Navigation → Company Links*
+ */
+export interface NavigationDocumentDataCompanyLinksItem {
+  /**
+   * Label field in *Navigation → Company Links*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.company_links[].label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField
+
+  /**
+   * Link field in *Navigation → Company Links*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.company_links[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField
+}
+
+/**
+ * Item in *Navigation → Funding Links*
+ */
+export interface NavigationDocumentDataFundingLinksItem {
+  /**
+   * label field in *Navigation → Funding Links*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.funding_links[].label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField
+
+  /**
+   * Link field in *Navigation → Funding Links*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.funding_links[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField
+}
+
+/**
+ * Item in *Navigation → Support Links*
+ */
+export interface NavigationDocumentDataSupportLinksItem {
+  /**
+   * label field in *Navigation → Support Links*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.support_links[].label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField
+
+  /**
+   * Link field in *Navigation → Support Links*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.support_links[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField
+}
+
+/**
  * Content for Navigation documents
  */
 interface NavigationDocumentData {
@@ -170,11 +245,49 @@ interface NavigationDocumentData {
    * - **Field Type**: Group
    * - **Placeholder**: *None*
    * - **API ID Path**: navigation.navbar_links[]
-   * - **Tab**: Main
+   * - **Tab**: Navbar
    * - **Documentation**: https://prismic.io/docs/field#group
    */
   navbar_links: prismic.GroupField<
     Simplify<NavigationDocumentDataNavbarLinksItem>
+  >
+  /**
+   * Company Links field in *Navigation*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.company_links[]
+   * - **Tab**: Footer
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  company_links: prismic.GroupField<
+    Simplify<NavigationDocumentDataCompanyLinksItem>
+  >
+
+  /**
+   * Funding Links field in *Navigation*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.funding_links[]
+   * - **Tab**: Footer
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  funding_links: prismic.GroupField<
+    Simplify<NavigationDocumentDataFundingLinksItem>
+  >
+
+  /**
+   * Support Links field in *Navigation*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.support_links[]
+   * - **Tab**: Footer
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  support_links: prismic.GroupField<
+    Simplify<NavigationDocumentDataSupportLinksItem>
   >
 }
 
@@ -217,6 +330,9 @@ declare module "@prismicio/client" {
       NavigationDocument,
       NavigationDocumentData,
       NavigationDocumentDataNavbarLinksItem,
+      NavigationDocumentDataCompanyLinksItem,
+      NavigationDocumentDataFundingLinksItem,
+      NavigationDocumentDataSupportLinksItem,
       AllDocumentTypes,
     }
   }
