@@ -7,7 +7,7 @@ export default async function Footer() {
   const navigation = await client.getSingle("navigation")
 
   return (
-    <header>
+    <footer>
       <div className="logo">
         <Link href="/">Outfund</Link>
       </div>
@@ -33,6 +33,19 @@ export default async function Footer() {
           </li>
         ))}
       </ul>
-    </header>
+
+      <div>
+        Copyright © {new Date().getFullYear()} Outfund.{" "}
+        {navigation.data.copyright}
+      </div>
+      <div>{navigation.data.fca_statement}</div>
+      <ul>
+        {navigation.data.policy_links.map(({ label, link }) => (
+          <li key={label}>
+            <PrismicNextLink field={link}>{label}</PrismicNextLink>
+          </li>
+        ))}
+      </ul>
+    </footer>
   )
 }

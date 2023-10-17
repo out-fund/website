@@ -100,6 +100,45 @@
           }
         }
       }
+    },
+    "Legal": {
+      "policy_links": {
+        "type": "Group",
+        "config": {
+          "label": "Policy Links",
+          "fields": {
+            "label": {
+              "type": "Text",
+              "config": {
+                "label": "Label",
+                "placeholder": ""
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "link",
+                "placeholder": "",
+                "select": null
+              }
+            }
+          }
+        }
+      },
+      "copyright": {
+        "type": "Text",
+        "config": {
+          "label": "Copyright",
+          "placeholder": ""
+        }
+      },
+      "fca_statement": {
+        "type": "Text",
+        "config": {
+          "label": "FCA Statement",
+          "placeholder": ""
+        }
+      }
     }
   }
 }

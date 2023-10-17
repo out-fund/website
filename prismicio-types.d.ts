@@ -236,6 +236,31 @@ export interface NavigationDocumentDataSupportLinksItem {
 }
 
 /**
+ * Item in *Navigation → Policy Links*
+ */
+export interface NavigationDocumentDataPolicyLinksItem {
+  /**
+   * Label field in *Navigation → Policy Links*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.policy_links[].label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField
+
+  /**
+   * link field in *Navigation → Policy Links*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.policy_links[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField
+}
+
+/**
  * Content for Navigation documents
  */
 interface NavigationDocumentData {
@@ -289,6 +314,40 @@ interface NavigationDocumentData {
   support_links: prismic.GroupField<
     Simplify<NavigationDocumentDataSupportLinksItem>
   >
+  /**
+   * Policy Links field in *Navigation*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.policy_links[]
+   * - **Tab**: Legal
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  policy_links: prismic.GroupField<
+    Simplify<NavigationDocumentDataPolicyLinksItem>
+  >
+
+  /**
+   * Copyright field in *Navigation*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.copyright
+   * - **Tab**: Legal
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  copyright: prismic.KeyTextField
+
+  /**
+   * FCA Statement field in *Navigation*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.fca_statement
+   * - **Tab**: Legal
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  fca_statement: prismic.KeyTextField
 }
 
 /**
@@ -333,6 +392,7 @@ declare module "@prismicio/client" {
       NavigationDocumentDataCompanyLinksItem,
       NavigationDocumentDataFundingLinksItem,
       NavigationDocumentDataSupportLinksItem,
+      NavigationDocumentDataPolicyLinksItem,
       AllDocumentTypes,
     }
   }
