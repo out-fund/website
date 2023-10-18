@@ -372,6 +372,106 @@ export type AllDocumentTypes =
   | NavigationDocument
 
 /**
+ * Primary content in *ClientsSay → Primary*
+ */
+export interface ClientsSaySliceDefaultPrimary {
+  /**
+   * Heading field in *ClientsSay → Primary*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: clients_say.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading: prismic.TitleField
+}
+
+/**
+ * Primary content in *ClientsSay → Items*
+ */
+export interface ClientsSaySliceDefaultItem {
+  /**
+   * Company Name field in *ClientsSay → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: clients_say.items[].company_name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  company_name: prismic.KeyTextField
+
+  /**
+   * Company Logo field in *ClientsSay → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: clients_say.items[].company_logo
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  company_logo: prismic.ImageField<never>
+
+  /**
+   * Quote field in *ClientsSay → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: clients_say.items[].quote
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  quote: prismic.RichTextField
+
+  /**
+   * Profile Image field in *ClientsSay → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: clients_say.items[].profile_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  profile_image: prismic.ImageField<never>
+
+  /**
+   * Author field in *ClientsSay → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: clients_say.items[].author
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  author: prismic.KeyTextField
+}
+
+/**
+ * Default variation for ClientsSay Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ClientsSaySliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ClientsSaySliceDefaultPrimary>,
+  Simplify<ClientsSaySliceDefaultItem>
+>
+
+/**
+ * Slice variation for *ClientsSay*
+ */
+type ClientsSaySliceVariation = ClientsSaySliceDefault
+
+/**
+ * ClientsSay Shared Slice
+ *
+ * - **API ID**: `clients_say`
+ * - **Description**: ClientsSay
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ClientsSaySlice = prismic.SharedSlice<
+  "clients_say",
+  ClientsSaySliceVariation
+>
+
+/**
  * Primary content in *Hero → Primary*
  */
 export interface HeroSliceDefaultPrimary {
@@ -466,6 +566,11 @@ declare module "@prismicio/client" {
       NavigationDocumentDataSupportLinksItem,
       NavigationDocumentDataPolicyLinksItem,
       AllDocumentTypes,
+      ClientsSaySlice,
+      ClientsSaySliceDefaultPrimary,
+      ClientsSaySliceDefaultItem,
+      ClientsSaySliceVariation,
+      ClientsSaySliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
