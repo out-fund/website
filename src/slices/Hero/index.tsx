@@ -1,6 +1,24 @@
 import { Content } from "@prismicio/client"
 import { PrismicNextImage } from "@prismicio/next"
-import { PrismicRichText, SliceComponentProps } from "@prismicio/react"
+import {
+  JSXMapSerializer,
+  PrismicRichText,
+  SliceComponentProps,
+} from "@prismicio/react"
+
+import Wrapper from "@/components/atoms/Wrapper"
+import Button from "@/components/atoms/Button"
+import Heading from "@/components/atoms/Heading"
+
+const components: JSXMapSerializer = {
+  // heading1: ({ children }) => <h1 className="">{children}</h1>,
+  heading1: ({ children }) => (
+    <Heading as="h1" className="test">
+      {children}
+    </Heading>
+  ),
+  paragraph: ({ children }) => <p className="">{children}</p>,
+}
 
 /**
  * Props for `Hero`.
@@ -16,11 +34,20 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      {/* Placeholder component for hero (variation: {slice.variation}) Slices */}
-      <PrismicRichText field={slice.primary.heading} />
-      <PrismicRichText field={slice.primary.description} />
-      <button>{slice.primary.button_text}</button>
-      <PrismicNextImage field={slice.primary.image} />
+      <Wrapper>
+        {/* TODO: Update styling with Tailwind in the class names */}
+        <PrismicRichText
+          field={slice.primary.heading}
+          components={components}
+        />
+        <PrismicRichText
+          field={slice.primary.description}
+          components={components}
+        />
+        {/* <Link href="/">{slice.primary.button_text}</Link> */}
+        <Button href="/">{slice.primary.button_text}</Button>
+        <PrismicNextImage field={slice.primary.image} />
+      </Wrapper>
     </section>
   )
 }

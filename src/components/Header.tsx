@@ -1,6 +1,9 @@
 import { createClient } from "@/prismicio"
 import { PrismicNextLink } from "@prismicio/next"
-import Link from "next/link"
+// import Link from "next/link"
+import Wrapper from "@/components/atoms/Wrapper"
+
+import Link from "@/components/atoms/Link"
 
 export default async function Header() {
   const client = createClient()
@@ -8,19 +11,20 @@ export default async function Header() {
 
   return (
     <header>
-      <h1>Header</h1>
-      <div className="logo">
-        <Link href="/">Outfund</Link>
-      </div>
-      <nav>
-        <ul>
-          {navigation.data.navbar_links.map(({ label, link }) => (
-            <li key={label}>
-              <PrismicNextLink field={link}>{label}</PrismicNextLink>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <Wrapper>
+        <div className="logo">
+          <Link href="/">Outfund</Link>
+        </div>
+        <nav>
+          <ul>
+            {navigation.data.navbar_links.map(({ label, link }) => (
+              <li key={label}>
+                <Link field={link}>{label}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </Wrapper>
     </header>
   )
 }
