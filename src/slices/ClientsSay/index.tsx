@@ -44,7 +44,13 @@ const ClientsSay = ({ slice }: ClientsSayProps): JSX.Element => {
               {item.company_name}
               <PrismicNextImage field={item.company_logo} />
               <PrismicRichText field={item.quote} components={components} />
-              <PrismicNextImage field={item.profile_image} />
+              <PrismicNextImage
+                field={item.profile_image}
+                imgixParams={{
+                  ar: "1:1",
+                  fit: "crop",
+                }}
+              />
               {item.author}
             </div>
           ))}
