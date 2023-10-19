@@ -34,7 +34,10 @@
           "type": "Image",
           "config": {
             "label": "Company Logo",
-            "constraint": {},
+            "constraint": {
+              "width": 160,
+              "height": 40
+            },
             "thumbnails": []
           }
         },
@@ -51,7 +54,10 @@
           "type": "Image",
           "config": {
             "label": "Profile Image",
-            "constraint": {},
+            "constraint": {
+              "width": 80,
+              "height": 80
+            },
             "thumbnails": []
           }
         },

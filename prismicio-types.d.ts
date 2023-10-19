@@ -58,7 +58,7 @@ export type GlobalSeoDocument<Lang extends string = string> =
     Lang
   >
 
-type HomePageDocumentDataSlicesSlice = HeroSlice
+type HomePageDocumentDataSlicesSlice = ClientsSaySlice | HeroSlice
 
 /**
  * Content for Home Page documents
