@@ -9,8 +9,8 @@
       "title": {
         "type": "Text",
         "config": {
-          "label": "Title (Browser Tab Title)",
-          "placeholder": ""
+          "label": "Title",
+          "placeholder": "Browser Tab Title"
         }
       },
       "slices": {

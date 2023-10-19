@@ -65,10 +65,10 @@ type HomePageDocumentDataSlicesSlice = ClientsSaySlice | HeroSlice
  */
 interface HomePageDocumentData {
   /**
-   * Title (Browser Tab Title) field in *Home Page*
+   * Title field in *Home Page*
    *
    * - **Field Type**: Text
-   * - **Placeholder**: *None*
+   * - **Placeholder**: Browser Tab Title
    * - **API ID Path**: home_page.title
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#key-text
@@ -376,7 +376,7 @@ interface PageDocumentData {
    * Title field in *Page*
    *
    * - **Field Type**: Text
-   * - **Placeholder**: *None*
+   * - **Placeholder**: Browser Tab Title
    * - **API ID Path**: page.title
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#key-text
