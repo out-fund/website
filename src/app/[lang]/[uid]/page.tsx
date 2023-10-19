@@ -19,24 +19,49 @@ export default async function Page({ params }: { params: Params }) {
     .catch(() => notFound())
 
   const locales = await getTranslatedLocales(page, client)
-  console.log("translated-locales", locales)
+  // console.log("translated-locales", locales)
 
   return <SliceZone slices={page.data.slices} components={components} />
 }
 
-// export async function generateMetadata({
-//   params,
-// }: {
-//   params: Params
-// }): Promise<Metadata> {
-//   const client = createClient()
-//   const page = await client.getByUID("page", params.uid).catch(() => notFound())
+export async function generateMetadata({
+  params,
+}: {
+  params: Params
+}): Promise<Metadata> {
+  const client = createClient()
+  const page = await client.getByUID("page", params.uid).catch(() => notFound())
 
-//   return {
-//     title: page.data.meta_title,
-//     description: page.data.meta_description,
-//   }
-// }
+  return {
+    // title: page.data.meta_title,
+    // description: page.data.meta_description,
+    metadataBase: new URL("https://acme.com"),
+    title: page.data.title,
+    alternates: {
+      canonical: "/",
+      languages: {
+        "en-US": "/en-US",
+        "de-DE": "/de-DE",
+      },
+    },
+    openGraph: {
+      title: "Next.js",
+      description: "The React Framework for the Web",
+      url: "https://nextjs.org",
+      siteName: "Next.js",
+      images: [
+        {
+          url: "https://nextjs.org/og-alt.png",
+          width: 1800,
+          height: 1600,
+          alt: "My custom alt",
+        },
+      ],
+      locale: "en_US",
+      type: "website",
+    },
+  }
+}
 
 // export async function generateStaticParams() {
 //   const client = createClient()

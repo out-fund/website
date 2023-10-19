@@ -40,10 +40,34 @@ export async function generateMetadata({ params }: PageProps) {
   const client = createClient()
   const page = await client.getByUID("page", "home", { lang: params.lang })
 
-  console.log("page-data", page.data)
+  // console.log("page-data", page.data)
 
   return {
-    title: page.data.title,
+    metadataBase: new URL("https://acme.com"),
+    title: `${page.data.title} | Outfund`,
+    alternates: {
+      canonical: "/",
+      languages: {
+        "en-US": "/en-US",
+        "de-DE": "/de-DE",
+      },
+    },
+    openGraph: {
+      title: "Next.js",
+      description: "The React Framework for the Web",
+      url: "https://nextjs.org",
+      siteName: "Next.js",
+      images: [
+        {
+          url: "https://nextjs.org/og-alt.png",
+          width: 1800,
+          height: 1600,
+          alt: "My custom alt",
+        },
+      ],
+      locale: "en_US",
+      type: "website",
+    },
   }
 }
 

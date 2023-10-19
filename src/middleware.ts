@@ -8,7 +8,7 @@ export async function middleware(request: IncomingMessage) {
   const repository = await client.getRepository()
 
   const locales = repository.languages.map((lang) => lang.id)
-  console.log("locales-middleware", locales)
+  // console.log("locales-middleware", locales)
   // const defaultLocale = locales[0]
 
   // // Check if there is any supported locale in the pathname
