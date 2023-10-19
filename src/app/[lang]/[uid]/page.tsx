@@ -4,7 +4,7 @@ import { SliceZone } from "@prismicio/react"
 
 import { createClient } from "@/prismicio"
 import { components } from "@/slices"
-import { getTranslatedLocales } from "@/utils/getTranslatedLocales"
+import { getTranslatedLocales } from "@/lib/getTranslatedLocales"
 
 type Params = {
   uid: string

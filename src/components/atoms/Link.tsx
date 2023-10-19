@@ -1,5 +1,5 @@
 import { PrismicNextLink, PrismicNextLinkProps } from "@prismicio/next"
-import cn from "@/utils/cn"
+import cn from "@/lib/cn"
 
 // type LinkProps = {
 //   className,
