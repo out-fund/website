@@ -20,52 +20,31 @@
             "allowTargetBlank": true,
             "single": "heading2"
           }
+        },
+        "cta_title": {
+          "type": "Text",
+          "config": {
+            "label": "CTA Title",
+            "placeholder": ""
+          }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": ""
+          }
         }
       },
       "items": {
-        "company_name": {
-          "type": "Text",
+        "testimonial": {
+          "type": "Link",
           "config": {
-            "label": "Company Name",
-            "placeholder": ""
-          }
-        },
-        "company_logo": {
-          "type": "Image",
-          "config": {
-            "label": "Company Logo",
-            "constraint": {
-              "width": 160,
-              "height": 40
-            },
-            "thumbnails": []
-          }
-        },
-        "quote": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Quote",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph"
-          }
-        },
-        "profile_image": {
-          "type": "Image",
-          "config": {
-            "label": "Profile Image",
-            "constraint": {
-              "width": 80,
-              "height": 80
-            },
-            "thumbnails": []
-          }
-        },
-        "author": {
-          "type": "Text",
-          "config": {
-            "label": "Author",
-            "placeholder": ""
+            "label": "Testimonial",
+            "select": "document",
+            "customtypes": [
+              "testimonial"
+            ]
           }
         }
       }

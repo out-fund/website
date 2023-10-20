@@ -343,7 +343,7 @@ export type NavbarDocument<Lang extends string = string> =
     Lang
   >
 
-type PageDocumentDataSlicesSlice = HeroSlice
+type PageDocumentDataSlicesSlice = ClientsSaySlice | HeroSlice
 
 /**
  * Content for Page documents
@@ -416,11 +416,99 @@ interface PageDocumentData {
 export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>
 
+/**
+ * Content for Testimonial documents
+ */
+interface TestimonialDocumentData {
+  /**
+   * Company Name field in *Testimonial*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonial.company_name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  company_name: prismic.KeyTextField
+
+  /**
+   * Company Logo field in *Testimonial*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonial.company_logo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  company_logo: prismic.ImageField<never>
+
+  /**
+   * Quote field in *Testimonial*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonial.quote
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  quote: prismic.KeyTextField
+
+  /**
+   * Name field in *Testimonial*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonial.name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField
+
+  /**
+   * Job Title field in *Testimonial*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonial.job_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  job_title: prismic.KeyTextField
+
+  /**
+   * Profile photo field in *Testimonial*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonial.profile_photo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  profile_photo: prismic.ImageField<never>
+}
+
+/**
+ * Testimonial document from Prismic
+ *
+ * - **API ID**: `testimonial`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type TestimonialDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<TestimonialDocumentData>,
+    "testimonial",
+    Lang
+  >
+
 export type AllDocumentTypes =
   | FooterDocument
   | GlobalSeoDocument
   | NavbarDocument
   | PageDocument
+  | TestimonialDocument
 
 /**
  * Primary content in *ClientsSay → Primary*
@@ -435,6 +523,26 @@ export interface ClientsSaySliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   heading: prismic.TitleField
+
+  /**
+   * CTA Title field in *ClientsSay → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: clients_say.primary.cta_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  cta_title: prismic.KeyTextField
+
+  /**
+   * Button Text field in *ClientsSay → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: clients_say.primary.button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField
 }
 
 /**
@@ -442,54 +550,14 @@ export interface ClientsSaySliceDefaultPrimary {
  */
 export interface ClientsSaySliceDefaultItem {
   /**
-   * Company Name field in *ClientsSay → Items*
+   * Testimonial field in *ClientsSay → Items*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Content Relationship
    * - **Placeholder**: *None*
-   * - **API ID Path**: clients_say.items[].company_name
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **API ID Path**: clients_say.items[].testimonial
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  company_name: prismic.KeyTextField
-
-  /**
-   * Company Logo field in *ClientsSay → Items*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: clients_say.items[].company_logo
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  company_logo: prismic.ImageField<never>
-
-  /**
-   * Quote field in *ClientsSay → Items*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: clients_say.items[].quote
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  quote: prismic.RichTextField
-
-  /**
-   * Profile Image field in *ClientsSay → Items*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: clients_say.items[].profile_image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  profile_image: prismic.ImageField<never>
-
-  /**
-   * Author field in *ClientsSay → Items*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: clients_say.items[].author
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  author: prismic.KeyTextField
+  testimonial: prismic.ContentRelationshipField<"testimonial">
 }
 
 /**
@@ -619,6 +687,8 @@ declare module "@prismicio/client" {
       PageDocument,
       PageDocumentData,
       PageDocumentDataSlicesSlice,
+      TestimonialDocument,
+      TestimonialDocumentData,
       AllDocumentTypes,
       ClientsSaySlice,
       ClientsSaySliceDefaultPrimary,

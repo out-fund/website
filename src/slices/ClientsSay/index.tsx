@@ -1,9 +1,11 @@
-import { Content } from "@prismicio/client"
+import { Content, isFilled } from "@prismicio/client"
 import {
   JSXMapSerializer,
   PrismicRichText,
   SliceComponentProps,
 } from "@prismicio/react"
+
+import { createClient } from "@/prismicio"
 
 import Wrapper from "@/components/atoms/Wrapper"
 import Heading from "@/components/atoms/Heading"
@@ -27,7 +29,21 @@ export type ClientsSayProps = SliceComponentProps<Content.ClientsSaySlice>
 /**
  * Component for "ClientsSay" Slices.
  */
-const ClientsSay = ({ slice }: ClientsSayProps): JSX.Element => {
+const ClientsSay = async ({ slice }: ClientsSayProps): Promise<JSX.Element> => {
+  // console.log(slice.items)
+  const client = createClient()
+
+  const testimonials = await Promise.all(
+    slice.items.map((item) => {
+      if (
+        isFilled.contentRelationship(item.testimonial) &&
+        item.testimonial.uid
+      ) {
+        return client.getByUID("testimonial", item.testimonial.uid)
+      }
+    })
+  )
+
   return (
     <section
       data-slice-type={slice.slice_type}
@@ -39,22 +55,34 @@ const ClientsSay = ({ slice }: ClientsSayProps): JSX.Element => {
           components={components}
         />
         <div className="grid">
-          {slice.items.map((item, index) => (
-            <div key={index}>
-              {item.company_name}
-              <PrismicNextImage field={item.company_logo} />
-              <PrismicRichText field={item.quote} components={components} />
-              <PrismicNextImage
-                field={item.profile_image}
-                imgixParams={{
-                  ar: "1:1",
-                  fit: "crop",
-                }}
-              />
-              {item.author}
-            </div>
-          ))}
+          {testimonials.map(
+            (item, index) =>
+              item && (
+                <div key={index}>
+                  <PrismicNextImage
+                    field={item.data.company_logo}
+                    width={160}
+                    height={40}
+                  />
+                  {item.data.company_name}
+
+                  {item.data.quote}
+
+                  <PrismicNextImage
+                    field={item.data.profile_photo}
+                    width={40}
+                    height={40}
+                    imgixParams={{ ar: "1:1", fit: "crop" }}
+                  />
+                  {item.data.name}
+                  {item.data.job_title}
+                </div>
+              )
+          )}
         </div>
+
+        <div>{slice.primary.cta_title}</div>
+        <button>{slice.primary.button_text}</button>
       </Wrapper>
     </section>
   )
