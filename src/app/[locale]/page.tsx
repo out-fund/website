@@ -40,8 +40,6 @@ export async function generateMetadata({ params }: PageProps) {
   const client = createClient()
   const page = await client.getByUID("page", "home", { lang: params.lang })
 
-  // console.log("page-data", page.data)
-
   return {
     metadataBase: new URL("https://acme.com"),
     title: `${page.data.title} | Outfund`,
@@ -74,7 +72,6 @@ export async function generateMetadata({ params }: PageProps) {
 // export async function generateStaticParams() {
 //   const client = createClient()
 //   const pages = await client.getAllByType("page", { lang: "*" })
-//   // console.log(pages)
 
 //   return pages.map((page) => {
 //     return {

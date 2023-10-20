@@ -19,7 +19,6 @@ export default async function Page({ params }: { params: Params }) {
     .catch(() => notFound())
 
   const locales = await getTranslatedLocales(page, client)
-  // console.log("translated-locales", locales)
 
   return <SliceZone slices={page.data.slices} components={components} />
 }
@@ -75,7 +74,6 @@ export async function generateMetadata({
 export async function generateStaticParams() {
   const client = createClient()
   const pages = await client.getAllByType("page", { lang: "*" })
-  // console.log("pages", pages)
 
   return pages.map((page) => {
     return {

@@ -31,7 +31,6 @@ export default function RootLayout({
     locale: string
   }
 }) {
-  console.log(params)
   return (
     <html
       lang={convertLocaleToLang(params.locale)}

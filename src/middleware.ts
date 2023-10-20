@@ -24,7 +24,6 @@ export async function middleware(request: NextRequest) {
 
   // Tries to match the locales in the request with the supported locales
   // If none of the locales in the request are supported, the default locale is returned
-  // console.log("matchLocale-middleware", matchedLocale)
   const matchedLocale = matchLocale(preferedlocale, locales, defaultLocale)
 
   // Check if there is any supported locale in the pathname
