@@ -5,4 +5,5 @@ import dynamic from "next/dynamic"
 export const components = {
   clients_say: dynamic(() => import("./ClientsSay")),
   hero: dynamic(() => import("./Hero")),
+  trust_pilot_strip: dynamic(() => import("./TrustPilotStrip")),
 }

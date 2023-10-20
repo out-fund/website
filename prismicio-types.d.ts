@@ -343,14 +343,17 @@ export type NavbarDocument<Lang extends string = string> =
     Lang
   >
 
-type PageDocumentDataSlicesSlice = ClientsSaySlice | HeroSlice
+type PageDocumentDataSlicesSlice =
+  | TrustPilotStripSlice
+  | ClientsSaySlice
+  | HeroSlice
 
 /**
  * Content for Page documents
  */
 interface PageDocumentData {
   /**
-   * Title field in *Page*
+   * Title (Browser Tab Title) field in *Page*
    *
    * - **Field Type**: Text
    * - **Placeholder**: Browser Tab Title
@@ -371,10 +374,10 @@ interface PageDocumentData {
    */
   slices: prismic.SliceZone<PageDocumentDataSlicesSlice>
   /**
-   * Meta Title field in *Page*
+   * Meta Title (Social Share Title) field in *Page*
    *
    * - **Field Type**: Text
-   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **Placeholder**: A title of the page used when sharing on social media
    * - **API ID Path**: page.meta_title
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/field#key-text
@@ -662,6 +665,91 @@ type HeroSliceVariation = HeroSliceDefault
  */
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>
 
+/**
+ * Primary content in *TrustPilotStrip → Items*
+ */
+export interface TrustPilotStripSliceDefaultItem {
+  /**
+   * title field in *TrustPilotStrip → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: trust_pilot_strip.items[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField
+
+  /**
+   * review field in *TrustPilotStrip → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: trust_pilot_strip.items[].review
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  review: prismic.KeyTextField
+
+  /**
+   * name field in *TrustPilotStrip → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: trust_pilot_strip.items[].name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField
+
+  /**
+   * date field in *TrustPilotStrip → Items*
+   *
+   * - **Field Type**: Timestamp
+   * - **Placeholder**: *None*
+   * - **API ID Path**: trust_pilot_strip.items[].date
+   * - **Documentation**: https://prismic.io/docs/field#timestamp
+   */
+  date: prismic.TimestampField
+
+  /**
+   * url field in *TrustPilotStrip → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: trust_pilot_strip.items[].url
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  url: prismic.KeyTextField
+}
+
+/**
+ * Default variation for TrustPilotStrip Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TrustPilotStripSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  Simplify<TrustPilotStripSliceDefaultItem>
+>
+
+/**
+ * Slice variation for *TrustPilotStrip*
+ */
+type TrustPilotStripSliceVariation = TrustPilotStripSliceDefault
+
+/**
+ * TrustPilotStrip Shared Slice
+ *
+ * - **API ID**: `trust_pilot_strip`
+ * - **Description**: TrustPilotStrip
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TrustPilotStripSlice = prismic.SharedSlice<
+  "trust_pilot_strip",
+  TrustPilotStripSliceVariation
+>
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -699,6 +787,10 @@ declare module "@prismicio/client" {
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      TrustPilotStripSlice,
+      TrustPilotStripSliceDefaultItem,
+      TrustPilotStripSliceVariation,
+      TrustPilotStripSliceDefault,
     }
   }
 }
