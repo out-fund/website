@@ -28,13 +28,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
   params: {
-    lang: string
+    locale: string
   }
 }) {
   console.log(params)
   return (
     <html
-      lang={convertLocaleToLang(params.lang)}
+      lang={convertLocaleToLang(params.locale)}
       className={cn(worksans.className)}
     >
       <body>
