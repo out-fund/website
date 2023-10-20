@@ -6,7 +6,7 @@ import Logo from "@/components/atoms/Logo"
 
 export default async function Header() {
   const client = createClient()
-  const navigation = await client.getSingle("navigation")
+  const links = await client.getSingle("navbar")
 
   return (
     <header>
@@ -18,7 +18,12 @@ export default async function Header() {
         </div>
         <nav>
           <ul>
-            {navigation.data.navbar_links.map(({ label, link }) => (
+            {links.data.navbar_left.map(({ label, link }) => (
+              <li key={label}>
+                <Link field={link}>{label}</Link>
+              </li>
+            ))}
+            {links.data.navbar_right.map(({ label, link }) => (
               <li key={label}>
                 <Link field={link}>{label}</Link>
               </li>

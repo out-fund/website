@@ -5,6 +5,198 @@ import type * as prismic from "@prismicio/client"
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] }
 
 /**
+ * Item in *Footer → Company Links*
+ */
+export interface FooterDocumentDataCompanyLinksItem {
+  /**
+   * Label field in *Footer → Company Links*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.company_links[].label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField
+
+  /**
+   * Link field in *Footer → Company Links*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.company_links[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField
+}
+
+/**
+ * Item in *Footer → Funding Links*
+ */
+export interface FooterDocumentDataFundingLinksItem {
+  /**
+   * Label field in *Footer → Funding Links*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.funding_links[].label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField
+
+  /**
+   * Link field in *Footer → Funding Links*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.funding_links[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField
+}
+
+/**
+ * Item in *Footer → Support Links*
+ */
+export interface FooterDocumentDataSupportLinksItem {
+  /**
+   * Label field in *Footer → Support Links*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.support_links[].label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField
+
+  /**
+   * Link field in *Footer → Support Links*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.support_links[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField
+}
+
+/**
+ * Item in *Footer → Policy Links*
+ */
+export interface FooterDocumentDataPolicyLinksItem {
+  /**
+   * Label field in *Footer → Policy Links*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.policy_links[].label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField
+
+  /**
+   * Link field in *Footer → Policy Links*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.policy_links[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField
+}
+
+/**
+ * Content for Footer documents
+ */
+interface FooterDocumentData {
+  /**
+   * Company Links field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.company_links[]
+   * - **Tab**: Top
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  company_links: prismic.GroupField<
+    Simplify<FooterDocumentDataCompanyLinksItem>
+  >
+
+  /**
+   * Funding Links field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.funding_links[]
+   * - **Tab**: Top
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  funding_links: prismic.GroupField<
+    Simplify<FooterDocumentDataFundingLinksItem>
+  >
+
+  /**
+   * Support Links field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.support_links[]
+   * - **Tab**: Top
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  support_links: prismic.GroupField<
+    Simplify<FooterDocumentDataSupportLinksItem>
+  >
+  /**
+   * FCA Statement field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.fca_statement
+   * - **Tab**: Bottom
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  fca_statement: prismic.KeyTextField
+
+  /**
+   * Copyright field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.copyright
+   * - **Tab**: Bottom
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  copyright: prismic.KeyTextField
+
+  /**
+   * Policy Links field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.policy_links[]
+   * - **Tab**: Bottom
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  policy_links: prismic.GroupField<Simplify<FooterDocumentDataPolicyLinksItem>>
+}
+
+/**
+ * Footer document from Prismic
+ *
+ * - **API ID**: `footer`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<FooterDocumentData>,
+    "footer",
+    Lang
+  >
+
+/**
  * Content for Global SEO documents
  */
 interface GlobalSeoDocumentData {
@@ -59,233 +251,95 @@ export type GlobalSeoDocument<Lang extends string = string> =
   >
 
 /**
- * Item in *Navigation → Navbar Links*
+ * Item in *Navbar → Navbar Left*
  */
-export interface NavigationDocumentDataNavbarLinksItem {
+export interface NavbarDocumentDataNavbarLeftItem {
   /**
-   * Label field in *Navigation → Navbar Links*
+   * Label field in *Navbar → Navbar Left*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: navigation.navbar_links[].label
+   * - **API ID Path**: navbar.navbar_left[].label
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   label: prismic.KeyTextField
 
   /**
-   * Link field in *Navigation → Navbar Links*
+   * Link field in *Navbar → Navbar Left*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: navigation.navbar_links[].link
+   * - **API ID Path**: navbar.navbar_left[].link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link: prismic.LinkField
 }
 
 /**
- * Item in *Navigation → Company Links*
+ * Item in *Navbar → Navbar Right*
  */
-export interface NavigationDocumentDataCompanyLinksItem {
+export interface NavbarDocumentDataNavbarRightItem {
   /**
-   * Label field in *Navigation → Company Links*
+   * Label field in *Navbar → Navbar Right*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: navigation.company_links[].label
+   * - **API ID Path**: navbar.navbar_right[].label
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   label: prismic.KeyTextField
 
   /**
-   * Link field in *Navigation → Company Links*
+   * Link field in *Navbar → Navbar Right*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: navigation.company_links[].link
+   * - **API ID Path**: navbar.navbar_right[].link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link: prismic.LinkField
 }
 
 /**
- * Item in *Navigation → Funding Links*
+ * Content for Navbar documents
  */
-export interface NavigationDocumentDataFundingLinksItem {
+interface NavbarDocumentData {
   /**
-   * label field in *Navigation → Funding Links*
+   * Navbar Left field in *Navbar*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: navigation.funding_links[].label
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **API ID Path**: navbar.navbar_left[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
    */
-  label: prismic.KeyTextField
+  navbar_left: prismic.GroupField<Simplify<NavbarDocumentDataNavbarLeftItem>>
 
   /**
-   * Link field in *Navigation → Funding Links*
+   * Navbar Right field in *Navbar*
    *
-   * - **Field Type**: Link
+   * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: navigation.funding_links[].link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   * - **API ID Path**: navbar.navbar_right[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
    */
-  link: prismic.LinkField
+  navbar_right: prismic.GroupField<Simplify<NavbarDocumentDataNavbarRightItem>>
 }
 
 /**
- * Item in *Navigation → Support Links*
- */
-export interface NavigationDocumentDataSupportLinksItem {
-  /**
-   * label field in *Navigation → Support Links*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: navigation.support_links[].label
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  label: prismic.KeyTextField
-
-  /**
-   * Link field in *Navigation → Support Links*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: navigation.support_links[].link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link: prismic.LinkField
-}
-
-/**
- * Item in *Navigation → Policy Links*
- */
-export interface NavigationDocumentDataPolicyLinksItem {
-  /**
-   * Label field in *Navigation → Policy Links*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: navigation.policy_links[].label
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  label: prismic.KeyTextField
-
-  /**
-   * link field in *Navigation → Policy Links*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: navigation.policy_links[].link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link: prismic.LinkField
-}
-
-/**
- * Content for Navigation documents
- */
-interface NavigationDocumentData {
-  /**
-   * Navbar Links field in *Navigation*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: navigation.navbar_links[]
-   * - **Tab**: Navbar
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  navbar_links: prismic.GroupField<
-    Simplify<NavigationDocumentDataNavbarLinksItem>
-  >
-  /**
-   * Company Links field in *Navigation*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: navigation.company_links[]
-   * - **Tab**: Footer
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  company_links: prismic.GroupField<
-    Simplify<NavigationDocumentDataCompanyLinksItem>
-  >
-
-  /**
-   * Funding Links field in *Navigation*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: navigation.funding_links[]
-   * - **Tab**: Footer
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  funding_links: prismic.GroupField<
-    Simplify<NavigationDocumentDataFundingLinksItem>
-  >
-
-  /**
-   * Support Links field in *Navigation*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: navigation.support_links[]
-   * - **Tab**: Footer
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  support_links: prismic.GroupField<
-    Simplify<NavigationDocumentDataSupportLinksItem>
-  >
-  /**
-   * Policy Links field in *Navigation*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: navigation.policy_links[]
-   * - **Tab**: Legal
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  policy_links: prismic.GroupField<
-    Simplify<NavigationDocumentDataPolicyLinksItem>
-  >
-
-  /**
-   * Copyright field in *Navigation*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: navigation.copyright
-   * - **Tab**: Legal
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  copyright: prismic.KeyTextField
-
-  /**
-   * FCA Statement field in *Navigation*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: navigation.fca_statement
-   * - **Tab**: Legal
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  fca_statement: prismic.KeyTextField
-}
-
-/**
- * Navigation document from Prismic
+ * Navbar document from Prismic
  *
- * - **API ID**: `navigation`
+ * - **API ID**: `navbar`
  * - **Repeatable**: `false`
  * - **Documentation**: https://prismic.io/docs/custom-types
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type NavigationDocument<Lang extends string = string> =
+export type NavbarDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<
-    Simplify<NavigationDocumentData>,
-    "navigation",
+    Simplify<NavbarDocumentData>,
+    "navbar",
     Lang
   >
 
@@ -363,8 +417,9 @@ export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>
 
 export type AllDocumentTypes =
+  | FooterDocument
   | GlobalSeoDocument
-  | NavigationDocument
+  | NavbarDocument
   | PageDocument
 
 /**
@@ -549,15 +604,18 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
+      FooterDocument,
+      FooterDocumentData,
+      FooterDocumentDataCompanyLinksItem,
+      FooterDocumentDataFundingLinksItem,
+      FooterDocumentDataSupportLinksItem,
+      FooterDocumentDataPolicyLinksItem,
       GlobalSeoDocument,
       GlobalSeoDocumentData,
-      NavigationDocument,
-      NavigationDocumentData,
-      NavigationDocumentDataNavbarLinksItem,
-      NavigationDocumentDataCompanyLinksItem,
-      NavigationDocumentDataFundingLinksItem,
-      NavigationDocumentDataSupportLinksItem,
-      NavigationDocumentDataPolicyLinksItem,
+      NavbarDocument,
+      NavbarDocumentData,
+      NavbarDocumentDataNavbarLeftItem,
+      NavbarDocumentDataNavbarRightItem,
       PageDocument,
       PageDocumentData,
       PageDocumentDataSlicesSlice,

@@ -1,36 +1,11 @@
 {
-  "id": "navigation",
-  "label": "Navigation",
+  "id": "footer",
+  "label": "Footer",
   "format": "custom",
   "repeatable": false,
   "status": true,
   "json": {
-    "Navbar": {
-      "navbar_links": {
-        "type": "Group",
-        "config": {
-          "label": "Navbar Links",
-          "fields": {
-            "label": {
-              "type": "Text",
-              "config": {
-                "label": "Label",
-                "placeholder": ""
-              }
-            },
-            "link": {
-              "type": "Link",
-              "config": {
-                "label": "Link",
-                "placeholder": "",
-                "select": null
-              }
-            }
-          }
-        }
-      }
-    },
-    "Footer": {
+    "Top": {
       "company_links": {
         "type": "Group",
         "config": {
@@ -62,7 +37,7 @@
             "label": {
               "type": "Text",
               "config": {
-                "label": "label",
+                "label": "Label",
                 "placeholder": ""
               }
             },
@@ -85,7 +60,7 @@
             "label": {
               "type": "Text",
               "config": {
-                "label": "label",
+                "label": "Label",
                 "placeholder": ""
               }
             },
@@ -101,7 +76,21 @@
         }
       }
     },
-    "Legal": {
+    "Bottom": {
+      "fca_statement": {
+        "type": "Text",
+        "config": {
+          "label": "FCA Statement",
+          "placeholder": ""
+        }
+      },
+      "copyright": {
+        "type": "Text",
+        "config": {
+          "label": "Copyright",
+          "placeholder": ""
+        }
+      },
       "policy_links": {
         "type": "Group",
         "config": {
@@ -117,26 +106,12 @@
             "link": {
               "type": "Link",
               "config": {
-                "label": "link",
+                "label": "Link",
                 "placeholder": "",
                 "select": null
               }
             }
           }
-        }
-      },
-      "copyright": {
-        "type": "Text",
-        "config": {
-          "label": "Copyright",
-          "placeholder": ""
-        }
-      },
-      "fca_statement": {
-        "type": "Text",
-        "config": {
-          "label": "FCA Statement",
-          "placeholder": ""
         }
       }
     }

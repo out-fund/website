@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export default async function Footer() {
   const client = createClient()
-  const navigation = await client.getSingle("navigation")
+  const navigation = await client.getSingle("footer")
 
   return (
     <footer>
