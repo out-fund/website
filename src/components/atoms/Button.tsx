@@ -16,7 +16,7 @@ export default function Button({
   return (
     <Link
       href={href}
-      className={cn("bg-cyan-400 p-2 rounded-full", className)}
+      className={cn("bg-cyan-400 rounded-full p-2", className)}
       {...restProps}
     >
       {children}

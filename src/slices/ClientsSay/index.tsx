@@ -39,7 +39,7 @@ const ClientsSay = async ({ slice }: ClientsSayProps): Promise<JSX.Element> => {
       ) {
         return client.getByUID("testimonial", item.testimonial.uid)
       }
-    })
+    }),
   )
 
   return (
@@ -75,7 +75,7 @@ const ClientsSay = async ({ slice }: ClientsSayProps): Promise<JSX.Element> => {
                   {item.data.name}
                   {item.data.job_title}
                 </div>
-              )
+              ),
           )}
         </div>
 

@@ -14,8 +14,8 @@ export default function Link({
   return (
     <PrismicNextLink
       className={cn(
-        "text-blue-700 underline-offset-2 decoration-sky-500 ",
-        className
+        "text-base font-[500] text-cobalt underline-offset-2 antialiased hover:underline focus:underline focus:outline-none",
+        className,
       )}
       {...restProps}
     />

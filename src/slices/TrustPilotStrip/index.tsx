@@ -46,7 +46,7 @@ const TrustPilotStrip = ({ slice }: TrustPilotStripProps): JSX.Element => {
             {slice.items.map((item, index) => (
               <SwiperSlide
                 key={index}
-                className="bg-bgLight flex h-[100%] rounded-lg p-3"
+                className="flex h-[100%] rounded-lg bg-bgLight p-3"
               >
                 <a href={item.url} target="_blank" className="group block">
                   <div className="mb-1 h-[20px] w-[108px]">

@@ -37,7 +37,7 @@ export default function RootLayout({
       className={cn(worksans.className)}
     >
       <body>
-        <Header />
+        <Header locale={params.locale} />
         {children}
         <Footer />
       </body>

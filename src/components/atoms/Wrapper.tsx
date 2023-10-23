@@ -15,7 +15,7 @@ export default function Wrapper({
   return (
     // TODO: Update styling with Tailwind in the class names
     <Comp
-      className={cn(" mx-auto max-w-[1200px] w-full", className)}
+      className={cn(" mx-auto w-full max-w-[1200px]", className)}
       {...restProps}
     >
       {children}

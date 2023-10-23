@@ -11,6 +11,8 @@ export async function middleware(request: NextRequest) {
   const locales = repository.languages.map((locale) => locale.id)
   const defaultLocale = locales[0]
 
+  // console.log("repository.languages", repository.languages)
+
   let negotiatorHeaders = {}
   // @ts-ignore complaining about value and key types
   request.headers.forEach((value, key) => (negotiatorHeaders[key] = value))
@@ -19,7 +21,7 @@ export async function middleware(request: NextRequest) {
   // Returns the best locale based on the Accept-Language header
   // If comming from an unsupported language, returns empty string for locale
   let preferedlocale = new Negotiator({ headers: negotiatorHeaders }).languages(
-    locales
+    locales,
   )
 
   // Tries to match the locales in the request with the supported locales
@@ -30,13 +32,14 @@ export async function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
 
   const pathnameIsMissingValidLocale = locales.every(
-    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
+    (locale) =>
+      !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`,
   )
 
   // Redirect to default locale if there is no supported locale prefix
   if (pathnameIsMissingValidLocale) {
     return NextResponse.redirect(
-      new URL(`/${matchedLocale}${pathname}`, request.url)
+      new URL(`/${matchedLocale}${pathname}`, request.url),
     )
   }
 }
