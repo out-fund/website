@@ -30,13 +30,6 @@
         }
       },
       "items": {
-        "partner_name": {
-          "type": "Text",
-          "config": {
-            "label": "Partner Name",
-            "placeholder": ""
-          }
-        },
         "partner_logo": {
           "type": "Image",
           "config": {

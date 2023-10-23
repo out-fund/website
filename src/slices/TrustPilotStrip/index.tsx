@@ -10,7 +10,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/autoplay"
 
-import Wrapper from "@/components/atoms/Wrapper"
+import { Wrapper } from "@/components/atoms"
 import { Autoplay } from "swiper/modules"
 
 /**

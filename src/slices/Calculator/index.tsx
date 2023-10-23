@@ -1,10 +1,11 @@
 import { Content } from "@prismicio/client"
-
 import {
   JSXMapSerializer,
   PrismicRichText,
   SliceComponentProps,
 } from "@prismicio/react"
+
+import { Wrapper } from "@/components/atoms"
 
 const components: JSXMapSerializer = {
   paragraph: ({ children }) => <p className="">{children}</p>,
@@ -82,57 +83,61 @@ const Calculator = ({ slice }: CalculatorProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <h2>{slice.primary.heading}</h2>
-      <PrismicRichText
-        field={slice.primary.description}
-        components={components}
-      />
-      <h3>{slice.primary.subheading}</h3>
+      <Wrapper>
+        <h2>{slice.primary.heading}</h2>
+        <PrismicRichText
+          field={slice.primary.description}
+          components={components}
+        />
+        <h3>{slice.primary.subheading}</h3>
 
-      <ul>
-        {slice.items.map((item, index) => (
-          <li key={index}>{item.bulletpoint}</li>
-        ))}
-      </ul>
+        <ul>
+          {slice.items.map((item, index) => (
+            <li key={index}>{item.bulletpoint}</li>
+          ))}
+        </ul>
 
-      <h4>{slice.primary.amount_title}</h4>
-      <div className="selectedAmount">{amounts[3]}</div>
-      <input
-        type="range"
-        id="amount"
-        name="amount"
-        min="0"
-        max={amounts.length}
-        step="1"
-      />
+        <h4>{slice.primary.amount_title}</h4>
+        <div className="selectedAmount">{amounts[3]}</div>
+        <input
+          type="range"
+          id="amount"
+          name="amount"
+          min="0"
+          max={amounts.length}
+          step="1"
+        />
 
-      <h4>{slice.primary.term_title}</h4>
-      <div className="selectedTerm">6</div>
-      <input
-        type="range"
-        id="amount"
-        name="amount"
-        min="0"
-        max={termOptions.length}
-        step="1"
-      />
-      <div>
-        {slice.primary.term_min} <span>{slice.primary.slider_months_text}</span>
-      </div>
-      <div>
-        {slice.primary.term_max} <span>{slice.primary.slider_months_text}</span>
-      </div>
+        <h4>{slice.primary.term_title}</h4>
+        <div className="selectedTerm">6</div>
+        <input
+          type="range"
+          id="amount"
+          name="amount"
+          min="0"
+          max={termOptions.length}
+          step="1"
+        />
+        <div>
+          {slice.primary.term_min}{" "}
+          <span>{slice.primary.slider_months_text}</span>
+        </div>
+        <div>
+          {slice.primary.term_max}{" "}
+          <span>{slice.primary.slider_months_text}</span>
+        </div>
 
-      <h4>{slice.primary.total_title}</h4>
-      <div className="total">
-        {convertCurrency ? convertCurrency.format(70000) : ""}
-      </div>
-      <p>{slice.primary.example_note}</p>
-      <button>
-        {slice.primary.button_text}{" "}
-        {convertCurrency ? convertCurrency.format(70000) : ""}
-      </button>
-      <div>{slice.primary.button_note} </div>
+        <h4>{slice.primary.total_title}</h4>
+        <div className="total">
+          {convertCurrency ? convertCurrency.format(70000) : ""}
+        </div>
+        <p>{slice.primary.example_note}</p>
+        <button>
+          {slice.primary.button_text}{" "}
+          {convertCurrency ? convertCurrency.format(70000) : ""}
+        </button>
+        <div>{slice.primary.button_note} </div>
+      </Wrapper>
     </section>
   )
 }

@@ -25,17 +25,8 @@
 				"__TYPE__": "GroupItemContent",
 				"value": [
 					[
-						"partner_name",
-						{
-							"__TYPE__": "FieldContent",
-							"value": "human",
-							"type": "Text"
-						}
-					],
-					[
 						"partner_logo",
 						{
-							"__TYPE__": "ImageContent",
 							"origin": {
 								"id": "main",
 								"url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea",
@@ -53,6 +44,9 @@
 								},
 								"background": "transparent"
 							},
+							"credits": null,
+							"alt": null,
+							"__TYPE__": "ImageContent",
 							"thumbnails": {}
 						}
 					]

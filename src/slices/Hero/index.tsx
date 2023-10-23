@@ -6,9 +6,7 @@ import {
   SliceComponentProps,
 } from "@prismicio/react"
 
-import Wrapper from "@/components/atoms/Wrapper"
-import Button from "@/components/atoms/Button"
-import Heading from "@/components/atoms/Heading"
+import { Wrapper, Button, Heading } from "@/components/atoms"
 
 const components: JSXMapSerializer = {
   // heading1: ({ children }) => <h1 className="">{children}</h1>,

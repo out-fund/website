@@ -4,12 +4,10 @@ import {
   PrismicRichText,
   SliceComponentProps,
 } from "@prismicio/react"
-
+import { PrismicNextImage } from "@prismicio/next"
 import { createClient } from "@/prismicio"
 
-import Wrapper from "@/components/atoms/Wrapper"
-import Heading from "@/components/atoms/Heading"
-import { PrismicNextImage } from "@prismicio/next"
+import { Wrapper, Heading } from "@/components/atoms"
 
 const components: JSXMapSerializer = {
   // heading1: ({ children }) => <h1 className="">{children}</h1>,

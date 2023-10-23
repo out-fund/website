@@ -344,6 +344,8 @@ export type NavbarDocument<Lang extends string = string> =
   >
 
 type PageDocumentDataSlicesSlice =
+  | PartnersSlice
+  | BenefitsSlice
   | CalculatorSlice
   | TrustPilotStripSlice
   | ClientsSaySlice
@@ -940,16 +942,6 @@ export interface PartnersSliceDefaultPrimary {
  * Primary content in *Partners → Items*
  */
 export interface PartnersSliceDefaultItem {
-  /**
-   * Partner Name field in *Partners → Items*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: partners.items[].partner_name
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  partner_name: prismic.KeyTextField
-
   /**
    * Partner Logo field in *Partners → Items*
    *
