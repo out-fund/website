@@ -344,6 +344,7 @@ export type NavbarDocument<Lang extends string = string> =
   >
 
 type PageDocumentDataSlicesSlice =
+  | CalculatorSlice
   | TrustPilotStripSlice
   | ClientsSaySlice
   | HeroSlice
@@ -514,6 +515,251 @@ export type AllDocumentTypes =
   | TestimonialDocument
 
 /**
+ * Primary content in *Benefits → Items*
+ */
+export interface BenefitsSliceDefaultItem {
+  /**
+   * Top Text field in *Benefits → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: benefits.items[].top_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  top_text: prismic.KeyTextField
+
+  /**
+   * Bottom Text field in *Benefits → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: benefits.items[].bottom_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  bottom_text: prismic.KeyTextField
+}
+
+/**
+ * Default variation for Benefits Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BenefitsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  Simplify<BenefitsSliceDefaultItem>
+>
+
+/**
+ * Slice variation for *Benefits*
+ */
+type BenefitsSliceVariation = BenefitsSliceDefault
+
+/**
+ * Benefits Shared Slice
+ *
+ * - **API ID**: `benefits`
+ * - **Description**: Benefits
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BenefitsSlice = prismic.SharedSlice<
+  "benefits",
+  BenefitsSliceVariation
+>
+
+/**
+ * Primary content in *Calculator → Primary*
+ */
+export interface CalculatorSliceDefaultPrimary {
+  /**
+   * Heading field in *Calculator → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: calculator.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField
+
+  /**
+   * Description field in *Calculator → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: calculator.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField
+
+  /**
+   * Subheading field in *Calculator → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: calculator.primary.subheading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subheading: prismic.KeyTextField
+
+  /**
+   * Currency field in *Calculator → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: calculator.primary.currency
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  currency: prismic.SelectField<"GBP" | "EUR" | "USD" | "AUD">
+
+  /**
+   * Amount Title field in *Calculator → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: calculator.primary.amount_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  amount_title: prismic.KeyTextField
+
+  /**
+   * Amounts field in *Calculator → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Amounts separated by comma like: 10000, 25000, 50000
+   * - **API ID Path**: calculator.primary.amounts
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  amounts: prismic.KeyTextField
+
+  /**
+   * Term Title field in *Calculator → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: calculator.primary.term_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  term_title: prismic.KeyTextField
+
+  /**
+   * Term Min (Months) field in *Calculator → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: calculator.primary.term_min
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  term_min: prismic.NumberField
+
+  /**
+   * Term Max (Months) field in *Calculator → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: calculator.primary.term_max
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  term_max: prismic.NumberField
+
+  /**
+   * Slider Months Text field in *Calculator → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: calculator.primary.slider_months_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  slider_months_text: prismic.KeyTextField
+
+  /**
+   * Total Title field in *Calculator → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: calculator.primary.total_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  total_title: prismic.KeyTextField
+
+  /**
+   * Example Note field in *Calculator → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: calculator.primary.example_note
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  example_note: prismic.KeyTextField
+
+  /**
+   * Button Text field in *Calculator → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: calculator.primary.button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField
+
+  /**
+   * Button Note field in *Calculator → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: calculator.primary.button_note
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_note: prismic.KeyTextField
+}
+
+/**
+ * Primary content in *Calculator → Items*
+ */
+export interface CalculatorSliceDefaultItem {
+  /**
+   * Bulletpoint field in *Calculator → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: calculator.items[].bulletpoint
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  bulletpoint: prismic.KeyTextField
+}
+
+/**
+ * Default variation for Calculator Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CalculatorSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<CalculatorSliceDefaultPrimary>,
+  Simplify<CalculatorSliceDefaultItem>
+>
+
+/**
+ * Slice variation for *Calculator*
+ */
+type CalculatorSliceVariation = CalculatorSliceDefault
+
+/**
+ * Calculator Shared Slice
+ *
+ * - **API ID**: `calculator`
+ * - **Description**: Calculator
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CalculatorSlice = prismic.SharedSlice<
+  "calculator",
+  CalculatorSliceVariation
+>
+
+/**
  * Primary content in *ClientsSay → Primary*
  */
 export interface ClientsSaySliceDefaultPrimary {
@@ -666,6 +912,86 @@ type HeroSliceVariation = HeroSliceDefault
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>
 
 /**
+ * Primary content in *Partners → Primary*
+ */
+export interface PartnersSliceDefaultPrimary {
+  /**
+   * Heading field in *Partners → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: partners.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField
+
+  /**
+   * Description field in *Partners → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: partners.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField
+}
+
+/**
+ * Primary content in *Partners → Items*
+ */
+export interface PartnersSliceDefaultItem {
+  /**
+   * Partner Name field in *Partners → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: partners.items[].partner_name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  partner_name: prismic.KeyTextField
+
+  /**
+   * Partner Logo field in *Partners → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: partners.items[].partner_logo
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  partner_logo: prismic.ImageField<never>
+}
+
+/**
+ * Default variation for Partners Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PartnersSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<PartnersSliceDefaultPrimary>,
+  Simplify<PartnersSliceDefaultItem>
+>
+
+/**
+ * Slice variation for *Partners*
+ */
+type PartnersSliceVariation = PartnersSliceDefault
+
+/**
+ * Partners Shared Slice
+ *
+ * - **API ID**: `partners`
+ * - **Description**: Partners
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PartnersSlice = prismic.SharedSlice<
+  "partners",
+  PartnersSliceVariation
+>
+
+/**
  * Primary content in *TrustPilotStrip → Items*
  */
 export interface TrustPilotStripSliceDefaultItem {
@@ -778,6 +1104,15 @@ declare module "@prismicio/client" {
       TestimonialDocument,
       TestimonialDocumentData,
       AllDocumentTypes,
+      BenefitsSlice,
+      BenefitsSliceDefaultItem,
+      BenefitsSliceVariation,
+      BenefitsSliceDefault,
+      CalculatorSlice,
+      CalculatorSliceDefaultPrimary,
+      CalculatorSliceDefaultItem,
+      CalculatorSliceVariation,
+      CalculatorSliceDefault,
       ClientsSaySlice,
       ClientsSaySliceDefaultPrimary,
       ClientsSaySliceDefaultItem,
@@ -787,6 +1122,11 @@ declare module "@prismicio/client" {
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      PartnersSlice,
+      PartnersSliceDefaultPrimary,
+      PartnersSliceDefaultItem,
+      PartnersSliceVariation,
+      PartnersSliceDefault,
       TrustPilotStripSlice,
       TrustPilotStripSliceDefaultItem,
       TrustPilotStripSliceVariation,
