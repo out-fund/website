@@ -6,9 +6,6 @@ import { convertLocaleToLang } from "@/lib/utils"
 import { cn } from "@/lib/utils"
 import "@/styles/globals.css"
 
-import Header from "@/components/Header"
-import Footer from "@/components/Footer"
-
 // export async function generateMetadata(): Promise<Metadata> {
 //   const client = createClient()
 //   const globalSEO = await client.getSingle("global_seo")
@@ -36,10 +33,10 @@ export default function RootLayout({
       lang={convertLocaleToLang(params.locale)}
       className={cn(worksans.className)}
     >
-      <body>
-        <Header locale={params.locale} />
+      <body className="text-text box-border bg-white tracking-tighter">
+        {/* <Navbar locale={params.locale} /> */}
         {children}
-        <Footer />
+        {/* <Footer locale={params.locale} /> */}
       </body>
     </html>
   )

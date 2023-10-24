@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils"
 //   ...restProps
 // } : PrismicNextLinkProps
 
-export default function Link({
+export default function PageLink({
   className,
   ...restProps
 }: PrismicNextLinkProps) {
@@ -14,7 +14,7 @@ export default function Link({
   return (
     <PrismicNextLink
       className={cn(
-        "text-base font-[500] text-cobalt underline-offset-2 antialiased hover:underline focus:underline focus:outline-none",
+        "inline-block text-base font-[500] text-cobalt underline-offset-2 antialiased hover:underline focus:underline focus:outline-none",
         className,
       )}
       {...restProps}

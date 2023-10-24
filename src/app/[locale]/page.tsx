@@ -8,22 +8,33 @@ import { notFound } from "next/navigation"
 
 import { createClient } from "@/prismicio"
 import { components } from "@/slices"
+import { getTranslatedLocales } from "@/lib/getTranslatedLocales"
+
+import { PageLayout } from "@/components"
 
 // import { GetStaticPropsContext } from "next"
 
 type PageProps = {
   params: {
-    lang: string
+    locale: string
   }
 }
 
 export default async function Page({ params }: PageProps) {
   const client = createClient()
-  const page = await client
-    .getByUID("page", "home", { lang: params.lang })
-    .catch(() => notFound())
 
-  return <SliceZone slices={page.data.slices} components={components} />
+  const page = await client.getByUID("page", "home", { lang: params.locale })
+  // .catch(() => notFound())
+  // console.log("params lang", params.locale)
+
+  const locales = await getTranslatedLocales(page, client)
+  // console.log("locales-home", locales)
+
+  return (
+    <PageLayout locale={params.locale}>
+      <SliceZone slices={page.data.slices} components={components} />
+    </PageLayout>
+  )
 }
 
 // export async function generateMetadata(): Promise<Metadata> {
@@ -36,9 +47,12 @@ export default async function Page({ params }: PageProps) {
 //   }
 // }
 
+/**
+ * @returns {Promise<import("next").Metadata>}
+ */
 export async function generateMetadata({ params }: PageProps) {
   const client = createClient()
-  const page = await client.getByUID("page", "home", { lang: params.lang })
+  const page = await client.getByUID("page", "home", { lang: params.locale })
 
   return {
     metadataBase: new URL("https://acme.com"),
@@ -72,6 +86,9 @@ export async function generateMetadata({ params }: PageProps) {
 // export async function generateStaticParams() {
 //   const client = createClient()
 //   const pages = await client.getAllByType("page", { lang: "*" })
+//   // const pages = await client.getByUID("page", "home", { lang: "*" })
+
+//   console.log(pages)
 
 //   return pages.map((page) => {
 //     return {

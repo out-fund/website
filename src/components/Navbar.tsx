@@ -1,12 +1,11 @@
 import { createClient } from "@/prismicio"
+import Link from "next/link"
+import { Wrapper, PageLink, Logo } from "@/components/atoms"
 
-import Wrapper from "@/components/atoms/Wrapper"
-import Link from "@/components/atoms/Link"
-import Logo from "@/components/atoms/Logo"
-
-export default async function Header({ locale }: { locale: string }) {
+export default async function Navbar({ locale }: { locale: string }) {
   const client = createClient()
-  const links = await client.getSingle("navbar")
+  // const links = await client.getSingle("navbar")
+  const links = await client.getSingle("navbar", { lang: locale })
 
   return (
     <header>
@@ -21,35 +20,25 @@ export default async function Header({ locale }: { locale: string }) {
             <ul className="flex items-center gap-8">
               {links.data.navbar_left.map(({ label, link }) => (
                 <li key={label}>
-                  <Link field={link} className="block">
+                  <PageLink field={link} className="">
                     {label}
-                  </Link>
+                  </PageLink>
                 </li>
               ))}
-              {/* {links.data.navbar_right.map(({ label, link }, index) => (
-                <li key={label} className={`test ${index ? "" : "ml-auto"}`}>
-                  <Link field={link} className="block text-body">
-                    {label}
-                  </Link>
-                </li>
-              ))} */}
             </ul>
             <ul className="ml-auto flex items-center gap-4">
               <li>
-                <Link
-                  field={links.data.navbar_right[0]?.link}
-                  className="block text-body"
-                >
+                <PageLink field={links.data.navbar_right[0]?.link} className="">
                   {links.data.navbar_right[0]?.label}
-                </Link>
+                </PageLink>
               </li>
               <li>
                 <i className="block h-2 w-px bg-body opacity-50"></i>
               </li>
               <li key="country" className="">
                 <Link
-                  field={links.data.navbar_right[1]?.link}
-                  className="flex items-center gap-1 text-body "
+                  href="/country-selector"
+                  className="flex items-center gap-1 text-base font-[500] text-body  underline-offset-2 antialiased hover:underline focus:underline focus:outline-none "
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
