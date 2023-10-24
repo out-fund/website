@@ -1,10 +1,31 @@
 import { cn } from "@/lib/utils"
+import { cva, type VariantProps } from "class-variance-authority"
 
-type HeadingProps = {
+const variants = cva("font-extrabold tracking-tight text-heading ", {
+  variants: {
+    size: {
+      h1: "text-6xl text",
+      h2: "text-3xl ",
+      h3: "text-2xl",
+      h4: "text-xl",
+      h5: "text-lg",
+      h6: "text-base",
+    },
+  },
+})
+
+// type HeadingProps = {
+//   as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
+//   className?: string
+//   children: React.ReactNode
+//   // size?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
+// }
+
+interface HeadingProps extends VariantProps<typeof variants> {
   as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
   className?: string
   children: React.ReactNode
-  size?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
+  // size?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
 }
 
 export default function Heading({
@@ -13,15 +34,6 @@ export default function Heading({
   children,
   size,
 }: HeadingProps) {
-  return (
-    <Comp
-      className={cn(
-        " text-6xl font-extrabold	tracking-tight text-heading ",
-        size ? size : Comp,
-        className,
-      )}
-    >
-      {children}
-    </Comp>
-  )
+  // const calculatedSize = size || Comp
+  return <Comp className={cn(variants({ size }), className)}>{children}</Comp>
 }

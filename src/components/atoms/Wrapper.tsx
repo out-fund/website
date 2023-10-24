@@ -1,6 +1,20 @@
 import { cn } from "@/lib/utils"
+import { cva, type VariantProps } from "class-variance-authority"
 
-type WrapperProps = {
+const variants = cva("mx-auto w-full px-[15px] ", {
+  variants: {
+    width: {
+      wide: "max-w-[1200px]",
+      medium: "max-w-[1000px]",
+      narrow: "max-w-[800px]",
+    },
+  },
+  defaultVariants: {
+    width: "wide",
+  },
+})
+
+interface WrapperProps extends VariantProps<typeof variants> {
   as?: React.ElementType
   className?: string
   children: React.ReactNode
@@ -8,16 +22,13 @@ type WrapperProps = {
 
 export default function Wrapper({
   as: Comp = "div",
+  width,
   className,
   children,
   ...restProps
 }: WrapperProps) {
   return (
-    // TODO: Update styling with Tailwind in the class names
-    <Comp
-      className={cn(" mx-auto w-full max-w-[1200px]", className)}
-      {...restProps}
-    >
+    <Comp className={cn(variants({ width }), className)} {...restProps}>
       {children}
     </Comp>
   )

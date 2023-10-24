@@ -11,7 +11,7 @@ import { Wrapper, Button, Heading } from "@/components/atoms"
 const components: JSXMapSerializer = {
   // heading1: ({ children }) => <h1 className="">{children}</h1>,
   heading1: ({ children }) => (
-    <Heading as="h1" className="test">
+    <Heading as="h1" size="h1" className="test">
       {children}
     </Heading>
   ),

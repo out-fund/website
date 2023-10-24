@@ -5,7 +5,7 @@ import {
   SliceComponentProps,
 } from "@prismicio/react"
 
-import { Wrapper } from "@/components/atoms"
+import { Wrapper, Heading } from "@/components/atoms"
 
 const components: JSXMapSerializer = {
   paragraph: ({ children }) => <p className="">{children}</p>,
@@ -83,60 +83,77 @@ const Calculator = ({ slice }: CalculatorProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <Wrapper>
-        <h2>{slice.primary.heading}</h2>
-        <PrismicRichText
-          field={slice.primary.description}
-          components={components}
-        />
-        <h3>{slice.primary.subheading}</h3>
+      <Wrapper width="medium">
+        <div className="mt-10 grid grid-cols-[4fr_5fr] gap-9">
+          <div className="flex flex-col gap-6">
+            <div>
+              <Heading as="h2" size="h2">
+                {slice.primary.heading}
+              </Heading>
+              <PrismicRichText
+                field={slice.primary.description}
+                components={components}
+              />
+            </div>
 
-        <ul>
-          {slice.items.map((item, index) => (
-            <li key={index}>{item.bulletpoint}</li>
-          ))}
-        </ul>
-
-        <h4>{slice.primary.amount_title}</h4>
-        <div className="selectedAmount">{amounts[3]}</div>
-        <input
-          type="range"
-          id="amount"
-          name="amount"
-          min="0"
-          max={amounts.length}
-          step="1"
-        />
-
-        <h4>{slice.primary.term_title}</h4>
-        <div className="selectedTerm">6</div>
-        <input
-          type="range"
-          id="amount"
-          name="amount"
-          min="0"
-          max={termOptions.length}
-          step="1"
-        />
-        <div>
-          {slice.primary.term_min}{" "}
-          <span>{slice.primary.slider_months_text}</span>
+            <div>
+              <Heading as="h3" size="h3" className="mb-2">
+                {slice.primary.subheading}
+              </Heading>
+              <ul>
+                {slice.items.map((item, index) => (
+                  <li key={index}>{item.bulletpoint}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className="calculator">
+            <Heading as="h4" size="h4">
+              {slice.primary.amount_title}
+            </Heading>
+            <div className="selectedAmount">{amounts[3]}</div>
+            <input
+              type="range"
+              id="amount"
+              name="amount"
+              min="0"
+              max={amounts.length}
+              step="1"
+            />
+            <Heading as="h4" size="h4">
+              {slice.primary.term_title}
+            </Heading>
+            <div className="selectedTerm">6</div>
+            <input
+              type="range"
+              id="amount"
+              name="amount"
+              min="0"
+              max={termOptions.length}
+              step="1"
+            />
+            <div>
+              {slice.primary.term_min}{" "}
+              <span>{slice.primary.slider_months_text}</span>
+            </div>
+            <div>
+              {slice.primary.term_max}{" "}
+              <span>{slice.primary.slider_months_text}</span>
+            </div>
+            <Heading as="h4" size="h4">
+              {slice.primary.total_title}
+            </Heading>
+            <div className="total">
+              {convertCurrency ? convertCurrency.format(70000) : ""}
+            </div>
+            <p>{slice.primary.example_note}</p>
+            <button>
+              {slice.primary.button_text}{" "}
+              {convertCurrency ? convertCurrency.format(70000) : ""}
+            </button>
+            <div>{slice.primary.button_note} </div>
+          </div>
         </div>
-        <div>
-          {slice.primary.term_max}{" "}
-          <span>{slice.primary.slider_months_text}</span>
-        </div>
-
-        <h4>{slice.primary.total_title}</h4>
-        <div className="total">
-          {convertCurrency ? convertCurrency.format(70000) : ""}
-        </div>
-        <p>{slice.primary.example_note}</p>
-        <button>
-          {slice.primary.button_text}{" "}
-          {convertCurrency ? convertCurrency.format(70000) : ""}
-        </button>
-        <div>{slice.primary.button_note} </div>
       </Wrapper>
     </section>
   )
