@@ -3,7 +3,7 @@ import { createClient } from "@/prismicio"
 
 import { worksans } from "@/lib/font"
 import { convertLocaleToLang } from "@/lib/utils"
-import cn from "@/lib/cn"
+import { cn } from "@/lib/utils"
 import "@/styles/globals.css"
 
 import Header from "@/components/Header"

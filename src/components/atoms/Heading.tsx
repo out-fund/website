@@ -1,4 +1,4 @@
-import cn from "@/lib/cn"
+import { cn } from "@/lib/utils"
 
 type HeadingProps = {
   as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
