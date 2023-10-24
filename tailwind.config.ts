@@ -38,6 +38,23 @@ const config: Config = {
       14: "7rem",
       15: "7.5rem",
     },
+    fontSize: {
+      xs: ["12px", "16px"],
+      sm: ["14px", "20px"],
+      md: ["16px", "24px"],
+      base: ["18px", "28px"],
+      lg: ["20px", "28px"],
+      xl: ["24px", "32px"],
+      "2xl": ["32px", "32px"],
+      "3xl": ["40px", "40px"],
+      "6xl": ["64px", "60px"],
+    },
+    letterSpacing: {
+      tightest: "-.05em",
+      tighter: "-.03em",
+      tight: "-.02em",
+      normal: "0",
+    },
     colors: {
       white: "#ffffff",
       sky: "#11C6FF",

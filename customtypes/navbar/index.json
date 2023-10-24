@@ -23,6 +23,7 @@
               "config": {
                 "label": "Link",
                 "placeholder": "",
+                "allowTargetBlank": true,
                 "select": null
               }
             }
@@ -46,6 +47,7 @@
               "config": {
                 "label": "Link",
                 "placeholder": "",
+                "allowTargetBlank": false,
                 "select": null
               }
             }

@@ -884,6 +884,16 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>
+
+  /**
+   * Button Note field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.button_note
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_note: prismic.KeyTextField
 }
 
 /**

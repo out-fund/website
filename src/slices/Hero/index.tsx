@@ -33,18 +33,29 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       data-slice-variation={slice.variation}
     >
       <Wrapper>
-        {/* TODO: Update styling with Tailwind in the class names */}
-        <PrismicRichText
-          field={slice.primary.heading}
-          components={components}
-        />
-        <PrismicRichText
-          field={slice.primary.description}
-          components={components}
-        />
-        {/* <Link href="/">{slice.primary.button_text}</Link> */}
-        <Button href="/">{slice.primary.button_text}</Button>
-        <PrismicNextImage field={slice.primary.image} />
+        <div className="grid grid-cols-2 rounded-lg bg-bgDark">
+          <div className="flex flex-col gap-6 pb-7 pl-[100px] pt-7">
+            <div className="flex flex-col gap-2 ">
+              <PrismicRichText
+                field={slice.primary.heading}
+                components={components}
+              />
+              <PrismicRichText
+                field={slice.primary.description}
+                components={components}
+              />
+            </div>
+            <div className="flex flex-col items-start gap-1	">
+              <Button href="/">{slice.primary.button_text}</Button>
+              <div className="text-xs tracking-tight opacity-70">
+                {slice.primary.button_note}
+              </div>
+            </div>
+          </div>
+          <div className="self-end justify-self-center">
+            <PrismicNextImage field={slice.primary.image} priority />
+          </div>
+        </div>
       </Wrapper>
     </section>
   )

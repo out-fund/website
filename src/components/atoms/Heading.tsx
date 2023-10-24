@@ -14,7 +14,13 @@ export default function Heading({
   size,
 }: HeadingProps) {
   return (
-    <Comp className={cn(" bg-slate-300 ", size ? size : Comp, className)}>
+    <Comp
+      className={cn(
+        " text-6xl font-extrabold	tracking-tight text-heading ",
+        size ? size : Comp,
+        className,
+      )}
+    >
       {children}
     </Comp>
   )

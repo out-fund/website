@@ -16,7 +16,10 @@ export default function Button({
   return (
     <Link
       href={href}
-      className={cn("bg-cyan-400 rounded-full p-2", className)}
+      className={cn(
+        "text-md flex rounded-3xl border-none bg-cobalt px-[24px] pb-[7px] pt-[9px] font-semibold leading-8 text-white antialiased hover:underline hover:outline-none focus:underline focus:outline-2 focus:outline-offset-2",
+        className,
+      )}
       {...restProps}
     >
       {children}
