@@ -33,7 +33,7 @@ export default function RootLayout({
       lang={convertLocaleToLang(params.locale)}
       className={cn(worksans.className)}
     >
-      <body className="text-text box-border bg-white tracking-tighter">
+      <body className="text-text box-border bg-white tracking-tighter antialiased">
         {/* <Navbar locale={params.locale} /> */}
         {children}
         {/* <Footer locale={params.locale} /> */}

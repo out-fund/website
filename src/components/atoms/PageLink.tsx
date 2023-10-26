@@ -14,7 +14,7 @@ export default function PageLink({
   return (
     <PrismicNextLink
       className={cn(
-        "inline-block text-base font-[500] text-cobalt underline-offset-2 antialiased hover:underline focus:underline focus:outline-none",
+        "inline-block text-base font-[500] text-cobalt underline-offset-2  hover:underline focus:underline focus:outline-none",
         className,
       )}
       {...restProps}

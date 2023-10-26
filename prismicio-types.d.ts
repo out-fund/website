@@ -109,6 +109,17 @@ export interface FooterDocumentDataPolicyLinksItem {
  */
 interface FooterDocumentData {
   /**
+   * Company Title field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.company_title
+   * - **Tab**: Top
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  company_title: prismic.KeyTextField
+
+  /**
    * Company Links field in *Footer*
    *
    * - **Field Type**: Group
@@ -120,6 +131,17 @@ interface FooterDocumentData {
   company_links: prismic.GroupField<
     Simplify<FooterDocumentDataCompanyLinksItem>
   >
+
+  /**
+   * Funding Title field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.funding_title
+   * - **Tab**: Top
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  funding_title: prismic.KeyTextField
 
   /**
    * Funding Links field in *Footer*
@@ -135,6 +157,17 @@ interface FooterDocumentData {
   >
 
   /**
+   * Support Title field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.support_title
+   * - **Tab**: Top
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  support_title: prismic.KeyTextField
+
+  /**
    * Support Links field in *Footer*
    *
    * - **Field Type**: Group
@@ -146,6 +179,17 @@ interface FooterDocumentData {
   support_links: prismic.GroupField<
     Simplify<FooterDocumentDataSupportLinksItem>
   >
+
+  /**
+   * Countries Title field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.countries_title
+   * - **Tab**: Top
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  countries_title: prismic.KeyTextField
   /**
    * FCA Statement field in *Footer*
    *

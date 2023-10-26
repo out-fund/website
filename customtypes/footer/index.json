@@ -6,6 +6,13 @@
   "status": true,
   "json": {
     "Top": {
+      "company_title": {
+        "type": "Text",
+        "config": {
+          "label": "Company Title",
+          "placeholder": ""
+        }
+      },
       "company_links": {
         "type": "Group",
         "config": {
@@ -27,6 +34,13 @@
               }
             }
           }
+        }
+      },
+      "funding_title": {
+        "type": "Text",
+        "config": {
+          "label": "Funding Title",
+          "placeholder": ""
         }
       },
       "funding_links": {
@@ -52,6 +66,13 @@
           }
         }
       },
+      "support_title": {
+        "type": "Text",
+        "config": {
+          "label": "Support Title",
+          "placeholder": ""
+        }
+      },
       "support_links": {
         "type": "Group",
         "config": {
@@ -73,6 +94,13 @@
               }
             }
           }
+        }
+      },
+      "countries_title": {
+        "type": "Text",
+        "config": {
+          "label": "Countries Title",
+          "placeholder": ""
         }
       }
     },
