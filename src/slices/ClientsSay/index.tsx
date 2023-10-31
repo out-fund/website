@@ -52,7 +52,7 @@ const ClientsSay = async ({ slice }: ClientsSayProps): Promise<JSX.Element> => {
           field={slice.primary.heading}
           components={components}
         />
-        <div className="grid">
+        <div className="grid grid-cols-2	">
           {testimonials.map(
             (item, index) =>
               item && (
