@@ -94,7 +94,7 @@ const HomePage = (props) => {
               second: {
                 title: "Invoices",
                 description:
-                  "Cpload your invoices to our platform and we’ll fund your business expenses like inventory, logistics, and agency fees.",
+                  "Upload your invoices to our platform and we’ll fund your business expenses like inventory, logistics, and agency fees.",
               },
               third: {
                 title: "Cash",
