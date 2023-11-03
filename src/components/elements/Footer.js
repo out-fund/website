@@ -183,9 +183,7 @@ const Footer = ({ lang }) => {
         {langKey === "en" && (
           <Statement>
             <T.BodySmall>
-              Outfund is the trading name of MTL Financial LTD, which is a
-              Lender. MTL Financial LTD is also authorised and regulated by the
-              Financial Conduct Authority (FCA) as an e-money institution.
+              MTL Financial Ltd (Firm Reference Number: 902840) is a registered EMD agent of Modulr FS Limited, a company registered in England and Wales with company number 09897919, which is authorised and regulated by the Financial Conduct Authority as an Electronic Money Institution (Firm Reference Number: 900573) for the issuance of electronic money and payment services. Your account and related payment services are provided by Modulr FS Limited. Whilst Electronic Money products are not covered by the Financial Services Compensation Scheme (FSCS) your funds will be held in one or more segregated accounts and safeguarded in line with the Electronic Money Regulations 2011 - for more information please see <a href="https://out.fund/Modulr(MFSL)-UK_Safeguarding_Explanation-Jun_2021.pdf">here</a> 
             </T.BodySmall>
           </Statement>
         )}
