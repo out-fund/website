@@ -38,9 +38,9 @@ const Footer = ({ lang }) => {
           )}
         </Bottom>
         <Statement>
-          <T.BodySmall>
-            MTL Financial Ltd (Firm Reference Number: 902840) is a registered EMD agent of Modulr FS Limited, a company registered in England and Wales with company number 09897919, which is authorised and regulated by the Financial Conduct Authority as an Electronic Money Institution (Firm Reference Number: 900573) for the issuance of electronic money and payment services. Your account and related payment services are provided by Modulr FS Limited. Whilst Electronic Money products are not covered by the Financial Services Compensation Scheme (FSCS) your funds will be held in one or more segregated accounts and safeguarded in line with the Electronic Money Regulations 2011 - for more information please see <a href="https://out.fund/Modulr(MFSL)-UK_Safeguarding_Explanation-Jun_2021.pdf">here</a> 
-          </T.BodySmall>
+          <T.BodySmaller>
+            MTL Financial Ltd (Firm Reference Number: 902840) is a registered EMD agent of Modulr FS Limited, a company registered in England and Wales with company number 09897919, which is authorised and regulated by the Financial Conduct Authority as an Electronic Money Institution (Firm Reference Number: 900573) for the issuance of electronic money and payment services. Your account and related payment services are provided by Modulr FS Limited. Whilst Electronic Money products are not covered by the Financial Services Compensation Scheme (FSCS) your funds will be held in one or more segregated accounts and safeguarded in line with the Electronic Money Regulations 2011 - for more information please see <a href="https://out.fund/Modulr(MFSL)-UK_Safeguarding_Explanation-Jun_2021.pdf" style={{color: "#aad2ff"}} target="_blank">here</a> 
+          </T.BodySmaller>
         </Statement>
       </ContentWrapper>
     </Wrapper>
@@ -114,16 +114,12 @@ const Wrapper = styled.div`
 `
 
 const Statement = styled.div`
+  margin-top: 16px;
+  opacity: 0.7;
   background-color: #183454;
   padding: 12px 16px;
   border-radius: 10px;
-  margin-top: 16px;
-
-  ${theme.above.t.l} {
-    /* margin-top: 80px;
-    margin-bottom: 48px; */
-  }
-  ${T.BodySmall} {
+  ${T.BodySmaller} {
     color: #aad2ff;
   }
 `
