@@ -70,13 +70,14 @@ const MobileLinks = ({ lang }) => {
         <Button
           // to={getFundeURL(lang)}
           // to={links.getFunded.url}
-          href="https://client.out.fund/signup"
+          href="https://client.out.fund/?utm_source=navbar&utm_medium=landingPage&utm_campaign=ritmo"
           variant="primary"
           className="getFunded getFunded-mobile"
           id="cta-get-funded-mobile-navbar-click"
           data-element-category="Signup CTA"
         >
-          {links.getFunded.text[lang]}
+          {/* {links.getFunded.text[lang]} */}
+          Switch now
         </Button>
 
         {(lang === "en" || lang === "es") && (
@@ -164,12 +165,13 @@ function DesktopLinks({ lang }) {
         <li className="getFunded">
           <Button
             // to={getFundeURL(lang)}
-            href="https://client.out.fund/signup"
+            href="https://client.out.fund/signup?utm_source=ritmo-landingPage"
             variant="primary"
             id="cta-get-funded-navbar-click"
             data-element-category="Signup CTA"
           >
-            {links.getFunded.text[lang]}
+            {/* {links.getFunded.text[lang]} */}
+            Switch now
           </Button>
         </li>
       )}

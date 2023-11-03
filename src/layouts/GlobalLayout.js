@@ -11,7 +11,6 @@ const GlobalLayout = ({ children, pt }) => {
       <CookieConsentManager />
     </GlobalWrapper>
   )
-
 }
 
 export default GlobalLayout

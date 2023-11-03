@@ -1,17 +1,14 @@
-import React from 'react'
+import React from "react"
 import styled from "styled-components"
 import { OpenCookiePreferences } from "../CookieConsentManager"
 
 export default function CookieSettingsButton() {
   return (
     <OpenCookiePreferences>
-      <Button>
-        Open cookie preferences
-      </Button>
+      <Button>Open cookie preferences</Button>
     </OpenCookiePreferences>
   )
 }
-
 
 const Button = styled.span`
   display: block;

@@ -74,6 +74,7 @@ import SectionComparisonDolar from "./sections/SectionComparisonDolar"
 import TrustpilotSwiper from "./elements/TrustpilotSwiper"
 import SectionTestimonials from "./sections/SectionTestimonials"
 import Testimonial from "./elements/Testimonial"
+import NavbarFast from "./elements/NavbarFast"
 
 // --------------------
 
@@ -154,4 +155,5 @@ export {
   TrustpilotSwiper,
   SectionTestimonials,
   Testimonial,
+  NavbarFast
 }

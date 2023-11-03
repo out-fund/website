@@ -6,7 +6,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import T from "./../styles/new/typography"
 
-import LangLayout from "./../layouts/en"
+import LangLayout from "./../layouts/en-fast"
 
 import {
   HeroSimple,
@@ -64,7 +64,7 @@ const CcPartnership = (props) => {
               refinance out your old facility or a combination of the both.
             </T.Body>
             <Button
-              href="https://client.out.fund/signup?utm_source=ritmo-landingPage"
+              href="https://client.out.fund/?utm_source=textBoxButton&utm_medium=landingPage&utm_campaign=ritmo"
               variant="primary"
               data-element-category="Signup CTA"
               size="large"

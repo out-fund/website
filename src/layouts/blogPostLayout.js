@@ -145,13 +145,14 @@ const Article = styled.article`
     }
   }
   table {
-      width: 100%;
-      border-collapse: collapse;
-      border-spacing: 5px;
-      margin-bottom: 24px;
-      text-align: left;
+    width: 100%;
+    margin-bottom: 24px;
+    text-align: left;
+    border-collapse: collapse;
+    border-spacing: 5px;
   }
-  th, td{
+  th,
+  td {
     padding: 8px 4px;
     border: 1px solid;
   }
