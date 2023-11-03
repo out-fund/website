@@ -119,6 +119,8 @@
 
 /es/aplicar   /es/?utm_medium=linkedinmsg&utm_source=linkedin&utm_content=ClaraRuscalleda
 
+# Redirects for ritmo partnership
+/ritmorefer   https://client.out.fund/signup?utm_source=partner&utm_medium=applink&utm_campaign=na&utm_content=ritmo
 
 # Redirects for mail campaign
 /promo300   http://client.out.fund/signup?utm_source=outbound&utm_medium=mail&utm_campaign=promo300&utm_content=bluemedia
