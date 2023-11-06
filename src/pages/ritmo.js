@@ -25,7 +25,7 @@ const CcPartnership = (props) => {
         data={{
           title: "Switch your funding provider to Outfund",
           description:
-            "Ritmo has partnered with Outfund to offer revenue-based funding to its Spanish and UK customers.",
+            "Ritmo has partnered with Outfund to offer working capital funding to its Spanish and UK customers.",
         }}
       />
       <Main>

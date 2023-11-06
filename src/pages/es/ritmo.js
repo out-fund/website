@@ -25,7 +25,7 @@ const CcPartnership = (props) => {
         data={{
           title: "Cambia tu proveedor de financiación a Outfund",
           description:
-            "Ritmo se ha asociado con Outfund para ofrecer financiación a sus clientes en España y el Reino Unido.",
+            "Ritmo se ha asociado con Outfund para ofrecer financiación para crecimiento y capital circulante a sus clientes en España y el Reino Unido.",
         }}
       />
       <Main>
