@@ -8,7 +8,7 @@ import {
   // SectionWeAreInvesting,
   SectionSupercharging,
   SectionFindOut,
-  SectionFaq,
+  // SectionFaq,
   SectionAboutUs,
   SectionRegulated,
   HeroHomepage,

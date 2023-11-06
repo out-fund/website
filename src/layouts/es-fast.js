@@ -1,7 +1,6 @@
 import React, { useEffect } from "react"
 import GlobalLayout from "./../layouts/GlobalLayout"
-import { Navbar, Footer } from "./../components"
-import { SimpleNavbar } from "./../components/elements/Navbar"
+import { NavbarFast, Footer } from "./../components"
 import Cookies from "js-cookie"
 
 import "./../styles/new/typography/font.css"
@@ -16,10 +15,9 @@ const ES = ({ children, simpleNavbar, pt, noNavbar, noFooter }) => {
   return (
     <GlobalLayout pt={pt}>
       <LangProvider langKey="es">
-        {!simpleNavbar && !noNavbar && <Navbar lang="es" />}
-        {simpleNavbar && !noNavbar && <SimpleNavbar lang="es" />}
+        <NavbarFast lang="es" />
         {children}
-        {!noFooter && <Footer lang="es" />}
+        <Footer lang="es" />
       </LangProvider>
     </GlobalLayout>
   )

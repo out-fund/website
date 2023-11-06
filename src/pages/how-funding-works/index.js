@@ -11,7 +11,7 @@ import {
   SectionRegulated,
   SectionSteps,
   SectionWeAreInvesting,
-  SectionFaq,
+  // SectionFaq,
   Button,
   SeoComponent,
 } from "./../../components"

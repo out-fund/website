@@ -2,7 +2,7 @@ import {
   HeroSimpleFf,
   Main,
   SectionComparison,
-  SectionFaq,
+  // SectionFaq,
   SectionFindOutFlexible,
   SectionRepayFf,
   SectionSupercharging,

@@ -164,14 +164,17 @@ function DesktopLinks({ lang }) {
       {links.getFunded.text[lang] && (
         <li className="getFunded">
           <Button
-            // to={getFundeURL(lang)}
-            href="https://client.out.fund/signup?utm_source=ritmo-landingPage"
+            // href="https://client.out.fund/signup?utm_source=ritmo-landingPage"
+            href={
+              lang === "en"
+                ? "https://client.out.fund/signup?utm_source=partner&utm_medium=navbar&utm_content=ritmo"
+                : "https://client.out.fund/signup?utm_source=partner&utm_medium=ESnavbar&utm_content=ritmo"
+            }
             variant="primary"
             id="cta-get-funded-navbar-click"
             data-element-category="Signup CTA"
           >
-            {/* {links.getFunded.text[lang]} */}
-            Switch now
+            {lang === "en" ? "Switch now" : "Comenzar solicitud"}
           </Button>
         </li>
       )}

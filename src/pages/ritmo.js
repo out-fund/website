@@ -64,7 +64,7 @@ const CcPartnership = (props) => {
               refinance out your old facility or a combination of the both.
             </T.Body>
             <Button
-              href="https://client.out.fund/?utm_source=textBoxButton&utm_medium=landingPage&utm_campaign=ritmo"
+              href="https://client.out.fund/signup?utm_source=partner&utm_medium=landingpage&utm_content=ritmo"
               variant="primary"
               data-element-category="Signup CTA"
               size="large"
