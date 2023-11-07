@@ -86,7 +86,7 @@ const CcPartnership = (props) => {
                 question:
                   "Soy cliente de Ritmo, ¿qué significa esta colaboración para mi negocio?",
                 answer:
-                  "Si tienes financiamiento existente de Ritmo, esta colaboración no te afectará; aún puedes acceder a este capital a través de tu cuenta de Ritmo. Sin embargo, dado que Ritmo dejará de ofrecer cobertura a los clientes en España y el Reino Unido, si deseas acceder a financiación adicional, deberás solicitarlo a Outfund.",
+                  "Aunque Ritmo seguirá prestando labores de cobranza para los préstamos ya concedidos, si quieres activar nuevos préstamos tendrás que hacerlo a través de Outfund. Dado que Ritmo dejará de ofrecer cobertura a los clientes en España y el Reino Unido, si deseas acceder a financiación adicional, deberás solicitarlo a Outfund.",
               },
               {
                 question: "¿Cómo solicitar financiación para mi negocio?",

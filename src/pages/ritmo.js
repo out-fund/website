@@ -81,7 +81,7 @@ const CcPartnership = (props) => {
                 question:
                   "I am a Ritmo customer - what does this partnership mean for my business?",
                 answer:
-                  "If you have existing Ritmo funding this partnership will not impact that; you can still access it via your Ritmo account. However, because Ritmo is ceasing coverage for customers in Spain and the UK, if you wish to access additional funding you will need to apply to Outfund to refinance or top up your funding",
+                  "If you have existing funding from Ritmo, this collaboration will not affect you; You can still access this capital through your Ritmo account",
               },
               {
                 question: "How do I apply?",
