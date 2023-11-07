@@ -125,7 +125,7 @@ const HomePage = (props) => {
             description:
               "Repaga según tus ventas futuras. ¿Se han visto reducidos los ingresos de tu negocio? Nuestros repagos también.",
             btn: {
-              text: "Apply now",
+              text: "Check eligibility",
               url: "https://client.out.fund/signup",
             },
           }}

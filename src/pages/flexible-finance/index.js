@@ -96,7 +96,7 @@ const HowFundingWorks = (props) => {
                   "£25k+ monthly revenue",
                   "Business registered in Europe, North America or Australia",
                 ],
-                btn: "Apply now",
+                btn: "Check eligibility",
               }}
             />
             <SectionWeValueTemp

@@ -63,7 +63,7 @@ const CtaBlock = () => {
             id="cta-get-funded-ss-click"
             data-element-category="Signup CTA"
           >
-            Apply now
+            Check eligibility
           </Button>
         </CtaBlockTextWrapper>
         <ImageWrapper>

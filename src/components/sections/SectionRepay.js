@@ -31,7 +31,7 @@ const SectionRepay = ({ data }) => {
                   id="cta-section-repay"
                   data-element-category="Signup CTA"
                 >
-                  Apply now
+                  Check eligibility
                 </Button>
               )}
             </BtnWrapper>

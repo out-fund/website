@@ -88,7 +88,7 @@ const links = {
   },
   getFunded: {
     text: {
-      en: "Apply now",
+      en: "Check eligibility",
       es: "Solicitar financiación",
       dk: "Kom i gang",
       fr: "Obtenir des fonds",

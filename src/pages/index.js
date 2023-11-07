@@ -122,7 +122,7 @@ const HomePage = (props) => {
               "12+ months in business",
               "£25k+ monthly revenue",
             ],
-            btn: "Apply now",
+            btn: "Check eligibility",
           }}
         />
         <SectionBenefits
@@ -153,7 +153,7 @@ const HomePage = (props) => {
             description:
               "Pay back your balance with a small share of your new sales. Quiet month? Lower repayments.",
             btn: {
-              text: "Apply now",
+              text: "Check eligibility",
               url: "https://client.out.fund/signup",
             },
           }}

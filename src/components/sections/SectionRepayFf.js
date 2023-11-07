@@ -20,7 +20,7 @@ const SectionRepayFf = ({ data }) => {
             <BtnWrapper>
               {btn.url && (
                 <Button to={btn.url} variant="primary" size="large">
-                  Apply now
+                  Check eligibility
                 </Button>
               )}
             </BtnWrapper>

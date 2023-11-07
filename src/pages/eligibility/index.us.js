@@ -44,7 +44,7 @@ const Eligibility = ({ location }) => {
                   id="cta-get-funded-eligibility-click"
                   data-element-category="Signup CTA"
                 >
-                  Apply now
+                  Check eligibility
                 </Button>
               </ButtonWrapper>
             </>
