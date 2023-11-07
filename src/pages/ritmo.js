@@ -17,7 +17,7 @@ import {
   Button,
 } from "./../components"
 
-const CcPartnership = (props) => {
+const RitmoPartnership = (props) => {
   return (
     <LangLayout>
       <SeoComponent title="Outfund" description="" />
@@ -116,7 +116,7 @@ const CcPartnership = (props) => {
   )
 }
 
-export default CcPartnership
+export default RitmoPartnership
 
 const Wrapper = styled.div`
   position: relative;
