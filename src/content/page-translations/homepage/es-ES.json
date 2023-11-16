@@ -8,7 +8,7 @@
     "title": "Growth Capital Para Fundadores Como tú",
     "description": "Financiación para tu negocio de 15k€ a 10M€",
     "primaryBtn": {
-      "text": "Solicitar financiación",
+      "text": "Verificar elegibilidad",
       "url": "https://client.out.fund/signup"
     },
     "secondaryBtn": {
@@ -75,7 +75,7 @@
     }
   },
   "startSupercharging": {
-    "title": "¡Solicitar financiación!",
+    "title": "¡Verificar elegibilidad!",
     "btn": {
       "text": "Empezar proceso",
       "url": "https://client.out.fund/signup"
