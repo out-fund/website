@@ -134,3 +134,7 @@
 
 # Broker redirects
 /efinityfinance    http://client.out.fund/signup?utm_source=broker&utm_medium=applink&utm_content=efinityfinance
+
+# Black Friday redirects
+/bf300    http://client.out.fund/signup?utm_source=inbound&utm_medium=linkedinprofile&utm_campaign=bf300&utm_content=na
+/bfpromo    http://client.out.fund/signup?utm_source=outbound&utm_medium=email&utm_campaign=bfpromo&utm_content=na
