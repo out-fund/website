@@ -210,7 +210,7 @@ const Footer = ({ lang }) => {
         <Bottom>
           {langKey !== "es" && (
             <T.BodySmaller>
-              Copyright © 2022 Outfund. All rights reserved.
+              Copyright © 2023 Outfund. All rights reserved.
             </T.BodySmaller>
           )}
 
