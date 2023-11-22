@@ -49,14 +49,14 @@ const HowFundingWorks = (props) => {
         />
         <Wrapper>
           <ContentWrapper>
-            <SectionRepayFf
+            {/* <SectionRepayFf
               data={{
                 title:
                   "Maximise your business growth with our innovative funding solution",
                 description:
                   "We understand that no two businesses are the same. That's why our funding can be used for any expense that drives your business forward.",
               }}
-            />
+            /> */}
 
             {/* calculator  */}
             <SectionFindOutFlexible
