@@ -1,5 +1,5 @@
 import {
-  HeroSimpleFf,
+  HeroBF,
   Main,
   SectionComparison,
   // SectionFaq,
@@ -13,7 +13,7 @@ import {
   SectionWhoCanApply,
 } from "./../../components"
 
-import LangLayout from "./../../layouts/en-ff"
+import LangLayout from "./../../layouts/en-bf"
 import React from "react"
 
 import { graphql } from "gatsby"
@@ -29,14 +29,7 @@ const HowFundingWorks = (props) => {
         title="Black Friday"
         description="Don't let a lack of working capital stop you from achieving your business goals. Tap into your future succes"
       />
-      <HeroSimpleFf
-        data={{
-          title: "Black Friday",
-          subtitle: "Business financing on your terms",
-          description:
-            "Don't let a lack of working capital stop you from achieving your business goals. Tap into your future success",
-        }}
-      />
+      <HeroBF />
 
       <Main>
         <SectionInfoStrip

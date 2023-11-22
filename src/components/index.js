@@ -26,6 +26,7 @@ import Link from "./elements/Link"
 import Main from "./elements/Main"
 import Navbar from "./elements/Navbar"
 import NavbarFf from "./elements/NavbarFf"
+import NavbarBF from "./elements/NavbarBF"
 import NewsBar from "./elements/NewsBar"
 import Offices from "./sections/Offices"
 import PartnerForm from "./elements/PartnerForm"
@@ -75,6 +76,7 @@ import TrustpilotSwiper from "./elements/TrustpilotSwiper"
 import SectionTestimonials from "./sections/SectionTestimonials"
 import Testimonial from "./elements/Testimonial"
 import NavbarFast from "./elements/NavbarFast"
+import HeroBF from "./hero/HeroBF"
 
 // --------------------
 
@@ -155,5 +157,7 @@ export {
   TrustpilotSwiper,
   SectionTestimonials,
   Testimonial,
-  NavbarFast
+  NavbarFast,
+  HeroBF,
+  NavbarBF,
 }
