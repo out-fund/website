@@ -32,7 +32,7 @@ const HowFundingWorks = (props) => {
       />
       <HeroDark
         title={"Grow in 2024 with Outfund"}
-        subtitle={"Apply for funding and get 10% off the fixed fee"}
+        subtitle={"Apply for funding and get 10% off your fixed fee"}
         description={
           "Drive your business forward in 2024 - unlock the capital you need for your business to thrive"
         }
