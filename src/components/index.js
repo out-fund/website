@@ -77,6 +77,7 @@ import SectionTestimonials from "./sections/SectionTestimonials"
 import Testimonial from "./elements/Testimonial"
 import NavbarFast from "./elements/NavbarFast"
 import HeroBF from "./hero/HeroBF"
+import HeroDark from "./hero/HeroDark"
 
 // --------------------
 
@@ -160,4 +161,5 @@ export {
   NavbarFast,
   HeroBF,
   NavbarBF,
+  HeroDark,
 }
