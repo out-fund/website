@@ -2,7 +2,7 @@ import {
   // HeroBF,
   HeroDark,
   Main,
-  SectionComparison,
+  // SectionComparison,
   // SectionFaq,
   SectionFindOutFlexible,
   SectionRepayFf,
@@ -12,9 +12,10 @@ import {
   SeoComponent,
   SectionInfoStrip,
   SectionWhoCanApply,
+  SectionComparisonDolar,
 } from "./../../components"
 
-import LangLayout from "./../../layouts/en-bf"
+import LangLayout from "./../../layouts/au-bf"
 import React from "react"
 
 import { graphql } from "gatsby"
@@ -46,7 +47,7 @@ const HowFundingWorks = (props) => {
         <SectionInfoStrip
           data={[
             { up: "Apply in just", down: "5 minutes" },
-            { up: "Business loans from", down: "£10k - £10m" },
+            { up: "Business loans from", down: "$10k - $10M" },
             { up: "Offers as fast as", down: "24h" },
             { up: "Additional top-ups", down: "Continuous" },
           ]}
@@ -70,15 +71,15 @@ const HowFundingWorks = (props) => {
                   buttonText: "Apply for",
                   buttonNote: "Applying will not affect your credit score.",
                   range: [
-                    "£10 000",
-                    "£20 000",
-                    "£50 000",
-                    "£70 000",
-                    "£100 000",
-                    "£200 000",
-                    "£500 000",
-                    "£700 000",
-                    "£1 000 000",
+                    "$10 000",
+                    "$20 000",
+                    "$50 000",
+                    "$70 000",
+                    "$100 000",
+                    "$200 000",
+                    "$500 000",
+                    "$700 000",
+                    "$1 000 000",
                   ],
                 },
               }}
@@ -87,9 +88,9 @@ const HowFundingWorks = (props) => {
               data={{
                 title: "You're eligible to apply if you have:",
                 list: [
+                  "Revenue visible through an online payment processor or banking provider.",
                   "12+ months in business",
-                  "£25k+ monthly revenue",
-                  "Business registered in Europe, North America or Australia",
+                  "$50k+ monthly revenue",
                 ],
                 btn: "Check eligibility",
               }}
@@ -123,7 +124,7 @@ const HowFundingWorks = (props) => {
                 ],
               }}
             />
-            <SectionComparison
+            <SectionComparisonDolar
               data={{
                 title: "Find the perfect fit for your business",
                 description:
@@ -145,8 +146,8 @@ const Wrapper = styled.div``
 const ContentWrapper = styled.div``
 
 export const query = graphql`
-  query Grow2024GB {
-    homepageJson(language: { regex: "/en-GB/" }) {
+  query Grow2024AU {
+    homepageJson(language: { regex: "/en-AU/" }) {
       seo {
         title
         description

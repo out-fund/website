@@ -132,7 +132,6 @@ const HowFundingWorks = (props) => {
             />
             <SectionWeFunded data={data.weFunded} />
             <SectionSupercharging data={data.startSupercharging} />
-            {/* <SectionFaq data={props.data.homepageJson.faq} /> */}
           </ContentWrapper>
         </Wrapper>
       </Main>
@@ -146,7 +145,7 @@ const Wrapper = styled.div``
 const ContentWrapper = styled.div``
 
 export const query = graphql`
-  query HomePageFlexFunding {
+  query Accelerate2024GB {
     homepageJson(language: { regex: "/en-GB/" }) {
       seo {
         title

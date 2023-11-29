@@ -7,14 +7,14 @@ import Cookies from "js-cookie"
 import GlobalLayout from "./GlobalLayout"
 import { LangProvider } from "../utils/LangProvider"
 
-const EnBf = ({ children, pt, noFooter }) => {
+const EnBf = ({ children, simpleNavbar, pt, noNavbar, noFooter }) => {
   useEffect(() => {
-    Cookies.set("languageGetFunded", "gb", { domain: "out.fund" })
+    Cookies.set("languageGetFunded", "au", { domain: "out.fund" })
   }, [])
 
   return (
     <GlobalLayout pt={pt}>
-      <LangProvider langKey="en">
+      <LangProvider langKey="au">
         <NavbarBF lang="en" />
         {children}
         <Footer lang="en" />
