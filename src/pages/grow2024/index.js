@@ -2,7 +2,7 @@ import {
   // HeroBF,
   HeroDark,
   Main,
-  SectionComparison,
+  // SectionComparison,
   // SectionFaq,
   SectionFindOutFlexible,
   SectionRepayFf,
@@ -12,6 +12,7 @@ import {
   SeoComponent,
   SectionInfoStrip,
   SectionWhoCanApply,
+  SectionComparisonEuro,
 } from "./../../components"
 
 import LangLayout from "./../../layouts/en-bf"
@@ -123,7 +124,7 @@ const HowFundingWorks = (props) => {
                 ],
               }}
             />
-            <SectionComparison
+            <SectionComparisonEuro
               data={{
                 title: "Find the perfect fit for your business",
                 description:
