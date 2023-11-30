@@ -35,6 +35,7 @@ import Section from "./elements/Section"
 import SectionAboutUs from "./sections/SectionAboutUs"
 import SectionBenefits from "./sections/SectionBenefits"
 import SectionComparison from "./sections/SectionComparison"
+import SectionComparisonEuro from "./sections/SectionComparisonEuro"
 import SectionComparisonES from "./sections/SectionComparisonES"
 // import HeroHomepage from "./sections/HeroHomepage"
 import SectionContainer from "./sections/SectionContainer"
@@ -162,4 +163,5 @@ export {
   HeroBF,
   NavbarBF,
   HeroDark,
+  SectionComparisonEuro,
 }
