@@ -161,12 +161,7 @@ const TrustpilotSwiper = () => {
         {data.map((item, index) => (
           <SwiperSlide key={index}>
             <Review href={item.url} target="_blank">
-              <StaticImage
-                src="./../../images/tpstars.png"
-                alt="Group profile photos"
-                // width={108}
-                // height={20}
-              />
+              <StaticImage src="./../../images/stars.png" alt="Rating stars" />
               <h4 className="title">{item.title}</h4>
               <p className="review">{item.review}</p>
               <div className="name-date">
@@ -185,15 +180,14 @@ export default TrustpilotSwiper
 const Review = styled.a`
   display: flex;
   flex-direction: column;
-  background-color: #f8f9fa;
+  background-color: #f8fafc;
   width: 100%;
   padding: 16px;
   text-decoration: none;
   /* max-width: 236px; */
   border-radius: 2px;
   box-sizing: border-box;
-
-  box-shadow: 0px 2px 0px #e3e7ec;
+  box-shadow: 0px 2px 0px #e0e5eb;
 
   .gatsby-image-wrapper {
     width: 108px;
